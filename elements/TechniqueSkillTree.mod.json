@@ -1,0 +1,62 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "+",
+          "width": 30,
+          "height": 20,
+          "x": 20,
+          "y": 110
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_strength_skill_tree",
+          "text": {
+            "fixedValue": "Technique Skill Tree"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 160,
+          "y": 10
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "Back",
+          "onClick": {
+            "name": "BackButtonSkillTree"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 190,
+          "y": 210
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 20,
+      "sy": 20,
+      "ox": 18,
+      "oy": 19,
+      "snapOnGrid": true
+    }
+  }
+}

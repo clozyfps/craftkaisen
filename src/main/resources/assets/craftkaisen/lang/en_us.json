@@ -1,9 +1,23 @@
 {
   "gui.craftkaisen.skill_tree_selector_gui.button_cursed_energy": "Cursed Energy",
   "gui.craftkaisen.skill_tree_selector_gui.button_technique": "Technique",
-  "gui.craftkaisen.skill_tree_selector_gui.button_strength": "Strength",
-  "gui.craftkaisen.skill_tree_selector_gui.button_durability": "Durability",
+  "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty10": "+",
   "gui.craftkaisen.skill_tree_selector_gui.button_back": "Back",
+  "gui.craftkaisen.skill_tree_selector_gui.label_skill_trees": "Skill Trees",
+  "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty3": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty6": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty5": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty8": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
+  "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
+  "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
+  "gui.craftkaisen.skill_tree_selector_gui.button_strength": "Strength",
+  "gui.craftkaisen.strength_1.label_from_this": " from this.",
+  "gui.craftkaisen.skill_tree_selector_gui.button_durability": "Durability",
   "item.craftkaisen.tes": "Tes",
-  "gui.craftkaisen.skill_tree_selector_gui.label_skill_trees": "Skill Trees"
+  "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
+  "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
 }

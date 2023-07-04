@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "progressivePrestigeDifficulty",
+    "description": "Only spawn high level mobs when over a certain prestige",
+    "category": "UPDATES",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}
