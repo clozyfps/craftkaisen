@@ -90,6 +90,14 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Abilities",
+        "children": []
+      },
+      {
+        "name": "Keybinds",
+        "children": []
       }
     ]
   },
