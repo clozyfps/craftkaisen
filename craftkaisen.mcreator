@@ -337,36 +337,56 @@
       "path": "~/Misc"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillPoints",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Prestige",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Clan",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Technique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "gui.craftkaisen.durability_skill_tree.button_empty": "+",
       "gui.craftkaisen.credits.label_mod_created_by_clozy_katsu_and": "Mod Created By Clozy, Katsu, And RequiredDevelopment",
       "gui.craftkaisen.durability_skill_tree.label_strength_skill_tree": "Durability Skill Tree",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty11": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty12": "+",
-      "gui.craftkaisen.skill_tree_selector_gui.label_skill_trees": "Skill Trees",
-      "gui.craftkaisen.strength_1.label_from_this": " from this.",
-      "gui.craftkaisen.skill_tree_selector_gui.button_technique": "Technique",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty9": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty8": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty10": "+",
-      "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty1": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty3": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty2": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty5": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty4": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty7": "+",
-      "gui.craftkaisen.strength_skill_tree_gui.button_empty6": "+",
-      "key.craftkaisen.testing_open_skill_tree_gui": "TESTING Open Skill Tree GUI",
-      "gui.craftkaisen.strength_skill_tree_gui.button_back": "Back",
-      "gui.craftkaisen.cursed_energy_skill_tree.label_strength_skill_tree": "Cursed Energy Skill Tree",
-      "gui.craftkaisen.cursed_energy_skill_tree.button_back": "Back",
-      "gui.craftkaisen.durability_skill_tree.button_empty": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty13": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty12": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty11": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty11": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty12": "+",
+      "gui.craftkaisen.skill_tree_selector_gui.label_skill_trees": "Skill Trees",
       "gui.craftkaisen.technique_skill_tree.button_back": "Back",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty2": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty3": "+",
@@ -375,12 +395,26 @@
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty7": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty4": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty5": "+",
+      "gui.craftkaisen.strength_1.label_from_this": " from this.",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty8": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty9": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty": "+",
       "item.craftkaisen.tes": "Tes",
+      "gui.craftkaisen.skill_tree_selector_gui.button_technique": "Technique",
       "gui.craftkaisen.skill_tree_selector_gui.button_back": "Back",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty9": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty8": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty10": "+",
+      "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty1": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty3": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty2": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty5": "+",
       "gui.craftkaisen.skill_tree_selector_gui.button_durability": "Durability",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty4": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty7": "+",
+      "gui.craftkaisen.strength_skill_tree_gui.button_empty6": "+",
+      "key.craftkaisen.testing_open_skill_tree_gui": "TESTING Open Skill Tree GUI",
       "gui.craftkaisen.skill_tree_selector_gui.button_cursed_energy": "Cursed Energy",
       "gui.craftkaisen.durability_skill_tree.button_back": "Back",
       "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
@@ -388,6 +422,8 @@
       "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
       "gui.craftkaisen.technique_skill_tree.label_strength_skill_tree": "Technique Skill Tree",
       "gui.craftkaisen.skill_tree_selector_gui.button_strength": "Strength",
+      "gui.craftkaisen.strength_skill_tree_gui.button_back": "Back",
+      "gui.craftkaisen.cursed_energy_skill_tree.label_strength_skill_tree": "Cursed Energy Skill Tree",
       "gui.craftkaisen.durability_skill_tree.button_empty5": "+",
       "gui.craftkaisen.strength_skill_tree_gui.label_strength_skill_tree": "Strength Skill Tree",
       "gui.craftkaisen.durability_skill_tree.button_empty4": "+",
@@ -412,6 +448,7 @@
       "gui.craftkaisen.durability_skill_tree.button_empty2": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
+      "gui.craftkaisen.cursed_energy_skill_tree.button_back": "Back",
       "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
     }
   },
@@ -466,6 +503,10 @@
       },
       {
         "name": "Binds",
+        "children": []
+      },
+      {
+        "name": "Tags",
         "children": []
       }
     ]
