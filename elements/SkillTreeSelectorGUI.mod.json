@@ -15,6 +15,9 @@
         "data": {
           "name": "button_strength",
           "text": "Strength",
+          "onClick": {
+            "name": "OpenStrengthSkillTree"
+          },
           "width": 67,
           "height": 20,
           "x": 136,
@@ -26,6 +29,9 @@
         "data": {
           "name": "button_durability",
           "text": "Durability",
+          "onClick": {
+            "name": "OpenDurabilitySkillTree"
+          },
           "width": 77,
           "height": 20,
           "x": 172,
@@ -37,6 +43,9 @@
         "data": {
           "name": "button_cursed_energy",
           "text": "Cursed Energy",
+          "onClick": {
+            "name": "OpenCursedEnergySkillTree"
+          },
           "width": 93,
           "height": 20,
           "x": 163,
@@ -48,6 +57,9 @@
         "data": {
           "name": "button_technique",
           "text": "Technique",
+          "onClick": {
+            "name": "OpenTechniqueSkillTree"
+          },
           "width": 72,
           "height": 20,
           "x": 217,

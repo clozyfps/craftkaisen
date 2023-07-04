@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.SkillTreeSelectorGUIMenu;
+import net.mcreator.craftkaisen.network.SkillTreeSelectorGUIButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -87,18 +89,34 @@ public class SkillTreeSelectorGUIScreen extends AbstractContainerScreen<SkillTre
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		button_strength = new Button(this.leftPos + 10, this.topPos + 64, 67, 20, Component.translatable("gui.craftkaisen.skill_tree_selector_gui.button_strength"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeSelectorGUIButtonMessage(0, x, y, z));
+				SkillTreeSelectorGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_strength", button_strength);
 		this.addRenderableWidget(button_strength);
 		button_durability = new Button(this.leftPos + 46, this.topPos + 100, 77, 20, Component.translatable("gui.craftkaisen.skill_tree_selector_gui.button_durability"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeSelectorGUIButtonMessage(1, x, y, z));
+				SkillTreeSelectorGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		});
 		guistate.put("button:button_durability", button_durability);
 		this.addRenderableWidget(button_durability);
 		button_cursed_energy = new Button(this.leftPos + 37, this.topPos + 28, 93, 20, Component.translatable("gui.craftkaisen.skill_tree_selector_gui.button_cursed_energy"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeSelectorGUIButtonMessage(2, x, y, z));
+				SkillTreeSelectorGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		});
 		guistate.put("button:button_cursed_energy", button_cursed_energy);
 		this.addRenderableWidget(button_cursed_energy);
 		button_technique = new Button(this.leftPos + 91, this.topPos + 64, 72, 20, Component.translatable("gui.craftkaisen.skill_tree_selector_gui.button_technique"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeSelectorGUIButtonMessage(3, x, y, z));
+				SkillTreeSelectorGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
 		});
 		guistate.put("button:button_technique", button_technique);
 		this.addRenderableWidget(button_technique);
