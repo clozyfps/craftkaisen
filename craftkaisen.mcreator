@@ -324,682 +324,6 @@
       "path": "~/Binds"
     },
     {
-      "name": "StrengthCore",
-      "type": "gui",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_core",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/StrengthCoreButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StrengthCoreScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StrengthCoreMenu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "Strength1",
-      "type": "gui",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Strength1Menu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Strength1Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/Strength1ButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "Strength2",
-      "type": "gui",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/Strength2ButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Strength2Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Strength2Menu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "StrengthSkill",
-      "type": "gui",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_skill",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StrengthSkillMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StrengthSkillScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/StrengthSkillButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "Strength3",
-      "type": "gui",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Strength3Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Strength3Menu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/Strength3ButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "StrengthSkillAlt1",
-      "type": "gui",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_skill_alt_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StrengthSkillAlt1Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StrengthSkillAlt1Menu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/StrengthSkillAlt1ButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "StrengthSkillAlt2",
-      "type": "gui",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_skill_alt_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/StrengthSkillAlt2ButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StrengthSkillAlt2Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StrengthSkillAlt2Menu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "Strength4",
-      "type": "gui",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Strength4Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/Strength4ButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Strength4Menu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "Strength5",
-      "type": "gui",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Strength5Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/Strength5ButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Strength5Menu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "Strength6",
-      "type": "gui",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_6",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Strength6Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/Strength6ButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Strength6Menu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "Strength7",
-      "type": "gui",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_7",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Strength7Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Strength7Menu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/Strength7ButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "StrengthFinalAlt1",
-      "type": "gui",
-      "sortid": 23,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_final_alt_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StrengthFinalAlt1Menu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StrengthFinalAlt1Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/StrengthFinalAlt1ButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "StrengthFinalAlt2",
-      "type": "gui",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_final_alt_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StrengthFinalAlt2Menu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StrengthFinalAlt2Screen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/StrengthFinalAlt2ButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrengthCore",
-      "type": "procedure",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_core",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrengthCoreProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrength1",
-      "type": "procedure",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrength1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrength2",
-      "type": "procedure",
-      "sortid": 27,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrength2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrengthSkill",
-      "type": "procedure",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_skill",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrengthSkillProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrength3",
-      "type": "procedure",
-      "sortid": 29,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_3",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrength3Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrengthSkillAlt1",
-      "type": "procedure",
-      "sortid": 30,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_skill_alt_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrengthSkillAlt1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrengthSkillAlt2",
-      "type": "procedure",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_skill_alt_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrengthSkillAlt2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrength4",
-      "type": "procedure",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_4",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrength4Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrength5",
-      "type": "procedure",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_5",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrength5Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrength6",
-      "type": "procedure",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_6",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrength6Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrength7",
-      "type": "procedure",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_7",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrength7Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrengthFinalAlt1",
-      "type": "procedure",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_final_alt_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrengthFinalAlt1Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
-      "name": "OpenStrengthFinalAlt2",
-      "type": "procedure",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_final_alt_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrengthFinalAlt2Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/SubGUI/Strength"
-    },
-    {
       "name": "Credits",
       "type": "overlay",
       "compiles": true,
@@ -1017,157 +341,61 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.craftkaisen.strength_final_alt_2.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_2.button_yes": "Yes",
-      "gui.craftkaisen.strength_skill_alt_1.label_from_this": " from this.",
       "gui.craftkaisen.credits.label_mod_created_by_clozy_katsu_and": "Mod Created By Clozy, Katsu, And RequiredDevelopment",
       "gui.craftkaisen.durability_skill_tree.label_strength_skill_tree": "Durability Skill Tree",
-      "gui.craftkaisen.strength_1.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_core.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_7.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_5.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_7.button_no": "No",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty11": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty12": "+",
       "gui.craftkaisen.skill_tree_selector_gui.label_skill_trees": "Skill Trees",
-      "gui.craftkaisen.strength_5.button_yes": "Yes",
-      "gui.craftkaisen.strength_7.label_from_this": " from this.",
-      "gui.craftkaisen.strength_4.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_3.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_4.label_from_this": " from this.",
-      "gui.craftkaisen.strength_skill.button_yes": "Yes",
       "gui.craftkaisen.strength_1.label_from_this": " from this.",
-      "gui.craftkaisen.strength_final_alt_1.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_skill_alt_1.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_6.label_core": "Core",
       "gui.craftkaisen.skill_tree_selector_gui.button_technique": "Technique",
-      "gui.craftkaisen.strength_skill.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_skill_alt_2.label_learn_this": "Learn this?",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty9": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty8": "+",
-      "gui.craftkaisen.strength_final_alt_2.label_core": "Core",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty10": "+",
-      "gui.craftkaisen.strength_2.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_1.button_no": "No",
       "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty1": "+",
-      "gui.craftkaisen.strength_final_alt_1.button_yes": "Yes",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty3": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty2": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty5": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty4": "+",
-      "gui.craftkaisen.strength_7.label_core": "Core",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty7": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty6": "+",
       "key.craftkaisen.testing_open_skill_tree_gui": "TESTING Open Skill Tree GUI",
-      "gui.craftkaisen.strength_skill_alt_2.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_5.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_core.label_from_this": " from this.",
-      "gui.craftkaisen.strength_core.button_yes": "Yes",
-      "gui.craftkaisen.strength_2.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_core.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_1.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_6.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_skill.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_6.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_4.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_4.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_2.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_final_alt_2.label_from_this": " from this.",
-      "gui.craftkaisen.strength_final_alt_2.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_5.button_no": "No",
       "gui.craftkaisen.strength_skill_tree_gui.button_back": "Back",
-      "gui.craftkaisen.strength_final_alt_1.label_cost_0": "Cost : 0",
       "gui.craftkaisen.cursed_energy_skill_tree.label_strength_skill_tree": "Cursed Energy Skill Tree",
-      "gui.craftkaisen.strength_skill.button_no": "No",
-      "gui.craftkaisen.strength_2.button_no": "No",
-      "gui.craftkaisen.strength_skill_alt_1.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_2.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_core.label_core": "Core",
-      "gui.craftkaisen.strength_skill_alt_1.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_core.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_6.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.cursed_energy_skill_tree.button_back": "Back",
       "gui.craftkaisen.durability_skill_tree.button_empty": "+",
-      "gui.craftkaisen.strength_skill.label_core": "Core",
+      "gui.craftkaisen.cursed_energy_skill_tree.button_empty13": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty12": "+",
-      "gui.craftkaisen.strength_3.button_no": "No",
-      "gui.craftkaisen.strength_final_alt_2.button_no": "No",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty11": "+",
-      "gui.craftkaisen.strength_5.label_learn_this": "Learn this?",
       "gui.craftkaisen.technique_skill_tree.button_back": "Back",
-      "gui.craftkaisen.strength_3.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_skill_alt_2.label_core": "Core",
-      "gui.craftkaisen.strength_5.label_this_is_the_core_of_your_abiliti": "This is the core of your",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty2": "+",
-      "gui.craftkaisen.strength_1.label_this_is_the_core_of_your_abiliti": "This is the core of your",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty3": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty1": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty6": "+",
-      "gui.craftkaisen.strength_skill_alt_2.label_cost_0": "Cost : 0",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty7": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty4": "+",
-      "gui.craftkaisen.strength_core.button_no": "No",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty5": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty8": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty9": "+",
       "gui.craftkaisen.strength_skill_tree_gui.button_empty": "+",
       "item.craftkaisen.tes": "Tes",
-      "gui.craftkaisen.strength_5.label_core": "Core",
-      "gui.craftkaisen.strength_7.button_yes": "Yes",
-      "gui.craftkaisen.strength_final_alt_1.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_4.button_no": "No",
-      "gui.craftkaisen.strength_final_alt_1.label_core": "Core",
-      "gui.craftkaisen.strength_skill_alt_2.button_no": "No",
-      "gui.craftkaisen.strength_7.label_learn_this": "Learn this?",
       "gui.craftkaisen.skill_tree_selector_gui.button_back": "Back",
-      "gui.craftkaisen.strength_final_alt_2.button_yes": "Yes",
-      "gui.craftkaisen.strength_final_alt_1.button_no": "No",
-      "gui.craftkaisen.strength_3.label_from_this": " from this.",
-      "gui.craftkaisen.strength_final_alt_1.label_from_this": " from this.",
-      "gui.craftkaisen.strength_7.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_3.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.strength_6.label_from_this": " from this.",
-      "gui.craftkaisen.strength_7.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.skill_tree_selector_gui.button_durability": "Durability",
-      "gui.craftkaisen.strength_6.button_yes": "Yes",
-      "gui.craftkaisen.strength_skill.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.skill_tree_selector_gui.button_cursed_energy": "Cursed Energy",
-      "gui.craftkaisen.strength_skill.label_cost_0": "Cost : 0",
       "gui.craftkaisen.durability_skill_tree.button_back": "Back",
       "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty10": "+",
-      "gui.craftkaisen.strength_skill.label_from_this": " from this.",
-      "gui.craftkaisen.strength_skill_alt_1.label_cost_0": "Cost : 0",
-      "gui.craftkaisen.strength_5.label_from_this": " from this.",
-      "gui.craftkaisen.strength_final_alt_1.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
-      "gui.craftkaisen.strength_2.label_from_this": " from this.",
-      "gui.craftkaisen.strength_4.label_core": "Core",
-      "gui.craftkaisen.strength_1.button_yes": "Yes",
-      "gui.craftkaisen.strength_final_alt_2.label_this_is_the_core_of_your_abiliti": "This is the core of your",
       "gui.craftkaisen.technique_skill_tree.label_strength_skill_tree": "Technique Skill Tree",
       "gui.craftkaisen.skill_tree_selector_gui.button_strength": "Strength",
-      "gui.craftkaisen.strength_4.button_yes": "Yes",
-      "gui.craftkaisen.strength_skill_alt_2.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_skill_alt_1.label_core": "Core",
-      "gui.craftkaisen.strength_1.label_core": "Core",
-      "gui.craftkaisen.strength_3.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_core.label_this_is_the_core_of_your_abiliti": "This is the core of your",
-      "gui.craftkaisen.strength_6.button_no": "No",
-      "gui.craftkaisen.strength_final_alt_2.label_cost_0": "Cost : 0",
       "gui.craftkaisen.durability_skill_tree.button_empty5": "+",
       "gui.craftkaisen.strength_skill_tree_gui.label_strength_skill_tree": "Strength Skill Tree",
       "gui.craftkaisen.durability_skill_tree.button_empty4": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty7": "+",
       "gui.craftkaisen.cursed_energy_skill_tree.button_empty": "+",
-      "gui.craftkaisen.strength_3.button_yes": "Yes",
-      "gui.craftkaisen.strength_skill_alt_1.button_yes": "Yes",
       "gui.craftkaisen.durability_skill_tree.button_empty6": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty9": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty8": "+",
-      "gui.craftkaisen.strength_2.label_core": "Core",
-      "gui.craftkaisen.strength_skill_alt_2.label_from_this": " from this.",
       "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty10": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty3": "+",
@@ -1183,13 +411,8 @@
       "gui.craftkaisen.durability_skill_tree.button_empty12": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty2": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty": "+",
-      "gui.craftkaisen.strength_skill_alt_1.button_no": "No",
-      "gui.craftkaisen.strength_6.label_learn_this": "Learn this?",
-      "gui.craftkaisen.strength_skill_alt_2.button_yes": "Yes",
-      "gui.craftkaisen.strength_4.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty1": "+",
-      "gui.craftkaisen.strength_3.label_core": "Core"
+      "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
     }
   },
   "foldersRoot": {
@@ -1222,19 +445,11 @@
             "name": "SubGUI",
             "children": [
               {
-                "name": "Strength",
+                "name": "Upgrades",
                 "children": []
               },
               {
-                "name": "Durability",
-                "children": []
-              },
-              {
-                "name": "Cursed Energy",
-                "children": []
-              },
-              {
-                "name": "Techniques",
+                "name": "Upgrade Procedures",
                 "children": []
               }
             ]

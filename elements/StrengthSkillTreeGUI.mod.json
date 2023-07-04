@@ -15,9 +15,6 @@
         "data": {
           "name": "button_empty",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrengthCore"
-          },
           "width": 30,
           "height": 20,
           "x": 20,
@@ -29,9 +26,6 @@
         "data": {
           "name": "button_empty1",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrength1"
-          },
           "width": 30,
           "height": 20,
           "x": 60,
@@ -43,9 +37,6 @@
         "data": {
           "name": "button_empty2",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrength2"
-          },
           "width": 30,
           "height": 20,
           "x": 100,
@@ -57,9 +48,6 @@
         "data": {
           "name": "button_empty3",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrengthSkill"
-          },
           "width": 30,
           "height": 20,
           "x": 100,
@@ -71,9 +59,6 @@
         "data": {
           "name": "button_empty4",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrength3"
-          },
           "width": 30,
           "height": 20,
           "x": 140,
@@ -85,9 +70,6 @@
         "data": {
           "name": "button_empty5",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrengthSkillAlt2"
-          },
           "width": 30,
           "height": 20,
           "x": 180,
@@ -99,9 +81,6 @@
         "data": {
           "name": "button_empty6",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrengthSkillAlt1"
-          },
           "width": 30,
           "height": 20,
           "x": 180,
@@ -113,9 +92,6 @@
         "data": {
           "name": "button_empty7",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrength4"
-          },
           "width": 30,
           "height": 20,
           "x": 220,
@@ -127,9 +103,6 @@
         "data": {
           "name": "button_empty8",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrength5"
-          },
           "width": 30,
           "height": 20,
           "x": 260,
@@ -141,9 +114,6 @@
         "data": {
           "name": "button_empty9",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrength6"
-          },
           "width": 30,
           "height": 20,
           "x": 300,
@@ -155,9 +125,6 @@
         "data": {
           "name": "button_empty10",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrength7"
-          },
           "width": 30,
           "height": 20,
           "x": 340,
@@ -169,9 +136,6 @@
         "data": {
           "name": "button_empty11",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrengthFinalAlt2"
-          },
           "width": 30,
           "height": 20,
           "x": 380,
@@ -183,9 +147,6 @@
         "data": {
           "name": "button_empty12",
           "text": "+",
-          "onClick": {
-            "name": "OpenStrengthFinalAlt1"
-          },
           "width": 30,
           "height": 20,
           "x": 380,

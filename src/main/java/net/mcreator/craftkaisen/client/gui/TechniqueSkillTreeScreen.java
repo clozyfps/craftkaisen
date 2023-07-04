@@ -23,18 +23,6 @@ public class TechniqueSkillTreeScreen extends AbstractContainerScreen<TechniqueS
 	private final int x, y, z;
 	private final Player entity;
 	Button button_empty;
-	Button button_empty1;
-	Button button_empty2;
-	Button button_empty3;
-	Button button_empty4;
-	Button button_empty5;
-	Button button_empty6;
-	Button button_empty7;
-	Button button_empty8;
-	Button button_empty9;
-	Button button_empty10;
-	Button button_empty11;
-	Button button_empty12;
 	Button button_back;
 
 	public TechniqueSkillTreeScreen(TechniqueSkillTreeMenu container, Inventory inventory, Component text) {
@@ -96,58 +84,10 @@ public class TechniqueSkillTreeScreen extends AbstractContainerScreen<TechniqueS
 		});
 		guistate.put("button:button_empty", button_empty);
 		this.addRenderableWidget(button_empty);
-		button_empty1 = new Button(this.leftPos + -65, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty1"), e -> {
-		});
-		guistate.put("button:button_empty1", button_empty1);
-		this.addRenderableWidget(button_empty1);
-		button_empty2 = new Button(this.leftPos + -25, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty2"), e -> {
-		});
-		guistate.put("button:button_empty2", button_empty2);
-		this.addRenderableWidget(button_empty2);
-		button_empty3 = new Button(this.leftPos + -25, this.topPos + 43, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty3"), e -> {
-		});
-		guistate.put("button:button_empty3", button_empty3);
-		this.addRenderableWidget(button_empty3);
-		button_empty4 = new Button(this.leftPos + 14, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty4"), e -> {
-		});
-		guistate.put("button:button_empty4", button_empty4);
-		this.addRenderableWidget(button_empty4);
-		button_empty5 = new Button(this.leftPos + 54, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty5"), e -> {
-		});
-		guistate.put("button:button_empty5", button_empty5);
-		this.addRenderableWidget(button_empty5);
-		button_empty6 = new Button(this.leftPos + 54, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty6"), e -> {
-		});
-		guistate.put("button:button_empty6", button_empty6);
-		this.addRenderableWidget(button_empty6);
-		button_empty7 = new Button(this.leftPos + 94, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty7"), e -> {
-		});
-		guistate.put("button:button_empty7", button_empty7);
-		this.addRenderableWidget(button_empty7);
-		button_empty8 = new Button(this.leftPos + 134, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty8"), e -> {
-		});
-		guistate.put("button:button_empty8", button_empty8);
-		this.addRenderableWidget(button_empty8);
-		button_empty9 = new Button(this.leftPos + 174, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty9"), e -> {
-		});
-		guistate.put("button:button_empty9", button_empty9);
-		this.addRenderableWidget(button_empty9);
-		button_empty10 = new Button(this.leftPos + 214, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty10"), e -> {
-		});
-		guistate.put("button:button_empty10", button_empty10);
-		this.addRenderableWidget(button_empty10);
-		button_empty11 = new Button(this.leftPos + 254, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty11"), e -> {
-		});
-		guistate.put("button:button_empty11", button_empty11);
-		this.addRenderableWidget(button_empty11);
-		button_empty12 = new Button(this.leftPos + 254, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_empty12"), e -> {
-		});
-		guistate.put("button:button_empty12", button_empty12);
-		this.addRenderableWidget(button_empty12);
 		button_back = new Button(this.leftPos + 64, this.topPos + 173, 46, 20, Component.translatable("gui.craftkaisen.technique_skill_tree.button_back"), e -> {
 			if (true) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new TechniqueSkillTreeButtonMessage(13, x, y, z));
-				TechniqueSkillTreeButtonMessage.handleButtonAction(entity, 13, x, y, z);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new TechniqueSkillTreeButtonMessage(1, x, y, z));
+				TechniqueSkillTreeButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
 		guistate.put("button:button_back", button_back);

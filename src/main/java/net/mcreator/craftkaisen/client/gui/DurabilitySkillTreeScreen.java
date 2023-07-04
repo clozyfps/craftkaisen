@@ -104,11 +104,11 @@ public class DurabilitySkillTreeScreen extends AbstractContainerScreen<Durabilit
 		});
 		guistate.put("button:button_empty2", button_empty2);
 		this.addRenderableWidget(button_empty2);
-		button_empty3 = new Button(this.leftPos + -25, this.topPos + 43, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty3"), e -> {
+		button_empty3 = new Button(this.leftPos + 14, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty3"), e -> {
 		});
 		guistate.put("button:button_empty3", button_empty3);
 		this.addRenderableWidget(button_empty3);
-		button_empty4 = new Button(this.leftPos + 14, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty4"), e -> {
+		button_empty4 = new Button(this.leftPos + 14, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty4"), e -> {
 		});
 		guistate.put("button:button_empty4", button_empty4);
 		this.addRenderableWidget(button_empty4);
@@ -136,11 +136,11 @@ public class DurabilitySkillTreeScreen extends AbstractContainerScreen<Durabilit
 		});
 		guistate.put("button:button_empty10", button_empty10);
 		this.addRenderableWidget(button_empty10);
-		button_empty11 = new Button(this.leftPos + 254, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty11"), e -> {
+		button_empty11 = new Button(this.leftPos + 254, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty11"), e -> {
 		});
 		guistate.put("button:button_empty11", button_empty11);
 		this.addRenderableWidget(button_empty11);
-		button_empty12 = new Button(this.leftPos + 254, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty12"), e -> {
+		button_empty12 = new Button(this.leftPos + 134, this.topPos + 103, 30, 20, Component.translatable("gui.craftkaisen.durability_skill_tree.button_empty12"), e -> {
 		});
 		guistate.put("button:button_empty12", button_empty12);
 		this.addRenderableWidget(button_empty12);

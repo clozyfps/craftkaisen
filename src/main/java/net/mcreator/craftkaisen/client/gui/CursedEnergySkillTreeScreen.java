@@ -36,6 +36,7 @@ public class CursedEnergySkillTreeScreen extends AbstractContainerScreen<CursedE
 	Button button_empty11;
 	Button button_empty12;
 	Button button_back;
+	Button button_empty13;
 
 	public CursedEnergySkillTreeScreen(CursedEnergySkillTreeMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -100,23 +101,23 @@ public class CursedEnergySkillTreeScreen extends AbstractContainerScreen<CursedE
 		});
 		guistate.put("button:button_empty1", button_empty1);
 		this.addRenderableWidget(button_empty1);
-		button_empty2 = new Button(this.leftPos + -25, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty2"), e -> {
+		button_empty2 = new Button(this.leftPos + 54, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty2"), e -> {
 		});
 		guistate.put("button:button_empty2", button_empty2);
 		this.addRenderableWidget(button_empty2);
-		button_empty3 = new Button(this.leftPos + -25, this.topPos + 43, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty3"), e -> {
+		button_empty3 = new Button(this.leftPos + -25, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty3"), e -> {
 		});
 		guistate.put("button:button_empty3", button_empty3);
 		this.addRenderableWidget(button_empty3);
-		button_empty4 = new Button(this.leftPos + 14, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty4"), e -> {
+		button_empty4 = new Button(this.leftPos + 54, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty4"), e -> {
 		});
 		guistate.put("button:button_empty4", button_empty4);
 		this.addRenderableWidget(button_empty4);
-		button_empty5 = new Button(this.leftPos + 54, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty5"), e -> {
+		button_empty5 = new Button(this.leftPos + 14, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty5"), e -> {
 		});
 		guistate.put("button:button_empty5", button_empty5);
 		this.addRenderableWidget(button_empty5);
-		button_empty6 = new Button(this.leftPos + 54, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty6"), e -> {
+		button_empty6 = new Button(this.leftPos + 14, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty6"), e -> {
 		});
 		guistate.put("button:button_empty6", button_empty6);
 		this.addRenderableWidget(button_empty6);
@@ -136,11 +137,11 @@ public class CursedEnergySkillTreeScreen extends AbstractContainerScreen<CursedE
 		});
 		guistate.put("button:button_empty10", button_empty10);
 		this.addRenderableWidget(button_empty10);
-		button_empty11 = new Button(this.leftPos + 254, this.topPos + 93, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty11"), e -> {
+		button_empty11 = new Button(this.leftPos + 254, this.topPos + 73, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty11"), e -> {
 		});
 		guistate.put("button:button_empty11", button_empty11);
 		this.addRenderableWidget(button_empty11);
-		button_empty12 = new Button(this.leftPos + 254, this.topPos + 53, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty12"), e -> {
+		button_empty12 = new Button(this.leftPos + 134, this.topPos + 43, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty12"), e -> {
 		});
 		guistate.put("button:button_empty12", button_empty12);
 		this.addRenderableWidget(button_empty12);
@@ -152,5 +153,9 @@ public class CursedEnergySkillTreeScreen extends AbstractContainerScreen<CursedE
 		});
 		guistate.put("button:button_back", button_back);
 		this.addRenderableWidget(button_back);
+		button_empty13 = new Button(this.leftPos + 134, this.topPos + 103, 30, 20, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.button_empty13"), e -> {
+		});
+		guistate.put("button:button_empty13", button_empty13);
+		this.addRenderableWidget(button_empty13);
 	}
 }
