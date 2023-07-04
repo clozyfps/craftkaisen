@@ -40,6 +40,14 @@
       {
         "name": "Armor",
         "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "GUI",
+        "children": []
       }
     ]
   },
