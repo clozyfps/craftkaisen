@@ -79,7 +79,7 @@ public class TechniqueSkillTreeScreen extends AbstractContainerScreen<TechniqueS
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.technique_skill_tree.label_strength_skill_tree"), 44, -27, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.technique_skill_tree.label_strength_skill_tree"), 34, -27, -1);
 	}
 
 	@Override

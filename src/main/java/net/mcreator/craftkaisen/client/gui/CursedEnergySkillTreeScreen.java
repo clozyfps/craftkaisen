@@ -79,7 +79,7 @@ public class CursedEnergySkillTreeScreen extends AbstractContainerScreen<CursedE
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.label_strength_skill_tree"), 24, -27, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.cursed_energy_skill_tree.label_strength_skill_tree"), 24, -27, -1);
 	}
 
 	@Override

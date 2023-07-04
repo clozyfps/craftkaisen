@@ -161,10 +161,10 @@
             "fixedValue": "Technique Skill Tree"
           },
           "color": {
-            "value": -12829636,
+            "value": -1,
             "falpha": 0.0
           },
-          "x": 170,
+          "x": 160,
           "y": 10
         }
       },
