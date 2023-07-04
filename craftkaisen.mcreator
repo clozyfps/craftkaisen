@@ -335,6 +335,42 @@
         ]
       },
       "path": "~/Misc"
+    },
+    {
+      "name": "MainLevelingSystemProcedure",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_leveling_system_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MainLevelingSystemProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "droppedexperience",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CkProgressivePrestigeDifficulty",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_progressive_prestige_difficulty",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
     }
   ],
   "variable_elements": [
@@ -373,6 +409,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "ExpRequirement",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "100.0"
     }
   ],
   "sound_elements": [],
@@ -424,6 +466,7 @@
       "gui.craftkaisen.skill_tree_selector_gui.button_strength": "Strength",
       "gui.craftkaisen.strength_skill_tree_gui.button_back": "Back",
       "gui.craftkaisen.cursed_energy_skill_tree.label_strength_skill_tree": "Cursed Energy Skill Tree",
+      "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.durability_skill_tree.button_empty5": "+",
       "gui.craftkaisen.strength_skill_tree_gui.label_strength_skill_tree": "Strength Skill Tree",
       "gui.craftkaisen.durability_skill_tree.button_empty4": "+",
@@ -443,6 +486,7 @@
       "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty3": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty11": "+",
+      "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
       "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty12": "+",
       "gui.craftkaisen.durability_skill_tree.button_empty2": "+",
@@ -507,6 +551,10 @@
       },
       {
         "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Gamerules",
         "children": []
       }
     ]

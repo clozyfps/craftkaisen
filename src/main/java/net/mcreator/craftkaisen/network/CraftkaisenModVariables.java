@@ -73,6 +73,7 @@ public class CraftkaisenModVariables {
 			clone.Prestige = original.Prestige;
 			clone.Clan = original.Clan;
 			clone.Technique = original.Technique;
+			clone.ExpRequirement = original.ExpRequirement;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -115,6 +116,7 @@ public class CraftkaisenModVariables {
 		public double Prestige = 0;
 		public String Clan = "";
 		public String Technique = "";
+		public double ExpRequirement = 100.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -129,6 +131,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("Prestige", Prestige);
 			nbt.putString("Clan", Clan);
 			nbt.putString("Technique", Technique);
+			nbt.putDouble("ExpRequirement", ExpRequirement);
 			return nbt;
 		}
 
@@ -140,6 +143,7 @@ public class CraftkaisenModVariables {
 			Prestige = nbt.getDouble("Prestige");
 			Clan = nbt.getString("Clan");
 			Technique = nbt.getString("Technique");
+			ExpRequirement = nbt.getDouble("ExpRequirement");
 		}
 	}
 
@@ -170,6 +174,7 @@ public class CraftkaisenModVariables {
 					variables.Prestige = message.data.Prestige;
 					variables.Clan = message.data.Clan;
 					variables.Technique = message.data.Technique;
+					variables.ExpRequirement = message.data.ExpRequirement;
 				}
 			});
 			context.setPacketHandled(true);
