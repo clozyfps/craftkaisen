@@ -1,0 +1,65 @@
+{
+  "mod_elements": [
+    {
+      "name": "Tes",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tes",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/tes.json"
+        ]
+      },
+      "path": "~/Misc"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.craftkaisen.tes": "Tes"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Misc",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Armor",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "craftkaisen",
+    "modName": "CraftKaisen",
+    "version": "1.0.0",
+    "author": "jayso, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.craftkaisen",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300224119
+}
