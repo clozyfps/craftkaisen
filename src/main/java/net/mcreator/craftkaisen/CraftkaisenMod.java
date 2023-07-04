@@ -29,6 +29,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.craftkaisen.init.CraftkaisenModMenus;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 
 import java.util.function.Supplier;
@@ -51,6 +52,8 @@ public class CraftkaisenMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		CraftkaisenModItems.REGISTRY.register(bus);
+
+		CraftkaisenModMenus.REGISTRY.register(bus);
 
 	}
 

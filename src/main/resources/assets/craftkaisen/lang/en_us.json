@@ -1,3 +1,9 @@
 {
-  "item.craftkaisen.tes": "Tes"
+  "gui.craftkaisen.skill_tree_selector_gui.button_cursed_energy": "Cursed Energy",
+  "gui.craftkaisen.skill_tree_selector_gui.button_technique": "Technique",
+  "gui.craftkaisen.skill_tree_selector_gui.button_strength": "Strength",
+  "gui.craftkaisen.skill_tree_selector_gui.button_durability": "Durability",
+  "gui.craftkaisen.skill_tree_selector_gui.button_back": "Back",
+  "item.craftkaisen.tes": "Tes",
+  "gui.craftkaisen.skill_tree_selector_gui.label_skill_trees": "Skill Trees"
 }

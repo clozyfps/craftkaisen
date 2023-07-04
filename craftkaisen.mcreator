@@ -13,13 +13,33 @@
         ]
       },
       "path": "~/Misc"
+    },
+    {
+      "name": "SkillTreeSelectorGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_tree_selector_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeSelectorGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeSelectorGUIScreen.java"
+        ]
+      },
+      "path": "~/GUI"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.tes": "Tes"
+      "gui.craftkaisen.skill_tree_selector_gui.button_cursed_energy": "Cursed Energy",
+      "gui.craftkaisen.skill_tree_selector_gui.button_technique": "Technique",
+      "gui.craftkaisen.skill_tree_selector_gui.button_strength": "Strength",
+      "gui.craftkaisen.skill_tree_selector_gui.button_durability": "Durability",
+      "gui.craftkaisen.skill_tree_selector_gui.button_back": "Back",
+      "item.craftkaisen.tes": "Tes",
+      "gui.craftkaisen.skill_tree_selector_gui.label_skill_trees": "Skill Trees"
     }
   },
   "foldersRoot": {
@@ -47,13 +67,35 @@
       },
       {
         "name": "GUI",
-        "children": []
+        "children": [
+          {
+            "name": "SubGUI",
+            "children": [
+              {
+                "name": "Strength",
+                "children": []
+              },
+              {
+                "name": "Durability",
+                "children": []
+              },
+              {
+                "name": "Cursed Energy",
+                "children": []
+              },
+              {
+                "name": "Techniques",
+                "children": []
+              }
+            ]
+          }
+        ]
       }
     ]
   },
   "workspaceSettings": {
     "modid": "craftkaisen",
-    "modName": "CraftKaisen",
+    "modName": "Craft Kaisen",
     "version": "1.0.0",
     "author": "jayso, MCreator",
     "websiteURL": "https://mcreator.net",

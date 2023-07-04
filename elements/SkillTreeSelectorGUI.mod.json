@@ -1,0 +1,92 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_strength",
+          "text": "Strength",
+          "width": 67,
+          "height": 20,
+          "x": 136,
+          "y": 101
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_durability",
+          "text": "Durability",
+          "width": 77,
+          "height": 20,
+          "x": 172,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cursed_energy",
+          "text": "Cursed Energy",
+          "width": 93,
+          "height": 20,
+          "x": 163,
+          "y": 65
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_technique",
+          "text": "Technique",
+          "width": 72,
+          "height": 20,
+          "x": 217,
+          "y": 101
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "Back",
+          "width": 46,
+          "height": 20,
+          "x": 188,
+          "y": 173
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_skill_trees",
+          "text": {
+            "fixedValue": "Skill Trees"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 181,
+          "y": 47
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 1,
+      "oy": 3,
+      "snapOnGrid": false
+    }
+  }
+}
