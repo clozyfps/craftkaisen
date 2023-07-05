@@ -36,9 +36,9 @@ public class LapseBlueTestProcedure {
 			_player.displayClientMessage(Component.literal("\u00A7l\u00A7b Lapse Blue."), true);
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 25, 5, false, false));
-		entity.getPersistentData().putBoolean("lapse", true);
+		entity.getPersistentData().putBoolean("lapseuser", true);
 		CraftkaisenMod.queueServerWork(200, () -> {
-			entity.getPersistentData().putBoolean("lapse", false);
+			entity.getPersistentData().putBoolean("lapseuser", false);
 		});
 	}
 }
