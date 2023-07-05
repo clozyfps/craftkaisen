@@ -3,7 +3,7 @@
   "_type": "gamerule",
   "definition": {
     "type": "Logic",
-    "displayName": "progressivePrestigeDifficulty",
+    "displayName": "Progressive Prestige Difficulty",
     "description": "Only spawn high level mobs when over a certain prestige",
     "category": "UPDATES",
     "defaultValueLogic": true,

@@ -2,26 +2,27 @@
   "_fv": 43,
   "_type": "overlay",
   "definition": {
-    "priority": "HIGHEST",
+    "priority": "NORMAL",
     "components": [
       {
         "type": "label",
         "data": {
-          "name": "label_mod_created_by_clozy_katsu_and",
+          "name": "label_dawd",
           "text": {
-            "fixedValue": "Mod Created By Clozy, Katsu, And RequiredDevelopment"
+            "fixedValue": "dawd",
+            "name": "Tetsjs"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 2,
-          "y": 2
+          "x": 91,
+          "y": 194
         }
       }
     ],
     "baseTexture": "",
-    "overlayTarget": "MainMenu",
+    "overlayTarget": "Ingame",
     "gridSettings": {
       "sx": 18,
       "sy": 18,

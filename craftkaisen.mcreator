@@ -16,19 +16,6 @@
       "path": "~/Items"
     },
     {
-      "name": "Credits",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "credits",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/screens/CreditsOverlay.java"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
       "name": "MainLevelingSystemProcedure",
       "type": "procedure",
       "sortid": 12,
@@ -160,10 +147,6 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "direction",
-            "type": "direction"
-          },
           {
             "name": "entity",
             "type": "entity"
@@ -359,21 +342,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "LapseBlue",
-      "type": "livingentity",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "lapse_blue",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/LapseBlueRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/LapseBlueEntity.java"
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
       "name": "LapseBlueTest",
       "type": "procedure",
       "sortid": 33,
@@ -393,21 +361,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "Test2",
-      "type": "item",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "test_2",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/Test2Item.java",
-          "src/main/resources/assets/craftkaisen/models/item/test_2.json"
         ]
       },
       "path": "~/Items"
@@ -435,6 +388,223 @@
         ]
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "LapseBlue",
+      "type": "livingentity",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/LapseBlueRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/LapseBlueEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Test2",
+      "type": "item",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/Test2Item.java",
+          "src/main/resources/assets/craftkaisen/models/item/test_2.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "BlockBind",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/BlockBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "StartBlocking",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "start_blocking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StartBlockingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "MainBlockingSystem",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_blocking_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MainBlockingSystemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "RegenBlockBar",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regen_block_bar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RegenBlockBarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Test",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/TestOverlay.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Tetsjs",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tetsjs",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TetsjsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "StopBlocking",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_blocking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StopBlockingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "WhileBlocking",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "while_blocking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WhileBlockingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
     }
   ],
   "variable_elements": [
@@ -502,31 +672,15 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.test_2": "Test 2",
-      "gui.craftkaisen.credits.label_mod_created_by_clozy_katsu_and": "Mod Created By Clozy, Katsu, And RequiredDevelopment",
-      "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty10": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
+      "gui.craftkaisen.test.label_dawd": "dawd",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.blocking_effect": "Blocking",
-      "gui.craftkaisen.strength_1.label_from_this": " from this.",
       "item.craftkaisen.tes": "Tes",
-      "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
-      "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty3": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty6": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty5": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty8": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
       "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
-      "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
-      "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
-      "key.categories.jjk": "Craft Kaisen",
-      "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
+      "key.categories.jjk": "Craft Kaisen"
     }
   },
   "foldersRoot": {
@@ -580,11 +734,21 @@
       },
       {
         "name": "GUI",
-        "children": []
+        "children": [
+          {
+            "name": "Values",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Keybinds",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       }
     ]
   },
