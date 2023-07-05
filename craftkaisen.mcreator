@@ -31,7 +31,7 @@
       "name": "MainLevelingSystemProcedure",
       "type": "procedure",
       "sortid": 12,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "main_leveling_system_procedure",
       "metadata": {
