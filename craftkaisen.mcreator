@@ -3,6 +3,7 @@
     {
       "name": "Tes",
       "type": "item",
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tes",
@@ -12,7 +13,7 @@
           "src/main/resources/assets/craftkaisen/models/item/tes.json"
         ]
       },
-      "path": "~/Misc"
+      "path": "~/Items"
     },
     {
       "name": "Credits",
@@ -66,6 +67,319 @@
         "type": "logic"
       },
       "path": "~/Gamerules"
+    },
+    {
+      "name": "HollowPurpleEntityOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_entity_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleEntityOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "HollowPurpleEntity",
+      "type": "livingentity",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "HollowPurpleWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "HollowPurpleProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "HollowPurple",
+      "type": "rangeditem",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "HollowPurpleProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "LapseBlueTemporaryOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_temporary_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueTemporaryOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "LapseBlueTemporary",
+      "type": "potioneffect",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_temporary",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/LapseBlueTemporaryMobEffect.java"
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "ReversalRedOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "ReversalRed",
+      "type": "potioneffect",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ReversalRedMobEffect.java"
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "LapseBlueTemporaryEffectExpires",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_temporary_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueTemporaryEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "HollowPurpleTemporaryOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_temporary_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleTemporaryOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "HollowPurpleTemporaryEffectExpires",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_temporary_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleTemporaryEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "HollowPurpleTemporary",
+      "type": "potioneffect",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_temporary",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/HollowPurpleTemporaryMobEffect.java"
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "HollowPurpleTest",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleTestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -115,6 +429,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.credits.label_mod_created_by_clozy_katsu_and": "Mod Created By Clozy, Katsu, And RequiredDevelopment",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
@@ -122,15 +437,19 @@
       "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty3": "+",
+      "item.craftkaisen.hollow_purple": "Hollow Purple",
       "gui.craftkaisen.technique_skill_tree.button_empty6": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty5": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty8": "+",
+      "effect.craftkaisen.hollow_purple_temporary": "hlw",
       "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
       "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
       "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
+      "effect.craftkaisen.reversal_red": "Reversal Red",
       "gui.craftkaisen.strength_1.label_from_this": " from this.",
       "item.craftkaisen.tes": "Tes",
+      "effect.craftkaisen.lapse_blue_temporary": "LapseBlueHollowPurple",
       "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
     }
@@ -152,7 +471,12 @@
       },
       {
         "name": "Abilities",
-        "children": []
+        "children": [
+          {
+            "name": "AbilitySetup",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Gamerules",

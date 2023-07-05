@@ -1,4 +1,5 @@
 {
+  "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
   "gui.craftkaisen.credits.label_mod_created_by_clozy_katsu_and": "Mod Created By Clozy, Katsu, And RequiredDevelopment",
   "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
   "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
@@ -6,15 +7,19 @@
   "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
   "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
   "gui.craftkaisen.technique_skill_tree.button_empty3": "+",
+  "item.craftkaisen.hollow_purple": "Hollow Purple",
   "gui.craftkaisen.technique_skill_tree.button_empty6": "+",
   "gui.craftkaisen.technique_skill_tree.button_empty5": "+",
   "gui.craftkaisen.technique_skill_tree.button_empty8": "+",
+  "effect.craftkaisen.hollow_purple_temporary": "hlw",
   "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
   "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
   "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
   "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
+  "effect.craftkaisen.reversal_red": "Reversal Red",
   "gui.craftkaisen.strength_1.label_from_this": " from this.",
   "item.craftkaisen.tes": "Tes",
+  "effect.craftkaisen.lapse_blue_temporary": "LapseBlueHollowPurple",
   "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
   "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
 }
