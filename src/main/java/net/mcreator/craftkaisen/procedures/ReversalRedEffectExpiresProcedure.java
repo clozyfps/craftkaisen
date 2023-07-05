@@ -1,8 +1,25 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
+import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class ReversalRedEffectExpiresProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -22,7 +39,7 @@ public class ReversalRedEffectExpiresProcedure {
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
 						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-							AbstractArrow entityToSpawn = new HollowPurpleEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+							AbstractArrow entityToSpawn = new HollowPurpleEntity(CraftkaisenModEntities.HOLLOW_PURPLE.get(), level);
 							entityToSpawn.setOwner(shooter);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);
@@ -37,7 +54,7 @@ public class ReversalRedEffectExpiresProcedure {
 				}
 			}
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = new HollowPurpleEntityEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), _level);
+				Entity entityToSpawn = new HollowPurpleEntityEntity(CraftkaisenModEntities.HOLLOW_PURPLE_ENTITY.get(), _level);
 				entityToSpawn.moveTo(x, y, z, 0, 0);
 				entityToSpawn.setYBodyRot(0);
 				entityToSpawn.setYHeadRot(0);

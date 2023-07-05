@@ -3,26 +3,14 @@
     {
       "name": "Tes",
       "type": "item",
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/tes.json"
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "Credits",
-      "type": "overlay",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "credits",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/screens/CreditsOverlay.java"
+          "src/main/resources/assets/craftkaisen/models/item/tes.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
         ]
       },
       "path": "~/Misc"
@@ -70,6 +58,7 @@
     {
       "name": "BlockingEffect",
       "type": "potioneffect",
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blocking_effect",
@@ -450,13 +439,15 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.craftkaisen.credits.label_mod_created_by_clozy_katsu_and": "Mod Created By Clozy, Katsu, And RequiredDevelopment",
       "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty10": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
-      "gui.craftkaisen.strength_1.label_from_this": " from this.",
+      "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.blocking_effect": "Blocking",
+      "gui.craftkaisen.strength_1.label_from_this": " from this.",
       "item.craftkaisen.tes": "Tes",
+      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty3": "+",
@@ -465,9 +456,10 @@
       "gui.craftkaisen.technique_skill_tree.button_empty8": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
       "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
-      "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
       "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
+      "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
       "key.categories.jjk": "Craft Kaisen",
+      "key.craftkaisen.block_bind": "Block",
       "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
     }
