@@ -124,7 +124,7 @@ public class CraftkaisenModVariables {
 		public double ExpRequirement = 100.0;
 		public boolean Blocking = false;
 		public double BlockBar = 0;
-		public double BlockBarCap = 0;
+		public double BlockBarCap = 4.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)

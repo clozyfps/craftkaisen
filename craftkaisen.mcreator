@@ -113,7 +113,32 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MainBlockingSystemProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -372,6 +397,96 @@
         "dependencies": []
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "WhileBlocking",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "while_blocking",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WhileBlockingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "RegenBlockBar",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regen_block_bar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RegenBlockBarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Test",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/TestOverlay.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Tetsjs",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tetsjs",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TetsjsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
     }
   ],
   "variable_elements": [
@@ -433,19 +548,20 @@
       "name": "BlockBarCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "4.0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty10": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
-      "effect.craftkaisen.blocking_effect": "Blocking",
       "gui.craftkaisen.strength_1.label_from_this": " from this.",
+      "effect.craftkaisen.blocking_effect": "Blocking",
       "item.craftkaisen.tes": "Tes",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
@@ -455,7 +571,7 @@
       "gui.craftkaisen.technique_skill_tree.button_empty5": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty8": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
-      "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
+      "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
       "key.categories.jjk": "Craft Kaisen",
@@ -515,7 +631,12 @@
       },
       {
         "name": "GUI",
-        "children": []
+        "children": [
+          {
+            "name": "Values",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Keybinds",
