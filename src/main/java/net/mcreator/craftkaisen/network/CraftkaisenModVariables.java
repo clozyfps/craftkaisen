@@ -1,5 +1,7 @@
 package net.mcreator.craftkaisen.network;
 
+import org.jetbrains.annotations.Blocking;
+
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -75,6 +77,8 @@ public class CraftkaisenModVariables {
 			clone.Technique = original.Technique;
 			clone.ExpRequirement = original.ExpRequirement;
 			if (!event.isWasDeath()) {
+				clone.Blocking = original.Blocking;
+				clone.BlockBar = original.BlockBar;
 			}
 		}
 	}
@@ -117,6 +121,8 @@ public class CraftkaisenModVariables {
 		public String Clan = "";
 		public String Technique = "";
 		public double ExpRequirement = 100.0;
+		public boolean Blocking = false;
+		public double BlockBar = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -132,6 +138,8 @@ public class CraftkaisenModVariables {
 			nbt.putString("Clan", Clan);
 			nbt.putString("Technique", Technique);
 			nbt.putDouble("ExpRequirement", ExpRequirement);
+			nbt.putBoolean("Blocking", Blocking);
+			nbt.putDouble("BlockBar", BlockBar);
 			return nbt;
 		}
 
@@ -144,6 +152,8 @@ public class CraftkaisenModVariables {
 			Clan = nbt.getString("Clan");
 			Technique = nbt.getString("Technique");
 			ExpRequirement = nbt.getDouble("ExpRequirement");
+			Blocking = nbt.getBoolean("Blocking");
+			BlockBar = nbt.getDouble("BlockBar");
 		}
 	}
 
@@ -175,6 +185,8 @@ public class CraftkaisenModVariables {
 					variables.Clan = message.data.Clan;
 					variables.Technique = message.data.Technique;
 					variables.ExpRequirement = message.data.ExpRequirement;
+					variables.Blocking = message.data.Blocking;
+					variables.BlockBar = message.data.BlockBar;
 				}
 			});
 			context.setPacketHandled(true);
