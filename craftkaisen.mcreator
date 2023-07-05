@@ -508,10 +508,6 @@
         "children": []
       },
       {
-        "name": "Mobs",
-        "children": []
-      },
-      {
         "name": "Items",
         "children": []
       },
@@ -520,12 +516,32 @@
         "children": []
       },
       {
+        "name": "Abilities",
+        "children": []
+      },
+      {
+        "name": "Gamerules",
+        "children": []
+      },
+      {
         "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": []
+      },
+      {
+        "name": "Tags",
         "children": []
       },
       {
         "name": "GUI",
         "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          },
           {
             "name": "SubGUI",
             "children": [
@@ -542,23 +558,15 @@
           {
             "name": "Values",
             "children": []
-          },
-          {
-            "name": "Procedures",
-            "children": []
           }
         ]
       },
       {
+        "name": "Keybinds",
+        "children": []
+      },
+      {
         "name": "Binds",
-        "children": []
-      },
-      {
-        "name": "Tags",
-        "children": []
-      },
-      {
-        "name": "Gamerules",
         "children": []
       }
     ]
