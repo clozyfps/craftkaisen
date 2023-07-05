@@ -34,7 +34,7 @@
     "bulletModel": "Default",
     "customBulletModelTexture": "",
     "onBulletHitsBlock": {
-      "name": "HollowPurpleProjectileHitsBlock"
+      "name": "HollowPurpleProjectileHitsLivingEntity"
     },
     "onBulletHitsEntity": {
       "name": "HollowPurpleProjectileHitsLivingEntity"

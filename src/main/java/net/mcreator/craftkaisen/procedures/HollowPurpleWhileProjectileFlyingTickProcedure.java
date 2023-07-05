@@ -28,7 +28,7 @@ public class HollowPurpleWhileProjectileFlyingTickProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:dust 1 0 1 5.5 ^0 ^0 ^0 1.5 1.7 1.5 0 10");
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, 3, 2, 3, 1);
+			_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, 3, 2, 3, 0);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());

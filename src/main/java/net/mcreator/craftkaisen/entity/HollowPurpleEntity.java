@@ -23,7 +23,6 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.craftkaisen.procedures.HollowPurpleWhileProjectileFlyingTickProcedure;
 import net.mcreator.craftkaisen.procedures.HollowPurpleProjectileHitsLivingEntityProcedure;
-import net.mcreator.craftkaisen.procedures.HollowPurpleProjectileHitsBlockProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
@@ -75,7 +74,7 @@ public class HollowPurpleEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		HollowPurpleProjectileHitsBlockProcedure.execute();
+		HollowPurpleProjectileHitsLivingEntityProcedure.execute(this.level, blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override

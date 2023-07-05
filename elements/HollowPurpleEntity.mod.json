@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Hollow Purple Entity",
     "mobLabel": "",
-    "mobModelName": "Modelhollowpurple",
+    "mobModelName": "Modelhollowpurplenew",
     "mobModelTexture": "air103_layer_2.png",
     "mobModelGlowTexture": "hollowtexture.png",
     "solidBoundingBox": {
