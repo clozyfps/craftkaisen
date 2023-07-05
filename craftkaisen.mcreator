@@ -8,8 +8,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/tes.json",
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/tes.json"
         ]
       },
       "path": "~/Misc"
@@ -31,7 +31,7 @@
       "name": "MainLevelingSystemProcedure",
       "type": "procedure",
       "sortid": 12,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "main_leveling_system_procedure",
       "metadata": {
