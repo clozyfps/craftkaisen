@@ -1,8 +1,15 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class ReversalRedMobEffect extends MobEffect {
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.ReversalRedOnEffectActiveTickProcedure;
+import net.mcreator.craftkaisen.procedures.ReversalRedEffectExpiresProcedure;
+
+public class ReversalRedMobEffect extends MobEffect {
 	public ReversalRedMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,14 +21,17 @@ public class ReversalRedMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		ReversalRedOnEffectActiveTickProcedure.execute(
+		ReversalRedOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
 
-		);
+	@Override
+	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.removeAttributeModifiers(entity, attributeMap, amplifier);
+		ReversalRedEffectExpiresProcedure.execute(entity.level, entity);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

@@ -24,7 +24,7 @@ public class TesItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		HollowPurpleTestProcedure.execute(world, entity);
+		HollowPurpleTestProcedure.execute(world, x, y, z, entity);
 		return ar;
 	}
 }

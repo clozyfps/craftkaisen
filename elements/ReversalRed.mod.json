@@ -2,7 +2,7 @@
   "_fv": 43,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Reversal Red",
+    "effectName": "Hollowpurp",
     "icon": "lapse_blue_temporary.png",
     "color": {
       "value": -1,
@@ -15,6 +15,9 @@
     "renderStatusInHUD": true,
     "onActiveTick": {
       "name": "ReversalRedOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "ReversalRedEffectExpires"
     }
   }
 }

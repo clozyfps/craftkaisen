@@ -1,32 +1,32 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerLevel;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 
 public class HollowPurpleTestProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 215, 250, false, false));
-		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.LAPSE_BLUE_TEMPORARY.get(), 50, 1, false, false));
-		CraftkaisenMod.queueServerWork(100, () -> {
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("\u00A7l\u00A7b Combining Lapse Blue."), true);
-			CraftkaisenMod.queueServerWork(15, () -> {
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A74 With Reversal Red."), true);
-				CraftkaisenMod.queueServerWork(15, () -> {
-					if (entity instanceof Player _player && !_player.level.isClientSide())
-						_player.displayClientMessage(Component.literal("\u00A7l\u00A74 MAKES HOLLOW PURPLE"), true);
-					CraftkaisenMod.queueServerWork(10, () -> {
-						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-							_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.HOLLOW_PURPLE_TEMPORARY.get(), 20, 1, false, false));
-					});
-				});
-			});
-		});
+			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.REVERSAL_RED.get(), 50, 1, false, false));
+		if (world instanceof ServerLevel _level) {
+			Entity entityToSpawn = new HollowPurpleEntityEntity(CraftkaisenModEntities.HOLLOW_PURPLE_ENTITY.get(), _level);
+			entityToSpawn.moveTo(x, y, z, 0, 0);
+			entityToSpawn.setYBodyRot(0);
+			entityToSpawn.setYHeadRot(0);
+			entityToSpawn.setDeltaMovement(0, 0, 0);
+			if (entityToSpawn instanceof Mob _mobToSpawn)
+				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+			world.addFreshEntity(entityToSpawn);
+		}
 	}
 }
