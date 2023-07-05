@@ -15,25 +15,10 @@
       "path": "~/Misc"
     },
     {
-      "name": "SkillTreeSelectorGUI",
-      "type": "gui",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skill_tree_selector_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeSelectorGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeSelectorGUIScreen.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
       "name": "MainLevelingSystemProcedure",
       "type": "procedure",
       "sortid": 12,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "main_leveling_system_procedure",
       "metadata": {
@@ -42,136 +27,20 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "droppedexperience",
             "type": "number"
           }
         ]
       },
       "path": "~/Procedures"
-    },
-    {
-      "name": "OpenDurabilitySkillTree",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_durability_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenDurabilitySkillTreeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "TESTINGOpenSkillTreeGUIOnKeyPressed",
-      "type": "procedure",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "testing_open_skill_tree_gui_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/TESTINGOpenSkillTreeGUIOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Binds"
-    },
-    {
-      "name": "CursedEnergySkillTree",
-      "type": "gui",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_energy_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/CursedEnergySkillTreeMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/CursedEnergySkillTreeButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/CursedEnergySkillTreeScreen.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI"
-    },
-    {
-      "name": "OpenTechniqueSkillTree",
-      "type": "procedure",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_technique_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenTechniqueSkillTreeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
     },
     {
       "name": "CkProgressivePrestigeDifficulty",
@@ -186,71 +55,6 @@
       "path": "~/Gamerules"
     },
     {
-      "name": "DurabilitySkillTree",
-      "type": "gui",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "durability_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/DurabilitySkillTreeScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/DurabilitySkillTreeButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/DurabilitySkillTreeMenu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI"
-    },
-    {
-      "name": "OpenStrengthSkillTree",
-      "type": "procedure",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_strength_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenStrengthSkillTreeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "TESTINGOpenSkillTreeGUI",
-      "type": "keybind",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "testing_open_skill_tree_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/TESTINGOpenSkillTreeGUIMessage.java"
-        ]
-      },
-      "path": "~/Binds"
-    },
-    {
       "name": "Credits",
       "type": "overlay",
       "compiles": true,
@@ -262,110 +66,6 @@
         ]
       },
       "path": "~/Misc"
-    },
-    {
-      "name": "BackButtonSkillTree",
-      "type": "procedure",
-      "sortid": 10,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "back_button_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BackButtonSkillTreeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "OpenCursedEnergySkillTree",
-      "type": "procedure",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_cursed_energy_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenCursedEnergySkillTreeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "StrengthSkillTreeGUI",
-      "type": "gui",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "strength_skill_tree_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/StrengthSkillTreeGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/StrengthSkillTreeGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/StrengthSkillTreeGUIButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI"
-    },
-    {
-      "name": "TechniqueSkillTree",
-      "type": "gui",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "technique_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/TechniqueSkillTreeScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/TechniqueSkillTreeButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/TechniqueSkillTreeMenu.java"
-        ]
-      },
-      "path": "~/GUI/SubGUI"
     }
   ],
   "variable_elements": [
@@ -475,36 +175,10 @@
       },
       {
         "name": "GUI",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          },
-          {
-            "name": "SubGUI",
-            "children": [
-              {
-                "name": "Upgrades",
-                "children": []
-              },
-              {
-                "name": "Upgrade Procedures",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Values",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Keybinds",
         "children": []
       },
       {
-        "name": "Binds",
+        "name": "Keybinds",
         "children": []
       }
     ]
