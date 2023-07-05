@@ -76,6 +76,7 @@ public class CraftkaisenModVariables {
 			clone.Clan = original.Clan;
 			clone.Technique = original.Technique;
 			clone.ExpRequirement = original.ExpRequirement;
+			clone.BlockBarCap = original.BlockBarCap;
 			if (!event.isWasDeath()) {
 				clone.Blocking = original.Blocking;
 				clone.BlockBar = original.BlockBar;
@@ -123,6 +124,7 @@ public class CraftkaisenModVariables {
 		public double ExpRequirement = 100.0;
 		public boolean Blocking = false;
 		public double BlockBar = 0;
+		public double BlockBarCap = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -140,6 +142,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("ExpRequirement", ExpRequirement);
 			nbt.putBoolean("Blocking", Blocking);
 			nbt.putDouble("BlockBar", BlockBar);
+			nbt.putDouble("BlockBarCap", BlockBarCap);
 			return nbt;
 		}
 
@@ -154,6 +157,7 @@ public class CraftkaisenModVariables {
 			ExpRequirement = nbt.getDouble("ExpRequirement");
 			Blocking = nbt.getBoolean("Blocking");
 			BlockBar = nbt.getDouble("BlockBar");
+			BlockBarCap = nbt.getDouble("BlockBarCap");
 		}
 	}
 
@@ -187,6 +191,7 @@ public class CraftkaisenModVariables {
 					variables.ExpRequirement = message.data.ExpRequirement;
 					variables.Blocking = message.data.Blocking;
 					variables.BlockBar = message.data.BlockBar;
+					variables.BlockBarCap = message.data.BlockBarCap;
 				}
 			});
 			context.setPacketHandled(true);
