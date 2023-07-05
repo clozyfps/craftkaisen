@@ -9,8 +9,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/tes.json"
+          "src/main/resources/assets/craftkaisen/models/item/tes.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
         ]
       },
       "path": "~/Items"
@@ -64,9 +64,9 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
           "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
         ]
       },
       "path": "~/Abilities"
@@ -114,8 +114,8 @@
       "registry_name": "hollow_purple_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -422,6 +422,7 @@
     {
       "name": "BlockBind",
       "type": "keybind",
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_bind",
@@ -605,6 +606,27 @@
         ]
       },
       "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "CallDirection",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "call_direction",
+      "metadata": {
+        "return_type": "direction",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CallDirectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          }
+        ]
+      },
+      "path": "~/Calls"
     }
   ],
   "variable_elements": [
