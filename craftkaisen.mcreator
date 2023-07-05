@@ -119,6 +119,10 @@
             "type": "entity"
           },
           {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
           },
@@ -554,16 +558,16 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.craftkaisen.test.label_dawd": "dawd",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
-      "effect.craftkaisen.reversal_red": "Hollowpurp",
-      "effect.craftkaisen.blocking_effect": "Blocking",
-      "item.craftkaisen.tes": "Tes",
+      "gui.craftkaisen.test.label_dawd": "dawd",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
-      "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
+      "effect.craftkaisen.reversal_red": "Hollowpurp",
+      "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
+      "effect.craftkaisen.blocking_effect": "Blocking",
       "key.categories.jjk": "Craft Kaisen",
-      "key.craftkaisen.block_bind": "Block"
+      "key.craftkaisen.block_bind": "Block",
+      "item.craftkaisen.tes": "Tes"
     }
   },
   "foldersRoot": {
