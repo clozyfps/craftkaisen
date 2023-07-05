@@ -161,6 +161,10 @@
         ],
         "dependencies": [
           {
+            "name": "direction",
+            "type": "direction"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -317,6 +321,120 @@
         ]
       },
       "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "LapseBlueOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "LapseBlue",
+      "type": "livingentity",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/LapseBlueRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/LapseBlueEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "LapseBlueTest",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueTestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Test2",
+      "type": "item",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/Test2Item.java",
+          "src/main/resources/assets/craftkaisen/models/item/test_2.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "LapseBlueOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
@@ -384,27 +502,29 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
+      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.credits.label_mod_created_by_clozy_katsu_and": "Mod Created By Clozy, Katsu, And RequiredDevelopment",
-      "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.technique_skill_tree.button_empty11": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty10": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty12": "+",
-      "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "effect.craftkaisen.reversal_red": "Hollowpurp",
+      "effect.craftkaisen.blocking_effect": "Blocking",
+      "gui.craftkaisen.strength_1.label_from_this": " from this.",
+      "item.craftkaisen.tes": "Tes",
+      "entity.craftkaisen.lapse_blue": "Lapse Blue",
+      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
+      "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
+      "gui.craftkaisen.technique_skill_tree.button_empty4": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty3": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty6": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty5": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty8": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty7": "+",
       "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
-      "effect.craftkaisen.reversal_red": "Hollowpurp",
       "gui.craftkaisen.strength_1.label_abilities_everything_derives_fr": "abilities, everything derives",
       "gui.craftkaisen.technique_skill_tree.button_empty9": "+",
-      "gui.craftkaisen.strength_1.label_from_this": " from this.",
-      "effect.craftkaisen.blocking_effect": "Blocking",
       "key.categories.jjk": "Craft Kaisen",
-      "item.craftkaisen.tes": "Tes",
       "gui.craftkaisen.technique_skill_tree.button_empty2": "+",
       "gui.craftkaisen.technique_skill_tree.button_empty1": "+"
     }
