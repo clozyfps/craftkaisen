@@ -9,8 +9,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/tes.json"
+          "src/main/resources/assets/craftkaisen/models/item/tes.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
         ]
       },
       "path": "~/Items"
@@ -64,9 +64,9 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
           "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
         ]
       },
       "path": "~/Abilities"
@@ -114,8 +114,8 @@
       "registry_name": "hollow_purple_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -422,6 +422,7 @@
     {
       "name": "BlockBind",
       "type": "keybind",
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_bind",
@@ -605,6 +606,27 @@
         ]
       },
       "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "CallDirection",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "call_direction",
+      "metadata": {
+        "return_type": "direction",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CallDirectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "direction",
+            "type": "direction"
+          }
+        ]
+      },
+      "path": "~/Calls"
     }
   ],
   "variable_elements": [
@@ -672,15 +694,18 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
-      "gamerule.ckProgressivePrestigeDifficulty": "progressivePrestigeDifficulty",
-      "effect.craftkaisen.reversal_red": "Hollowpurp",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
+      "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
+      "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.blocking_effect": "Blocking",
       "key.categories.jjk": "Craft Kaisen",
-      "item.craftkaisen.tes": "Tes"
+      "key.craftkaisen.block_bind": "Block",
+      "item.craftkaisen.tes": "Tes",
+      "entity.craftkaisen.lapse_blue": "Lapse Blue"
     }
   },
   "foldersRoot": {
