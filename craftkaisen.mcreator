@@ -1398,6 +1398,88 @@
         "files": []
       },
       "path": "~/Misc"
+    },
+    {
+      "name": "ReversalRedFinalOnEffectActiveTick2",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_final_on_effect_active_tick_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedFinalOnEffectActiveTick2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "StrongHitProcedure",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strong_hit_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StrongHitProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "Infinity",
+      "type": "potioneffect",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/InfinityMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
     }
   ],
   "variable_elements": [
@@ -1480,6 +1562,7 @@
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
+      "effect.craftkaisen.infinity": "Infinity",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "key.craftkaisen.flash_step": "Flash Step",
       "itemGroup.tabjjkarmor": "JJK Armor",

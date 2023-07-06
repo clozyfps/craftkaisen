@@ -16,6 +16,9 @@
     "onStarted": {
       "name": "ReversalRedFinalOnEffectActiveTick"
     },
+    "onActiveTick": {
+      "name": "ReversalRedFinalOnEffectActiveTick2"
+    },
     "onExpired": {
       "name": "ReversalRedFinalEffectExpires"
     }

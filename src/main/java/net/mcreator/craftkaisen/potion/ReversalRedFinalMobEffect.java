@@ -7,6 +7,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.craftkaisen.procedures.ReversalRedFinalOnEffectActiveTickProcedure;
+import net.mcreator.craftkaisen.procedures.ReversalRedFinalOnEffectActiveTick2Procedure;
 import net.mcreator.craftkaisen.procedures.ReversalRedFinalEffectExpiresProcedure;
 
 public class ReversalRedFinalMobEffect extends MobEffect {
@@ -22,6 +23,11 @@ public class ReversalRedFinalMobEffect extends MobEffect {
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		ReversalRedFinalOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		ReversalRedFinalOnEffectActiveTick2Procedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ());
 	}
 
 	@Override
