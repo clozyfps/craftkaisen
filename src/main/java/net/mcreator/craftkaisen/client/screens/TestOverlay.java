@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.TetsjsProcedure;
@@ -39,9 +40,10 @@ public class TestOverlay {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					TetsjsProcedure.execute(entity), posX + -122, posY + 74, -1);
+			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.test.label_proc_cursed_energy_display"), posX + 94, posY + 104, -1);
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
-					CursedEnergyDisplayProcedure.execute(entity), posX + 94, posY + 104, -1);
+					CursedEnergyDisplayProcedure.execute(entity), posX + 97, posY + 87, -1);
 		}
 	}
 }

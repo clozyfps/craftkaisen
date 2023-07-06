@@ -1,8 +1,13 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class InfinityMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.InfinityOnEffectActiveTickProcedure;
+
+public class InfinityMobEffect extends MobEffect {
 	public InfinityMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -13,8 +18,12 @@ public class InfinityMobEffect extends MobEffect {
 	}
 
 	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		InfinityOnEffectActiveTickProcedure.execute(entity);
+	}
+
+	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

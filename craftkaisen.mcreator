@@ -1492,7 +1492,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MainRandomizerSystemProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -1528,7 +1533,12 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/CursedEnergyDisplayProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/GUI/Values"
     },
@@ -1551,6 +1561,46 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "InfinityOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfinityOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "InfinityProcedure",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfinityProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
     }
   ],
   "variable_elements": [
@@ -1688,6 +1738,7 @@
       "gui.craftkaisen.test.label_dawd": "dawd",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "effect.craftkaisen.infinity": "Infinity",
+      "gui.craftkaisen.test.label_proc_cursed_energy_display": "",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "key.craftkaisen.flash_step": "Flash Step",
       "itemGroup.tabjjkarmor": "JJK Armor",
