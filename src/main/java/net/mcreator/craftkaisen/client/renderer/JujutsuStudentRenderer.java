@@ -18,6 +18,6 @@ public class JujutsuStudentRenderer extends HumanoidMobRenderer<JujutsuStudentEn
 
 	@Override
 	public ResourceLocation getTextureLocation(JujutsuStudentEntity entity) {
-		return new ResourceLocation("craftkaisen:textures/entities/jujutsu.png");
+		return new ResourceLocation("craftkaisen:textures/entities/stevesorcerer.png");
 	}
 }

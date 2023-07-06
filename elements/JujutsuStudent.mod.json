@@ -5,7 +5,7 @@
     "mobName": "Jujutsu Student",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "jujutsu.png",
+    "mobModelTexture": "stevesorcerer.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -24,7 +24,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Jjkmobs"
     },
     "isBoss": false,
     "bossBarColor": "PINK",
