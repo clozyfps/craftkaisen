@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
+import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -21,5 +22,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.HOLLOW_PURPLE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.HOLLOW_PURPLE_ENTITY.get(), HollowPurpleEntityRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.LAPSE_BLUE.get(), LapseBlueRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.JUJUTSU_STUDENT.get(), JujutsuStudentRenderer::new);
 	}
 }

@@ -731,6 +731,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1132,6 +1144,260 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "HollowPurpleProcedure",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Impact",
+      "type": "particle",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "impact",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/impact.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "InfiniteComboProcedure",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_combo_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfiniteComboProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "JujutsuStudent",
+      "type": "livingentity",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jujutsu_student",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/JujutsuStudentRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Jjkmobs",
+      "type": "tab",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jjkmobs",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FlashStep",
+      "type": "keybind",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_step",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/FlashStepMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "FlashStepPotionOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_step_potion_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlashStepPotionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "FlashStepPotion",
+      "type": "potioneffect",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_step_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/FlashStepPotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "FlashStepCooldown",
+      "type": "potioneffect",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_step_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/FlashStepCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "FlashStepOnKeyPressed",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_step_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlashStepOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "Evade",
+      "type": "particle",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "evade",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/evade.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "FlashStepAdvancement",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flash_step_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/flash_step_advancement.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "JujutsuSorcererOutfit",
+      "type": "armor",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jujutsu_sorcerer_outfit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererOutfitItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "Jjkarmor",
+      "type": "tab",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jjkarmor",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -1213,20 +1479,31 @@
     "en_us": {
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.test.label_dawd": "dawd",
+      "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
+      "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "key.craftkaisen.flash_step": "Flash Step",
+      "itemGroup.tabjjkarmor": "JJK Armor",
+      "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
+      "effect.craftkaisen.reversal_red_final": "Reversal Red",
+      "advancements.flash_step_advancement.descr": "WIP",
+      "effect.craftkaisen.reversal_red": "Hollowpurp",
+      "itemGroup.tabjjkmobs": "JJK Mobs",
+      "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
+      "effect.craftkaisen.blocking_effect": "Blocking",
+      "item.craftkaisen.tes": "Tes",
+      "entity.craftkaisen.lapse_blue": "Lapse Blue",
+      "advancements.flash_step_advancement.title": "Flash Step",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "key.craftkaisen.use_technique": "Use Technique",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
+      "effect.craftkaisen.flash_step_potion": "Flash Step",
+      "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "effect.craftkaisen.cooldown": "Cooldown",
-      "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
-      "effect.craftkaisen.reversal_red_final": "Reversal Red",
-      "effect.craftkaisen.reversal_red": "Hollowpurp",
-      "effect.craftkaisen.blocking_effect": "Blocking",
       "key.categories.jjk": "Craft Kaisen",
-      "key.craftkaisen.block_bind": "Block",
-      "item.craftkaisen.tes": "Tes",
-      "entity.craftkaisen.lapse_blue": "Lapse Blue"
+      "key.craftkaisen.block_bind": "Block"
     }
   },
   "foldersRoot": {
@@ -1312,6 +1589,14 @@
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Advancements",
         "children": []
       }
     ]

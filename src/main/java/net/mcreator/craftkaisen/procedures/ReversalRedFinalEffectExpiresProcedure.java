@@ -37,7 +37,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 			entity.getPersistentData().putBoolean("aoefirst", false);
 		});
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 1, 3, 1, 0);
+			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 55, 1, 3, 1, 0);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 8, 3, 8, 0);
 		{
@@ -59,7 +59,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 		}
 		CraftkaisenMod.queueServerWork(2, () -> {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 2, 3, 2, 0);
+				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 55, 2, 3, 2, 0);
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 8, 3, 8, 0);
 			{
@@ -82,7 +82,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 			}
 			CraftkaisenMod.queueServerWork(2, () -> {
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 3, 3, 3, 0);
+					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 55, 3, 3, 3, 0);
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 8, 3, 8, 0);
 				{
@@ -105,7 +105,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 				}
 				CraftkaisenMod.queueServerWork(2, () -> {
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 4, 3, 4, 0);
+						_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 55, 4, 3, 4, 0);
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 8, 3, 8, 0);
 					{
@@ -128,7 +128,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 					}
 					CraftkaisenMod.queueServerWork(2, () -> {
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 5, 3, 5, 0);
+							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 55, 5, 3, 5, 0);
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(9 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
@@ -151,7 +151,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 						}
 						CraftkaisenMod.queueServerWork(2, () -> {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 6, 3, 6, 0);
+								_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 55, 6, 3, 6, 0);
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 8, 3, 8, 0);
 							{
@@ -160,7 +160,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 										.collect(Collectors.toList());
 								for (Entity entityiterator : _entfound) {
 									if (!(entity == entityiterator)) {
-										entityiterator.hurt(DamageSource.GENERIC, 5);
+										entityiterator.hurt(DamageSource.GENERIC, 7);
 										entityiterator.getPersistentData().putBoolean("aoe", true);
 									}
 								}
@@ -174,7 +174,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 							}
 							CraftkaisenMod.queueServerWork(2, () -> {
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 7, 3, 7, 0);
+									_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 55, 7, 3, 7, 0);
 								if (world instanceof ServerLevel _level)
 									_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 8, 3, 8, 0);
 								{

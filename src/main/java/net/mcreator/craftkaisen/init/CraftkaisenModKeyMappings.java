@@ -16,12 +16,26 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
 import net.mcreator.craftkaisen.network.UseTechniqueMessage;
+import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
+import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.BlockBindMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class CraftkaisenModKeyMappings {
-	public static final KeyMapping SWITCH_TECHNIQUE = new KeyMapping("key.craftkaisen.switch_technique", GLFW.GLFW_KEY_R, "key.categories.jjk");
+	public static final KeyMapping SWITCH_TECHNIQUE = new KeyMapping("key.craftkaisen.switch_technique", GLFW.GLFW_KEY_R, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SwitchTechniqueMessage(0, 0));
+				SwitchTechniqueMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	public static final KeyMapping BLOCK_BIND = new KeyMapping("key.craftkaisen.block_bind", GLFW.GLFW_KEY_V, "key.categories.jjk") {
 		private boolean isDownOld = false;
 
@@ -53,6 +67,19 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping FLASH_STEP = new KeyMapping("key.craftkaisen.flash_step", GLFW.GLFW_KEY_C, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new FlashStepMessage(0, 0));
+				FlashStepMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long BLOCK_BIND_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -60,6 +87,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(SWITCH_TECHNIQUE);
 		event.register(BLOCK_BIND);
 		event.register(USE_TECHNIQUE);
+		event.register(FLASH_STEP);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -67,8 +95,10 @@ public class CraftkaisenModKeyMappings {
 		@SubscribeEvent
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
+				SWITCH_TECHNIQUE.consumeClick();
 				BLOCK_BIND.consumeClick();
 				USE_TECHNIQUE.consumeClick();
+				FLASH_STEP.consumeClick();
 			}
 		}
 	}

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "maki",
+    "texture": "dash2",
     "customModelName": "Normal",
     "name": "Test 2",
     "rarity": "COMMON",

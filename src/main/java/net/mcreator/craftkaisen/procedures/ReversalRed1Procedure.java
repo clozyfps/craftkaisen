@@ -30,35 +30,35 @@ public class ReversalRed1Procedure {
 			y_pos = y + 0.1;
 			z_pos = z + Math.sin(degree) * zRadius;
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION, x_pos, y_pos, z_pos, 3, 0.1, 0.1, 0.1, 0);
+				_level.sendParticles(ParticleTypes.EXPLOSION, x_pos, y_pos, z_pos, 1, 0.1, 0.1, 0.1, 0);
 			{
 				final Vec3 _center = new Vec3(x_pos, y_pos, z_pos);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 						.collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
-						entity.hurt(DamageSource.GENERIC, (float) 2.5);
+						entity.hurt(DamageSource.GENERIC, 4);
 					}
 				}
 			}
 			degree = degree + Math.toRadians(5);
 		}
 		degree = Math.toRadians(entity.getYRot());
-		xRadius = 2;
-		zRadius = 2;
+		xRadius = -2;
+		zRadius = -2;
 		for (int index1 = 0; index1 < 36; index1++) {
 			x_pos = x + Math.cos(degree) * xRadius;
 			y_pos = y + 0.1;
 			z_pos = z + Math.sin(degree) * zRadius;
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION, x_pos, y_pos, z_pos, 3, 0.1, 0.1, 0.1, 0);
+				_level.sendParticles(ParticleTypes.EXPLOSION, x_pos, y_pos, z_pos, 1, 0.1, 0.1, 0.1, 0);
 			{
 				final Vec3 _center = new Vec3(x_pos, y_pos, z_pos);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 						.collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
-						entity.hurt(DamageSource.GENERIC, (float) 2.5);
+						entity.hurt(DamageSource.GENERIC, 4);
 					}
 				}
 			}

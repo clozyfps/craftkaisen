@@ -1,0 +1,11 @@
+{
+  "_fv": 43,
+  "_type": "tab",
+  "definition": {
+    "name": "JJK Mobs",
+    "icon": {
+      "value": "CUSTOM:JujutsuStudent.spawn_egg"
+    },
+    "showSearch": false
+  }
+}
