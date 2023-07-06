@@ -13,7 +13,7 @@
     "isBenefitical": false,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "onActiveTick": {
+    "onStarted": {
       "name": "ReversalRedFinalOnEffectActiveTick"
     },
     "onExpired": {
