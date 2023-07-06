@@ -37,15 +37,15 @@ public class ReversalRedFinalEffectExpiresProcedure {
 			entity.getPersistentData().putBoolean("aoefirst", false);
 		});
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 60, 15, 3, 15, 0);
+			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 120, 15, 3, 15, 0);
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.POOF, x, y, z, 15, 15, 3, 15, 0);
+			_level.sendParticles(ParticleTypes.POOF, x, y, z, 25, 15, 3, 15, 0);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					entityiterator.hurt(DamageSource.GENERIC, 18);
+					entityiterator.hurt(DamageSource.GENERIC, (float) 19.2);
 					entityiterator.getPersistentData().putBoolean("aoe", true);
 				}
 			}
@@ -59,7 +59,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"particle minecraft:dust 0.96 0 0 2 ^0 ^0 ^0 2 1.5 2 0 10");
+					"particle minecraft:dust 0.96 0 0 2 ^0 ^0 ^0 5 1.5 5 0 20");
 		if (entity instanceof Player _player && !_player.level.isClientSide())
 			_player.displayClientMessage(Component.literal("\u00A7l\u00A74 Reversal Red."), true);
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
