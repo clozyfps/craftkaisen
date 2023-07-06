@@ -77,6 +77,8 @@ public class CraftkaisenModVariables {
 			clone.Technique = original.Technique;
 			clone.ExpRequirement = original.ExpRequirement;
 			clone.BlockBarCap = original.BlockBarCap;
+			clone.TechniqueSwitch = original.TechniqueSwitch;
+			clone.SelectedTechnique = original.SelectedTechnique;
 			if (!event.isWasDeath()) {
 				clone.Blocking = original.Blocking;
 				clone.BlockBar = original.BlockBar;
@@ -125,6 +127,8 @@ public class CraftkaisenModVariables {
 		public double BlockBarCap = 0;
 		public boolean Blocking = false;
 		public double BlockBar = 0;
+		public double TechniqueSwitch = 0;
+		public String SelectedTechnique = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -143,6 +147,8 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("BlockBarCap", BlockBarCap);
 			nbt.putBoolean("Blocking", Blocking);
 			nbt.putDouble("BlockBar", BlockBar);
+			nbt.putDouble("TechniqueSwitch", TechniqueSwitch);
+			nbt.putString("SelectedTechnique", SelectedTechnique);
 			return nbt;
 		}
 
@@ -158,6 +164,8 @@ public class CraftkaisenModVariables {
 			BlockBarCap = nbt.getDouble("BlockBarCap");
 			Blocking = nbt.getBoolean("Blocking");
 			BlockBar = nbt.getDouble("BlockBar");
+			TechniqueSwitch = nbt.getDouble("TechniqueSwitch");
+			SelectedTechnique = nbt.getString("SelectedTechnique");
 		}
 	}
 
@@ -192,6 +200,8 @@ public class CraftkaisenModVariables {
 					variables.BlockBarCap = message.data.BlockBarCap;
 					variables.Blocking = message.data.Blocking;
 					variables.BlockBar = message.data.BlockBar;
+					variables.TechniqueSwitch = message.data.TechniqueSwitch;
+					variables.SelectedTechnique = message.data.SelectedTechnique;
 				}
 			});
 			context.setPacketHandled(true);

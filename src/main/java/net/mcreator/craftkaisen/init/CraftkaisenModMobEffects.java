@@ -11,6 +11,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
+import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
+import net.mcreator.craftkaisen.potion.CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.BlockingEffectMobEffect;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -18,4 +20,6 @@ public class CraftkaisenModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, CraftkaisenMod.MODID);
 	public static final RegistryObject<MobEffect> REVERSAL_RED = REGISTRY.register("reversal_red", () -> new ReversalRedMobEffect());
 	public static final RegistryObject<MobEffect> BLOCKING_EFFECT = REGISTRY.register("blocking_effect", () -> new BlockingEffectMobEffect());
+	public static final RegistryObject<MobEffect> COOLDOWN = REGISTRY.register("cooldown", () -> new CooldownMobEffect());
+	public static final RegistryObject<MobEffect> REVERSAL_RED_FINAL = REGISTRY.register("reversal_red_final", () -> new ReversalRedFinalMobEffect());
 }

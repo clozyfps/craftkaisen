@@ -15,11 +15,13 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.BlockBindMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class CraftkaisenModKeyMappings {
+	public static final KeyMapping SWITCH_TECHNIQUE = new KeyMapping("key.craftkaisen.switch_technique", GLFW.GLFW_KEY_R, "key.categories.jjk");
 	public static final KeyMapping BLOCK_BIND = new KeyMapping("key.craftkaisen.block_bind", GLFW.GLFW_KEY_V, "key.categories.jjk") {
 		private boolean isDownOld = false;
 
@@ -38,11 +40,26 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping USE_TECHNIQUE = new KeyMapping("key.craftkaisen.use_technique", GLFW.GLFW_KEY_F, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new UseTechniqueMessage(0, 0));
+				UseTechniqueMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long BLOCK_BIND_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
+		event.register(SWITCH_TECHNIQUE);
 		event.register(BLOCK_BIND);
+		event.register(USE_TECHNIQUE);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -51,6 +68,7 @@ public class CraftkaisenModKeyMappings {
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
 				BLOCK_BIND.consumeClick();
+				USE_TECHNIQUE.consumeClick();
 			}
 		}
 	}

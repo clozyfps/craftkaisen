@@ -9,8 +9,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/tes.json",
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/tes.json"
         ]
       },
       "path": "~/Items"
@@ -64,9 +64,9 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
         ]
       },
       "path": "~/Abilities"
@@ -114,8 +114,8 @@
       "registry_name": "hollow_purple_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
         ]
       },
       "path": "~/Abilities"
@@ -627,6 +627,511 @@
         ]
       },
       "path": "~/Calls"
+    },
+    {
+      "name": "SwitchTechnique",
+      "type": "keybind",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_technique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/SwitchTechniqueMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "UseTechnique",
+      "type": "keybind",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_technique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/UseTechniqueMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Cooldown",
+      "type": "potioneffect",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/CooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "SwitchTechniqueOnKeyPressed",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_technique_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SwitchTechniqueOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "LapseBlueProcedure",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LapseBlueProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "UseTechniqueOnKeyPressed",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_technique_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UseTechniqueOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "ReversalRed1",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRed1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/ReversalRedTick"
+    },
+    {
+      "name": "ReversalRed2",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRed2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/ReversalRedTick"
+    },
+    {
+      "name": "ReversalRed3",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRed3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/ReversalRedTick"
+    },
+    {
+      "name": "ReversalRed4",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRed4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/ReversalRedTick"
+    },
+    {
+      "name": "ReversalRed5",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRed5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/ReversalRedTick"
+    },
+    {
+      "name": "RedReversal6",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_reversal_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RedReversal6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/ReversalRedTick"
+    },
+    {
+      "name": "RedReversal7",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_reversal_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RedReversal7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/ReversalRedTick"
+    },
+    {
+      "name": "ReversalRedFinal",
+      "type": "potioneffect",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_final",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ReversalRedFinalMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ReversalRedFinalOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_final_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedFinalOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ReversalRedFinalEffectExpires",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_final_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedFinalEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ReversalRedProcedure",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Setcursedtechniquecommand",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setcursedtechniquecommand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetcursedtechniquecommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetCursedTechnique",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_technique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetCursedTechniqueCommand.java"
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -689,6 +1194,18 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "TechniqueSwitch",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SelectedTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
@@ -697,9 +1214,13 @@
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
+      "key.craftkaisen.use_technique": "Use Technique",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
+      "effect.craftkaisen.cooldown": "Cooldown",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "key.craftkaisen.switch_technique": "Switch Ability",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
+      "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.blocking_effect": "Blocking",
       "key.categories.jjk": "Craft Kaisen",
@@ -775,9 +1296,23 @@
         "children": [
           {
             "name": "Procedures",
-            "children": []
+            "children": [
+              {
+                "name": "TechniqueProcedure",
+                "children": [
+                  {
+                    "name": "ReversalRedTick",
+                    "children": []
+                  }
+                ]
+              }
+            ]
           }
         ]
+      },
+      {
+        "name": "Commands",
+        "children": []
       }
     ]
   },
