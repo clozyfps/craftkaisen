@@ -10,7 +10,7 @@ public class SetcursedtechniquecommandProcedure {
 	public static void execute(Entity entity, HashMap cmdparams) {
 		if (entity == null || cmdparams == null)
 			return;
-		if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Limitless")) {
+		if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Limitless") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("limitless")) {
 			{
 				String _setval = "Limitless";
 				entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
