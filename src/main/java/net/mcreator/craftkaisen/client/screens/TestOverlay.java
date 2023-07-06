@@ -14,6 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.TetsjsProcedure;
+import net.mcreator.craftkaisen.procedures.CursedEnergyDisplayProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class TestOverlay {
@@ -38,6 +39,9 @@ public class TestOverlay {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					TetsjsProcedure.execute(entity), posX + -122, posY + 74, -1);
+			Minecraft.getInstance().font.draw(event.getPoseStack(),
+
+					CursedEnergyDisplayProcedure.execute(entity), posX + 94, posY + 104, -1);
 		}
 	}
 }
