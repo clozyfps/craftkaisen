@@ -23,17 +23,17 @@ public class ReversalRedFinalOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		ReversalRed1Procedure.execute(world, x, y, z, entity);
-		CraftkaisenMod.queueServerWork(4, () -> {
+		CraftkaisenMod.queueServerWork(5, () -> {
 			ReversalRed2Procedure.execute(world, x, y, z, entity);
-			CraftkaisenMod.queueServerWork(4, () -> {
+			CraftkaisenMod.queueServerWork(5, () -> {
 				ReversalRed3Procedure.execute(world, x, y, z, entity);
-				CraftkaisenMod.queueServerWork(4, () -> {
+				CraftkaisenMod.queueServerWork(5, () -> {
 					ReversalRed4Procedure.execute(world, x, y, z, entity);
-					CraftkaisenMod.queueServerWork(4, () -> {
+					CraftkaisenMod.queueServerWork(5, () -> {
 						ReversalRed5Procedure.execute(world, x, y, z, entity);
-						CraftkaisenMod.queueServerWork(4, () -> {
+						CraftkaisenMod.queueServerWork(5, () -> {
 							RedReversal6Procedure.execute(world, x, y, z, entity);
-							CraftkaisenMod.queueServerWork(4, () -> {
+							CraftkaisenMod.queueServerWork(5, () -> {
 								RedReversal7Procedure.execute(world, x, y, z, entity);
 							});
 						});

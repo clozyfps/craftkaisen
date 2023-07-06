@@ -20,7 +20,7 @@ public class ReversalRedFinalMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
+	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		ReversalRedFinalOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 

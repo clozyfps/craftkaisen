@@ -11,6 +11,6 @@ public class ReversalRedProcedureProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.REVERSAL_RED_FINAL.get(), 30, 1, false, true));
+			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.REVERSAL_RED_FINAL.get(), 40, 1, false, true));
 	}
 }
