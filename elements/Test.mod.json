@@ -19,6 +19,22 @@
           "x": 91,
           "y": 194
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_cursed_energy_display",
+          "text": {
+            "fixedValue": "",
+            "name": "CursedEnergyDisplay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 307,
+          "y": 224
+        }
       }
     ],
     "baseTexture": "",

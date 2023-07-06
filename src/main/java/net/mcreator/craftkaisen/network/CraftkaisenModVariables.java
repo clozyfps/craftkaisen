@@ -84,9 +84,13 @@ public class CraftkaisenModVariables {
 			clone.Move3Cost = original.Move3Cost;
 			clone.Move4Cost = original.Move4Cost;
 			clone.Move5Cost = original.Move5Cost;
+			clone.CursedEnergyCap = original.CursedEnergyCap;
+			clone.MoveSpecialCost = original.MoveSpecialCost;
+			clone.MoveUltimateCost = original.MoveUltimateCost;
 			if (!event.isWasDeath()) {
 				clone.Blocking = original.Blocking;
 				clone.BlockBar = original.BlockBar;
+				clone.CursedEnergy = original.CursedEnergy;
 			}
 		}
 	}
@@ -139,6 +143,10 @@ public class CraftkaisenModVariables {
 		public double Move3Cost = 0;
 		public double Move4Cost = 0;
 		public double Move5Cost = 0;
+		public double CursedEnergy = 0;
+		public double CursedEnergyCap = 0;
+		public double MoveSpecialCost = 0;
+		public double MoveUltimateCost = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -164,6 +172,10 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("Move3Cost", Move3Cost);
 			nbt.putDouble("Move4Cost", Move4Cost);
 			nbt.putDouble("Move5Cost", Move5Cost);
+			nbt.putDouble("CursedEnergy", CursedEnergy);
+			nbt.putDouble("CursedEnergyCap", CursedEnergyCap);
+			nbt.putDouble("MoveSpecialCost", MoveSpecialCost);
+			nbt.putDouble("MoveUltimateCost", MoveUltimateCost);
 			return nbt;
 		}
 
@@ -186,6 +198,10 @@ public class CraftkaisenModVariables {
 			Move3Cost = nbt.getDouble("Move3Cost");
 			Move4Cost = nbt.getDouble("Move4Cost");
 			Move5Cost = nbt.getDouble("Move5Cost");
+			CursedEnergy = nbt.getDouble("CursedEnergy");
+			CursedEnergyCap = nbt.getDouble("CursedEnergyCap");
+			MoveSpecialCost = nbt.getDouble("MoveSpecialCost");
+			MoveUltimateCost = nbt.getDouble("MoveUltimateCost");
 		}
 	}
 
@@ -227,6 +243,10 @@ public class CraftkaisenModVariables {
 					variables.Move3Cost = message.data.Move3Cost;
 					variables.Move4Cost = message.data.Move4Cost;
 					variables.Move5Cost = message.data.Move5Cost;
+					variables.CursedEnergy = message.data.CursedEnergy;
+					variables.CursedEnergyCap = message.data.CursedEnergyCap;
+					variables.MoveSpecialCost = message.data.MoveSpecialCost;
+					variables.MoveUltimateCost = message.data.MoveUltimateCost;
 				}
 			});
 			context.setPacketHandled(true);
