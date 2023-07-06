@@ -74,7 +74,7 @@ public abstract class JujutsuSorcererOutfitItem extends ArmorItem {
 
 	public static class Chestplate extends JujutsuSorcererOutfitItem {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS));
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
 		}
 
 		@Override
@@ -103,7 +103,7 @@ public abstract class JujutsuSorcererOutfitItem extends ArmorItem {
 
 	public static class Leggings extends JujutsuSorcererOutfitItem {
 		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS));
+			super(EquipmentSlot.LEGS, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
 		}
 
 		@Override
