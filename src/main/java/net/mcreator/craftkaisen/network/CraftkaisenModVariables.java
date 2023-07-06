@@ -79,6 +79,11 @@ public class CraftkaisenModVariables {
 			clone.BlockBarCap = original.BlockBarCap;
 			clone.TechniqueSwitch = original.TechniqueSwitch;
 			clone.SelectedTechnique = original.SelectedTechnique;
+			clone.Move1Cost = original.Move1Cost;
+			clone.Move2Cost = original.Move2Cost;
+			clone.Move3Cost = original.Move3Cost;
+			clone.Move4Cost = original.Move4Cost;
+			clone.Move5Cost = original.Move5Cost;
 			if (!event.isWasDeath()) {
 				clone.Blocking = original.Blocking;
 				clone.BlockBar = original.BlockBar;
@@ -129,6 +134,11 @@ public class CraftkaisenModVariables {
 		public double BlockBar = 0;
 		public double TechniqueSwitch = 0;
 		public String SelectedTechnique = "\"\"";
+		public double Move1Cost = 0;
+		public double Move2Cost = 0;
+		public double Move3Cost = 0;
+		public double Move4Cost = 0;
+		public double Move5Cost = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -149,6 +159,11 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("BlockBar", BlockBar);
 			nbt.putDouble("TechniqueSwitch", TechniqueSwitch);
 			nbt.putString("SelectedTechnique", SelectedTechnique);
+			nbt.putDouble("Move1Cost", Move1Cost);
+			nbt.putDouble("Move2Cost", Move2Cost);
+			nbt.putDouble("Move3Cost", Move3Cost);
+			nbt.putDouble("Move4Cost", Move4Cost);
+			nbt.putDouble("Move5Cost", Move5Cost);
 			return nbt;
 		}
 
@@ -166,6 +181,11 @@ public class CraftkaisenModVariables {
 			BlockBar = nbt.getDouble("BlockBar");
 			TechniqueSwitch = nbt.getDouble("TechniqueSwitch");
 			SelectedTechnique = nbt.getString("SelectedTechnique");
+			Move1Cost = nbt.getDouble("Move1Cost");
+			Move2Cost = nbt.getDouble("Move2Cost");
+			Move3Cost = nbt.getDouble("Move3Cost");
+			Move4Cost = nbt.getDouble("Move4Cost");
+			Move5Cost = nbt.getDouble("Move5Cost");
 		}
 	}
 
@@ -202,6 +222,11 @@ public class CraftkaisenModVariables {
 					variables.BlockBar = message.data.BlockBar;
 					variables.TechniqueSwitch = message.data.TechniqueSwitch;
 					variables.SelectedTechnique = message.data.SelectedTechnique;
+					variables.Move1Cost = message.data.Move1Cost;
+					variables.Move2Cost = message.data.Move2Cost;
+					variables.Move3Cost = message.data.Move3Cost;
+					variables.Move4Cost = message.data.Move4Cost;
+					variables.Move5Cost = message.data.Move5Cost;
 				}
 			});
 			context.setPacketHandled(true);
