@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "maintoji1atlas"
+      },
+      "name": "default"
+    }
+  }
+}
