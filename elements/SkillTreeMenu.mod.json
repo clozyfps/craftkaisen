@@ -1,0 +1,125 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 188,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_main_menu",
+          "text": {
+            "fixedValue": "Skill Tree"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 184,
+          "y": 33
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_skill_tree",
+          "text": "Main Menu",
+          "width": 77,
+          "height": 20,
+          "x": 266,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_skill_tree1",
+          "text": "Quests",
+          "width": 77,
+          "height": 20,
+          "x": 79,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_strength",
+          "text": "Strength",
+          "width": 67,
+          "height": 20,
+          "x": 123,
+          "y": 77
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_strength1",
+          "text": "Durability",
+          "width": 67,
+          "height": 20,
+          "x": 123,
+          "y": 165
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_strength2",
+          "text": "Speed",
+          "width": 67,
+          "height": 20,
+          "x": 123,
+          "y": 121
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cursed_energy",
+          "text": "Cursed Energy",
+          "width": 93,
+          "height": 20,
+          "x": 211,
+          "y": 121
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cursed_energy1",
+          "text": "Technique",
+          "width": 93,
+          "height": 20,
+          "x": 211,
+          "y": 77
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cursed_energy2",
+          "text": "Miscellaneous",
+          "width": 93,
+          "height": 20,
+          "x": 211,
+          "y": 165
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 22,
+      "sy": 22,
+      "ox": 2,
+      "oy": 42,
+      "snapOnGrid": true
+    }
+  }
+}

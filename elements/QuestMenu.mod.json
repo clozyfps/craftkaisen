@@ -1,0 +1,59 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 188,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_main_menu",
+          "text": {
+            "fixedValue": "Quests"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 33
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_skill_tree",
+          "text": "Skill Tree",
+          "width": 77,
+          "height": 20,
+          "x": 266,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_skill_tree1",
+          "text": "Main Menu",
+          "width": 77,
+          "height": 20,
+          "x": 79,
+          "y": 44
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 22,
+      "sy": 22,
+      "ox": 2,
+      "oy": 42,
+      "snapOnGrid": true
+    }
+  }
+}
