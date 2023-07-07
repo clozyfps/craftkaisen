@@ -10,6 +10,7 @@ import net.minecraft.world.item.CreativeModeTab;
 public class CraftkaisenModTabs {
 	public static CreativeModeTab TAB_JJKARMOR;
 	public static CreativeModeTab TAB_JJKMOBS;
+	public static CreativeModeTab TAB_JJKWEAPONS;
 
 	public static void load() {
 		TAB_JJKARMOR = new CreativeModeTab("tabjjkarmor") {
@@ -27,6 +28,17 @@ public class CraftkaisenModTabs {
 			@Override
 			public ItemStack makeIcon() {
 				return new ItemStack(CraftkaisenModItems.JUJUTSU_STUDENT_SPAWN_EGG.get());
+			}
+
+			@Override
+			public boolean hasSearchBar() {
+				return false;
+			}
+		};
+		TAB_JJKWEAPONS = new CreativeModeTab("tabjjkweapons") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(CraftkaisenModItems.PLAYFUL_CLOUD.get());
 			}
 
 			@Override

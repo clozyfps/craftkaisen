@@ -1,0 +1,7 @@
+{
+  "parent": "craftkaisen:custom/playful_cloud",
+  "textures": {
+    "0": "craftkaisen:blocks/maincloudatlas",
+    "particle": "craftkaisen:items/air102_layer_2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "air102_layer_2",
+    "customModelName": "toji_weapon_1:default",
+    "name": "Inverted Spear Of Heaven",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Jjkweapons"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 2.0,
+    "enchantability": 2,
+    "damageVsEntity": 8.0,
+    "usageCount": 1500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

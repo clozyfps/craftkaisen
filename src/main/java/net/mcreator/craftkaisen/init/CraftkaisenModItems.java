@@ -13,7 +13,9 @@ import net.minecraft.world.item.Item;
 
 import net.mcreator.craftkaisen.item.Test2Item;
 import net.mcreator.craftkaisen.item.TesItem;
+import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
+import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -26,4 +28,6 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.JUJUTSU_STUDENT, -16382442, -3368704, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> JUJUTSU_SORCERER_OUTFIT_CHESTPLATE = REGISTRY.register("jujutsu_sorcerer_outfit_chestplate", () -> new JujutsuSorcererOutfitItem.Chestplate());
 	public static final RegistryObject<Item> JUJUTSU_SORCERER_OUTFIT_LEGGINGS = REGISTRY.register("jujutsu_sorcerer_outfit_leggings", () -> new JujutsuSorcererOutfitItem.Leggings());
+	public static final RegistryObject<Item> PLAYFUL_CLOUD = REGISTRY.register("playful_cloud", () -> new PlayfulCloudItem());
+	public static final RegistryObject<Item> INVERTED_SPEAROF_HEAVEN = REGISTRY.register("inverted_spearof_heaven", () -> new InvertedSpearofHeavenItem());
 }

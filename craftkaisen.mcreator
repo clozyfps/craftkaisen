@@ -1601,6 +1601,84 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "PlayfulCloud",
+      "type": "tool",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playful_cloud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/playful_cloud.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Jjkweapons",
+      "type": "tab",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jjkweapons",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PlayfulCloudLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playful_cloud_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlayfulCloudLivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "InvertedSpearofHeaven",
+      "type": "tool",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inverted_spearof_heaven",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearofHeavenItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/inverted_spearof_heaven.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -1737,6 +1815,7 @@
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
+      "itemGroup.tabjjkweapons": "JJK Weapons",
       "effect.craftkaisen.infinity": "Infinity",
       "gui.craftkaisen.test.label_proc_cursed_energy_display": "",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
@@ -1760,6 +1839,8 @@
       "effect.craftkaisen.cooldown": "Cooldown",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "key.craftkaisen.switch_technique": "Switch Ability",
+      "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
+      "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "key.categories.jjk": "Craft Kaisen",
       "key.craftkaisen.block_bind": "Block"
