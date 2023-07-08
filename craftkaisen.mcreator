@@ -1679,6 +1679,157 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "PlayfulCloudProcedure",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playful_cloud_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlayfulCloudProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "RemoveWeaponRestriction",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_weapon_restriction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RemoveWeaponRestrictionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "WeaponCooldown",
+      "type": "potioneffect",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weapon_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/WeaponCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "InvertedSpearOfHeavenProcedure",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inverted_spear_of_heaven_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InvertedSpearOfHeavenProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "SacredLunge",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sacred_lunge",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/functions/sacred_lunge.mcfunction"
+        ]
+      },
+      "path": "~/Functions"
+    },
+    {
+      "name": "SacredLungeProcedure",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sacred_lunge_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SacredLungeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "SetHeavenly",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_heavenly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetHeavenlyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
     }
   ],
   "variable_elements": [
@@ -1843,7 +1994,8 @@
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "key.categories.jjk": "Craft Kaisen",
-      "key.craftkaisen.block_bind": "Block"
+      "key.craftkaisen.block_bind": "Block",
+      "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown"
     }
   },
   "foldersRoot": {
@@ -1941,6 +2093,10 @@
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Functions",
         "children": []
       }
     ]

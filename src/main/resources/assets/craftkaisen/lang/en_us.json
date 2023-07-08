@@ -30,5 +30,6 @@
   "item.craftkaisen.playful_cloud": "Playful Cloud",
   "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
   "key.categories.jjk": "Craft Kaisen",
-  "key.craftkaisen.block_bind": "Block"
+  "key.craftkaisen.block_bind": "Block",
+  "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown"
 }

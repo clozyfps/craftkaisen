@@ -52,5 +52,45 @@ public class UseTechniqueOnKeyPressedProcedure {
 				InfinityProcedureProcedure.execute(entity);
 			}
 		}
+		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Restricted")) {
+			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Playful Cloud")) {
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.WEAPON_COOLDOWN.get()) : false)) {
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.WEAPON_COOLDOWN.get(), 1450, 1, false, false));
+					PlayfulCloudProcedureProcedure.execute(world, entity);
+				}
+			}
+			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Inverted Spear Of Heaven")) {
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.WEAPON_COOLDOWN.get()) : false)) {
+					InvertedSpearOfHeavenProcedureProcedure.execute(world, entity);
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.WEAPON_COOLDOWN.get(), 1450, 1, false, false));
+				}
+			}
+			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Sacred Lunge")) {
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.COOLDOWN.get()) : false)) {
+					SacredLungeProcedureProcedure.execute(world, x, y, z, entity);
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.COOLDOWN.get(), 50, 1, false, false));
+				}
+			}
+			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Heavenly Barrage")) {
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.COOLDOWN.get()) : false)) {
+					InfiniteComboProcedureProcedure.execute(world, x, y, z, entity);
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.COOLDOWN.get(), 35, 1, false, false));
+				}
+			}
+			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Divine Riposite")) {
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.COOLDOWN.get()) : false)) {
+					StrongHitProcedureProcedure.execute(world, x, y, z, entity);
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.COOLDOWN.get(), 35, 1, false, false));
+				}
+			}
+			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Repeated God Slashes")) {
+				InfinityProcedureProcedure.execute(entity);
+			}
+		}
 	}
 }
