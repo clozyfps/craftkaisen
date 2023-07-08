@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.potion.WeaponCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
@@ -28,4 +29,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> FLASH_STEP_POTION = REGISTRY.register("flash_step_potion", () -> new FlashStepPotionMobEffect());
 	public static final RegistryObject<MobEffect> FLASH_STEP_COOLDOWN = REGISTRY.register("flash_step_cooldown", () -> new FlashStepCooldownMobEffect());
 	public static final RegistryObject<MobEffect> INFINITY = REGISTRY.register("infinity", () -> new InfinityMobEffect());
+	public static final RegistryObject<MobEffect> WEAPON_COOLDOWN = REGISTRY.register("weapon_cooldown", () -> new WeaponCooldownMobEffect());
 }

@@ -1,13 +1,28 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.QuestMenuMenu;
+import net.mcreator.craftkaisen.network.QuestMenuButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class QuestMenuScreen extends AbstractContainerScreen<QuestMenuMenu> {
-
 	private final static HashMap<String, Object> guistate = QuestMenuMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_skill_tree;
 	Button button_skill_tree1;
 
@@ -29,7 +44,6 @@ public class QuestMenuScreen extends AbstractContainerScreen<QuestMenuMenu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -37,10 +51,8 @@ public class QuestMenuScreen extends AbstractContainerScreen<QuestMenuMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -50,7 +62,6 @@ public class QuestMenuScreen extends AbstractContainerScreen<QuestMenuMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -73,29 +84,22 @@ public class QuestMenuScreen extends AbstractContainerScreen<QuestMenuMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		button_skill_tree = new Button(this.leftPos + 152, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.quest_menu.button_skill_tree"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new QuestMenuButtonMessage(0, x, y, z));
 				QuestMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_skill_tree", button_skill_tree);
 		this.addRenderableWidget(button_skill_tree);
-
 		button_skill_tree1 = new Button(this.leftPos + -34, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.quest_menu.button_skill_tree1"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new QuestMenuButtonMessage(1, x, y, z));
 				QuestMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_skill_tree1", button_skill_tree1);
 		this.addRenderableWidget(button_skill_tree1);
-
 	}
-
 }
