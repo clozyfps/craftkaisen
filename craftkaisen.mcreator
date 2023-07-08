@@ -1647,52 +1647,176 @@
       "path": "~/Items"
     },
     {
-      "name": "MainMenu",
-      "type": "gui",
+      "name": "SacredLunge",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sacred_lunge",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/functions/sacred_lunge.mcfunction"
+        ]
+      },
+      "path": "~/Functions"
+    },
+    {
+      "name": "RemoveWeaponRestriction",
+      "type": "procedure",
       "sortid": 80,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "main_menu",
+      "registry_name": "remove_weapon_restriction",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/RemoveWeaponRestrictionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Procedures"
     },
     {
-      "name": "SkillTreeMenu",
-      "type": "gui",
-      "sortid": 79,
+      "name": "InvertedSpearOfHeavenProcedure",
+      "type": "procedure",
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "skill_tree_menu",
+      "registry_name": "inverted_spear_of_heaven_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMenuButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMenuScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/InvertedSpearOfHeavenProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
     },
     {
-      "name": "QuestMenu",
-      "type": "gui",
+      "name": "SacredLungeProcedure",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sacred_lunge_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SacredLungeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "SetHeavenly",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_heavenly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetHeavenlyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "WeaponCooldown",
+      "type": "potioneffect",
       "sortid": 81,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "quest_menu",
+      "registry_name": "weapon_cooldown",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/QuestMenuButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/QuestMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/QuestMenuScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/potion/WeaponCooldownMobEffect.java"
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "PlayfulCloudProcedure",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "playful_cloud_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlayfulCloudProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "BlockBarDisplay",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_bar_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlockBarDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
     },
     {
       "name": "OpenMainMenu",
@@ -1731,6 +1855,22 @@
       "path": "~/GUI/Procedures"
     },
     {
+      "name": "SkillTreeMenu",
+      "type": "gui",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_tree_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMenuScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeMenuMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMenuButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
       "name": "OpenSkillTreeMenu",
       "type": "procedure",
       "sortid": 83,
@@ -1765,6 +1905,22 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "QuestMenu",
+      "type": "gui",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quest_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/QuestMenuMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/QuestMenuScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/QuestMenuButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
     },
     {
       "name": "OpenQuestMenu",
@@ -1817,6 +1973,22 @@
       "path": "~/Keybinds"
     },
     {
+      "name": "MainMenu",
+      "type": "gui",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
       "name": "MainHUD",
       "type": "overlay",
       "compiles": true,
@@ -1828,27 +2000,6 @@
         ]
       },
       "path": "~/GUI"
-    },
-    {
-      "name": "BlockBarDisplay",
-      "type": "procedure",
-      "sortid": 86,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "block_bar_display",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BlockBarDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
     }
   ],
   "variable_elements": [
@@ -1898,7 +2049,7 @@
       "name": "BlockBarCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "4.0"
+      "value": "0"
     },
     {
       "name": "Blocking",
@@ -1985,56 +2136,35 @@
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "gui.craftkaisen.test.label_dawd": "dawd",
-      "gui.craftkaisen.main_menu.button_prestige": "Prestige",
-      "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
-      "gui.craftkaisen.skill_tree_menu.button_cursed_energy": "Cursed Energy",
       "effect.craftkaisen.infinity": "Infinity",
-      "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "key.craftkaisen.flash_step": "Flash Step",
-      "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
-      "gui.craftkaisen.skill_tree_menu.button_skill_tree": "Main Menu",
       "item.craftkaisen.tes": "Tes",
-      "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "key.craftkaisen.use_technique": "Use Technique",
-      "gui.craftkaisen.quest_menu.button_skill_tree1": "Main Menu",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.cooldown": "Cooldown",
-      "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
-      "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
-      "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",
       "key.craftkaisen.block_bind": "Block",
-      "gui.craftkaisen.skill_tree_menu.button_cursed_energy2": "Miscellaneous",
-      "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "itemGroup.tabjjkweapons": "JJK Weapons",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
-      "gui.craftkaisen.main_menu.button_skill_tree": "Skill Tree",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
-      "gui.craftkaisen.skill_tree_menu.button_strength2": "Speed",
       "itemGroup.tabjjkmobs": "JJK Mobs",
-      "gui.craftkaisen.skill_tree_menu.button_strength1": "Durability",
       "effect.craftkaisen.blocking_effect": "Blocking",
-      "gui.craftkaisen.main_menu.label_exp_0100": "Exp : 0/100",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
-      "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
-      "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
-      "gui.craftkaisen.quest_menu.button_skill_tree": "Skill Tree",
-      "key.categories.jjk": "Craft Kaisen",
-      "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless"
+      "key.categories.jjk": "Craft Kaisen"
     }
   },
   "foldersRoot": {
@@ -2094,11 +2224,11 @@
         "name": "GUI",
         "children": [
           {
-            "name": "Values",
+            "name": "Procedures",
             "children": []
           },
           {
-            "name": "Procedures",
+            "name": "Values",
             "children": []
           }
         ]
@@ -2109,6 +2239,10 @@
       },
       {
         "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Functions",
         "children": []
       },
       {
