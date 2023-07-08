@@ -9,8 +9,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/tes.json"
+          "src/main/resources/assets/craftkaisen/models/item/tes.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
         ]
       },
       "path": "~/Items"
@@ -64,9 +64,9 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
           "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
         ]
       },
       "path": "~/Abilities"
@@ -114,8 +114,8 @@
       "registry_name": "hollow_purple_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -1140,8 +1140,8 @@
       "registry_name": "impact",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/particles/impact.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/impact.json"
         ]
       },
       "path": "~/Particles"
@@ -1192,9 +1192,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/JujutsuStudentRenderer.java",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json"
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -1318,8 +1318,8 @@
       "registry_name": "evade",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/particles/evade.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/evade.json"
         ]
       },
       "path": "~/Particles"
@@ -1346,9 +1346,9 @@
       "registry_name": "jujutsu_sorcerer_outfit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json",
           "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererOutfitItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json"
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json",
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -1982,8 +1982,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.test_2": "Test 2",
+      "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
       "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
@@ -2152,7 +2152,9 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "playeranimator"
+    ],
     "currentGenerator": "forge-1.19.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.craftkaisen",
