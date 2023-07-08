@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
+import net.mcreator.craftkaisen.network.MainMenuButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -90,10 +92,18 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		button_skill_tree = new Button(this.leftPos + 152, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.main_menu.button_skill_tree"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(0, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_skill_tree", button_skill_tree);
 		this.addRenderableWidget(button_skill_tree);
 		button_skill_tree1 = new Button(this.leftPos + -34, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.main_menu.button_skill_tree1"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(1, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		});
 		guistate.put("button:button_skill_tree1", button_skill_tree1);
 		this.addRenderableWidget(button_skill_tree1);

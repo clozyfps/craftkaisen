@@ -30,6 +30,9 @@
         "data": {
           "name": "button_skill_tree",
           "text": "Skill Tree",
+          "onClick": {
+            "name": "OpenSkillTreeMenu"
+          },
           "width": 77,
           "height": 20,
           "x": 266,
@@ -41,6 +44,9 @@
         "data": {
           "name": "button_skill_tree1",
           "text": "Main Menu",
+          "onClick": {
+            "name": "OpenMainMenu"
+          },
           "width": 77,
           "height": 20,
           "x": 79,

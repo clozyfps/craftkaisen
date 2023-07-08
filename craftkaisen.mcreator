@@ -1656,7 +1656,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java"
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -1671,6 +1672,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeMenuMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMenuScreen.java"
         ]
       },
@@ -1685,11 +1687,168 @@
       "registry_name": "quest_menu",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/QuestMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/QuestMenuMenu.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/QuestMenuScreen.java"
         ]
       },
       "path": "~/GUI"
+    },
+    {
+      "name": "OpenMainMenu",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_main_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenMainMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "OpenSkillTreeMenu",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_skill_tree_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSkillTreeMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "OpenQuestMenu",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_quest_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenQuestMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "OpenMainMenuBind",
+      "type": "keybind",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_main_menu_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/OpenMainMenuBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "MainHUD",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_hud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/MainHUDOverlay.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "BlockBarDisplay",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_bar_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlockBarDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
     }
   ],
   "variable_elements": [
@@ -1739,7 +1898,7 @@
       "name": "BlockBarCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "4.0"
     },
     {
       "name": "Blocking",
@@ -1844,6 +2003,7 @@
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.cooldown": "Cooldown",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
+      "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",

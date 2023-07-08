@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.QuestMenuMenu;
+import net.mcreator.craftkaisen.network.QuestMenuButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -84,10 +86,18 @@ public class QuestMenuScreen extends AbstractContainerScreen<QuestMenuMenu> {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		button_skill_tree = new Button(this.leftPos + 152, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.quest_menu.button_skill_tree"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new QuestMenuButtonMessage(0, x, y, z));
+				QuestMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_skill_tree", button_skill_tree);
 		this.addRenderableWidget(button_skill_tree);
 		button_skill_tree1 = new Button(this.leftPos + -34, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.quest_menu.button_skill_tree1"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new QuestMenuButtonMessage(1, x, y, z));
+				QuestMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		});
 		guistate.put("button:button_skill_tree1", button_skill_tree1);
 		this.addRenderableWidget(button_skill_tree1);

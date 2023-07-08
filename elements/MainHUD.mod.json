@@ -1,0 +1,50 @@
+{
+  "_fv": 43,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_cursed_energy_display",
+          "text": {
+            "fixedValue": "",
+            "name": "CursedEnergyDisplay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 307,
+          "y": 223
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_block_bar_display",
+          "text": {
+            "fixedValue": "",
+            "name": "BlockBarDisplay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 111,
+          "y": 223
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

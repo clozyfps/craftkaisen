@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.SkillTreeMenuMenu;
+import net.mcreator.craftkaisen.network.SkillTreeMenuButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -76,7 +78,7 @@ public class SkillTreeMenuScreen extends AbstractContainerScreen<SkillTreeMenuMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.skill_tree_menu.label_main_menu"), 70, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.skill_tree_menu.label_main_menu"), 75, 7, -12829636);
 	}
 
 	@Override
@@ -90,10 +92,18 @@ public class SkillTreeMenuScreen extends AbstractContainerScreen<SkillTreeMenuMe
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		button_skill_tree = new Button(this.leftPos + 152, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.skill_tree_menu.button_skill_tree"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMenuButtonMessage(0, x, y, z));
+				SkillTreeMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_skill_tree", button_skill_tree);
 		this.addRenderableWidget(button_skill_tree);
 		button_skill_tree1 = new Button(this.leftPos + -34, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.skill_tree_menu.button_skill_tree1"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMenuButtonMessage(1, x, y, z));
+				SkillTreeMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		});
 		guistate.put("button:button_skill_tree1", button_skill_tree1);
 		this.addRenderableWidget(button_skill_tree1);

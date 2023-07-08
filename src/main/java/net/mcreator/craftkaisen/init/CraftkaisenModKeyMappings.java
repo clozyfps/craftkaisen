@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
+import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.BlockBindMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -80,6 +81,19 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping OPEN_MAIN_MENU_BIND = new KeyMapping("key.craftkaisen.open_main_menu_bind", GLFW.GLFW_KEY_TAB, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new OpenMainMenuBindMessage(0, 0));
+				OpenMainMenuBindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long BLOCK_BIND_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -88,6 +102,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(BLOCK_BIND);
 		event.register(USE_TECHNIQUE);
 		event.register(FLASH_STEP);
+		event.register(OPEN_MAIN_MENU_BIND);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -99,6 +114,7 @@ public class CraftkaisenModKeyMappings {
 				BLOCK_BIND.consumeClick();
 				USE_TECHNIQUE.consumeClick();
 				FLASH_STEP.consumeClick();
+				OPEN_MAIN_MENU_BIND.consumeClick();
 			}
 		}
 	}
