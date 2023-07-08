@@ -7,38 +7,7 @@
       {
         "type": "label",
         "data": {
-          "name": "label_dawd",
-          "text": {
-            "fixedValue": "dawd",
-            "name": "Tetsjs"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 91,
-          "y": 194
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_proc_cursed_energy_display",
-          "text": {
-            "fixedValue": ""
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 307,
-          "y": 224
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_cursed_energy_display1",
           "text": {
             "fixedValue": "",
             "name": "CursedEnergyDisplay"
@@ -47,8 +16,24 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 310,
-          "y": 207
+          "x": 307,
+          "y": 223
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_block_bar_display",
+          "text": {
+            "fixedValue": "",
+            "name": "BlockBarDisplay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 111,
+          "y": 223
         }
       }
     ],

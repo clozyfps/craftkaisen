@@ -1,10 +1,10 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import javax.annotation.Nullable;
 
-public class TetsjsProcedure {
+public class BlockBarDisplayProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";

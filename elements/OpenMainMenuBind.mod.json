@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "TAB",
+    "keyBindingName": "Open Main Menu",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "OpenMainMenu"
+    }
+  }
+}

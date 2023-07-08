@@ -4,7 +4,6 @@
   "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
   "itemGroup.tabjjkweapons": "JJK Weapons",
   "effect.craftkaisen.infinity": "Infinity",
-  "gui.craftkaisen.test.label_proc_cursed_energy_display": "",
   "item.craftkaisen.hollow_purple": "Hollow Purple",
   "key.craftkaisen.flash_step": "Flash Step",
   "itemGroup.tabjjkarmor": "JJK Armor",
@@ -30,6 +29,5 @@
   "item.craftkaisen.playful_cloud": "Playful Cloud",
   "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
   "key.categories.jjk": "Craft Kaisen",
-  "key.craftkaisen.block_bind": "Block",
-  "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown"
+  "key.craftkaisen.block_bind": "Block"
 }

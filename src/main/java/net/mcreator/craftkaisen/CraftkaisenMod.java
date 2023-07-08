@@ -32,6 +32,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
 import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftkaisenModMenus;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
@@ -60,6 +61,7 @@ public class CraftkaisenMod {
 		CraftkaisenModMobEffects.REGISTRY.register(bus);
 
 		CraftkaisenModParticleTypes.REGISTRY.register(bus);
+		CraftkaisenModMenus.REGISTRY.register(bus);
 
 	}
 
