@@ -420,124 +420,6 @@
       "path": "~/Items"
     },
     {
-      "name": "BlockBind",
-      "type": "keybind",
-      "sortid": 38,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "block_bind",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/BlockBindMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "StartBlocking",
-      "type": "procedure",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "start_blocking",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/StartBlockingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures"
-    },
-    {
-      "name": "MainBlockingSystem",
-      "type": "procedure",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "main_blocking_system",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MainBlockingSystemProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "RegenBlockBar",
-      "type": "procedure",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "regen_block_bar",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RegenBlockBarProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "StopBlocking",
-      "type": "procedure",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stop_blocking",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/StopBlockingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures"
-    },
-    {
       "name": "WhileBlocking",
       "type": "procedure",
       "sortid": 33,
@@ -1799,27 +1681,6 @@
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
     },
     {
-      "name": "BlockBarDisplay",
-      "type": "procedure",
-      "sortid": 86,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "block_bar_display",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BlockBarDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "OpenMainMenu",
       "type": "procedure",
       "sortid": 82,
@@ -2216,24 +2077,6 @@
       "value": "100.0"
     },
     {
-      "name": "BlockBarCap",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "4.0"
-    },
-    {
-      "name": "Blocking",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "BlockBar",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
       "name": "TechniqueSwitch",
       "type": "number",
       "scope": "player_persistent",
@@ -2303,8 +2146,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
+      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
       "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
@@ -2328,7 +2171,6 @@
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",
-      "key.craftkaisen.block_bind": "Block",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy2": "Miscellaneous",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",

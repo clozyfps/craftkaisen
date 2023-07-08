@@ -19,7 +19,6 @@ import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
-import net.mcreator.craftkaisen.network.BlockBindMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -33,24 +32,6 @@ public class CraftkaisenModKeyMappings {
 			if (isDownOld != isDown && isDown) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SwitchTechniqueMessage(0, 0));
 				SwitchTechniqueMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
-	public static final KeyMapping BLOCK_BIND = new KeyMapping("key.craftkaisen.block_bind", GLFW.GLFW_KEY_V, "key.categories.jjk") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BlockBindMessage(0, 0));
-				BlockBindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-				BLOCK_BIND_LASTPRESS = System.currentTimeMillis();
-			} else if (isDownOld != isDown && !isDown) {
-				int dt = (int) (System.currentTimeMillis() - BLOCK_BIND_LASTPRESS);
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BlockBindMessage(1, dt));
-				BlockBindMessage.pressAction(Minecraft.getInstance().player, 1, dt);
 			}
 			isDownOld = isDown;
 		}
@@ -94,12 +75,10 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	private static long BLOCK_BIND_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(SWITCH_TECHNIQUE);
-		event.register(BLOCK_BIND);
 		event.register(USE_TECHNIQUE);
 		event.register(FLASH_STEP);
 		event.register(OPEN_MAIN_MENU_BIND);
@@ -111,7 +90,6 @@ public class CraftkaisenModKeyMappings {
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
 				SWITCH_TECHNIQUE.consumeClick();
-				BLOCK_BIND.consumeClick();
 				USE_TECHNIQUE.consumeClick();
 				FLASH_STEP.consumeClick();
 				OPEN_MAIN_MENU_BIND.consumeClick();

@@ -1,7 +1,5 @@
 package net.mcreator.craftkaisen.network;
 
-import org.jetbrains.annotations.Blocking;
-
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -76,7 +74,6 @@ public class CraftkaisenModVariables {
 			clone.Clan = original.Clan;
 			clone.Technique = original.Technique;
 			clone.ExpRequirement = original.ExpRequirement;
-			clone.BlockBarCap = original.BlockBarCap;
 			clone.TechniqueSwitch = original.TechniqueSwitch;
 			clone.SelectedTechnique = original.SelectedTechnique;
 			clone.Move3Cost = original.Move3Cost;
@@ -88,8 +85,6 @@ public class CraftkaisenModVariables {
 			clone.Move1Cost = original.Move1Cost;
 			clone.Move2Cost = original.Move2Cost;
 			if (!event.isWasDeath()) {
-				clone.Blocking = original.Blocking;
-				clone.BlockBar = original.BlockBar;
 				clone.CursedEnergy = original.CursedEnergy;
 			}
 		}
@@ -133,9 +128,6 @@ public class CraftkaisenModVariables {
 		public String Clan = "";
 		public String Technique = "";
 		public double ExpRequirement = 100.0;
-		public double BlockBarCap = 4.0;
-		public boolean Blocking = false;
-		public double BlockBar = 0;
 		public double TechniqueSwitch = 0;
 		public String SelectedTechnique = "\"\"";
 		public double Move3Cost = 0;
@@ -162,9 +154,6 @@ public class CraftkaisenModVariables {
 			nbt.putString("Clan", Clan);
 			nbt.putString("Technique", Technique);
 			nbt.putDouble("ExpRequirement", ExpRequirement);
-			nbt.putDouble("BlockBarCap", BlockBarCap);
-			nbt.putBoolean("Blocking", Blocking);
-			nbt.putDouble("BlockBar", BlockBar);
 			nbt.putDouble("TechniqueSwitch", TechniqueSwitch);
 			nbt.putString("SelectedTechnique", SelectedTechnique);
 			nbt.putDouble("Move3Cost", Move3Cost);
@@ -188,9 +177,6 @@ public class CraftkaisenModVariables {
 			Clan = nbt.getString("Clan");
 			Technique = nbt.getString("Technique");
 			ExpRequirement = nbt.getDouble("ExpRequirement");
-			BlockBarCap = nbt.getDouble("BlockBarCap");
-			Blocking = nbt.getBoolean("Blocking");
-			BlockBar = nbt.getDouble("BlockBar");
 			TechniqueSwitch = nbt.getDouble("TechniqueSwitch");
 			SelectedTechnique = nbt.getString("SelectedTechnique");
 			Move3Cost = nbt.getDouble("Move3Cost");
@@ -233,9 +219,6 @@ public class CraftkaisenModVariables {
 					variables.Clan = message.data.Clan;
 					variables.Technique = message.data.Technique;
 					variables.ExpRequirement = message.data.ExpRequirement;
-					variables.BlockBarCap = message.data.BlockBarCap;
-					variables.Blocking = message.data.Blocking;
-					variables.BlockBar = message.data.BlockBar;
 					variables.TechniqueSwitch = message.data.TechniqueSwitch;
 					variables.SelectedTechnique = message.data.SelectedTechnique;
 					variables.Move3Cost = message.data.Move3Cost;

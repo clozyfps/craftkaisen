@@ -14,7 +14,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.CursedEnergyDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.BlockBarDisplayProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class MainHUDOverlay {
@@ -39,9 +38,6 @@ public class MainHUDOverlay {
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					CursedEnergyDisplayProcedure.execute(entity), posX + 94, posY + 103, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(),
-
-					BlockBarDisplayProcedure.execute(entity), posX + -102, posY + 103, -1);
 		}
 	}
 }
