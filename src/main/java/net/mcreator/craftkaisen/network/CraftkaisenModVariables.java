@@ -133,7 +133,7 @@ public class CraftkaisenModVariables {
 		public String Clan = "";
 		public String Technique = "";
 		public double ExpRequirement = 100.0;
-		public double BlockBarCap = 0;
+		public double BlockBarCap = 4.0;
 		public boolean Blocking = false;
 		public double BlockBar = 0;
 		public double TechniqueSwitch = 0;

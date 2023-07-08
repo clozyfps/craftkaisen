@@ -2157,6 +2157,19 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "BlockSwords",
+      "type": "tag",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "block_swords",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/items/block_swords.json"
+        ]
+      },
+      "path": "~/Tags"
     }
   ],
   "variable_elements": [
@@ -2206,7 +2219,7 @@
       "name": "BlockBarCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "4.0"
     },
     {
       "name": "Blocking",
