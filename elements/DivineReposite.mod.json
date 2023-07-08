@@ -1,0 +1,9 @@
+{
+  "_fv": 43,
+  "_type": "function",
+  "definition": {
+    "code": "particle minecraft:sweep_attack ^-1.423115 ^0.518670 ^1.782041 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-1.160776 ^0.605590 ^1.745193 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-0.733695 ^0.952668 ^1.503266 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-0.306734 ^1.299738 ^1.261154 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.031263 ^1.577771 ^1.060284 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.469459 ^1.595078 ^0.670568 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.739769 ^1.543087 ^-0.223179 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.612867 ^1.056875 ^-0.835449 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.142944 ^0.588212 ^-1.020278 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-0.341192 ^0.240861 ^-1.263292 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-0.679179 ^0.240861 ^-2.199172 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-0.698788 ^0.501127 ^-2.762173 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-0.596775 ^0.900360 ^-3.344778 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.074793 ^0.900360 ^-3.384124 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.659165 ^0.900360 ^-3.567298 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^1.111064 ^0.778744 ^-4.149981 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^1.208052 ^0.465689 ^-4.581482 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^1.259588 ^0.188545 ^-4.969944 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^1.183996 ^-0.002302 ^-5.157525 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^0.291879 ^0.327573 ^-5.243941 0 0 0 0 1 force\nparticle minecraft:sweep_attack ^-0.247640 ^0.762131 ^-5.280661 0 0 0 0 1 force\n",
+    "name": "divine_reposite",
+    "namespace": "mod"
+  }
+}

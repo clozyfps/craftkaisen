@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
 import net.mcreator.craftkaisen.potion.CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.BlockingEffectMobEffect;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -30,4 +31,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> FLASH_STEP_COOLDOWN = REGISTRY.register("flash_step_cooldown", () -> new FlashStepCooldownMobEffect());
 	public static final RegistryObject<MobEffect> INFINITY = REGISTRY.register("infinity", () -> new InfinityMobEffect());
 	public static final RegistryObject<MobEffect> WEAPON_COOLDOWN = REGISTRY.register("weapon_cooldown", () -> new WeaponCooldownMobEffect());
+	public static final RegistryObject<MobEffect> DIVINE_REPOSITE_POTION = REGISTRY.register("divine_reposite_potion", () -> new DivineRepositePotionMobEffect());
 }
