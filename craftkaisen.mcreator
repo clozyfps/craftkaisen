@@ -2036,6 +2036,315 @@
       "path": "~/Blocks"
     },
     {
+      "name": "MoveUltimateCooldown",
+      "type": "potioneffect",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_ultimate_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/MoveUltimateCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "Move5Cooldown",
+      "type": "potioneffect",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_5_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/Move5CooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "SpecialCDDisplay",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "special_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SpecialCDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoveSpecialCooldown",
+      "type": "potioneffect",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_special_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/MoveSpecialCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ChargeCEEffect",
+      "type": "potioneffect",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_ce_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ChargeCEEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ChargeCursedEnergyOnKeyPressed",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "MoveThreeCDDisplay",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_three_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoveThreeCDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Move4Cooldown",
+      "type": "potioneffect",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_4_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/Move4CooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ChargeCursedEnergyOnKeyReleased",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_cursed_energy_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "Move3Cooldown",
+      "type": "potioneffect",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_3_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/Move3CooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "UltimateCDDisplay",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultimate_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UltimateCDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoveFourCDDisplay",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_four_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoveFourCDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Move1Cooldown",
+      "type": "potioneffect",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_1_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/Move1CooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "MoveTwoCDDisplay",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_two_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoveTwoCDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "VeilPlace",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veil_place",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VeilPlaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/AbilitySetup"
+    },
+    {
+      "name": "Move2Cooldown",
+      "type": "potioneffect",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_2_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/Move2CooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ChargingActiveTick",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charging_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargingActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
       "name": "VeilCheck",
       "type": "procedure",
       "sortid": 96,
@@ -2076,136 +2385,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "VeilPlace",
-      "type": "procedure",
-      "sortid": 97,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "veil_place",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VeilPlaceProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities/AbilitySetup"
-    },
-    {
-      "name": "Move1Cooldown",
-      "type": "potioneffect",
-      "sortid": 98,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_1_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/Move1CooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "Move2Cooldown",
-      "type": "potioneffect",
-      "sortid": 99,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_2_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/Move2CooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "Move3Cooldown",
-      "type": "potioneffect",
-      "sortid": 100,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_3_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/Move3CooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "Move4Cooldown",
-      "type": "potioneffect",
-      "sortid": 101,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_4_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/Move4CooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "Move5Cooldown",
-      "type": "potioneffect",
-      "sortid": 102,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_5_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/Move5CooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "MoveSpecialCooldown",
-      "type": "potioneffect",
-      "sortid": 103,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_special_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/MoveSpecialCooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "MoveUltimateCooldown",
-      "type": "potioneffect",
-      "sortid": 104,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_ultimate_cooldown",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/MoveUltimateCooldownMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
       "name": "MoveOneCDDisplay",
       "type": "procedure",
       "sortid": 105,
@@ -2216,69 +2395,6 @@
         "return_type": "logic",
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MoveOneCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveTwoCDDisplay",
-      "type": "procedure",
-      "sortid": 106,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_two_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveTwoCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveThreeCDDisplay",
-      "type": "procedure",
-      "sortid": 107,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_three_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveThreeCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveFourCDDisplay",
-      "type": "procedure",
-      "sortid": 108,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_four_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveFourCDDisplayProcedure.java"
         ],
         "dependencies": [
           {
@@ -2311,82 +2427,6 @@
       "path": "~/GUI/Values"
     },
     {
-      "name": "SpecialCDDisplay",
-      "type": "procedure",
-      "sortid": 110,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "special_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SpecialCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "UltimateCDDisplay",
-      "type": "procedure",
-      "sortid": 111,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ultimate_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/UltimateCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "ChargeCEEffect",
-      "type": "potioneffect",
-      "sortid": 112,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "charge_ce_effect",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/ChargeCEEffectMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "ChargingActiveTick",
-      "type": "procedure",
-      "sortid": 113,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "charging_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ChargingActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
       "name": "ChargeCursedEnergy",
       "type": "keybind",
       "sortid": 114,
@@ -2401,35 +2441,152 @@
       "path": "~/Keybinds"
     },
     {
-      "name": "ChargeCursedEnergyOnKeyPressed",
-      "type": "procedure",
-      "sortid": 115,
+      "name": "UnlimitedVoid",
+      "type": "block",
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "charge_cursed_energy_on_key_pressed",
+      "registry_name": "unlimited_void",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/craftkaisen/models/item/unlimited_void.json",
+          "src/main/resources/assets/craftkaisen/blockstates/unlimited_void.json",
+          "src/main/java/net/mcreator/craftkaisen/block/UnlimitedVoidBlock.java",
+          "src/main/resources/assets/craftkaisen/models/block/unlimited_void.json"
         ]
       },
-      "path": "~/Keybinds/Procedures"
+      "path": "~/Blocks"
     },
     {
-      "name": "ChargeCursedEnergyOnKeyReleased",
-      "type": "procedure",
-      "sortid": 116,
+      "name": "InfiniteVoidd",
+      "type": "livingentity",
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "charge_cursed_energy_on_key_released",
+      "registry_name": "infinite_voidd",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeCursedEnergyOnKeyReleasedProcedure.java"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/InfiniteVoiddRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "TojiFushiguro",
+      "type": "livingentity",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_fushiguro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "InfiniteVoiddOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_voidd_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfiniteVoiddOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "UnlimitedVoidReplacement",
+      "type": "structure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_replacement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/features/UnlimitedVoidReplacementFeature.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/unlimited_void_replacement_biome_modifier.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "InfiniteVoiddOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_voidd_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfiniteVoiddOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "RemoveTag",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_tag",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RemoveTagProcedure.java"
         ],
         "dependencies": [
           {
@@ -2438,7 +2595,58 @@
           }
         ]
       },
-      "path": "~/Keybinds/Procedures"
+      "path": "~/Procedures"
+    },
+    {
+      "name": "UnlimitedVoidStructure",
+      "type": "structure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_structure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/features/UnlimitedVoidStructureFeature.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/unlimited_void_structure_biome_modifier.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "UnlimitedVoidProcedure",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlimitedVoidProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
     }
   ],
   "variable_elements": [
@@ -2560,26 +2768,22 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.test_2": "Test 2",
+      "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
-      "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
-      "effect.craftkaisen.charge_ce_effect": "Charging",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy": "Cursed Energy",
       "effect.craftkaisen.infinity": "Infinity",
       "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "key.craftkaisen.flash_step": "Flash Step",
-      "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree": "Main Menu",
       "item.craftkaisen.tes": "Tes",
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
-      "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "key.craftkaisen.use_technique": "Use Technique",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
@@ -2587,23 +2791,19 @@
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
-      "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
       "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.main_hud.label_move_four": "Move Four",
+      "key.craftkaisen.block_bind": "Block",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy2": "Miscellaneous",
-      "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
-      "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
-      "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
-      "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "subtitles.veil.use": "Veil Used",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
@@ -2628,7 +2828,6 @@
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.quest_menu.button_skill_tree": "Skill Tree",
       "key.categories.jjk": "Craft Kaisen",
-      "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
       "gui.craftkaisen.main_hud.label_move_one": "Move One"
     }
@@ -2674,6 +2873,10 @@
         "children": []
       },
       {
+        "name": "Blocks",
+        "children": []
+      },
+      {
         "name": "Tags",
         "children": []
       },
@@ -2712,6 +2915,10 @@
         "children": []
       },
       {
+        "name": "Structures",
+        "children": []
+      },
+      {
         "name": "Mobs",
         "children": []
       },
@@ -2736,10 +2943,6 @@
       },
       {
         "name": "Commands",
-        "children": []
-      },
-      {
-        "name": "Blocks",
         "children": []
       }
     ]

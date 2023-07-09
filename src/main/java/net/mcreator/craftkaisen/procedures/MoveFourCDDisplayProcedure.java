@@ -1,9 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import javax.annotation.Nullable;
 
 public class MoveFourCDDisplayProcedure {
 	public static boolean execute(Entity entity) {

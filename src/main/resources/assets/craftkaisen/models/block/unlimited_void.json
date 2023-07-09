@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craftkaisen:blocks/white_block",
+    "up": "craftkaisen:blocks/white_block",
+    "north": "craftkaisen:blocks/white_block",
+    "east": "craftkaisen:blocks/white_block",
+    "south": "craftkaisen:blocks/white_block",
+    "west": "craftkaisen:blocks/white_block",
+    "particle": "craftkaisen:blocks/white_block"
+  },
+  "render_type": "solid"
+}
