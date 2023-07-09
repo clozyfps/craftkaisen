@@ -19,6 +19,132 @@
           "x": 307,
           "y": 223
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_move_one",
+          "text": {
+            "fixedValue": "Move One"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoveOneCDDisplay"
+          },
+          "x": 6,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_move_two",
+          "text": {
+            "fixedValue": "Move Two"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoveTwoCDDisplay"
+          },
+          "x": 6,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_move_3",
+          "text": {
+            "fixedValue": "Move Three"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoveThreeCDDisplay"
+          },
+          "x": 6,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_move_four",
+          "text": {
+            "fixedValue": "Move Four"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoveFourCDDisplay"
+          },
+          "x": 6,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_move_five",
+          "text": {
+            "fixedValue": "Move Five"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoveFiveCDDisplay"
+          },
+          "x": 6,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_special",
+          "text": {
+            "fixedValue": "Special"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "SpecialCDDisplay"
+          },
+          "x": 6,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ultimate",
+          "text": {
+            "fixedValue": "Ultimate"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "UltimateCDDisplay"
+          },
+          "x": 6,
+          "y": 170
+        }
       }
     ],
     "baseTexture": "",
@@ -28,7 +154,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

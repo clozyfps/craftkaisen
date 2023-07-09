@@ -1,0 +1,15 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Charge Cursed Energy",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "ChargeCursedEnergyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ChargeCursedEnergyOnKeyReleased"
+    }
+  }
+}

@@ -5,9 +5,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -28,13 +30,13 @@ public class RegenCursedEnergyProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergy != (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergyCap) {
-			if (entity.getPersistentData().getDouble("cursedEnergyTimer") == 20) {
+				.orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergyCap && !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.CHARGE_CE_EFFECT.get()) : false)) {
+			if (entity.getPersistentData().getDouble("cursedEnergyTimer") >= 20) {
 				entity.getPersistentData().putDouble("cursedEnergyTimer", 0);
 			} else if (entity.getPersistentData().getDouble("cursedEnergyTimer") < 20) {
 				entity.getPersistentData().putDouble("cursedEnergyTimer", (entity.getPersistentData().getDouble("cursedEnergyTimer") + 1));
 			}
-			if (entity.getPersistentData().getDouble("cursedEnergyTimer") == 20) {
+			if (entity.getPersistentData().getDouble("cursedEnergyTimer") >= 20) {
 				if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergy != 0
 						&& (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergy < (entity
 								.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergyCap) {

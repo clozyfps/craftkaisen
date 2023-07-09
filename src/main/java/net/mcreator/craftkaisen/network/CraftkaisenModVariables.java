@@ -86,6 +86,7 @@ public class CraftkaisenModVariables {
 			clone.Move2Cost = original.Move2Cost;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
+				clone.Charging = original.Charging;
 			}
 		}
 	}
@@ -139,6 +140,7 @@ public class CraftkaisenModVariables {
 		public double Move4Cost = 0;
 		public double Move1Cost = 0;
 		public double Move2Cost = 0;
+		public boolean Charging = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -165,6 +167,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("Move4Cost", Move4Cost);
 			nbt.putDouble("Move1Cost", Move1Cost);
 			nbt.putDouble("Move2Cost", Move2Cost);
+			nbt.putBoolean("Charging", Charging);
 			return nbt;
 		}
 
@@ -188,6 +191,7 @@ public class CraftkaisenModVariables {
 			Move4Cost = nbt.getDouble("Move4Cost");
 			Move1Cost = nbt.getDouble("Move1Cost");
 			Move2Cost = nbt.getDouble("Move2Cost");
+			Charging = nbt.getBoolean("Charging");
 		}
 	}
 
@@ -230,6 +234,7 @@ public class CraftkaisenModVariables {
 					variables.Move4Cost = message.data.Move4Cost;
 					variables.Move1Cost = message.data.Move1Cost;
 					variables.Move2Cost = message.data.Move2Cost;
+					variables.Charging = message.data.Charging;
 				}
 			});
 			context.setPacketHandled(true);

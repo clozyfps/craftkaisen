@@ -22,6 +22,7 @@ public class ReversalRedFinalOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		entity.getPersistentData().putBoolean("prohibitUse", true);
 		ReversalRed1Procedure.execute(world, x, y, z, entity);
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {

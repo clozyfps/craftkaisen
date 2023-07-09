@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
+import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -75,6 +76,25 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping CHARGE_CURSED_ENERGY = new KeyMapping("key.craftkaisen.charge_cursed_energy", GLFW.GLFW_KEY_V, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ChargeCursedEnergyMessage(0, 0));
+				ChargeCursedEnergyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				CHARGE_CURSED_ENERGY_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - CHARGE_CURSED_ENERGY_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ChargeCursedEnergyMessage(1, dt));
+				ChargeCursedEnergyMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -82,6 +102,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(USE_TECHNIQUE);
 		event.register(FLASH_STEP);
 		event.register(OPEN_MAIN_MENU_BIND);
+		event.register(CHARGE_CURSED_ENERGY);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -93,6 +114,7 @@ public class CraftkaisenModKeyMappings {
 				USE_TECHNIQUE.consumeClick();
 				FLASH_STEP.consumeClick();
 				OPEN_MAIN_MENU_BIND.consumeClick();
+				CHARGE_CURSED_ENERGY.consumeClick();
 			}
 		}
 	}

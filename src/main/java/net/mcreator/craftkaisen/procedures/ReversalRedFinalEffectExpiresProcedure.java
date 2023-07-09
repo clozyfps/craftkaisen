@@ -32,6 +32,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		entity.getPersistentData().putBoolean("prohibitUse", false);
 		entity.getPersistentData().putBoolean("aoefirst", true);
 		CraftkaisenMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", false);
