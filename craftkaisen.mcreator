@@ -1649,7 +1649,7 @@
     {
       "name": "SacredLunge",
       "type": "function",
-      "sortid": 92,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sacred_lunge",
@@ -2157,6 +2157,214 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "TojiFushiguro",
+      "type": "livingentity",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_fushiguro",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "UnlimitedVoid",
+      "type": "block",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/blockstates/unlimited_void.json",
+          "src/main/resources/assets/craftkaisen/models/block/unlimited_void.json",
+          "src/main/resources/assets/craftkaisen/models/item/unlimited_void.json",
+          "src/main/java/net/mcreator/craftkaisen/block/UnlimitedVoidBlock.java"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "InfiniteVoiddOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_voidd_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfiniteVoiddOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "InfiniteVoiddOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_voidd_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InfiniteVoiddOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "InfiniteVoidd",
+      "type": "livingentity",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_voidd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/InfiniteVoiddRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "UnlimitedVoidStructure",
+      "type": "structure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_structure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/features/UnlimitedVoidStructureFeature.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/unlimited_void_structure_biome_modifier.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "UnlimitedVoidProcedure",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlimitedVoidProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "UnlimitedVoidReplacement",
+      "type": "structure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlimited_void_replacement",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/features/UnlimitedVoidReplacementFeature.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/unlimited_void_replacement_biome_modifier.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "RemoveTag",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remove_tag",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RemoveTagProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -2206,7 +2414,7 @@
       "name": "BlockBarCap",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "4.0"
     },
     {
       "name": "Blocking",
@@ -2290,11 +2498,12 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
+      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
       "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
+      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy": "Cursed Energy",
       "effect.craftkaisen.infinity": "Infinity",
       "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
@@ -2307,7 +2516,9 @@
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "key.craftkaisen.use_technique": "Use Technique",
+      "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
       "gui.craftkaisen.quest_menu.button_skill_tree1": "Main Menu",
+      "block.craftkaisen.unlimited_void": "Unlimited Void",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.cooldown": "Cooldown",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
@@ -2317,6 +2528,7 @@
       "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",
       "key.craftkaisen.block_bind": "Block",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
+      "entity.craftkaisen.infinite_voidd": "Infinite Void",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy2": "Miscellaneous",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
@@ -2450,6 +2662,14 @@
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Structures",
         "children": []
       }
     ]
