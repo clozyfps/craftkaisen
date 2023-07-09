@@ -2768,8 +2768,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
+      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
