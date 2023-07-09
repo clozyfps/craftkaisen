@@ -46,7 +46,7 @@ public class HollowPurpleWhileProjectileFlyingTickProcedure {
 		world.destroyBlock(new BlockPos(x, y, z), false);
 		CraftkaisenMod.queueServerWork(8, () -> {
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 2, Explosion.BlockInteraction.DESTROY);
+				_level.explode(null, x, y, z, 4, Explosion.BlockInteraction.DESTROY);
 		});
 	}
 }

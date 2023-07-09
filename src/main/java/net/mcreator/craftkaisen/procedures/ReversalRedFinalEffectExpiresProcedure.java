@@ -32,13 +32,12 @@ public class ReversalRedFinalEffectExpiresProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putBoolean("prohibitUse", false);
 		entity.getPersistentData().putBoolean("aoefirst", true);
 		CraftkaisenMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", false);
 		});
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 120, 15, 3, 15, 0);
+			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 175, 15, 3, 15, 0);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.POOF, x, y, z, 25, 15, 3, 15, 0);
 		{
@@ -46,7 +45,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					entityiterator.hurt(DamageSource.GENERIC, (float) 19.2);
+					entityiterator.hurt(DamageSource.GENERIC, 20);
 					entityiterator.getPersistentData().putBoolean("aoe", true);
 				}
 			}
@@ -60,7 +59,7 @@ public class ReversalRedFinalEffectExpiresProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"particle minecraft:dust 0.96 0 0 2 ^0 ^0 ^0 5 1.5 5 0 20");
+					"particle minecraft:dust 0.96 0 0 2 ^0 ^0 ^0 5 1.5 5 0 35");
 		if (entity instanceof Player _player && !_player.level.isClientSide())
 			_player.displayClientMessage(Component.literal("\u00A7l\u00A74 Reversal Red."), true);
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
