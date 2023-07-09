@@ -1,8 +1,19 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class ChargeCEEffectMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import net.mcreator.craftkaisen.procedures.ChargingActiveTickProcedure;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class ChargeCEEffectMobEffect extends MobEffect {
 	public ChargeCEEffectMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -19,9 +30,7 @@ public class ChargeCEEffectMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		ChargingActiveTickProcedure.execute(
-
-		);
+		ChargingActiveTickProcedure.execute(entity);
 	}
 
 	@Override
