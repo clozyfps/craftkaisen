@@ -19,22 +19,6 @@
           "x": 307,
           "y": 223
         }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_block_bar_display",
-          "text": {
-            "fixedValue": "",
-            "name": "BlockBarDisplay"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 111,
-          "y": 223
-        }
       }
     ],
     "baseTexture": "",
