@@ -897,21 +897,6 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedFinalEffectExpiresProcedure.java"
         ],
-        "dependencies": []
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "ReversalRedProcedure",
-      "type": "procedure",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reversal_red_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProcedureProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -932,6 +917,26 @@
           {
             "name": "world",
             "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ReversalRedProcedure",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -2722,6 +2727,97 @@
         ]
       },
       "path": "~/Functions"
+    },
+    {
+      "name": "CombatTest",
+      "type": "command",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "combat_test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/CombatTestCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "CkOverwriteInumakiChat",
+      "type": "gamerule",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_overwrite_inumaki_chat",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "CombatTestProcedure",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "combat_test_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CombatTestProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetVoice",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_voice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetVoiceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "InumakiChatOverwrite",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inumaki_chat_overwrite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InumakiChatOverwriteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
@@ -2851,6 +2947,7 @@
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "effect.craftkaisen.charge_ce_effect": "Charging",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy": "Cursed Energy",
       "effect.craftkaisen.infinity": "Infinity",
@@ -2872,6 +2969,7 @@
       "block.craftkaisen.unlimited_void": "Unlimited Void",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
+      "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
