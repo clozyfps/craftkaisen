@@ -969,6 +969,7 @@
     {
       "name": "SetCursedTechnique",
       "type": "command",
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_cursed_technique",
@@ -2659,6 +2660,59 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "PartyCommand",
+      "type": "command",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "party_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/PartyCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "PartyCommandProcedure",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "party_command_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PartyCommandProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "DisablePVPAmongParties",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_pvp_among_parties",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisablePVPAmongPartiesProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
