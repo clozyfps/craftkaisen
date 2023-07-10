@@ -13,7 +13,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.craftkaisen.procedures.SetcursedtechniquecommandProcedure;
+import net.mcreator.craftkaisen.procedures.SetCursedTechniqueProcedureProcedure;
 
 import java.util.HashMap;
 
@@ -40,7 +40,7 @@ public class SetCursedTechniqueCommand {
 				index++;
 			}
 
-			SetcursedtechniquecommandProcedure.execute(entity, cmdparams);
+			SetCursedTechniqueProcedureProcedure.execute(entity, cmdparams);
 			return 0;
 		})).executes(arguments -> {
 			ServerLevel world = arguments.getSource().getLevel();
@@ -59,7 +59,7 @@ public class SetCursedTechniqueCommand {
 				index++;
 			}
 
-			SetcursedtechniquecommandProcedure.execute(entity, cmdparams);
+			SetCursedTechniqueProcedureProcedure.execute(entity, cmdparams);
 			return 0;
 		}));
 	}

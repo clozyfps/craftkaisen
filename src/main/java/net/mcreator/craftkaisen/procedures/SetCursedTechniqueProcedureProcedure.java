@@ -4,7 +4,7 @@ import net.minecraft.world.entity.Entity;
 
 import java.util.HashMap;
 
-public class SetcursedtechniquecommandProcedure {
+public class SetCursedTechniqueProcedureProcedure {
 	public static void execute(Entity entity, HashMap cmdparams) {
 		if (entity == null || cmdparams == null)
 			return;

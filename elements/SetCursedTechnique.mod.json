@@ -4,6 +4,6 @@
   "definition": {
     "commandName": "setcursedtechnique",
     "permissionLevel": "1",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"old_command\"><field name=\"procedure\">Setcursedtechniquecommand</field></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"old_command\"><field name=\"procedure\">SetCursedTechniqueProcedure</field></block></next></block></xml>"
   }
 }

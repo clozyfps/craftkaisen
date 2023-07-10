@@ -1,0 +1,124 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 193,
+    "height": 130,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_binding_vow",
+          "text": {
+            "fixedValue": "Binding Vow"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 184,
+          "y": 59
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_dev_has_offered_a_vow",
+          "text": {
+            "fixedValue": "MyNameIsName has offered a vow.",
+            "name": "VowSenderDisplay"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 77
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "--------------------------------"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 95
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_description",
+          "text": {
+            "fixedValue": "\"Description\"",
+            "name": "VowDescriptionDisplay"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 130,
+          "y": 113
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_do_you_accept",
+          "text": {
+            "fixedValue": "Do you accept?"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 177,
+          "y": 140
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_yes",
+          "text": "Yes",
+          "width": 40,
+          "height": 20,
+          "x": 139,
+          "y": 158
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_yes1",
+          "text": "No",
+          "onClick": {
+            "name": "CloseVowGUI"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 249,
+          "y": 158
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 28,
+      "oy": 9,
+      "snapOnGrid": true
+    }
+  }
+}

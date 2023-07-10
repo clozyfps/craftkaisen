@@ -12,19 +12,19 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.craftkaisen.procedures.PartyMainProcedureProcedure;
+import net.mcreator.craftkaisen.procedures.VowMainProcedureProcedure;
 
 import java.util.HashMap;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
 
 @Mod.EventBusSubscriber
-public class PartyCommandCommand {
+public class VowCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("party")
+		event.getDispatcher().register(Commands.literal("vow")
 
-				.then(Commands.argument("action", StringArgumentType.word()).then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
+				.then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("description", StringArgumentType.word()).then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -41,7 +41,7 @@ public class PartyCommandCommand {
 						index++;
 					}
 
-					PartyMainProcedureProcedure.execute(arguments, entity);
+					VowMainProcedureProcedure.execute(world, x, y, z, arguments, entity, cmdparams);
 					return 0;
 				})).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
@@ -60,7 +60,7 @@ public class PartyCommandCommand {
 						index++;
 					}
 
-					PartyMainProcedureProcedure.execute(arguments, entity);
+					VowMainProcedureProcedure.execute(world, x, y, z, arguments, entity, cmdparams);
 					return 0;
 				}))));
 	}

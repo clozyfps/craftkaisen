@@ -10,7 +10,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.StringArgumentType;
 
-public class PartyCommandProcedureProcedure {
+public class PartyMainProcedureProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
 			return;

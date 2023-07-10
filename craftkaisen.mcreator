@@ -898,6 +898,21 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedFinalEffectExpiresProcedure.java"
         ],
+        "dependencies": []
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ReversalRedProcedure",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProcedureProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -921,51 +936,7 @@
           }
         ]
       },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "ReversalRedProcedure",
-      "type": "procedure",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reversal_red_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
-    },
-    {
-      "name": "Setcursedtechniquecommand",
-      "type": "procedure",
-      "sortid": 55,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "setcursedtechniquecommand",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetcursedtechniquecommandProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "cmdparams",
-            "type": "map"
-          }
-        ]
-      },
-      "path": "~/Commands"
     },
     {
       "name": "SetCursedTechnique",
@@ -2677,30 +2648,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "PartyCommandProcedure",
-      "type": "procedure",
-      "sortid": 119,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "party_command_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PartyCommandProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
       "name": "DisablePVPAmongParties",
       "type": "procedure",
       "sortid": 120,
@@ -2854,6 +2801,276 @@
         ]
       },
       "path": "~/Armor"
+    },
+    {
+      "name": "BindingVowGUI",
+      "type": "gui",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "binding_vow_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/BindingVowGUIButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/BindingVowGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/BindingVowGUIMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "SetCursedTechniqueProcedure",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_technique_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedTechniqueProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "PartyMainProcedure",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "party_main_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PartyMainProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "VowCommand",
+      "type": "command",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/VowCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "VowMainProcedure",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_main_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowMainProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "VowSenderDisplay",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_sender_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowSenderDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "VowDescriptionDisplay",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_description_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowDescriptionDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "VowYesProcedure",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_yes_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowYesProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "CloseCurrentGUI",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "close_current_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CloseCurrentGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "CloseVowGUI",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "close_vow_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CloseVowGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "VowBrokenCommand",
+      "type": "command",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_broken_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/VowBrokenCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "VowBrokenProcedure",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_broken_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowBrokenProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -2920,8 +3137,8 @@
     {
       "name": "CursedEnergy",
       "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
+      "scope": "player_persistent",
+      "value": "500.0"
     },
     {
       "name": "MoveUltimateCost",
@@ -2970,20 +3187,40 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "VowDescription",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "VowsEnabled",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
+    },
+    {
+      "name": "VowSender",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
+      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
+      "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "effect.craftkaisen.charge_ce_effect": "Charging",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy": "Cursed Energy",
       "effect.craftkaisen.infinity": "Infinity",
@@ -3008,6 +3245,7 @@
       "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
+      "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
@@ -3026,6 +3264,7 @@
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
+      "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "subtitles.veil.use": "Veil Used",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
@@ -3044,12 +3283,15 @@
       "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
+      "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
+      "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.quest_menu.button_skill_tree": "Skill Tree",
+      "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "key.categories.jjk": "Craft Kaisen",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
@@ -3172,7 +3414,12 @@
       },
       {
         "name": "Commands",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       }
     ]
   },
