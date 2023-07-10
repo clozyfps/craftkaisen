@@ -1,17 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.network.chat.Component;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
-import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.TwistEntity;
+import javax.annotation.Nullable;
 
 public class TwistProcedureProcedure {
 	public static void execute(Entity entity) {
@@ -41,5 +32,7 @@ public class TwistProcedureProcedure {
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.IRRITATED_THROAT.get()) : false) {
 			entity.hurt(DamageSource.GENERIC, 5);
 		}
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.IRRITATED_THROAT.get(), 500, 1, false, false));
 	}
 }

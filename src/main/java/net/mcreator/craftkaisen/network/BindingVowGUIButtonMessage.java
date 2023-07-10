@@ -12,7 +12,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
-import net.mcreator.craftkaisen.procedures.VowYesProcedureProcedure;
 import net.mcreator.craftkaisen.procedures.CloseVowGUIProcedure;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -63,10 +62,6 @@ public class BindingVowGUIButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-
-			VowYesProcedureProcedure.execute(world, entity);
-		}
 		if (buttonID == 1) {
 
 			CloseVowGUIProcedure.execute(world, entity);

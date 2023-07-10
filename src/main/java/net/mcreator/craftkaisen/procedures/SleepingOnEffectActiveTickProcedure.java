@@ -23,7 +23,7 @@ public class SleepingOnEffectActiveTickProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 5, 250, false, false));
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.REST.get()), x, (y + 1), z, 2, 0.1, 2, 0.1, 0);
+			_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.REST.get()), x, (y + 1), z, 1, 0.1, 2, 0.1, 0);
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"/title @p title {\"text\":\"Sleep.\",\"bold\":true}");

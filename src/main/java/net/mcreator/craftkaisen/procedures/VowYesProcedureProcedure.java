@@ -1,12 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
-
-import java.util.ArrayList;
+import javax.annotation.Nullable;
 
 public class VowYesProcedureProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

@@ -20,7 +20,7 @@ public class BlastAwayProjectileHitsLivingEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		entity.setDeltaMovement(new Vec3(((-3) * sourceentity.getLookAngle().x), ((-2) * sourceentity.getLookAngle().y), ((-3) * sourceentity.getLookAngle().z)));
+		entity.setDeltaMovement(new Vec3((3 * sourceentity.getLookAngle().x), (2 * sourceentity.getLookAngle().y), (3 * sourceentity.getLookAngle().z)));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"/title @p title {\"text\":\"Blast Away.\",\"bold\":true}");

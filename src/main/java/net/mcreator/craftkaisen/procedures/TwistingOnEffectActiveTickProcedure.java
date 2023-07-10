@@ -17,7 +17,7 @@ public class TwistingOnEffectActiveTickProcedure {
 			return;
 		{
 			Entity _ent = entity;
-			_ent.setYRot((float) (entity.getYRot() + 2.5));
+			_ent.setYRot((float) (entity.getYRot() + 8));
 			_ent.setXRot(entity.getXRot());
 			_ent.setYBodyRot(_ent.getYRot());
 			_ent.setYHeadRot(_ent.getYRot());
