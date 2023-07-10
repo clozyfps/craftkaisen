@@ -1,14 +1,11 @@
 
 package net.mcreator.craftkaisen.potion;
 
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-import net.mcreator.craftkaisen.procedures.ReversalRedFinalOnEffectActiveTickProcedure;
 import net.mcreator.craftkaisen.procedures.ReversalRedFinalOnEffectActiveTick2Procedure;
-import net.mcreator.craftkaisen.procedures.ReversalRedFinalEffectExpiresProcedure;
 
 public class ReversalRedFinalMobEffect extends MobEffect {
 	public ReversalRedFinalMobEffect() {
@@ -21,19 +18,8 @@ public class ReversalRedFinalMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		ReversalRedFinalOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		ReversalRedFinalOnEffectActiveTick2Procedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ());
-	}
-
-	@Override
-	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		ReversalRedFinalEffectExpiresProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
