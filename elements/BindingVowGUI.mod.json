@@ -92,6 +92,9 @@
         "data": {
           "name": "button_yes",
           "text": "Yes",
+          "onClick": {
+            "name": "VowYesProcedure"
+          },
           "width": 40,
           "height": 20,
           "x": 139,
