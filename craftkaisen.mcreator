@@ -2805,6 +2805,26 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "InvertedSpearofHeavenRemoveInfinity",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inverted_spearof_heaven_remove_infinity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InvertedSpearofHeavenRemoveInfinityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
     }
   ],
   "variable_elements": [
@@ -3078,7 +3098,12 @@
       },
       {
         "name": "Items",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Particles",
