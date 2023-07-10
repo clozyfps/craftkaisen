@@ -11,6 +11,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.craftkaisen.potion.WeaponCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.TwistingMobEffect;
+import net.mcreator.craftkaisen.potion.StoppedMobEffect;
+import net.mcreator.craftkaisen.potion.SleepingMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
 import net.mcreator.craftkaisen.potion.MoveUltimateCooldownMobEffect;
@@ -20,10 +23,12 @@ import net.mcreator.craftkaisen.potion.Move4CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.Move3CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.Move2CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.Move1CooldownMobEffect;
+import net.mcreator.craftkaisen.potion.IrritatedThroatMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
+import net.mcreator.craftkaisen.potion.CrushingMobEffect;
 import net.mcreator.craftkaisen.potion.ChargeCEEffectMobEffect;
 import net.mcreator.craftkaisen.potion.BlockingEffectMobEffect;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -46,4 +51,9 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> MOVE_SPECIAL_COOLDOWN = REGISTRY.register("move_special_cooldown", () -> new MoveSpecialCooldownMobEffect());
 	public static final RegistryObject<MobEffect> MOVE_ULTIMATE_COOLDOWN = REGISTRY.register("move_ultimate_cooldown", () -> new MoveUltimateCooldownMobEffect());
 	public static final RegistryObject<MobEffect> CHARGE_CE_EFFECT = REGISTRY.register("charge_ce_effect", () -> new ChargeCEEffectMobEffect());
+	public static final RegistryObject<MobEffect> TWISTING = REGISTRY.register("twisting", () -> new TwistingMobEffect());
+	public static final RegistryObject<MobEffect> CRUSHING = REGISTRY.register("crushing", () -> new CrushingMobEffect());
+	public static final RegistryObject<MobEffect> STOPPED = REGISTRY.register("stopped", () -> new StoppedMobEffect());
+	public static final RegistryObject<MobEffect> SLEEPING = REGISTRY.register("sleeping", () -> new SleepingMobEffect());
+	public static final RegistryObject<MobEffect> IRRITATED_THROAT = REGISTRY.register("irritated_throat", () -> new IrritatedThroatMobEffect());
 }

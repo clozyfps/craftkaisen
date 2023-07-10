@@ -4,11 +4,8 @@ package net.mcreator.craftkaisen.item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.LivingEntity;
 
-import net.mcreator.craftkaisen.procedures.InvertedSpearofHeavenRemoveInfinityProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
 
 public class InvertedSpearofHeavenItem extends SwordItem {
@@ -38,12 +35,5 @@ public class InvertedSpearofHeavenItem extends SwordItem {
 				return Ingredient.of();
 			}
 		}, 3, -2f, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKWEAPONS));
-	}
-
-	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		InvertedSpearofHeavenRemoveInfinityProcedure.execute(entity);
-		return retval;
 	}
 }

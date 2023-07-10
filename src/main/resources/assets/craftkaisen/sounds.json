@@ -1,0 +1,10 @@
+{
+  "blood": {
+    "sounds": [
+      {
+        "name": "craftkaisen:dicesteak",
+        "stream": false
+      }
+    ]
+  }
+}

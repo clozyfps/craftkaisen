@@ -11,6 +11,7 @@ public class CraftkaisenModTabs {
 	public static CreativeModeTab TAB_JJKARMOR;
 	public static CreativeModeTab TAB_JJKMOBS;
 	public static CreativeModeTab TAB_JJKWEAPONS;
+	public static CreativeModeTab TAB_JJKITEMS;
 
 	public static void load() {
 		TAB_JJKARMOR = new CreativeModeTab("tabjjkarmor") {
@@ -46,5 +47,16 @@ public class CraftkaisenModTabs {
 				return false;
 			}
 		};
+		TAB_JJKITEMS = new CreativeModeTab("tabjjkitems") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(CraftkaisenModItems.COUGH_SYRUP.get());
+			}
+
+			@Override
+			public boolean hasSearchBar() {
+				return true;
+			}
+		}.setBackgroundSuffix("item_search.png");
 	}
 }

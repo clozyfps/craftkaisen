@@ -16,13 +16,6 @@ public class SetLimitlessProcedure {
 			});
 		}
 		{
-			double _setval = 500;
-			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.CursedEnergyCap = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
 			double _setval = 100;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move1Cost = _setval;
