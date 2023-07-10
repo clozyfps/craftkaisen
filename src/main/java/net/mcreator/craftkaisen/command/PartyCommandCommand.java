@@ -41,7 +41,7 @@ public class PartyCommandCommand {
 						index++;
 					}
 
-					PartyMainProcedureProcedure.execute(arguments, entity);
+					PartyMainProcedureProcedure.execute(world, arguments, entity, cmdparams);
 					return 0;
 				})).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
@@ -60,7 +60,7 @@ public class PartyCommandCommand {
 						index++;
 					}
 
-					PartyMainProcedureProcedure.execute(arguments, entity);
+					PartyMainProcedureProcedure.execute(world, arguments, entity, cmdparams);
 					return 0;
 				}))));
 	}

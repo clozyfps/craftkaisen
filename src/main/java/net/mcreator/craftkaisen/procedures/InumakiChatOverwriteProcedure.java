@@ -36,9 +36,6 @@ public class InumakiChatOverwriteProcedure {
 		double random = 0;
 		if (world.getLevelData().getGameRules().getBoolean(CraftkaisenModGameRules.CK_OVERWRITE_INUMAKI_CHAT)) {
 			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Voice")) {
-				if (event != null && event.isCancelable()) {
-					event.setCanceled(true);
-				}
 				random = Mth.nextInt(RandomSource.create(), 1, 8);
 				if (random == 1) {
 					for (Entity entityiterator : new ArrayList<>(world.players())) {
