@@ -96,7 +96,7 @@ public class InfiniteComboProcedureProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.CRIT, x, y, z, 2, 2, 2, 2, 0);
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 2, 0.1, 2, 1);
+					_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 2, 0.1, 2, 0);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.crit")), SoundSource.NEUTRAL, 1, 1);
@@ -128,7 +128,7 @@ public class InfiniteComboProcedureProcedure {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.CRIT, x, y, z, 2, 2, 2, 2, 0);
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 2, 0.1, 2, 1);
+						_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 2, 0.1, 2, 0);
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.crit")), SoundSource.NEUTRAL, 1, 1);

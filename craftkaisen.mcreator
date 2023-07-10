@@ -2803,6 +2803,770 @@
       "path": "~/Armor"
     },
     {
+      "name": "Stopped",
+      "type": "potioneffect",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stopped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/StoppedMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "Stop",
+      "type": "rangeditem",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/StopItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/stop.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/StopEntity.java"
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "CrushingEffectExpires",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushing_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CrushingEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "Crushing",
+      "type": "potioneffect",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/CrushingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "GetCrushedProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_crushed_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GetCrushedProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "IrritatedThroat",
+      "type": "potioneffect",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "irritated_throat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/IrritatedThroatMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "CoughSyrupRightclicked",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cough_syrup_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CoughSyrupRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "IrritatedThroatOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "irritated_throat_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/IrritatedThroatOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "StopProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StopProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "CoughSyrup",
+      "type": "item",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cough_syrup",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/cough_syrup.json",
+          "src/main/java/net/mcreator/craftkaisen/item/CoughSyrupItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Twist",
+      "type": "rangeditem",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/TwistEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/TwistItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/twist.json"
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "SleepProcedure",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Rest",
+      "type": "particle",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/rest.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RestParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "GetCrushed",
+      "type": "rangeditem",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_crushed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/GetCrushedEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/get_crushed.json",
+          "src/main/java/net/mcreator/craftkaisen/item/GetCrushedItem.java"
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "CrushedProcedure",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushed_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CrushedProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Twisting",
+      "type": "potioneffect",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twisting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/TwistingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "BlastAwayProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_away_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlastAwayProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "TwistProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twist_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TwistProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "ExplodeProcedure",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExplodeProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "CrushingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crushing_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CrushingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "TwistingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twisting_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TwistingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "Jjkitems",
+      "type": "tab",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jjkitems",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Explode",
+      "type": "rangeditem",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/ExplodeItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/explode.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeEntity.java"
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "BlastAwayProcedure",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_away_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BlastAwayProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Sleep",
+      "type": "rangeditem",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/sleep.json",
+          "src/main/java/net/mcreator/craftkaisen/item/SleepItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/SleepEntity.java"
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "Sleeping",
+      "type": "potioneffect",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleeping",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/SleepingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "TwistProcedure",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twist_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TwistProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "SleepProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "BlastAway",
+      "type": "rangeditem",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blast_away",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/blast_away.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlastAwayItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayEntity.java"
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
+      "name": "SleepingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleeping_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "StoppedOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stopped_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StoppedOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "StopProcedure",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stop_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StopProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "ExplodeProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explode_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExplodeProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities/Inumaki"
+    },
+    {
       "name": "BindingVowGUI",
       "type": "gui",
       "sortid": 129,
@@ -2817,6 +3581,44 @@
         ]
       },
       "path": "~/GUI"
+    },
+    {
+      "name": "VowBrokenProcedure",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_broken_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowBrokenProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "VowBrokenCommand",
+      "type": "command",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_broken_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/VowBrokenCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
     },
     {
       "name": "SetCursedTechniqueProcedure",
@@ -2841,154 +3643,6 @@
         ]
       },
       "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "PartyMainProcedure",
-      "type": "procedure",
-      "sortid": 131,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "party_main_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PartyMainProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "VowCommand",
-      "type": "command",
-      "sortid": 132,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vow_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/command/VowCommandCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "VowMainProcedure",
-      "type": "procedure",
-      "sortid": 133,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vow_main_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VowMainProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "cmdparams",
-            "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "VowSenderDisplay",
-      "type": "procedure",
-      "sortid": 134,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vow_sender_display",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VowSenderDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "VowDescriptionDisplay",
-      "type": "procedure",
-      "sortid": 135,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vow_description_display",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VowDescriptionDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "VowYesProcedure",
-      "type": "procedure",
-      "sortid": 136,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vow_yes_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VowYesProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
     },
     {
       "name": "CloseCurrentGUI",
@@ -3035,29 +3689,115 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "VowBrokenCommand",
-      "type": "command",
-      "sortid": 139,
+      "name": "VowMainProcedure",
+      "type": "procedure",
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "vow_broken_command",
+      "registry_name": "vow_main_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/command/VowBrokenCommandCommand.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowMainProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
-      "path": "~/Commands"
+      "path": "~/Commands/Procedures"
     },
     {
-      "name": "VowBrokenProcedure",
+      "name": "VowYesProcedure",
       "type": "procedure",
-      "sortid": 140,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "vow_broken_procedure",
+      "registry_name": "vow_yes_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VowBrokenProcedureProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowYesProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "VowDescriptionDisplay",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_description_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowDescriptionDisplayProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "VowSenderDisplay",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_sender_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VowSenderDisplayProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "PartyMainProcedure",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "party_main_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PartyMainProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -3071,6 +3811,20 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "VowCommand",
+      "type": "command",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/VowCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -3137,8 +3891,8 @@
     {
       "name": "CursedEnergy",
       "type": "number",
-      "scope": "player_persistent",
-      "value": "500.0"
+      "scope": "player_lifetime",
+      "value": "0"
     },
     {
       "name": "MoveUltimateCost",
@@ -3189,10 +3943,10 @@
       "value": "false"
     },
     {
-      "name": "VowDescription",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": ""
+      "name": "Mood",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     },
     {
       "name": "VowsEnabled",
@@ -3207,83 +3961,55 @@
       "value": "\"\""
     },
     {
-      "name": "Mood",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
+      "name": "VowDescription",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "blood",
+      "files": [
+        "dicesteak"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.test_2": "Test 2",
-      "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
-      "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "gui.craftkaisen.test.label_dawd": "dawd",
-      "gui.craftkaisen.main_menu.button_prestige": "Prestige",
-      "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
-      "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
-      "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
-      "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
-      "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "effect.craftkaisen.charge_ce_effect": "Charging",
-      "gui.craftkaisen.skill_tree_menu.button_cursed_energy": "Cursed Energy",
       "effect.craftkaisen.infinity": "Infinity",
       "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
-      "item.craftkaisen.hollow_purple": "Hollow Purple",
       "key.craftkaisen.flash_step": "Flash Step",
-      "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
-      "gui.craftkaisen.skill_tree_menu.button_skill_tree": "Main Menu",
-      "item.craftkaisen.tes": "Tes",
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
-      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
-      "key.craftkaisen.use_technique": "Use Technique",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
-      "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
+      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.quest_menu.button_skill_tree1": "Main Menu",
-      "block.craftkaisen.unlimited_void": "Unlimited Void",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
-      "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
-      "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
-      "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
-      "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
-      "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",
-      "gui.craftkaisen.main_hud.label_move_3": "Move Three",
-      "gui.craftkaisen.main_hud.label_move_four": "Move Four",
       "key.craftkaisen.block_bind": "Block",
-      "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy2": "Miscellaneous",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
-      "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
+      "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
-      "block.craftkaisen.veil_main_block": "Veil Main Block",
-      "itemGroup.tabjjkweapons": "JJK Weapons",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
-      "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
-      "subtitles.veil.use": "Veil Used",
       "itemGroup.tabjjkarmor": "JJK Armor",
-      "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.main_menu.button_skill_tree": "Skill Tree",
-      "effect.craftkaisen.reversal_red_final": "Reversal Red",
-      "advancements.flash_step_advancement.descr": "WIP",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
-      "gui.craftkaisen.skill_tree_menu.button_strength2": "Speed",
-      "itemGroup.tabjjkmobs": "JJK Mobs",
-      "gui.craftkaisen.skill_tree_menu.button_strength1": "Durability",
-      "gui.craftkaisen.main_hud.label_move_two": "Move Two",
       "effect.craftkaisen.blocking_effect": "Blocking",
-      "gui.craftkaisen.main_menu.label_exp_0100": "Exp : 0/100",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
@@ -3291,15 +4017,48 @@
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
-      "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "key.craftkaisen.switch_technique": "Switch Ability",
+      "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
+      "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
+      "item.craftkaisen.test_2": "Test 2",
+      "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
+      "gui.craftkaisen.main_menu.button_prestige": "Prestige",
+      "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
+      "gui.craftkaisen.main_menu.label_level_1": "Level : 1",
+      "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
+      "gui.craftkaisen.skill_tree_menu.button_cursed_energy": "Cursed Energy",
+      "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
+      "gui.craftkaisen.skill_tree_menu.button_skill_tree": "Main Menu",
+      "item.craftkaisen.tes": "Tes",
+      "key.craftkaisen.use_technique": "Use Technique",
+      "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
+      "block.craftkaisen.unlimited_void": "Unlimited Void",
+      "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
+      "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
+      "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
+      "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",
+      "gui.craftkaisen.main_hud.label_move_3": "Move Three",
+      "gui.craftkaisen.main_hud.label_move_four": "Move Four",
+      "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
+      "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
+      "block.craftkaisen.veil_main_block": "Veil Main Block",
+      "itemGroup.tabjjkweapons": "JJK Weapons",
+      "subtitles.veil.use": "Veil Used",
+      "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
+      "effect.craftkaisen.reversal_red_final": "Reversal Red",
+      "advancements.flash_step_advancement.descr": "WIP",
+      "gui.craftkaisen.skill_tree_menu.button_strength2": "Speed",
+      "itemGroup.tabjjkmobs": "JJK Mobs",
+      "gui.craftkaisen.skill_tree_menu.button_strength1": "Durability",
+      "gui.craftkaisen.main_hud.label_move_two": "Move Two",
+      "gui.craftkaisen.main_menu.label_exp_0100": "Exp : 0/100",
+      "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.quest_menu.button_skill_tree": "Skill Tree",
-      "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "key.categories.jjk": "Craft Kaisen",
-      "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
       "gui.craftkaisen.main_hud.label_move_one": "Move One"
     }
@@ -3320,6 +4079,10 @@
         "children": [
           {
             "name": "AbilitySetup",
+            "children": []
+          },
+          {
+            "name": "Inumaki",
             "children": []
           }
         ]
