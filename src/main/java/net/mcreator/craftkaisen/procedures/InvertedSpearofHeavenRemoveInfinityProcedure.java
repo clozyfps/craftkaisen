@@ -1,12 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import javax.annotation.Nullable;
 
 public class InvertedSpearofHeavenRemoveInfinityProcedure {
 	public static void execute(Entity entity) {

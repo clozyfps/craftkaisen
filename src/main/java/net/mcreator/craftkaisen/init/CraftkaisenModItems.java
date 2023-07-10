@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
+import net.mcreator.craftkaisen.item.BlindfoldItem;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModItems {
@@ -37,6 +38,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> TOJI_FUSHIGURO_SPAWN_EGG = REGISTRY.register("toji_fushiguro_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.TOJI_FUSHIGURO, -14934998, -9080194, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> UNLIMITED_VOID = block(CraftkaisenModBlocks.UNLIMITED_VOID, CraftkaisenModTabs.TAB_JJKMOBS);
+	public static final RegistryObject<Item> BLINDFOLD_HELMET = REGISTRY.register("blindfold_helmet", () -> new BlindfoldItem.Helmet());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
