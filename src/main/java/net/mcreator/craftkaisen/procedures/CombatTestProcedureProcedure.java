@@ -1,8 +1,12 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 
-import javax.annotation.Nullable;
+import java.util.ArrayList;
 
 public class CombatTestProcedureProcedure {
 	public static void execute(LevelAccessor world) {

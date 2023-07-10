@@ -13,6 +13,7 @@ import net.mcreator.craftkaisen.client.model.Modellapseblue;
 import net.mcreator.craftkaisen.client.model.Modeljjkoutfiot;
 import net.mcreator.craftkaisen.client.model.Modelhollowpurplenew;
 import net.mcreator.craftkaisen.client.model.Modelhollowpurple;
+import net.mcreator.craftkaisen.client.model.Modelblindfold;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class CraftkaisenModModels {
@@ -22,5 +23,6 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurple.LAYER_LOCATION, Modelhollowpurple::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurplenew.LAYER_LOCATION, Modelhollowpurplenew::createBodyLayer);
+		event.registerLayerDefinition(Modelblindfold.LAYER_LOCATION, Modelblindfold::createBodyLayer);
 	}
 }

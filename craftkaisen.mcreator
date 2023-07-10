@@ -9,8 +9,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/tes.json",
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/tes.json"
         ]
       },
       "path": "~/Items"
@@ -46,6 +46,7 @@
     {
       "name": "CkProgressivePrestigeDifficulty",
       "type": "gamerule",
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ck_progressive_prestige_difficulty",
@@ -64,9 +65,9 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
         ]
       },
       "path": "~/Abilities"
@@ -114,8 +115,8 @@
       "registry_name": "hollow_purple_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
         ]
       },
       "path": "~/Abilities"
@@ -897,6 +898,21 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedFinalEffectExpiresProcedure.java"
         ],
+        "dependencies": []
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ReversalRedProcedure",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProcedureProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -917,26 +933,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "ReversalRedProcedure",
-      "type": "procedure",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reversal_red_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -1009,8 +1005,8 @@
       "registry_name": "impact",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/impact.json"
+          "src/main/resources/assets/craftkaisen/particles/impact.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1061,9 +1057,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/JujutsuStudentRenderer.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -1187,8 +1183,8 @@
       "registry_name": "evade",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/evade.json"
+          "src/main/resources/assets/craftkaisen/particles/evade.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1215,9 +1211,9 @@
       "registry_name": "jujutsu_sorcerer_outfit",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json",
           "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererOutfitItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json"
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json"
         ]
       },
       "path": "~/Armor"
@@ -1712,9 +1708,9 @@
       "registry_name": "skill_tree_menu",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMenuScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMenuButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMenuScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMenuButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -1764,9 +1760,9 @@
       "registry_name": "quest_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/QuestMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/QuestMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/QuestMenuScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/QuestMenuScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/QuestMenuButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -1830,9 +1826,9 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -2028,10 +2024,10 @@
       "registry_name": "veil_main_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/veil_main_block.json",
-          "src/main/resources/assets/craftkaisen/models/block/veil_main_block.json",
           "src/main/java/net/mcreator/craftkaisen/block/VeilMainBlockBlock.java",
-          "src/main/resources/assets/craftkaisen/blockstates/veil_main_block.json"
+          "src/main/resources/assets/craftkaisen/models/block/veil_main_block.json",
+          "src/main/resources/assets/craftkaisen/blockstates/veil_main_block.json",
+          "src/main/resources/assets/craftkaisen/models/item/veil_main_block.json"
         ]
       },
       "path": "~/Blocks"
@@ -2462,10 +2458,10 @@
       "registry_name": "unlimited_void",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/unlimited_void.json",
           "src/main/resources/assets/craftkaisen/blockstates/unlimited_void.json",
-          "src/main/java/net/mcreator/craftkaisen/block/UnlimitedVoidBlock.java",
-          "src/main/resources/assets/craftkaisen/models/block/unlimited_void.json"
+          "src/main/resources/assets/craftkaisen/models/block/unlimited_void.json",
+          "src/main/resources/assets/craftkaisen/models/item/unlimited_void.json",
+          "src/main/java/net/mcreator/craftkaisen/block/UnlimitedVoidBlock.java"
         ]
       },
       "path": "~/Blocks"
@@ -2479,9 +2475,9 @@
       "registry_name": "infinite_voidd",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/InfiniteVoiddRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json"
         ]
       },
       "path": "~/Abilities"
@@ -2495,10 +2491,10 @@
       "registry_name": "toji_fushiguro",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
           "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -2818,6 +2814,21 @@
         ]
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "Blindfold",
+      "type": "armor",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blindfold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java"
+        ]
+      },
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [
@@ -2939,8 +2950,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
+      "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
@@ -3006,6 +3017,7 @@
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
+      "item.craftkaisen.blindfold_helmet": "Blindfold",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
