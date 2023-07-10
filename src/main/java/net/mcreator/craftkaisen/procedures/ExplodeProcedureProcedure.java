@@ -1,17 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.network.chat.Component;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
-import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.ExplodeEntity;
+import javax.annotation.Nullable;
 
 public class ExplodeProcedureProcedure {
 	public static void execute(Entity entity) {
@@ -23,7 +14,7 @@ public class ExplodeProcedureProcedure {
 			if (!projectileLevel.isClientSide()) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new ExplodeEntity(CraftkaisenModEntities.EXPLODE.get(), level);
+						AbstractArrow entityToSpawn = new ExplodeEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);

@@ -1,23 +1,11 @@
 
 package net.mcreator.craftkaisen.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.UseAnim;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.network.chat.Component;
-
-import net.mcreator.craftkaisen.procedures.CoughSyrupRightclickedProcedure;
-import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
-
-import java.util.List;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class CoughSyrupItem extends Item {
+
 	public CoughSyrupItem() {
 		super(new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKITEMS).durability(150).rarity(Rarity.COMMON));
 	}
@@ -49,4 +37,5 @@ public class CoughSyrupItem extends Item {
 		CoughSyrupRightclickedProcedure.execute(world, x, y, z, entity);
 		return ar;
 	}
+
 }

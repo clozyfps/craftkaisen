@@ -12,7 +12,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.craftkaisen.procedures.PartyCommandProcedureProcedure;
+import net.mcreator.craftkaisen.procedures.PartyMainProcedureProcedure;
 
 import java.util.HashMap;
 
@@ -41,7 +41,7 @@ public class PartyCommandCommand {
 						index++;
 					}
 
-					PartyCommandProcedureProcedure.execute(arguments, entity);
+					PartyMainProcedureProcedure.execute(arguments, entity);
 					return 0;
 				})).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
@@ -60,7 +60,7 @@ public class PartyCommandCommand {
 						index++;
 					}
 
-					PartyCommandProcedureProcedure.execute(arguments, entity);
+					PartyMainProcedureProcedure.execute(arguments, entity);
 					return 0;
 				}))));
 	}
