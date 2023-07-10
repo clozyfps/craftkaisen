@@ -1,15 +1,18 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+
+import java.util.ArrayList;
 
 public class VowYesProcedureProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
-			if ((entityiterator.getDisplayName().getString()).equals()) {
+			if ((entityiterator.getDisplayName().getString()).equals((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).VowSender)) {
 				entity.getPersistentData().putBoolean((entityiterator.getDisplayName().getString() + "VowApproved"), true);
 				entityiterator.getPersistentData().putBoolean((entity.getDisplayName().getString() + "VowApproved"), true);
 			}

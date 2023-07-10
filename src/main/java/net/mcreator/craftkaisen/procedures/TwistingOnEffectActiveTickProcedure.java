@@ -1,8 +1,15 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.BlockPos;
 
 public class TwistingOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -10,7 +17,7 @@ public class TwistingOnEffectActiveTickProcedure {
 			return;
 		{
 			Entity _ent = entity;
-			_ent.setYRot((float) (entity.getYRot() + 2.5));
+			_ent.setYRot((float) (entity.getYRot() + 8));
 			_ent.setXRot(entity.getXRot());
 			_ent.setYBodyRot(_ent.getYRot());
 			_ent.setYHeadRot(_ent.getYRot());

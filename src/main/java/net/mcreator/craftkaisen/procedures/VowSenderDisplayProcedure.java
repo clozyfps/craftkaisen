@@ -1,11 +1,13 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 public class VowSenderDisplayProcedure {
-	public static String execute() {
-		return +" has offered a vow.";
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).VowSender + " has offered a vow.";
 	}
 }

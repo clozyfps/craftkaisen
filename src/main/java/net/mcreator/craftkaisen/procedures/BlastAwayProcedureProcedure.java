@@ -1,8 +1,18 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.network.chat.Component;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 
 public class BlastAwayProcedureProcedure {
 	public static void execute(Entity entity) {
@@ -14,7 +24,7 @@ public class BlastAwayProcedureProcedure {
 			if (!projectileLevel.isClientSide()) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new BlastAwayEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+						AbstractArrow entityToSpawn = new BlastAwayEntity(CraftkaisenModEntities.BLAST_AWAY.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
@@ -32,5 +42,7 @@ public class BlastAwayProcedureProcedure {
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.IRRITATED_THROAT.get()) : false) {
 			entity.hurt(DamageSource.GENERIC, 5);
 		}
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.IRRITATED_THROAT.get(), 500, 1, false, false));
 	}
 }
