@@ -1,8 +1,13 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class StoppedMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.StoppedOnEffectActiveTickProcedure;
+
+public class StoppedMobEffect extends MobEffect {
 	public StoppedMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,14 +19,11 @@ public class StoppedMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		StoppedOnEffectActiveTickProcedure.execute(
-
-		);
+		StoppedOnEffectActiveTickProcedure.execute(entity);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

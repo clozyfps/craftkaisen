@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
+import net.mcreator.craftkaisen.init.CraftkaisenModSounds;
 import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModMenus;
@@ -56,7 +57,7 @@ public class CraftkaisenMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		CraftkaisenModTabs.load();
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-
+		CraftkaisenModSounds.REGISTRY.register(bus);
 		CraftkaisenModBlocks.REGISTRY.register(bus);
 		CraftkaisenModItems.REGISTRY.register(bus);
 		CraftkaisenModEntities.REGISTRY.register(bus);

@@ -4,6 +4,6 @@
   "definition": {
     "commandName": "vow",
     "permissionLevel": "No requirement",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"entity\"><field name=\"name\">player</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"string\"><field name=\"type\">word</field><field name=\"name\">description</field><statement name=\"args\"><block type=\"old_command\"><field name=\"procedure\">VowMainProcedure</field></block></statement></block></statement></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"entity\"><field name=\"name\">player</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"string\"><field name=\"type\">string</field><field name=\"name\">description</field><statement name=\"args\"><block type=\"old_command\"><field name=\"procedure\">VowMainProcedure</field></block></statement></block></statement></block></next></block></xml>"
   }
 }

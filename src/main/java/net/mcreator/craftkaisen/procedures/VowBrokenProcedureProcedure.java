@@ -1,8 +1,13 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.commands.arguments.EntityArgument;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import javax.annotation.Nullable;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import com.mojang.brigadier.context.CommandContext;
 
 public class VowBrokenProcedureProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
@@ -10,7 +15,7 @@ public class VowBrokenProcedureProcedure {
 			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
-				if (entity.getPersistentData().getBoolean((entity.getDisplayName().getString() + "VowApproved"))) {
+				if (entityiterator.getPersistentData().getBoolean((entity.getDisplayName().getString() + "VowApproved"))) {
 					{
 						Entity _ent = entityiterator;
 						if (!_ent.level.isClientSide() && _ent.getServer() != null) {

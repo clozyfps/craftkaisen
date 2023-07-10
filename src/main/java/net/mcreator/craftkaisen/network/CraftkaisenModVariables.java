@@ -77,7 +77,6 @@ public class CraftkaisenModVariables {
 			clone.TechniqueSwitch = original.TechniqueSwitch;
 			clone.SelectedTechnique = original.SelectedTechnique;
 			clone.Move3Cost = original.Move3Cost;
-			clone.CursedEnergy = original.CursedEnergy;
 			clone.MoveUltimateCost = original.MoveUltimateCost;
 			clone.MoveSpecialCost = original.MoveSpecialCost;
 			clone.CursedEnergyCap = original.CursedEnergyCap;
@@ -85,12 +84,13 @@ public class CraftkaisenModVariables {
 			clone.Move4Cost = original.Move4Cost;
 			clone.Move1Cost = original.Move1Cost;
 			clone.Move2Cost = original.Move2Cost;
-			clone.VowsEnabled = original.VowsEnabled;
 			clone.Mood = original.Mood;
+			clone.VowsEnabled = original.VowsEnabled;
 			if (!event.isWasDeath()) {
+				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
-				clone.VowDescription = original.VowDescription;
 				clone.VowSender = original.VowSender;
+				clone.VowDescription = original.VowDescription;
 			}
 		}
 	}
@@ -136,7 +136,7 @@ public class CraftkaisenModVariables {
 		public double TechniqueSwitch = 0;
 		public String SelectedTechnique = "\"\"";
 		public double Move3Cost = 0;
-		public double CursedEnergy = 500.0;
+		public double CursedEnergy = 0;
 		public double MoveUltimateCost = 0;
 		public double MoveSpecialCost = 0;
 		public double CursedEnergyCap = 0;
@@ -145,10 +145,10 @@ public class CraftkaisenModVariables {
 		public double Move1Cost = 0;
 		public double Move2Cost = 0;
 		public boolean Charging = false;
-		public String VowDescription = "";
+		public double Mood = 0;
 		public boolean VowsEnabled = true;
 		public String VowSender = "\"\"";
-		public double Mood = 0;
+		public String VowDescription = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -176,10 +176,10 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("Move1Cost", Move1Cost);
 			nbt.putDouble("Move2Cost", Move2Cost);
 			nbt.putBoolean("Charging", Charging);
-			nbt.putString("VowDescription", VowDescription);
+			nbt.putDouble("Mood", Mood);
 			nbt.putBoolean("VowsEnabled", VowsEnabled);
 			nbt.putString("VowSender", VowSender);
-			nbt.putDouble("Mood", Mood);
+			nbt.putString("VowDescription", VowDescription);
 			return nbt;
 		}
 
@@ -204,10 +204,10 @@ public class CraftkaisenModVariables {
 			Move1Cost = nbt.getDouble("Move1Cost");
 			Move2Cost = nbt.getDouble("Move2Cost");
 			Charging = nbt.getBoolean("Charging");
-			VowDescription = nbt.getString("VowDescription");
+			Mood = nbt.getDouble("Mood");
 			VowsEnabled = nbt.getBoolean("VowsEnabled");
 			VowSender = nbt.getString("VowSender");
-			Mood = nbt.getDouble("Mood");
+			VowDescription = nbt.getString("VowDescription");
 		}
 	}
 
@@ -251,10 +251,10 @@ public class CraftkaisenModVariables {
 					variables.Move1Cost = message.data.Move1Cost;
 					variables.Move2Cost = message.data.Move2Cost;
 					variables.Charging = message.data.Charging;
-					variables.VowDescription = message.data.VowDescription;
+					variables.Mood = message.data.Mood;
 					variables.VowsEnabled = message.data.VowsEnabled;
 					variables.VowSender = message.data.VowSender;
-					variables.Mood = message.data.Mood;
+					variables.VowDescription = message.data.VowDescription;
 				}
 			});
 			context.setPacketHandled(true);
