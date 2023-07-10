@@ -86,6 +86,7 @@ public class CraftkaisenModVariables {
 			clone.Move1Cost = original.Move1Cost;
 			clone.Move2Cost = original.Move2Cost;
 			clone.VowsEnabled = original.VowsEnabled;
+			clone.Mood = original.Mood;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.VowDescription = original.VowDescription;
@@ -147,6 +148,7 @@ public class CraftkaisenModVariables {
 		public String VowDescription = "";
 		public boolean VowsEnabled = true;
 		public String VowSender = "\"\"";
+		public double Mood = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -177,6 +179,7 @@ public class CraftkaisenModVariables {
 			nbt.putString("VowDescription", VowDescription);
 			nbt.putBoolean("VowsEnabled", VowsEnabled);
 			nbt.putString("VowSender", VowSender);
+			nbt.putDouble("Mood", Mood);
 			return nbt;
 		}
 
@@ -204,6 +207,7 @@ public class CraftkaisenModVariables {
 			VowDescription = nbt.getString("VowDescription");
 			VowsEnabled = nbt.getBoolean("VowsEnabled");
 			VowSender = nbt.getString("VowSender");
+			Mood = nbt.getDouble("Mood");
 		}
 	}
 
@@ -250,6 +254,7 @@ public class CraftkaisenModVariables {
 					variables.VowDescription = message.data.VowDescription;
 					variables.VowsEnabled = message.data.VowsEnabled;
 					variables.VowSender = message.data.VowSender;
+					variables.Mood = message.data.Mood;
 				}
 			});
 			context.setPacketHandled(true);
