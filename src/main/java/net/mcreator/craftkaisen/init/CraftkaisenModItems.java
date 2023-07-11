@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.item.HollowPurpleItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
 import net.mcreator.craftkaisen.item.CoughSyrupItem;
+import net.mcreator.craftkaisen.item.ClapItem;
 import net.mcreator.craftkaisen.item.BlindfoldItem;
 import net.mcreator.craftkaisen.item.BlastAwayItem;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -53,6 +54,9 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> SLEEP = REGISTRY.register("sleep", () -> new SleepItem());
 	public static final RegistryObject<Item> BLAST_AWAY = REGISTRY.register("blast_away", () -> new BlastAwayItem());
 	public static final RegistryObject<Item> COUGH_SYRUP = REGISTRY.register("cough_syrup", () -> new CoughSyrupItem());
+	public static final RegistryObject<Item> CLAP = REGISTRY.register("clap", () -> new ClapItem());
+	public static final RegistryObject<Item> SATORU_GOJO_SPAWN_EGG = REGISTRY.register("satoru_gojo_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.SATORU_GOJO, -16514026, -2100742, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
