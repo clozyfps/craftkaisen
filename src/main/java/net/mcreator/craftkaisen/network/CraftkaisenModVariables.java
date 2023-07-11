@@ -86,6 +86,11 @@ public class CraftkaisenModVariables {
 			clone.Move2Cost = original.Move2Cost;
 			clone.Mood = original.Mood;
 			clone.VowsEnabled = original.VowsEnabled;
+			clone.Vessel = original.Vessel;
+			clone.VesselTechnique = original.VesselTechnique;
+			clone.QuestAmount = original.QuestAmount;
+			clone.QuestMob = original.QuestMob;
+			clone.QuestReward = original.QuestReward;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -149,6 +154,11 @@ public class CraftkaisenModVariables {
 		public boolean VowsEnabled = true;
 		public String VowSender = "\"\"";
 		public String VowDescription = "";
+		public String Vessel = "\"\"";
+		public String VesselTechnique = "\"\"";
+		public double QuestAmount = 0;
+		public String QuestMob = "\"\"";
+		public double QuestReward = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -180,6 +190,11 @@ public class CraftkaisenModVariables {
 			nbt.putBoolean("VowsEnabled", VowsEnabled);
 			nbt.putString("VowSender", VowSender);
 			nbt.putString("VowDescription", VowDescription);
+			nbt.putString("Vessel", Vessel);
+			nbt.putString("VesselTechnique", VesselTechnique);
+			nbt.putDouble("QuestAmount", QuestAmount);
+			nbt.putString("QuestMob", QuestMob);
+			nbt.putDouble("QuestReward", QuestReward);
 			return nbt;
 		}
 
@@ -208,6 +223,11 @@ public class CraftkaisenModVariables {
 			VowsEnabled = nbt.getBoolean("VowsEnabled");
 			VowSender = nbt.getString("VowSender");
 			VowDescription = nbt.getString("VowDescription");
+			Vessel = nbt.getString("Vessel");
+			VesselTechnique = nbt.getString("VesselTechnique");
+			QuestAmount = nbt.getDouble("QuestAmount");
+			QuestMob = nbt.getString("QuestMob");
+			QuestReward = nbt.getDouble("QuestReward");
 		}
 	}
 
@@ -255,6 +275,11 @@ public class CraftkaisenModVariables {
 					variables.VowsEnabled = message.data.VowsEnabled;
 					variables.VowSender = message.data.VowSender;
 					variables.VowDescription = message.data.VowDescription;
+					variables.Vessel = message.data.Vessel;
+					variables.VesselTechnique = message.data.VesselTechnique;
+					variables.QuestAmount = message.data.QuestAmount;
+					variables.QuestMob = message.data.QuestMob;
+					variables.QuestReward = message.data.QuestReward;
 				}
 			});
 			context.setPacketHandled(true);
