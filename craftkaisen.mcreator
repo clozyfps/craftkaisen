@@ -1967,6 +1967,7 @@
     {
       "name": "BlockSwords",
       "type": "tag",
+      "sortid": 175,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_swords",
@@ -2331,6 +2332,10 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/VeilCheckProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -2752,7 +2757,7 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
+            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -3803,6 +3808,14 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4518,14 +4531,14 @@
       "effect.craftkaisen.infinity": "Infinity",
       "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
       "key.craftkaisen.flash_step": "Flash Step",
-      "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "gui.craftkaisen.main_hud.label_x": "X",
+      "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",
-      "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
-      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
+      "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
+      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.quest_menu.button_skill_tree1": "Main Menu",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
@@ -4541,12 +4554,13 @@
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "effect.craftkaisen.twisting": "Twisting",
+      "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "effect.craftkaisen.stopped": "Stopped",
-      "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
+      "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "itemGroup.tabjjkitems": "JJK Items",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
@@ -4565,6 +4579,7 @@
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "key.craftkaisen.switch_technique": "Switch Ability",
+      "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
@@ -4613,7 +4628,8 @@
       "item.craftkaisen.explode": "Explode",
       "key.categories.jjk": "Craft Kaisen",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
-      "gui.craftkaisen.main_hud.label_move_one": "Move One"
+      "gui.craftkaisen.main_hud.label_move_one": "Move One",
+      "effect.craftkaisen.clap_rush": "Clap Rush"
     }
   },
   "foldersRoot": {

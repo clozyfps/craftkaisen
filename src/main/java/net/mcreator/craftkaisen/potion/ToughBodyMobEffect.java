@@ -1,8 +1,13 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class ToughBodyMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.ToughBodyOnEffectActiveTickProcedure;
+
+public class ToughBodyMobEffect extends MobEffect {
 	public ToughBodyMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,14 +19,11 @@ public class ToughBodyMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		ToughBodyOnEffectActiveTickProcedure.execute(
-
-		);
+		ToughBodyOnEffectActiveTickProcedure.execute(entity);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }
