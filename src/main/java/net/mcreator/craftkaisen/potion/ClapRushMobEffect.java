@@ -1,13 +1,8 @@
 
 package net.mcreator.craftkaisen.potion;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-
-import net.mcreator.craftkaisen.procedures.ClapRushOnEffectActiveTickProcedure;
-
 public class ClapRushMobEffect extends MobEffect {
+
 	public ClapRushMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -19,11 +14,14 @@ public class ClapRushMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		ClapRushOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
+		ClapRushOnEffectActiveTickProcedure.execute(
+
+		);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
+
 }

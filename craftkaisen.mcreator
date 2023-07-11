@@ -9,8 +9,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/tes.json"
+          "src/main/resources/assets/craftkaisen/models/item/tes.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
         ]
       },
       "path": "~/Items"
@@ -65,9 +65,9 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
           "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
         ]
       },
       "path": "~/Abilities"
@@ -115,8 +115,8 @@
       "registry_name": "hollow_purple_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -967,8 +967,8 @@
       "registry_name": "impact",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/particles/impact.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/impact.json"
         ]
       },
       "path": "~/Particles"
@@ -1019,9 +1019,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/JujutsuStudentRenderer.java",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json"
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -1145,8 +1145,8 @@
       "registry_name": "evade",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/particles/evade.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/evade.json"
         ]
       },
       "path": "~/Particles"
@@ -1173,9 +1173,9 @@
       "registry_name": "jujutsu_sorcerer_outfit",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json",
           "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererOutfitItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json"
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json",
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -1670,9 +1670,9 @@
       "registry_name": "skill_tree_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMenuScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMenuButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMenuButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMenuScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -1722,9 +1722,9 @@
       "registry_name": "quest_menu",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/QuestMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/QuestMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/QuestMenuScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/QuestMenuButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/QuestMenuScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -1788,9 +1788,9 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java"
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -1967,7 +1967,7 @@
     {
       "name": "BlockSwords",
       "type": "tag",
-      "sortid": 175,
+      "sortid": 168,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_swords",
@@ -1987,10 +1987,10 @@
       "registry_name": "veil_main_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/block/VeilMainBlockBlock.java",
+          "src/main/resources/assets/craftkaisen/models/item/veil_main_block.json",
           "src/main/resources/assets/craftkaisen/models/block/veil_main_block.json",
-          "src/main/resources/assets/craftkaisen/blockstates/veil_main_block.json",
-          "src/main/resources/assets/craftkaisen/models/item/veil_main_block.json"
+          "src/main/java/net/mcreator/craftkaisen/block/VeilMainBlockBlock.java",
+          "src/main/resources/assets/craftkaisen/blockstates/veil_main_block.json"
         ]
       },
       "path": "~/Blocks"
@@ -2425,10 +2425,10 @@
       "registry_name": "unlimited_void",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/blockstates/unlimited_void.json",
-          "src/main/resources/assets/craftkaisen/models/block/unlimited_void.json",
           "src/main/resources/assets/craftkaisen/models/item/unlimited_void.json",
-          "src/main/java/net/mcreator/craftkaisen/block/UnlimitedVoidBlock.java"
+          "src/main/resources/assets/craftkaisen/blockstates/unlimited_void.json",
+          "src/main/java/net/mcreator/craftkaisen/block/UnlimitedVoidBlock.java",
+          "src/main/resources/assets/craftkaisen/models/block/unlimited_void.json"
         ]
       },
       "path": "~/Blocks"
@@ -2442,9 +2442,9 @@
       "registry_name": "infinite_voidd",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/InfiniteVoiddRenderer.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json"
+          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java"
         ]
       },
       "path": "~/Abilities"
@@ -2458,10 +2458,10 @@
       "registry_name": "toji_fushiguro",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java"
+          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -2787,8 +2787,8 @@
       "registry_name": "blindfold",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -2816,9 +2816,9 @@
       "registry_name": "stop",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/StopItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/StopEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/stop.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/StopEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/item/StopItem.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3036,8 +3036,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/entity/TwistEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/TwistItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/twist.json"
+          "src/main/resources/assets/craftkaisen/models/item/twist.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TwistItem.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3086,9 +3086,9 @@
       "registry_name": "get_crushed",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/GetCrushedEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/get_crushed.json",
-          "src/main/java/net/mcreator/craftkaisen/item/GetCrushedItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/GetCrushedItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/GetCrushedEntity.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3316,9 +3316,9 @@
       "registry_name": "explode",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeEntity.java",
           "src/main/java/net/mcreator/craftkaisen/item/ExplodeItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/explode.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeEntity.java"
+          "src/main/resources/assets/craftkaisen/models/item/explode.json"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3352,9 +3352,9 @@
       "registry_name": "sleep",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/SleepEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/sleep.json",
-          "src/main/java/net/mcreator/craftkaisen/item/SleepItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/SleepEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/item/SleepItem.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3438,9 +3438,9 @@
       "registry_name": "blast_away",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/blast_away.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayEntity.java",
           "src/main/java/net/mcreator/craftkaisen/item/BlastAwayItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayEntity.java"
+          "src/main/resources/assets/craftkaisen/models/item/blast_away.json"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3836,6 +3836,161 @@
       "path": "~/Commands"
     },
     {
+      "name": "SleepIncreaseMood",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_increase_mood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepIncreaseMoodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Emotion Triggers"
+    },
+    {
+      "name": "MoodDisplayGreen",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_green",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayGreenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoodDisplayYellow",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_yellow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayYellowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoodDisplayRed",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_red",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayRedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DamageDecreaseMood",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_decrease_mood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DamageDecreaseMoodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Emotion Triggers"
+    },
+    {
+      "name": "FoodsTag",
+      "type": "tag",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foods_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/items/foods.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BadFoodsTag",
+      "type": "tag",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bad_foods_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/items/bad_foods.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CheckEmotionalState",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_emotional_state",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckEmotionalStateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
       "name": "ToughBodyProcedure",
       "type": "procedure",
       "sortid": 174,
@@ -3944,6 +4099,26 @@
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
     },
     {
+      "name": "SatoruGojoOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satoru_gojo_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SatoruGojoOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
       "name": "ClapProcedure",
       "type": "procedure",
       "sortid": 164,
@@ -4022,6 +4197,23 @@
         ]
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "SatoruGojo",
+      "type": "livingentity",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satoru_gojo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
     },
     {
       "name": "ToughBody",
@@ -4124,6 +4316,26 @@
       "path": "~/Abilities"
     },
     {
+      "name": "SetClap",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_clap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetClapProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
       "name": "EntityHit",
       "type": "procedure",
       "sortid": 172,
@@ -4200,181 +4412,6 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "CheckEmotionalState",
-      "type": "procedure",
-      "sortid": 170,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "check_emotional_state",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CheckEmotionalStateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "BadFoodsTag",
-      "type": "tag",
-      "sortid": 169,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bad_foods_tag",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/tags/items/bad_foods.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "SleepIncreaseMood",
-      "type": "procedure",
-      "sortid": 162,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sleep_increase_mood",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SleepIncreaseMoodProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Emotion Triggers"
-    },
-    {
-      "name": "MoodDisplayGreen",
-      "type": "procedure",
-      "sortid": 163,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_green",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayGreenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "FoodsTag",
-      "type": "tag",
-      "sortid": 167,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "foods_tag",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/tags/items/foods.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "MoodDisplayYellow",
-      "type": "procedure",
-      "sortid": 164,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_yellow",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayYellowProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoodDisplayRed",
-      "type": "procedure",
-      "sortid": 165,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_red",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayRedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "DamageDecreaseMood",
-      "type": "procedure",
-      "sortid": 166,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "damage_decrease_mood",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DamageDecreaseMoodProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/Emotion Triggers"
-    },
-    {
-      "name": "SetClap",
-      "type": "procedure",
-      "sortid": 176,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_clap",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetClapProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
       "name": "SatoruGojoOnEntityTickUpdate",
       "type": "procedure",
       "sortid": 177,
@@ -4394,43 +4431,6 @@
             "name": "world",
             "type": "world"
           }
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "SatoruGojoOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 178,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "satoru_gojo_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SatoruGojoOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "SatoruGojo",
-      "type": "livingentity",
-      "sortid": 179,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "satoru_gojo",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
-          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -4555,7 +4555,7 @@
       "name": "Mood",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "75.0"
     },
     {
       "name": "VowsEnabled",
@@ -4612,19 +4612,18 @@
       "effect.craftkaisen.infinity": "Infinity",
       "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
       "key.craftkaisen.flash_step": "Flash Step",
-      "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "gui.craftkaisen.main_hud.label_x": "X",
+      "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
-      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
+      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.quest_menu.button_skill_tree1": "Main Menu",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
-      "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
@@ -4636,13 +4635,12 @@
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "effect.craftkaisen.twisting": "Twisting",
-      "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "effect.craftkaisen.stopped": "Stopped",
-      "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
+      "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "itemGroup.tabjjkitems": "JJK Items",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
@@ -4655,14 +4653,12 @@
       "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
       "gui.craftkaisen.main_hud.label_x1": "X",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
-      "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "key.craftkaisen.switch_technique": "Switch Ability",
-      "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
@@ -4711,8 +4707,7 @@
       "item.craftkaisen.explode": "Explode",
       "key.categories.jjk": "Craft Kaisen",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
-      "gui.craftkaisen.main_hud.label_move_one": "Move One",
-      "effect.craftkaisen.clap_rush": "Clap Rush"
+      "gui.craftkaisen.main_hud.label_move_one": "Move One"
     }
   },
   "foldersRoot": {
