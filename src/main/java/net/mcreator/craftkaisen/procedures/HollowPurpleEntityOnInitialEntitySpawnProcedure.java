@@ -10,6 +10,7 @@ public class HollowPurpleEntityOnInitialEntitySpawnProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
+		entity.setNoGravity(true);
 		if (entity instanceof Player _player) {
 			_player.getAbilities().invulnerable = true;
 			_player.onUpdateAbilities();

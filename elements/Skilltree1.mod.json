@@ -1,0 +1,91 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "skillltreee.png",
+          "use1Xscale": false,
+          "x": 58,
+          "y": 21
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_name",
+          "text": {
+            "fixedValue": "NAME "
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 75,
+          "y": 40
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_stats",
+          "text": {
+            "fixedValue": "stats"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 75,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_technique",
+          "text": {
+            "fixedValue": "technique"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 64,
+          "y": 93
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_balls",
+          "text": {
+            "fixedValue": "balls"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 74,
+          "y": 116
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
