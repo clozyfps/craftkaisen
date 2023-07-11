@@ -28,7 +28,7 @@ public class CheckEmotionalStateProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Mood <= 10
-				&& (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Mood > 0) {
+				&& (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Mood >= 0) {
 			entity.getPersistentData().putBoolean("redState", true);
 			entity.getPersistentData().putBoolean("yellowState", false);
 			entity.getPersistentData().putBoolean("greenState", false);
