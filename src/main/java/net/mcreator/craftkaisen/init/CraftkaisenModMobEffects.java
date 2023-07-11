@@ -30,13 +30,11 @@ import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
 import net.mcreator.craftkaisen.potion.CrushingMobEffect;
 import net.mcreator.craftkaisen.potion.ChargeCEEffectMobEffect;
-import net.mcreator.craftkaisen.potion.BlockingEffectMobEffect;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, CraftkaisenMod.MODID);
 	public static final RegistryObject<MobEffect> REVERSAL_RED = REGISTRY.register("reversal_red", () -> new ReversalRedMobEffect());
-	public static final RegistryObject<MobEffect> BLOCKING_EFFECT = REGISTRY.register("blocking_effect", () -> new BlockingEffectMobEffect());
 	public static final RegistryObject<MobEffect> REVERSAL_RED_FINAL = REGISTRY.register("reversal_red_final", () -> new ReversalRedFinalMobEffect());
 	public static final RegistryObject<MobEffect> FLASH_STEP_POTION = REGISTRY.register("flash_step_potion", () -> new FlashStepPotionMobEffect());
 	public static final RegistryObject<MobEffect> FLASH_STEP_COOLDOWN = REGISTRY.register("flash_step_cooldown", () -> new FlashStepCooldownMobEffect());

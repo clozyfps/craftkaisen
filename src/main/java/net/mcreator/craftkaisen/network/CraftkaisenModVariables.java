@@ -145,7 +145,7 @@ public class CraftkaisenModVariables {
 		public double Move1Cost = 0;
 		public double Move2Cost = 0;
 		public boolean Charging = false;
-		public double Mood = 0;
+		public double Mood = 75.0;
 		public boolean VowsEnabled = true;
 		public String VowSender = "\"\"";
 		public String VowDescription = "";

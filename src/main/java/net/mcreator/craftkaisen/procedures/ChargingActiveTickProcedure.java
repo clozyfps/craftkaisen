@@ -27,11 +27,20 @@ public class ChargingActiveTickProcedure {
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 2, 3, true, false));
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"particle minecraft:dust 0 0 0 2 ^0 ^0 ^0 0.6 1.4 0.6 0 5");
-		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"particle minecraft:dust 0.12 0.84 0.73 2 ^0 ^0 ^0 0.6 1.4 0.6 0 5");
+		if (entity.getPersistentData().getBoolean("yellowState") || entity.getPersistentData().getBoolean("greenState")) {
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0 0 0 2 ^0 ^0 ^0 0.6 1.4 0.6 0 5");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0.12 0.84 0.73 2 ^0 ^0 ^0 0.6 1.4 0.6 0 5");
+		} else if (entity.getPersistentData().getBoolean("redState")) {
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0 0 0 2 ^0 ^0 ^0 0.6 1.4 0.6 0 5");
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0.84 0.12 0.24 2 ^0 ^0 ^0 0.6 1.4 0.6 0 5");
+		}
 	}
 }

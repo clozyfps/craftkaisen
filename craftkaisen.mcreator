@@ -257,20 +257,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "BlockingEffect",
-      "type": "potioneffect",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blocking_effect",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/BlockingEffectMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
       "name": "ReversalRedEffectExpires",
       "type": "procedure",
       "sortid": 30,
@@ -1981,6 +1967,7 @@
     {
       "name": "BlockSwords",
       "type": "tag",
+      "sortid": 168,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_swords",
@@ -3847,6 +3834,161 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "SleepIncreaseMood",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_increase_mood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepIncreaseMoodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Emotion Triggers"
+    },
+    {
+      "name": "MoodDisplayGreen",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_green",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayGreenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoodDisplayYellow",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_yellow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayYellowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoodDisplayRed",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_red",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayRedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DamageDecreaseMood",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_decrease_mood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DamageDecreaseMoodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Emotion Triggers"
+    },
+    {
+      "name": "FoodsTag",
+      "type": "tag",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foods_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/items/foods.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "BadFoodsTag",
+      "type": "tag",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bad_foods_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/items/bad_foods.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "CheckEmotionalState",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_emotional_state",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckEmotionalStateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -3968,7 +4110,7 @@
       "name": "Mood",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "75.0"
     },
     {
       "name": "VowsEnabled",
@@ -4010,6 +4152,7 @@
       "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
       "key.craftkaisen.flash_step": "Flash Step",
       "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
+      "gui.craftkaisen.main_hud.label_x": "X",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
@@ -4041,10 +4184,11 @@
       "gui.craftkaisen.main_menu.button_skill_tree": "Skill Tree",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
-      "effect.craftkaisen.blocking_effect": "Blocking",
+      "gui.craftkaisen.main_hud.label_x2": "X",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
+      "gui.craftkaisen.main_hud.label_x1": "X",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
@@ -4229,6 +4373,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Emotion Triggers",
+        "children": []
       }
     ]
   },

@@ -44,6 +44,15 @@ public class MainRandomizerSystemProcedure {
 				});
 			}
 		}
+		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Mood < 0) {
+			{
+				double _setval = 0;
+				entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Mood = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergy > (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergyCap) {
 			{

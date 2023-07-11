@@ -145,6 +145,60 @@
           "x": 6,
           "y": 170
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x",
+          "text": {
+            "fixedValue": "X"
+          },
+          "color": {
+            "value": -13369600,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoodDisplayGreen"
+          },
+          "x": 105,
+          "y": 224
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x1",
+          "text": {
+            "fixedValue": "X"
+          },
+          "color": {
+            "value": -13312,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoodDisplayYellow"
+          },
+          "x": 105,
+          "y": 224
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_x2",
+          "text": {
+            "fixedValue": "X"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "MoodDisplayRed"
+          },
+          "x": 105,
+          "y": 224
+        }
       }
     ],
     "baseTexture": "",
