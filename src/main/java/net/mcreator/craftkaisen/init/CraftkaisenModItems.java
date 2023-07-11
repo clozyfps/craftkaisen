@@ -55,6 +55,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> BLAST_AWAY = REGISTRY.register("blast_away", () -> new BlastAwayItem());
 	public static final RegistryObject<Item> COUGH_SYRUP = REGISTRY.register("cough_syrup", () -> new CoughSyrupItem());
 	public static final RegistryObject<Item> CLAP = REGISTRY.register("clap", () -> new ClapItem());
+	public static final RegistryObject<Item> SATORU_GOJO_SPAWN_EGG = REGISTRY.register("satoru_gojo_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.SATORU_GOJO, -16514026, -2100742, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

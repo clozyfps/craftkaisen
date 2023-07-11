@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
+import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
@@ -34,5 +35,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.SLEEP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BLAST_AWAY.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.CLAP.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
 	}
 }

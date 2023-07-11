@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.entity.TwistEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
+import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
 import net.mcreator.craftkaisen.entity.InfiniteVoiddEntity;
@@ -66,6 +67,10 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<BlastAwayEntity>of(BlastAwayEntity::new, MobCategory.MISC).setCustomClientFactory(BlastAwayEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ClapEntity>> CLAP = register("projectile_clap",
 			EntityType.Builder.<ClapEntity>of(ClapEntity::new, MobCategory.MISC).setCustomClientFactory(ClapEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SatoruGojoEntity>> SATORU_GOJO = register("satoru_gojo",
+			EntityType.Builder.<SatoruGojoEntity>of(SatoruGojoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SatoruGojoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -79,6 +84,7 @@ public class CraftkaisenModEntities {
 			JujutsuStudentEntity.init();
 			TojiFushiguroEntity.init();
 			InfiniteVoiddEntity.init();
+			SatoruGojoEntity.init();
 		});
 	}
 
@@ -89,5 +95,6 @@ public class CraftkaisenModEntities {
 		event.put(JUJUTSU_STUDENT.get(), JujutsuStudentEntity.createAttributes().build());
 		event.put(TOJI_FUSHIGURO.get(), TojiFushiguroEntity.createAttributes().build());
 		event.put(INFINITE_VOIDD.get(), InfiniteVoiddEntity.createAttributes().build());
+		event.put(SATORU_GOJO.get(), SatoruGojoEntity.createAttributes().build());
 	}
 }
