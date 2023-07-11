@@ -11,7 +11,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.UltimateCDDisplayProcedure;
@@ -25,6 +27,9 @@ import net.mcreator.craftkaisen.procedures.MoodDisplayYellowProcedure;
 import net.mcreator.craftkaisen.procedures.MoodDisplayRedProcedure;
 import net.mcreator.craftkaisen.procedures.MoodDisplayGreenProcedure;
 import net.mcreator.craftkaisen.procedures.CursedEnergyDisplayProcedure;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.platform.GlStateManager;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class MainHUDOverlay {
@@ -45,7 +50,25 @@ public class MainHUDOverlay {
 			y = entity.getY();
 			z = entity.getZ();
 		}
+		RenderSystem.disableDepthTest();
+		RenderSystem.depthMask(false);
+		RenderSystem.enableBlend();
+		RenderSystem.setShader(GameRenderer::getPositionTexShader);
+		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
+		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
+			if (MoodDisplayGreenProcedure.execute(entity)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/happy.png"));
+				Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -207, posY + -76, 0, 0, 16, 16, 16, 16);
+			}
+			if (MoodDisplayYellowProcedure.execute(entity)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/meh.png"));
+				Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -207, posY + -76, 0, 0, 16, 16, 16, 16);
+			}
+			if (MoodDisplayRedProcedure.execute(entity)) {
+				RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/mad.png"));
+				Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -207, posY + -76, 0, 0, 16, 16, 16, 16);
+			}
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					CursedEnergyDisplayProcedure.execute(entity), posX + 94, posY + 103, -1);
@@ -63,12 +86,11 @@ public class MainHUDOverlay {
 				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_special"), posX + -207, posY + 32, -65536);
 			if (UltimateCDDisplayProcedure.execute(entity))
 				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_ultimate"), posX + -207, posY + 50, -65536);
-			if (MoodDisplayGreenProcedure.execute(entity))
-				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_x"), posX + -108, posY + 104, -13369600);
-			if (MoodDisplayYellowProcedure.execute(entity))
-				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_x1"), posX + -108, posY + 104, -13312);
-			if (MoodDisplayRedProcedure.execute(entity))
-				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_x2"), posX + -108, posY + 104, -65536);
 		}
+		RenderSystem.depthMask(true);
+		RenderSystem.defaultBlendFunc();
+		RenderSystem.enableDepthTest();
+		RenderSystem.disableBlend();
+		RenderSystem.setShaderColor(1, 1, 1, 1);
 	}
 }
