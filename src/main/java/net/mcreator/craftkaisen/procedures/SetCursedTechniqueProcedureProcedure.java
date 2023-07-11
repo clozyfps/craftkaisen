@@ -14,6 +14,8 @@ public class SetCursedTechniqueProcedureProcedure {
 			SetHeavenlyProcedure.execute(entity);
 		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Voice") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("voice")) {
 			SetVoiceProcedure.execute(entity);
+		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Clap") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("clap")) {
+			SetClapProcedure.execute(entity);
 		}
 	}
 }

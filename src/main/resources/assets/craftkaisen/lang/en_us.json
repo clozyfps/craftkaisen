@@ -19,6 +19,7 @@
   "effect.craftkaisen.flash_step_potion": "Flash Step",
   "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
   "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
+  "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
   "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
   "item.craftkaisen.playful_cloud": "Playful Cloud",
   "gui.craftkaisen.main_hud.label_special": "Special",
@@ -30,6 +31,7 @@
   "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
   "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
   "effect.craftkaisen.twisting": "Twisting",
+  "effect.craftkaisen.tough_body": "Tough Body",
   "subtitles.blood": "",
   "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
   "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
@@ -48,12 +50,14 @@
   "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
   "gui.craftkaisen.main_hud.label_x1": "X",
   "item.craftkaisen.blindfold_helmet": "Blindfold",
+  "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
   "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
   "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
   "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
   "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
   "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
   "key.craftkaisen.switch_technique": "Switch Ability",
+  "item.craftkaisen.clap": "Clap",
   "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
   "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
   "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
@@ -102,5 +106,6 @@
   "item.craftkaisen.explode": "Explode",
   "key.categories.jjk": "Craft Kaisen",
   "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
-  "gui.craftkaisen.main_hud.label_move_one": "Move One"
+  "gui.craftkaisen.main_hud.label_move_one": "Move One",
+  "effect.craftkaisen.clap_rush": "Clap Rush"
 }
