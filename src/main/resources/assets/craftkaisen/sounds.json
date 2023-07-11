@@ -6,5 +6,21 @@
         "stream": false
       }
     ]
+  },
+  "clap": {
+    "sounds": [
+      {
+        "name": "craftkaisen:clap",
+        "stream": false
+      }
+    ]
+  },
+  "bones": {
+    "sounds": [
+      {
+        "name": "craftkaisen:bone_crash",
+        "stream": false
+      }
+    ]
   }
 }

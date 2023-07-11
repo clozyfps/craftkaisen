@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.item.HollowPurpleItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
 import net.mcreator.craftkaisen.item.CoughSyrupItem;
+import net.mcreator.craftkaisen.item.ClapItem;
 import net.mcreator.craftkaisen.item.BlindfoldItem;
 import net.mcreator.craftkaisen.item.BlastAwayItem;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -53,6 +54,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> SLEEP = REGISTRY.register("sleep", () -> new SleepItem());
 	public static final RegistryObject<Item> BLAST_AWAY = REGISTRY.register("blast_away", () -> new BlastAwayItem());
 	public static final RegistryObject<Item> COUGH_SYRUP = REGISTRY.register("cough_syrup", () -> new CoughSyrupItem());
+	public static final RegistryObject<Item> CLAP = REGISTRY.register("clap", () -> new ClapItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

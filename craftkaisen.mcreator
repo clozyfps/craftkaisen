@@ -3835,6 +3835,370 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "ClapProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Clap",
+      "type": "rangeditem",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ClapEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/ClapItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/clap.json"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ClapProcedure",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "RapidClapProcedure",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rapid_clap_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RapidClapProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "ClapRushOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_rush_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapRushOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ClapRush",
+      "type": "potioneffect",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_rush",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ClapRushMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ClapRushProcedure",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_rush_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapRushProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "PowerfulHookProcedure",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "powerful_hook_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PowerfulHookProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "ClapManipulationProcedure",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_manipulation_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapManipulationProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "ToughBody",
+      "type": "potioneffect",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tough_body",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ToughBodyMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "EntityHit",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntityHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ToughBodyOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tough_body_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToughBodyOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ToughBodyProcedure",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tough_body_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToughBodyProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
     }
   ],
   "variable_elements": [
@@ -3985,6 +4349,22 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "clap",
+      "files": [
+        "clap"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "bones",
+      "files": [
+        "bone_crash"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -3999,10 +4379,11 @@
       "key.craftkaisen.flash_step": "Flash Step",
       "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
+      "subtitles.clap": "",
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
-      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
+      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.quest_menu.button_skill_tree1": "Main Menu",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
@@ -4011,18 +4392,20 @@
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
       "item.craftkaisen.stop": "Stop",
+      "subtitles.bones": "",
       "key.craftkaisen.block_bind": "Block",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy2": "Miscellaneous",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "effect.craftkaisen.twisting": "Twisting",
+      "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "effect.craftkaisen.stopped": "Stopped",
-      "item.craftkaisen.twist": "Twist",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
+      "item.craftkaisen.twist": "Twist",
       "itemGroup.tabjjkitems": "JJK Items",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
@@ -4040,6 +4423,7 @@
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "key.craftkaisen.switch_technique": "Switch Ability",
+      "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
@@ -4088,7 +4472,8 @@
       "item.craftkaisen.explode": "Explode",
       "key.categories.jjk": "Craft Kaisen",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
-      "gui.craftkaisen.main_hud.label_move_one": "Move One"
+      "gui.craftkaisen.main_hud.label_move_one": "Move One",
+      "effect.craftkaisen.clap_rush": "Clap Rush"
     }
   },
   "foldersRoot": {

@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
 import net.mcreator.craftkaisen.entity.GetCrushedEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
+import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -63,6 +64,8 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<SleepEntity>of(SleepEntity::new, MobCategory.MISC).setCustomClientFactory(SleepEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BlastAwayEntity>> BLAST_AWAY = register("projectile_blast_away",
 			EntityType.Builder.<BlastAwayEntity>of(BlastAwayEntity::new, MobCategory.MISC).setCustomClientFactory(BlastAwayEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<ClapEntity>> CLAP = register("projectile_clap",
+			EntityType.Builder.<ClapEntity>of(ClapEntity::new, MobCategory.MISC).setCustomClientFactory(ClapEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
