@@ -257,20 +257,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "BlockingEffect",
-      "type": "potioneffect",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blocking_effect",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/BlockingEffectMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
       "name": "ReversalRedEffectExpires",
       "type": "procedure",
       "sortid": 30,
@@ -3837,55 +3823,15 @@
       "path": "~/Commands"
     },
     {
-      "name": "ClapProjectileHitsLivingEntity",
+      "name": "ToughBodyProcedure",
       "type": "procedure",
-      "sortid": 162,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "clap_projectile_hits_living_entity",
+      "registry_name": "tough_body_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ClapProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "Clap",
-      "type": "rangeditem",
-      "sortid": 163,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clap",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/ClapEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/ClapItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/clap.json"
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "ClapProcedure",
-      "type": "procedure",
-      "sortid": 164,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clap_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ClapProcedureProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToughBodyProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -3949,76 +3895,6 @@
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
     },
     {
-      "name": "ClapRushOnEffectActiveTick",
-      "type": "procedure",
-      "sortid": 166,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clap_rush_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ClapRushOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "ClapRush",
-      "type": "potioneffect",
-      "sortid": 167,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clap_rush",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/ClapRushMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
-      "name": "ClapRushProcedure",
-      "type": "procedure",
-      "sortid": 168,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clap_rush_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ClapRushProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures/TechniqueProcedure"
-    },
-    {
       "name": "PowerfulHookProcedure",
       "type": "procedure",
       "sortid": 169,
@@ -4053,6 +3929,100 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "ClapProcedure",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "ClapRushProcedure",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_rush_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapRushProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "ClapProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ToughBody",
+      "type": "potioneffect",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tough_body",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ToughBodyMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
     },
     {
       "name": "ClapManipulationProcedure",
@@ -4091,18 +4061,54 @@
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
     },
     {
-      "name": "ToughBody",
-      "type": "potioneffect",
-      "sortid": 171,
+      "name": "ToughBodyOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 173,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tough_body",
+      "registry_name": "tough_body_on_effect_active_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/ToughBodyMobEffect.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ToughBodyOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ClapRush",
+      "type": "potioneffect",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap_rush",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ClapRushMobEffect.java"
         ]
       },
       "path": "~/Potion Effects"
+    },
+    {
+      "name": "Clap",
+      "type": "rangeditem",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ClapEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/ClapItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/clap.json"
+        ]
+      },
+      "path": "~/Abilities"
     },
     {
       "name": "EntityHit",
@@ -4145,35 +4151,15 @@
       "path": "~/Procedures"
     },
     {
-      "name": "ToughBodyOnEffectActiveTick",
+      "name": "ClapRushOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 173,
+      "sortid": 166,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tough_body_on_effect_active_tick",
+      "registry_name": "clap_rush_on_effect_active_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ToughBodyOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "ToughBodyProcedure",
-      "type": "procedure",
-      "sortid": 174,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tough_body_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ToughBodyProcedureProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClapRushOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -4198,7 +4184,162 @@
           }
         ]
       },
-      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "CheckEmotionalState",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_emotional_state",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckEmotionalStateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BadFoodsTag",
+      "type": "tag",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bad_foods_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/items/bad_foods.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "SleepIncreaseMood",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sleep_increase_mood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SleepIncreaseMoodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Emotion Triggers"
+    },
+    {
+      "name": "MoodDisplayGreen",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_green",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayGreenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "FoodsTag",
+      "type": "tag",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "foods_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/items/foods.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "MoodDisplayYellow",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_yellow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayYellowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoodDisplayRed",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mood_display_red",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayRedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DamageDecreaseMood",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "damage_decrease_mood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DamageDecreaseMoodProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Emotion Triggers"
     }
   ],
   "variable_elements": [
@@ -4378,6 +4519,7 @@
       "gui.craftkaisen.quest_menu.label_main_menu": "Quests",
       "key.craftkaisen.flash_step": "Flash Step",
       "gui.craftkaisen.main_menu.label_main_menu": "Main Menu",
+      "gui.craftkaisen.main_hud.label_x": "X",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
@@ -4399,7 +4541,6 @@
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "effect.craftkaisen.twisting": "Twisting",
-      "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
@@ -4412,10 +4553,11 @@
       "gui.craftkaisen.main_menu.button_skill_tree": "Skill Tree",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
-      "effect.craftkaisen.blocking_effect": "Blocking",
+      "gui.craftkaisen.main_hud.label_x2": "X",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
+      "gui.craftkaisen.main_hud.label_x1": "X",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
@@ -4423,7 +4565,6 @@
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "key.craftkaisen.switch_technique": "Switch Ability",
-      "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
@@ -4472,8 +4613,7 @@
       "item.craftkaisen.explode": "Explode",
       "key.categories.jjk": "Craft Kaisen",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
-      "gui.craftkaisen.main_hud.label_move_one": "Move One",
-      "effect.craftkaisen.clap_rush": "Clap Rush"
+      "gui.craftkaisen.main_hud.label_move_one": "Move One"
     }
   },
   "foldersRoot": {
@@ -4522,6 +4662,10 @@
       },
       {
         "name": "Blocks",
+        "children": []
+      },
+      {
+        "name": "Emotion Triggers",
         "children": []
       },
       {

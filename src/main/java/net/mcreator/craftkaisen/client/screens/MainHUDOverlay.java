@@ -21,6 +21,9 @@ import net.mcreator.craftkaisen.procedures.MoveThreeCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveOneCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveFourCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveFiveCDDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.MoodDisplayYellowProcedure;
+import net.mcreator.craftkaisen.procedures.MoodDisplayRedProcedure;
+import net.mcreator.craftkaisen.procedures.MoodDisplayGreenProcedure;
 import net.mcreator.craftkaisen.procedures.CursedEnergyDisplayProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
@@ -60,6 +63,12 @@ public class MainHUDOverlay {
 				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_special"), posX + -207, posY + 32, -65536);
 			if (UltimateCDDisplayProcedure.execute(entity))
 				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_ultimate"), posX + -207, posY + 50, -65536);
+			if (MoodDisplayGreenProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_x"), posX + -108, posY + 104, -13369600);
+			if (MoodDisplayYellowProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_x1"), posX + -108, posY + 104, -13312);
+			if (MoodDisplayRedProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_x2"), posX + -108, posY + 104, -65536);
 		}
 	}
 }

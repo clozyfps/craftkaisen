@@ -10,12 +10,14 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -30,15 +32,15 @@ import java.util.Comparator;
 public class VeilCheckProcedure {
 	@SubscribeEvent
 	public static void onChat(ServerChatEvent.Submitted event) {
-		execute(event, event.getPlayer().level, event.getPlayer().getX(), event.getPlayer().getY(), event.getPlayer().getZ(), event.getRawText());
+		execute(event, event.getPlayer().level, event.getPlayer().getX(), event.getPlayer().getY(), event.getPlayer().getZ(), event.getPlayer(), event.getRawText());
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, String text) {
-		execute(null, world, x, y, z, text);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, String text) {
+		execute(null, world, x, y, z, entity, text);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, String text) {
-		if (text == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, String text) {
+		if (entity == null || text == null)
 			return;
 		if (text.startsWith("Emerge From Darkness") || text.startsWith("emerge from darkness")) {
 			VeilPlaceProcedure.execute(world, x, y, z);
@@ -56,14 +58,13 @@ public class VeilCheckProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 255, true, false));
+					if (entityiterator instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(Component.literal(("<" + entity.getDisplayName().getString() + "> " + "Emerge from the darkness, blacker than darkness. Purify that which is impure.")), false);
 					CraftkaisenMod.queueServerWork(25, () -> {
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 999999, 255, true, false));
 					});
 				}
-			}
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
 			}
 		}
 	}

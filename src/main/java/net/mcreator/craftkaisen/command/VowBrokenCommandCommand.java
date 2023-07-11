@@ -18,7 +18,7 @@ import net.mcreator.craftkaisen.procedures.VowBrokenProcedureProcedure;
 public class VowBrokenCommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("vowbrokencommand")
+		event.getDispatcher().register(Commands.literal("vowbroken")
 
 				.then(Commands.argument("player", EntityArgument.player()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();

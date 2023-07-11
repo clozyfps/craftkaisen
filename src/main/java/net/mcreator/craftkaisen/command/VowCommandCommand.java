@@ -24,7 +24,7 @@ public class VowCommandCommand {
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("vow")
 
-				.then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("description", StringArgumentType.word()).then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
+				.then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("description", StringArgumentType.string()).then(Commands.argument("arguments", StringArgumentType.greedyString()).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();

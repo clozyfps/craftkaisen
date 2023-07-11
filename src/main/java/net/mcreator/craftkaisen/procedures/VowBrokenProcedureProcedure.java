@@ -15,7 +15,7 @@ public class VowBrokenProcedureProcedure {
 			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
-				if (entity.getPersistentData().getBoolean((entity.getDisplayName().getString() + "VowApproved"))) {
+				if (entityiterator.getPersistentData().getBoolean((entity.getDisplayName().getString() + "VowApproved"))) {
 					{
 						Entity _ent = entityiterator;
 						if (!_ent.level.isClientSide() && _ent.getServer() != null) {

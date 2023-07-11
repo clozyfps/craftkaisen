@@ -96,6 +96,10 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		button_yes = new Button(this.leftPos + 22, this.topPos + 103, 40, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_yes"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BindingVowGUIButtonMessage(0, x, y, z));
+				BindingVowGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_yes", button_yes);
 		this.addRenderableWidget(button_yes);

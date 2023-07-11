@@ -24,6 +24,7 @@ import io.netty.buffer.Unpooled;
 
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.arguments.StringArgumentType;
 
 public class VowMainProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, CommandContext<CommandSourceStack> arguments, Entity entity, HashMap cmdparams) {
@@ -42,7 +43,7 @@ public class VowMainProcedureProcedure {
 							});
 						}
 						{
-							String _setval = cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "";
+							String _setval = StringArgumentType.getString(arguments, "description");
 							entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.VowDescription = _setval;
 								capability.syncPlayerVariables(entityiterator);

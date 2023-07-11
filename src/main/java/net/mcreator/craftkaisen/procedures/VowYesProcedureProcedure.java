@@ -1,6 +1,7 @@
 package net.mcreator.craftkaisen.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
@@ -17,5 +18,7 @@ public class VowYesProcedureProcedure {
 				entityiterator.getPersistentData().putBoolean((entity.getDisplayName().getString() + "VowApproved"), true);
 			}
 		}
+		if (entity instanceof Player _player)
+			_player.closeContainer();
 	}
 }
