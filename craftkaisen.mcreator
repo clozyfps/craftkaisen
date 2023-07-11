@@ -4439,6 +4439,21 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "Skilltree1",
+      "type": "gui",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilltree_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/Skilltree1Menu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/Skilltree1Screen.java"
+        ]
+      },
+      "path": "~/GUI"
     }
   ],
   "variable_elements": [
@@ -4587,18 +4602,6 @@
       "value": "\"\""
     },
     {
-      "name": "VesselTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "QuestAmount",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "QuestMob",
       "type": "string",
       "scope": "player_persistent",
@@ -4606,6 +4609,18 @@
     },
     {
       "name": "QuestReward",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "VesselTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "QuestAmount",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"

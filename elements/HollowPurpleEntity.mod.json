@@ -97,7 +97,7 @@
       "value": ""
     },
     "onMobTickUpdate": {
-      "name": "HollowPurpleEntityOnInitialEntitySpawn"
+      "name": "HollowPurpleWhileProjectileFlyingTick"
     },
     "onInitialSpawn": {
       "name": "HollowPurpleEntityOnInitialEntitySpawn"
