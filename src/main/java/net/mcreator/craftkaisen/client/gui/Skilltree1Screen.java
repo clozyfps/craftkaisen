@@ -1,9 +1,22 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.Skilltree1Menu;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class Skilltree1Screen extends AbstractContainerScreen<Skilltree1Menu> {
-
 	private final static HashMap<String, Object> guistate = Skilltree1Menu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -24,7 +37,6 @@ public class Skilltree1Screen extends AbstractContainerScreen<Skilltree1Menu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -45,7 +57,6 @@ public class Skilltree1Screen extends AbstractContainerScreen<Skilltree1Menu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -71,9 +82,6 @@ public class Skilltree1Screen extends AbstractContainerScreen<Skilltree1Menu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 	}
-
 }

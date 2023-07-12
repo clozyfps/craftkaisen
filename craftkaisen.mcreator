@@ -4454,6 +4454,45 @@
         ]
       },
       "path": "~/GUI"
+    },
+    {
+      "name": "CursedFinger",
+      "type": "item",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_finger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/CursedFingerItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursed_finger.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "EatCursedFinger",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eat_cursed_finger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EatCursedFingerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
     }
   ],
   "variable_elements": [
@@ -4624,6 +4663,30 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "FingersEaten",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "ReincarnatedPlayer",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "VesselFound",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "VesselPlayer",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -4684,9 +4747,11 @@
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy2": "Miscellaneous",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
+      "item.craftkaisen.cursed_finger": "Cursed Finger",
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
+      "gui.craftkaisen.skilltree_1.label_name": "NAME ",
       "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
@@ -4694,8 +4759,10 @@
       "item.craftkaisen.twist": "Twist",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "itemGroup.tabjjkitems": "JJK Items",
+      "gui.craftkaisen.skilltree_1.label_technique": "technique",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
+      "gui.craftkaisen.skilltree_1.label_stats": "stats",
       "gui.craftkaisen.main_menu.button_skill_tree": "Skill Tree",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
@@ -4707,6 +4774,7 @@
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
+      "gui.craftkaisen.skilltree_1.label_balls": "balls",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",

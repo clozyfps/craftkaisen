@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
+import net.mcreator.craftkaisen.item.CursedFingerItem;
 import net.mcreator.craftkaisen.item.CoughSyrupItem;
 import net.mcreator.craftkaisen.item.ClapItem;
 import net.mcreator.craftkaisen.item.BlindfoldItem;
@@ -57,6 +58,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> CLAP = REGISTRY.register("clap", () -> new ClapItem());
 	public static final RegistryObject<Item> SATORU_GOJO_SPAWN_EGG = REGISTRY.register("satoru_gojo_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.SATORU_GOJO, -16514026, -2100742, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> CURSED_FINGER = REGISTRY.register("cursed_finger", () -> new CursedFingerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
