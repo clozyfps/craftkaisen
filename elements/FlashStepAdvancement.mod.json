@@ -5,7 +5,7 @@
     "achievementName": "Flash Step",
     "achievementDescription": "WIP",
     "achievementIcon": {
-      "value": "CUSTOM:Test2"
+      "value": "Items.ELYTRA"
     },
     "background": "Default",
     "disableDisplay": false,

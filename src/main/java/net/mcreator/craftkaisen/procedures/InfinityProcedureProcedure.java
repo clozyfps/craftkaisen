@@ -14,7 +14,7 @@ public class InfinityProcedureProcedure {
 			return;
 		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.INFINITY.get()) : false)) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.INFINITY.get(), 999999, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.INFINITY.get(), 999999, 1, false, true));
 			if (entity instanceof Player _player && !_player.level.isClientSide())
 				_player.displayClientMessage(Component.literal("Infinity Activated"), true);
 		} else if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.INFINITY.get()) : false) {
