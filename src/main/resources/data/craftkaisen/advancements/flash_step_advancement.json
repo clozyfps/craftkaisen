@@ -2,7 +2,7 @@
   "display": {
     "background": "minecraft:textures/block/stone.png",
     "icon": {
-      "item": "craftkaisen:test_2"
+      "item": "minecraft:elytra"
     },
     "title": {
       "translate": "advancements.flash_step_advancement.title"
