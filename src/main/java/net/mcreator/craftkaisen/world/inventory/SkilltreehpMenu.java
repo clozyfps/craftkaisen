@@ -19,7 +19,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class Skilltree1Menu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class SkilltreehpMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -28,8 +28,8 @@ public class Skilltree1Menu extends AbstractContainerMenu implements Supplier<Ma
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public Skilltree1Menu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(CraftkaisenModMenus.SKILLTREE_1.get(), id);
+	public SkilltreehpMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(CraftkaisenModMenus.SKILLTREEHP.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

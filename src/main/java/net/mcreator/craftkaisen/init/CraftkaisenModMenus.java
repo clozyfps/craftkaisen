@@ -11,7 +11,10 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
 
-import net.mcreator.craftkaisen.world.inventory.Skilltree1Menu;
+import net.mcreator.craftkaisen.world.inventory.SkilltreespeedMenu;
+import net.mcreator.craftkaisen.world.inventory.SkilltreepowerMenu;
+import net.mcreator.craftkaisen.world.inventory.SkilltreehpMenu;
+import net.mcreator.craftkaisen.world.inventory.SkilltreeenergyMenu;
 import net.mcreator.craftkaisen.world.inventory.SkillTreeMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.QuestMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
@@ -24,5 +27,8 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<MainMenuMenu>> MAIN_MENU = REGISTRY.register("main_menu", () -> IForgeMenuType.create(MainMenuMenu::new));
 	public static final RegistryObject<MenuType<QuestMenuMenu>> QUEST_MENU = REGISTRY.register("quest_menu", () -> IForgeMenuType.create(QuestMenuMenu::new));
 	public static final RegistryObject<MenuType<BindingVowGUIMenu>> BINDING_VOW_GUI = REGISTRY.register("binding_vow_gui", () -> IForgeMenuType.create(BindingVowGUIMenu::new));
-	public static final RegistryObject<MenuType<Skilltree1Menu>> SKILLTREE_1 = REGISTRY.register("skilltree_1", () -> IForgeMenuType.create(Skilltree1Menu::new));
+	public static final RegistryObject<MenuType<SkilltreespeedMenu>> SKILLTREESPEED = REGISTRY.register("skilltreespeed", () -> IForgeMenuType.create(SkilltreespeedMenu::new));
+	public static final RegistryObject<MenuType<SkilltreehpMenu>> SKILLTREEHP = REGISTRY.register("skilltreehp", () -> IForgeMenuType.create(SkilltreehpMenu::new));
+	public static final RegistryObject<MenuType<SkilltreepowerMenu>> SKILLTREEPOWER = REGISTRY.register("skilltreepower", () -> IForgeMenuType.create(SkilltreepowerMenu::new));
+	public static final RegistryObject<MenuType<SkilltreeenergyMenu>> SKILLTREEENERGY = REGISTRY.register("skilltreeenergy", () -> IForgeMenuType.create(SkilltreeenergyMenu::new));
 }
