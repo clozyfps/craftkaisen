@@ -78,6 +78,76 @@
           "x": 74,
           "y": 116
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_hpguiswitch_1",
+          "image": "hpguiswitch_1.png",
+          "hoveredImage": "",
+          "x": 110,
+          "y": 21
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_energyguiswitch",
+          "image": "energyguiswitch.png",
+          "hoveredImage": "",
+          "x": 137,
+          "y": 21
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_powerguiswitch",
+          "image": "powerguiswitch.png",
+          "hoveredImage": "",
+          "x": 163,
+          "y": 21
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_speedguiswitch",
+          "image": "speedguiswitch.png",
+          "hoveredImage": "",
+          "x": 189,
+          "y": 21
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_firstskillunlock",
+          "image": "firstskillunlock.png",
+          "hoveredImage": "",
+          "x": 134,
+          "y": 114
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_speedlogogui",
+          "image": "hplogogui.png",
+          "hoveredImage": "",
+          "x": 160,
+          "y": 112
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_speedlogogui1",
+          "image": "hplogogui.png",
+          "hoveredImage": "",
+          "x": 186,
+          "y": 112
+        }
       }
     ],
     "gridSettings": {

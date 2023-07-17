@@ -4441,21 +4441,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "Skilltree1",
-      "type": "gui",
-      "sortid": 180,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skilltree_1",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/Skilltree1Menu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/Skilltree1Screen.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
       "name": "CursedFinger",
       "type": "item",
       "sortid": 181,
@@ -4510,6 +4495,82 @@
         ]
       },
       "path": "~/Blocks"
+    },
+    {
+      "name": "GetoArmor",
+      "type": "armor",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "geto_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/GetoArmorItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/geto_armor_chestplate.json",
+          "src/main/resources/assets/craftkaisen/models/item/geto_armor_leggings.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "Skilltreeenergy",
+      "type": "gui",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilltreeenergy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkilltreeenergyScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkilltreeenergyMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Skilltreepower",
+      "type": "gui",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilltreepower",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkilltreepowerScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkilltreepowerMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Skilltreehp",
+      "type": "gui",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilltreehp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkilltreehpMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkilltreehpScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Skilltreespeed",
+      "type": "gui",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skilltreespeed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkilltreespeedMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkilltreespeedScreen.java"
+        ]
+      },
+      "path": "~/GUI"
     }
   ],
   "variable_elements": [
@@ -4770,7 +4831,6 @@
       "gui.craftkaisen.skill_tree_menu.button_cursed_energy1": "Technique",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
-      "gui.craftkaisen.skilltree_1.label_name": "NAME ",
       "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
@@ -4778,10 +4838,8 @@
       "item.craftkaisen.twist": "Twist",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "itemGroup.tabjjkitems": "JJK Items",
-      "gui.craftkaisen.skilltree_1.label_technique": "technique",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
-      "gui.craftkaisen.skilltree_1.label_stats": "stats",
       "gui.craftkaisen.main_menu.button_skill_tree": "Skill Tree",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
@@ -4794,7 +4852,6 @@
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
-      "gui.craftkaisen.skilltree_1.label_balls": "balls",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
@@ -4826,7 +4883,6 @@
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.cough_syrup": "Cough Syrup",
-      "block.craftkaisen.quest_board": "Quest Board",
       "gui.craftkaisen.skill_tree_menu.button_strength": "Strength",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.main_hud.label_move_four": "Move Four",
