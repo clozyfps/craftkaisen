@@ -1,0 +1,12 @@
+{
+  "parent": "craftkaisen:custom/questboardsorcerers",
+  "textures": {
+    "all": "craftkaisen:blocks/spruce_log",
+    "particle": "craftkaisen:blocks/spruce_log",
+    "2": "craftkaisen:blocks/spruce_log",
+    "3": "craftkaisen:blocks/stripped_spruce_log",
+    "4": "craftkaisen:blocks/paper",
+    "missing": "craftkaisen:blocks/paper"
+  },
+  "render_type": "solid"
+}

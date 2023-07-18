@@ -59,6 +59,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> SATORU_GOJO_SPAWN_EGG = REGISTRY.register("satoru_gojo_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.SATORU_GOJO, -16514026, -2100742, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> CURSED_FINGER = REGISTRY.register("cursed_finger", () -> new CursedFingerItem());
+	public static final RegistryObject<Item> QUEST_BOARD = block(CraftkaisenModBlocks.QUEST_BOARD, CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

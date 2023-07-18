@@ -181,6 +181,81 @@
           "x": 6,
           "y": 44
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_quests",
+          "text": {
+            "fixedValue": "Quests"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 303,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "---------------------"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 303,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_quest1",
+          "text": {
+            "fixedValue": "Quest1"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 303,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_quest2",
+          "text": {
+            "fixedValue": "Quest2"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 303,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_quest3",
+          "text": {
+            "fixedValue": "Quest3"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 303,
+          "y": 62
+        }
       }
     ],
     "baseTexture": "",

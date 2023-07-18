@@ -9,8 +9,8 @@
       "registry_name": "tes",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/tes.json"
+          "src/main/resources/assets/craftkaisen/models/item/tes.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TesItem.java"
         ]
       },
       "path": "~/Items"
@@ -4495,21 +4495,6 @@
       "path": "~/Items/Procedures"
     },
     {
-      "name": "SetupAnimations",
-      "type": "procedure",
-      "sortid": 183,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "setup_animations",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetupAnimationsProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "TesRightclicked",
       "type": "procedure",
       "sortid": 184,
@@ -4532,6 +4517,38 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "SetupAnimations",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setup_animations",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetupAnimationsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "QuestBoard",
+      "type": "block",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quest_board",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/block/quest_board.json",
+          "src/main/java/net/mcreator/craftkaisen/block/QuestBoardBlock.java",
+          "src/main/resources/assets/craftkaisen/models/item/quest_board.json",
+          "src/main/resources/assets/craftkaisen/blockstates/quest_board.json"
+        ]
+      },
+      "path": "~/Blocks"
     }
   ],
   "variable_elements": [
@@ -4770,8 +4787,10 @@
       "subtitles.clap": "",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "gui.craftkaisen.main_menu.label_alignment_sorcerers": "Alignment : Sorcerers",
+      "gui.craftkaisen.main_hud.label_quest3": "Quest3",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
+      "gui.craftkaisen.main_hud.label_quest2": "Quest2",
       "gui.craftkaisen.quest_menu.button_skill_tree1": "Main Menu",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "gui.craftkaisen.skill_tree_menu.label_main_menu": "Skill Tree",
@@ -4806,6 +4825,7 @@
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
       "gui.craftkaisen.main_hud.label_x2": "X",
+      "gui.craftkaisen.main_hud.label_quest1": "Quest1",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_menu.label_mentor_nanami": "Mentor : Nanami",
@@ -4840,6 +4860,7 @@
       "key.craftkaisen.use_technique": "Use Technique",
       "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
       "block.craftkaisen.unlimited_void": "Unlimited Void",
+      "gui.craftkaisen.main_hud.label_empty": "---------------------",
       "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
@@ -4862,6 +4883,7 @@
       "gui.craftkaisen.skill_tree_menu.button_strength1": "Durability",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
       "gui.craftkaisen.main_menu.label_exp_0100": "Exp : 0/100",
+      "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.quest_menu.button_skill_tree": "Skill Tree",
