@@ -9,7 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 
-import net.mcreator.craftkaisen.procedures.HollowPurpleTestProcedure;
+import net.mcreator.craftkaisen.procedures.TesRightclickedProcedure;
 
 public class TesItem extends Item {
 	public TesItem() {
@@ -24,7 +24,7 @@ public class TesItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		HollowPurpleTestProcedure.execute(entity);
+		TesRightclickedProcedure.execute(world, entity);
 		return ar;
 	}
 }
