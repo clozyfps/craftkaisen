@@ -31,6 +31,7 @@ import net.mcreator.craftkaisen.item.CoughSyrupItem;
 import net.mcreator.craftkaisen.item.ClapItem;
 import net.mcreator.craftkaisen.item.BlindfoldItem;
 import net.mcreator.craftkaisen.item.BlastAwayItem;
+import net.mcreator.craftkaisen.item.BandageBlindfoldItem;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModItems {
@@ -64,6 +65,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> GETO_ARMOR_CHESTPLATE = REGISTRY.register("geto_armor_chestplate", () -> new GetoArmorItem.Chestplate());
 	public static final RegistryObject<Item> GETO_ARMOR_LEGGINGS = REGISTRY.register("geto_armor_leggings", () -> new GetoArmorItem.Leggings());
 	public static final RegistryObject<Item> GETO_ARMOR_BOOTS = REGISTRY.register("geto_armor_boots", () -> new GetoArmorItem.Boots());
+	public static final RegistryObject<Item> BANDAGE_BLINDFOLD_HELMET = REGISTRY.register("bandage_blindfold_helmet", () -> new BandageBlindfoldItem.Helmet());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

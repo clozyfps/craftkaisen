@@ -21,9 +21,9 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
+import net.mcreator.craftkaisen.client.model.Modelgetosandalsnew;
 import net.mcreator.craftkaisen.client.model.Modelgetorobes;
 import net.mcreator.craftkaisen.client.model.Modelgetolegs;
-import net.mcreator.craftkaisen.client.model.Modelcustom_model;
 
 import java.util.function.Consumer;
 import java.util.Map;
@@ -145,8 +145,8 @@ public abstract class GetoArmorItem extends ArmorItem {
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("left_leg", new Modelcustom_model(Minecraft.getInstance().getEntityModels().bakeLayer(Modelcustom_model.LAYER_LOCATION)).LeftLeg, "right_leg",
-									new Modelcustom_model(Minecraft.getInstance().getEntityModels().bakeLayer(Modelcustom_model.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							Map.of("left_leg", new Modelgetosandalsnew(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetosandalsnew.LAYER_LOCATION)).LeftLeg, "right_leg",
+									new Modelgetosandalsnew(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetosandalsnew.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
 									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
@@ -159,7 +159,7 @@ public abstract class GetoArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/getosandals.png";
+			return "craftkaisen:textures/entities/getosandalsnew.png";
 		}
 	}
 }
