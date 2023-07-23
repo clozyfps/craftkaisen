@@ -15,6 +15,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.craftkaisen.item.TwistItem;
+import net.mcreator.craftkaisen.item.TojiArmorItem;
 import net.mcreator.craftkaisen.item.Test2Item;
 import net.mcreator.craftkaisen.item.TesItem;
 import net.mcreator.craftkaisen.item.StopItem;
@@ -66,6 +67,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> GETO_ARMOR_LEGGINGS = REGISTRY.register("geto_armor_leggings", () -> new GetoArmorItem.Leggings());
 	public static final RegistryObject<Item> GETO_ARMOR_BOOTS = REGISTRY.register("geto_armor_boots", () -> new GetoArmorItem.Boots());
 	public static final RegistryObject<Item> BANDAGE_BLINDFOLD_HELMET = REGISTRY.register("bandage_blindfold_helmet", () -> new BandageBlindfoldItem.Helmet());
+	public static final RegistryObject<Item> TOJI_ARMOR_CHESTPLATE = REGISTRY.register("toji_armor_chestplate", () -> new TojiArmorItem.Chestplate());
+	public static final RegistryObject<Item> TOJI_ARMOR_LEGGINGS = REGISTRY.register("toji_armor_leggings", () -> new TojiArmorItem.Leggings());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

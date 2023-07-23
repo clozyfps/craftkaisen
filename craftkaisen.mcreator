@@ -4583,6 +4583,22 @@
         ]
       },
       "path": "~/Armor"
+    },
+    {
+      "name": "TojiArmor",
+      "type": "armor",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/toji_armor_leggings.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TojiArmorItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/toji_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [
@@ -4807,6 +4823,7 @@
   ],
   "language_map": {
     "en_us": {
+      "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "gui.craftkaisen.test.label_dawd": "dawd",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
@@ -4867,6 +4884,7 @@
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
+      "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.skilltree_1.label_balls": "balls",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",

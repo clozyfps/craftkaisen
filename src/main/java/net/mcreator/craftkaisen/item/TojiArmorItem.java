@@ -21,20 +21,19 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
-import net.mcreator.craftkaisen.client.model.Modelgetosandalsnew;
-import net.mcreator.craftkaisen.client.model.Modelgetorobes;
-import net.mcreator.craftkaisen.client.model.Modelgetolegs;
+import net.mcreator.craftkaisen.client.model.Modeltojishirt;
+import net.mcreator.craftkaisen.client.model.Modeltojipants;
 
 import java.util.function.Consumer;
 import java.util.Map;
 import java.util.Collections;
 
-public abstract class GetoArmorItem extends ArmorItem {
-	public GetoArmorItem(EquipmentSlot slot, Item.Properties properties) {
+public abstract class TojiArmorItem extends ArmorItem {
+	public TojiArmorItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 1000;
+				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 500;
 			}
 
 			@Override
@@ -59,7 +58,7 @@ public abstract class GetoArmorItem extends ArmorItem {
 
 			@Override
 			public String getName() {
-				return "geto_armor";
+				return "toji_armor";
 			}
 
 			@Override
@@ -69,12 +68,12 @@ public abstract class GetoArmorItem extends ArmorItem {
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0.07f;
+				return 0.1f;
 			}
 		}, slot, properties);
 	}
 
-	public static class Chestplate extends GetoArmorItem {
+	public static class Chestplate extends TojiArmorItem {
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
 		}
@@ -85,9 +84,9 @@ public abstract class GetoArmorItem extends ArmorItem {
 				@Override
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelgetorobes(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetorobes.LAYER_LOCATION)).Body, "left_arm",
-							new Modelgetorobes(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetorobes.LAYER_LOCATION)).LeftArm, "right_arm",
-							new Modelgetorobes(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetorobes.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modeltojishirt(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltojishirt.LAYER_LOCATION)).Body, "left_arm",
+							new Modeltojishirt(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltojishirt.LAYER_LOCATION)).LeftArm, "right_arm",
+							new Modeltojishirt(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltojishirt.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
 					armorModel.riding = defaultModel.riding;
@@ -99,11 +98,11 @@ public abstract class GetoArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/getochestplate__layer_1.png";
+			return "craftkaisen:textures/entities/tojichestplate.png";
 		}
 	}
 
-	public static class Leggings extends GetoArmorItem {
+	public static class Leggings extends TojiArmorItem {
 		public Leggings() {
 			super(EquipmentSlot.LEGS, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
 		}
@@ -115,8 +114,8 @@ public abstract class GetoArmorItem extends ArmorItem {
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("left_leg", new Modelgetolegs(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetolegs.LAYER_LOCATION)).LeftLeg, "right_leg",
-									new Modelgetolegs(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetolegs.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+							Map.of("left_leg", new Modeltojipants(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltojipants.LAYER_LOCATION)).LeftLeg, "right_leg",
+									new Modeltojipants(Minecraft.getInstance().getEntityModels().bakeLayer(Modeltojipants.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
 									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
@@ -129,37 +128,7 @@ public abstract class GetoArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/getolegs__layer_1.png";
-		}
-	}
-
-	public static class Boots extends GetoArmorItem {
-		public Boots() {
-			super(EquipmentSlot.FEET, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
-		}
-
-		@Override
-		public void initializeClient(Consumer<IClientItemExtensions> consumer) {
-			consumer.accept(new IClientItemExtensions() {
-				@Override
-				@OnlyIn(Dist.CLIENT)
-				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("left_leg", new Modelgetosandalsnew(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetosandalsnew.LAYER_LOCATION)).LeftLeg, "right_leg",
-									new Modelgetosandalsnew(Minecraft.getInstance().getEntityModels().bakeLayer(Modelgetosandalsnew.LAYER_LOCATION)).RightLeg, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
-									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()),
-									"left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
-					armorModel.crouching = living.isShiftKeyDown();
-					armorModel.riding = defaultModel.riding;
-					armorModel.young = living.isBaby();
-					return armorModel;
-				}
-			});
-		}
-
-		@Override
-		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/getosandalsnew.png";
+			return "craftkaisen:textures/entities/tojipants.png";
 		}
 	}
 }
