@@ -18,6 +18,8 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.UltimateCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.SpecialCDDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.QuestProgressDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.QuestDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveTwoCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveThreeCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveOneCDDisplayProcedure;
@@ -86,11 +88,14 @@ public class MainHUDOverlay {
 				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_special"), posX + -207, posY + 32, -65536);
 			if (UltimateCDDisplayProcedure.execute(entity))
 				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_ultimate"), posX + -207, posY + 50, -65536);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quests"), posX + 90, posY + -112, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_empty"), posX + 90, posY + -103, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quest1"), posX + 90, posY + -94, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quest2"), posX + 90, posY + -76, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quest3"), posX + 90, posY + -58, -1);
+			if (QuestDisplayProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quests"), posX + 90, posY + -112, -1);
+			if (QuestDisplayProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_empty"), posX + 90, posY + -103, -1);
+			if (QuestDisplayProcedure.execute(entity))
+				Minecraft.getInstance().font.draw(event.getPoseStack(),
+
+						QuestProgressDisplayProcedure.execute(entity), posX + 90, posY + -94, -1);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
