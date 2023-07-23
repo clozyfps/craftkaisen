@@ -1145,8 +1145,8 @@
       "registry_name": "evade",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/evade.json"
+          "src/main/resources/assets/craftkaisen/particles/evade.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java"
         ]
       },
       "path": "~/Particles"
