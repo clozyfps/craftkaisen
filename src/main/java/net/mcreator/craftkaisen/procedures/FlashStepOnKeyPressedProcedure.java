@@ -26,7 +26,7 @@ public class FlashStepOnKeyPressedProcedure {
 		} else if (!(entity instanceof ServerPlayer _plr4 && _plr4.level instanceof ServerLevel
 				&& _plr4.getAdvancements().getOrStartProgress(_plr4.server.getAdvancements().getAdvancement(new ResourceLocation("craftkaisen:flash_step_advancement"))).isDone())) {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("You dont have flashstep yet."), true);
+				_player.displayClientMessage(Component.literal("You don't have flashstep yet!"), true);
 		}
 	}
 }

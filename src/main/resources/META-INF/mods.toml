@@ -18,25 +18,7 @@ authors="jayso, MCreator"
     side="BOTH"
 
 
-[[dependencies.craftkaisen]]
-    modId="kleiders_custom_renderer"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 
-[[dependencies.craftkaisen]]
-    modId="kleidersplayerrenderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.craftkaisen]]
-    modId="kleiders_custom_renderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.craftkaisen]]
     modId="playeranimator"
     mandatory=false

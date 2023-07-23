@@ -17,6 +17,6 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, CraftkaisenMod.MODID);
-	public static final RegistryObject<MenuType<BindingVowGUIMenu>> BINDING_VOW_GUI = REGISTRY.register("binding_vow_gui", () -> IForgeMenuType.create(BindingVowGUIMenu::new));
 	public static final RegistryObject<MenuType<MainMenuMenu>> MAIN_MENU = REGISTRY.register("main_menu", () -> IForgeMenuType.create(MainMenuMenu::new));
+	public static final RegistryObject<MenuType<BindingVowGUIMenu>> BINDING_VOW_GUI = REGISTRY.register("binding_vow_gui", () -> IForgeMenuType.create(BindingVowGUIMenu::new));
 }
