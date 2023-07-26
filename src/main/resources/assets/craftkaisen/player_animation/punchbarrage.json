@@ -1,0 +1,9 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"punchbarrage": {
+			"animation_length": 1.66667
+		}
+	},
+	"geckolib_format_version": 2
+}

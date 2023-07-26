@@ -15,6 +15,7 @@ import net.mcreator.craftkaisen.potion.TwistingMobEffect;
 import net.mcreator.craftkaisen.potion.ToughBodyMobEffect;
 import net.mcreator.craftkaisen.potion.StoppedMobEffect;
 import net.mcreator.craftkaisen.potion.SleepingMobEffect;
+import net.mcreator.craftkaisen.potion.SixeyespotionMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
 import net.mcreator.craftkaisen.potion.MoveUltimateCooldownMobEffect;
@@ -29,6 +30,7 @@ import net.mcreator.craftkaisen.potion.InfinityMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
+import net.mcreator.craftkaisen.potion.DivergentFistMobEffect;
 import net.mcreator.craftkaisen.potion.CrushingMobEffect;
 import net.mcreator.craftkaisen.potion.ClapRushMobEffect;
 import net.mcreator.craftkaisen.potion.ChargeCEEffectMobEffect;
@@ -58,4 +60,6 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> IRRITATED_THROAT = REGISTRY.register("irritated_throat", () -> new IrritatedThroatMobEffect());
 	public static final RegistryObject<MobEffect> CLAP_RUSH = REGISTRY.register("clap_rush", () -> new ClapRushMobEffect());
 	public static final RegistryObject<MobEffect> TOUGH_BODY = REGISTRY.register("tough_body", () -> new ToughBodyMobEffect());
+	public static final RegistryObject<MobEffect> SIXEYESPOTION = REGISTRY.register("sixeyespotion", () -> new SixeyespotionMobEffect());
+	public static final RegistryObject<MobEffect> DIVERGENT_FIST = REGISTRY.register("divergent_fist", () -> new DivergentFistMobEffect());
 }

@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.InfiniteVoiddEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
 import net.mcreator.craftkaisen.entity.GetCrushedEntity;
+import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
@@ -71,6 +72,10 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<SatoruGojoEntity>of(SatoruGojoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SatoruGojoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FingerBearerEntity>> FINGER_BEARER = register("finger_bearer",
+			EntityType.Builder.<FingerBearerEntity>of(FingerBearerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FingerBearerEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -85,6 +90,7 @@ public class CraftkaisenModEntities {
 			TojiFushiguroEntity.init();
 			InfiniteVoiddEntity.init();
 			SatoruGojoEntity.init();
+			FingerBearerEntity.init();
 		});
 	}
 
@@ -96,5 +102,6 @@ public class CraftkaisenModEntities {
 		event.put(TOJI_FUSHIGURO.get(), TojiFushiguroEntity.createAttributes().build());
 		event.put(INFINITE_VOIDD.get(), InfiniteVoiddEntity.createAttributes().build());
 		event.put(SATORU_GOJO.get(), SatoruGojoEntity.createAttributes().build());
+		event.put(FINGER_BEARER.get(), FingerBearerEntity.createAttributes().build());
 	}
 }

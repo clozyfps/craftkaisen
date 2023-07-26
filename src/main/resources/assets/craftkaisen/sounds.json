@@ -22,5 +22,13 @@
         "stream": false
       }
     ]
+  },
+  "hit": {
+    "sounds": [
+      {
+        "name": "craftkaisen:punch_hit1",
+        "stream": false
+      }
+    ]
   }
 }

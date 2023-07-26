@@ -53,5 +53,19 @@ public class EntityHitProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.IMPACT.get()), x, y, z, 1, 0.1, 2, 0.1, 0);
 		}
+		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.DIVERGENT_FIST.get()) : false) {
+			entity.setDeltaMovement(new Vec3((0.1 * sourceentity.getLookAngle().x), (0 * sourceentity.getLookAngle().y), (0.1 * sourceentity.getLookAngle().z)));
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craftkaisen:hit")), SoundSource.NEUTRAL, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craftkaisen:hit")), SoundSource.NEUTRAL, 1, 1, false);
+				}
+			}
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 0.1, 2, 0.1, 0);
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.POOF, x, y, z, 1, 1, 2, 1, 0);
+		}
 	}
 }

@@ -9,7 +9,7 @@ public class LapseBlueOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		CraftkaisenMod.queueServerWork(200, () -> {
+		CraftkaisenMod.queueServerWork(30, () -> {
 			if (!entity.level.isClientSide())
 				entity.discard();
 		});
