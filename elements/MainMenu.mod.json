@@ -25,7 +25,7 @@
           "name": "imagebutton_x",
           "image": "x.png",
           "hoveredImage": "",
-          "x": 242,
+          "x": 241,
           "y": 171
         }
       },
@@ -35,7 +35,7 @@
           "name": "imagebutton_x1",
           "image": "x.png",
           "hoveredImage": "",
-          "x": 267,
+          "x": 266,
           "y": 170
         }
       },
@@ -44,7 +44,7 @@
         "data": {
           "image": "lightning.png",
           "use1Xscale": false,
-          "x": 263,
+          "x": 262,
           "y": 160
         }
       },
@@ -142,7 +142,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

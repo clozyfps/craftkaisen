@@ -69,7 +69,7 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		this.blit(ms, this.leftPos + 0, this.topPos + 0, 0, 0, 250, 200, 250, 200);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/lightning.png"));
-		this.blit(ms, this.leftPos + 174, this.topPos + 140, 0, 0, 35, 34, 35, 34);
+		this.blit(ms, this.leftPos + 173, this.topPos + 140, 0, 0, 35, 34, 35, 34);
 
 		RenderSystem.disableBlend();
 	}
@@ -118,11 +118,11 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		});
 		guistate.put("button:button_prestige", button_prestige);
 		this.addRenderableWidget(button_prestige);
-		imagebutton_x = new ImageButton(this.leftPos + 153, this.topPos + 151, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x.png"), 20, 40, e -> {
+		imagebutton_x = new ImageButton(this.leftPos + 152, this.topPos + 151, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x.png"), 20, 40, e -> {
 		});
 		guistate.put("button:imagebutton_x", imagebutton_x);
 		this.addRenderableWidget(imagebutton_x);
-		imagebutton_x1 = new ImageButton(this.leftPos + 178, this.topPos + 150, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x1.png"), 20, 40, e -> {
+		imagebutton_x1 = new ImageButton(this.leftPos + 177, this.topPos + 150, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x1.png"), 20, 40, e -> {
 		});
 		guistate.put("button:imagebutton_x1", imagebutton_x1);
 		this.addRenderableWidget(imagebutton_x1);
