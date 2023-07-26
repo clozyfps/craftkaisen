@@ -3,15 +3,21 @@ package net.mcreator.craftkaisen.client.gui;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
-import net.mcreator.craftkaisen.network.MainMenuButtonMessage;
-import net.mcreator.craftkaisen.CraftkaisenMod;
+import net.mcreator.craftkaisen.procedures.TechniqueDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.LevelDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.ExpDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayPlayerProcedure;
+import net.mcreator.craftkaisen.procedures.ClanDisplayProcedure;
 
 import java.util.HashMap;
 
@@ -23,9 +29,9 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_skill_tree;
-	Button button_skill_tree1;
 	Button button_prestige;
+	ImageButton imagebutton_x;
+	ImageButton imagebutton_x1;
 
 	public MainMenuScreen(MainMenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -34,17 +40,23 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 200;
-		this.imageHeight = 188;
+		this.imageWidth = 250;
+		this.imageHeight = 200;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("craftkaisen:textures/screens/main_menu.png");
+	@Override
+	public boolean isPauseScreen() {
+		return true;
+	}
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+		if (DisplayPlayerProcedure.execute(entity) instanceof LivingEntity livingEntity) {
+			InventoryScreen.renderEntityInInventoryRaw(this.leftPos + 178, this.topPos + 141, 30, 0f, 0, livingEntity);
+		}
 	}
 
 	@Override
@@ -52,8 +64,13 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		RenderSystem.setShaderTexture(0, texture);
-		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/mainmenu.png"));
+		this.blit(ms, this.leftPos + 0, this.topPos + 0, 0, 0, 250, 200, 250, 200);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/lightning.png"));
+		this.blit(ms, this.leftPos + 173, this.topPos + 140, 0, 0, 35, 34, 35, 34);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -73,12 +90,18 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_main_menu"), 75, 7, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_level_1"), 75, 29, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_exp_0100"), 75, 51, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_alignment_sorcerers"), 53, 73, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_technique_limitless"), 53, 95, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_mentor_nanami"), 64, 117, -12829636);
+		this.font.draw(poseStack,
+
+				LevelDisplayProcedure.execute(entity), 7, 42, -13496561);
+		this.font.draw(poseStack,
+
+				ExpDisplayProcedure.execute(entity), 7, 69, -13496561);
+		this.font.draw(poseStack,
+
+				TechniqueDisplayProcedure.execute(entity), 7, 96, -13496561);
+		this.font.draw(poseStack,
+
+				ClanDisplayProcedure.execute(entity), 7, 123, -13496561);
 	}
 
 	@Override
@@ -91,25 +114,17 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		button_skill_tree = new Button(this.leftPos + 152, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.main_menu.button_skill_tree"), e -> {
-			if (true) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(0, x, y, z));
-				MainMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		});
-		guistate.put("button:button_skill_tree", button_skill_tree);
-		this.addRenderableWidget(button_skill_tree);
-		button_skill_tree1 = new Button(this.leftPos + -34, this.topPos + 18, 77, 20, Component.translatable("gui.craftkaisen.main_menu.button_skill_tree1"), e -> {
-			if (true) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(1, x, y, z));
-				MainMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		});
-		guistate.put("button:button_skill_tree1", button_skill_tree1);
-		this.addRenderableWidget(button_skill_tree1);
-		button_prestige = new Button(this.leftPos + 71, this.topPos + 139, 67, 20, Component.translatable("gui.craftkaisen.main_menu.button_prestige"), e -> {
+		button_prestige = new Button(this.leftPos + 16, this.topPos + 150, 67, 20, Component.translatable("gui.craftkaisen.main_menu.button_prestige"), e -> {
 		});
 		guistate.put("button:button_prestige", button_prestige);
 		this.addRenderableWidget(button_prestige);
+		imagebutton_x = new ImageButton(this.leftPos + 152, this.topPos + 151, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x.png"), 20, 40, e -> {
+		});
+		guistate.put("button:imagebutton_x", imagebutton_x);
+		this.addRenderableWidget(imagebutton_x);
+		imagebutton_x1 = new ImageButton(this.leftPos + 177, this.topPos + 150, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x1.png"), 20, 40, e -> {
+		});
+		guistate.put("button:imagebutton_x1", imagebutton_x1);
+		this.addRenderableWidget(imagebutton_x1);
 	}
 }

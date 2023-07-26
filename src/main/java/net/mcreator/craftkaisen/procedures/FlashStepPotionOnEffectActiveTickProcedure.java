@@ -24,7 +24,7 @@ public class FlashStepPotionOnEffectActiveTickProcedure {
 			return;
 		entity.setDeltaMovement(new Vec3((2 * entity.getLookAngle().x), (0 * entity.getLookAngle().y), (2 * entity.getLookAngle().z)));
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.EVADE.get()), x, y, z, 2, 0.1, 2, 0.1, 0);
+			_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.EVADE.get()), x, y, z, 6, 0.5, 2, 0.5, 0);
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:dust 1 1 1 1 ^0 ^0 ^0 0.1 0.6 0.1 0 3");

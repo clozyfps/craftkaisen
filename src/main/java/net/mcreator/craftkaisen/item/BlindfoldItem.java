@@ -95,7 +95,7 @@ public abstract class BlindfoldItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/blindfoldnew.png";
+			return "craftkaisen:textures/entities/blackblindfold.png";
 		}
 	}
 }

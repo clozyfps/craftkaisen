@@ -3,99 +3,94 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 200,
-    "height": 188,
+    "width": 250,
+    "height": 200,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
-    "doesPauseGame": false,
+    "renderBgLayer": false,
+    "doesPauseGame": true,
     "components": [
       {
-        "type": "label",
+        "type": "image",
         "data": {
-          "name": "label_main_menu",
-          "text": {
-            "fixedValue": "Main Menu"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 189,
-          "y": 33
+          "image": "mainmenu.png",
+          "use1Xscale": false,
+          "x": 88,
+          "y": 20
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_skill_tree",
-          "text": "Skill Tree",
-          "onClick": {
-            "name": "OpenSkillTreeMenu"
-          },
-          "width": 77,
-          "height": 20,
+          "name": "imagebutton_x",
+          "image": "x.png",
+          "hoveredImage": "",
+          "x": 241,
+          "y": 171
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_x1",
+          "image": "x.png",
+          "hoveredImage": "",
           "x": 266,
-          "y": 44
+          "y": 170
         }
       },
       {
-        "type": "button",
+        "type": "image",
         "data": {
-          "name": "button_skill_tree1",
-          "text": "Quests",
-          "onClick": {
-            "name": "OpenQuestMenu"
-          },
-          "width": 77,
-          "height": 20,
-          "x": 79,
-          "y": 44
+          "image": "lightning.png",
+          "use1Xscale": false,
+          "x": 262,
+          "y": 160
         }
       },
       {
-        "type": "label",
+        "type": "entitymodel",
         "data": {
-          "name": "label_level_1",
-          "text": {
-            "fixedValue": "Level : 1"
+          "entityModel": {
+            "name": "DisplayPlayer"
           },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 189,
-          "y": 55
+          "scale": 30,
+          "rotationX": 0,
+          "followMouseMovement": false,
+          "x": 256,
+          "y": 140
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_exp_0100",
+          "name": "label_level",
           "text": {
-            "fixedValue": "Exp : 0/100"
+            "fixedValue": "Level : ",
+            "name": "LevelDisplay"
           },
           "color": {
-            "value": -12829636,
+            "value": -13496561,
             "falpha": 0.0
           },
-          "x": 189,
-          "y": 77
+          "x": 96,
+          "y": 62
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_alignment_sorcerers",
+          "name": "label_exp",
           "text": {
-            "fixedValue": "Alignment : Sorcerers"
+            "fixedValue": "Exp : ",
+            "name": "ExpDisplay"
           },
           "color": {
-            "value": -12829636,
+            "value": -13496561,
             "falpha": 0.0
           },
-          "x": 167,
-          "y": 99
+          "x": 96,
+          "y": 89
         }
       },
       {
@@ -103,28 +98,30 @@
         "data": {
           "name": "label_technique_limitless",
           "text": {
-            "fixedValue": "Technique : Limitless"
+            "fixedValue": "Technique : Limitless",
+            "name": "TechniqueDisplay"
           },
           "color": {
-            "value": -12829636,
+            "value": -13496561,
             "falpha": 0.0
           },
-          "x": 167,
-          "y": 121
+          "x": 96,
+          "y": 116
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_mentor_nanami",
+          "name": "label_clan",
           "text": {
-            "fixedValue": "Mentor : Nanami"
+            "fixedValue": "Clan :",
+            "name": "ClanDisplay"
           },
           "color": {
-            "value": -12829636,
+            "value": -13496561,
             "falpha": 0.0
           },
-          "x": 178,
+          "x": 96,
           "y": 143
         }
       },
@@ -135,17 +132,17 @@
           "text": "Prestige",
           "width": 67,
           "height": 20,
-          "x": 185,
-          "y": 165
+          "x": 105,
+          "y": 170
         }
       }
     ],
     "gridSettings": {
-      "sx": 22,
-      "sy": 22,
-      "ox": 2,
-      "oy": 42,
-      "snapOnGrid": true
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
     }
   }
 }

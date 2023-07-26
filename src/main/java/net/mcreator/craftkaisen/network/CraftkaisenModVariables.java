@@ -96,6 +96,11 @@ public class CraftkaisenModVariables {
 			clone.QuestReward = original.QuestReward;
 			clone.VesselTechnique = original.VesselTechnique;
 			clone.QuestAmount = original.QuestAmount;
+			clone.QuestProgress = original.QuestProgress;
+			clone.SkillStrengthProgress = original.SkillStrengthProgress;
+			clone.SkillSpeedProgress = original.SkillSpeedProgress;
+			clone.SkillTechniqueProgress = original.SkillTechniqueProgress;
+			clone.SkillCurseProgress = original.SkillCurseProgress;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -302,6 +307,11 @@ public class CraftkaisenModVariables {
 		public double QuestReward = 0;
 		public String VesselTechnique = "\"\"";
 		public double QuestAmount = 0;
+		public double QuestProgress = 0;
+		public double SkillStrengthProgress = 0;
+		public double SkillSpeedProgress = 0;
+		public double SkillTechniqueProgress = 0;
+		public double SkillCurseProgress = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -338,6 +348,11 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("QuestReward", QuestReward);
 			nbt.putString("VesselTechnique", VesselTechnique);
 			nbt.putDouble("QuestAmount", QuestAmount);
+			nbt.putDouble("QuestProgress", QuestProgress);
+			nbt.putDouble("SkillStrengthProgress", SkillStrengthProgress);
+			nbt.putDouble("SkillSpeedProgress", SkillSpeedProgress);
+			nbt.putDouble("SkillTechniqueProgress", SkillTechniqueProgress);
+			nbt.putDouble("SkillCurseProgress", SkillCurseProgress);
 			return nbt;
 		}
 
@@ -371,6 +386,11 @@ public class CraftkaisenModVariables {
 			QuestReward = nbt.getDouble("QuestReward");
 			VesselTechnique = nbt.getString("VesselTechnique");
 			QuestAmount = nbt.getDouble("QuestAmount");
+			QuestProgress = nbt.getDouble("QuestProgress");
+			SkillStrengthProgress = nbt.getDouble("SkillStrengthProgress");
+			SkillSpeedProgress = nbt.getDouble("SkillSpeedProgress");
+			SkillTechniqueProgress = nbt.getDouble("SkillTechniqueProgress");
+			SkillCurseProgress = nbt.getDouble("SkillCurseProgress");
 		}
 	}
 
@@ -423,6 +443,11 @@ public class CraftkaisenModVariables {
 					variables.QuestReward = message.data.QuestReward;
 					variables.VesselTechnique = message.data.VesselTechnique;
 					variables.QuestAmount = message.data.QuestAmount;
+					variables.QuestProgress = message.data.QuestProgress;
+					variables.SkillStrengthProgress = message.data.SkillStrengthProgress;
+					variables.SkillSpeedProgress = message.data.SkillSpeedProgress;
+					variables.SkillTechniqueProgress = message.data.SkillTechniqueProgress;
+					variables.SkillCurseProgress = message.data.SkillCurseProgress;
 				}
 			});
 			context.setPacketHandled(true);
