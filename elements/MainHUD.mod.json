@@ -193,6 +193,9 @@
             "value": -1,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "QuestDisplay"
+          },
           "x": 303,
           "y": 8
         }
@@ -208,6 +211,9 @@
             "value": -1,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "QuestDisplay"
+          },
           "x": 303,
           "y": 17
         }
@@ -217,44 +223,18 @@
         "data": {
           "name": "label_quest1",
           "text": {
-            "fixedValue": "Quest1"
+            "fixedValue": "Quest",
+            "name": "QuestProgressDisplay"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "QuestDisplay"
           },
           "x": 303,
           "y": 26
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_quest2",
-          "text": {
-            "fixedValue": "Quest2"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 303,
-          "y": 44
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_quest3",
-          "text": {
-            "fixedValue": "Quest3"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 303,
-          "y": 62
         }
       }
     ],
