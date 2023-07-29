@@ -2,7 +2,7 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"kickflip": {
-			"animation_length": 1.45833,
+			"animation_length": 1.125,
 			"bones": {
 				"body": {
 					"rotation": {

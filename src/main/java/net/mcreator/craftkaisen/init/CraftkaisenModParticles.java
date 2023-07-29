@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.craftkaisen.client.particle.RestParticle;
+import net.mcreator.craftkaisen.client.particle.LapseBlueParticleParticle;
 import net.mcreator.craftkaisen.client.particle.ImpactParticle;
 import net.mcreator.craftkaisen.client.particle.EvadeParticle;
 
@@ -20,5 +21,6 @@ public class CraftkaisenModParticles {
 		event.register(CraftkaisenModParticleTypes.EVADE.get(), EvadeParticle::provider);
 		event.register(CraftkaisenModParticleTypes.IMPACT.get(), ImpactParticle::provider);
 		event.register(CraftkaisenModParticleTypes.REST.get(), RestParticle::provider);
+		event.register(CraftkaisenModParticleTypes.LAPSE_BLUE_PARTICLE.get(), LapseBlueParticleParticle::provider);
 	}
 }
