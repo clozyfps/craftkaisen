@@ -30,5 +30,14 @@
         "stream": false
       }
     ]
+  },
+  "rct.heartbeat": {
+    "subtitle": "subtitles.rct.heartbeat",
+    "sounds": [
+      {
+        "name": "craftkaisen:rct_heartbeat",
+        "stream": false
+      }
+    ]
   }
 }

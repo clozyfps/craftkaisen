@@ -18,9 +18,11 @@ import net.mcreator.craftkaisen.item.TwistItem;
 import net.mcreator.craftkaisen.item.TojiArmorItem;
 import net.mcreator.craftkaisen.item.Test2Item;
 import net.mcreator.craftkaisen.item.TesItem;
+import net.mcreator.craftkaisen.item.SunglassesItem;
 import net.mcreator.craftkaisen.item.StopItem;
 import net.mcreator.craftkaisen.item.SleepItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
@@ -37,6 +39,7 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, CraftkaisenMod.MODID);
+	public static final RegistryObject<Item> FLY_HEAD_SPAWN_EGG = REGISTRY.register("fly_head_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.FLY_HEAD, -9481374, -10534831, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> HOLLOW_PURPLE = REGISTRY.register("hollow_purple", () -> new HollowPurpleItem());
 	public static final RegistryObject<Item> TES = REGISTRY.register("tes", () -> new TesItem());
 	public static final RegistryObject<Item> TEST_2 = REGISTRY.register("test_2", () -> new Test2Item());
@@ -71,6 +74,10 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> BANDAGE_BLINDFOLD_HELMET = REGISTRY.register("bandage_blindfold_helmet", () -> new BandageBlindfoldItem.Helmet());
 	public static final RegistryObject<Item> TOJI_ARMOR_CHESTPLATE = REGISTRY.register("toji_armor_chestplate", () -> new TojiArmorItem.Chestplate());
 	public static final RegistryObject<Item> TOJI_ARMOR_LEGGINGS = REGISTRY.register("toji_armor_leggings", () -> new TojiArmorItem.Leggings());
+	public static final RegistryObject<Item> MALEVOLENT_SHRINE_SPAWN_EGG = REGISTRY.register("malevolent_shrine_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MALEVOLENT_SHRINE, -6737152, -16764058, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> MAHORAGA_WHEEL_HELMET = REGISTRY.register("mahoraga_wheel_helmet", () -> new MahoragaWheelItem.Helmet());
+	public static final RegistryObject<Item> SUNGLASSES_HELMET = REGISTRY.register("sunglasses_helmet", () -> new SunglassesItem.Helmet());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

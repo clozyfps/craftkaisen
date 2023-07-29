@@ -19,4 +19,5 @@ public class CraftkaisenModSounds {
 	public static final RegistryObject<SoundEvent> CLAP = REGISTRY.register("clap", () -> new SoundEvent(new ResourceLocation("craftkaisen", "clap")));
 	public static final RegistryObject<SoundEvent> BONES = REGISTRY.register("bones", () -> new SoundEvent(new ResourceLocation("craftkaisen", "bones")));
 	public static final RegistryObject<SoundEvent> HIT = REGISTRY.register("hit", () -> new SoundEvent(new ResourceLocation("craftkaisen", "hit")));
+	public static final RegistryObject<SoundEvent> RCT_HEARTBEAT = REGISTRY.register("rct.heartbeat", () -> new SoundEvent(new ResourceLocation("craftkaisen", "rct.heartbeat")));
 }

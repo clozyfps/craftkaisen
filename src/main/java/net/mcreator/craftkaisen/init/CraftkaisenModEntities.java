@@ -21,12 +21,14 @@ import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
 import net.mcreator.craftkaisen.entity.InfiniteVoiddEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
 import net.mcreator.craftkaisen.entity.GetCrushedEntity;
+import net.mcreator.craftkaisen.entity.FlyHeadEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
@@ -36,6 +38,10 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CraftkaisenModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, CraftkaisenMod.MODID);
+	public static final RegistryObject<EntityType<FlyHeadEntity>> FLY_HEAD = register("fly_head",
+			EntityType.Builder.<FlyHeadEntity>of(FlyHeadEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlyHeadEntity::new)
+
+					.sized(0.6f, 0.6f));
 	public static final RegistryObject<EntityType<HollowPurpleEntity>> HOLLOW_PURPLE = register("projectile_hollow_purple",
 			EntityType.Builder.<HollowPurpleEntity>of(HollowPurpleEntity::new, MobCategory.MISC).setCustomClientFactory(HollowPurpleEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<HollowPurpleEntityEntity>> HOLLOW_PURPLE_ENTITY = register("hollow_purple_entity", EntityType.Builder.<HollowPurpleEntityEntity>of(HollowPurpleEntityEntity::new, MobCategory.MONSTER)
@@ -76,6 +82,8 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<FingerBearerEntity>of(FingerBearerEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FingerBearerEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MalevolentShrineEntity>> MALEVOLENT_SHRINE = register("malevolent_shrine", EntityType.Builder.<MalevolentShrineEntity>of(MalevolentShrineEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MalevolentShrineEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -84,6 +92,7 @@ public class CraftkaisenModEntities {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
+			FlyHeadEntity.init();
 			HollowPurpleEntityEntity.init();
 			LapseBlueEntity.init();
 			JujutsuStudentEntity.init();
@@ -91,11 +100,13 @@ public class CraftkaisenModEntities {
 			InfiniteVoiddEntity.init();
 			SatoruGojoEntity.init();
 			FingerBearerEntity.init();
+			MalevolentShrineEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
+		event.put(FLY_HEAD.get(), FlyHeadEntity.createAttributes().build());
 		event.put(HOLLOW_PURPLE_ENTITY.get(), HollowPurpleEntityEntity.createAttributes().build());
 		event.put(LAPSE_BLUE.get(), LapseBlueEntity.createAttributes().build());
 		event.put(JUJUTSU_STUDENT.get(), JujutsuStudentEntity.createAttributes().build());
@@ -103,5 +114,6 @@ public class CraftkaisenModEntities {
 		event.put(INFINITE_VOIDD.get(), InfiniteVoiddEntity.createAttributes().build());
 		event.put(SATORU_GOJO.get(), SatoruGojoEntity.createAttributes().build());
 		event.put(FINGER_BEARER.get(), FingerBearerEntity.createAttributes().build());
+		event.put(MALEVOLENT_SHRINE.get(), MalevolentShrineEntity.createAttributes().build());
 	}
 }
