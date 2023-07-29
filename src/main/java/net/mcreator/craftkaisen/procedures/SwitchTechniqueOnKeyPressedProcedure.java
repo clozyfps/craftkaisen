@@ -504,40 +504,40 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 					});
 				}
 				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Rapid Clap"), true);
+					_player.displayClientMessage(Component.literal("\u00A7l Flip Kick"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 				{
-					String _setval = "Clap Rush";
+					String _setval = "Cursed Energy Burst";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Clap Rush"), true);
+					_player.displayClientMessage(Component.literal("\u00A7l Cursed Energy Burst"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
-					String _setval = "Powerful Hook";
+					String _setval = "Cursed Combo";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Powerful Hook"), true);
+					_player.displayClientMessage(Component.literal("\u00A7l Cursed Combo"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
-					String _setval = "Clap Manipulate";
+					String _setval = "Curse Kick";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Clap Manipulate"), true);
+					_player.displayClientMessage(Component.literal("\u00A7l Curse Kick"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{

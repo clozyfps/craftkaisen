@@ -101,8 +101,8 @@ public class CraftkaisenModVariables {
 			clone.SkillSpeedProgress = original.SkillSpeedProgress;
 			clone.SkillTechniqueProgress = original.SkillTechniqueProgress;
 			clone.SkillCurseProgress = original.SkillCurseProgress;
-			clone.PartyLeader = original.PartyLeader;
 			clone.InParty = original.InParty;
+			clone.PartyLeader = original.PartyLeader;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -170,9 +170,9 @@ public class CraftkaisenModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "craftkaisen_mapvars";
 		public double FingersEaten = 0;
-		public String ReincarnatedPlayer = "";
+		public String ReincarnatedPlayer = "\"\"";
 		public boolean VesselFound = false;
-		public String VesselPlayer = "";
+		public String VesselPlayer = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -289,7 +289,7 @@ public class CraftkaisenModVariables {
 		public String Technique = "";
 		public double ExpRequirement = 100.0;
 		public double TechniqueSwitch = 0;
-		public String SelectedTechnique = "";
+		public String SelectedTechnique = "\"\"";
 		public double Move3Cost = 0;
 		public double CursedEnergy = 0;
 		public double MoveUltimateCost = 0;
@@ -302,20 +302,20 @@ public class CraftkaisenModVariables {
 		public boolean Charging = false;
 		public double Mood = 75.0;
 		public boolean VowsEnabled = true;
-		public String VowSender = "";
+		public String VowSender = "\"\"";
 		public String VowDescription = "";
-		public String Vessel = "";
-		public String QuestMob = "";
+		public String Vessel = "\"\"";
+		public String QuestMob = "\"\"";
 		public double QuestReward = 0;
-		public String VesselTechnique = "";
+		public String VesselTechnique = "\"\"";
 		public double QuestAmount = 0;
 		public double QuestProgress = 0;
 		public double SkillStrengthProgress = 0;
 		public double SkillSpeedProgress = 0;
 		public double SkillTechniqueProgress = 0;
 		public double SkillCurseProgress = 0;
-		public String PartyLeader = "";
 		public boolean InParty = false;
+		public String PartyLeader = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -357,8 +357,8 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("SkillSpeedProgress", SkillSpeedProgress);
 			nbt.putDouble("SkillTechniqueProgress", SkillTechniqueProgress);
 			nbt.putDouble("SkillCurseProgress", SkillCurseProgress);
-			nbt.putString("PartyLeader", PartyLeader);
 			nbt.putBoolean("InParty", InParty);
+			nbt.putString("PartyLeader", PartyLeader);
 			return nbt;
 		}
 
@@ -397,8 +397,8 @@ public class CraftkaisenModVariables {
 			SkillSpeedProgress = nbt.getDouble("SkillSpeedProgress");
 			SkillTechniqueProgress = nbt.getDouble("SkillTechniqueProgress");
 			SkillCurseProgress = nbt.getDouble("SkillCurseProgress");
-			PartyLeader = nbt.getString("PartyLeader");
 			InParty = nbt.getBoolean("InParty");
+			PartyLeader = nbt.getString("PartyLeader");
 		}
 	}
 
@@ -456,8 +456,8 @@ public class CraftkaisenModVariables {
 					variables.SkillSpeedProgress = message.data.SkillSpeedProgress;
 					variables.SkillTechniqueProgress = message.data.SkillTechniqueProgress;
 					variables.SkillCurseProgress = message.data.SkillCurseProgress;
-					variables.PartyLeader = message.data.PartyLeader;
 					variables.InParty = message.data.InParty;
+					variables.PartyLeader = message.data.PartyLeader;
 				}
 			});
 			context.setPacketHandled(true);

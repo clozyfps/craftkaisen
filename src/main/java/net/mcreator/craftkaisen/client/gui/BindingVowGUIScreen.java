@@ -1,30 +1,13 @@
 package net.mcreator.craftkaisen.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
-import net.mcreator.craftkaisen.procedures.VowSenderDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.VowDescriptionDisplayProcedure;
-import net.mcreator.craftkaisen.network.BindingVowGUIButtonMessage;
-import net.mcreator.craftkaisen.CraftkaisenMod;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMenu> {
+
 	private final static HashMap<String, Object> guistate = BindingVowGUIMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Button button_yes;
 	Button button_yes1;
 
@@ -46,6 +29,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -53,8 +37,10 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -64,6 +50,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -94,22 +81,29 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 	@Override
 	public void init() {
 		super.init();
+
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+
 		button_yes = new Button(this.leftPos + 22, this.topPos + 103, 40, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_yes"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BindingVowGUIButtonMessage(0, x, y, z));
 				BindingVowGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
+
 		guistate.put("button:button_yes", button_yes);
 		this.addRenderableWidget(button_yes);
+
 		button_yes1 = new Button(this.leftPos + 132, this.topPos + 103, 40, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_yes1"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BindingVowGUIButtonMessage(1, x, y, z));
 				BindingVowGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
+
 		guistate.put("button:button_yes1", button_yes1);
 		this.addRenderableWidget(button_yes1);
+
 	}
+
 }

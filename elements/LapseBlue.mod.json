@@ -4,9 +4,9 @@
   "definition": {
     "mobName": "Lapse Blue",
     "mobLabel": "",
-    "mobModelName": "Modellapseblue",
+    "mobModelName": "Biped",
     "mobModelTexture": "air103_layer_2.png",
-    "mobModelGlowTexture": "lapsebluetexture.png",
+    "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
     },

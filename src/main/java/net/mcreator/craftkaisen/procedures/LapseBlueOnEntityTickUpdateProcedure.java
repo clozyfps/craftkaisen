@@ -1,16 +1,20 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -48,34 +52,22 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 							if (_ent instanceof ServerPlayer _serverPlayer)
 								_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
 						}
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 1, 2, 1, 0);
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.POOF, x, y, z, 5, 1, 2, 1, 0);
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
+							}
+						}
 					}
 				}
 			}
 		}
 		world.destroyBlock(new BlockPos(x, y, z), false);
-		sx = -3;
-		found = false;
-		for (int index0 = 0; index0 < 6; index0++) {
-			sy = -3;
-			for (int index1 = 0; index1 < 6; index1++) {
-				sz = -3;
-				for (int index2 = 0; index2 < 6; index2++) {
-					if (!((world.getBlockState(new BlockPos(x + sx, y + sy, z + sz))).getBlock() == Blocks.AIR)) {
-						found = true;
-					}
-					sz = sz + 1;
-				}
-				sy = sy + 1;
-			}
-			sx = sx + 1;
-		}
-		if (found == true) {
-			{
-				BlockPos _pos = new BlockPos(x, y, z);
-				Block.dropResources(world.getBlockState(_pos), world, new BlockPos(x, y, z), null);
-				world.destroyBlock(_pos, false);
-			}
-		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:dust 0 1 1 2 ^0 ^0 ^0 5 2.5 5 0 40");

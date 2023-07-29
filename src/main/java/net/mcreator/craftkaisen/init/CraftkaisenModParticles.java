@@ -17,8 +17,8 @@ import net.mcreator.craftkaisen.client.particle.EvadeParticle;
 public class CraftkaisenModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
-		event.register(CraftkaisenModParticleTypes.IMPACT.get(), ImpactParticle::provider);
 		event.register(CraftkaisenModParticleTypes.EVADE.get(), EvadeParticle::provider);
+		event.register(CraftkaisenModParticleTypes.IMPACT.get(), ImpactParticle::provider);
 		event.register(CraftkaisenModParticleTypes.REST.get(), RestParticle::provider);
 	}
 }
