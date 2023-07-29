@@ -1,7 +1,7 @@
 {
   "parent": "craftkaisen:custom/toji_weapon_1",
   "textures": {
-    "0": "craftkaisen:blocks/maintoji1atlas",
+    "0": "craftkaisen:blocks/mainweapon1atlas",
     "particle": "craftkaisen:items/air102_layer_2"
   }
 }

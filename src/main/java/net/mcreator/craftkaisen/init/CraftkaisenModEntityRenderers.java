@@ -17,24 +17,26 @@ import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
+import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftkaisenModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+		event.registerEntityRenderer(CraftkaisenModEntities.JUJUTSU_STUDENT.get(), JujutsuStudentRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.TOJI_FUSHIGURO.get(), TojiFushiguroRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.FLY_HEAD.get(), FlyHeadRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.HOLLOW_PURPLE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.HOLLOW_PURPLE_ENTITY.get(), HollowPurpleEntityRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.LAPSE_BLUE.get(), LapseBlueRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.JUJUTSU_STUDENT.get(), JujutsuStudentRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.TOJI_FUSHIGURO.get(), TojiFushiguroRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.INFINITE_VOIDD.get(), InfiniteVoiddRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.EXPLODE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.STOP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.TWIST.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.GET_CRUSHED.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.STOP.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.EXPLODE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.SLEEP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BLAST_AWAY.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.CLAP.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
 	}
 }

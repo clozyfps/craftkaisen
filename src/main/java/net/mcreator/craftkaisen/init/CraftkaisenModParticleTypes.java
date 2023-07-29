@@ -15,7 +15,7 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, CraftkaisenMod.MODID);
-	public static final RegistryObject<SimpleParticleType> EVADE = REGISTRY.register("evade", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> IMPACT = REGISTRY.register("impact", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> EVADE = REGISTRY.register("evade", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> REST = REGISTRY.register("rest", () -> new SimpleParticleType(false));
 }
