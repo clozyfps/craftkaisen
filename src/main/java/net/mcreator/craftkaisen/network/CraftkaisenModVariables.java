@@ -103,11 +103,15 @@ public class CraftkaisenModVariables {
 			clone.SkillCurseProgress = original.SkillCurseProgress;
 			clone.InParty = original.InParty;
 			clone.PartyLeader = original.PartyLeader;
+			clone.Deaths = original.Deaths;
+			clone.BlackFlash = original.BlackFlash;
+			clone.RCT = original.RCT;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
 				clone.VowSender = original.VowSender;
 				clone.VowDescription = original.VowDescription;
+				clone.Checked = original.Checked;
 			}
 		}
 
@@ -289,7 +293,7 @@ public class CraftkaisenModVariables {
 		public String Technique = "";
 		public double ExpRequirement = 100.0;
 		public double TechniqueSwitch = 0;
-		public String SelectedTechnique = "\"\"";
+		public String SelectedTechnique = "";
 		public double Move3Cost = 0;
 		public double CursedEnergy = 0;
 		public double MoveUltimateCost = 0;
@@ -305,7 +309,7 @@ public class CraftkaisenModVariables {
 		public String VowSender = "\"\"";
 		public String VowDescription = "";
 		public String Vessel = "\"\"";
-		public String QuestMob = "\"\"";
+		public String QuestMob = "";
 		public double QuestReward = 0;
 		public String VesselTechnique = "\"\"";
 		public double QuestAmount = 0;
@@ -316,6 +320,10 @@ public class CraftkaisenModVariables {
 		public double SkillCurseProgress = 0;
 		public boolean InParty = false;
 		public String PartyLeader = "";
+		public double Deaths = 0;
+		public boolean Checked = false;
+		public boolean BlackFlash = false;
+		public boolean RCT = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -359,6 +367,10 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("SkillCurseProgress", SkillCurseProgress);
 			nbt.putBoolean("InParty", InParty);
 			nbt.putString("PartyLeader", PartyLeader);
+			nbt.putDouble("Deaths", Deaths);
+			nbt.putBoolean("Checked", Checked);
+			nbt.putBoolean("BlackFlash", BlackFlash);
+			nbt.putBoolean("RCT", RCT);
 			return nbt;
 		}
 
@@ -399,6 +411,10 @@ public class CraftkaisenModVariables {
 			SkillCurseProgress = nbt.getDouble("SkillCurseProgress");
 			InParty = nbt.getBoolean("InParty");
 			PartyLeader = nbt.getString("PartyLeader");
+			Deaths = nbt.getDouble("Deaths");
+			Checked = nbt.getBoolean("Checked");
+			BlackFlash = nbt.getBoolean("BlackFlash");
+			RCT = nbt.getBoolean("RCT");
 		}
 	}
 
@@ -458,6 +474,10 @@ public class CraftkaisenModVariables {
 					variables.SkillCurseProgress = message.data.SkillCurseProgress;
 					variables.InParty = message.data.InParty;
 					variables.PartyLeader = message.data.PartyLeader;
+					variables.Deaths = message.data.Deaths;
+					variables.Checked = message.data.Checked;
+					variables.BlackFlash = message.data.BlackFlash;
+					variables.RCT = message.data.RCT;
 				}
 			});
 			context.setPacketHandled(true);

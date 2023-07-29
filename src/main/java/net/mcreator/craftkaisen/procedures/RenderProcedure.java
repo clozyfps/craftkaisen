@@ -1,6 +1,21 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.client.event.RenderLivingEvent;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
+import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 
 import javax.annotation.Nullable;
 

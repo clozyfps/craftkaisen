@@ -1,7 +1,15 @@
 
 package net.mcreator.craftkaisen.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
+
+import net.mcreator.craftkaisen.procedures.PlayfulCloudLivingEntityIsHitWithToolProcedure;
+import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
 
 public class PlayfulCloudItem extends SwordItem {
 	public PlayfulCloudItem() {

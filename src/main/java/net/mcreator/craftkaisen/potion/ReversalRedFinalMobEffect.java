@@ -21,7 +21,9 @@ public class ReversalRedFinalMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		ReversalRedFinalEffectStartedappliedProcedure.execute(entity.level, entity);
+		ReversalRedFinalEffectStartedappliedProcedure.execute(
+
+		);
 	}
 
 	@Override

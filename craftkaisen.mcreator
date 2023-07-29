@@ -953,10 +953,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -2185,10 +2181,6 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/VeilPlaceProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -4380,16 +4372,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/TesRightclickedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Items"
     },
@@ -4774,6 +4757,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "immediatesourceentity",
             "type": "entity"
           },
@@ -4832,16 +4819,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedFinalEffectStartedappliedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Potion Effects/Procedures"
     },
@@ -5219,6 +5197,62 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "CheckDeaths",
+      "type": "procedure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_deaths",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckDeathsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CheckReverseCursedTechnique",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_reverse_cursed_technique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckReverseCursedTechniqueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -5274,7 +5308,7 @@
       "name": "SelectedTechnique",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
     },
     {
       "name": "Move3Cost",
@@ -5370,7 +5404,7 @@
       "name": "QuestMob",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
     },
     {
       "name": "QuestReward",
@@ -5455,6 +5489,30 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "Deaths",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Checked",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "BlackFlash",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "RCT",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -5489,6 +5547,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "rct.heartbeat",
+      "files": [
+        "rct_heartbeat"
+      ],
+      "category": "player",
+      "subtitle": "RCT Awakening"
     }
   ],
   "language_map": {
@@ -5506,11 +5572,15 @@
       "subtitles.clap": "",
       "item.craftkaisen.fly_head_spawn_egg": "Fly Head Spawn Egg",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
+      "effect.craftkaisen.sixeyespotion": "Six Eyes",
+      "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "gui.craftkaisen.main_hud.label_quest3": "Quest3",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.main_hud.label_quest2": "Quest2",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
+      "effect.craftkaisen.divergent_fist": "DivergentFist",
+      "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
@@ -5530,8 +5600,8 @@
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.stopped": "Stopped",
-      "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
+      "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "itemGroup.tabjjkitems": "JJK Items",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
@@ -5544,6 +5614,7 @@
       "gui.craftkaisen.main_hud.label_x1": "X",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
+      "subtitles.rct.heartbeat": "RCT Awakening",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
@@ -5572,6 +5643,7 @@
       "item.craftkaisen.tes": "Tes",
       "key.craftkaisen.use_technique": "Use Technique",
       "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
+      "entity.craftkaisen.malevolent_shrine": "Malevolent Shrine",
       "block.craftkaisen.unlimited_void": "Unlimited Void",
       "gui.craftkaisen.main_hud.label_empty": "---------------------",
       "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
@@ -5585,6 +5657,7 @@
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
+      "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",

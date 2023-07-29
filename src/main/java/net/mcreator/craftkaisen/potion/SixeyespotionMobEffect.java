@@ -1,8 +1,10 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class SixeyespotionMobEffect extends MobEffect {
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+public class SixeyespotionMobEffect extends MobEffect {
 	public SixeyespotionMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -16,5 +18,4 @@ public class SixeyespotionMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }
