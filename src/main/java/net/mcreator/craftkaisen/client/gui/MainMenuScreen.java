@@ -55,7 +55,7 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
 		if (DisplayPlayerProcedure.execute(entity) instanceof LivingEntity livingEntity) {
-			InventoryScreen.renderEntityInInventoryRaw(this.leftPos + 178, this.topPos + 141, 35, 0f + (float) Math.atan((this.leftPos + 178 - mouseX) / 40.0), (float) Math.atan((this.topPos + 91 - mouseY) / 40.0), livingEntity);
+			InventoryScreen.renderEntityInInventoryRaw(this.leftPos + 178, this.topPos + 141, 30, 0f, 0, livingEntity);
 		}
 	}
 

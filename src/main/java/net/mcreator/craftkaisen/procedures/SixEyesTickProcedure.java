@@ -54,12 +54,6 @@ public class SixEyesTickProcedure {
 									Component.literal(
 											("\u00A7b Target Has " + (entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergy + " Cursed Energy")),
 									true);
-						if (!((entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).isEmpty()) {
-							if (entity instanceof Player _player && !_player.level.isClientSide())
-								_player.displayClientMessage(Component.literal(
-										("\u00A7b Current Selcted Technique : " + (entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique)),
-										false);
-						}
 					}
 				}
 			}

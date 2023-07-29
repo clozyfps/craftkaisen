@@ -16,9 +16,6 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "ShowCursedEnergy"
-          },
           "x": 307,
           "y": 223
         }
@@ -150,6 +147,42 @@
         }
       },
       {
+        "type": "image",
+        "data": {
+          "image": "happy.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MoodDisplayGreen"
+          },
+          "x": 6,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "meh.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MoodDisplayYellow"
+          },
+          "x": 6,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mad.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "MoodDisplayRed"
+          },
+          "x": 6,
+          "y": 44
+        }
+      },
+      {
         "type": "label",
         "data": {
           "name": "label_quests",
@@ -212,7 +245,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

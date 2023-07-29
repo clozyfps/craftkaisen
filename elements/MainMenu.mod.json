@@ -54,9 +54,9 @@
           "entityModel": {
             "name": "DisplayPlayer"
           },
-          "scale": 35,
+          "scale": 30,
           "rotationX": 0,
-          "followMouseMovement": true,
+          "followMouseMovement": false,
           "x": 256,
           "y": 140
         }

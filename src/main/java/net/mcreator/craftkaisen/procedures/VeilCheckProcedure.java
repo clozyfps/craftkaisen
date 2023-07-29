@@ -43,7 +43,7 @@ public class VeilCheckProcedure {
 		if (entity == null || text == null)
 			return;
 		if (text.startsWith("Emerge From Darkness") || text.startsWith("emerge from darkness")) {
-			VeilPlaceProcedure.execute(world, x, y, z);
+			VeilPlaceProcedure.execute(world, x, y, z, entity);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.cave")), SoundSource.PLAYERS, 1, 1);

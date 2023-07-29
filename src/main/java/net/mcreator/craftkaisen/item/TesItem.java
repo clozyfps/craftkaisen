@@ -24,7 +24,7 @@ public class TesItem extends Item {
 		double y = entity.getY();
 		double z = entity.getZ();
 
-		TesRightclickedProcedure.execute();
+		TesRightclickedProcedure.execute(world, entity);
 		return ar;
 	}
 }
