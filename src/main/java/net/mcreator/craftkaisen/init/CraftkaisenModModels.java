@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.craftkaisen.client.model.Modeltojishirt;
 import net.mcreator.craftkaisen.client.model.Modeltojipants;
 import net.mcreator.craftkaisen.client.model.Modelsixeyes;
+import net.mcreator.craftkaisen.client.model.Modelmalevolentshrine;
 import net.mcreator.craftkaisen.client.model.Modellapseblue;
 import net.mcreator.craftkaisen.client.model.Modeljjkoutfiot;
 import net.mcreator.craftkaisen.client.model.Modelhollowpurplenew;
@@ -35,6 +36,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelhollowpurplenew.LAYER_LOCATION, Modelhollowpurplenew::createBodyLayer);
 		event.registerLayerDefinition(Modelsixeyes.LAYER_LOCATION, Modelsixeyes::createBodyLayer);
 		event.registerLayerDefinition(Modeltojipants.LAYER_LOCATION, Modeltojipants::createBodyLayer);
+		event.registerLayerDefinition(Modelmalevolentshrine.LAYER_LOCATION, Modelmalevolentshrine::createBodyLayer);
 		event.registerLayerDefinition(Modelbandageblindfold.LAYER_LOCATION, Modelbandageblindfold::createBodyLayer);
 		event.registerLayerDefinition(Modellapseblue.LAYER_LOCATION, Modellapseblue::createBodyLayer);
 		event.registerLayerDefinition(ModelFingerBearernew.LAYER_LOCATION, ModelFingerBearernew::createBodyLayer);

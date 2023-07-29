@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
+import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
@@ -38,5 +39,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.CLAP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.FINGER_BEARER.get(), FingerBearerRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.MALEVOLENT_SHRINE.get(), MalevolentShrineRenderer::new);
 	}
 }

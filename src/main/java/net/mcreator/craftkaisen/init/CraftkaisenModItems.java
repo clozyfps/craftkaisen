@@ -71,6 +71,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> BANDAGE_BLINDFOLD_HELMET = REGISTRY.register("bandage_blindfold_helmet", () -> new BandageBlindfoldItem.Helmet());
 	public static final RegistryObject<Item> TOJI_ARMOR_CHESTPLATE = REGISTRY.register("toji_armor_chestplate", () -> new TojiArmorItem.Chestplate());
 	public static final RegistryObject<Item> TOJI_ARMOR_LEGGINGS = REGISTRY.register("toji_armor_leggings", () -> new TojiArmorItem.Leggings());
+	public static final RegistryObject<Item> MALEVOLENT_SHRINE_SPAWN_EGG = REGISTRY.register("malevolent_shrine_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MALEVOLENT_SHRINE, -6737152, -16764058, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
