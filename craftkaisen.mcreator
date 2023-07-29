@@ -65,8 +65,8 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
           "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
         ]
       },
@@ -400,8 +400,8 @@
       "registry_name": "test_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/test_2.json",
-          "src/main/java/net/mcreator/craftkaisen/item/Test2Item.java"
+          "src/main/java/net/mcreator/craftkaisen/item/Test2Item.java",
+          "src/main/resources/assets/craftkaisen/models/item/test_2.json"
         ]
       },
       "path": "~/Items"
@@ -953,10 +953,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1022,10 +1018,10 @@
       "registry_name": "jujutsu_student",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/JujutsuStudentRenderer.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -1408,8 +1404,8 @@
       "registry_name": "playful_cloud",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/playful_cloud.json",
-          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/playful_cloud.json"
         ]
       },
       "path": "~/Items"
@@ -1471,8 +1467,8 @@
       "registry_name": "inverted_spearof_heaven",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/inverted_spearof_heaven.json",
-          "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearofHeavenItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearofHeavenItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/inverted_spearof_heaven.json"
         ]
       },
       "path": "~/Items"
@@ -1724,8 +1720,8 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -1922,9 +1918,9 @@
       "registry_name": "veil_main_block",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/block/VeilMainBlockBlock.java",
-          "src/main/resources/assets/craftkaisen/models/block/veil_main_block.json",
           "src/main/resources/assets/craftkaisen/models/item/veil_main_block.json",
+          "src/main/resources/assets/craftkaisen/models/block/veil_main_block.json",
+          "src/main/java/net/mcreator/craftkaisen/block/VeilMainBlockBlock.java",
           "src/main/resources/assets/craftkaisen/blockstates/veil_main_block.json"
         ]
       },
@@ -2186,10 +2182,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -2397,10 +2389,10 @@
       "registry_name": "toji_fushiguro",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -2726,9 +2718,9 @@
       "registry_name": "stop",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/StopItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/StopEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/stop.json"
+          "src/main/resources/assets/craftkaisen/models/item/stop.json",
+          "src/main/java/net/mcreator/craftkaisen/item/StopItem.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -2930,8 +2922,8 @@
       "registry_name": "cough_syrup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/CoughSyrupItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/cough_syrup.json"
+          "src/main/resources/assets/craftkaisen/models/item/cough_syrup.json",
+          "src/main/java/net/mcreator/craftkaisen/item/CoughSyrupItem.java"
         ]
       },
       "path": "~/Items"
@@ -2981,8 +2973,8 @@
       "registry_name": "rest",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/RestParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/rest.json"
+          "src/main/resources/assets/craftkaisen/particles/rest.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RestParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -3226,8 +3218,8 @@
       "registry_name": "explode",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/ExplodeItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/ExplodeEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/ExplodeItem.java",
           "src/main/resources/assets/craftkaisen/models/item/explode.json"
         ]
       },
@@ -3262,9 +3254,9 @@
       "registry_name": "sleep",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/SleepItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/SleepEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/sleep.json"
+          "src/main/resources/assets/craftkaisen/models/item/sleep.json",
+          "src/main/java/net/mcreator/craftkaisen/item/SleepItem.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3348,9 +3340,9 @@
       "registry_name": "blast_away",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/blast_away.json",
           "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/BlastAwayItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BlastAwayItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/blast_away.json"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3476,8 +3468,8 @@
       "registry_name": "binding_vow_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/BindingVowGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/network/BindingVowGUIButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/BindingVowGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/BindingVowGUIMenu.java"
         ]
       },
@@ -4085,10 +4077,10 @@
       "registry_name": "satoru_gojo",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json"
+          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -4187,8 +4179,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftkaisen/models/item/clap.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/ClapEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/ClapItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/ClapItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ClapEntity.java"
         ]
       },
       "path": "~/Abilities"
@@ -4676,8 +4668,8 @@
       "registry_name": "mahoraga_wheel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/mahoraga_wheel_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/MahoragaWheelItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/MahoragaWheelItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/mahoraga_wheel_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -4876,26 +4868,6 @@
         ]
       },
       "path": "~/Functions"
-    },
-    {
-      "name": "Render",
-      "type": "procedure",
-      "sortid": 187,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "render",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RenderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
     },
     {
       "name": "DivergentFist",
@@ -5164,8 +5136,8 @@
       "registry_name": "malevolent_shrine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/MalevolentShrineEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/MalevolentShrineRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MalevolentShrineEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/malevolent_shrine_spawn_egg.json"
         ]
       },
@@ -5279,6 +5251,21 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "LapseBlueParticle",
+      "type": "particle",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/lapse_blue_particle.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/LapseBlueParticleParticle.java"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [

@@ -18,4 +18,5 @@ public class CraftkaisenModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> EVADE = REGISTRY.register("evade", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> IMPACT = REGISTRY.register("impact", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> REST = REGISTRY.register("rest", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> LAPSE_BLUE_PARTICLE = REGISTRY.register("lapse_blue_particle", () -> new SimpleParticleType(false));
 }
