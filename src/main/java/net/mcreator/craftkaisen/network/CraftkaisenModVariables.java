@@ -106,6 +106,10 @@ public class CraftkaisenModVariables {
 			clone.Deaths = original.Deaths;
 			clone.BlackFlash = original.BlackFlash;
 			clone.RCT = original.RCT;
+			clone.SelectedMoveset = original.SelectedMoveset;
+			clone.RCTMastery = original.RCTMastery;
+			clone.RCTExp = original.RCTExp;
+			clone.Cost = original.Cost;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -324,6 +328,10 @@ public class CraftkaisenModVariables {
 		public boolean Checked = false;
 		public boolean BlackFlash = false;
 		public boolean RCT = false;
+		public double SelectedMoveset = 1.0;
+		public double RCTMastery = 0;
+		public double RCTExp = 0;
+		public double Cost = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -371,6 +379,10 @@ public class CraftkaisenModVariables {
 			nbt.putBoolean("Checked", Checked);
 			nbt.putBoolean("BlackFlash", BlackFlash);
 			nbt.putBoolean("RCT", RCT);
+			nbt.putDouble("SelectedMoveset", SelectedMoveset);
+			nbt.putDouble("RCTMastery", RCTMastery);
+			nbt.putDouble("RCTExp", RCTExp);
+			nbt.putDouble("Cost", Cost);
 			return nbt;
 		}
 
@@ -415,6 +427,10 @@ public class CraftkaisenModVariables {
 			Checked = nbt.getBoolean("Checked");
 			BlackFlash = nbt.getBoolean("BlackFlash");
 			RCT = nbt.getBoolean("RCT");
+			SelectedMoveset = nbt.getDouble("SelectedMoveset");
+			RCTMastery = nbt.getDouble("RCTMastery");
+			RCTExp = nbt.getDouble("RCTExp");
+			Cost = nbt.getDouble("Cost");
 		}
 	}
 
@@ -478,6 +494,10 @@ public class CraftkaisenModVariables {
 					variables.Checked = message.data.Checked;
 					variables.BlackFlash = message.data.BlackFlash;
 					variables.RCT = message.data.RCT;
+					variables.SelectedMoveset = message.data.SelectedMoveset;
+					variables.RCTMastery = message.data.RCTMastery;
+					variables.RCTExp = message.data.RCTExp;
+					variables.Cost = message.data.Cost;
 				}
 			});
 			context.setPacketHandled(true);

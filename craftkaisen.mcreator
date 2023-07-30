@@ -1154,6 +1154,7 @@
     {
       "name": "FlashStepAdvancement",
       "type": "achievement",
+      "sortid": 234,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flash_step_advancement",
@@ -1346,12 +1347,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/RegenCursedEnergyProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -1955,27 +1951,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "SpecialCDDisplay",
-      "type": "procedure",
-      "sortid": 110,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "special_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SpecialCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "MoveSpecialCooldown",
       "type": "potioneffect",
       "sortid": 103,
@@ -2022,27 +1997,6 @@
         ]
       },
       "path": "~/Keybinds/Procedures"
-    },
-    {
-      "name": "MoveThreeCDDisplay",
-      "type": "procedure",
-      "sortid": 107,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_three_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveThreeCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
     },
     {
       "name": "Move4Cooldown",
@@ -2093,48 +2047,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "UltimateCDDisplay",
-      "type": "procedure",
-      "sortid": 111,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ultimate_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/UltimateCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveFourCDDisplay",
-      "type": "procedure",
-      "sortid": 108,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_four_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveFourCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "Move1Cooldown",
       "type": "potioneffect",
       "sortid": 98,
@@ -2147,27 +2059,6 @@
         ]
       },
       "path": "~/Potion Effects"
-    },
-    {
-      "name": "MoveTwoCDDisplay",
-      "type": "procedure",
-      "sortid": 106,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_two_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveTwoCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
     },
     {
       "name": "VeilPlace",
@@ -2290,48 +2181,6 @@
         ]
       },
       "path": "~/Abilities"
-    },
-    {
-      "name": "MoveOneCDDisplay",
-      "type": "procedure",
-      "sortid": 105,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_one_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveOneCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveFiveCDDisplay",
-      "type": "procedure",
-      "sortid": 109,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_five_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveFiveCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
     },
     {
       "name": "ChargeCursedEnergy",
@@ -4761,10 +4610,6 @@
             "type": "entity"
           },
           {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
             "name": "sourceentity",
             "type": "entity"
           }
@@ -5235,6 +5080,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5253,6 +5102,304 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "RCTHealing",
+      "type": "potioneffect",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_healing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/RCTHealingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "RCTHealingActiveTick",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_healing_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RCTHealingActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "RCTHealingActivate",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_healing_activate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RCTHealingActivateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DisplaySelectedTechnique",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_selected_technique",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplaySelectedTechniqueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "SwitchMoveset",
+      "type": "keybind",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_moveset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/SwitchMovesetMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SwitchMovesetPressed",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "switch_moveset_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SwitchMovesetPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "MasteredRCTHealing",
+      "type": "potioneffect",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mastered_rct_healing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/MasteredRCTHealingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "MasteredRCTHealingActiveTick",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mastered_rct_healing_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MasteredRCTHealingActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "RCTCooldown",
+      "type": "potioneffect",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/RCTCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "SetRCTLevelCommand",
+      "type": "command",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rct_level_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetRCTLevelCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetRCTLevel",
+      "type": "procedure",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_rct_level",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetRCTLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "DisplayMoveCost",
+      "type": "procedure",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_move_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayMoveCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "CoreSkillTree",
+      "type": "achievement",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "core_skill_tree",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/core_skill_tree.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "RCTHealingExpires",
+      "type": "procedure",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_healing_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RCTHealingExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
     }
   ],
   "variable_elements": [
@@ -5513,6 +5660,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "SelectedMoveset",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "RCTMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RCTExp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -5571,6 +5742,7 @@
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",
       "item.craftkaisen.fly_head_spawn_egg": "Fly Head Spawn Egg",
+      "death.attack.overuse": " fried their brain",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
@@ -5603,6 +5775,7 @@
       "item.craftkaisen.twist": "Twist",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "itemGroup.tabjjkitems": "JJK Items",
+      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
@@ -5615,6 +5788,7 @@
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
+      "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
@@ -5636,6 +5810,7 @@
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "item.craftkaisen.sleep": "Sleep",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "effect.craftkaisen.sleeping": "Sleeping",
@@ -5663,12 +5838,15 @@
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "item.craftkaisen.blast_away": "Blast Away",
       "subtitles.veil.use": "Veil Used",
+      "advancements.core_skill_tree.title": "Core",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
       "itemGroup.tabjjkmobs": "JJK Mobs",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
+      "key.craftkaisen.switch_moveset": "Switch Moveset",
       "gui.craftkaisen.main_hud.label_quests": "Quests",
+      "advancements.core_skill_tree.descr": "The core of cursed energy.",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",

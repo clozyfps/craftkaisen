@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
+import net.mcreator.craftkaisen.network.SwitchMovesetMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
@@ -94,6 +95,19 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping SWITCH_MOVESET = new KeyMapping("key.craftkaisen.switch_moveset", GLFW.GLFW_KEY_LEFT, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SwitchMovesetMessage(0, 0));
+				SwitchMovesetMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -103,6 +117,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(FLASH_STEP);
 		event.register(OPEN_MAIN_MENU_BIND);
 		event.register(CHARGE_CURSED_ENERGY);
+		event.register(SWITCH_MOVESET);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -115,6 +130,7 @@ public class CraftkaisenModKeyMappings {
 				FLASH_STEP.consumeClick();
 				OPEN_MAIN_MENU_BIND.consumeClick();
 				CHARGE_CURSED_ENERGY.consumeClick();
+				SWITCH_MOVESET.consumeClick();
 			}
 		}
 	}

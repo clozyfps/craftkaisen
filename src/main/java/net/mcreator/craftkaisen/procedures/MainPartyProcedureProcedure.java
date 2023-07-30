@@ -47,6 +47,7 @@ public class MainPartyProcedureProcedure {
 					try {
 						for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
 							entityiterator.getPersistentData().putBoolean("Pending", true);
+							entityiterator.getPersistentData().putString("InviteName", (entity.getDisplayName().getString()));
 							if (entityiterator instanceof Player _player && !_player.level.isClientSide())
 								_player.displayClientMessage(Component.literal(("You have been invited to " + entity.getDisplayName().getString() + "s party! Type /party accept " + entity.getDisplayName().getString() + " to join or /party decline "
 										+ entity.getDisplayName().getString() + " to deny the invite.")), false);
@@ -59,7 +60,16 @@ public class MainPartyProcedureProcedure {
 						_player.displayClientMessage(Component.literal("You must be in a party to send an invite!"), false);
 				}
 			} else if ((StringArgumentType.getString(arguments, "action")).equals("accept")) {
-				if (entity.getPersistentData().getBoolean("Pending")) {
+				if (entity.getPersistentData().getBoolean("Pending") && (entity.getPersistentData().getString("InviteName")).equals((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getDisplayName().getString())) {
 					entity.getPersistentData().putBoolean("Pending", false);
 					{
 						boolean _setval = true;
