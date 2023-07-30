@@ -16,13 +16,6 @@ public class SetClapProcedure {
 			});
 		}
 		{
-			String _setval = "";
-			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.SelectedTechnique = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		{
 			double _setval = 500;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.CursedEnergyCap = _setval;
