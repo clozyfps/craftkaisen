@@ -14,6 +14,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.player.AbstractClientPlayer;
+
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 public class ClapManipulationProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -42,5 +49,13 @@ public class ClapManipulationProcedureProcedure {
 			_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 1, 2, 1, 0);
 		if (entity instanceof LivingEntity _entity)
 			_entity.swing(InteractionHand.MAIN_HAND, true);
+		if (world.isClientSide()) {
+			if (entity instanceof AbstractClientPlayer player) {
+				var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("craftkaisen", "player_animation"));
+				if (animation != null && !animation.isActive()) {
+					animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("craftkaisen", "clap"))));
+				}
+			}
+		}
 	}
 }

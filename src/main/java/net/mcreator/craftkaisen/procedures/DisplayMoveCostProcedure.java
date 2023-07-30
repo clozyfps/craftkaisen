@@ -1,8 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import javax.annotation.Nullable;
 
 public class DisplayMoveCostProcedure {
 	public static String execute(Entity entity) {
@@ -13,7 +13,7 @@ public class DisplayMoveCostProcedure {
 				|| ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Moveset2")) {
 			v = "Cost : " + "0";
 		} else {
-			v = "Cost : " + new java.text.DecimalFormat("#").format((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Cost);
+			v = "Cost : " + new java.text.DecimalFormat("#").format();
 		}
 		return v;
 	}

@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.item.TojiArmorItem;
 import net.mcreator.craftkaisen.item.Test2Item;
 import net.mcreator.craftkaisen.item.TesItem;
 import net.mcreator.craftkaisen.item.SunglassesItem;
+import net.mcreator.craftkaisen.item.SukunaFightingArmorItem;
 import net.mcreator.craftkaisen.item.StopItem;
 import net.mcreator.craftkaisen.item.SleepItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
@@ -78,6 +79,7 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MALEVOLENT_SHRINE, -6737152, -16764058, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> MAHORAGA_WHEEL_HELMET = REGISTRY.register("mahoraga_wheel_helmet", () -> new MahoragaWheelItem.Helmet());
 	public static final RegistryObject<Item> SUNGLASSES_HELMET = REGISTRY.register("sunglasses_helmet", () -> new SunglassesItem.Helmet());
+	public static final RegistryObject<Item> SUKUNA_FIGHTING_ARMOR_CHESTPLATE = REGISTRY.register("sukuna_fighting_armor_chestplate", () -> new SukunaFightingArmorItem.Chestplate());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -2,17 +2,17 @@
   "_fv": 43,
   "_type": "item",
   "definition": {
-    "renderType": 0,
-    "texture": "vv_head",
-    "customModelName": "Normal",
-    "name": "Cursed Finger",
+    "renderType": 1,
+    "texture": "sukunafingerimg",
+    "customModelName": "sukunafinger:default",
+    "name": "Sukuna's Cursed Finger",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "CUSTOM:Jjkitems"
     },
     "stackSize": 20,
     "enchantability": 0,
-    "useDuration": 32,
+    "useDuration": 64,
     "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
@@ -24,7 +24,9 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [],
+    "specialInfo": [
+      "Finger of the \"King Of Curses\""
+    ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,

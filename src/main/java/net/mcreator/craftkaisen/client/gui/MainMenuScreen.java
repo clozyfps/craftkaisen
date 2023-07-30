@@ -1,35 +1,15 @@
 package net.mcreator.craftkaisen.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.InventoryScreen;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
-import net.mcreator.craftkaisen.procedures.TechniqueDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.LevelDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.ExpDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.DisplayPlayerProcedure;
-import net.mcreator.craftkaisen.procedures.ClanDisplayProcedure;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
+
 	private final static HashMap<String, Object> guistate = MainMenuMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Button button_prestige;
+
 	ImageButton imagebutton_x;
 	ImageButton imagebutton_x1;
 
@@ -54,7 +34,12 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-		if (DisplayPlayerProcedure.execute(entity) instanceof LivingEntity livingEntity) {
+
+		if (
+
+		DisplayPlayerProcedure.execute(entity)
+
+		instanceof LivingEntity livingEntity) {
 			InventoryScreen.renderEntityInInventoryRaw(this.leftPos + 178, this.topPos + 141, 50, 0f + (float) Math.atan((this.leftPos + 178 - mouseX) / 40.0), (float) Math.atan((this.topPos + 91 - mouseY) / 40.0), livingEntity);
 		}
 	}
@@ -80,6 +65,7 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -113,18 +99,27 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	@Override
 	public void init() {
 		super.init();
+
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+
 		button_prestige = new Button(this.leftPos + 16, this.topPos + 150, 67, 20, Component.translatable("gui.craftkaisen.main_menu.button_prestige"), e -> {
 		});
+
 		guistate.put("button:button_prestige", button_prestige);
 		this.addRenderableWidget(button_prestige);
+
 		imagebutton_x = new ImageButton(this.leftPos + 152, this.topPos + 151, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x.png"), 20, 40, e -> {
 		});
+
 		guistate.put("button:imagebutton_x", imagebutton_x);
 		this.addRenderableWidget(imagebutton_x);
+
 		imagebutton_x1 = new ImageButton(this.leftPos + 177, this.topPos + 150, 20, 20, 0, 0, 20, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_x1.png"), 20, 40, e -> {
 		});
+
 		guistate.put("button:imagebutton_x1", imagebutton_x1);
 		this.addRenderableWidget(imagebutton_x1);
+
 	}
+
 }

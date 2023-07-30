@@ -18,6 +18,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.CommandFunction;
+import net.minecraft.client.player.AbstractClientPlayer;
 
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -26,10 +27,24 @@ import java.util.Optional;
 import java.util.List;
 import java.util.Comparator;
 
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
+
 public class FlipKickProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		if (world.isClientSide()) {
+			if (entity instanceof AbstractClientPlayer player) {
+				var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("craftkaisen", "player_animation"));
+				if (animation != null && !animation.isActive()) {
+					animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("craftkaisen", "kickflip"))));
+				}
+			}
+		}
 		CraftkaisenMod.queueServerWork(2, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", true);
 			CraftkaisenMod.queueServerWork(20, () -> {

@@ -1,6 +1,7 @@
 {
-  "parent": "item/generated",
+  "parent": "craftkaisen:custom/sukunafinger",
   "textures": {
-    "layer0": "craftkaisen:items/vv_head"
+    "0": "craftkaisen:blocks/sukunafinger",
+    "particle": "craftkaisen:items/sukunafingerimg"
   }
 }

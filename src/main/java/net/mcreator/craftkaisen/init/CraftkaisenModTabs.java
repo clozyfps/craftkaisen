@@ -50,7 +50,7 @@ public class CraftkaisenModTabs {
 		TAB_JJKITEMS = new CreativeModeTab("tabjjkitems") {
 			@Override
 			public ItemStack makeIcon() {
-				return new ItemStack(CraftkaisenModItems.COUGH_SYRUP.get());
+				return new ItemStack(CraftkaisenModItems.CURSED_FINGER.get());
 			}
 
 			@Override
