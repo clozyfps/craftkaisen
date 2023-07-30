@@ -5286,6 +5286,21 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "SukunaFightingArmor",
+      "type": "armor",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_fighting_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/SukunaFightingArmorItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/sukuna_fighting_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [
@@ -5608,9 +5623,9 @@
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "gui.craftkaisen.main_hud.label_quest3": "Quest3",
-      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
-      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.main_hud.label_quest2": "Quest2",
+      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
+      "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.divergent_fist": "DivergentFist",
       "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
@@ -5700,6 +5715,7 @@
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
       "itemGroup.tabjjkmobs": "JJK Mobs",
+      "item.craftkaisen.sukuna_fighting_armor_chestplate": "Sukuna Fighting Haori",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
       "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
