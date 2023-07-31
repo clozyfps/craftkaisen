@@ -31,9 +31,6 @@
             "value": -65536,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "MoveOneCDDisplay"
-          },
           "x": 6,
           "y": 62
         }
@@ -48,9 +45,6 @@
           "color": {
             "value": -65536,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "MoveTwoCDDisplay"
           },
           "x": 6,
           "y": 80
@@ -67,9 +61,6 @@
             "value": -65536,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "MoveThreeCDDisplay"
-          },
           "x": 6,
           "y": 98
         }
@@ -84,9 +75,6 @@
           "color": {
             "value": -65536,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "MoveFourCDDisplay"
           },
           "x": 6,
           "y": 116
@@ -103,9 +91,6 @@
             "value": -65536,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "MoveFiveCDDisplay"
-          },
           "x": 6,
           "y": 134
         }
@@ -121,9 +106,6 @@
             "value": -65536,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "SpecialCDDisplay"
-          },
           "x": 6,
           "y": 152
         }
@@ -138,9 +120,6 @@
           "color": {
             "value": -65536,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "UltimateCDDisplay"
           },
           "x": 6,
           "y": 170

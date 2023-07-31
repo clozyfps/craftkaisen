@@ -1746,7 +1746,7 @@
     {
       "name": "MainHUD",
       "type": "overlay",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "main_hud",
       "metadata": {
@@ -5453,6 +5453,23 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "Jogo",
+      "type": "livingentity",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jogo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/JogoRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/jogo_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/jogo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/JogoEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -5800,9 +5817,9 @@
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "gui.craftkaisen.main_hud.label_quest3": "Quest3",
-      "gui.craftkaisen.main_hud.label_quest2": "Quest2",
-      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
+      "gui.craftkaisen.main_hud.label_move_five": "Move Five",
+      "gui.craftkaisen.main_hud.label_quest2": "Quest2",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.divergent_fist": "DivergentFist",
       "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
@@ -5859,6 +5876,7 @@
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
+      "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "item.craftkaisen.sleep": "Sleep",
@@ -5879,6 +5897,7 @@
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.cough_syrup": "Cough Syrup",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
+      "entity.craftkaisen.jogo": "Jogo",
       "block.craftkaisen.quest_board": "Quest Board",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.main_hud.label_move_four": "Move Four",

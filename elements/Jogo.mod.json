@@ -2,10 +2,10 @@
   "_fv": 43,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Satoru Gojo",
+    "mobName": "Jogo",
     "mobLabel": "",
-    "mobModelName": "Biped",
-    "mobModelTexture": "satoru_gojo.png",
+    "mobModelName": "Modeljogo",
+    "mobModelTexture": "jogo.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -16,11 +16,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16514026,
+      "value": -6711040,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -2100742,
+      "value": -16777216,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -36,7 +36,7 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:Blindfold.helmet"
+      "value": ""
     },
     "equipmentBody": {
       "value": ""
@@ -49,15 +49,15 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 26,
+    "attackStrength": 16,
     "attackKnockback": 2.0,
-    "knockbackResistance": 1.5,
+    "knockbackResistance": 0.1,
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
     "armorBaseValue": 0.1,
     "trackingRange": 64,
     "followRange": 50,
-    "health": 850,
+    "health": 700,
     "xpAmount": 3,
     "waterMob": false,
     "flyingMob": false,
@@ -68,12 +68,12 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
+    "immuneToFire": true,
     "immuneToArrows": false,
-    "immuneToFallDamage": false,
+    "immuneToFallDamage": true,
     "immuneToCactus": false,
     "immuneToDrowning": false,
-    "immuneToLightning": false,
+    "immuneToLightning": true,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
@@ -96,15 +96,9 @@
     "stepSound": {
       "value": ""
     },
-    "onMobTickUpdate": {
-      "name": "SatoruGojoOnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "SatoruGojoOnInitialEntitySpawn"
-    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.8</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.3</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:SatoruGojo</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:JujutsuStudent</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityCow</field><field name=\"condition\">null,null</field><next><block type=\"wander_avoid_water\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -117,8 +111,8 @@
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 1,
-    "mobSpawningType": "ambient",
+    "spawningProbability": 3,
+    "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [],

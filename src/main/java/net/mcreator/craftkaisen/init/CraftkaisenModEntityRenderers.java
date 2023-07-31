@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
+import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
@@ -42,5 +43,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.SATORU_GOJO.get(), SatoruGojoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.FINGER_BEARER.get(), FingerBearerRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MALEVOLENT_SHRINE.get(), MalevolentShrineRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.JOGO.get(), JogoRenderer::new);
 	}
 }
