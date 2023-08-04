@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "LEFT",
+    "keyBindingName": "Switch Moveset",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "SwitchMovesetPressed"
+    }
+  }
+}

@@ -106,6 +106,10 @@ public class CraftkaisenModVariables {
 			clone.PartyLeader = original.PartyLeader;
 			clone.Deaths = original.Deaths;
 			clone.BlackFlash = original.BlackFlash;
+			clone.SelectedMoveset = original.SelectedMoveset;
+			clone.RCTMastery = original.RCTMastery;
+			clone.Cost = original.Cost;
+			clone.RCTExp = original.RCTExp;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -324,6 +328,10 @@ public class CraftkaisenModVariables {
 		public String PartyLeader = "";
 		public double Deaths = 0;
 		public boolean BlackFlash = false;
+		public double SelectedMoveset = 1.0;
+		public double RCTMastery = 0;
+		public double Cost = 0;
+		public double RCTExp = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -371,6 +379,10 @@ public class CraftkaisenModVariables {
 			nbt.putString("PartyLeader", PartyLeader);
 			nbt.putDouble("Deaths", Deaths);
 			nbt.putBoolean("BlackFlash", BlackFlash);
+			nbt.putDouble("SelectedMoveset", SelectedMoveset);
+			nbt.putDouble("RCTMastery", RCTMastery);
+			nbt.putDouble("Cost", Cost);
+			nbt.putDouble("RCTExp", RCTExp);
 			return nbt;
 		}
 
@@ -415,6 +427,10 @@ public class CraftkaisenModVariables {
 			PartyLeader = nbt.getString("PartyLeader");
 			Deaths = nbt.getDouble("Deaths");
 			BlackFlash = nbt.getBoolean("BlackFlash");
+			SelectedMoveset = nbt.getDouble("SelectedMoveset");
+			RCTMastery = nbt.getDouble("RCTMastery");
+			Cost = nbt.getDouble("Cost");
+			RCTExp = nbt.getDouble("RCTExp");
 		}
 	}
 
@@ -478,6 +494,10 @@ public class CraftkaisenModVariables {
 					variables.PartyLeader = message.data.PartyLeader;
 					variables.Deaths = message.data.Deaths;
 					variables.BlackFlash = message.data.BlackFlash;
+					variables.SelectedMoveset = message.data.SelectedMoveset;
+					variables.RCTMastery = message.data.RCTMastery;
+					variables.Cost = message.data.Cost;
+					variables.RCTExp = message.data.RCTExp;
 				}
 			});
 			context.setPacketHandled(true);
