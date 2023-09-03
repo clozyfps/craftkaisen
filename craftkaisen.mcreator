@@ -115,8 +115,8 @@
       "registry_name": "hollow_purple_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HollowPurpleEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntityEntity.java"
         ]
       },
       "path": "~/Abilities"
@@ -965,6 +965,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -979,8 +983,8 @@
       "registry_name": "impact",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/impact.json"
+          "src/main/resources/assets/craftkaisen/particles/impact.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ImpactParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -1166,6 +1170,7 @@
     {
       "name": "FlashStepAdvancement",
       "type": "achievement",
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flash_step_advancement",
@@ -2089,6 +2094,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2238,9 +2247,9 @@
       "registry_name": "infinite_voidd",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/InfiniteVoiddRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/InfiniteVoiddEntity.java"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/infinite_voidd_biome_modifier.json"
         ]
       },
       "path": "~/Abilities"
@@ -2554,8 +2563,8 @@
       "registry_name": "blindfold",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json"
+          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java"
         ]
       },
       "path": "~/Armor"
@@ -2803,8 +2812,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/entity/TwistEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/twist.json",
-          "src/main/java/net/mcreator/craftkaisen/item/TwistItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/TwistItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/twist.json"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -2853,9 +2862,9 @@
       "registry_name": "get_crushed",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/GetCrushedEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/get_crushed.json",
-          "src/main/java/net/mcreator/craftkaisen/item/GetCrushedItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/GetCrushedEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/item/GetCrushedItem.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -4179,8 +4188,8 @@
       "registry_name": "cursed_finger",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/CursedFingerItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/cursed_finger.json"
+          "src/main/resources/assets/craftkaisen/models/item/cursed_finger.json",
+          "src/main/java/net/mcreator/craftkaisen/item/CursedFingerItem.java"
         ]
       },
       "path": "~/Items"
@@ -5925,7 +5934,7 @@
       "key.craftkaisen.block_bind": "Block",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
-      "item.craftkaisen.cursed_finger": "Cursed Finger",
+      "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
@@ -5936,6 +5945,7 @@
       "item.craftkaisen.twist": "Twist",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "itemGroup.tabjjkitems": "JJK Items",
+      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
@@ -5948,6 +5958,7 @@
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
+      "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
       "subtitles.electric": "",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
@@ -5966,15 +5977,18 @@
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "gui.craftkaisen.main_menu.button_prestige": "Prestige",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
+      "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "item.craftkaisen.sleep": "Sleep",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "effect.craftkaisen.sleeping": "Sleeping",
       "item.craftkaisen.get_crushed": "Get Crushed",
       "item.craftkaisen.tes": "Tes",
+      "advancements.black_flash_advancement.descr": "WIP",
       "key.craftkaisen.use_technique": "Use Technique",
       "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
       "entity.craftkaisen.malevolent_shrine": "Malevolent Shrine",
@@ -5985,6 +5999,7 @@
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.cough_syrup": "Cough Syrup",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
+      "entity.craftkaisen.jogo": "Jogo",
       "block.craftkaisen.quest_board": "Quest Board",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.main_hud.label_move_four": "Move Four",
@@ -5997,14 +6012,19 @@
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "item.craftkaisen.blast_away": "Blast Away",
       "subtitles.veil.use": "Veil Used",
+      "advancements.core_skill_tree.title": "Core",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
       "itemGroup.tabjjkmobs": "JJK Mobs",
+      "item.craftkaisen.sukuna_fighting_armor_chestplate": "Sukuna Fighting Haori",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
+      "key.craftkaisen.switch_moveset": "Switch Moveset",
       "gui.craftkaisen.main_hud.label_quests": "Quests",
+      "advancements.core_skill_tree.descr": "The core of cursed energy.",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
+      "advancements.black_flash_advancement.title": "Black Flash",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "item.craftkaisen.explode": "Explode",
