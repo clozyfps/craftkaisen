@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_chestplate"
+    },
+    "title": {
+      "translate": "advancements.power_v.title"
+    },
+    "description": {
+      "translate": "advancements.power_v.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "power_v": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craftkaisen:power_iv"
+}

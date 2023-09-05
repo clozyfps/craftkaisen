@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:golden_chestplate"
+    },
+    "title": {
+      "translate": "advancements.power_iv.title"
+    },
+    "description": {
+      "translate": "advancements.power_iv.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "power_iv": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craftkaisen:power_iii"
+}
