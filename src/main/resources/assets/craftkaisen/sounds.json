@@ -39,5 +39,13 @@
         "stream": false
       }
     ]
+  },
+  "electric": {
+    "sounds": [
+      {
+        "name": "craftkaisen:electric_shock",
+        "stream": false
+      }
+    ]
   }
 }

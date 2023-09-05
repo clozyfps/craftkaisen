@@ -80,6 +80,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> MAHORAGA_WHEEL_HELMET = REGISTRY.register("mahoraga_wheel_helmet", () -> new MahoragaWheelItem.Helmet());
 	public static final RegistryObject<Item> SUNGLASSES_HELMET = REGISTRY.register("sunglasses_helmet", () -> new SunglassesItem.Helmet());
 	public static final RegistryObject<Item> SUKUNA_FIGHTING_ARMOR_CHESTPLATE = REGISTRY.register("sukuna_fighting_armor_chestplate", () -> new SukunaFightingArmorItem.Chestplate());
+	public static final RegistryObject<Item> JOGO_SPAWN_EGG = REGISTRY.register("jogo_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.JOGO, -6711040, -16777216, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

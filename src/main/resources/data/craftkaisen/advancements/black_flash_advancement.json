@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sculk_vein"
+    },
+    "title": {
+      "translate": "advancements.black_flash_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.black_flash_advancement.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "black_flash_advancement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 20
+  },
+  "parent": "craftkaisen:deleted_mod_element"
+}

@@ -97,10 +97,6 @@ public class CraftkaisenModVariables {
 			clone.VesselTechnique = original.VesselTechnique;
 			clone.QuestAmount = original.QuestAmount;
 			clone.QuestProgress = original.QuestProgress;
-			clone.SkillStrengthCost = original.SkillStrengthCost;
-			clone.SkillSpeedCost = original.SkillSpeedCost;
-			clone.SkillDefenseCost = original.SkillDefenseCost;
-			clone.SkillCurseCost = original.SkillCurseCost;
 			clone.InParty = original.InParty;
 			clone.PartyLeader = original.PartyLeader;
 			clone.Deaths = original.Deaths;
@@ -110,15 +106,19 @@ public class CraftkaisenModVariables {
 			clone.RCTMastery = original.RCTMastery;
 			clone.Cost = original.Cost;
 			clone.RCTExp = original.RCTExp;
-			clone.VesselPlayerTechnique = original.VesselPlayerTechnique;
-			clone.CursedEnergyChargeSpeed = original.CursedEnergyChargeSpeed;
-			clone.Move1 = original.Move1;
-			clone.Move2 = original.Move2;
-			clone.Move3 = original.Move3;
-			clone.Move4 = original.Move4;
-			clone.Move5 = original.Move5;
-			clone.MoveSpecial = original.MoveSpecial;
+			clone.SkillSpeedCost = original.SkillSpeedCost;
 			clone.MoveUltimate = original.MoveUltimate;
+			clone.SkillStrengthCost = original.SkillStrengthCost;
+			clone.SkillDefenseCost = original.SkillDefenseCost;
+			clone.CursedEnergyChargeSpeed = original.CursedEnergyChargeSpeed;
+			clone.SkillCurseCost = original.SkillCurseCost;
+			clone.MoveSpecial = original.MoveSpecial;
+			clone.VesselPlayerTechnique = original.VesselPlayerTechnique;
+			clone.Move2 = original.Move2;
+			clone.Move1 = original.Move1;
+			clone.Move4 = original.Move4;
+			clone.Move3 = original.Move3;
+			clone.Move5 = original.Move5;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -327,10 +327,6 @@ public class CraftkaisenModVariables {
 		public String VesselTechnique = "\"\"";
 		public double QuestAmount = 0;
 		public double QuestProgress = 0;
-		public double SkillStrengthCost = 0;
-		public double SkillSpeedCost = 0;
-		public double SkillDefenseCost = 0;
-		public double SkillCurseCost = 0;
 		public boolean InParty = false;
 		public String PartyLeader = "";
 		public double Deaths = 0;
@@ -341,15 +337,19 @@ public class CraftkaisenModVariables {
 		public double RCTMastery = 0;
 		public double Cost = 0;
 		public double RCTExp = 0;
-		public String VesselPlayerTechnique = "\"\"";
-		public double CursedEnergyChargeSpeed = 2.0;
-		public String Move1 = "\"\"";
-		public String Move2 = "\"\"";
-		public String Move3 = "\"\"";
-		public String Move4 = "\"\"";
-		public String Move5 = "\"\"";
-		public String MoveSpecial = "\"\"";
+		public double SkillSpeedCost = 0;
 		public String MoveUltimate = "\"\"";
+		public double SkillStrengthCost = 0;
+		public double SkillDefenseCost = 0;
+		public double CursedEnergyChargeSpeed = 2.0;
+		public double SkillCurseCost = 0;
+		public String MoveSpecial = "\"\"";
+		public String VesselPlayerTechnique = "\"\"";
+		public String Move2 = "\"\"";
+		public String Move1 = "\"\"";
+		public String Move4 = "\"\"";
+		public String Move3 = "\"\"";
+		public String Move5 = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -387,10 +387,6 @@ public class CraftkaisenModVariables {
 			nbt.putString("VesselTechnique", VesselTechnique);
 			nbt.putDouble("QuestAmount", QuestAmount);
 			nbt.putDouble("QuestProgress", QuestProgress);
-			nbt.putDouble("SkillStrengthCost", SkillStrengthCost);
-			nbt.putDouble("SkillSpeedCost", SkillSpeedCost);
-			nbt.putDouble("SkillDefenseCost", SkillDefenseCost);
-			nbt.putDouble("SkillCurseCost", SkillCurseCost);
 			nbt.putBoolean("InParty", InParty);
 			nbt.putString("PartyLeader", PartyLeader);
 			nbt.putDouble("Deaths", Deaths);
@@ -401,15 +397,19 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("RCTMastery", RCTMastery);
 			nbt.putDouble("Cost", Cost);
 			nbt.putDouble("RCTExp", RCTExp);
-			nbt.putString("VesselPlayerTechnique", VesselPlayerTechnique);
-			nbt.putDouble("CursedEnergyChargeSpeed", CursedEnergyChargeSpeed);
-			nbt.putString("Move1", Move1);
-			nbt.putString("Move2", Move2);
-			nbt.putString("Move3", Move3);
-			nbt.putString("Move4", Move4);
-			nbt.putString("Move5", Move5);
-			nbt.putString("MoveSpecial", MoveSpecial);
+			nbt.putDouble("SkillSpeedCost", SkillSpeedCost);
 			nbt.putString("MoveUltimate", MoveUltimate);
+			nbt.putDouble("SkillStrengthCost", SkillStrengthCost);
+			nbt.putDouble("SkillDefenseCost", SkillDefenseCost);
+			nbt.putDouble("CursedEnergyChargeSpeed", CursedEnergyChargeSpeed);
+			nbt.putDouble("SkillCurseCost", SkillCurseCost);
+			nbt.putString("MoveSpecial", MoveSpecial);
+			nbt.putString("VesselPlayerTechnique", VesselPlayerTechnique);
+			nbt.putString("Move2", Move2);
+			nbt.putString("Move1", Move1);
+			nbt.putString("Move4", Move4);
+			nbt.putString("Move3", Move3);
+			nbt.putString("Move5", Move5);
 			return nbt;
 		}
 
@@ -444,10 +444,6 @@ public class CraftkaisenModVariables {
 			VesselTechnique = nbt.getString("VesselTechnique");
 			QuestAmount = nbt.getDouble("QuestAmount");
 			QuestProgress = nbt.getDouble("QuestProgress");
-			SkillStrengthCost = nbt.getDouble("SkillStrengthCost");
-			SkillSpeedCost = nbt.getDouble("SkillSpeedCost");
-			SkillDefenseCost = nbt.getDouble("SkillDefenseCost");
-			SkillCurseCost = nbt.getDouble("SkillCurseCost");
 			InParty = nbt.getBoolean("InParty");
 			PartyLeader = nbt.getString("PartyLeader");
 			Deaths = nbt.getDouble("Deaths");
@@ -458,15 +454,19 @@ public class CraftkaisenModVariables {
 			RCTMastery = nbt.getDouble("RCTMastery");
 			Cost = nbt.getDouble("Cost");
 			RCTExp = nbt.getDouble("RCTExp");
-			VesselPlayerTechnique = nbt.getString("VesselPlayerTechnique");
-			CursedEnergyChargeSpeed = nbt.getDouble("CursedEnergyChargeSpeed");
-			Move1 = nbt.getString("Move1");
-			Move2 = nbt.getString("Move2");
-			Move3 = nbt.getString("Move3");
-			Move4 = nbt.getString("Move4");
-			Move5 = nbt.getString("Move5");
-			MoveSpecial = nbt.getString("MoveSpecial");
+			SkillSpeedCost = nbt.getDouble("SkillSpeedCost");
 			MoveUltimate = nbt.getString("MoveUltimate");
+			SkillStrengthCost = nbt.getDouble("SkillStrengthCost");
+			SkillDefenseCost = nbt.getDouble("SkillDefenseCost");
+			CursedEnergyChargeSpeed = nbt.getDouble("CursedEnergyChargeSpeed");
+			SkillCurseCost = nbt.getDouble("SkillCurseCost");
+			MoveSpecial = nbt.getString("MoveSpecial");
+			VesselPlayerTechnique = nbt.getString("VesselPlayerTechnique");
+			Move2 = nbt.getString("Move2");
+			Move1 = nbt.getString("Move1");
+			Move4 = nbt.getString("Move4");
+			Move3 = nbt.getString("Move3");
+			Move5 = nbt.getString("Move5");
 		}
 	}
 
@@ -520,10 +520,6 @@ public class CraftkaisenModVariables {
 					variables.VesselTechnique = message.data.VesselTechnique;
 					variables.QuestAmount = message.data.QuestAmount;
 					variables.QuestProgress = message.data.QuestProgress;
-					variables.SkillStrengthCost = message.data.SkillStrengthCost;
-					variables.SkillSpeedCost = message.data.SkillSpeedCost;
-					variables.SkillDefenseCost = message.data.SkillDefenseCost;
-					variables.SkillCurseCost = message.data.SkillCurseCost;
 					variables.InParty = message.data.InParty;
 					variables.PartyLeader = message.data.PartyLeader;
 					variables.Deaths = message.data.Deaths;
@@ -534,15 +530,19 @@ public class CraftkaisenModVariables {
 					variables.RCTMastery = message.data.RCTMastery;
 					variables.Cost = message.data.Cost;
 					variables.RCTExp = message.data.RCTExp;
-					variables.VesselPlayerTechnique = message.data.VesselPlayerTechnique;
-					variables.CursedEnergyChargeSpeed = message.data.CursedEnergyChargeSpeed;
-					variables.Move1 = message.data.Move1;
-					variables.Move2 = message.data.Move2;
-					variables.Move3 = message.data.Move3;
-					variables.Move4 = message.data.Move4;
-					variables.Move5 = message.data.Move5;
-					variables.MoveSpecial = message.data.MoveSpecial;
+					variables.SkillSpeedCost = message.data.SkillSpeedCost;
 					variables.MoveUltimate = message.data.MoveUltimate;
+					variables.SkillStrengthCost = message.data.SkillStrengthCost;
+					variables.SkillDefenseCost = message.data.SkillDefenseCost;
+					variables.CursedEnergyChargeSpeed = message.data.CursedEnergyChargeSpeed;
+					variables.SkillCurseCost = message.data.SkillCurseCost;
+					variables.MoveSpecial = message.data.MoveSpecial;
+					variables.VesselPlayerTechnique = message.data.VesselPlayerTechnique;
+					variables.Move2 = message.data.Move2;
+					variables.Move1 = message.data.Move1;
+					variables.Move4 = message.data.Move4;
+					variables.Move3 = message.data.Move3;
+					variables.Move5 = message.data.Move5;
 				}
 			});
 			context.setPacketHandled(true);

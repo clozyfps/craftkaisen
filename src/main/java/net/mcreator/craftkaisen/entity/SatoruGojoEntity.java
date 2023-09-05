@@ -8,6 +8,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
@@ -22,6 +23,7 @@ import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
@@ -32,6 +34,7 @@ import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnEntityTickUpdateProcedure;
+import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
 import javax.annotation.Nullable;
@@ -46,6 +49,7 @@ public class SatoruGojoEntity extends Monster {
 		maxUpStep = 0.6f;
 		xpReward = 3;
 		setNoAi(false);
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.BLINDFOLD_HELMET.get()));
 	}
 
 	@Override
