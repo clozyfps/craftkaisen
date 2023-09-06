@@ -1,8 +1,39 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
+
+import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 
 import javax.annotation.Nullable;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Iterator;
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class BlackFlashProcedure {
@@ -32,6 +63,7 @@ public class BlackFlashProcedure {
 				_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLACK_ELECTRICITY.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 50, 5, 3, 5, 0);
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.RED_ELECTRICITY.get()), (entity.getX()), (entity.getY()), (entity.getZ()), 50, 5, 3, 5, 0);
+			ReversalRedFinalOnEffectActiveTickProcedure.execute(world, x, y, z, entity);
 			{
 				final Vec3 _center = new Vec3(x, y, z);
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
@@ -52,7 +84,7 @@ public class BlackFlashProcedure {
 				}
 			}
 			if (entity instanceof ServerPlayer _player) {
-				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craftkaisen:deleted_mod_element"));
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craftkaisen:black_flash_advancement"));
 				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 				if (!_ap.isDone()) {
 					Iterator _iterator = _ap.getRemainingCriteria().iterator();

@@ -1,6 +1,5 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -16,7 +15,7 @@ import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 import net.mcreator.craftkaisen.entity.TwistEntity;
 
 public class TwistProcedureProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		{

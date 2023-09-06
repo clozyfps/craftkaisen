@@ -1,13 +1,29 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.SkillTreeUpgradeGUIMenu;
+import net.mcreator.craftkaisen.procedures.DisplayDefenseCostProcedure;
+import net.mcreator.craftkaisen.network.SkillTreeUpgradeGUIButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class SkillTreeUpgradeGUIScreen extends AbstractContainerScreen<SkillTreeUpgradeGUIMenu> {
-
 	private final static HashMap<String, Object> guistate = SkillTreeUpgradeGUIMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_upgrade_defense;
 
 	public SkillTreeUpgradeGUIScreen(SkillTreeUpgradeGUIMenu container, Inventory inventory, Component text) {
@@ -28,7 +44,6 @@ public class SkillTreeUpgradeGUIScreen extends AbstractContainerScreen<SkillTree
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -36,10 +51,8 @@ public class SkillTreeUpgradeGUIScreen extends AbstractContainerScreen<SkillTree
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -49,7 +62,6 @@ public class SkillTreeUpgradeGUIScreen extends AbstractContainerScreen<SkillTree
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -62,7 +74,7 @@ public class SkillTreeUpgradeGUIScreen extends AbstractContainerScreen<SkillTree
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack,
 
-				DisplayDefenseCostProcedure.execute(), 7, 51, -12829636);
+				DisplayDefenseCostProcedure.execute(entity), 7, 51, -12829636);
 	}
 
 	@Override
@@ -74,19 +86,14 @@ public class SkillTreeUpgradeGUIScreen extends AbstractContainerScreen<SkillTree
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		button_upgrade_defense = new Button(this.leftPos + 6, this.topPos + 27, 103, 20, Component.translatable("gui.craftkaisen.skill_tree_upgrade_gui.button_upgrade_defense"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeUpgradeGUIButtonMessage(0, x, y, z));
 				SkillTreeUpgradeGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_upgrade_defense", button_upgrade_defense);
 		this.addRenderableWidget(button_upgrade_defense);
-
 	}
-
 }

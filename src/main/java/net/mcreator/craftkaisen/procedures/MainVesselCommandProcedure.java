@@ -1,15 +1,30 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameType;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftkaisenModGameRules;
+
+import java.util.ArrayList;
+
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.arguments.StringArgumentType;
 
 public class MainVesselCommandProcedure {
 	public static void execute(LevelAccessor world, CommandContext<CommandSourceStack> arguments, Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getDisplayName().getString()).equals(CraftkaisenModVariables.MapVariables.get(world).VesselPlayer)) {
-			if (!world.getLevelData().getGameRules().getBoolean(CraftkaisenModGameRules.DELETED_MOD_ELEMENT)) {
+			if (!world.getLevelData().getGameRules().getBoolean(CraftkaisenModGameRules.CK_CUSTOM_VESSEL)) {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(Component.literal("Gamerule"), false);
 			} else {
@@ -56,7 +71,7 @@ public class MainVesselCommandProcedure {
 										});
 									}
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 1200, 0, true, false));
+										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.VESSEL_POTION_EFFECT.get(), 1200, 0, true, false));
 								}
 							}
 						} else {

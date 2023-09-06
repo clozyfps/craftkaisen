@@ -1,8 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import java.util.HashMap;
 
 public class SetCursedTechniqueProcedureProcedure {
 	public static void execute(Entity entity, HashMap cmdparams) {

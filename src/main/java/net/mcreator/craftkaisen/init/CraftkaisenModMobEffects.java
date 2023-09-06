@@ -34,6 +34,7 @@ import net.mcreator.craftkaisen.potion.IrritatedThroatMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.EmberControlMobEffect;
 import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
 import net.mcreator.craftkaisen.potion.DivergentFistMobEffect;
 import net.mcreator.craftkaisen.potion.CrushingMobEffect;
@@ -72,4 +73,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> RCT_COOLDOWN = REGISTRY.register("rct_cooldown", () -> new RCTCooldownMobEffect());
 	public static final RegistryObject<MobEffect> VESSEL_POTION_EFFECT = REGISTRY.register("vessel_potion_effect", () -> new VesselPotionEffectMobEffect());
 	public static final RegistryObject<MobEffect> VESSEL_COOLDOWN = REGISTRY.register("vessel_cooldown", () -> new VesselCooldownMobEffect());
+	public static final RegistryObject<MobEffect> EMBER_CONTROL = REGISTRY.register("ember_control", () -> new EmberControlMobEffect());
 }

@@ -1,12 +1,10 @@
 {
-  "_fv": 47,
+  "_fv": 43,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "maki",
     "customModelName": "Normal",
-    "customProperties": {},
-    "states": [],
     "name": "Tes",
     "rarity": "COMMON",
     "creativeTab": {

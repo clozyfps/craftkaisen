@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
+import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftkaisenModEntityRenderers {
@@ -47,5 +48,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.JOGO.get(), JogoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.DISASTER_FLAME.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAXIMUM_METEOR.get(), MaximumMeteorRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.EMBER_INSECT.get(), EmberInsectRenderer::new);
 	}
 }

@@ -1,12 +1,10 @@
 {
-  "_fv": 47,
+  "_fv": 43,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "dash2",
     "customModelName": "Normal",
-    "customProperties": {},
-    "states": [],
     "name": "Test 2",
     "rarity": "COMMON",
     "creativeTab": {
