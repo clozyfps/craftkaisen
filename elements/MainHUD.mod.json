@@ -1,166 +1,9 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "overlay",
   "definition": {
     "priority": "NORMAL",
     "components": [
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_cursed_energy_display",
-          "text": {
-            "fixedValue": "",
-            "name": "CursedEnergyDisplay"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 307,
-          "y": 223
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_move_one",
-          "text": {
-            "fixedValue": "Move One"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 6,
-          "y": 62
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_move_two",
-          "text": {
-            "fixedValue": "Move Two"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 6,
-          "y": 80
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_move_3",
-          "text": {
-            "fixedValue": "Move Three"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 6,
-          "y": 98
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_move_four",
-          "text": {
-            "fixedValue": "Move Four"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 6,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_move_five",
-          "text": {
-            "fixedValue": "Move Five"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 6,
-          "y": 134
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_special",
-          "text": {
-            "fixedValue": "Special"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 6,
-          "y": 152
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ultimate",
-          "text": {
-            "fixedValue": "Ultimate"
-          },
-          "color": {
-            "value": -65536,
-            "falpha": 0.0
-          },
-          "x": 6,
-          "y": 170
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "happy.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "MoodDisplayGreen"
-          },
-          "x": 6,
-          "y": 44
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "meh.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "MoodDisplayYellow"
-          },
-          "x": 6,
-          "y": 44
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "mad.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "MoodDisplayRed"
-          },
-          "x": 6,
-          "y": 44
-        }
-      },
       {
         "type": "label",
         "data": {
@@ -215,6 +58,176 @@
           "x": 303,
           "y": 26
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cursetechnique",
+          "text": {
+            "fixedValue": "CurseTechnique",
+            "name": "DisplaySelectedTechnique"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 6,
+          "y": 23
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_cost",
+          "text": {
+            "fixedValue": "Cost",
+            "name": "DisplayMoveCost"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 6,
+          "y": 35
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "hud.png",
+          "use1Xscale": true,
+          "x": 61,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "back.png",
+          "use1Xscale": true,
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move1CDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move2CDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move3CDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move4CDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move5CDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "MoveSpecialCDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "red.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "MoveUltimateCDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "lo.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move2CDDisplay"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "blue.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move1Display"
+          },
+          "x": 4,
+          "y": 155
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "purple.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Move5Display"
+          },
+          "x": 4,
+          "y": 155
+        }
       }
     ],
     "baseTexture": "",
@@ -224,7 +237,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

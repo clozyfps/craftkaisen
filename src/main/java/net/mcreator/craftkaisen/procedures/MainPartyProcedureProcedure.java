@@ -1,19 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-import net.minecraft.commands.arguments.EntityArgument;
-import net.minecraft.commands.CommandSourceStack;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
-
-import java.util.ArrayList;
-
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.mojang.brigadier.context.CommandContext;
-import com.mojang.brigadier.arguments.StringArgumentType;
+import javax.annotation.Nullable;
 
 public class MainPartyProcedureProcedure {
 	public static void execute(LevelAccessor world, CommandContext<CommandSourceStack> arguments, Entity entity) {
@@ -47,6 +36,7 @@ public class MainPartyProcedureProcedure {
 					try {
 						for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
 							entityiterator.getPersistentData().putBoolean("Pending", true);
+							entityiterator.getPersistentData().putString("InviteName", (entity.getDisplayName().getString()));
 							if (entityiterator instanceof Player _player && !_player.level.isClientSide())
 								_player.displayClientMessage(Component.literal(("You have been invited to " + entity.getDisplayName().getString() + "s party! Type /party accept " + entity.getDisplayName().getString() + " to join or /party decline "
 										+ entity.getDisplayName().getString() + " to deny the invite.")), false);
@@ -59,7 +49,16 @@ public class MainPartyProcedureProcedure {
 						_player.displayClientMessage(Component.literal("You must be in a party to send an invite!"), false);
 				}
 			} else if ((StringArgumentType.getString(arguments, "action")).equals("accept")) {
-				if (entity.getPersistentData().getBoolean("Pending")) {
+				if (entity.getPersistentData().getBoolean("Pending") && (entity.getPersistentData().getString("InviteName")).equals((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()).getDisplayName().getString())) {
 					entity.getPersistentData().putBoolean("Pending", false);
 					{
 						boolean _setval = true;

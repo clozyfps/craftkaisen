@@ -1,8 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import javax.annotation.Nullable;
 
 public class SetDivergentProcedure {
 	public static void execute(Entity entity) {
@@ -12,6 +12,13 @@ public class SetDivergentProcedure {
 			String _setval = "Divergent";
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Technique = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.SelectedTechnique = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

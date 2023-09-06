@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -15,7 +15,7 @@
         "data": {
           "image": "mainmenu.png",
           "use1Xscale": false,
-          "x": 88,
+          "x": 87,
           "y": 20
         }
       },
@@ -90,7 +90,7 @@
             "falpha": 0.0
           },
           "x": 96,
-          "y": 89
+          "y": 86
         }
       },
       {
@@ -106,7 +106,7 @@
             "falpha": 0.0
           },
           "x": 96,
-          "y": 116
+          "y": 140
         }
       },
       {
@@ -115,21 +115,24 @@
           "name": "label_clan",
           "text": {
             "fixedValue": "Clan :",
-            "name": "ClanDisplay"
+            "name": "SPDisplay"
           },
           "color": {
             "value": -13496561,
             "falpha": 0.0
           },
           "x": 96,
-          "y": 143
+          "y": 113
         }
       },
       {
         "type": "button",
         "data": {
           "name": "button_prestige",
-          "text": "Prestige",
+          "text": "Skill Tree",
+          "onClick": {
+            "name": "OpenSkillTreeUpgrade"
+          },
           "width": 67,
           "height": 20,
           "x": 105,

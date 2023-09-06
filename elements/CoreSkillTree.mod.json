@@ -1,8 +1,8 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Core",
+    "achievementName": "Skill Tree",
     "achievementDescription": "The core of cursed energy.",
     "achievementIcon": {
       "value": "Items.END_CRYSTAL"

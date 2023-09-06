@@ -40,7 +40,7 @@ public class SetCursedTechniqueCommand {
 				index++;
 			}
 
-			SetCursedTechniqueProcedureProcedure.execute(entity, cmdparams);
+			SetCursedTechniqueProcedureProcedure.execute(world, entity, cmdparams);
 			return 0;
 		})).executes(arguments -> {
 			ServerLevel world = arguments.getSource().getLevel();
@@ -59,7 +59,7 @@ public class SetCursedTechniqueCommand {
 				index++;
 			}
 
-			SetCursedTechniqueProcedureProcedure.execute(entity, cmdparams);
+			SetCursedTechniqueProcedureProcedure.execute(world, entity, cmdparams);
 			return 0;
 		}));
 	}
