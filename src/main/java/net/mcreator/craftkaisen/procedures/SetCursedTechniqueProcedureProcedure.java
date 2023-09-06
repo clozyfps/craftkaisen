@@ -18,6 +18,8 @@ public class SetCursedTechniqueProcedureProcedure {
 			SetClapProcedure.execute(entity);
 		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Divergent") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("divergent")) {
 			SetDivergentProcedure.execute(entity);
+		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Flames") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("flames")) {
+			SetFlamesProcedure.execute(entity);
 		}
 	}
 }

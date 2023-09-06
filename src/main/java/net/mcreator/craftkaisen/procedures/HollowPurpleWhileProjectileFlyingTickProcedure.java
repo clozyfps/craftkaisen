@@ -23,7 +23,9 @@ import java.util.List;
 import java.util.Comparator;
 
 public class HollowPurpleWhileProjectileFlyingTickProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
+		if (immediatesourceentity == null)
+			return;
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:dust 1 0 1 5.5 ^0 ^0 ^0 1.5 1.7 1.5 0 10");
@@ -44,9 +46,14 @@ public class HollowPurpleWhileProjectileFlyingTickProcedure {
 			}
 		}
 		world.destroyBlock(new BlockPos(x, y, z), false);
-		CraftkaisenMod.queueServerWork(8, () -> {
+		CraftkaisenMod.queueServerWork(15, () -> {
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 4, Explosion.BlockInteraction.DESTROY);
+				_level.explode(null, x, y, z, 3, Explosion.BlockInteraction.NONE);
+		});
+		immediatesourceentity.setNoGravity(true);
+		CraftkaisenMod.queueServerWork(500, () -> {
+			if (!immediatesourceentity.level.isClientSide())
+				immediatesourceentity.discard();
 		});
 	}
 }

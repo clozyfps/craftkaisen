@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.client.model.Modelsunglasses;
 import net.mcreator.craftkaisen.client.model.Modelsukunafightingchestplate;
 import net.mcreator.craftkaisen.client.model.Modelsukunafacemark;
 import net.mcreator.craftkaisen.client.model.Modelsixeyes;
+import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
 import net.mcreator.craftkaisen.client.model.Modelmalevolentshrine;
 import net.mcreator.craftkaisen.client.model.Modelmahoraga_wheel;
 import net.mcreator.craftkaisen.client.model.Modellapseblue;
@@ -57,6 +58,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modellapseblue.LAYER_LOCATION, Modellapseblue::createBodyLayer);
 		event.registerLayerDefinition(ModelFingerBearernew.LAYER_LOCATION, ModelFingerBearernew::createBodyLayer);
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
+		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurple.LAYER_LOCATION, Modelhollowpurple::createBodyLayer);
 	}
 }

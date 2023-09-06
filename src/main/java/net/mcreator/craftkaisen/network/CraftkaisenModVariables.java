@@ -116,6 +116,7 @@ public class CraftkaisenModVariables {
 				clone.VowSender = original.VowSender;
 				clone.VowDescription = original.VowDescription;
 				clone.Checked = original.Checked;
+				clone.FireSpread = original.FireSpread;
 			}
 		}
 
@@ -332,6 +333,7 @@ public class CraftkaisenModVariables {
 		public double RCTMastery = 0;
 		public double Cost = 0;
 		public double RCTExp = 0;
+		public double FireSpread = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -383,6 +385,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("RCTMastery", RCTMastery);
 			nbt.putDouble("Cost", Cost);
 			nbt.putDouble("RCTExp", RCTExp);
+			nbt.putDouble("FireSpread", FireSpread);
 			return nbt;
 		}
 
@@ -431,6 +434,7 @@ public class CraftkaisenModVariables {
 			RCTMastery = nbt.getDouble("RCTMastery");
 			Cost = nbt.getDouble("Cost");
 			RCTExp = nbt.getDouble("RCTExp");
+			FireSpread = nbt.getDouble("FireSpread");
 		}
 	}
 
@@ -498,6 +502,7 @@ public class CraftkaisenModVariables {
 					variables.RCTMastery = message.data.RCTMastery;
 					variables.Cost = message.data.Cost;
 					variables.RCTExp = message.data.RCTExp;
+					variables.FireSpread = message.data.FireSpread;
 				}
 			});
 			context.setPacketHandled(true);
