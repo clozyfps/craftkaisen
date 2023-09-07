@@ -32,6 +32,7 @@ import net.mcreator.craftkaisen.entity.GetCrushedEntity;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -87,6 +88,11 @@ public class CraftkaisenModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MalevolentShrineEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<JogoEntity>> JOGO = register("jogo",
 			EntityType.Builder.<JogoEntity>of(JogoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JogoEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CursedspiritrugbyfieldEntity>> CURSEDSPIRITRUGBYFIELD = register("cursedspiritrugbyfield",
+			EntityType.Builder.<CursedspiritrugbyfieldEntity>of(CursedspiritrugbyfieldEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(CursedspiritrugbyfieldEntity::new)
+
+					.sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -105,6 +111,7 @@ public class CraftkaisenModEntities {
 			FingerBearerEntity.init();
 			MalevolentShrineEntity.init();
 			JogoEntity.init();
+			CursedspiritrugbyfieldEntity.init();
 		});
 	}
 
@@ -120,5 +127,6 @@ public class CraftkaisenModEntities {
 		event.put(FINGER_BEARER.get(), FingerBearerEntity.createAttributes().build());
 		event.put(MALEVOLENT_SHRINE.get(), MalevolentShrineEntity.createAttributes().build());
 		event.put(JOGO.get(), JogoEntity.createAttributes().build());
+		event.put(CURSEDSPIRITRUGBYFIELD.get(), CursedspiritrugbyfieldEntity.createAttributes().build());
 	}
 }
