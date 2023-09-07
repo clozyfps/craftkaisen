@@ -19,5 +19,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "craftkaisen:power_i"
+  "parent": "craftkaisen:deleted_mod_element"
 }

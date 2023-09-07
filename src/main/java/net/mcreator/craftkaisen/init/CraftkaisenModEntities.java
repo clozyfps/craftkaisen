@@ -37,6 +37,7 @@ import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -92,6 +93,11 @@ public class CraftkaisenModEntities {
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MalevolentShrineEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<JogoEntity>> JOGO = register("jogo",
 			EntityType.Builder.<JogoEntity>of(JogoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(JogoEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CursedspiritrugbyfieldEntity>> CURSEDSPIRITRUGBYFIELD = register("cursedspiritrugbyfield",
+			EntityType.Builder.<CursedspiritrugbyfieldEntity>of(CursedspiritrugbyfieldEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(CursedspiritrugbyfieldEntity::new)
+
+					.sized(1f, 1f));
 	public static final RegistryObject<EntityType<DisasterFlameEntity>> DISASTER_FLAME = register("projectile_disaster_flame",
 			EntityType.Builder.<DisasterFlameEntity>of(DisasterFlameEntity::new, MobCategory.MISC).setCustomClientFactory(DisasterFlameEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<MaximumMeteorEntity>> MAXIMUM_METEOR = register("maximum_meteor", EntityType.Builder.<MaximumMeteorEntity>of(MaximumMeteorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
@@ -122,6 +128,7 @@ public class CraftkaisenModEntities {
 			FingerBearerEntity.init();
 			MalevolentShrineEntity.init();
 			JogoEntity.init();
+			CursedspiritrugbyfieldEntity.init();
 			MaximumMeteorEntity.init();
 			EmberInsectEntity.init();
 			FireArrowEntity.init();
@@ -140,6 +147,7 @@ public class CraftkaisenModEntities {
 		event.put(FINGER_BEARER.get(), FingerBearerEntity.createAttributes().build());
 		event.put(MALEVOLENT_SHRINE.get(), MalevolentShrineEntity.createAttributes().build());
 		event.put(JOGO.get(), JogoEntity.createAttributes().build());
+		event.put(CURSEDSPIRITRUGBYFIELD.get(), CursedspiritrugbyfieldEntity.createAttributes().build());
 		event.put(MAXIMUM_METEOR.get(), MaximumMeteorEntity.createAttributes().build());
 		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
 		event.put(FIRE_ARROW.get(), FireArrowEntity.createAttributes().build());

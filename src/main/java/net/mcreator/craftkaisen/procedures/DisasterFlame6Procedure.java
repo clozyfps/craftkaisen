@@ -1,21 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.CraftkaisenMod;
-
-import java.util.stream.Collectors;
-import java.util.Map;
-import java.util.List;
-import java.util.Comparator;
+import javax.annotation.Nullable;
 
 public class DisasterFlame6Procedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {

@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.client.model.Modelgetosandalsnew;
 import net.mcreator.craftkaisen.client.model.Modelgetorobes;
 import net.mcreator.craftkaisen.client.model.Modelgetolegs;
 import net.mcreator.craftkaisen.client.model.Modelemberinsect;
+import net.mcreator.craftkaisen.client.model.Modelcursedspiritrugbyfield;
 import net.mcreator.craftkaisen.client.model.Modelcurse_1;
 import net.mcreator.craftkaisen.client.model.Modelblindfold;
 import net.mcreator.craftkaisen.client.model.Modelbandageblindfold;
@@ -55,6 +56,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelsukunafacemark.LAYER_LOCATION, Modelsukunafacemark::createBodyLayer);
 		event.registerLayerDefinition(Modeltojipants.LAYER_LOCATION, Modeltojipants::createBodyLayer);
 		event.registerLayerDefinition(Modelemberinsect.LAYER_LOCATION, Modelemberinsect::createBodyLayer);
+		event.registerLayerDefinition(Modelcursedspiritrugbyfield.LAYER_LOCATION, Modelcursedspiritrugbyfield::createBodyLayer);
 		event.registerLayerDefinition(Modelmahoraga_wheel.LAYER_LOCATION, Modelmahoraga_wheel::createBodyLayer);
 		event.registerLayerDefinition(Modelbandageblindfold.LAYER_LOCATION, Modelbandageblindfold::createBodyLayer);
 		event.registerLayerDefinition(Modellapseblue.LAYER_LOCATION, Modellapseblue::createBodyLayer);

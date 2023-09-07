@@ -83,6 +83,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> SUNGLASSES_HELMET = REGISTRY.register("sunglasses_helmet", () -> new SunglassesItem.Helmet());
 	public static final RegistryObject<Item> SUKUNA_FIGHTING_ARMOR_CHESTPLATE = REGISTRY.register("sukuna_fighting_armor_chestplate", () -> new SukunaFightingArmorItem.Chestplate());
 	public static final RegistryObject<Item> JOGO_SPAWN_EGG = REGISTRY.register("jogo_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.JOGO, -6711040, -16777216, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> CURSEDSPIRITRUGBYFIELD_SPAWN_EGG = REGISTRY.register("cursedspiritrugbyfield_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITRUGBYFIELD, -16750951, -6750157, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> DISASTER_FLAME = REGISTRY.register("disaster_flame", () -> new DisasterFlameItem());
 	public static final RegistryObject<Item> FIRE_ARROW_PROJECTILE = REGISTRY.register("fire_arrow_projectile", () -> new FireArrowProjectileItem());
 
