@@ -21,7 +21,7 @@ public class MaximumMeteorOnEntityTickUpdateProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		if (!((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.AIR)) {
+		if (!((world.getBlockState(new BlockPos(x, y - 2, z))).getBlock() == Blocks.AIR)) {
 			if (!entity.level.isClientSide())
 				entity.discard();
 			sx = -150;
@@ -54,6 +54,13 @@ public class MaximumMeteorOnEntityTickUpdateProcedure {
 			}
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.explode(null, x, y, z, 35, Explosion.BlockInteraction.DESTROY);
+		}
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
+			} else {
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
+			}
 		}
 	}
 }

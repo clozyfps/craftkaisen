@@ -19,7 +19,7 @@ public class EmberControlMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		EmberControlOnEffectActiveTickProcedure.execute(entity.level, entity);
+		EmberControlOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

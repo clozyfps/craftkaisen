@@ -53,6 +53,11 @@ public class MaximumMeteorEntity extends Monster {
 	}
 
 	@Override
+	public double getPassengersRidingOffset() {
+		return super.getPassengersRidingOffset() + 5;
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}

@@ -31,6 +31,8 @@ import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
 import net.mcreator.craftkaisen.entity.GetCrushedEntity;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
+import net.mcreator.craftkaisen.entity.FireArrowProjectileEntity;
+import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
@@ -98,6 +100,10 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<EmberInsectEntity>of(EmberInsectEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EmberInsectEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FireArrowEntity>> FIRE_ARROW = register("fire_arrow", EntityType.Builder.<FireArrowEntity>of(FireArrowEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+			.setUpdateInterval(3).setCustomClientFactory(FireArrowEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FireArrowProjectileEntity>> FIRE_ARROW_PROJECTILE = register("projectile_fire_arrow_projectile", EntityType.Builder.<FireArrowProjectileEntity>of(FireArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(FireArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -118,6 +124,7 @@ public class CraftkaisenModEntities {
 			JogoEntity.init();
 			MaximumMeteorEntity.init();
 			EmberInsectEntity.init();
+			FireArrowEntity.init();
 		});
 	}
 
@@ -135,5 +142,6 @@ public class CraftkaisenModEntities {
 		event.put(JOGO.get(), JogoEntity.createAttributes().build());
 		event.put(MAXIMUM_METEOR.get(), MaximumMeteorEntity.createAttributes().build());
 		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
+		event.put(FIRE_ARROW.get(), FireArrowEntity.createAttributes().build());
 	}
 }

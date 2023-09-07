@@ -6,8 +6,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.ParticleTypes;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
@@ -27,23 +25,10 @@ public class EmberInsectOnEntityTickUpdateProcedure {
 		});
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
-				if (!(entity == entityiterator && entityiterator instanceof EmberInsectEntity)) {
-					if (!(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.EMBER_CONTROL.get()) : false)) {
-						entityiterator.getPersistentData().putBoolean("aoe", true);
-						if (!entity.level.isClientSide())
-							entity.discard();
-						entityiterator.hurt(DamageSource.GENERIC, 7);
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.LAVA, x, y, z, 3, 3, 3, 3, 0);
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.FLAME, x, y, z, 15, 3, 3, 3, 0);
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 3, 3, 3, 0);
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 6, 3, 3, 3, 0);
-					}
+				if (!(entity == entityiterator) && !(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.EMBER_CONTROL.get()) : false) && !(entityiterator instanceof EmberInsectEntity)) {
+					entityiterator.hurt(DamageSource.GENERIC, 5);
 				}
 			}
 		}

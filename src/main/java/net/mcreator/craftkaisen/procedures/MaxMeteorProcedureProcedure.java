@@ -25,10 +25,7 @@ public class MaxMeteorProcedureProcedure {
 			return;
 		if (world instanceof ServerLevel _level) {
 			Entity entityToSpawn = new MaximumMeteorEntity(CraftkaisenModEntities.MAXIMUM_METEOR.get(), _level);
-			entityToSpawn.moveTo(x, (y + 75), z, 0, 0);
-			entityToSpawn.setYBodyRot(0);
-			entityToSpawn.setYHeadRot(0);
-			entityToSpawn.setDeltaMovement(0, 0, 0);
+			entityToSpawn.moveTo(x, (y + 75), z, world.getRandom().nextFloat() * 360F, 0);
 			if (entityToSpawn instanceof Mob _mobToSpawn)
 				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 			world.addFreshEntity(entityToSpawn);

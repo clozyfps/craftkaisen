@@ -1,8 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
@@ -57,8 +55,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A7b Lapse Blue"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
@@ -68,8 +64,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A74 Reversal Red"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 				{
@@ -79,19 +73,15 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A7b Infinite Combo"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
-					String _setval = "Strong Hit";
+					String _setval = "Grab and Throw";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A7b Strong Hit"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
@@ -101,8 +91,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A7d Hollow Purple"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -112,8 +100,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Infinity"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 7) {
 				{
@@ -123,8 +109,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Unlimited Void"), true);
 			}
 		}
 		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Restricted")) {
@@ -174,8 +158,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A74 Playful Cloud"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
@@ -185,8 +167,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A77 Inverted Spear Of Heaven"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 				{
@@ -196,8 +176,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A77 Sacred Lunge"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
@@ -207,8 +185,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A77 Heavenly Barrage"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
@@ -218,8 +194,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l\u00A77 Divine Riposite"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -229,8 +203,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Repeated God Slashes"), true);
 			}
 		}
 		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Voice")) {
@@ -280,8 +252,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Explode"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
@@ -291,8 +261,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Twist"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 				{
@@ -302,8 +270,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Get Crushed"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
@@ -313,8 +279,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Sleep"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
@@ -324,8 +288,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Stop"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -335,8 +297,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Blast Away"), true);
 			}
 		}
 		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Clap")) {
@@ -386,8 +346,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Clap"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
@@ -397,8 +355,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Rapid Clap"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 				{
@@ -408,8 +364,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Clap Rush"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
@@ -419,8 +373,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Powerful Hook"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
@@ -430,8 +382,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Clap Manipulate"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -441,8 +391,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Tough Body"), true);
 			}
 		}
 		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Divergent")) {
@@ -492,8 +440,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Combat Speed"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
@@ -503,8 +449,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Flip Kick"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 				{
@@ -514,8 +458,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Cursed Energy Burst"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
@@ -525,8 +467,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Cursed Combo"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
@@ -536,8 +476,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Curse Kick"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -547,8 +485,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Divergent Fist"), true);
 			}
 		}
 		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Flames")) {
@@ -598,8 +534,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Disaster Flames"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
@@ -609,8 +543,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Ember Insects"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 				{
@@ -620,19 +552,15 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Sky of Flames"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
-					String _setval = "Burning Ground";
+					String _setval = "Volcanic Floor";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Burning Ground"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
@@ -642,8 +570,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Combust"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -653,8 +579,6 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Maximum Meteor"), true);
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 7) {
 				{
@@ -664,8 +588,100 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7l Coffin of the Iron Mountain"), true);
+			}
+		}
+		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Sukuna")) {
+			if (!entity.isShiftKeyDown()) {
+				if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch < 6) {
+					{
+						double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch + 1;
+						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.TechniqueSwitch = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else {
+					{
+						double _setval = 1;
+						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.TechniqueSwitch = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+			} else {
+				if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch <= 6
+						&& (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch != 1) {
+					{
+						double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch - 1;
+						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.TechniqueSwitch = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 1) {
+					{
+						double _setval = 6;
+						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.TechniqueSwitch = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+				}
+			}
+			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 1) {
+				{
+					String _setval = "Dismantle";
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
+				{
+					String _setval = "Cleave";
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
+				{
+					String _setval = "Multi Slice";
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
+				{
+					String _setval = "Grab And Toss";
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
+				{
+					String _setval = "Fire Arrow";
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
+				{
+					String _setval = "Malevolent Shrine";
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

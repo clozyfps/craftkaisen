@@ -3,12 +3,18 @@ package net.mcreator.craftkaisen.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -26,6 +32,10 @@ public class HollowPurpleWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity immediatesourceentity) {
 		if (immediatesourceentity == null)
 			return;
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:dust 1 0 1 5.5 ^0 ^0 ^0 1.5 1.7 1.5 0 10");
@@ -46,14 +56,39 @@ public class HollowPurpleWhileProjectileFlyingTickProcedure {
 			}
 		}
 		world.destroyBlock(new BlockPos(x, y, z), false);
-		CraftkaisenMod.queueServerWork(15, () -> {
-			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 3, Explosion.BlockInteraction.NONE);
-		});
 		immediatesourceentity.setNoGravity(true);
 		CraftkaisenMod.queueServerWork(500, () -> {
 			if (!immediatesourceentity.level.isClientSide())
 				immediatesourceentity.discard();
+		});
+		sx = -15;
+		found = false;
+		for (int index0 = 0; index0 < 6; index0++) {
+			sy = -15;
+			for (int index1 = 0; index1 < 6; index1++) {
+				sz = -15;
+				for (int index2 = 0; index2 < 6; index2++) {
+					if (!((world.getBlockState(new BlockPos(x + sx, y + sy, z + sz))).getBlock() == Blocks.AIR)) {
+						found = true;
+					}
+					sz = sz + 1;
+				}
+				sy = sy + 1;
+			}
+			sx = sx + 1;
+		}
+		if (found == true) {
+			world.destroyBlock(new BlockPos(x + sx, y + sy, z + sz), false);
+		}
+		if (world instanceof ServerLevel _serverworld) {
+			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "purpleair"));
+			if (template != null) {
+				template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+			}
+		}
+		CraftkaisenMod.queueServerWork(15, () -> {
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.explode(null, x, y, z, 3, Explosion.BlockInteraction.NONE);
 		});
 	}
 }

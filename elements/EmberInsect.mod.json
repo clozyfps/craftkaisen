@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "livingentity",
   "definition": {
     "mobName": "Ember Insect",
@@ -60,7 +60,7 @@
     "health": 5,
     "xpAmount": 0,
     "waterMob": false,
-    "flyingMob": false,
+    "flyingMob": true,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
@@ -96,6 +96,9 @@
     "stepSound": {
       "value": ""
     },
+    "whenMobDies": {
+      "name": "EmberInsectEntityDies"
+    },
     "onMobTickUpdate": {
       "name": "EmberInsectOnEntityTickUpdate"
     },
@@ -104,7 +107,7 @@
     },
     "hasAI": false,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"fly\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

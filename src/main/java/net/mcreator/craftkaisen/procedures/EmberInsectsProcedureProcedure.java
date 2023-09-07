@@ -31,7 +31,7 @@ public class EmberInsectsProcedureProcedure {
 		}
 		CraftkaisenMod.queueServerWork(4, () -> {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.EMBER_CONTROL.get(), 250, 1, false, false));
+				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.EMBER_CONTROL.get(), 200, 1, false, false));
 		});
 	}
 }

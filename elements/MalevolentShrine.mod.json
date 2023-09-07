@@ -1,5 +1,5 @@
 {
-  "_fv": 43,
+  "_fv": 47,
   "_type": "livingentity",
   "definition": {
     "mobName": "Malevolent Shrine",
@@ -95,6 +95,9 @@
     },
     "stepSound": {
       "value": ""
+    },
+    "onInitialSpawn": {
+      "name": "MalevolentShrineOnInitialEntitySpawn"
     },
     "hasAI": false,
     "aiBase": "(none)",

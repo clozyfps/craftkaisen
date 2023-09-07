@@ -18,6 +18,7 @@ import net.mcreator.craftkaisen.potion.ToughBodyMobEffect;
 import net.mcreator.craftkaisen.potion.StoppedMobEffect;
 import net.mcreator.craftkaisen.potion.SleepingMobEffect;
 import net.mcreator.craftkaisen.potion.SixeyespotionMobEffect;
+import net.mcreator.craftkaisen.potion.ShrineMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
@@ -34,6 +35,7 @@ import net.mcreator.craftkaisen.potion.IrritatedThroatMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.EmberFloorMobEffect;
 import net.mcreator.craftkaisen.potion.EmberControlMobEffect;
 import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
 import net.mcreator.craftkaisen.potion.DivergentFistMobEffect;
@@ -74,4 +76,6 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> VESSEL_POTION_EFFECT = REGISTRY.register("vessel_potion_effect", () -> new VesselPotionEffectMobEffect());
 	public static final RegistryObject<MobEffect> VESSEL_COOLDOWN = REGISTRY.register("vessel_cooldown", () -> new VesselCooldownMobEffect());
 	public static final RegistryObject<MobEffect> EMBER_CONTROL = REGISTRY.register("ember_control", () -> new EmberControlMobEffect());
+	public static final RegistryObject<MobEffect> EMBER_FLOOR = REGISTRY.register("ember_floor", () -> new EmberFloorMobEffect());
+	public static final RegistryObject<MobEffect> SHRINE = REGISTRY.register("shrine", () -> new ShrineMobEffect());
 }
