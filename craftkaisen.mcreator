@@ -65,9 +65,9 @@
       "registry_name": "hollow_purple",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java",
           "src/main/java/net/mcreator/craftkaisen/entity/HollowPurpleEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json",
-          "src/main/java/net/mcreator/craftkaisen/item/HollowPurpleItem.java"
+          "src/main/resources/assets/craftkaisen/models/item/hollow_purple.json"
         ]
       },
       "path": "~/Abilities"
@@ -412,8 +412,8 @@
       "registry_name": "test_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/test_2.json",
-          "src/main/java/net/mcreator/craftkaisen/item/Test2Item.java"
+          "src/main/java/net/mcreator/craftkaisen/item/Test2Item.java",
+          "src/main/resources/assets/craftkaisen/models/item/test_2.json"
         ]
       },
       "path": "~/Items"
@@ -1034,10 +1034,10 @@
       "registry_name": "jujutsu_student",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/JujutsuStudentRenderer.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java"
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_student_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/JujutsuStudentEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/jujutsu_student_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -1161,25 +1161,11 @@
       "registry_name": "evade",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/evade.json"
+          "src/main/resources/assets/craftkaisen/particles/evade.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/EvadeParticle.java"
         ]
       },
       "path": "~/Particles"
-    },
-    {
-      "name": "FlashStepAdvancement",
-      "type": "achievement",
-      "sortid": 238,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flash_step_advancement",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/flash_step_advancement.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "JujutsuSorcererOutfit",
@@ -1190,9 +1176,9 @@
       "registry_name": "jujutsu_sorcerer_outfit",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json",
           "src/main/java/net/mcreator/craftkaisen/item/JujutsuSorcererOutfitItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json",
-          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_chestplate.json"
+          "src/main/resources/assets/craftkaisen/models/item/jujutsu_sorcerer_outfit_leggings.json"
         ]
       },
       "path": "~/Armor"
@@ -1421,8 +1407,8 @@
       "registry_name": "playful_cloud",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/playful_cloud.json",
-          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/PlayfulCloudItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/playful_cloud.json"
         ]
       },
       "path": "~/Items"
@@ -1484,8 +1470,8 @@
       "registry_name": "inverted_spearof_heaven",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/inverted_spearof_heaven.json",
-          "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearofHeavenItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/InvertedSpearofHeavenItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/inverted_spearof_heaven.json"
         ]
       },
       "path": "~/Items"
@@ -1679,42 +1665,6 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "OpenSkillTreeMenu",
-      "type": "procedure",
-      "sortid": 83,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_skill_tree_menu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSkillTreeMenuProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
       "name": "OpenMainMenuBind",
       "type": "keybind",
       "sortid": 85,
@@ -1737,6 +1687,7 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java"
         ]
@@ -1937,8 +1888,8 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/block/VeilMainBlockBlock.java",
           "src/main/resources/assets/craftkaisen/models/block/veil_main_block.json",
-          "src/main/resources/assets/craftkaisen/models/item/veil_main_block.json",
-          "src/main/resources/assets/craftkaisen/blockstates/veil_main_block.json"
+          "src/main/resources/assets/craftkaisen/blockstates/veil_main_block.json",
+          "src/main/resources/assets/craftkaisen/models/item/veil_main_block.json"
         ]
       },
       "path": "~/Blocks"
@@ -2230,9 +2181,9 @@
       "registry_name": "unlimited_void",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/unlimited_void.json",
           "src/main/resources/assets/craftkaisen/blockstates/unlimited_void.json",
           "src/main/resources/assets/craftkaisen/models/block/unlimited_void.json",
+          "src/main/resources/assets/craftkaisen/models/item/unlimited_void.json",
           "src/main/java/net/mcreator/craftkaisen/block/UnlimitedVoidBlock.java"
         ]
       },
@@ -2263,10 +2214,10 @@
       "registry_name": "toji_fushiguro",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -2593,8 +2544,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/item/StopItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/StopEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/stop.json"
+          "src/main/resources/assets/craftkaisen/models/item/stop.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/StopEntity.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -2796,8 +2747,8 @@
       "registry_name": "cough_syrup",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/CoughSyrupItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/cough_syrup.json"
+          "src/main/resources/assets/craftkaisen/models/item/cough_syrup.json",
+          "src/main/java/net/mcreator/craftkaisen/item/CoughSyrupItem.java"
         ]
       },
       "path": "~/Items"
@@ -2847,8 +2798,8 @@
       "registry_name": "rest",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/RestParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/rest.json"
+          "src/main/resources/assets/craftkaisen/particles/rest.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RestParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -3093,8 +3044,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/item/ExplodeItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/explode.json"
+          "src/main/resources/assets/craftkaisen/models/item/explode.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/ExplodeEntity.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3128,9 +3079,9 @@
       "registry_name": "sleep",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftkaisen/models/item/sleep.json",
           "src/main/java/net/mcreator/craftkaisen/item/SleepItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/SleepEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/sleep.json"
+          "src/main/java/net/mcreator/craftkaisen/entity/SleepEntity.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3215,8 +3166,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftkaisen/models/item/blast_away.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/BlastAwayItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BlastAwayItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/BlastAwayEntity.java"
         ]
       },
       "path": "~/Abilities/Inumaki"
@@ -3342,8 +3293,8 @@
       "registry_name": "binding_vow_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/BindingVowGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/network/BindingVowGUIButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/BindingVowGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/BindingVowGUIMenu.java"
         ]
       },
@@ -3951,9 +3902,9 @@
       "registry_name": "satoru_gojo",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json"
         ]
       },
@@ -4052,9 +4003,9 @@
       "registry_name": "clap",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/clap.json",
           "src/main/java/net/mcreator/craftkaisen/entity/ClapEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/item/ClapItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/ClapItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/clap.json"
         ]
       },
       "path": "~/Abilities"
@@ -4235,18 +4186,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -4278,10 +4217,10 @@
       "registry_name": "quest_board",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftkaisen/models/block/quest_board.json",
           "src/main/java/net/mcreator/craftkaisen/block/QuestBoardBlock.java",
-          "src/main/resources/assets/craftkaisen/blockstates/quest_board.json",
           "src/main/resources/assets/craftkaisen/models/item/quest_board.json",
-          "src/main/resources/assets/craftkaisen/models/block/quest_board.json"
+          "src/main/resources/assets/craftkaisen/blockstates/quest_board.json"
         ]
       },
       "path": "~/Blocks"
@@ -4606,9 +4545,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/FingerBearerRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/finger_bearer_biome_modifier.json",
-          "src/main/resources/assets/craftkaisen/models/item/finger_bearer_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java"
+          "src/main/resources/assets/craftkaisen/models/item/finger_bearer_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -4659,8 +4598,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftkaisen/models/item/toji_armor_leggings.json",
-          "src/main/java/net/mcreator/craftkaisen/item/TojiArmorItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/toji_armor_chestplate.json"
+          "src/main/resources/assets/craftkaisen/models/item/toji_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TojiArmorItem.java"
         ]
       },
       "path": "~/Armor"
@@ -4750,27 +4689,6 @@
       "path": "~/GUI/Values"
     },
     {
-      "name": "ClanDisplay",
-      "type": "procedure",
-      "sortid": 194,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "clan_display",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ClanDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "LevelDisplay",
       "type": "procedure",
       "sortid": 191,
@@ -4800,9 +4718,9 @@
       "registry_name": "geto_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftkaisen/models/item/geto_armor_boots.json",
           "src/main/java/net/mcreator/craftkaisen/item/GetoArmorItem.java",
           "src/main/resources/assets/craftkaisen/models/item/geto_armor_leggings.json",
-          "src/main/resources/assets/craftkaisen/models/item/geto_armor_boots.json",
           "src/main/resources/assets/craftkaisen/models/item/geto_armor_chestplate.json"
         ]
       },
@@ -4917,8 +4835,8 @@
       "registry_name": "lapse_blue_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/particles/lapse_blue_particle.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/LapseBlueParticleParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/LapseBlueParticleParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/lapse_blue_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -4932,8 +4850,8 @@
       "registry_name": "mahoraga_wheel",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/mahoraga_wheel_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/MahoragaWheelItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/MahoragaWheelItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/mahoraga_wheel_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -4987,10 +4905,10 @@
       "registry_name": "fly_head",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/FlyHeadRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/FlyHeadEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/fly_head_spawn_egg.json",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/fly_head_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/FlyHeadEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/FlyHeadRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -5068,8 +4986,8 @@
       "registry_name": "malevolent_shrine",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/MalevolentShrineEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/MalevolentShrineRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MalevolentShrineEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/malevolent_shrine_spawn_egg.json"
         ]
       },
@@ -5177,8 +5095,8 @@
       "registry_name": "red_electricity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/particle/RedElectricityParticle.java",
-          "src/main/resources/assets/craftkaisen/particles/red_electricity.json"
+          "src/main/resources/assets/craftkaisen/particles/red_electricity.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RedElectricityParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -5291,8 +5209,8 @@
       "registry_name": "sukuna_fighting_armor",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/SukunaFightingArmorItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/sukuna_fighting_armor_chestplate.json"
+          "src/main/resources/assets/craftkaisen/models/item/sukuna_fighting_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/SukunaFightingArmorItem.java"
         ]
       },
       "path": "~/Armor"
@@ -5402,10 +5320,10 @@
       "registry_name": "jogo",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/JogoRenderer.java",
-          "src/main/resources/assets/craftkaisen/models/item/jogo_spawn_egg.json",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/jogo_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/JogoEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/JogoEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/jogo_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/JogoRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -5579,6 +5497,1555 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "EmberControl",
+      "type": "potioneffect",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ember_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/EmberControlMobEffect.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "VesselCooldown",
+      "type": "potioneffect",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/VesselCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "MainVesselCommand",
+      "type": "procedure",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_vessel_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MainVesselCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SpeedII",
+      "type": "achievement",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_ii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/speed_ii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "MaximumMeteor",
+      "type": "livingentity",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maximum_meteor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MaximumMeteorRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MaximumMeteorEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Move1CDDisplay",
+      "type": "procedure",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_1_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move1CDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisasterFlamesProcedure2",
+      "type": "procedure",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flames_procedure_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlamesProcedure2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/DisasterFlameDupe"
+    },
+    {
+      "name": "Disasterflame2",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disasterflame_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Disasterflame2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/DisasterFlameDupe"
+    },
+    {
+      "name": "DefenseIV",
+      "type": "achievement",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defense_iv",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/defense_iv.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "CursedEnergyII",
+      "type": "achievement",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_energy_ii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/cursed_energy_ii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "DisasterFlameWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlameWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Test",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SpeedIV",
+      "type": "achievement",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_iv",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/speed_iv.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "MoveSpecialDisplay",
+      "type": "procedure",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_special_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoveSpecialDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "PressedSpeed",
+      "type": "procedure",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressed_speed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PressedSpeedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "MoveUltimateCDDisplay",
+      "type": "procedure",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_ultimate_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoveUltimateCDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DefenseII",
+      "type": "achievement",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defense_ii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/defense_ii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "PowerIII",
+      "type": "achievement",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_iii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/power_iii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "VesselCommand",
+      "type": "command",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/VesselCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Move3CDDisplay",
+      "type": "procedure",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_3_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move3CDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MaximumMeteorOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maximum_meteor_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MaximumMeteorOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "OpenSkillTreeUpgrade",
+      "type": "procedure",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_skill_tree_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSkillTreeUpgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Move1Display",
+      "type": "procedure",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_1_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move1DisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Move3Display",
+      "type": "procedure",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_3_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move3DisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "CkCustomVessel",
+      "type": "gamerule",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_custom_vessel",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "UpgradeSkillTree",
+      "type": "procedure",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_skill_tree",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UpgradeSkillTreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "VesselPotionEffectEffectExpires",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_potion_effect_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VesselPotionEffectEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "MaxMeteorProcedure",
+      "type": "procedure",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_meteor_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MaxMeteorProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "UpdateSkillTree",
+      "type": "procedure",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "update_skill_tree",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UpdateSkillTreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Move4CDDisplay",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_4_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move4CDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DefenseV",
+      "type": "achievement",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defense_v",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/defense_v.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "CursedEnergyIII",
+      "type": "achievement",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_energy_iii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/cursed_energy_iii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "EmberInsect",
+      "type": "livingentity",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ember_insect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/EmberInsectEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/EmberInsectRenderer.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MoveSpecialCDDisplay",
+      "type": "procedure",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_special_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoveSpecialCDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisasterFlameProcedure",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlameProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "PowerV",
+      "type": "achievement",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_v",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/power_v.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "DisasterFlame6",
+      "type": "procedure",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/DisasterFlameDupe"
+    },
+    {
+      "name": "PowerIV",
+      "type": "achievement",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_iv",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/power_iv.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "DisasterFlame3",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/DisasterFlameDupe"
+    },
+    {
+      "name": "DisasterFlame4",
+      "type": "procedure",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/DisasterFlameDupe"
+    },
+    {
+      "name": "DefenseIII",
+      "type": "achievement",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defense_iii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/defense_iii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "SPDisplay",
+      "type": "procedure",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sp_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SPDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisasterFlame5",
+      "type": "procedure",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure/DisasterFlameDupe"
+    },
+    {
+      "name": "VesselPotionEffectOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_potion_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VesselPotionEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "Move5CDDisplay",
+      "type": "procedure",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_5_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move5CDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Move5Display",
+      "type": "procedure",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_5_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move5DisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "EmberInsectsProcedure",
+      "type": "procedure",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ember_insects_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EmberInsectsProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "PowerI",
+      "type": "achievement",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_i",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/power_i.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Move4Display",
+      "type": "procedure",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_4_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move4DisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "SkillTreeUpgradeGUI",
+      "type": "gui",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_tree_upgrade_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeUpgradeGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeUpgradeGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeUpgradeGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "DisasterFlame",
+      "type": "rangeditem",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/DisasterFlameEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/DisasterFlameItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/disaster_flame.json"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "PressedCE",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressed_ce",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PressedCEProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "PowerII",
+      "type": "achievement",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_ii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/power_ii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "DefenseI",
+      "type": "achievement",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defense_i",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/defense_i.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "EmberInsectOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ember_insect_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EmberInsectOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "CursedEnergyI",
+      "type": "achievement",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_energy_i",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/cursed_energy_i.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "PressedDefense",
+      "type": "procedure",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressed_defense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PressedDefenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "DisplayDefenseCost",
+      "type": "procedure",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_defense_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayDefenseCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "ReinTestcommand",
+      "type": "command",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rein_testcommand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/ReinTestcommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "EmberControlOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ember_control_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EmberControlOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Move2Display",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_2_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move2DisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MoveUltimateDisplay",
+      "type": "procedure",
+      "sortid": 294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_ultimate_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MoveUltimateDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "PressedPower",
+      "type": "procedure",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressed_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PressedPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SetFlames",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetFlamesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "CursedEnergyIV",
+      "type": "achievement",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_energy_iv",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/cursed_energy_iv.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "SpeedIII",
+      "type": "achievement",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_iii",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/speed_iii.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "Move2CDDisplay",
+      "type": "procedure",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "move_2_cd_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Move2CDDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "CursedEnergyV",
+      "type": "achievement",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_energy_v",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/cursed_energy_v.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "SpeedV",
+      "type": "achievement",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_v",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/speed_v.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "DisasterFlameProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlameProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SpeedI",
+      "type": "achievement",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_i",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/speed_i.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "VesselPotionEffect",
+      "type": "potioneffect",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vessel_potion_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/VesselPotionEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "EmberInsectOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ember_insect_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EmberInsectOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
@@ -5781,30 +7248,6 @@
       "value": "0"
     },
     {
-      "name": "SkillStrengthProgress",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SkillSpeedProgress",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SkillTechniqueProgress",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SkillCurseProgress",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "InParty",
       "type": "logic",
       "scope": "player_persistent",
@@ -5863,6 +7306,90 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "SkillSpeedCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MoveUltimate",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "SkillStrengthCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillDefenseCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CursedEnergyChargeSpeed",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "2.0"
+    },
+    {
+      "name": "FireSpread",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "SkillCurseCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MoveSpecial",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "VesselPlayerTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move4",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move5",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -6177,6 +7704,10 @@
                 "children": [
                   {
                     "name": "ReversalRedTick",
+                    "children": []
+                  },
+                  {
+                    "name": "DisasterFlameDupe",
                     "children": []
                   }
                 ]

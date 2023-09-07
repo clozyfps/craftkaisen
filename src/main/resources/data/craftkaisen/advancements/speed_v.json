@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_boots"
+    },
+    "title": {
+      "translate": "advancements.speed_v.title"
+    },
+    "description": {
+      "translate": "advancements.speed_v.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "speed_v": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "craftkaisen:deleted_mod_element"
+}

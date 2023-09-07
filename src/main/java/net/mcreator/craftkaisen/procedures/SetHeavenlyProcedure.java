@@ -16,6 +16,13 @@ public class SetHeavenlyProcedure {
 			});
 		}
 		{
+			String _setval = "";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.SelectedTechnique = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
 			double _setval = 0;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.CursedEnergy = _setval;
@@ -75,6 +82,48 @@ public class SetHeavenlyProcedure {
 			double _setval = 0;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.MoveUltimateCost = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "Playful Cloud";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Move1 = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "Inverted Spear Of Heaven";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Move2 = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "Sacred Lunge";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Move3 = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "Heavenly Barrage";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Move4 = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "Divine Riposite";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Move5 = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			String _setval = "Repeated God Slashes";
+			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MoveSpecial = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

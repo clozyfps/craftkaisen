@@ -18,26 +18,25 @@ public class StopPartyAttacksProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity(), event.getSource().getDirectEntity(), event.getSource().getEntity());
+			execute(event, event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
-	public static void execute(Entity entity, Entity immediatesourceentity, Entity sourceentity) {
-		execute(null, entity, immediatesourceentity, sourceentity);
+	public static void execute(Entity entity, Entity sourceentity) {
+		execute(null, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity, Entity immediatesourceentity, Entity sourceentity) {
-		if (entity == null || immediatesourceentity == null || sourceentity == null)
+	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
-		if ((((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader)
-				.equals((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader)
-				|| ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader)
-						.equals((immediatesourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader)
-				|| (sourceentity.getPersistentData().getString("partyLeaderUser")).equals((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader)
-				|| (immediatesourceentity.getPersistentData().getString("partyLeaderUser")).equals((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader))
-				&& (sourceentity instanceof Player || sourceentity instanceof ServerPlayer || immediatesourceentity instanceof Player || immediatesourceentity instanceof ServerPlayer)) {
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
+		if (!(((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader).isEmpty()
+				|| ((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader).isEmpty())) {
+			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader)
+					.equals((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).PartyLeader)
+					&& (sourceentity instanceof Player || sourceentity instanceof ServerPlayer) && (entity instanceof Player || entity instanceof ServerPlayer)) {
+				if (event != null && event.isCancelable()) {
+					event.setCanceled(true);
+				}
 			}
 		}
 	}

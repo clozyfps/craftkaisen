@@ -96,9 +96,6 @@
     "stepSound": {
       "value": ""
     },
-    "onMobTickUpdate": {
-      "name": "HollowPurpleWhileProjectileFlyingTick"
-    },
     "onInitialSpawn": {
       "name": "HollowPurpleEntityOnInitialEntitySpawn"
     },

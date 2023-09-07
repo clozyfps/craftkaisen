@@ -30,6 +30,7 @@ import net.mcreator.craftkaisen.item.HollowPurpleItem;
 import net.mcreator.craftkaisen.item.GetoArmorItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
+import net.mcreator.craftkaisen.item.DisasterFlameItem;
 import net.mcreator.craftkaisen.item.CursedFingerItem;
 import net.mcreator.craftkaisen.item.CoughSyrupItem;
 import net.mcreator.craftkaisen.item.ClapItem;
@@ -83,6 +84,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> JOGO_SPAWN_EGG = REGISTRY.register("jogo_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.JOGO, -6711040, -16777216, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> CURSEDSPIRITRUGBYFIELD_SPAWN_EGG = REGISTRY.register("cursedspiritrugbyfield_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITRUGBYFIELD, -16750951, -6750157, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> DISASTER_FLAME = REGISTRY.register("disaster_flame", () -> new DisasterFlameItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

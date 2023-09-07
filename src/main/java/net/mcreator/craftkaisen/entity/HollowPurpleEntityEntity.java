@@ -27,7 +27,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
-import net.mcreator.craftkaisen.procedures.HollowPurpleWhileProjectileFlyingTickProcedure;
 import net.mcreator.craftkaisen.procedures.HollowPurpleEntityOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
@@ -101,12 +100,6 @@ public class HollowPurpleEntityEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		HollowPurpleEntityOnInitialEntitySpawnProcedure.execute(this);
 		return retval;
-	}
-
-	@Override
-	public void baseTick() {
-		super.baseTick();
-		HollowPurpleWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
