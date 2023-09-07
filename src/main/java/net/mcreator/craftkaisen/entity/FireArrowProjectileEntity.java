@@ -1,6 +1,30 @@
 
 package net.mcreator.craftkaisen.entity;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+
+import net.mcreator.craftkaisen.procedures.FireArrowProjectileWhileProjectileFlyingTickProcedure;
+import net.mcreator.craftkaisen.procedures.FireArrowProjectileProjectileHitsBlockProcedure;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class FireArrowProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public FireArrowProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -44,19 +68,19 @@ public class FireArrowProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		FireArrowProjectileProjectileHitsBlockProcedure.execute();
+		FireArrowProjectileProjectileHitsBlockProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		FireArrowProjectileProjectileHitsBlockProcedure.execute();
+		FireArrowProjectileProjectileHitsBlockProcedure.execute(this.level, blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
 	public void tick() {
 		super.tick();
-		FireArrowProjectileWhileProjectileFlyingTickProcedure.execute();
+		FireArrowProjectileWhileProjectileFlyingTickProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}
