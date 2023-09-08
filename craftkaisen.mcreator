@@ -7009,10 +7009,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
           }
         ]
       },
@@ -8758,6 +8754,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "JoinsWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
