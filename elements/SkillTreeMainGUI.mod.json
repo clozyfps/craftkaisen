@@ -1,0 +1,779 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "skilltree.png",
+          "use1Xscale": true,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_defense_i_upgrades_max_health",
+          "text": {
+            "fixedValue": "Defense I - Upgrades max health.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 154,
+          "y": 61
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_defense_i_upgrades_max_health1",
+          "text": {
+            "fixedValue": "Defense II - Upgrades max health.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 116,
+          "y": 61
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_defense_i_upgrades_max_health2",
+          "text": {
+            "fixedValue": "Defense III - Upgrades max health.§9 2 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 78,
+          "y": 61
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_defense_i_upgrades_max_health3",
+          "text": {
+            "fixedValue": "Defense IV - Upgrades max health.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 100,
+          "y": 37
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_defense_i_upgrades_max_health4",
+          "text": {
+            "fixedValue": "Defense V - Upgrades max health.§9 3 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 62,
+          "y": 38
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_resistence_i_upgrades_resisten",
+          "text": {
+            "fixedValue": "Resistance I - Upgrades resistance.§9 2 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 40,
+          "y": 60
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_resistence_i_upgrades_resisten1",
+          "text": {
+            "fixedValue": "Resistance II - Upgrades resistance.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 2,
+          "y": 60
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_resistence_iii_upgrades_resist",
+          "text": {
+            "fixedValue": "Resistance III - Upgrades resistance.§9 2 SP & SEMI-GRADE 2"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 2,
+          "y": 100
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ce_i_increases_cursed_energy_c",
+          "text": {
+            "fixedValue": "CE I - Increases cursed energy cap.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 249,
+          "y": 60
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ce_ii_increases_cursed_energy",
+          "text": {
+            "fixedValue": "CE II - Increases cursed energy cap.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 286,
+          "y": 60
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ce_iii_increases_cursed_energy",
+          "text": {
+            "fixedValue": "CE III - Increases cursed energy cap.§9 2 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 324,
+          "y": 60
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ce_iv_increases_cursed_energy",
+          "text": {
+            "fixedValue": "CE IV - Increases cursed energy cap.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 347,
+          "y": 38
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ce_v_increases_cursed_energy_c",
+          "text": {
+            "fixedValue": "CE V - Increases cursed energy cap.§9 3 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 369,
+          "y": 16
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ss4black_flash_5_sp_4_random",
+          "text": {
+            "fixedValue": "§4Black Flash - 5 SP & 4 RANDOM USES"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 326,
+          "y": 16
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_power_i_increases_melee_damage",
+          "text": {
+            "fixedValue": "Power I - Increases melee damage.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 154,
+          "y": 155
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_power_ii_increases_melee_damag",
+          "text": {
+            "fixedValue": "Power II - Increases melee damage.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 132,
+          "y": 177
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_power_iii_increases_melee_dama",
+          "text": {
+            "fixedValue": "Power III - Increases melee damage.§9 2 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 110,
+          "y": 156
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_power_iv_increases_melee_damag",
+          "text": {
+            "fixedValue": "Power IV - Increases melee damage.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 71,
+          "y": 156
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_power_v_increases_melee_damage",
+          "text": {
+            "fixedValue": "Power V - Increases melee damage.§9 3 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 49,
+          "y": 179
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agility_i_increases_speedss9_1",
+          "text": {
+            "fixedValue": "Agility I - Increases speed.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 249,
+          "y": 156
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agility_ii_increases_speedss9",
+          "text": {
+            "fixedValue": "Agility II - Increases speed.§9 1 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 249,
+          "y": 194
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agility_iii_increases_speedss9",
+          "text": {
+            "fixedValue": "Agility III - Increases speed.§9 2 SP & GRADE 4"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 272,
+          "y": 172
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agility_iv_increases_speedss9",
+          "text": {
+            "fixedValue": "Agility IV - Increases speed.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 306,
+          "y": 172
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_agility_v_increases_speedss9_2",
+          "text": {
+            "fixedValue": "Agility V - Increases speed.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 342,
+          "y": 172
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ssfflashstep_3_sp_grade_3",
+          "text": {
+            "fixedValue": "§fFlashstep - 3 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 271,
+          "y": 133
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_attck_knockback_i_increases_at",
+          "text": {
+            "fixedValue": "Attack Knockback I - Increases Attack Knockback.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 32,
+          "y": 156
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_attck_knockback_ii_increases_a",
+          "text": {
+            "fixedValue": "Attack Knockback II - Increases Attack Knockback.§9 2 SP & GRADE 3"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 55,
+          "y": 134
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_attck_knockback_iii_increases",
+          "text": {
+            "fixedValue": "Attack Knockback III - Increases Attack Knockback.§9 3 SP & GRADE 2"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 92,
+          "y": 134
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_secondary_branc",
+          "text": {
+            "fixedValue": "Click to upgrade secondary branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 175,
+          "y": 96
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_main_defense_br",
+          "text": {
+            "fixedValue": "Click to upgrade main defense branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 189,
+          "y": 81
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_secondary_branc1",
+          "text": {
+            "fixedValue": "Click to upgrade secondary branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 189,
+          "y": 136
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_main_power_bran",
+          "text": {
+            "fixedValue": "Click to upgrade main power branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 175,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_main_agility_br",
+          "text": {
+            "fixedValue": "Click to upgrade main agility branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 136
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_main_power_bran1",
+          "text": {
+            "fixedValue": "Click to upgrade main cursed energy branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 230,
+          "y": 96
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_secondary_branc2",
+          "text": {
+            "fixedValue": "Click to upgrade secondary branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 230,
+          "y": 120
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_click_to_upgrade_secondary_branc3",
+          "text": {
+            "fixedValue": "Click to upgrade secondary branch!"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 81
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "x": 189,
+          "y": 81
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core1",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "x": 231,
+          "y": 96
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core2",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "x": 214,
+          "y": 137
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core3",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "x": 175,
+          "y": 121
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayDefenseICheck"
+          },
+          "x": 155,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayDefenseIICheck"
+          },
+          "x": 117,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayDefenseIIICheck"
+          },
+          "x": 79,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayDefenseIVCheck"
+          },
+          "x": 101,
+          "y": 39
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayDefenseVCheck"
+          },
+          "x": 63,
+          "y": 39
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayPowerICheck"
+          },
+          "x": 155,
+          "y": 157
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayPowerIICheck"
+          },
+          "x": 133,
+          "y": 179
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayPowerIIICheck"
+          },
+          "x": 111,
+          "y": 157
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayPowerIVCheck"
+          },
+          "x": 72,
+          "y": 157
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayPowerVCheck"
+          },
+          "x": 50,
+          "y": 180
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayCursedEnergyICheck"
+          },
+          "x": 250,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayCursedEnergyIICheck"
+          },
+          "x": 287,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayCursedEnergyIIICheck"
+          },
+          "x": 325,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayCursedEnergyIVCheck"
+          },
+          "x": 347,
+          "y": 39
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayCursedEnergyVCheck"
+          },
+          "x": 369,
+          "y": 17
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayAgilityICheck"
+          },
+          "x": 250,
+          "y": 157
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayAgilityIICheck"
+          },
+          "x": 250,
+          "y": 196
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayAgilityIIICheck"
+          },
+          "x": 272,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayAgilityIVCheck"
+          },
+          "x": 308,
+          "y": 174
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "i.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "DisplayAgilityVCheck"
+          },
+          "x": 345,
+          "y": 174
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
