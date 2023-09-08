@@ -16,8 +16,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.craftkaisen.procedures.QuestProgressDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.QuestDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveUltimateCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.MoveSpecialCDDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.Move5DisplayProcedure;
@@ -105,14 +103,9 @@ public class MainHUDOverlay {
 				RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/purple.png"));
 				Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -209, posY + 35, 0, 0, 64, 64, 64, 64);
 			}
-			if (QuestDisplayProcedure.execute(entity))
-				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quests"), posX + 90, posY + -112, -1);
-			if (QuestDisplayProcedure.execute(entity))
-				Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_empty"), posX + 90, posY + -103, -1);
-			if (QuestDisplayProcedure.execute(entity))
-				Minecraft.getInstance().font.draw(event.getPoseStack(),
-
-						QuestProgressDisplayProcedure.execute(entity), posX + 90, posY + -94, -1);
+			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quests"), posX + 90, posY + -112, -1);
+			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_empty"), posX + 90, posY + -103, -1);
+			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quest1"), posX + 90, posY + -94, -1);
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					DisplaySelectedTechniqueProcedure.execute(entity), posX + -207, posY + -97, -1);
