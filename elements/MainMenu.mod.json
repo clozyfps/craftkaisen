@@ -130,6 +130,9 @@
         "data": {
           "name": "button_prestige",
           "text": "Skill Tree",
+          "onClick": {
+            "name": "OpenSkillTreeGUI"
+          },
           "width": 67,
           "height": 20,
           "x": 105,

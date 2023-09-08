@@ -18,6 +18,8 @@ import net.mcreator.craftkaisen.procedures.SPDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.LevelDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.ExpDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.DisplayPlayerProcedure;
+import net.mcreator.craftkaisen.network.MainMenuButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -115,6 +117,10 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
 		button_prestige = new Button(this.leftPos + 16, this.topPos + 150, 67, 20, Component.translatable("gui.craftkaisen.main_menu.button_prestige"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(0, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_prestige", button_prestige);
 		this.addRenderableWidget(button_prestige);

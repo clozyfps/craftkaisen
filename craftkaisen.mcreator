@@ -7307,15 +7307,55 @@
       "path": "~/Items/Procedures"
     },
     {
-      "name": "RootsPotionOnEffectActiveTick",
+      "name": "FlowerfieldsWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 327,
+      "sortid": 340,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "roots_potion_on_effect_active_tick",
+      "registry_name": "flowerfields_while_projectile_flying_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RootsPotionOnEffectActiveTickProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldsWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BudTick",
+      "type": "procedure",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bud_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BudTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -7328,18 +7368,76 @@
           }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Procedures"
     },
     {
-      "name": "RootsPotion",
-      "type": "potioneffect",
-      "sortid": 328,
+      "name": "Flowerfieldprocedure",
+      "type": "procedure",
+      "sortid": 343,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "roots_potion",
+      "registry_name": "flowerfieldprocedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/RootsPotionMobEffect.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldprocedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "CursedBudProcedure",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_bud_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedBudProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "WoodenBallProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_ball_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/Abilities"
@@ -7363,6 +7461,54 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "CursedBud",
+      "type": "rangeditem",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_bud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/CursedBudItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursed_bud.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedBudEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Flowerfields",
+      "type": "rangeditem",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowerfields",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/FlowerfieldsItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/FlowerfieldsEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/flowerfields.json"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "WoodenBall",
+      "type": "rangeditem",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_ball",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/WoodenBallEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/wooden_ball.json",
+          "src/main/java/net/mcreator/craftkaisen/item/WoodenBallItem.java"
+        ]
+      },
+      "path": "~/Abilities"
     },
     {
       "name": "WoodenBallWhileProjectileFlyingTick",
@@ -7397,33 +7543,15 @@
       "path": "~/Abilities"
     },
     {
-      "name": "WoodenBallProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 331,
+      "name": "RootsPotion",
+      "type": "potioneffect",
+      "sortid": 328,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wooden_ball_projectile_hits_living_entity",
+      "registry_name": "roots_potion",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+          "src/main/java/net/mcreator/craftkaisen/potion/RootsPotionMobEffect.java"
         ]
       },
       "path": "~/Abilities"
@@ -7461,42 +7589,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "WoodenBall",
-      "type": "rangeditem",
-      "sortid": 333,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wooden_ball",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/WoodenBallEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/wooden_ball.json",
-          "src/main/java/net/mcreator/craftkaisen/item/WoodenBallItem.java"
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "WoodenBallProcedure",
-      "type": "procedure",
-      "sortid": 334,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "wooden_ball_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures/TechniqueProcedure"
-    },
-    {
       "name": "CursedBudProjectileHitsLivingEntity",
       "type": "procedure",
       "sortid": 335,
@@ -7511,6 +7603,58 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SetPlants",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_plants",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlantsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "FlowerfieldsProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowerfields_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldsProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -7553,31 +7697,15 @@
       "path": "~/Abilities"
     },
     {
-      "name": "CursedBud",
-      "type": "rangeditem",
-      "sortid": 337,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_bud",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/CursedBudItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/cursed_bud.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedBudEntity.java"
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "BudTick",
+      "name": "RootsPotionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 338,
+      "sortid": 327,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "bud_tick",
+      "registry_name": "roots_potion_on_effect_active_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BudTickProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/RootsPotionOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -7590,18 +7718,18 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Abilities"
     },
     {
-      "name": "CursedBudProcedure",
+      "name": "WoodenBallProcedure",
       "type": "procedure",
-      "sortid": 339,
+      "sortid": 334,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cursed_bud_procedure",
+      "registry_name": "wooden_ball_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CursedBudProcedureProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallProcedureProcedure.java"
         ],
         "dependencies": [
           {
@@ -7613,57 +7741,437 @@
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
     },
     {
-      "name": "FlowerfieldsWhileProjectileFlyingTick",
+      "name": "DisplayCursedEnergyVCheck",
       "type": "procedure",
-      "sortid": 340,
+      "sortid": 347,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flowerfields_while_projectile_flying_tick",
+      "registry_name": "display_cursed_energy_v_check",
       "metadata": {
+        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldsWhileProjectileFlyingTickProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCursedEnergyVCheckProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
-      "path": "~/Abilities"
+      "path": "~/GUI/Values"
     },
     {
-      "name": "FlowerfieldsProjectileHitsLivingEntity",
+      "name": "DisplayAgilityIVCheck",
       "type": "procedure",
       "sortid": 341,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "flowerfields_projectile_hits_living_entity",
+      "registry_name": "display_agility_iv_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAgilityIVCheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayPowerIICheck",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_power_ii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayPowerIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayPowerICheck",
+      "type": "procedure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_power_i_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayPowerICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "ClickedMainDefense",
+      "type": "procedure",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clicked_main_defense",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldsProjectileHitsLivingEntityProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClickedMainDefenseProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "DisplayDefenseIVCheck",
+      "type": "procedure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_defense_iv_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayDefenseIVCheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "SkillTreeMainGUI",
+      "type": "gui",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_tree_main_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeMainGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeMainGUIButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeMainGUIMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "DisplayDefenseIICheck",
+      "type": "procedure",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_defense_ii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayDefenseIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayAgilityIIICheck",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_agility_iii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAgilityIIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayCursedEnergyIICheck",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_cursed_energy_ii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCursedEnergyIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayCursedEnergyIVCheck",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_cursed_energy_iv_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCursedEnergyIVCheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayAgilityVCheck",
+      "type": "procedure",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_agility_v_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAgilityVCheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayCursedEnergyICheck",
+      "type": "procedure",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_cursed_energy_i_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCursedEnergyICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayDefenseIIICheck",
+      "type": "procedure",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_defense_iii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayDefenseIIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayAgilityICheck",
+      "type": "procedure",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_agility_i_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAgilityICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayPowerIIICheck",
+      "type": "procedure",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_power_iii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayPowerIIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayPowerIVCheck",
+      "type": "procedure",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_power_iv_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayPowerIVCheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayPowerVCheck",
+      "type": "procedure",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_power_v_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayPowerVCheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayAgilityIICheck",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_agility_ii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAgilityIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayDefenseVCheck",
+      "type": "procedure",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_defense_v_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayDefenseVCheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "ClickedMainCursedEnergy",
+      "type": "procedure",
+      "sortid": 352,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clicked_main_cursed_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClickedMainCursedEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "DisplayDefenseICheck",
+      "type": "procedure",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_defense_i_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayDefenseICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayCursedEnergyIIICheck",
+      "type": "procedure",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_cursed_energy_iii_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCursedEnergyIIICheckProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "ClickedMainPower",
+      "type": "procedure",
+      "sortid": 350,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clicked_main_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClickedMainPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ClickedMainAgility",
+      "type": "procedure",
+      "sortid": 351,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clicked_main_agility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ClickedMainAgilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "OpenSkillTreeGUI",
+      "type": "procedure",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_skill_tree_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSkillTreeGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -7682,63 +8190,7 @@
           }
         ]
       },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "Flowerfields",
-      "type": "rangeditem",
-      "sortid": 342,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flowerfields",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/FlowerfieldsItem.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/FlowerfieldsEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/flowerfields.json"
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "Flowerfieldprocedure",
-      "type": "procedure",
-      "sortid": 343,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flowerfieldprocedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldprocedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures/TechniqueProcedure"
-    },
-    {
-      "name": "SetPlants",
-      "type": "procedure",
-      "sortid": 344,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_plants",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlantsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -8083,6 +8535,48 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "PowerTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "VesselFirstEnter",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "Grade",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "4"
+    },
+    {
+      "name": "Dimension",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "DefenseTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CursedEnergyTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AgilityTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -8232,7 +8726,6 @@
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "effect.craftkaisen.sleeping": "Sleeping",
-      "item.craftkaisen.wooden_ball": "Wooden Ball",
       "item.craftkaisen.get_crushed": "Get Crushed",
       "item.craftkaisen.tes": "Tes",
       "effect.craftkaisen.ember_control": "InsectControl",
@@ -8244,7 +8737,6 @@
       "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
-      "item.craftkaisen.cursed_bud": "Cursed Bud",
       "item.craftkaisen.cough_syrup": "Cough Syrup",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
       "entity.craftkaisen.jogo": "Jogo",
@@ -8263,7 +8755,6 @@
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
-      "effect.craftkaisen.roots_potion": "RootsPotion",
       "itemGroup.tabjjkmobs": "JJK Mobs",
       "item.craftkaisen.sukuna_fighting_armor_chestplate": "Sukuna Fighting Haori",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
@@ -8271,7 +8762,6 @@
       "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.disaster_flame": "Disaster Flame",
       "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
-      "item.craftkaisen.flowerfields": "Flowerfields",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
