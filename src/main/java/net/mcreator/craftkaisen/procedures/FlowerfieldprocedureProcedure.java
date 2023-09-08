@@ -25,7 +25,7 @@ public class FlowerfieldprocedureProcedure {
 						entityToSpawn.setSilent(true);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, 9, 0);
+				}.getArrow(projectileLevel, entity, 13, 0);
 				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);

@@ -39,7 +39,7 @@ public class CleaveProcedureProcedure {
 							_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 2, 2, false);
 						}
 					}
-					entityiterator.hurt(DamageSource.GENERIC, 12);
+					entityiterator.hurt(DamageSource.GENERIC, 35);
 				}
 			}
 		}

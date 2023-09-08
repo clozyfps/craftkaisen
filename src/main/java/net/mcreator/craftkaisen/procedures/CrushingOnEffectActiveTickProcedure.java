@@ -31,6 +31,6 @@ public class CrushingOnEffectActiveTickProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt")), SoundSource.NEUTRAL, 1, 1, false);
 			}
 		}
-		entity.hurt(DamageSource.GENERIC, 8);
+		entity.hurt(DamageSource.GENERIC, 10);
 	}
 }

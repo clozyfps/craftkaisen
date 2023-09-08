@@ -43,7 +43,7 @@ public class DismantleProcedureProcedure {
 							_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 2, 2, false);
 						}
 					}
-					entityiterator.hurt(DamageSource.GENERIC, 11);
+					entityiterator.hurt(DamageSource.GENERIC, 25);
 					entityiterator.setDeltaMovement(new Vec3((0.6 * entity.getLookAngle().x), (0 * entity.getLookAngle().y), (0.6 * entity.getLookAngle().z)));
 				}
 			}

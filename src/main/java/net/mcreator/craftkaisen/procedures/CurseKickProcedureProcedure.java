@@ -56,7 +56,7 @@ public class CurseKickProcedureProcedure {
 						.collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
-						entity.hurt(DamageSource.GENERIC, 5);
+						entity.hurt(DamageSource.GENERIC, 13);
 					}
 				}
 			}
