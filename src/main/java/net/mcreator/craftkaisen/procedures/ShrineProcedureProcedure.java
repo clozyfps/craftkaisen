@@ -28,8 +28,8 @@ public class ShrineProcedureProcedure {
 			world.addFreshEntity(entityToSpawn);
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 1, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 1, 1, true, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.SHRINE.get(), 300, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.SHRINE.get(), 300, 1, true, false));
 	}
 }

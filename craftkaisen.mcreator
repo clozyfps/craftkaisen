@@ -104,7 +104,7 @@
           }
         ]
       },
-      "path": "~/Items"
+      "path": "~/Items/Procedures"
     },
     {
       "name": "HollowPurpleEntity",
@@ -354,7 +354,7 @@
           }
         ]
       },
-      "path": "~/Items"
+      "path": "~/Items/Procedures"
     },
     {
       "name": "LapseBlueOnInitialEntitySpawn",
@@ -1458,7 +1458,7 @@
           }
         ]
       },
-      "path": "~/Items"
+      "path": "~/Items/Procedures"
     },
     {
       "name": "InvertedSpearofHeaven",
@@ -1686,7 +1686,6 @@
       "registry_name": "main_menu",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/MainMenuButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/MainMenuScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/MainMenuMenu.java"
         ]
@@ -2467,7 +2466,7 @@
           }
         ]
       },
-      "path": "~/Commands"
+      "path": "~/Commands/Procedures"
     },
     {
       "name": "InvertedSpearofHeavenRemoveInfinity",
@@ -4213,7 +4212,7 @@
           }
         ]
       },
-      "path": "~/Items"
+      "path": "~/Items/Procedures"
     },
     {
       "name": "SetupAnimations",
@@ -5160,20 +5159,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "BlackFlashAdvancement",
-      "type": "achievement",
-      "sortid": 221,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "black_flash_advancement",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/black_flash_advancement.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
       "name": "RCTHealing",
       "type": "potioneffect",
       "sortid": 221,
@@ -5363,20 +5348,6 @@
         ]
       },
       "path": "~/Keybinds"
-    },
-    {
-      "name": "CoreSkillTree",
-      "type": "achievement",
-      "sortid": 233,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "core_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/core_skill_tree.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "MasteredRCTHealing",
@@ -5965,20 +5936,6 @@
       "path": "~/Commands/Procedures"
     },
     {
-      "name": "SpeedII",
-      "type": "achievement",
-      "sortid": 247,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speed_ii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/speed_ii.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
       "name": "Move1CDDisplay",
       "type": "procedure",
       "sortid": 281,
@@ -5998,34 +5955,6 @@
         ]
       },
       "path": "~/GUI/Values"
-    },
-    {
-      "name": "DefenseIV",
-      "type": "achievement",
-      "sortid": 260,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "defense_iv",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/defense_iv.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "CursedEnergyII",
-      "type": "achievement",
-      "sortid": 263,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_energy_ii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/cursed_energy_ii.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "Test",
@@ -6049,21 +5978,7 @@
           }
         ]
       },
-      "path": "~/Commands"
-    },
-    {
-      "name": "SpeedIV",
-      "type": "achievement",
-      "sortid": 249,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speed_iv",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/speed_iv.json"
-        ]
-      },
-      "path": "~/Advancements"
+      "path": "~/Commands/Procedures"
     },
     {
       "name": "MoveSpecialDisplay",
@@ -6087,30 +6002,6 @@
       "path": "~/GUI/Values"
     },
     {
-      "name": "PressedSpeed",
-      "type": "procedure",
-      "sortid": 279,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pressed_speed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PressedSpeedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
       "name": "MoveUltimateCDDisplay",
       "type": "procedure",
       "sortid": 287,
@@ -6130,34 +6021,6 @@
         ]
       },
       "path": "~/GUI/Values"
-    },
-    {
-      "name": "DefenseII",
-      "type": "achievement",
-      "sortid": 258,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "defense_ii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/defense_ii.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "PowerIII",
-      "type": "achievement",
-      "sortid": 254,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_iii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/power_iii.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "VesselCommand",
@@ -6193,42 +6056,6 @@
         ]
       },
       "path": "~/GUI/Values"
-    },
-    {
-      "name": "OpenSkillTreeUpgrade",
-      "type": "procedure",
-      "sortid": 276,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_skill_tree_upgrade",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSkillTreeUpgradeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
     },
     {
       "name": "Move1Display",
@@ -6286,30 +6113,6 @@
       "path": "~/Gamerules"
     },
     {
-      "name": "UpgradeSkillTree",
-      "type": "procedure",
-      "sortid": 269,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "upgrade_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/UpgradeSkillTreeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "VesselPotionEffectEffectExpires",
       "type": "procedure",
       "sortid": 244,
@@ -6334,26 +6137,6 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "UpdateSkillTree",
-      "type": "procedure",
-      "sortid": 267,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "update_skill_tree",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/UpdateSkillTreeProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "Move4CDDisplay",
       "type": "procedure",
       "sortid": 284,
@@ -6375,34 +6158,6 @@
       "path": "~/GUI/Values"
     },
     {
-      "name": "DefenseV",
-      "type": "achievement",
-      "sortid": 261,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "defense_v",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/defense_v.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "CursedEnergyIII",
-      "type": "achievement",
-      "sortid": 264,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_energy_iii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/cursed_energy_iii.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
       "name": "MoveSpecialCDDisplay",
       "type": "procedure",
       "sortid": 286,
@@ -6422,48 +6177,6 @@
         ]
       },
       "path": "~/GUI/Values"
-    },
-    {
-      "name": "PowerV",
-      "type": "achievement",
-      "sortid": 256,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_v",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/power_v.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "PowerIV",
-      "type": "achievement",
-      "sortid": 255,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_iv",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/power_iv.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "DefenseIII",
-      "type": "achievement",
-      "sortid": 259,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "defense_iii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/defense_iii.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "SPDisplay",
@@ -6561,20 +6274,6 @@
       "path": "~/GUI/Values"
     },
     {
-      "name": "PowerI",
-      "type": "achievement",
-      "sortid": 252,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_i",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/power_i.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
       "name": "Move4Display",
       "type": "procedure",
       "sortid": 291,
@@ -6594,112 +6293,6 @@
         ]
       },
       "path": "~/GUI/Values"
-    },
-    {
-      "name": "SkillTreeUpgradeGUI",
-      "type": "gui",
-      "sortid": 270,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "skill_tree_upgrade_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/SkillTreeUpgradeGUIButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/SkillTreeUpgradeGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/SkillTreeUpgradeGUIScreen.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
-      "name": "PressedCE",
-      "type": "procedure",
-      "sortid": 278,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pressed_ce",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PressedCEProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "PowerII",
-      "type": "achievement",
-      "sortid": 253,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_ii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/power_ii.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "DefenseI",
-      "type": "achievement",
-      "sortid": 257,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "defense_i",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/defense_i.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "CursedEnergyI",
-      "type": "achievement",
-      "sortid": 262,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_energy_i",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/cursed_energy_i.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "PressedDefense",
-      "type": "procedure",
-      "sortid": 277,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pressed_defense",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PressedDefenseProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
     },
     {
       "name": "DisplayDefenseCost",
@@ -6779,58 +6372,6 @@
       "path": "~/GUI/Values"
     },
     {
-      "name": "PressedPower",
-      "type": "procedure",
-      "sortid": 280,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pressed_power",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PressedPowerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "CursedEnergyIV",
-      "type": "achievement",
-      "sortid": 265,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_energy_iv",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/cursed_energy_iv.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "SpeedIII",
-      "type": "achievement",
-      "sortid": 248,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speed_iii",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/speed_iii.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
       "name": "Move2CDDisplay",
       "type": "procedure",
       "sortid": 282,
@@ -6850,48 +6391,6 @@
         ]
       },
       "path": "~/GUI/Values"
-    },
-    {
-      "name": "CursedEnergyV",
-      "type": "achievement",
-      "sortid": 266,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_energy_v",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/cursed_energy_v.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "SpeedV",
-      "type": "achievement",
-      "sortid": 250,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speed_v",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/speed_v.json"
-        ]
-      },
-      "path": "~/Advancements"
-    },
-    {
-      "name": "SpeedI",
-      "type": "achievement",
-      "sortid": 246,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "speed_i",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/speed_i.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "VesselPotionEffect",
@@ -7195,6 +6694,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -7684,6 +7195,116 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "MalevolentShrineOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 322,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "malevolent_shrine_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MalevolentShrineOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SetSukuna",
+      "type": "procedure",
+      "sortid": 323,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sukuna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSukunaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "Cursedenergymax",
+      "type": "procedure",
+      "sortid": 324,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursedenergymax",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedenergymaxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "MaxCursedEnergy",
+      "type": "command",
+      "sortid": 325,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_cursed_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/MaxCursedEnergyCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Test2Rightclicked",
+      "type": "procedure",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_2_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Test2RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
     }
   ],
   "variable_elements": [
@@ -8088,12 +7709,9 @@
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
-      "gui.craftkaisen.skill_tree_upgrade_gui.button_upgrade_defense": "Upgrade Defense",
-      "advancements.power_iii.descr": "A basic upgrade in attacking power.",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "effect.craftkaisen.charge_ce_effect": "Charging",
       "effect.craftkaisen.infinity": "Infinity",
-      "advancements.speed_iii.descr": "A basic upgrade in speed.",
       "key.craftkaisen.flash_step": "Flash Step",
       "gui.craftkaisen.main_hud.label_x": "X",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
@@ -8104,13 +7722,9 @@
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "gui.craftkaisen.main_hud.label_quest3": "Quest3",
-      "advancements.cursed_energy_i.descr": "A basic upgrade in for your cursed energy cap.",
       "gui.craftkaisen.main_hud.label_quest2": "Quest2",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
-      "advancements.power_v.title": "Power V",
-      "advancements.speed_iv.descr": "A basic upgrade in speed.",
-      "advancements.power_ii.descr": "A basic upgrade in attacking power.",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.divergent_fist": "DivergentFist",
       "effect.craftkaisen.vessel_cooldown": "Vessel CD",
@@ -8118,7 +7732,6 @@
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
-      "advancements.cursed_energy_ii.title": "Cursed Energy II",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
@@ -8128,30 +7741,21 @@
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
-      "advancements.defense_iv.descr": "A basic upgrade in your defensive capabilities.",
-      "advancements.cursed_energy_v.descr": "A basic upgrade in for your cursed energy cap.",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "gui.craftkaisen.main_menu.label_level": "Level : ",
-      "advancements.power_iv.descr": "A basic upgrade in attacking power.",
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.twist": "Twist",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
-      "advancements.defense_v.descr": "A basic upgrade in your defensive capabilities.",
       "itemGroup.tabjjkitems": "JJK Items",
-      "advancements.defense_iv.title": "Defense IV",
-      "advancements.cursed_energy_iv.descr": "A basic upgrade in for your cursed energy cap.",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "effect.craftkaisen.crushing": "Crushing",
       "itemGroup.tabjjkarmor": "JJK Armor",
-      "advancements.speed_i.descr": "A basic upgrade in speed.",
-      "advancements.defense_i.descr": "A basic upgrade in your defensive capabilities.",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
-      "advancements.speed_v.descr": "A basic upgrade in speed.",
       "gui.craftkaisen.main_hud.label_x2": "X",
       "gui.craftkaisen.main_hud.label_quest1": "Quest1",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
@@ -8161,28 +7765,21 @@
       "entity.craftkaisen.ember_insect": "Ember Insect",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
-      "advancements.cursed_energy_ii.descr": "A basic upgrade in for your cursed energy cap.",
       "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
       "subtitles.electric": "",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
-      "advancements.defense_ii.descr": "A basic upgrade in your defensive capabilities.",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
-      "advancements.speed_iv.title": "Speed IV",
-      "advancements.cursed_energy_v.title": "Cursed Energy V",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "item.craftkaisen.fire_arrow_projectile": "Fire Arrow Projectile",
       "entity.craftkaisen.fly_head": "Fly Head",
       "item.craftkaisen.clap": "Clap",
-      "advancements.speed_ii.title": "Speed II",
-      "advancements.cursed_energy_i.title": "Cursed Energy I",
       "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
-      "advancements.speed_ii.descr": "A basic upgrade in speed.",
       "item.craftkaisen.cursedspiritrugbyfield_spawn_egg": "Cursed Spirit: Rugby Field Spawn Egg",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.test_2": "Test 2",
@@ -8191,12 +7788,10 @@
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
-      "advancements.speed_iii.title": "Speed III",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "item.craftkaisen.sleep": "Sleep",
       "effect.craftkaisen.ember_floor": "FloorEmber",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
-      "advancements.power_ii.title": "Power II",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
@@ -8206,21 +7801,16 @@
       "item.craftkaisen.get_crushed": "Get Crushed",
       "item.craftkaisen.tes": "Tes",
       "effect.craftkaisen.ember_control": "InsectControl",
-      "advancements.black_flash_advancement.descr": "WIP",
       "key.craftkaisen.use_technique": "Use Technique",
       "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
       "entity.craftkaisen.malevolent_shrine": "Malevolent Shrine",
       "block.craftkaisen.unlimited_void": "Unlimited Void",
       "gui.craftkaisen.main_hud.label_empty": "---------------------",
-      "advancements.defense_ii.title": "Defense II",
       "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
-      "advancements.defense_i.title": "Defense I",
       "item.craftkaisen.cough_syrup": "Cough Syrup",
-      "advancements.power_iii.title": "Power III",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
-      "advancements.cursed_energy_iv.title": "Cursed Energy IV",
       "entity.craftkaisen.jogo": "Jogo",
       "block.craftkaisen.quest_board": "Quest Board",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
@@ -8228,16 +7818,12 @@
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
-      "advancements.defense_iii.descr": "A basic upgrade in your defensive capabilities.",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
-      "advancements.power_i.title": "Power I",
       "itemGroup.tabjjkweapons": "JJK Weapons",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "item.craftkaisen.blast_away": "Blast Away",
       "subtitles.veil.use": "Veil Used",
-      "advancements.defense_v.title": "Defense V",
-      "advancements.core_skill_tree.title": "Skill Tree",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
@@ -8245,27 +7831,17 @@
       "item.craftkaisen.sukuna_fighting_armor_chestplate": "Sukuna Fighting Haori",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
       "key.craftkaisen.switch_moveset": "Switch Moveset",
-      "advancements.cursed_energy_iii.descr": "A basic upgrade in for your cursed energy cap.",
-      "advancements.cursed_energy_iii.title": "Cursed Energy III",
-      "advancements.speed_v.title": "Speed V",
-      "advancements.speed_i.title": "Speed I",
       "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.disaster_flame": "Disaster Flame",
       "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
-      "advancements.core_skill_tree.descr": "The core of cursed energy.",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
-      "advancements.power_iv.title": "Power IV",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
-      "advancements.black_flash_advancement.title": "Black Flash",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
-      "advancements.power_v.descr": "A basic upgrade in attacking power.",
       "effect.craftkaisen.shrine": "Shrine",
-      "advancements.power_i.descr": "A basic upgrade in attacking power.",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "item.craftkaisen.explode": "Explode",
       "key.categories.jjk": "Craft Kaisen",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
-      "advancements.defense_iii.title": "Defense III",
       "gui.craftkaisen.main_hud.label_move_one": "Move One",
       "effect.craftkaisen.clap_rush": "Clap Rush",
       "gamerule.ckCustomVessel.description": "Allows a player to reincarnate and become the sukuna of that world."
@@ -8443,5 +8019,5 @@
     "modElementsPackage": "net.mcreator.craftkaisen",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300224119
+  "mcreatorVersion": 202300336712
 }

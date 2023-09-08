@@ -37,7 +37,7 @@ public class GrabAndTossProcedureProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 250, false, false));
 					CraftkaisenMod.queueServerWork(20, () -> {
-						entityiterator.setDeltaMovement(new Vec3((1.7 * entity.getLookAngle().x), (0.2 * entity.getLookAngle().y), (1.7 * entity.getLookAngle().z)));
+						entityiterator.setDeltaMovement(new Vec3((2.2 * entity.getLookAngle().x), (0.2 * entity.getLookAngle().y), (2.2 * entity.getLookAngle().z)));
 					});
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 0.1, 2, 0.1, 0);
