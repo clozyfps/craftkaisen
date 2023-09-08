@@ -8401,6 +8401,35 @@
         ]
       },
       "path": "~/GUI"
+    },
+    {
+      "name": "OpenInventoryCurse",
+      "type": "procedure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_inventory_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenInventoryCurseProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "OpenInventoryCurseBind",
+      "type": "keybind",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_inventory_curse_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/OpenInventoryCurseBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
     }
   ],
   "variable_elements": [
@@ -8961,6 +8990,7 @@
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
+      "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
