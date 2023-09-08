@@ -5,12 +5,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -30,28 +32,36 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		boolean found = false;
+		String step4 = "";
+		String continousfiltering = "";
+		String step2 = "";
+		String step3 = "";
+		String step1 = "";
+		String blockid = "";
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
+		double startsize = 0;
+		double growspeed = 0;
+		double mx = 0;
+		double my = 0;
+		double percent = 0;
+		double mz = 0;
+		double size = 0;
+		BlockState clickedBlock = Blocks.AIR.defaultBlockState();
 		entity.getPersistentData().putBoolean("aoefirst", true);
 		CraftkaisenMod.queueServerWork(20, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", false);
 		});
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(30 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					if (!(entityiterator.getPersistentData().getBoolean("lapseuser") == true)) {
 						entityiterator.hurt(DamageSource.GENERIC, 5);
 						entityiterator.getPersistentData().putBoolean("aoe", true);
 						entityiterator.getPersistentData().putBoolean("guardbreaks", true);
-						{
-							Entity _ent = entityiterator;
-							_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
-							if (_ent instanceof ServerPlayer _serverPlayer)
-								_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
-						}
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 1, 2, 1, 0);
 						if (world instanceof ServerLevel _level)
@@ -71,5 +81,25 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:dust 0 1 1 2 ^0 ^0 ^0 5 2.5 5 0 40");
+		sx = -15;
+		found = false;
+		for (int index0 = 0; index0 < 6; index0++) {
+			sy = -15;
+			for (int index1 = 0; index1 < 6; index1++) {
+				sz = -15;
+				for (int index2 = 0; index2 < 6; index2++) {
+					if (!((world.getBlockState(new BlockPos(x + sx, y + sy, z + sz))).getBlock() == Blocks.AIR)) {
+						found = true;
+					}
+					sz = sz + 1;
+				}
+				sy = sy + 1;
+			}
+			sx = sx + 1;
+		}
+		if (found == true) {
+			if (world instanceof ServerLevel _level)
+				FallingBlockEntity.fall(_level, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), (world.getBlockState(new BlockPos(x + sx, y + sy, z + sz))));
+		}
 	}
 }

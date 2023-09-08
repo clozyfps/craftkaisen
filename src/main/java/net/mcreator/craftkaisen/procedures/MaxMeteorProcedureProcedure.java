@@ -30,6 +30,7 @@ public class MaxMeteorProcedureProcedure {
 				_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 			world.addFreshEntity(entityToSpawn);
 		}
+		entity.setDeltaMovement(new Vec3(0, (entity.getDeltaMovement().y() + 3), 0));
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 250, 250, false, false));
 		CraftkaisenMod.queueServerWork(20, () -> {

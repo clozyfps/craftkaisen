@@ -25,7 +25,7 @@ public class BlastAwayProjectileHitsLivingEntityProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"/title @p title {\"text\":\"Blast Away.\",\"bold\":true}");
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.POOF, x, y, z, 25, 4, 3, 4, 0);
+			_level.sendParticles(ParticleTypes.POOF, x, y, z, 25, 4, 3, 4, 0.2);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 25, 3, 3, 3, 0);
 		if (world instanceof Level _level) {
@@ -35,5 +35,6 @@ public class BlastAwayProjectileHitsLivingEntityProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
 			}
 		}
+		entity.getPersistentData().putBoolean("slam", true);
 	}
 }

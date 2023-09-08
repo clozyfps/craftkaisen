@@ -28,6 +28,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftkaisen.procedures.HollowPurpleEntityOnInitialEntitySpawnProcedure;
+import net.mcreator.craftkaisen.procedures.HollowPurpleEntityOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
 import javax.annotation.Nullable;
@@ -100,6 +101,12 @@ public class HollowPurpleEntityEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		HollowPurpleEntityOnInitialEntitySpawnProcedure.execute(this);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		HollowPurpleEntityOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
