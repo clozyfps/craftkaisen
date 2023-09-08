@@ -1,13 +1,48 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.SkillTreeMainGUIMenu;
+import net.mcreator.craftkaisen.procedures.DisplayPowerVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayPowerIVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayPowerIIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayPowerIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayPowerICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayDefenseVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayDefenseIVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayDefenseIIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayDefenseIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayDefenseICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayCursedEnergyVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayCursedEnergyIVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayCursedEnergyIIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayCursedEnergyIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayCursedEnergyICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayAgilityVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayAgilityIVCheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayAgilityIIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayAgilityIICheckProcedure;
+import net.mcreator.craftkaisen.procedures.DisplayAgilityICheckProcedure;
+import net.mcreator.craftkaisen.network.SkillTreeMainGUIButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMainGUIMenu> {
-
 	private final static HashMap<String, Object> guistate = SkillTreeMainGUIMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	ImageButton imagebutton_clicked_core;
 	ImageButton imagebutton_clicked_core1;
 	ImageButton imagebutton_clicked_core2;
@@ -32,11 +67,8 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
-
 		super.render(ms, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(ms, mouseX, mouseY);
-
 		if (mouseX > leftPos + -59 && mouseX < leftPos + -35 && mouseY > topPos + -59 && mouseY < topPos + -35)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health"), mouseX, mouseY);
 		if (mouseX > leftPos + -97 && mouseX < leftPos + -73 && mouseY > topPos + -59 && mouseY < topPos + -35)
@@ -120,167 +152,86 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 		RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/skilltree.png"));
 		this.blit(ms, this.leftPos + -213, this.topPos + -120, 0, 0, 427, 240, 427, 240);
 
-		if (
-
-		DisplayDefenseICheckProcedure.execute()
-
-		) {
+		if (DisplayDefenseICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -58, this.topPos + -58, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayDefenseIICheckProcedure.execute()
-
-		) {
+		if (DisplayDefenseIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -96, this.topPos + -58, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayDefenseIIICheckProcedure.execute()
-
-		) {
+		if (DisplayDefenseIIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -134, this.topPos + -58, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayDefenseIVCheckProcedure.execute()
-
-		) {
+		if (DisplayDefenseIVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -112, this.topPos + -81, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayDefenseVCheckProcedure.execute()
-
-		) {
+		if (DisplayDefenseVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -150, this.topPos + -81, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayPowerICheckProcedure.execute()
-
-		) {
+		if (DisplayPowerICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -58, this.topPos + 37, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayPowerIICheckProcedure.execute()
-
-		) {
+		if (DisplayPowerIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -80, this.topPos + 59, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayPowerIIICheckProcedure.execute()
-
-		) {
+		if (DisplayPowerIIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -102, this.topPos + 37, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayPowerIVCheckProcedure.execute()
-
-		) {
+		if (DisplayPowerIVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -141, this.topPos + 37, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayPowerVCheckProcedure.execute()
-
-		) {
+		if (DisplayPowerVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + -163, this.topPos + 60, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayCursedEnergyICheckProcedure.execute()
-
-		) {
+		if (DisplayCursedEnergyICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 36, this.topPos + -58, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayCursedEnergyIICheckProcedure.execute()
-
-		) {
+		if (DisplayCursedEnergyIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 73, this.topPos + -58, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayCursedEnergyIIICheckProcedure.execute()
-
-		) {
+		if (DisplayCursedEnergyIIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 111, this.topPos + -58, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayCursedEnergyIVCheckProcedure.execute()
-
-		) {
+		if (DisplayCursedEnergyIVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 133, this.topPos + -81, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayCursedEnergyVCheckProcedure.execute()
-
-		) {
+		if (DisplayCursedEnergyVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 155, this.topPos + -103, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayAgilityICheckProcedure.execute()
-
-		) {
+		if (DisplayAgilityICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 36, this.topPos + 37, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayAgilityIICheckProcedure.execute()
-
-		) {
+		if (DisplayAgilityIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 36, this.topPos + 76, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayAgilityIIICheckProcedure.execute()
-
-		) {
+		if (DisplayAgilityIIICheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 58, this.topPos + 54, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayAgilityIVCheckProcedure.execute()
-
-		) {
+		if (DisplayAgilityIVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 94, this.topPos + 54, 0, 0, 23, 23, 23, 23);
 		}
-		if (
-
-		DisplayAgilityVCheckProcedure.execute()
-
-		) {
+		if (DisplayAgilityVCheckProcedure.execute(entity)) {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/i.png"));
 			this.blit(ms, this.leftPos + 131, this.topPos + 54, 0, 0, 23, 23, 23, 23);
 		}
-
 		RenderSystem.disableBlend();
 	}
 
@@ -290,7 +241,6 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -312,49 +262,38 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		imagebutton_clicked_core = new ImageButton(this.leftPos + -24, this.topPos + -39, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(0, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:imagebutton_clicked_core", imagebutton_clicked_core);
 		this.addRenderableWidget(imagebutton_clicked_core);
-
 		imagebutton_clicked_core1 = new ImageButton(this.leftPos + 17, this.topPos + -24, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core1.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(1, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-
 		guistate.put("button:imagebutton_clicked_core1", imagebutton_clicked_core1);
 		this.addRenderableWidget(imagebutton_clicked_core1);
-
 		imagebutton_clicked_core2 = new ImageButton(this.leftPos + 0, this.topPos + 17, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core2.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(2, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
-
 		guistate.put("button:imagebutton_clicked_core2", imagebutton_clicked_core2);
 		this.addRenderableWidget(imagebutton_clicked_core2);
-
 		imagebutton_clicked_core3 = new ImageButton(this.leftPos + -38, this.topPos + 1, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core3.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(3, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
-
 		guistate.put("button:imagebutton_clicked_core3", imagebutton_clicked_core3);
 		this.addRenderableWidget(imagebutton_clicked_core3);
-
 	}
-
 }

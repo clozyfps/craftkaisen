@@ -54,7 +54,7 @@ public class CheckReverseCursedTechniqueProcedure {
 						});
 					}
 					randomRCT = Mth.nextInt(RandomSource.create(), 1, 100);
-					if (randomRCT >= 1) {
+					if (randomRCT >= 85) {
 						{
 							boolean _setval = true;
 							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

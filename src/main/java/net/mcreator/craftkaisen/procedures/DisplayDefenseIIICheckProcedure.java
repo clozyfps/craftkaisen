@@ -1,14 +1,19 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 public class DisplayDefenseIIICheckProcedure {
-public static boolean execute(
-) {
-boolean v = false;
-if (>=3) {v = true;}else{v = false;}return
-v;
-}
+	public static boolean execute(Entity entity) {
+		if (entity == null)
+			return false;
+		boolean v = false;
+		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).DefenseTree >= 3) {
+			v = true;
+		} else {
+			v = false;
+		}
+		return v;
+	}
 }
