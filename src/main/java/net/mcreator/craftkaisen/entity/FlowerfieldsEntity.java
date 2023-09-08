@@ -67,7 +67,7 @@ public class FlowerfieldsEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		FlowerfieldsProjectileHitsLivingEntityProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner());
+		FlowerfieldsProjectileHitsLivingEntityProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

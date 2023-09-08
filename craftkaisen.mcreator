@@ -7009,6 +7009,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
           }
         ]
       },
@@ -8264,20 +8268,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "BlockSave",
-      "type": "tag",
-      "sortid": 355,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "block_save",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/tags/blocks/block_save.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
       "name": "HollowPurpleEntityOnEntityTickUpdate",
       "type": "procedure",
       "sortid": 356,
@@ -8762,12 +8752,6 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "JoinsWorld",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "Fame",

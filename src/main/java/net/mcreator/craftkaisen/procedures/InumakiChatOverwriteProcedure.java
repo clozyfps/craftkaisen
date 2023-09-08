@@ -78,6 +78,9 @@ public class InumakiChatOverwriteProcedure {
 							_player.displayClientMessage(Component.literal(("<" + entity.getDisplayName().getString() + "> " + "Tuna Mayo")), false);
 					}
 				}
+				if (event != null && event.isCancelable()) {
+					event.setCanceled(true);
+				}
 			}
 		}
 	}
