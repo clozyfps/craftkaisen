@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.craftkaisen.item.WoodenBallItem;
 import net.mcreator.craftkaisen.item.TwistItem;
 import net.mcreator.craftkaisen.item.TojiArmorItem;
 import net.mcreator.craftkaisen.item.Test2Item;
@@ -29,10 +30,12 @@ import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
 import net.mcreator.craftkaisen.item.GetoArmorItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
+import net.mcreator.craftkaisen.item.FlowerfieldsItem;
 import net.mcreator.craftkaisen.item.FireArrowProjectileItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
 import net.mcreator.craftkaisen.item.DisasterFlameItem;
 import net.mcreator.craftkaisen.item.CursedFingerItem;
+import net.mcreator.craftkaisen.item.CursedBudItem;
 import net.mcreator.craftkaisen.item.CoughSyrupItem;
 import net.mcreator.craftkaisen.item.ClapItem;
 import net.mcreator.craftkaisen.item.BlindfoldItem;
@@ -86,6 +89,9 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITRUGBYFIELD, -16750951, -6750157, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> DISASTER_FLAME = REGISTRY.register("disaster_flame", () -> new DisasterFlameItem());
 	public static final RegistryObject<Item> FIRE_ARROW_PROJECTILE = REGISTRY.register("fire_arrow_projectile", () -> new FireArrowProjectileItem());
+	public static final RegistryObject<Item> WOODEN_BALL = REGISTRY.register("wooden_ball", () -> new WoodenBallItem());
+	public static final RegistryObject<Item> CURSED_BUD = REGISTRY.register("cursed_bud", () -> new CursedBudItem());
+	public static final RegistryObject<Item> FLOWERFIELDS = REGISTRY.register("flowerfields", () -> new FlowerfieldsItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

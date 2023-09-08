@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.craftkaisen.entity.WoodenBallEntity;
 import net.mcreator.craftkaisen.entity.TwistEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
@@ -31,6 +32,7 @@ import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
 import net.mcreator.craftkaisen.entity.GetCrushedEntity;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
+import net.mcreator.craftkaisen.entity.FlowerfieldsEntity;
 import net.mcreator.craftkaisen.entity.FireArrowProjectileEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
@@ -38,6 +40,7 @@ import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
+import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -110,6 +113,12 @@ public class CraftkaisenModEntities {
 			.setUpdateInterval(3).setCustomClientFactory(FireArrowEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<FireArrowProjectileEntity>> FIRE_ARROW_PROJECTILE = register("projectile_fire_arrow_projectile", EntityType.Builder.<FireArrowProjectileEntity>of(FireArrowProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(FireArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WoodenBallEntity>> WOODEN_BALL = register("projectile_wooden_ball",
+			EntityType.Builder.<WoodenBallEntity>of(WoodenBallEntity::new, MobCategory.MISC).setCustomClientFactory(WoodenBallEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CursedBudEntity>> CURSED_BUD = register("projectile_cursed_bud",
+			EntityType.Builder.<CursedBudEntity>of(CursedBudEntity::new, MobCategory.MISC).setCustomClientFactory(CursedBudEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FlowerfieldsEntity>> FLOWERFIELDS = register("projectile_flowerfields",
+			EntityType.Builder.<FlowerfieldsEntity>of(FlowerfieldsEntity::new, MobCategory.MISC).setCustomClientFactory(FlowerfieldsEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

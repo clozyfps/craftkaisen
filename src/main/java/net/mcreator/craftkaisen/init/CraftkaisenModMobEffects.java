@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.potion.StoppedMobEffect;
 import net.mcreator.craftkaisen.potion.SleepingMobEffect;
 import net.mcreator.craftkaisen.potion.SixeyespotionMobEffect;
 import net.mcreator.craftkaisen.potion.ShrineMobEffect;
+import net.mcreator.craftkaisen.potion.RootsPotionMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
@@ -78,4 +79,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> EMBER_CONTROL = REGISTRY.register("ember_control", () -> new EmberControlMobEffect());
 	public static final RegistryObject<MobEffect> EMBER_FLOOR = REGISTRY.register("ember_floor", () -> new EmberFloorMobEffect());
 	public static final RegistryObject<MobEffect> SHRINE = REGISTRY.register("shrine", () -> new ShrineMobEffect());
+	public static final RegistryObject<MobEffect> ROOTS_POTION = REGISTRY.register("roots_potion", () -> new RootsPotionMobEffect());
 }

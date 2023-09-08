@@ -7305,6 +7305,440 @@
         ]
       },
       "path": "~/Items/Procedures"
+    },
+    {
+      "name": "RootsPotionOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roots_potion_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RootsPotionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "RootsPotion",
+      "type": "potioneffect",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roots_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/RootsPotionMobEffect.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "RootsProcedure",
+      "type": "procedure",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roots_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RootsProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "WoodenBallWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_ball_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "WoodenBallProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_ball_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "WoodenBallProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_ball_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "WoodenBall",
+      "type": "rangeditem",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_ball",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/WoodenBallEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/wooden_ball.json",
+          "src/main/java/net/mcreator/craftkaisen/item/WoodenBallItem.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "WoodenBallProcedure",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wooden_ball_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WoodenBallProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "CursedBudProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_bud_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedBudProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "CursedBudWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_bud_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedBudWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "CursedBud",
+      "type": "rangeditem",
+      "sortid": 337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_bud",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/CursedBudItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursed_bud.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedBudEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BudTick",
+      "type": "procedure",
+      "sortid": 338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bud_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BudTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CursedBudProcedure",
+      "type": "procedure",
+      "sortid": 339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_bud_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedBudProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "FlowerfieldsWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowerfields_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldsWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "FlowerfieldsProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowerfields_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldsProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Flowerfields",
+      "type": "rangeditem",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowerfields",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/FlowerfieldsItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/FlowerfieldsEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/flowerfields.json"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Flowerfieldprocedure",
+      "type": "procedure",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowerfieldprocedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldprocedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "SetPlants",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_plants",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlantsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
     }
   ],
   "variable_elements": [
@@ -7798,6 +8232,7 @@
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "effect.craftkaisen.sleeping": "Sleeping",
+      "item.craftkaisen.wooden_ball": "Wooden Ball",
       "item.craftkaisen.get_crushed": "Get Crushed",
       "item.craftkaisen.tes": "Tes",
       "effect.craftkaisen.ember_control": "InsectControl",
@@ -7809,6 +8244,7 @@
       "gamerule.ckOverwriteInumakiChat.description": "Change voice technique players chat to ingredients.",
       "key.craftkaisen.open_main_menu_bind": "Open Main Menu",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
+      "item.craftkaisen.cursed_bud": "Cursed Bud",
       "item.craftkaisen.cough_syrup": "Cough Syrup",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
       "entity.craftkaisen.jogo": "Jogo",
@@ -7827,6 +8263,7 @@
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
+      "effect.craftkaisen.roots_potion": "RootsPotion",
       "itemGroup.tabjjkmobs": "JJK Mobs",
       "item.craftkaisen.sukuna_fighting_armor_chestplate": "Sukuna Fighting Haori",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
@@ -7834,6 +8271,7 @@
       "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.disaster_flame": "Disaster Flame",
       "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
+      "item.craftkaisen.flowerfields": "Flowerfields",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
