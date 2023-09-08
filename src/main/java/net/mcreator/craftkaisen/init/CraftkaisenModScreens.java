@@ -13,6 +13,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.craftkaisen.client.gui.SkillTreeMainGUIScreen;
 import net.mcreator.craftkaisen.client.gui.MainMenuScreen;
+import net.mcreator.craftkaisen.client.gui.InventoryCurseGUIScreen;
 import net.mcreator.craftkaisen.client.gui.BindingVowGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -23,6 +24,7 @@ public class CraftkaisenModScreens {
 			MenuScreens.register(CraftkaisenModMenus.MAIN_MENU.get(), MainMenuScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.BINDING_VOW_GUI.get(), BindingVowGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.SKILL_TREE_MAIN_GUI.get(), SkillTreeMainGUIScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.INVENTORY_CURSE_GUI.get(), InventoryCurseGUIScreen::new);
 		});
 	}
 }

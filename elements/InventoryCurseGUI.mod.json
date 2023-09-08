@@ -18,7 +18,7 @@
             "fixedValue": "Inventory Curse"
           },
           "color": {
-            "value": -12829636,
+            "value": -10092391,
             "falpha": 0.0
           },
           "x": 171,
@@ -239,6 +239,21 @@
           "dropItemsWhenNotBound": false,
           "x": 276,
           "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_inventory_curse1",
+          "text": {
+            "fixedValue": "Inventory Curse"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 170,
+          "y": 44
         }
       }
     ],
