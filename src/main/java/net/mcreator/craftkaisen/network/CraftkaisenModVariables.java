@@ -125,6 +125,7 @@ public class CraftkaisenModVariables {
 			clone.DefenseTree = original.DefenseTree;
 			clone.CursedEnergyTree = original.CursedEnergyTree;
 			clone.AgilityTree = original.AgilityTree;
+			clone.JoinsWorld = original.JoinsWorld;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -367,6 +368,7 @@ public class CraftkaisenModVariables {
 		public double DefenseTree = 0;
 		public double CursedEnergyTree = 0;
 		public double AgilityTree = 0;
+		public boolean JoinsWorld = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -434,6 +436,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("DefenseTree", DefenseTree);
 			nbt.putDouble("CursedEnergyTree", CursedEnergyTree);
 			nbt.putDouble("AgilityTree", AgilityTree);
+			nbt.putBoolean("JoinsWorld", JoinsWorld);
 			return nbt;
 		}
 
@@ -498,6 +501,7 @@ public class CraftkaisenModVariables {
 			DefenseTree = nbt.getDouble("DefenseTree");
 			CursedEnergyTree = nbt.getDouble("CursedEnergyTree");
 			AgilityTree = nbt.getDouble("AgilityTree");
+			JoinsWorld = nbt.getBoolean("JoinsWorld");
 		}
 	}
 
@@ -581,6 +585,7 @@ public class CraftkaisenModVariables {
 					variables.DefenseTree = message.data.DefenseTree;
 					variables.CursedEnergyTree = message.data.CursedEnergyTree;
 					variables.AgilityTree = message.data.AgilityTree;
+					variables.JoinsWorld = message.data.JoinsWorld;
 				}
 			});
 			context.setPacketHandled(true);

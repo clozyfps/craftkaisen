@@ -1,6 +1,29 @@
 
 package net.mcreator.craftkaisen.entity;
 
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.util.RandomSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+
+import net.mcreator.craftkaisen.procedures.FlowerfieldsWhileProjectileFlyingTickProcedure;
+import net.mcreator.craftkaisen.procedures.FlowerfieldsProjectileHitsLivingEntityProcedure;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class FlowerfieldsEntity extends AbstractArrow implements ItemSupplier {
 	public FlowerfieldsEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -44,7 +67,7 @@ public class FlowerfieldsEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		FlowerfieldsProjectileHitsLivingEntityProcedure.execute();
+		FlowerfieldsProjectileHitsLivingEntityProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this.getOwner());
 	}
 
 	@Override
