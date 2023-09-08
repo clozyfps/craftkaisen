@@ -54,5 +54,8 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.EMBER_INSECT.get(), EmberInsectRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.FIRE_ARROW.get(), FireArrowRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.FIRE_ARROW_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.WOODEN_BALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.CURSED_BUD.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.FLOWERFIELDS.get(), ThrownItemRenderer::new);
 	}
 }
