@@ -493,6 +493,9 @@
           "name": "imagebutton_clicked_core",
           "image": "clicked_core.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainDefense"
+          },
           "x": 189,
           "y": 81
         }
@@ -503,6 +506,9 @@
           "name": "imagebutton_clicked_core1",
           "image": "clicked_core.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainCursedEnergy"
+          },
           "x": 231,
           "y": 96
         }
@@ -513,6 +519,9 @@
           "name": "imagebutton_clicked_core2",
           "image": "clicked_core.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainAgility"
+          },
           "x": 214,
           "y": 137
         }
@@ -523,6 +532,9 @@
           "name": "imagebutton_clicked_core3",
           "image": "clicked_core.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainPower"
+          },
           "x": 175,
           "y": 121
         }
