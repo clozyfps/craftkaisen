@@ -8396,8 +8396,8 @@
       "registry_name": "inventory_curse_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -8798,6 +8798,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "JoinsWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -8878,6 +8884,7 @@
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.divergent_fist": "DivergentFist",
       "effect.craftkaisen.vessel_cooldown": "Vessel CD",
+      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
       "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",

@@ -67,7 +67,8 @@ public class InventoryCurseGUIScreen extends AbstractContainerScreen<InventoryCu
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.inventory_curse_gui.label_inventory_curse"), 45, 7, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.inventory_curse_gui.label_inventory_curse"), 45, 7, -10092391);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.inventory_curse_gui.label_inventory_curse1"), 44, 7, -1);
 	}
 
 	@Override

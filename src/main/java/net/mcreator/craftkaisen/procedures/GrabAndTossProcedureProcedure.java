@@ -36,8 +36,8 @@ public class GrabAndTossProcedureProcedure {
 					entityiterator.hurt(DamageSource.GENERIC, 7);
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 250, false, false));
-					entityiterator.getPersistentData().putBoolean("slam", true);
 					CraftkaisenMod.queueServerWork(20, () -> {
+						entityiterator.getPersistentData().putBoolean("slam", true);
 						entityiterator.setDeltaMovement(new Vec3((2.2 * entity.getLookAngle().x), (0.6 * entity.getLookAngle().y), (2.2 * entity.getLookAngle().z)));
 					});
 					if (world instanceof ServerLevel _level)
