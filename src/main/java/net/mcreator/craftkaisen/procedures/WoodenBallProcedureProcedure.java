@@ -25,7 +25,7 @@ public class WoodenBallProcedureProcedure {
 						entityToSpawn.setSilent(true);
 						return entityToSpawn;
 					}
-				}.getArrow(projectileLevel, entity, 10, 5);
+				}.getArrow(projectileLevel, entity, 12, 5);
 				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 6, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);

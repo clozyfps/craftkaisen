@@ -3,10 +3,6 @@ package net.mcreator.craftkaisen.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -14,7 +10,6 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -80,15 +75,9 @@ public class HollowPurpleWhileProjectileFlyingTickProcedure {
 		if (found == true) {
 			world.destroyBlock(new BlockPos(x + sx, y + sy, z + sz), false);
 		}
-		if (world instanceof ServerLevel _serverworld) {
-			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "purpleair"));
-			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(x, y, z), new BlockPos(x, y, z), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-			}
-		}
-		CraftkaisenMod.queueServerWork(15, () -> {
+		CraftkaisenMod.queueServerWork(5, () -> {
 			if (world instanceof Level _level && !_level.isClientSide())
-				_level.explode(null, x, y, z, 3, Explosion.BlockInteraction.NONE);
+				_level.explode(null, x, y, z, 8, Explosion.BlockInteraction.NONE);
 		});
 	}
 }

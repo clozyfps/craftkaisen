@@ -28,7 +28,7 @@ public class TwistingOnEffectActiveTickProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		entity.hurt(DamageSource.GENERIC, 5);
+		entity.hurt(DamageSource.GENERIC, 9);
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
 				_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.weak")), SoundSource.NEUTRAL, 1, 1);

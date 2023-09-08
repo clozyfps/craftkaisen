@@ -43,7 +43,7 @@ public class ExplodeProjectileHitsLivingEntityProcedure {
 					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
 				}
 			}
-			entity.hurt(DamageSource.GENERIC, 10);
+			entity.hurt(DamageSource.GENERIC, 17);
 		});
 	}
 }

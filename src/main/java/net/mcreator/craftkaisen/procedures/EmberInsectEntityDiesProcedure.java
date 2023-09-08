@@ -34,7 +34,7 @@ public class EmberInsectEntityDiesProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(6 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					entityiterator.hurt(DamageSource.ON_FIRE, 10);
+					entityiterator.hurt(DamageSource.ON_FIRE, 16);
 				}
 			}
 		}

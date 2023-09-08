@@ -41,7 +41,7 @@ public class MultiSliceProcedureProcedure {
 							_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 2, 2, false);
 						}
 					}
-					entityiterator.hurt(DamageSource.GENERIC, 9);
+					entityiterator.hurt(DamageSource.GENERIC, 15);
 				}
 			}
 		}
@@ -65,7 +65,7 @@ public class MultiSliceProcedureProcedure {
 										false);
 							}
 						}
-						entityiterator.hurt(DamageSource.GENERIC, 9);
+						entityiterator.hurt(DamageSource.GENERIC, 15);
 					}
 				}
 			}

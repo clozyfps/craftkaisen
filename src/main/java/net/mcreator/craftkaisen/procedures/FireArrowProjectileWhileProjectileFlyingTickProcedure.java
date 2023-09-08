@@ -2,14 +2,12 @@ package net.mcreator.craftkaisen.procedures;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
@@ -78,23 +76,5 @@ public class FireArrowProjectileWhileProjectileFlyingTickProcedure {
 			_level.sendParticles(ParticleTypes.LARGE_SMOKE, x, y, z, 10, ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).FireSpread + 1),
 					((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).FireSpread + 1),
 					((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).FireSpread + 1), 0);
-		int horizontalRadiusSphere = (int) ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).FireSpread + 3.5) - 1;
-		int verticalRadiusSphere = (int) ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).FireSpread + 3.5) - 1;
-		int yIterationsSphere = verticalRadiusSphere;
-		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
-			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-					if (distanceSq <= 1.0) {
-						if (!((world.getBlockState(new BlockPos(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR)) {
-							if (!((world.getBlockState(new BlockPos(x + xi, y + i + 2, z + zi))).getBlock() == Blocks.AIR)) {
-								world.setBlock(new BlockPos(x + xi, y + i + 2, z + zi), Blocks.AIR.defaultBlockState(), 3);
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 }
