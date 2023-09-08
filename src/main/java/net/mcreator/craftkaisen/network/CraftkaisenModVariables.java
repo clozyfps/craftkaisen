@@ -115,11 +115,11 @@ public class CraftkaisenModVariables {
 			clone.Move4 = original.Move4;
 			clone.Move3 = original.Move3;
 			clone.Move5 = original.Move5;
-			clone.PowerTree = original.PowerTree;
 			clone.Grade = original.Grade;
 			clone.Dimension = original.Dimension;
 			clone.DefenseTree = original.DefenseTree;
 			clone.CursedEnergyTree = original.CursedEnergyTree;
+			clone.PowerTree = original.PowerTree;
 			clone.AgilityTree = original.AgilityTree;
 			clone.Fame = original.Fame;
 			if (!event.isWasDeath()) {
@@ -354,11 +354,11 @@ public class CraftkaisenModVariables {
 		public String Move4 = "\"\"";
 		public String Move3 = "\"\"";
 		public String Move5 = "\"\"";
-		public double PowerTree = 0;
 		public String Grade = "4";
 		public String Dimension = "\"\"";
 		public double DefenseTree = 0;
 		public double CursedEnergyTree = 0;
+		public double PowerTree = 0;
 		public double AgilityTree = 0;
 		public double Fame = 0;
 
@@ -418,11 +418,11 @@ public class CraftkaisenModVariables {
 			nbt.putString("Move4", Move4);
 			nbt.putString("Move3", Move3);
 			nbt.putString("Move5", Move5);
-			nbt.putDouble("PowerTree", PowerTree);
 			nbt.putString("Grade", Grade);
 			nbt.putString("Dimension", Dimension);
 			nbt.putDouble("DefenseTree", DefenseTree);
 			nbt.putDouble("CursedEnergyTree", CursedEnergyTree);
+			nbt.putDouble("PowerTree", PowerTree);
 			nbt.putDouble("AgilityTree", AgilityTree);
 			nbt.putDouble("Fame", Fame);
 			return nbt;
@@ -479,11 +479,11 @@ public class CraftkaisenModVariables {
 			Move4 = nbt.getString("Move4");
 			Move3 = nbt.getString("Move3");
 			Move5 = nbt.getString("Move5");
-			PowerTree = nbt.getDouble("PowerTree");
 			Grade = nbt.getString("Grade");
 			Dimension = nbt.getString("Dimension");
 			DefenseTree = nbt.getDouble("DefenseTree");
 			CursedEnergyTree = nbt.getDouble("CursedEnergyTree");
+			PowerTree = nbt.getDouble("PowerTree");
 			AgilityTree = nbt.getDouble("AgilityTree");
 			Fame = nbt.getDouble("Fame");
 		}
@@ -559,11 +559,11 @@ public class CraftkaisenModVariables {
 					variables.Move4 = message.data.Move4;
 					variables.Move3 = message.data.Move3;
 					variables.Move5 = message.data.Move5;
-					variables.PowerTree = message.data.PowerTree;
 					variables.Grade = message.data.Grade;
 					variables.Dimension = message.data.Dimension;
 					variables.DefenseTree = message.data.DefenseTree;
 					variables.CursedEnergyTree = message.data.CursedEnergyTree;
+					variables.PowerTree = message.data.PowerTree;
 					variables.AgilityTree = message.data.AgilityTree;
 					variables.Fame = message.data.Fame;
 				}
