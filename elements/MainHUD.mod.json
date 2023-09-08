@@ -15,9 +15,6 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "QuestDisplay"
-          },
           "x": 303,
           "y": 8
         }
@@ -33,9 +30,6 @@
             "value": -1,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "QuestDisplay"
-          },
           "x": 303,
           "y": 17
         }
@@ -45,15 +39,11 @@
         "data": {
           "name": "label_quest1",
           "text": {
-            "fixedValue": "Quest",
-            "name": "QuestProgressDisplay"
+            "fixedValue": "Quest"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "QuestDisplay"
           },
           "x": 303,
           "y": 26

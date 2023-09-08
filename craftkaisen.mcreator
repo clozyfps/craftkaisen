@@ -4669,27 +4669,6 @@
       "path": "~/GUI/Values"
     },
     {
-      "name": "QuestProgressDisplay",
-      "type": "procedure",
-      "sortid": 187,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "quest_progress_display",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/QuestProgressDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "DisplayPlayer",
       "type": "procedure",
       "sortid": 190,
@@ -4777,71 +4756,6 @@
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "QuestDisplay",
-      "type": "procedure",
-      "sortid": 186,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "quest_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/QuestDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "QuestBoardRightClick",
-      "type": "procedure",
-      "sortid": 185,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "quest_board_right_click",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/QuestBoardRightClickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Blocks/Procedures"
-    },
-    {
-      "name": "CheckQuestProgress",
-      "type": "procedure",
-      "sortid": 188,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "check_quest_progress",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CheckQuestProgressProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
             "type": "entity"
           }
         ]
@@ -7858,6 +7772,62 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "LeapingProcedure",
+      "type": "procedure",
+      "sortid": 353,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leaping_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LeapingProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "DisableFallDamage",
+      "type": "procedure",
+      "sortid": 354,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_fall_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisableFallDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -8006,28 +7976,10 @@
       "value": "\"\""
     },
     {
-      "name": "QuestMob",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "QuestReward",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "VesselTechnique",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
-    },
-    {
-      "name": "QuestAmount",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "FingersEaten",
@@ -8052,12 +8004,6 @@
       "type": "string",
       "scope": "map",
       "value": "\"\""
-    },
-    {
-      "name": "QuestProgress",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "InParty",
@@ -8244,6 +8190,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "Fame",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -8357,7 +8309,7 @@
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
       "gui.craftkaisen.main_hud.label_x2": "X",
-      "gui.craftkaisen.main_hud.label_quest1": "Quest1",
+      "gui.craftkaisen.main_hud.label_quest1": "Quest",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_hud.label_x1": "X",
@@ -8619,6 +8571,15 @@
         "children": [
           {
             "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Quests",
+        "children": [
+          {
+            "name": "Grade Quests",
             "children": []
           }
         ]

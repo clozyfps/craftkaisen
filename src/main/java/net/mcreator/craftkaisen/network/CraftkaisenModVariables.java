@@ -92,11 +92,7 @@ public class CraftkaisenModVariables {
 			clone.Mood = original.Mood;
 			clone.VowsEnabled = original.VowsEnabled;
 			clone.Vessel = original.Vessel;
-			clone.QuestMob = original.QuestMob;
-			clone.QuestReward = original.QuestReward;
 			clone.VesselTechnique = original.VesselTechnique;
-			clone.QuestAmount = original.QuestAmount;
-			clone.QuestProgress = original.QuestProgress;
 			clone.InParty = original.InParty;
 			clone.RCT = original.RCT;
 			clone.PartyLeader = original.PartyLeader;
@@ -125,6 +121,7 @@ public class CraftkaisenModVariables {
 			clone.CursedEnergyTree = original.CursedEnergyTree;
 			clone.PowerTree = original.PowerTree;
 			clone.AgilityTree = original.AgilityTree;
+			clone.Fame = original.Fame;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -332,11 +329,7 @@ public class CraftkaisenModVariables {
 		public String VowSender = "\"\"";
 		public String VowDescription = "";
 		public String Vessel = "\"\"";
-		public String QuestMob = "\"\"";
-		public double QuestReward = 0;
 		public String VesselTechnique = "\"\"";
-		public double QuestAmount = 0;
-		public double QuestProgress = 0;
 		public boolean InParty = false;
 		public boolean Checked = false;
 		public boolean RCT = false;
@@ -367,6 +360,7 @@ public class CraftkaisenModVariables {
 		public double CursedEnergyTree = 0;
 		public double PowerTree = 0;
 		public double AgilityTree = 0;
+		public double Fame = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -399,11 +393,7 @@ public class CraftkaisenModVariables {
 			nbt.putString("VowSender", VowSender);
 			nbt.putString("VowDescription", VowDescription);
 			nbt.putString("Vessel", Vessel);
-			nbt.putString("QuestMob", QuestMob);
-			nbt.putDouble("QuestReward", QuestReward);
 			nbt.putString("VesselTechnique", VesselTechnique);
-			nbt.putDouble("QuestAmount", QuestAmount);
-			nbt.putDouble("QuestProgress", QuestProgress);
 			nbt.putBoolean("InParty", InParty);
 			nbt.putBoolean("Checked", Checked);
 			nbt.putBoolean("RCT", RCT);
@@ -434,6 +424,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("CursedEnergyTree", CursedEnergyTree);
 			nbt.putDouble("PowerTree", PowerTree);
 			nbt.putDouble("AgilityTree", AgilityTree);
+			nbt.putDouble("Fame", Fame);
 			return nbt;
 		}
 
@@ -463,11 +454,7 @@ public class CraftkaisenModVariables {
 			VowSender = nbt.getString("VowSender");
 			VowDescription = nbt.getString("VowDescription");
 			Vessel = nbt.getString("Vessel");
-			QuestMob = nbt.getString("QuestMob");
-			QuestReward = nbt.getDouble("QuestReward");
 			VesselTechnique = nbt.getString("VesselTechnique");
-			QuestAmount = nbt.getDouble("QuestAmount");
-			QuestProgress = nbt.getDouble("QuestProgress");
 			InParty = nbt.getBoolean("InParty");
 			Checked = nbt.getBoolean("Checked");
 			RCT = nbt.getBoolean("RCT");
@@ -498,6 +485,7 @@ public class CraftkaisenModVariables {
 			CursedEnergyTree = nbt.getDouble("CursedEnergyTree");
 			PowerTree = nbt.getDouble("PowerTree");
 			AgilityTree = nbt.getDouble("AgilityTree");
+			Fame = nbt.getDouble("Fame");
 		}
 	}
 
@@ -546,11 +534,7 @@ public class CraftkaisenModVariables {
 					variables.VowSender = message.data.VowSender;
 					variables.VowDescription = message.data.VowDescription;
 					variables.Vessel = message.data.Vessel;
-					variables.QuestMob = message.data.QuestMob;
-					variables.QuestReward = message.data.QuestReward;
 					variables.VesselTechnique = message.data.VesselTechnique;
-					variables.QuestAmount = message.data.QuestAmount;
-					variables.QuestProgress = message.data.QuestProgress;
 					variables.InParty = message.data.InParty;
 					variables.Checked = message.data.Checked;
 					variables.RCT = message.data.RCT;
@@ -581,6 +565,7 @@ public class CraftkaisenModVariables {
 					variables.CursedEnergyTree = message.data.CursedEnergyTree;
 					variables.PowerTree = message.data.PowerTree;
 					variables.AgilityTree = message.data.AgilityTree;
+					variables.Fame = message.data.Fame;
 				}
 			});
 			context.setPacketHandled(true);

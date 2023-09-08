@@ -37,6 +37,23 @@ public class CheckDeathsProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			if (!((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame - 15 < 0)) {
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame - 15;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Fame = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else {
+				{
+					double _setval = 0;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Fame = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 	}
 }
