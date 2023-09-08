@@ -41,7 +41,7 @@ public class AddTechniqueDetailsProcedure {
 		Minecraft mc = Minecraft.getInstance();
 		EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
 		EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
-		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Restricted")) {
+		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).InventoryCurse == true) {
 			if (_evt.getRenderer() instanceof PlayerRenderer) {
 				if (_evt instanceof RenderLivingEvent.Pre) {
 					// _evt.setCanceled(true);
