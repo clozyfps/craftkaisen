@@ -110,7 +110,7 @@
       "name": "HollowPurpleEntity",
       "type": "livingentity",
       "sortid": 17,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "hollow_purple_entity",
       "metadata": {
@@ -8005,7 +8005,7 @@
       "name": "Flowerfields",
       "type": "rangeditem",
       "sortid": 342,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "flowerfields",
       "metadata": {
@@ -8167,6 +8167,10 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/FlowerfieldsProjectileHitsLivingEntityProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
