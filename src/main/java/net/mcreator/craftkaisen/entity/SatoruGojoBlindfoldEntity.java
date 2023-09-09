@@ -39,17 +39,17 @@ import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
 import javax.annotation.Nullable;
 
-public class SatoruGojoEntity extends Monster {
-	public SatoruGojoEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftkaisenModEntities.SATORU_GOJO.get(), world);
+public class SatoruGojoBlindfoldEntity extends Monster {
+	public SatoruGojoBlindfoldEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftkaisenModEntities.SATORU_GOJO_BLINDFOLD.get(), world);
 	}
 
-	public SatoruGojoEntity(EntityType<SatoruGojoEntity> type, Level world) {
+	public SatoruGojoBlindfoldEntity(EntityType<SatoruGojoBlindfoldEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
 		xpReward = 3;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.SUNGLASSES_HELMET.get()));
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.BLINDFOLD_HELMET.get()));
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_LEGGINGS.get()));
 	}
@@ -108,7 +108,7 @@ public class SatoruGojoEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CraftkaisenModEntities.SATORU_GOJO.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
+		SpawnPlacements.register(CraftkaisenModEntities.SATORU_GOJO_BLINDFOLD.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

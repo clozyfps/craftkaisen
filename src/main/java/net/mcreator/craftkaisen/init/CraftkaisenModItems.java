@@ -97,6 +97,8 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITROPPONGI, -16750951, -6750157, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> GOJO_UNIFORM_CHESTPLATE = REGISTRY.register("gojo_uniform_chestplate", () -> new GojoUniformItem.Chestplate());
 	public static final RegistryObject<Item> GOJO_UNIFORM_LEGGINGS = REGISTRY.register("gojo_uniform_leggings", () -> new GojoUniformItem.Leggings());
+	public static final RegistryObject<Item> SATORU_GOJO_BLINDFOLD_SPAWN_EGG = REGISTRY.register("satoru_gojo_blindfold_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.SATORU_GOJO_BLINDFOLD, -16514026, -2100742, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

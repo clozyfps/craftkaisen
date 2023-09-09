@@ -2,7 +2,7 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Satoru Gojo",
+    "mobName": "Satoru Gojo Blindfold",
     "mobLabel": "",
     "mobModelName": "Biped",
     "mobModelTexture": "gojosatoru.png",
@@ -36,7 +36,7 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:Sunglasses.helmet"
+      "value": "CUSTOM:Blindfold.helmet"
     },
     "equipmentBody": {
       "value": "CUSTOM:GojoUniform.body"

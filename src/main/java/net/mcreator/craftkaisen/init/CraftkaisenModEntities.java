@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.SatoruGojoBlindfoldEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
@@ -125,6 +126,10 @@ public class CraftkaisenModEntities {
 					.setCustomClientFactory(CursedspiritroppongiEntity::new)
 
 					.sized(1f, 1f));
+	public static final RegistryObject<EntityType<SatoruGojoBlindfoldEntity>> SATORU_GOJO_BLINDFOLD = register("satoru_gojo_blindfold",
+			EntityType.Builder.<SatoruGojoBlindfoldEntity>of(SatoruGojoBlindfoldEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SatoruGojoBlindfoldEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -148,6 +153,7 @@ public class CraftkaisenModEntities {
 			EmberInsectEntity.init();
 			FireArrowEntity.init();
 			CursedspiritroppongiEntity.init();
+			SatoruGojoBlindfoldEntity.init();
 		});
 	}
 
@@ -168,5 +174,6 @@ public class CraftkaisenModEntities {
 		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
 		event.put(FIRE_ARROW.get(), FireArrowEntity.createAttributes().build());
 		event.put(CURSEDSPIRITROPPONGI.get(), CursedspiritroppongiEntity.createAttributes().build());
+		event.put(SATORU_GOJO_BLINDFOLD.get(), SatoruGojoBlindfoldEntity.createAttributes().build());
 	}
 }

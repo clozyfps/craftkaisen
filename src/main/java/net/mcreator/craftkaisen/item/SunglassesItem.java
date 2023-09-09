@@ -95,7 +95,7 @@ public abstract class SunglassesItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/sunglassestexture.png";
+			return "craftkaisen:textures/entities/sunglasses.png";
 		}
 	}
 }
