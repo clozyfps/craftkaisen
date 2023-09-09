@@ -1,47 +1,47 @@
-// Made with Blockbench 4.7.4
+// Made with Blockbench 4.8.3
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 
-public class Modelbandageblindfold<T extends Entity> extends EntityModel<T> {
+public class Modelblackblindfold<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(
-			new ResourceLocation("modid", "bandageblindfold"), "main");
-	private final ModelPart Head;
+			new ResourceLocation("modid", "blackblindfold"), "main");
+	private final ModelPart Head2;
 
-	public Modelbandageblindfold(ModelPart root) {
-		this.Head = root.getChild("Head");
+	public Modelblackblindfold(ModelPart root) {
+		this.Head2 = root.getChild("Head2");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
-		PartDefinition Head = partdefinition.addOrReplaceChild("Head",
-				CubeListBuilder.create().texOffs(16, 18)
-						.addBox(-4.0F, -5.0F, -4.01F, 8.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(16, 16)
+		PartDefinition Head2 = partdefinition.addOrReplaceChild("Head2",
+				CubeListBuilder.create().texOffs(18, 24)
+						.addBox(-4.0F, -5.0F, -4.01F, 8.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(18, 22)
 						.addBox(-4.0F, -5.0F, 4.01F, 8.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, 0.0F, 0.0F));
+				PartPose.offset(0.0F, 0.7F, 0.0F));
 
-		PartDefinition Head_r1 = Head.addOrReplaceChild("Head_r1",
-				CubeListBuilder.create().texOffs(0, 16)
-						.addBox(-4.0F, -29.0F, 4.01F, 8.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(0, 18)
+		PartDefinition Head_r1 = Head2.addOrReplaceChild("Head_r1",
+				CubeListBuilder.create().texOffs(2, 22)
+						.addBox(-4.0F, -29.0F, 4.01F, 8.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(2, 24)
 						.addBox(-4.0F, -29.0F, -4.01F, 8.0F, 2.0F, 0.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, -1.5708F, 0.0F));
 
-		PartDefinition Head_r2 = Head.addOrReplaceChild("Head_r2",
-				CubeListBuilder.create().texOffs(0, 0)
-						.addBox(-9.3F, -26.4F, -4.02F, 2.2F, 1.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(0, 3)
+		PartDefinition Head_r2 = Head2.addOrReplaceChild("Head_r2",
+				CubeListBuilder.create().texOffs(2, 6)
+						.addBox(-9.3F, -26.4F, -4.02F, 2.2F, 1.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(2, 9)
 						.addBox(-13.0F, -25.0F, -4.02F, 2.1F, 1.0F, 0.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 0.0F, 0.3491F));
 
-		PartDefinition Head_r3 = Head.addOrReplaceChild("Head_r3",
-				CubeListBuilder.create().texOffs(0, 2)
-						.addBox(10.9F, -25.0F, -4.02F, 2.1F, 1.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(0, 1)
+		PartDefinition Head_r3 = Head2.addOrReplaceChild("Head_r3",
+				CubeListBuilder.create().texOffs(2, 8)
+						.addBox(10.9F, -25.0F, -4.02F, 2.1F, 1.0F, 0.0F, new CubeDeformation(0.0F)).texOffs(2, 7)
 						.addBox(7.1F, -26.4F, -4.02F, 2.2F, 1.0F, 0.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 0.0F, -0.3491F));
 
-		return LayerDefinition.create(meshdefinition, 32, 32);
+		return LayerDefinition.create(meshdefinition, 35, 35);
 	}
 
 	@Override
@@ -53,6 +53,6 @@ public class Modelbandageblindfold<T extends Entity> extends EntityModel<T> {
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay,
 			float red, float green, float blue, float alpha) {
-		Head.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+		Head2.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}
 }

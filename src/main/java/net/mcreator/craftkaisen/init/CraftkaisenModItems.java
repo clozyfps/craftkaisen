@@ -92,6 +92,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> WOODEN_BALL = REGISTRY.register("wooden_ball", () -> new WoodenBallItem());
 	public static final RegistryObject<Item> CURSED_BUD = REGISTRY.register("cursed_bud", () -> new CursedBudItem());
 	public static final RegistryObject<Item> FLOWERFIELDS = REGISTRY.register("flowerfields", () -> new FlowerfieldsItem());
+	public static final RegistryObject<Item> CURSEDSPIRITROPPONGI_SPAWN_EGG = REGISTRY.register("cursedspiritroppongi_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITROPPONGI, -16750951, -6750157, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

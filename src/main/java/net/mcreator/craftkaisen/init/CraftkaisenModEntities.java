@@ -40,6 +40,7 @@ import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
 import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
@@ -119,6 +120,11 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<CursedBudEntity>of(CursedBudEntity::new, MobCategory.MISC).setCustomClientFactory(CursedBudEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FlowerfieldsEntity>> FLOWERFIELDS = register("projectile_flowerfields",
 			EntityType.Builder.<FlowerfieldsEntity>of(FlowerfieldsEntity::new, MobCategory.MISC).setCustomClientFactory(FlowerfieldsEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CursedspiritroppongiEntity>> CURSEDSPIRITROPPONGI = register("cursedspiritroppongi",
+			EntityType.Builder.<CursedspiritroppongiEntity>of(CursedspiritroppongiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(CursedspiritroppongiEntity::new)
+
+					.sized(1f, 1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -141,6 +147,7 @@ public class CraftkaisenModEntities {
 			MaximumMeteorEntity.init();
 			EmberInsectEntity.init();
 			FireArrowEntity.init();
+			CursedspiritroppongiEntity.init();
 		});
 	}
 
@@ -160,5 +167,6 @@ public class CraftkaisenModEntities {
 		event.put(MAXIMUM_METEOR.get(), MaximumMeteorEntity.createAttributes().build());
 		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
 		event.put(FIRE_ARROW.get(), FireArrowEntity.createAttributes().build());
+		event.put(CURSEDSPIRITROPPONGI.get(), CursedspiritroppongiEntity.createAttributes().build());
 	}
 }

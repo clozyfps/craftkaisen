@@ -2512,8 +2512,8 @@
       "registry_name": "blindfold",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json"
+          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java"
         ]
       },
       "path": "~/Armor"
@@ -4736,8 +4736,8 @@
       "registry_name": "bandage_blindfold",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/bandage_blindfold_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindfoldItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindfoldItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/bandage_blindfold_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -8430,6 +8430,23 @@
         ]
       },
       "path": "~/Keybinds"
+    },
+    {
+      "name": "Cursedspiritroppongi",
+      "type": "livingentity",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursedspiritroppongi",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritroppongi_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritroppongiEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritroppongi_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritroppongiRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -8905,6 +8922,7 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_i_increases_at": "Attack Knockback I - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
+      "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
       "effect.craftkaisen.twisting": "Twisting",
@@ -8946,6 +8964,7 @@
       "key.craftkaisen.switch_technique": "Switch Ability",
       "item.craftkaisen.fire_arrow_projectile": "Fire Arrow Projectile",
       "entity.craftkaisen.fly_head": "Fly Head",
+      "entity.craftkaisen.cursedspiritroppongi": "Cursed Spirit: Roppongi",
       "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iii_increases_melee_dama": "Power III - Increases melee damage.§9 2 SP \u0026 GRADE 4",
