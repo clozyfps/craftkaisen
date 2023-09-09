@@ -37,7 +37,7 @@ public class LapseBlueParticleParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 10f;
-		this.lifetime = 7;
+		this.lifetime = (int) Math.max(1, 20 + (this.random.nextInt(40) - 20));
 		this.gravity = 0f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;

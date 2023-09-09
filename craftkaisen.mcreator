@@ -2512,8 +2512,8 @@
       "registry_name": "blindfold",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json",
-          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/BlindfoldItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/blindfold_helmet.json"
         ]
       },
       "path": "~/Armor"
@@ -4736,8 +4736,8 @@
       "registry_name": "bandage_blindfold",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindfoldItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/bandage_blindfold_helmet.json"
+          "src/main/resources/assets/craftkaisen/models/item/bandage_blindfold_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BandageBlindfoldItem.java"
         ]
       },
       "path": "~/Armor"
@@ -8432,6 +8432,135 @@
       "path": "~/Keybinds"
     },
     {
+      "name": "GiveInventoryCurse",
+      "type": "command",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_inventory_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/GiveInventoryCurseCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "InventoryCurse",
+      "type": "livingentity",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/InventoryCurseEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/InventoryCurseRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/inventory_curse_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/inventory_curse_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "InventoryCurseGUIThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_gui_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventoryCurseGUIThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "InventoryCurseRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventoryCurseRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "ReversalRedParticle",
+      "type": "particle",
+      "sortid": 367,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ReversalRedParticleParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/reversal_red_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "InventoryCurseGUIThisGUIIsOpened",
+      "type": "procedure",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_gui_this_gui_is_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventoryCurseGUIThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Inventorycursegive",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventorycursegive",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventorycursegiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
       "name": "Cursedspiritroppongi",
       "type": "livingentity",
       "sortid": 361,
@@ -8440,10 +8569,10 @@
       "registry_name": "cursedspiritroppongi",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/cursedspiritroppongi_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritroppongiEntity.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritroppongi_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritroppongiRenderer.java"
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritroppongi_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritroppongiRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritroppongiEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -8457,9 +8586,9 @@
       "registry_name": "gojo_uniform",
       "metadata": {
         "files": [
+          "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_leggings.json",
           "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_chestplate.json",
-          "src/main/java/net/mcreator/craftkaisen/item/GojoUniformItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_leggings.json"
+          "src/main/java/net/mcreator/craftkaisen/item/GojoUniformItem.java"
         ]
       },
       "path": "~/Armor"
@@ -8860,6 +8989,78 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Slot10",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot11",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot00",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot01",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot02",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot03",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot04",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot05",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot06",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot07",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot08",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot09",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
     }
   ],
   "sound_elements": [
@@ -8955,7 +9156,6 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_i_increases_at": "Attack Knockback I - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
-      "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
       "effect.craftkaisen.twisting": "Twisting",
@@ -8987,7 +9187,6 @@
       "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
-      "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "subtitles.electric": "",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
@@ -8999,7 +9198,6 @@
       "key.craftkaisen.switch_technique": "Switch Ability",
       "item.craftkaisen.fire_arrow_projectile": "Fire Arrow Projectile",
       "entity.craftkaisen.fly_head": "Fly Head",
-      "entity.craftkaisen.cursedspiritroppongi": "Cursed Spirit: Roppongi",
       "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.binding_vow_gui.button_yes": "Yes",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iii_increases_melee_dama": "Power III - Increases melee damage.§9 2 SP \u0026 GRADE 4",
@@ -9055,7 +9253,6 @@
       "block.craftkaisen.quest_board": "Quest Board",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.main_hud.label_move_four": "Move Four",
-      "item.craftkaisen.gojo_uniform_chestplate": "Gojo Uniform",
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",

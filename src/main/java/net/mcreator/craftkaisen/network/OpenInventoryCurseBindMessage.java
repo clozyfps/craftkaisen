@@ -52,7 +52,7 @@ public class OpenInventoryCurseBindMessage {
 			return;
 		if (type == 0) {
 
-			OpenInventoryCurseProcedure.execute();
+			OpenInventoryCurseProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
