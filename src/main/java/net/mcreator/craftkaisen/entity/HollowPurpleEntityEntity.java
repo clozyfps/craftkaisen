@@ -106,7 +106,9 @@ public class HollowPurpleEntityEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		HollowPurpleEntityOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+		HollowPurpleEntityOnEntityTickUpdateProcedure.execute(
+
+		);
 	}
 
 	@Override

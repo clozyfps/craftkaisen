@@ -38,6 +38,7 @@ import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.EmberFloorMobEffect;
 import net.mcreator.craftkaisen.potion.EmberControlMobEffect;
+import net.mcreator.craftkaisen.potion.DomainExpansionMobEffect;
 import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
 import net.mcreator.craftkaisen.potion.DivergentFistMobEffect;
 import net.mcreator.craftkaisen.potion.CrushingMobEffect;
@@ -80,4 +81,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> EMBER_FLOOR = REGISTRY.register("ember_floor", () -> new EmberFloorMobEffect());
 	public static final RegistryObject<MobEffect> SHRINE = REGISTRY.register("shrine", () -> new ShrineMobEffect());
 	public static final RegistryObject<MobEffect> ROOTS_POTION = REGISTRY.register("roots_potion", () -> new RootsPotionMobEffect());
+	public static final RegistryObject<MobEffect> DOMAIN_EXPANSION = REGISTRY.register("domain_expansion", () -> new DomainExpansionMobEffect());
 }

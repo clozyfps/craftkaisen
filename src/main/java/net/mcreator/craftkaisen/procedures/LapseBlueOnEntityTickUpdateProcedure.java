@@ -83,7 +83,7 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 		world.destroyBlock(new BlockPos(x, y, z), false);
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"particle minecraft:dust 0 1 1 2 ^0 ^0 ^0 5 2.5 5 0 40");
+					"particle minecraft:dust 0 1 1 2 ^0 ^0 ^0 2 2.5 2 0 20");
 		sx = -15;
 		percent = 10;
 		if (size >= 10 && size < 100) {

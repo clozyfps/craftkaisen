@@ -50,13 +50,13 @@ public class MaximumMeteorOnEntityTickUpdateProcedure {
 				world.setBlock(new BlockPos(x + sx, y + sy, z + sz), Blocks.FIRE.defaultBlockState(), 3);
 			}
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.LAVA, x, y, z, 5, 15, 6, 15, 0);
+				_level.sendParticles(ParticleTypes.LAVA, x, y, z, 5, 13, 6, 13, 0);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 100, 15, 0.1, 15, 0.5);
+				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 100, 13, 0.1, 13, 0.5);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.FLAME, x, y, z, 100, 15, 0.1, 15, 0);
+				_level.sendParticles(ParticleTypes.FLAME, x, y, z, 100, 13, 0.1, 13, 0);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.POOF, x, y, z, 50, 15, 0.1, 15, 1);
+				_level.sendParticles(ParticleTypes.POOF, x, y, z, 50, 13, 0.1, 13, 1);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
@@ -70,7 +70,7 @@ public class MaximumMeteorOnEntityTickUpdateProcedure {
 						.collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
-						entityiterator.hurt(DamageSource.GENERIC, 25);
+						entityiterator.hurt(DamageSource.GENERIC, 45);
 					}
 				}
 			}
@@ -84,5 +84,9 @@ public class MaximumMeteorOnEntityTickUpdateProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 50, 3, 3, 3, 0);
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles(ParticleTypes.FLAME, x, y, z, 25, 3, 3, 3, 0);
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles(ParticleTypes.POOF, x, y, z, 10, 3, 1, 3, 1);
 	}
 }
