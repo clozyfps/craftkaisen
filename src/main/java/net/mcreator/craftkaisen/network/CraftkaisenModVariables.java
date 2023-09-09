@@ -123,6 +123,7 @@ public class CraftkaisenModVariables {
 			clone.AgilityTree = original.AgilityTree;
 			clone.Fame = original.Fame;
 			clone.JoinsWorld = original.JoinsWorld;
+			clone.InventoryCurse = original.InventoryCurse;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -363,6 +364,7 @@ public class CraftkaisenModVariables {
 		public double AgilityTree = 0;
 		public double Fame = 0;
 		public boolean JoinsWorld = false;
+		public boolean InventoryCurse = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -428,6 +430,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("AgilityTree", AgilityTree);
 			nbt.putDouble("Fame", Fame);
 			nbt.putBoolean("JoinsWorld", JoinsWorld);
+			nbt.putBoolean("InventoryCurse", InventoryCurse);
 			return nbt;
 		}
 
@@ -490,6 +493,7 @@ public class CraftkaisenModVariables {
 			AgilityTree = nbt.getDouble("AgilityTree");
 			Fame = nbt.getDouble("Fame");
 			JoinsWorld = nbt.getBoolean("JoinsWorld");
+			InventoryCurse = nbt.getBoolean("InventoryCurse");
 		}
 	}
 
@@ -571,6 +575,7 @@ public class CraftkaisenModVariables {
 					variables.AgilityTree = message.data.AgilityTree;
 					variables.Fame = message.data.Fame;
 					variables.JoinsWorld = message.data.JoinsWorld;
+					variables.InventoryCurse = message.data.InventoryCurse;
 				}
 			});
 			context.setPacketHandled(true);
