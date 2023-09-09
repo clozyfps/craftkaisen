@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
+import net.mcreator.craftkaisen.item.GojoUniformItem;
 import net.mcreator.craftkaisen.item.GetoArmorItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
 import net.mcreator.craftkaisen.item.FlowerfieldsItem;
@@ -92,6 +93,10 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> WOODEN_BALL = REGISTRY.register("wooden_ball", () -> new WoodenBallItem());
 	public static final RegistryObject<Item> CURSED_BUD = REGISTRY.register("cursed_bud", () -> new CursedBudItem());
 	public static final RegistryObject<Item> FLOWERFIELDS = REGISTRY.register("flowerfields", () -> new FlowerfieldsItem());
+	public static final RegistryObject<Item> CURSEDSPIRITROPPONGI_SPAWN_EGG = REGISTRY.register("cursedspiritroppongi_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITROPPONGI, -16750951, -6750157, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> GOJO_UNIFORM_CHESTPLATE = REGISTRY.register("gojo_uniform_chestplate", () -> new GojoUniformItem.Chestplate());
+	public static final RegistryObject<Item> GOJO_UNIFORM_LEGGINGS = REGISTRY.register("gojo_uniform_leggings", () -> new GojoUniformItem.Leggings());
 	public static final RegistryObject<Item> INVENTORY_CURSE_SPAWN_EGG = REGISTRY.register("inventory_curse_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.INVENTORY_CURSE, -11390382, -12835770, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 

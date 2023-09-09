@@ -19,7 +19,7 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
-import net.mcreator.craftkaisen.client.model.Modelbandageblindfold;
+import net.mcreator.craftkaisen.client.model.Modelblackblindfold;
 
 import java.util.function.Consumer;
 import java.util.Map;
@@ -81,7 +81,7 @@ public abstract class BandageBlindfoldItem extends ArmorItem {
 				@Override
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("head", new Modelbandageblindfold(Minecraft.getInstance().getEntityModels().bakeLayer(Modelbandageblindfold.LAYER_LOCATION)).Head, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
+							Map.of("head", new Modelblackblindfold(Minecraft.getInstance().getEntityModels().bakeLayer(Modelblackblindfold.LAYER_LOCATION)).Head2, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
@@ -95,7 +95,7 @@ public abstract class BandageBlindfoldItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/bandageblindfold.png";
+			return "craftkaisen:textures/entities/white_wool.png";
 		}
 	}
 }
