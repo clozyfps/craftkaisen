@@ -13,36 +13,41 @@ import net.minecraft.client.particle.Particle;
 import net.minecraft.client.multiplayer.ClientLevel;
 
 @OnlyIn(Dist.CLIENT)
-public class LapseBlueParticleParticle extends TextureSheetParticle {
-	public static LapseBlueParticleParticleProvider provider(SpriteSet spriteSet) {
-		return new LapseBlueParticleParticleProvider(spriteSet);
+public class ReversalRedParticleParticle extends TextureSheetParticle {
+	public static ReversalRedParticleParticleProvider provider(SpriteSet spriteSet) {
+		return new ReversalRedParticleParticleProvider(spriteSet);
 	}
 
-	public static class LapseBlueParticleParticleProvider implements ParticleProvider<SimpleParticleType> {
+	public static class ReversalRedParticleParticleProvider implements ParticleProvider<SimpleParticleType> {
 		private final SpriteSet spriteSet;
 
-		public LapseBlueParticleParticleProvider(SpriteSet spriteSet) {
+		public ReversalRedParticleParticleProvider(SpriteSet spriteSet) {
 			this.spriteSet = spriteSet;
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new LapseBlueParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return new ReversalRedParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 		}
 	}
 
 	private final SpriteSet spriteSet;
 
-	protected LapseBlueParticleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
+	private float angularVelocity;
+	private float angularAcceleration;
+
+	protected ReversalRedParticleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 10f;
-		this.lifetime = (int) Math.max(1, 20 + (this.random.nextInt(40) - 20));
+		this.lifetime = (int) Math.max(1, 40 + (this.random.nextInt(80) - 40));
 		this.gravity = 0f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;
 		this.yd = vy * 1;
 		this.zd = vz * 1;
+		this.angularVelocity = 0f;
+		this.angularAcceleration = 5f;
 		this.setSpriteFromAge(spriteSet);
 	}
 
@@ -59,8 +64,11 @@ public class LapseBlueParticleParticle extends TextureSheetParticle {
 	@Override
 	public void tick() {
 		super.tick();
+		this.oRoll = this.roll;
+		this.roll += this.angularVelocity;
+		this.angularVelocity += this.angularAcceleration;
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 16 + 1, 16));
+			this.setSprite(this.spriteSet.get((this.age / 1) % 1 + 1, 1));
 		}
 	}
 }

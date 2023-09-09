@@ -4264,6 +4264,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -4771,8 +4783,8 @@
       "registry_name": "lapse_blue_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/particles/lapse_blue_particle.json",
-          "src/main/java/net/mcreator/craftkaisen/client/particle/LapseBlueParticleParticle.java"
+          "src/main/java/net/mcreator/craftkaisen/client/particle/LapseBlueParticleParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/lapse_blue_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -7178,6 +7190,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -8484,7 +8500,7 @@
           "src/main/java/net/mcreator/craftkaisen/command/GiveInventoryCurseCommand.java"
         ]
       },
-      "path": "~/Commands/Procedures"
+      "path": "~/Commands"
     },
     {
       "name": "InventoryCurseGUIThisGUIIsOpened",
@@ -8570,6 +8586,21 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "ReversalRedParticle",
+      "type": "particle",
+      "sortid": 367,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/ReversalRedParticleParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/reversal_red_particle.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [

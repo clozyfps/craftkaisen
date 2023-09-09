@@ -19,7 +19,7 @@ import net.mcreator.craftkaisen.procedures.InventorycursegiveProcedure;
 public class GiveInventoryCurseCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("giveinventorycurse").requires(s -> s.hasPermission(1)).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("removeinventorycurse").requires(s -> s.hasPermission(1)).executes(arguments -> {
 			ServerLevel world = arguments.getSource().getLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();

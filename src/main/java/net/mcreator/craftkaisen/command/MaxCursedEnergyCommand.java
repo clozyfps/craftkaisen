@@ -29,7 +29,7 @@ public class MaxCursedEnergyCommand {
 				entity = FakePlayerFactory.getMinecraft(world);
 			Direction direction = entity.getDirection();
 
-			CursedenergymaxProcedure.execute(entity);
+			CursedenergymaxProcedure.execute(world, entity);
 			return 0;
 		}));
 	}

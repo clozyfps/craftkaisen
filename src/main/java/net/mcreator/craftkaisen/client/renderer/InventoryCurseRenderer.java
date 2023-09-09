@@ -10,7 +10,7 @@ import net.mcreator.craftkaisen.client.model.Modelinventorycurseground;
 
 public class InventoryCurseRenderer extends MobRenderer<InventoryCurseEntity, Modelinventorycurseground<InventoryCurseEntity>> {
 	public InventoryCurseRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelinventorycurseground(context.bakeLayer(Modelinventorycurseground.LAYER_LOCATION)), 0.5f);
+		super(context, new Modelinventorycurseground(context.bakeLayer(Modelinventorycurseground.LAYER_LOCATION)), 0.1f);
 	}
 
 	@Override
