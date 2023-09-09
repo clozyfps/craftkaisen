@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchMovesetMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
+import net.mcreator.craftkaisen.network.OpenInventoryCurseBindMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -108,6 +109,19 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping OPEN_INVENTORY_CURSE_BIND = new KeyMapping("key.craftkaisen.open_inventory_curse_bind", GLFW.GLFW_KEY_X, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new OpenInventoryCurseBindMessage(0, 0));
+				OpenInventoryCurseBindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -118,6 +132,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(OPEN_MAIN_MENU_BIND);
 		event.register(CHARGE_CURSED_ENERGY);
 		event.register(SWITCH_MOVESET);
+		event.register(OPEN_INVENTORY_CURSE_BIND);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -131,6 +146,7 @@ public class CraftkaisenModKeyMappings {
 				OPEN_MAIN_MENU_BIND.consumeClick();
 				CHARGE_CURSED_ENERGY.consumeClick();
 				SWITCH_MOVESET.consumeClick();
+				OPEN_INVENTORY_CURSE_BIND.consumeClick();
 			}
 		}
 	}

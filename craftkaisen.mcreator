@@ -2213,9 +2213,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/craftkaisen/models/item/toji_fushiguro_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/toji_fushiguro_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/TojiFushiguroEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/TojiFushiguroRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -3833,7 +3833,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "ClapProcedure",
@@ -3925,9 +3925,9 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/entity/SatoruGojoEntity.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/SatoruGojoRenderer.java",
-          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json"
+          "src/main/resources/assets/craftkaisen/models/item/satoru_gojo_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/satoru_gojo_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -4150,7 +4150,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "CursedFinger",
@@ -4567,8 +4567,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/renderer/FingerBearerRenderer.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/finger_bearer_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/entity/FingerBearerEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/finger_bearer_biome_modifier.json",
           "src/main/resources/assets/craftkaisen/models/item/finger_bearer_spawn_egg.json"
         ]
       },
@@ -5242,10 +5242,10 @@
       "registry_name": "jogo",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/JogoRenderer.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/jogo_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/entity/JogoEntity.java",
-          "src/main/resources/assets/craftkaisen/models/item/jogo_spawn_egg.json"
+          "src/main/resources/assets/craftkaisen/models/item/jogo_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/JogoRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -7099,10 +7099,10 @@
       "registry_name": "cursedspiritrugbyfield",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritrugbyfieldRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritrugbyfieldEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/cursedspiritrugbyfield_spawn_egg.json",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritrugbyfield_biome_modifier.json"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritrugbyfield_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritrugbyfieldRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritrugbyfieldEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -8413,7 +8413,28 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/OpenInventoryCurseProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Keybinds/Procedures"
     },
@@ -8430,6 +8451,125 @@
         ]
       },
       "path": "~/Keybinds"
+    },
+    {
+      "name": "Inventorycursegive",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventorycursegive",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventorycursegiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "GiveInventoryCurse",
+      "type": "command",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_inventory_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/GiveInventoryCurseCommand.java"
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "InventoryCurseGUIThisGUIIsOpened",
+      "type": "procedure",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_gui_this_gui_is_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventoryCurseGUIThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "InventoryCurseGUIThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_gui_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventoryCurseGUIThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "InventoryCurseRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/InventoryCurseRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "InventoryCurse",
+      "type": "livingentity",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inventory_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/InventoryCurseEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/InventoryCurseRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/inventory_curse_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/inventory_curse_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -8810,6 +8950,78 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "Slot01",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot02",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot03",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot04",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot05",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot06",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot07",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot08",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot09",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot10",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot11",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Slot00",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
     }
   ],
   "sound_elements": [
@@ -8899,6 +9111,7 @@
       "gui.craftkaisen.main_hud.label_special": "Special",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
+      "entity.craftkaisen.inventory_curse": "Inventory Curse",
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "key.craftkaisen.block_bind": "Block",
@@ -8917,6 +9130,7 @@
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.twist": "Twist",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
+      "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "itemGroup.tabjjkitems": "JJK Items",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten": "Resistance I - Upgrades resistance.§9 2 SP \u0026 GRADE 4",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",

@@ -2,25 +2,25 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Cursed Spirit: Rugby Field",
+    "mobName": "Inventory Curse",
     "mobLabel": "",
-    "mobModelName": "Modelcursedspiritrugbyfield",
-    "mobModelTexture": "rugbyfieldcursedspirit_3.png",
+    "mobModelName": "Modelinventorycurseground",
+    "mobModelTexture": "inventorycursetexture.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
     },
-    "modelWidth": 1.0,
-    "modelHeight": 1.0,
+    "modelWidth": 0.6,
+    "modelHeight": 0.4,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16750951,
+      "value": -11390382,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -6750157,
+      "value": -12835770,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -49,15 +49,15 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 16,
-    "attackKnockback": 2.0,
-    "knockbackResistance": 0.1,
-    "movementSpeed": 0.4,
+    "attackStrength": 0,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.1,
     "stepHeight": 0.6,
-    "armorBaseValue": 0.15,
+    "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 130,
+    "health": 15,
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
@@ -96,9 +96,12 @@
     "stepSound": {
       "value": ""
     },
+    "onRightClickedOn": {
+      "name": "InventoryCurseRightClickedOnEntity"
+    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:JujutsuStudent</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:SatoruGojo</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">CUSTOM:TojiFushiguro</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -111,10 +114,10 @@
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 10,
-    "mobSpawningType": "monster",
+    "spawningProbability": 1,
+    "mobSpawningType": "ambient",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [],
     "spawnInDungeons": false
   }

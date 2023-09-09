@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
+import net.mcreator.craftkaisen.entity.InventoryCurseEntity;
 import net.mcreator.craftkaisen.entity.InfiniteVoiddEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
@@ -119,6 +120,10 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<CursedBudEntity>of(CursedBudEntity::new, MobCategory.MISC).setCustomClientFactory(CursedBudEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FlowerfieldsEntity>> FLOWERFIELDS = register("projectile_flowerfields",
 			EntityType.Builder.<FlowerfieldsEntity>of(FlowerfieldsEntity::new, MobCategory.MISC).setCustomClientFactory(FlowerfieldsEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<InventoryCurseEntity>> INVENTORY_CURSE = register("inventory_curse",
+			EntityType.Builder.<InventoryCurseEntity>of(InventoryCurseEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InventoryCurseEntity::new)
+
+					.sized(0.6f, 0.4f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -141,6 +146,7 @@ public class CraftkaisenModEntities {
 			MaximumMeteorEntity.init();
 			EmberInsectEntity.init();
 			FireArrowEntity.init();
+			InventoryCurseEntity.init();
 		});
 	}
 
@@ -160,5 +166,6 @@ public class CraftkaisenModEntities {
 		event.put(MAXIMUM_METEOR.get(), MaximumMeteorEntity.createAttributes().build());
 		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
 		event.put(FIRE_ARROW.get(), FireArrowEntity.createAttributes().build());
+		event.put(INVENTORY_CURSE.get(), InventoryCurseEntity.createAttributes().build());
 	}
 }

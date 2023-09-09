@@ -18,6 +18,7 @@ import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
+import net.mcreator.craftkaisen.client.renderer.InventoryCurseRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
@@ -57,5 +58,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.WOODEN_BALL.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.CURSED_BUD.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.FLOWERFIELDS.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.INVENTORY_CURSE.get(), InventoryCurseRenderer::new);
 	}
 }

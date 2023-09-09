@@ -18,6 +18,8 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftkaisen.procedures.InventoryCurseGUIThisGUIIsOpenedProcedure;
+import net.mcreator.craftkaisen.procedures.InventoryCurseGUIThisGUIIsClosedProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModMenus;
 
 import java.util.function.Supplier;
@@ -81,7 +83,7 @@ public class InventoryCurseGUIMenu extends AbstractContainerMenu implements Supp
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 34, 26) {
 			private final int slot = 1;
 		}));
-		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 61, 26) {
+		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 61, 27) {
 			private final int slot = 2;
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 97, 26) {
@@ -116,6 +118,7 @@ public class InventoryCurseGUIMenu extends AbstractContainerMenu implements Supp
 				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 0 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
 			this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 0 + 142));
+		InventoryCurseGUIThisGUIIsOpenedProcedure.execute(world, entity);
 	}
 
 	@Override
@@ -234,6 +237,7 @@ public class InventoryCurseGUIMenu extends AbstractContainerMenu implements Supp
 	@Override
 	public void removed(Player playerIn) {
 		super.removed(playerIn);
+		InventoryCurseGUIThisGUIIsClosedProcedure.execute(entity);
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
