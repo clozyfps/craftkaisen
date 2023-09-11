@@ -110,13 +110,11 @@ public class JogoOnEntityTickUpdateProcedure {
 					}
 				});
 			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 200) {
+			if (Math.random() < 0.001) {
 				if (!entity.getPersistentData().getBoolean("domainused")) {
-					if (Math.random() < 0.001) {
-						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-							_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DOMAIN_EXPANSION.get(), 800, 1, false, false));
-						entity.getPersistentData().putBoolean("domainused", true);
-					}
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DOMAIN_EXPANSION.get(), 800, 1, false, false));
+					entity.getPersistentData().putBoolean("domainused", true);
 				}
 			}
 		}
