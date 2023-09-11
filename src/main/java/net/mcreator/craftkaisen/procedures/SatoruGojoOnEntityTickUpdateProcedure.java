@@ -125,9 +125,9 @@ public class SatoruGojoOnEntityTickUpdateProcedure {
 			}
 		}
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 500) {
-			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftkaisenModItems.BLINDFOLD_HELMET.get()) {
+			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == CraftkaisenModItems.SUNGLASSES_HELMET.get()) {
 				if (world instanceof Level _level && !_level.isClientSide()) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftkaisenModItems.BLINDFOLD_HELMET.get()));
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(CraftkaisenModItems.SUNGLASSES_HELMET.get()));
 					entityToSpawn.setPickUpDelay(10);
 					_level.addFreshEntity(entityToSpawn);
 				}

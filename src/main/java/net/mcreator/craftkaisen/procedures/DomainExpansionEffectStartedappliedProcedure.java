@@ -1,5 +1,9 @@
 package net.mcreator.craftkaisen.procedures;
 
+<<<<<<< HEAD
+=======
+import net.minecraft.world.phys.Vec3;
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.block.Rotation;
@@ -31,6 +35,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 			if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Flames") || entity instanceof JogoEntity) {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(Component.literal("\u00A7l\u00A76 Coffin Of The Iron Mountain"), true);
+				entity.setDeltaMovement(new Vec3(0, (entity.getDeltaMovement().y() + 0.2), 0));
 				CraftkaisenMod.queueServerWork(15, () -> {
 					if (world instanceof ServerLevel _serverworld) {
 						StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin1"));
@@ -39,7 +44,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 									_serverworld.random, 3);
 						}
 					}
-					CraftkaisenMod.queueServerWork(1, () -> {
+					CraftkaisenMod.queueServerWork(3, () -> {
 						if (world instanceof ServerLevel _serverworld) {
 							StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin2"));
 							if (template != null) {
@@ -47,7 +52,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 										_serverworld.random, 3);
 							}
 						}
-						CraftkaisenMod.queueServerWork(1, () -> {
+						CraftkaisenMod.queueServerWork(3, () -> {
 							if (world instanceof ServerLevel _serverworld) {
 								StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin3"));
 								if (template != null) {
@@ -55,7 +60,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 											_serverworld.random, 3);
 								}
 							}
-							CraftkaisenMod.queueServerWork(1, () -> {
+							CraftkaisenMod.queueServerWork(3, () -> {
 								if (world instanceof ServerLevel _serverworld) {
 									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin4"));
 									if (template != null) {
@@ -63,7 +68,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 												_serverworld.random, 3);
 									}
 								}
-								CraftkaisenMod.queueServerWork(1, () -> {
+								CraftkaisenMod.queueServerWork(3, () -> {
 									if (world instanceof ServerLevel _serverworld) {
 										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin5"));
 										if (template != null) {
@@ -71,7 +76,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 													_serverworld.random, 3);
 										}
 									}
-									CraftkaisenMod.queueServerWork(1, () -> {
+									CraftkaisenMod.queueServerWork(3, () -> {
 										if (world instanceof ServerLevel _serverworld) {
 											StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin6"));
 											if (template != null) {
@@ -79,7 +84,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 														new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 											}
 										}
-										CraftkaisenMod.queueServerWork(1, () -> {
+										CraftkaisenMod.queueServerWork(3, () -> {
 											if (world instanceof ServerLevel _serverworld) {
 												StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin7"));
 												if (template != null) {
@@ -87,7 +92,7 @@ public class DomainExpansionEffectStartedappliedProcedure {
 															new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 												}
 											}
-											CraftkaisenMod.queueServerWork(1, () -> {
+											CraftkaisenMod.queueServerWork(3, () -> {
 												if (world instanceof ServerLevel _serverworld) {
 													StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin8"));
 													if (template != null) {
