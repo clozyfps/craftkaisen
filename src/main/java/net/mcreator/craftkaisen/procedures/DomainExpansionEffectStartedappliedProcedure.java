@@ -1,9 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-<<<<<<< HEAD
-=======
 import net.minecraft.world.phys.Vec3;
->>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.block.Rotation;
@@ -20,6 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -108,6 +106,8 @@ public class DomainExpansionEffectStartedappliedProcedure {
 																	new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 														}
 													}
+													if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+														_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.BURNT_OUT_EFFECT.get(), 100, 0, true, false));
 												});
 											});
 										});

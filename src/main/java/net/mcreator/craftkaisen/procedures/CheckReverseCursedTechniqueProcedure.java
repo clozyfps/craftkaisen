@@ -6,6 +6,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -20,12 +22,10 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
-import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import javax.annotation.Nullable;
@@ -58,6 +58,7 @@ public class CheckReverseCursedTechniqueProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					entity.getPersistentData().putBoolean("prohibitUse", true);
 					randomRCT = Mth.nextInt(RandomSource.create(), 1, 100);
 					if (randomRCT >= 1) {
 						{
@@ -69,6 +70,8 @@ public class CheckReverseCursedTechniqueProcedure {
 						}
 						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 999999, 255, true, false));
+						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 999999, 255, true, false));
 						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 999999, 255, true, false));
 						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
@@ -95,18 +98,25 @@ public class CheckReverseCursedTechniqueProcedure {
 								_player.displayClientMessage(Component.literal("...you finally understand..."), true);
 							CraftkaisenMod.queueServerWork(40, () -> {
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.RED_ELECTRICITY.get()), x, y, z, 10, 0.3, 1.2, 0.3, 0);
+									_level.sendParticles(ParticleTypes.END_ROD, x, y, z, 10, 0.3, 1.2, 0.3, 0);
 								if (entity instanceof Player _player && !_player.level.isClientSide())
 									_player.displayClientMessage(Component.literal("\u00A7c...the core of cursed energy.."), true);
-								CraftkaisenMod.queueServerWork(10, () -> {
-									if (entity instanceof LivingEntity _entity)
-										_entity.removeEffect(MobEffects.MOVEMENT_SLOWDOWN);
-									if (entity instanceof LivingEntity _entity)
-										_entity.removeEffect(MobEffects.DAMAGE_RESISTANCE);
-									if (entity instanceof LivingEntity _entity)
-										_entity.removeEffect(MobEffects.JUMP);
-									if (entity instanceof LivingEntity _entity)
-										_entity.removeEffect(MobEffects.BLINDNESS);
+								CraftkaisenMod.queueServerWork(3, () -> {
+									entity.getPersistentData().putBoolean("rctAwak", true);
+									if ((world.getBlockState(new BlockPos(x, y + 5, z))).getBlock() == Blocks.AIR && (world.getBlockState(new BlockPos(x, y + 5, z))).getBlock() == Blocks.AIR
+											&& (world.getBlockState(new BlockPos(x, y + 3, z))).getBlock() == Blocks.AIR
+											|| (world.getBlockState(new BlockPos(x, y + 5, z))).getBlock() == Blocks.CAVE_AIR && (world.getBlockState(new BlockPos(x, y + 5, z))).getBlock() == Blocks.CAVE_AIR
+													&& (world.getBlockState(new BlockPos(x, y + 3, z))).getBlock() == Blocks.CAVE_AIR) {
+										{
+											Entity _ent = entity;
+											_ent.teleportTo(x, (y + 3), z);
+											if (_ent instanceof ServerPlayer _serverPlayer)
+												_serverPlayer.connection.teleport(x, (y + 3), z, _ent.getYRot(), _ent.getXRot());
+										}
+									}
+									entity.setDeltaMovement(new Vec3(0, (entity.getDeltaMovement().y() + 3), 0));
+									if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 999999, 255, true, false));
 								});
 							});
 						});

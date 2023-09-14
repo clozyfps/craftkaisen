@@ -62,7 +62,7 @@
             "falpha": 0.0
           },
           "x": 6,
-          "y": 23
+          "y": 195
         }
       },
       {
@@ -78,145 +78,23 @@
             "falpha": 0.0
           },
           "x": 6,
-          "y": 35
+          "y": 207
         }
       },
       {
-        "type": "image",
+        "type": "label",
         "data": {
-          "image": "hud.png",
-          "use1Xscale": true,
-          "x": 61,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "back.png",
-          "use1Xscale": true,
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move1CDDisplay"
+          "name": "label_proc_cursed_energy_display",
+          "text": {
+            "fixedValue": "",
+            "name": "CursedEnergyDisplay"
           },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move2CDDisplay"
+          "color": {
+            "value": -1,
+            "falpha": 0.0
           },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move3CDDisplay"
-          },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move4CDDisplay"
-          },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move5CDDisplay"
-          },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "MoveSpecialCDDisplay"
-          },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "red.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "MoveUltimateCDDisplay"
-          },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "lo.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move2CDDisplay"
-          },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "blue.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move1Display"
-          },
-          "x": 4,
-          "y": 155
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "purple.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Move5Display"
-          },
-          "x": 4,
-          "y": 155
+          "x": 6,
+          "y": 183
         }
       }
     ],
