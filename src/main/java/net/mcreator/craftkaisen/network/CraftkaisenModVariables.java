@@ -19,6 +19,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -124,6 +125,18 @@ public class CraftkaisenModVariables {
 			clone.Fame = original.Fame;
 			clone.JoinsWorld = original.JoinsWorld;
 			clone.InventoryCurse = original.InventoryCurse;
+			clone.Slot10 = original.Slot10;
+			clone.Slot11 = original.Slot11;
+			clone.Slot00 = original.Slot00;
+			clone.Slot01 = original.Slot01;
+			clone.Slot02 = original.Slot02;
+			clone.Slot03 = original.Slot03;
+			clone.Slot04 = original.Slot04;
+			clone.Slot05 = original.Slot05;
+			clone.Slot06 = original.Slot06;
+			clone.Slot07 = original.Slot07;
+			clone.Slot08 = original.Slot08;
+			clone.Slot09 = original.Slot09;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -365,6 +378,18 @@ public class CraftkaisenModVariables {
 		public double Fame = 0;
 		public boolean JoinsWorld = false;
 		public boolean InventoryCurse = false;
+		public ItemStack Slot10 = ItemStack.EMPTY;
+		public ItemStack Slot11 = ItemStack.EMPTY;
+		public ItemStack Slot00 = ItemStack.EMPTY;
+		public ItemStack Slot01 = ItemStack.EMPTY;
+		public ItemStack Slot02 = ItemStack.EMPTY;
+		public ItemStack Slot03 = ItemStack.EMPTY;
+		public ItemStack Slot04 = ItemStack.EMPTY;
+		public ItemStack Slot05 = ItemStack.EMPTY;
+		public ItemStack Slot06 = ItemStack.EMPTY;
+		public ItemStack Slot07 = ItemStack.EMPTY;
+		public ItemStack Slot08 = ItemStack.EMPTY;
+		public ItemStack Slot09 = ItemStack.EMPTY;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -431,6 +456,18 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("Fame", Fame);
 			nbt.putBoolean("JoinsWorld", JoinsWorld);
 			nbt.putBoolean("InventoryCurse", InventoryCurse);
+			nbt.put("Slot10", Slot10.save(new CompoundTag()));
+			nbt.put("Slot11", Slot11.save(new CompoundTag()));
+			nbt.put("Slot00", Slot00.save(new CompoundTag()));
+			nbt.put("Slot01", Slot01.save(new CompoundTag()));
+			nbt.put("Slot02", Slot02.save(new CompoundTag()));
+			nbt.put("Slot03", Slot03.save(new CompoundTag()));
+			nbt.put("Slot04", Slot04.save(new CompoundTag()));
+			nbt.put("Slot05", Slot05.save(new CompoundTag()));
+			nbt.put("Slot06", Slot06.save(new CompoundTag()));
+			nbt.put("Slot07", Slot07.save(new CompoundTag()));
+			nbt.put("Slot08", Slot08.save(new CompoundTag()));
+			nbt.put("Slot09", Slot09.save(new CompoundTag()));
 			return nbt;
 		}
 
@@ -494,6 +531,18 @@ public class CraftkaisenModVariables {
 			Fame = nbt.getDouble("Fame");
 			JoinsWorld = nbt.getBoolean("JoinsWorld");
 			InventoryCurse = nbt.getBoolean("InventoryCurse");
+			Slot10 = ItemStack.of(nbt.getCompound("Slot10"));
+			Slot11 = ItemStack.of(nbt.getCompound("Slot11"));
+			Slot00 = ItemStack.of(nbt.getCompound("Slot00"));
+			Slot01 = ItemStack.of(nbt.getCompound("Slot01"));
+			Slot02 = ItemStack.of(nbt.getCompound("Slot02"));
+			Slot03 = ItemStack.of(nbt.getCompound("Slot03"));
+			Slot04 = ItemStack.of(nbt.getCompound("Slot04"));
+			Slot05 = ItemStack.of(nbt.getCompound("Slot05"));
+			Slot06 = ItemStack.of(nbt.getCompound("Slot06"));
+			Slot07 = ItemStack.of(nbt.getCompound("Slot07"));
+			Slot08 = ItemStack.of(nbt.getCompound("Slot08"));
+			Slot09 = ItemStack.of(nbt.getCompound("Slot09"));
 		}
 	}
 
@@ -576,6 +625,18 @@ public class CraftkaisenModVariables {
 					variables.Fame = message.data.Fame;
 					variables.JoinsWorld = message.data.JoinsWorld;
 					variables.InventoryCurse = message.data.InventoryCurse;
+					variables.Slot10 = message.data.Slot10;
+					variables.Slot11 = message.data.Slot11;
+					variables.Slot00 = message.data.Slot00;
+					variables.Slot01 = message.data.Slot01;
+					variables.Slot02 = message.data.Slot02;
+					variables.Slot03 = message.data.Slot03;
+					variables.Slot04 = message.data.Slot04;
+					variables.Slot05 = message.data.Slot05;
+					variables.Slot06 = message.data.Slot06;
+					variables.Slot07 = message.data.Slot07;
+					variables.Slot08 = message.data.Slot08;
+					variables.Slot09 = message.data.Slot09;
 				}
 			});
 			context.setPacketHandled(true);

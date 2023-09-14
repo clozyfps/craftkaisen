@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.craftkaisen.client.particle.ReversalRedParticleParticle;
 import net.mcreator.craftkaisen.client.particle.RestParticle;
 import net.mcreator.craftkaisen.client.particle.RedElectricityParticle;
 import net.mcreator.craftkaisen.client.particle.LapseBlueParticleParticle;
@@ -26,5 +27,6 @@ public class CraftkaisenModParticles {
 		event.register(CraftkaisenModParticleTypes.LAPSE_BLUE_PARTICLE.get(), LapseBlueParticleParticle::provider);
 		event.register(CraftkaisenModParticleTypes.BLACK_ELECTRICITY.get(), BlackElectricityParticle::provider);
 		event.register(CraftkaisenModParticleTypes.RED_ELECTRICITY.get(), RedElectricityParticle::provider);
+		event.register(CraftkaisenModParticleTypes.REVERSAL_RED_PARTICLE.get(), ReversalRedParticleParticle::provider);
 	}
 }

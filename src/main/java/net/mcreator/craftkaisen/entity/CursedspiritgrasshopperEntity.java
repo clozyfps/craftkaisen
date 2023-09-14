@@ -29,12 +29,12 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
-public class CursedspiritroppongiEntity extends Monster {
-	public CursedspiritroppongiEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftkaisenModEntities.CURSEDSPIRITROPPONGI.get(), world);
+public class CursedspiritgrasshopperEntity extends Monster {
+	public CursedspiritgrasshopperEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), world);
 	}
 
-	public CursedspiritroppongiEntity(EntityType<CursedspiritroppongiEntity> type, Level world) {
+	public CursedspiritgrasshopperEntity(EntityType<CursedspiritgrasshopperEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
 		xpReward = 0;
@@ -80,7 +80,7 @@ public class CursedspiritroppongiEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CraftkaisenModEntities.CURSEDSPIRITROPPONGI.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
