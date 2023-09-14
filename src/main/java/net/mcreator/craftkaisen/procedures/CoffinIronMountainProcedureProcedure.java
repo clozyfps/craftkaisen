@@ -1,16 +1,14 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import javax.annotation.Nullable;
 
 public class CoffinIronMountainProcedureProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DOMAIN_EXPANSION.get(), 800, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 800, 1, false, false));
 	}
 }

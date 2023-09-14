@@ -1,23 +1,8 @@
 
 package net.mcreator.craftkaisen.potion;
 
-import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
-
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.effect.MobEffect;
-import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
-
-import net.mcreator.craftkaisen.procedures.BurntOutTickProcedure;
-import net.mcreator.craftkaisen.procedures.BurntOutExpireProcedure;
-import net.mcreator.craftkaisen.procedures.BurntOutAppliedProcedure;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class BurntOutEffectMobEffect extends MobEffect {
+
 	public BurntOutEffectMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -13421773);
 	}
@@ -45,7 +30,9 @@ public class BurntOutEffectMobEffect extends MobEffect {
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		BurntOutExpireProcedure.execute(entity);
+		BurntOutExpireProcedure.execute(
+
+		);
 	}
 
 	@Override

@@ -8713,18 +8713,48 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "BurntOutEffect",
-      "type": "potioneffect",
-      "sortid": 372,
+      "name": "SetFaction",
+      "type": "procedure",
+      "sortid": 378,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "burnt_out_effect",
+      "registry_name": "set_faction",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/BurntOutEffectMobEffect.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetFactionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/Potion Effects"
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "BurntOutTick",
+      "type": "procedure",
+      "sortid": 374,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_out_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BurntOutTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
     },
     {
       "name": "BurntOutApplied",
@@ -8747,24 +8777,32 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "BurntOutTick",
-      "type": "procedure",
-      "sortid": 374,
+      "name": "SetFactionCommand",
+      "type": "command",
+      "sortid": 377,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "burnt_out_tick",
+      "registry_name": "set_faction_command",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BurntOutTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/net/mcreator/craftkaisen/command/SetFactionCommandCommand.java"
         ]
       },
-      "path": "~/Potion Effects/Procedures"
+      "path": "~/Commands"
+    },
+    {
+      "name": "BurntOutEffect",
+      "type": "potioneffect",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_out_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/BurntOutEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
     },
     {
       "name": "BurntOutExpire",
@@ -8823,38 +8861,210 @@
       "path": "~/Procedures"
     },
     {
-      "name": "SetFactionCommand",
-      "type": "command",
+      "name": "SatoruGojoRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 376,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satoru_gojo_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SatoruGojoRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MentorChat",
+      "type": "procedure",
       "sortid": 377,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_faction_command",
+      "registry_name": "mentor_chat",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/command/SetFactionCommandCommand.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/MentorChatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MagmaRockOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 375,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_rock_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MagmaRockOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SimpleDomainTick",
+      "type": "procedure",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_domain_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SimpleDomainTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Cursedspiritgrasshopper",
+      "type": "livingentity",
+      "sortid": 368,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursedspiritgrasshopper",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritgrasshopper_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritgrasshopperRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritgrasshopperEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritgrasshopper_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MagmaRockOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 373,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_rock_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MagmaRockOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MagmaRock",
+      "type": "livingentity",
+      "sortid": 374,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_rock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SetJob",
+      "type": "command",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_job",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetJobCommand.java"
         ]
       },
       "path": "~/Commands"
     },
     {
-      "name": "SetFaction",
+      "name": "JobProcedure",
       "type": "procedure",
       "sortid": 378,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "set_faction",
+      "registry_name": "job_procedure",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetFactionProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/JobProcedureProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
+            "name": "cmdparams",
+            "type": "map"
           }
         ]
       },
@@ -9323,6 +9533,24 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "Mentor",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Job",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "HasMentor",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -9389,7 +9617,6 @@
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
-      "effect.craftkaisen.domain_expansion": "Domain Expansion",
       "effect.craftkaisen.vessel_cooldown": "Vessel CD",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
@@ -9550,7 +9777,6 @@
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iv_increases_cursed_energy": "CE IV - Increases cursed energy cap.§9 2 SP \u0026 GRADE 3",
-      "effect.craftkaisen.burnt_out_effect": "Burnt Out",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
       "effect.craftkaisen.roots_potion": "RootsPotion",

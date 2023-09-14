@@ -138,6 +138,9 @@ public class CraftkaisenModVariables {
 			clone.Slot08 = original.Slot08;
 			clone.Slot09 = original.Slot09;
 			clone.Faction = original.Faction;
+			clone.Mentor = original.Mentor;
+			clone.Job = original.Job;
+			clone.HasMentor = original.HasMentor;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -394,6 +397,9 @@ public class CraftkaisenModVariables {
 		public ItemStack Slot09 = ItemStack.EMPTY;
 		public boolean SimpleDomainActive = false;
 		public String Faction = "";
+		public String Mentor = "\"\"";
+		public String Job = "\"\"";
+		public boolean HasMentor = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -474,6 +480,9 @@ public class CraftkaisenModVariables {
 			nbt.put("Slot09", Slot09.save(new CompoundTag()));
 			nbt.putBoolean("SimpleDomainActive", SimpleDomainActive);
 			nbt.putString("Faction", Faction);
+			nbt.putString("Mentor", Mentor);
+			nbt.putString("Job", Job);
+			nbt.putBoolean("HasMentor", HasMentor);
 			return nbt;
 		}
 
@@ -551,6 +560,9 @@ public class CraftkaisenModVariables {
 			Slot09 = ItemStack.of(nbt.getCompound("Slot09"));
 			SimpleDomainActive = nbt.getBoolean("SimpleDomainActive");
 			Faction = nbt.getString("Faction");
+			Mentor = nbt.getString("Mentor");
+			Job = nbt.getString("Job");
+			HasMentor = nbt.getBoolean("HasMentor");
 		}
 	}
 
@@ -647,6 +659,9 @@ public class CraftkaisenModVariables {
 					variables.Slot09 = message.data.Slot09;
 					variables.SimpleDomainActive = message.data.SimpleDomainActive;
 					variables.Faction = message.data.Faction;
+					variables.Mentor = message.data.Mentor;
+					variables.Job = message.data.Job;
+					variables.HasMentor = message.data.HasMentor;
 				}
 			});
 			context.setPacketHandled(true);
