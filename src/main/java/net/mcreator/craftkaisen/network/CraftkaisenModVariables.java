@@ -144,6 +144,7 @@ public class CraftkaisenModVariables {
 				clone.VowDescription = original.VowDescription;
 				clone.Checked = original.Checked;
 				clone.FireSpread = original.FireSpread;
+				clone.SimpleDomainActive = original.SimpleDomainActive;
 			}
 		}
 
@@ -390,6 +391,7 @@ public class CraftkaisenModVariables {
 		public ItemStack Slot07 = ItemStack.EMPTY;
 		public ItemStack Slot08 = ItemStack.EMPTY;
 		public ItemStack Slot09 = ItemStack.EMPTY;
+		public boolean SimpleDomainActive = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -468,6 +470,7 @@ public class CraftkaisenModVariables {
 			nbt.put("Slot07", Slot07.save(new CompoundTag()));
 			nbt.put("Slot08", Slot08.save(new CompoundTag()));
 			nbt.put("Slot09", Slot09.save(new CompoundTag()));
+			nbt.putBoolean("SimpleDomainActive", SimpleDomainActive);
 			return nbt;
 		}
 
@@ -543,6 +546,7 @@ public class CraftkaisenModVariables {
 			Slot07 = ItemStack.of(nbt.getCompound("Slot07"));
 			Slot08 = ItemStack.of(nbt.getCompound("Slot08"));
 			Slot09 = ItemStack.of(nbt.getCompound("Slot09"));
+			SimpleDomainActive = nbt.getBoolean("SimpleDomainActive");
 		}
 	}
 
@@ -637,6 +641,7 @@ public class CraftkaisenModVariables {
 					variables.Slot07 = message.data.Slot07;
 					variables.Slot08 = message.data.Slot08;
 					variables.Slot09 = message.data.Slot09;
+					variables.SimpleDomainActive = message.data.SimpleDomainActive;
 				}
 			});
 			context.setPacketHandled(true);

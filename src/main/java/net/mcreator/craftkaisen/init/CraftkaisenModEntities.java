@@ -22,7 +22,6 @@ import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
-import net.mcreator.craftkaisen.entity.SatoruGojoBlindfoldEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
@@ -128,10 +127,6 @@ public class CraftkaisenModEntities {
 					.setCustomClientFactory(CursedspiritroppongiEntity::new)
 
 					.sized(1f, 1f));
-	public static final RegistryObject<EntityType<SatoruGojoBlindfoldEntity>> SATORU_GOJO_BLINDFOLD = register("satoru_gojo_blindfold",
-			EntityType.Builder.<SatoruGojoBlindfoldEntity>of(SatoruGojoBlindfoldEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SatoruGojoBlindfoldEntity::new)
-
-					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<InventoryCurseEntity>> INVENTORY_CURSE = register("inventory_curse",
 			EntityType.Builder.<InventoryCurseEntity>of(InventoryCurseEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InventoryCurseEntity::new)
 
@@ -164,7 +159,6 @@ public class CraftkaisenModEntities {
 			EmberInsectEntity.init();
 			FireArrowEntity.init();
 			CursedspiritroppongiEntity.init();
-			SatoruGojoBlindfoldEntity.init();
 			InventoryCurseEntity.init();
 			CursedspiritgrasshopperEntity.init();
 		});
@@ -187,7 +181,6 @@ public class CraftkaisenModEntities {
 		event.put(EMBER_INSECT.get(), EmberInsectEntity.createAttributes().build());
 		event.put(FIRE_ARROW.get(), FireArrowEntity.createAttributes().build());
 		event.put(CURSEDSPIRITROPPONGI.get(), CursedspiritroppongiEntity.createAttributes().build());
-		event.put(SATORU_GOJO_BLINDFOLD.get(), SatoruGojoBlindfoldEntity.createAttributes().build());
 		event.put(INVENTORY_CURSE.get(), InventoryCurseEntity.createAttributes().build());
 		event.put(CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperEntity.createAttributes().build());
 	}

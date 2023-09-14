@@ -9,6 +9,7 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
@@ -20,6 +21,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 
 import javax.annotation.Nullable;
 
@@ -66,6 +68,15 @@ public class EntityHitProcedure {
 				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 0.1, 2, 0.1, 0);
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.POOF, x, y, z, 1, 1, 2, 1, 0);
+		}
+		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.INFINITY.get()) : false) {
+			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftkaisenModItems.INVERTED_SPEAROF_HEAVEN.get()) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(CraftkaisenModMobEffects.INFINITY.get());
+			}
+			if (event != null && event.isCancelable()) {
+				event.setCanceled(true);
+			}
 		}
 	}
 }

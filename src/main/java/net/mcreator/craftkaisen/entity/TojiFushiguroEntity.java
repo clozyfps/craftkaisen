@@ -96,7 +96,7 @@ public class TojiFushiguroEntity extends Monster {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
 		builder = builder.add(Attributes.MAX_HEALTH, 620);
 		builder = builder.add(Attributes.ARMOR, 0.4);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 21);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 28);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);

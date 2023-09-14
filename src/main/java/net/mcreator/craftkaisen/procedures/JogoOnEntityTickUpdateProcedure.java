@@ -6,14 +6,18 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -81,6 +85,37 @@ public class JogoOnEntityTickUpdateProcedure {
 						});
 					});
 				});
+			}
+			if (Math.random() < 0.001) {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = new MaximumMeteorEntity(CraftkaisenModEntities.MAXIMUM_METEOR.get(), _level);
+					entityToSpawn.moveTo(x, (y + 75), z, world.getRandom().nextFloat() * 360F, 0);
+					if (entityToSpawn instanceof Mob _mobToSpawn)
+						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+					world.addFreshEntity(entityToSpawn);
+				}
+				entity.setDeltaMovement(new Vec3(0, (entity.getDeltaMovement().y() + 3), 0));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 250, 250, false, false));
+				CraftkaisenMod.queueServerWork(20, () -> {
+					{
+						final Vec3 _center = new Vec3(x, y, z);
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(200 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+								.collect(Collectors.toList());
+						for (Entity entityiterator : _entfound) {
+							if (entityiterator instanceof MaximumMeteorEntity) {
+								entity.startRiding(entityiterator);
+							}
+						}
+					}
+				});
+			}
+			if (Math.random() < 0.001) {
+				if (!entity.getPersistentData().getBoolean("domainused")) {
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DOMAIN_EXPANSION.get(), 800, 1, false, false));
+					entity.getPersistentData().putBoolean("domainused", true);
+				}
 			}
 		}
 	}
