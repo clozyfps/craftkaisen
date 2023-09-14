@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritrugbyfieldRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
+import net.mcreator.craftkaisen.client.renderer.CursedspiritgrasshopperRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftkaisenModEntityRenderers {
@@ -62,6 +63,7 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.FLOWERFIELDS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.CURSEDSPIRITROPPONGI.get(), CursedspiritroppongiRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.INVENTORY_CURSE.get(), InventoryCurseRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK.get(), MagmaRockRenderer::new);
 	}
 }

@@ -43,6 +43,7 @@ import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
 import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
@@ -131,6 +132,11 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<InventoryCurseEntity>of(InventoryCurseEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(InventoryCurseEntity::new)
 
 					.sized(0.6f, 0.4f));
+	public static final RegistryObject<EntityType<CursedspiritgrasshopperEntity>> CURSEDSPIRITGRASSHOPPER = register("cursedspiritgrasshopper",
+			EntityType.Builder.<CursedspiritgrasshopperEntity>of(CursedspiritgrasshopperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(CursedspiritgrasshopperEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MagmaRockEntity>> MAGMA_ROCK = register("magma_rock",
 			EntityType.Builder.<MagmaRockEntity>of(MagmaRockEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(MagmaRockEntity::new).fireImmune().sized(0.6f, 1.8f));
 
@@ -157,6 +163,7 @@ public class CraftkaisenModEntities {
 			FireArrowEntity.init();
 			CursedspiritroppongiEntity.init();
 			InventoryCurseEntity.init();
+			CursedspiritgrasshopperEntity.init();
 			MagmaRockEntity.init();
 		});
 	}
@@ -179,6 +186,7 @@ public class CraftkaisenModEntities {
 		event.put(FIRE_ARROW.get(), FireArrowEntity.createAttributes().build());
 		event.put(CURSEDSPIRITROPPONGI.get(), CursedspiritroppongiEntity.createAttributes().build());
 		event.put(INVENTORY_CURSE.get(), InventoryCurseEntity.createAttributes().build());
+		event.put(CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperEntity.createAttributes().build());
 		event.put(MAGMA_ROCK.get(), MagmaRockEntity.createAttributes().build());
 	}
 }
