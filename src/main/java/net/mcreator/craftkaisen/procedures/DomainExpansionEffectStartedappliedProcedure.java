@@ -1,9 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-<<<<<<< HEAD
-=======
 import net.minecraft.world.phys.Vec3;
->>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.block.Rotation;

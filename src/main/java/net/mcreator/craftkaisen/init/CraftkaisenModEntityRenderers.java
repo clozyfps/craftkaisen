@@ -15,6 +15,7 @@ import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
+import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
@@ -61,5 +62,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.FLOWERFIELDS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.CURSEDSPIRITROPPONGI.get(), CursedspiritroppongiRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.INVENTORY_CURSE.get(), InventoryCurseRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK.get(), MagmaRockRenderer::new);
 	}
 }

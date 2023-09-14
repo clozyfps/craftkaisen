@@ -17,8 +17,9 @@ import javax.annotation.Nullable;
 public class DamageDecreaseMoodProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity(), event.getAmount());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity, event.getAmount());
 		}
 	}
 

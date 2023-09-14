@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.client.model.Modelroppongicursedspirit;
 import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
 import net.mcreator.craftkaisen.client.model.Modelmalevolentshrine;
 import net.mcreator.craftkaisen.client.model.Modelmahoraga_wheel;
+import net.mcreator.craftkaisen.client.model.Modelmagmaprojectile;
 import net.mcreator.craftkaisen.client.model.Modellapseblue;
 import net.mcreator.craftkaisen.client.model.Modeljogo;
 import net.mcreator.craftkaisen.client.model.Modeljjkoutfiot;
@@ -65,6 +66,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelcursedspiritrugbyfield.LAYER_LOCATION, Modelcursedspiritrugbyfield::createBodyLayer);
 		event.registerLayerDefinition(Modelmahoraga_wheel.LAYER_LOCATION, Modelmahoraga_wheel::createBodyLayer);
 		event.registerLayerDefinition(Modellapseblue.LAYER_LOCATION, Modellapseblue::createBodyLayer);
+		event.registerLayerDefinition(Modelmagmaprojectile.LAYER_LOCATION, Modelmagmaprojectile::createBodyLayer);
 		event.registerLayerDefinition(ModelFingerBearernew.LAYER_LOCATION, ModelFingerBearernew::createBodyLayer);
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
 		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
