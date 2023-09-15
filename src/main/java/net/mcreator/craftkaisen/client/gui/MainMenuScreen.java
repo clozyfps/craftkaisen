@@ -16,6 +16,9 @@ import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
 import net.mcreator.craftkaisen.procedures.TechniqueDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.SPDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.LevelDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.JobValueProcedure;
+import net.mcreator.craftkaisen.procedures.GradeValueProcedure;
+import net.mcreator.craftkaisen.procedures.FameValueProcedure;
 import net.mcreator.craftkaisen.procedures.ExpDisplayProcedure;
 import net.mcreator.craftkaisen.procedures.DisplayPlayerProcedure;
 import net.mcreator.craftkaisen.network.MainMenuButtonMessage;
@@ -68,7 +71,7 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 		RenderSystem.defaultBlendFunc();
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/mainmenu.png"));
-		this.blit(ms, this.leftPos + -1, this.topPos + 0, 0, 0, 250, 200, 250, 200);
+		this.blit(ms, this.leftPos + 0, this.topPos + 0, 0, 0, 250, 200, 250, 200);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/lightning.png"));
 		this.blit(ms, this.leftPos + 173, this.topPos + 140, 0, 0, 35, 34, 35, 34);
@@ -94,16 +97,25 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack,
 
-				LevelDisplayProcedure.execute(entity), 7, 42, -13496561);
+				LevelDisplayProcedure.execute(entity), 16, 25, -13496561);
 		this.font.draw(poseStack,
 
-				ExpDisplayProcedure.execute(entity), 7, 66, -13496561);
+				ExpDisplayProcedure.execute(entity), 16, 42, -13496561);
 		this.font.draw(poseStack,
 
-				TechniqueDisplayProcedure.execute(entity), 7, 120, -13496561);
+				TechniqueDisplayProcedure.execute(entity), 16, 132, -13496561);
 		this.font.draw(poseStack,
 
-				SPDisplayProcedure.execute(entity), 7, 93, -13496561);
+				SPDisplayProcedure.execute(entity), 16, 60, -13496561);
+		this.font.draw(poseStack,
+
+				JobValueProcedure.execute(entity), 16, 78, -13627890);
+		this.font.draw(poseStack,
+
+				GradeValueProcedure.execute(entity), 16, 96, -13627890);
+		this.font.draw(poseStack,
+
+				FameValueProcedure.execute(entity), 16, 114, -13627890);
 	}
 
 	@Override

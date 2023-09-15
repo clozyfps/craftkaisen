@@ -15,7 +15,7 @@
         "data": {
           "image": "mainmenu.png",
           "use1Xscale": false,
-          "x": 87,
+          "x": 88,
           "y": 20
         }
       },
@@ -73,8 +73,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 62
+          "x": 105,
+          "y": 45
         }
       },
       {
@@ -89,8 +89,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 86
+          "x": 105,
+          "y": 62
         }
       },
       {
@@ -105,8 +105,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 140
+          "x": 105,
+          "y": 152
         }
       },
       {
@@ -121,8 +121,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 113
+          "x": 105,
+          "y": 80
         }
       },
       {
@@ -137,6 +137,54 @@
           "height": 20,
           "x": 105,
           "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_job_value",
+          "text": {
+            "fixedValue": "",
+            "name": "JobValue"
+          },
+          "color": {
+            "value": -13627890,
+            "falpha": 0.0
+          },
+          "x": 105,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_grade_value",
+          "text": {
+            "fixedValue": "",
+            "name": "GradeValue"
+          },
+          "color": {
+            "value": -13627890,
+            "falpha": 0.0
+          },
+          "x": 105,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_fame_value",
+          "text": {
+            "fixedValue": "",
+            "name": "FameValue"
+          },
+          "color": {
+            "value": -13627890,
+            "falpha": 0.0
+          },
+          "x": 105,
+          "y": 134
         }
       }
     ],

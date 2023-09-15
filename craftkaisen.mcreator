@@ -4145,18 +4145,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -8383,8 +8371,8 @@
       "registry_name": "inventory_curse_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -8462,10 +8450,10 @@
       "registry_name": "inventory_curse",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/inventory_curse_biome_modifier.json",
-          "src/main/resources/assets/craftkaisen/models/item/inventory_curse_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/InventoryCurseEntity.java",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/InventoryCurseRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/InventoryCurseEntity.java"
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/inventory_curse_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/inventory_curse_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -8582,10 +8570,10 @@
       "registry_name": "cursedspiritroppongi",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritroppongiRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritroppongi_biome_modifier.json",
           "src/main/resources/assets/craftkaisen/models/item/cursedspiritroppongi_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritroppongiEntity.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritroppongi_biome_modifier.json"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritroppongiRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritroppongiEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -8599,9 +8587,9 @@
       "registry_name": "gojo_uniform",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/GojoUniformItem.java",
           "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_leggings.json",
-          "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_chestplate.json"
+          "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/GojoUniformItem.java"
         ]
       },
       "path": "~/Armor"
@@ -8989,9 +8977,9 @@
       "registry_name": "cursedspiritgrasshopper",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritgrasshopperEntity.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritgrasshopper_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritgrasshopperRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritgrasshopperEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/cursedspiritgrasshopper_spawn_egg.json"
         ]
       },
@@ -9030,8 +9018,8 @@
       "registry_name": "magma_rock",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -9073,6 +9061,140 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "JobValue",
+      "type": "procedure",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "job_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/JobValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "GradeValue",
+      "type": "procedure",
+      "sortid": 381,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grade_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GradeValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "FameValue",
+      "type": "procedure",
+      "sortid": 382,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fame_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FameValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "CursedSpirit",
+      "type": "potioneffect",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/CursedSpiritMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "CursedSpiritSet",
+      "type": "procedure",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirit_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpiritSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "JujutsuSorcerer",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jujutsu_sorcerer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/jujutsu_sorcerer.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "KillCursedSpirit",
+      "type": "procedure",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kill_cursed_spirit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/KillCursedSpiritProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -9610,14 +9732,15 @@
   "language_map": {
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
+      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "effect.craftkaisen.charge_ce_effect": "Charging",
       "key.craftkaisen.flash_step": "Flash Step",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
-      "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
+      "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
@@ -9625,10 +9748,10 @@
       "effect.craftkaisen.vessel_cooldown": "Vessel CD",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
-      "entity.craftkaisen.inventory_curse": "Inventory Curse",
-      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
-      "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
+      "item.craftkaisen.playful_cloud": "Playful Cloud",
+      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
+      "entity.craftkaisen.inventory_curse": "Inventory Curse",
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
@@ -9637,8 +9760,8 @@
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "entity.craftkaisen.cursedspiritgrasshopper": "Cursed Spirit: Grasshopper",
-      "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "gui.craftkaisen.main_menu.label_level": "Level : ",
+      "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
@@ -9664,14 +9787,15 @@
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "entity.craftkaisen.magma_rock": "Magma Rock",
-      "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
+      "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "effect.craftkaisen.ember_floor": "FloorEmber",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
-      "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
+      "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
+      "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
       "effect.craftkaisen.sleeping": "Sleeping",
       "item.craftkaisen.wooden_ball": "Wooden Ball",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",
@@ -9697,8 +9821,8 @@
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
-      "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "itemGroup.tabjjkmobs": "JJK Mobs",
+      "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_ii_increases_speedss9": "Agility II - Increases speed.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
@@ -9715,6 +9839,7 @@
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "effect.craftkaisen.infinity": "Infinity",
+      "effect.craftkaisen.cursed_spirit": "Cursed Spirit",
       "gui.craftkaisen.main_hud.label_x": "X",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",
@@ -9785,6 +9910,7 @@
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iv_increases_cursed_energy": "CE IV - Increases cursed energy cap.§9 2 SP \u0026 GRADE 3",
+      "effect.craftkaisen.burnt_out_effect": "Burnt Out",
       "effect.craftkaisen.reversal_red_final": "Reversal Red",
       "advancements.flash_step_advancement.descr": "WIP",
       "effect.craftkaisen.roots_potion": "RootsPotion",

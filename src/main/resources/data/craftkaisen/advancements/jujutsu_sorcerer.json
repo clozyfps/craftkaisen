@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "craftkaisen:jujutsu_sorcerer_outfit_chestplate"
+    },
+    "title": {
+      "translate": "advancements.jujutsu_sorcerer.title"
+    },
+    "description": {
+      "translate": "advancements.jujutsu_sorcerer.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "jujutsu_sorcerer": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}
