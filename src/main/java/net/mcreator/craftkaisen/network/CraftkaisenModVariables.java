@@ -149,6 +149,8 @@ public class CraftkaisenModVariables {
 				clone.Checked = original.Checked;
 				clone.FireSpread = original.FireSpread;
 				clone.SimpleDomainActive = original.SimpleDomainActive;
+				clone.Quest = original.Quest;
+				clone.DoingQuest = original.DoingQuest;
 			}
 		}
 
@@ -337,7 +339,7 @@ public class CraftkaisenModVariables {
 		public double Move3Cost = 0;
 		public double CursedEnergy = 0;
 		public double MoveUltimateCost = 0;
-		public double MoveSpecialCost = 0;
+		public double MoveSpecialCost = 0.0;
 		public double CursedEnergyCap = 0;
 		public double Move5Cost = 0;
 		public double Move4Cost = 0;
@@ -400,6 +402,8 @@ public class CraftkaisenModVariables {
 		public String Mentor = "\"\"";
 		public String Job = "\"\"";
 		public boolean HasMentor = false;
+		public String Quest = "\"\"";
+		public boolean DoingQuest = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -483,6 +487,8 @@ public class CraftkaisenModVariables {
 			nbt.putString("Mentor", Mentor);
 			nbt.putString("Job", Job);
 			nbt.putBoolean("HasMentor", HasMentor);
+			nbt.putString("Quest", Quest);
+			nbt.putBoolean("DoingQuest", DoingQuest);
 			return nbt;
 		}
 
@@ -563,6 +569,8 @@ public class CraftkaisenModVariables {
 			Mentor = nbt.getString("Mentor");
 			Job = nbt.getString("Job");
 			HasMentor = nbt.getBoolean("HasMentor");
+			Quest = nbt.getString("Quest");
+			DoingQuest = nbt.getBoolean("DoingQuest");
 		}
 	}
 
@@ -662,6 +670,8 @@ public class CraftkaisenModVariables {
 					variables.Mentor = message.data.Mentor;
 					variables.Job = message.data.Job;
 					variables.HasMentor = message.data.HasMentor;
+					variables.Quest = message.data.Quest;
+					variables.DoingQuest = message.data.DoingQuest;
 				}
 			});
 			context.setPacketHandled(true);

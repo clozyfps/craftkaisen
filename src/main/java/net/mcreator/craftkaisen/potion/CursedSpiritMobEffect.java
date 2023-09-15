@@ -1,8 +1,10 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class CursedSpiritMobEffect extends MobEffect {
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+public class CursedSpiritMobEffect extends MobEffect {
 	public CursedSpiritMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -16,5 +18,4 @@ public class CursedSpiritMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }
