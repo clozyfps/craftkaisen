@@ -9,17 +9,20 @@ import net.minecraft.sounds.SoundEvent;
 
 import javax.annotation.Nullable;
 
-public class CursedspiritroppongiEntity extends Monster {
+public class MegumiFushiguroEntity extends Monster {
 
-	public CursedspiritroppongiEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftkaisenModEntities.CURSEDSPIRITROPPONGI.get(), world);
+	public MegumiFushiguroEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftkaisenModEntities.MEGUMI_FUSHIGURO.get(), world);
 	}
 
-	public CursedspiritroppongiEntity(EntityType<CursedspiritroppongiEntity> type, Level world) {
+	public MegumiFushiguroEntity(EntityType<MegumiFushiguroEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
 		xpReward = 0;
 		setNoAi(false);
+
+		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.JUJUTSU_SORCERER_OUTFIT_CHESTPLATE.get()));
+		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.JUJUTSU_SORCERER_OUTFIT_LEGGINGS.get()));
 
 	}
 
@@ -44,15 +47,24 @@ public class CursedspiritroppongiEntity extends Monster {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, JujutsuStudentEntity.class, true, false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, false));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, CursedspiritgrasshopperEntity.class, true, false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, CursedspiritroppongiEntity.class, true, false));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, CursedspiritrugbyfieldEntity.class, true, false));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, FingerBearerEntity.class, true, false));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, FlyHeadEntity.class, true, false));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, InventoryCurseEntity.class, true, false));
+		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, JogoEntity.class, true, false));
 
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public double getMyRidingOffset() {
+		return -0.35D;
 	}
 
 	@Override
@@ -66,22 +78,18 @@ public class CursedspiritroppongiEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CraftkaisenModEntities.CURSEDSPIRITROPPONGI.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(CraftkaisenModEntities.MEGUMI_FUSHIGURO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
-		builder = builder.add(Attributes.MAX_HEALTH, 160);
-		builder = builder.add(Attributes.ARMOR, 0.2);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 15);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
+		builder = builder.add(Attributes.ARMOR, 0);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 
 		return builder;
 	}

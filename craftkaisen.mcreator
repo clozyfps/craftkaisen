@@ -8371,8 +8371,8 @@
       "registry_name": "inventory_curse_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java"
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -9018,8 +9018,8 @@
       "registry_name": "magma_rock",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java"
         ]
       },
       "path": "~/Abilities"
@@ -9063,16 +9063,16 @@
       "path": "~/Commands/Procedures"
     },
     {
-      "name": "JobValue",
+      "name": "GradeValue",
       "type": "procedure",
-      "sortid": 380,
+      "sortid": 381,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "job_value",
+      "registry_name": "grade_value",
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/JobValueProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/GradeValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -9084,16 +9084,43 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "GradeValue",
-      "type": "procedure",
-      "sortid": 381,
+      "name": "JujutsuSorcerer",
+      "type": "achievement",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "grade_value",
+      "registry_name": "jujutsu_sorcerer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/jujutsu_sorcerer.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "CursedSpirit",
+      "type": "potioneffect",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/CursedSpiritMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "JobValue",
+      "type": "procedure",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "job_value",
       "metadata": {
         "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/GradeValueProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/JobValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -9126,20 +9153,6 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "CursedSpirit",
-      "type": "potioneffect",
-      "sortid": 383,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_spirit",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/CursedSpiritMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
-    },
-    {
       "name": "CursedSpiritSet",
       "type": "procedure",
       "sortid": 384,
@@ -9158,19 +9171,6 @@
         ]
       },
       "path": "~/Procedures"
-    },
-    {
-      "name": "JujutsuSorcerer",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jujutsu_sorcerer",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/jujutsu_sorcerer.json"
-        ]
-      },
-      "path": "~/Advancements"
     },
     {
       "name": "KillCursedSpirit",
@@ -9195,6 +9195,38 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "Hiar",
+      "type": "armor",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hiar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/HiarItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/hiar_helmet.json"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "MegumiFushiguro",
+      "type": "livingentity",
+      "sortid": 373,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "megumi_fushiguro",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MegumiFushiguroRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/megumi_fushiguro_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/MegumiFushiguroEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/megumi_fushiguro_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -9732,7 +9764,6 @@
   "language_map": {
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
-      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -9786,14 +9817,12 @@
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
-      "entity.craftkaisen.magma_rock": "Magma Rock",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "effect.craftkaisen.ember_floor": "FloorEmber",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
-      "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
       "effect.craftkaisen.sleeping": "Sleeping",
@@ -9839,7 +9868,6 @@
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "effect.craftkaisen.infinity": "Infinity",
-      "effect.craftkaisen.cursed_spirit": "Cursed Spirit",
       "gui.craftkaisen.main_hud.label_x": "X",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",

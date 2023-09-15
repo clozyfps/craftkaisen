@@ -34,12 +34,16 @@ public class BurntOutEffectMobEffect extends MobEffect {
 
 	@Override
 	public void applyInstantenousEffect(Entity source, Entity indirectSource, LivingEntity entity, int amplifier, double health) {
-		BurntOutAppliedProcedure.execute(entity);
+		BurntOutAppliedProcedure.execute(
+
+		);
 	}
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		BurntOutTickProcedure.execute(entity);
+		BurntOutTickProcedure.execute(
+
+		);
 	}
 
 	@Override

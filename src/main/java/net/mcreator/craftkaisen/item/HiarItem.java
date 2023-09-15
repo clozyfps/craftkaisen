@@ -5,18 +5,18 @@ import net.minecraft.sounds.SoundEvent;
 import java.util.function.Consumer;
 import net.minecraft.client.model.Model;
 
-public abstract class BlindfoldItem extends ArmorItem {
+public abstract class HiarItem extends ArmorItem {
 
-	public BlindfoldItem(EquipmentSlot slot, Item.Properties properties) {
+	public HiarItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
 			public int getDurabilityForSlot(EquipmentSlot slot) {
-				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 1000;
+				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 25;
 			}
 
 			@Override
 			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{2, 5, 6, 10}[slot.getIndex()];
+				return new int[]{2, 5, 6, 2}[slot.getIndex()];
 			}
 
 			@Override
@@ -36,22 +36,22 @@ public abstract class BlindfoldItem extends ArmorItem {
 
 			@Override
 			public String getName() {
-				return "blindfold";
+				return "hiar";
 			}
 
 			@Override
 			public float getToughness() {
-				return 2.5f;
+				return 0f;
 			}
 
 			@Override
 			public float getKnockbackResistance() {
-				return 0.1f;
+				return 0f;
 			}
 		}, slot, properties);
 	}
 
-	public static class Helmet extends BlindfoldItem {
+	public static class Helmet extends HiarItem {
 
 		public Helmet() {
 			super(EquipmentSlot.HEAD, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
@@ -63,7 +63,7 @@ public abstract class BlindfoldItem extends ArmorItem {
 				@Override
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
 					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(),
-							Map.of("head", new Modelblackblindfold(Minecraft.getInstance().getEntityModels().bakeLayer(Modelblackblindfold.LAYER_LOCATION)).Head2, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
+							Map.of("head", new Modelmegumihair(Minecraft.getInstance().getEntityModels().bakeLayer(Modelmegumihair.LAYER_LOCATION)).Head, "hat", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "body",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_arm",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg",
 									new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
@@ -77,7 +77,7 @@ public abstract class BlindfoldItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "craftkaisen:textures/entities/black_wool.png";
+			return "craftkaisen:textures/entities/megumihair.png";
 		}
 
 	}

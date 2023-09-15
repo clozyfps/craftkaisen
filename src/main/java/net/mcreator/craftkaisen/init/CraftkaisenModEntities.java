@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
@@ -137,6 +138,10 @@ public class CraftkaisenModEntities {
 					.setCustomClientFactory(CursedspiritgrasshopperEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MegumiFushiguroEntity>> MEGUMI_FUSHIGURO = register("megumi_fushiguro",
+			EntityType.Builder.<MegumiFushiguroEntity>of(MegumiFushiguroEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MegumiFushiguroEntity::new)
+
+					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MagmaRockEntity>> MAGMA_ROCK = register("magma_rock",
 			EntityType.Builder.<MagmaRockEntity>of(MagmaRockEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(MagmaRockEntity::new).fireImmune().sized(0.6f, 1.8f));
 
@@ -164,6 +169,7 @@ public class CraftkaisenModEntities {
 			CursedspiritroppongiEntity.init();
 			InventoryCurseEntity.init();
 			CursedspiritgrasshopperEntity.init();
+			MegumiFushiguroEntity.init();
 			MagmaRockEntity.init();
 		});
 	}
@@ -187,6 +193,7 @@ public class CraftkaisenModEntities {
 		event.put(CURSEDSPIRITROPPONGI.get(), CursedspiritroppongiEntity.createAttributes().build());
 		event.put(INVENTORY_CURSE.get(), InventoryCurseEntity.createAttributes().build());
 		event.put(CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperEntity.createAttributes().build());
+		event.put(MEGUMI_FUSHIGURO.get(), MegumiFushiguroEntity.createAttributes().build());
 		event.put(MAGMA_ROCK.get(), MagmaRockEntity.createAttributes().build());
 	}
 }
