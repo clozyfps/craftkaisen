@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
+import net.mcreator.craftkaisen.item.HiarItem;
 import net.mcreator.craftkaisen.item.GojoUniformItem;
 import net.mcreator.craftkaisen.item.GetoArmorItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
@@ -101,6 +102,9 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.INVENTORY_CURSE, -11390382, -12835770, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> CURSEDSPIRITGRASSHOPPER_SPAWN_EGG = REGISTRY.register("cursedspiritgrasshopper_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER, -16737997, -52, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> HIAR_HELMET = REGISTRY.register("hiar_helmet", () -> new HiarItem.Helmet());
+	public static final RegistryObject<Item> MEGUMI_FUSHIGURO_SPAWN_EGG = REGISTRY.register("megumi_fushiguro_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MEGUMI_FUSHIGURO, -16777114, -16777216, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
