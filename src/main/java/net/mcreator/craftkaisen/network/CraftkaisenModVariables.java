@@ -137,6 +137,10 @@ public class CraftkaisenModVariables {
 			clone.Slot07 = original.Slot07;
 			clone.Slot08 = original.Slot08;
 			clone.Slot09 = original.Slot09;
+			clone.Mentor = original.Mentor;
+			clone.Job = original.Job;
+			clone.HasMentor = original.HasMentor;
+			clone.Faction = original.Faction;
 			if (!event.isWasDeath()) {
 				clone.CursedEnergy = original.CursedEnergy;
 				clone.Charging = original.Charging;
@@ -392,6 +396,10 @@ public class CraftkaisenModVariables {
 		public ItemStack Slot08 = ItemStack.EMPTY;
 		public ItemStack Slot09 = ItemStack.EMPTY;
 		public boolean SimpleDomainActive = false;
+		public String Mentor = "\"\"";
+		public String Job = "\"\"";
+		public boolean HasMentor = false;
+		public String Faction = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -471,6 +479,10 @@ public class CraftkaisenModVariables {
 			nbt.put("Slot08", Slot08.save(new CompoundTag()));
 			nbt.put("Slot09", Slot09.save(new CompoundTag()));
 			nbt.putBoolean("SimpleDomainActive", SimpleDomainActive);
+			nbt.putString("Mentor", Mentor);
+			nbt.putString("Job", Job);
+			nbt.putBoolean("HasMentor", HasMentor);
+			nbt.putString("Faction", Faction);
 			return nbt;
 		}
 
@@ -547,6 +559,10 @@ public class CraftkaisenModVariables {
 			Slot08 = ItemStack.of(nbt.getCompound("Slot08"));
 			Slot09 = ItemStack.of(nbt.getCompound("Slot09"));
 			SimpleDomainActive = nbt.getBoolean("SimpleDomainActive");
+			Mentor = nbt.getString("Mentor");
+			Job = nbt.getString("Job");
+			HasMentor = nbt.getBoolean("HasMentor");
+			Faction = nbt.getString("Faction");
 		}
 	}
 
@@ -642,6 +658,10 @@ public class CraftkaisenModVariables {
 					variables.Slot08 = message.data.Slot08;
 					variables.Slot09 = message.data.Slot09;
 					variables.SimpleDomainActive = message.data.SimpleDomainActive;
+					variables.Mentor = message.data.Mentor;
+					variables.Job = message.data.Job;
+					variables.HasMentor = message.data.HasMentor;
+					variables.Faction = message.data.Faction;
 				}
 			});
 			context.setPacketHandled(true);

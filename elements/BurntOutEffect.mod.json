@@ -1,0 +1,26 @@
+{
+  "_fv": 47,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Burnt Out",
+    "icon": "reversal_red.png",
+    "color": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onStarted": {
+      "name": "BurntOutApplied"
+    },
+    "onActiveTick": {
+      "name": "BurntOutTick"
+    },
+    "onExpired": {
+      "name": "BurntOutExpire"
+    }
+  }
+}

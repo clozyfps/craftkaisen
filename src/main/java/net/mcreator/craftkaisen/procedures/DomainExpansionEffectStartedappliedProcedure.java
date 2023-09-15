@@ -105,6 +105,8 @@ public class DomainExpansionEffectStartedappliedProcedure {
 																	new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 														}
 													}
+													if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+														_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.BURNT_OUT_EFFECT.get(), 100, 0, true, false));
 												});
 											});
 										});
