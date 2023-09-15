@@ -44,7 +44,6 @@ import net.mcreator.craftkaisen.potion.DivergentFistMobEffect;
 import net.mcreator.craftkaisen.potion.CrushingMobEffect;
 import net.mcreator.craftkaisen.potion.ClapRushMobEffect;
 import net.mcreator.craftkaisen.potion.ChargeCEEffectMobEffect;
-import net.mcreator.craftkaisen.potion.BurntOutEffectMobEffect;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModMobEffects {
@@ -83,5 +82,4 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> SHRINE = REGISTRY.register("shrine", () -> new ShrineMobEffect());
 	public static final RegistryObject<MobEffect> ROOTS_POTION = REGISTRY.register("roots_potion", () -> new RootsPotionMobEffect());
 	public static final RegistryObject<MobEffect> DOMAIN_EXPANSION = REGISTRY.register("domain_expansion", () -> new DomainExpansionMobEffect());
-	public static final RegistryObject<MobEffect> BURNT_OUT_EFFECT = REGISTRY.register("burnt_out_effect", () -> new BurntOutEffectMobEffect());
 }
