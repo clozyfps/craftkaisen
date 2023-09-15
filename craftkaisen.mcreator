@@ -4145,6 +4145,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -8371,8 +8383,8 @@
       "registry_name": "inventory_curse_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java"
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -8450,10 +8462,10 @@
       "registry_name": "inventory_curse",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/InventoryCurseEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/InventoryCurseRenderer.java",
           "src/main/resources/data/craftkaisen/forge/biome_modifier/inventory_curse_biome_modifier.json",
-          "src/main/resources/assets/craftkaisen/models/item/inventory_curse_spawn_egg.json"
+          "src/main/resources/assets/craftkaisen/models/item/inventory_curse_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/InventoryCurseRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/InventoryCurseEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -8570,10 +8582,10 @@
       "registry_name": "cursedspiritroppongi",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritroppongi_biome_modifier.json",
-          "src/main/resources/assets/craftkaisen/models/item/cursedspiritroppongi_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritroppongiRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritroppongiEntity.java"
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritroppongi_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritroppongiEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritroppongi_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -8587,9 +8599,9 @@
       "registry_name": "gojo_uniform",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/GojoUniformItem.java",
           "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_leggings.json",
-          "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_chestplate.json",
-          "src/main/java/net/mcreator/craftkaisen/item/GojoUniformItem.java"
+          "src/main/resources/assets/craftkaisen/models/item/gojo_uniform_chestplate.json"
         ]
       },
       "path": "~/Armor"
@@ -8699,6 +8711,154 @@
         ]
       },
       "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "SetFaction",
+      "type": "procedure",
+      "sortid": 378,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_faction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetFactionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "BurntOutTick",
+      "type": "procedure",
+      "sortid": 374,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_out_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BurntOutTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "BurntOutApplied",
+      "type": "procedure",
+      "sortid": 373,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_out_applied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BurntOutAppliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "SetFactionCommand",
+      "type": "command",
+      "sortid": 377,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_faction_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetFactionCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "BurntOutEffect",
+      "type": "potioneffect",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_out_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/BurntOutEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "BurntOutExpire",
+      "type": "procedure",
+      "sortid": 375,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burnt_out_expire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BurntOutExpireProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "CheckIfAwakening",
+      "type": "procedure",
+      "sortid": 376,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_if_awakening",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckIfAwakeningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "SatoruGojoRightClickedOnEntity",
@@ -8821,6 +8981,23 @@
       "path": "~/Procedures"
     },
     {
+      "name": "Cursedspiritgrasshopper",
+      "type": "livingentity",
+      "sortid": 368,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursedspiritgrasshopper",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritgrasshopper_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritgrasshopperRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritgrasshopperEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritgrasshopper_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
       "name": "MagmaRockOnInitialEntitySpawn",
       "type": "procedure",
       "sortid": 373,
@@ -8853,8 +9030,8 @@
       "registry_name": "magma_rock",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java"
         ]
       },
       "path": "~/Abilities"
@@ -8896,23 +9073,6 @@
         ]
       },
       "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "Cursedspiritgrasshopper",
-      "type": "livingentity",
-      "sortid": 368,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursedspiritgrasshopper",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritgrasshopperEntity.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritgrasshopper_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritgrasshopperRenderer.java",
-          "src/main/resources/assets/craftkaisen/models/item/cursedspiritgrasshopper_spawn_egg.json"
-        ]
-      },
-      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -9371,6 +9531,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "Faction",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     },
     {
       "name": "Mentor",
