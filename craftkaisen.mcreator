@@ -1372,6 +1372,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3554,113 +3570,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "SleepIncreaseMood",
-      "type": "procedure",
-      "sortid": 162,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sleep_increase_mood",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SleepIncreaseMoodProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Emotion Triggers"
-    },
-    {
-      "name": "MoodDisplayGreen",
-      "type": "procedure",
-      "sortid": 163,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_green",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayGreenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoodDisplayYellow",
-      "type": "procedure",
-      "sortid": 164,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_yellow",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayYellowProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoodDisplayRed",
-      "type": "procedure",
-      "sortid": 165,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_red",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayRedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "DamageDecreaseMood",
-      "type": "procedure",
-      "sortid": 166,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "damage_decrease_mood",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DamageDecreaseMoodProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/Emotion Triggers"
-    },
-    {
       "name": "FoodsTag",
       "type": "tag",
       "sortid": 167,
@@ -3699,12 +3608,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/CheckEmotionalStateProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -9302,209 +9206,25 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "InfinityAffectedEntities",
+      "type": "tag",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_affected_entities",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/entity_types/infinity_affected_entities.json"
+        ]
+      },
+      "path": "~/Tags"
     }
   ],
   "variable_elements": [
     {
-      "name": "Level",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Exp",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SkillPoints",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Prestige",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Clan",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Technique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "ExpRequirement",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "100.0"
-    },
-    {
-      "name": "TechniqueSwitch",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SelectedTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move3Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "CursedEnergy",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "MoveUltimateCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "MoveSpecialCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
-    },
-    {
-      "name": "CursedEnergyCap",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move5Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move4Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move1Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move2Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Charging",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "Mood",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "75.0"
-    },
-    {
-      "name": "VowsEnabled",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "true"
-    },
-    {
-      "name": "VowSender",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": "\"\""
-    },
-    {
-      "name": "VowDescription",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": ""
-    },
-    {
-      "name": "Vessel",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "FingersEaten",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "ReincarnatedPlayer",
-      "type": "string",
-      "scope": "map",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselFound",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "VesselPlayer",
-      "type": "string",
-      "scope": "map",
-      "value": "\"\""
-    },
-    {
-      "name": "InParty",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "Checked",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "RCT",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "PartyLeader",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Deaths",
+      "name": "AgilityTree",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -9516,16 +9236,22 @@
       "value": "false"
     },
     {
-      "name": "SelectedMoveset",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
+      "name": "Charging",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     },
     {
-      "name": "RCTMastery",
-      "type": "number",
+      "name": "Checked",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Clan",
+      "type": "string",
       "scope": "player_persistent",
-      "value": "0"
+      "value": ""
     },
     {
       "name": "Cost",
@@ -9534,37 +9260,13 @@
       "value": "0"
     },
     {
-      "name": "RCTExp",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "FireSpread",
+      "name": "CursedEnergy",
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
     },
     {
-      "name": "SkillSpeedCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "MoveUltimate",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "SkillStrengthCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SkillDefenseCost",
+      "name": "CursedEnergyCap",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -9576,76 +9278,16 @@
       "value": "2.0"
     },
     {
-      "name": "SkillCurseCost",
+      "name": "CursedEnergyTree",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
-      "name": "MoveSpecial",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselPlayerTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move2",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move1",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move4",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move3",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move5",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "PowerTree",
+      "name": "Deaths",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "VesselFirstEnter",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "Grade",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "4"
-    },
-    {
-      "name": "Dimension",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
     },
     {
       "name": "DefenseTree",
@@ -9654,16 +9296,40 @@
       "value": "0"
     },
     {
-      "name": "CursedEnergyTree",
+      "name": "Dimension",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "DoingQuest",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "EmotionalState",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "Middle 50"
+    },
+    {
+      "name": "Exp",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
-      "name": "AgilityTree",
+      "name": "ExpRequirement",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "100.0"
+    },
+    {
+      "name": "Faction",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     },
     {
       "name": "Fame",
@@ -9672,7 +9338,31 @@
       "value": "0"
     },
     {
-      "name": "JoinsWorld",
+      "name": "FingersEaten",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "FireSpread",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Grade",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "4"
+    },
+    {
+      "name": "HasMentor",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "InParty",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -9684,16 +9374,208 @@
       "value": "false"
     },
     {
-      "name": "Slot10",
-      "type": "itemstack",
+      "name": "Job",
+      "type": "string",
       "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
+      "value": "\"\""
     },
     {
-      "name": "Slot11",
-      "type": "itemstack",
+      "name": "JoinsWorld",
+      "type": "logic",
       "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
+      "value": "false"
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Mentor",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move1Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move2Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move3Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move4",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move4Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move5",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move5Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MoveSpecial",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "MoveSpecialCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "MoveUltimate",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "MoveUltimateCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PartyLeader",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "PowerTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Prestige",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Quest",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "RCT",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "RCTExp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RCTMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ReincarnatedPlayer",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "SelectedMoveset",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "SelectedTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "SimpleDomainActive",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "SkillCurseCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillDefenseCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillPoints",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillSpeedCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillStrengthCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     },
     {
       "name": "Slot00",
@@ -9756,46 +9638,82 @@
       "value": "ItemStack.EMPTY"
     },
     {
-      "name": "SimpleDomainActive",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
+      "name": "Slot10",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
     },
     {
-      "name": "Faction",
+      "name": "Slot11",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Technique",
       "type": "string",
       "scope": "player_persistent",
       "value": ""
     },
     {
-      "name": "Mentor",
+      "name": "TechniqueSwitch",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Vessel",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
     },
     {
-      "name": "Job",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "HasMentor",
+      "name": "VesselFirstEnter",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
-      "name": "Quest",
+      "name": "VesselFound",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "VesselPlayer",
       "type": "string",
-      "scope": "player_lifetime",
+      "scope": "map",
       "value": "\"\""
     },
     {
-      "name": "DoingQuest",
-      "type": "logic",
+      "name": "VesselPlayerTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "VesselTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "VowDescription",
+      "type": "string",
       "scope": "player_lifetime",
-      "value": "false"
+      "value": ""
+    },
+    {
+      "name": "VowsEnabled",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
+    },
+    {
+      "name": "VowSender",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -9865,13 +9783,13 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.domain_expansion": "Domain Expansion",
-      "effect.craftkaisen.vessel_cooldown": "Vessel CD",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
+      "effect.craftkaisen.vessel_cooldown": "Vessel CD",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
-      "gui.craftkaisen.main_hud.label_special": "Special",
-      "item.craftkaisen.playful_cloud": "Playful Cloud",
-      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
       "entity.craftkaisen.inventory_curse": "Inventory Curse",
+      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
+      "item.craftkaisen.playful_cloud": "Playful Cloud",
+      "gui.craftkaisen.main_hud.label_special": "Special",
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
@@ -9881,8 +9799,8 @@
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "entity.craftkaisen.cursedspiritgrasshopper": "Cursed Spirit: Grasshopper",
-      "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
+      "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
@@ -9909,18 +9827,18 @@
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "entity.craftkaisen.magma_rock": "Magma Rock",
-      "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
+      "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
-      "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "effect.craftkaisen.ember_floor": "FloorEmber",
+      "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
       "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "gui.craftkaisen.main_menu.label_empty": "SP:",
       "advancements.grade_3.descr": "Become a Grade 3 Sorcerer",
-      "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
+      "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "effect.craftkaisen.sleeping": "Sleeping",
       "item.craftkaisen.wooden_ball": "Wooden Ball",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",

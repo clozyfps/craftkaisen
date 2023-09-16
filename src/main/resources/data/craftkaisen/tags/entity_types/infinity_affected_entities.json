@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "arrow",
+    "snowball",
+    "item",
+    "dragon_fireball",
+    "firework_rocket",
+    "spectral_arrow",
+    "small_fireball",
+    "fireball"
+  ]
+}

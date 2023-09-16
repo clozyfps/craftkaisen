@@ -1,0 +1,39 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "EntityArrow"
+      },
+      {
+        "value": "EntitySpectralArrow"
+      },
+      {
+        "value": "EntitySnowball"
+      },
+      {
+        "value": "EntityDragonFireball"
+      },
+      {
+        "value": "EntityFireball"
+      },
+      {
+        "value": "EntitySmallFireball"
+      },
+      {
+        "value": "EntityFireworkRocket"
+      },
+      {
+        "value": "EntityItem"
+      }
+    ],
+    "biomes": [],
+    "name": "infinity_affected_entities",
+    "namespace": "mod"
+  }
+}
