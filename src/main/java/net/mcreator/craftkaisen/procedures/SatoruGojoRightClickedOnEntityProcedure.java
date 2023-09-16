@@ -12,7 +12,7 @@ public class SatoruGojoRightClickedOnEntityProcedure {
 	public static void execute(LevelAccessor world, Entity sourceentity) {
 		if (sourceentity == null)
 			return;
-		if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Job).equals("Jujutsu Sorcerer")) {
+		if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Faction).equals("Jujutsu Sorcerer")) {
 			if (!((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Mentor).equals("Gojo")
 					&& (sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).HasMentor == false && !sourceentity.getPersistentData().getBoolean("gojomentor")) {
 				if (sourceentity instanceof Player _player && !_player.level.isClientSide())

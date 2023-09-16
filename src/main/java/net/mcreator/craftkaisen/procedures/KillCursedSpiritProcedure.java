@@ -45,13 +45,13 @@ public class KillCursedSpiritProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.CURSED_SPIRIT.get()) : false) {
-			if (!((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Job).equals("Jujutsu Sorcerer")) {
+			if (!((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Faction).equals("Jujutsu Sorcerer")) {
 				sourceentity.getPersistentData().putDouble("cursekill", (sourceentity.getPersistentData().getDouble("cursekill") + 1));
 				if (sourceentity.getPersistentData().getDouble("cursekill") == 3) {
 					{
 						String _setval = "Jujutsu Sorcerer";
 						sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Job = _setval;
+							capability.Faction = _setval;
 							capability.syncPlayerVariables(sourceentity);
 						});
 					}
@@ -72,7 +72,7 @@ public class KillCursedSpiritProcedure {
 						}
 					}
 				}
-			} else if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Job).equals("Jujutsu Sorcerer")) {
+			} else if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Faction).equals("Jujutsu Sorcerer")) {
 				if (entity instanceof CursedspiritgrasshopperEntity) {
 					if (sourceentity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7l Gained Fame"), true);

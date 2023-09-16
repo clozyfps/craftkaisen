@@ -40,7 +40,7 @@ public class MentorChatProcedure {
 						if (entity instanceof Player _player && !_player.level.isClientSide())
 							_player.displayClientMessage(Component.literal("\u00A7a You have enough fame to be referred to grade 3, here is a mission from Jujutsu High"), false);
 						{
-							String _setval = "Kill " + entity.getPersistentData().getDouble("grade4quest") + " /" + "5";
+							String _setval = "Kill " + entity.getPersistentData().getDouble("grade4quest") + " / 5" + " Cursed Spirits";
 							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.Quest = _setval;
 								capability.syncPlayerVariables(entity);
@@ -53,6 +53,9 @@ public class MentorChatProcedure {
 								capability.syncPlayerVariables(entity);
 							});
 						}
+					} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame < 1800) {
+						if (entity instanceof Player _player && !_player.level.isClientSide())
+							_player.displayClientMessage(Component.literal("\u00A7a You need at least 1800 Fame to be referred to grade 3"), false);
 					}
 				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Grade).equals("Grade 3")) {
 					if (event != null && event.isCancelable()) {

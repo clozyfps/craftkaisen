@@ -38,10 +38,17 @@ public class KillCursedSpiritQuestProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.CURSED_SPIRIT.get()) : false) {
-			if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Job).equals("Jujutsu Sorcerer")) {
+			if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Faction).equals("Jujutsu Sorcerer")) {
 				if ((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).DoingQuest == true) {
 					if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Grade).equals("Grade 4")) {
 						sourceentity.getPersistentData().putDouble("grade4quest", (sourceentity.getPersistentData().getDouble("grade4quest") + 1));
+						{
+							String _setval = "Kill " + sourceentity.getPersistentData().getDouble("grade4quest") + " / 5" + " Cursed Spirits";
+							sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Quest = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
 						if (sourceentity.getPersistentData().getDouble("grade4quest") >= 5) {
 							{
 								boolean _setval = false;
