@@ -11,12 +11,17 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.DisplaySelectedTechniqueProcedure;
 import net.mcreator.craftkaisen.procedures.DisplayMoveCostProcedure;
 import net.mcreator.craftkaisen.procedures.CursedEnergyDisplayProcedure;
+
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.platform.GlStateManager;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class MainHUDOverlay {
@@ -37,7 +42,16 @@ public class MainHUDOverlay {
 			y = entity.getY();
 			z = entity.getZ();
 		}
+		RenderSystem.disableDepthTest();
+		RenderSystem.depthMask(false);
+		RenderSystem.enableBlend();
+		RenderSystem.setShader(GameRenderer::getPositionTexShader);
+		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
+		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
+			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/bloodlusted.png"));
+			Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -1008, posY + -571, 0, 0, 1920, 1080, 1920, 1080);
+
 			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quests"), posX + 90, posY + -112, -1);
 			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_empty"), posX + 90, posY + -103, -1);
 			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quest1"), posX + 90, posY + -94, -1);
@@ -51,5 +65,10 @@ public class MainHUDOverlay {
 
 					CursedEnergyDisplayProcedure.execute(entity), posX + -207, posY + 63, -1);
 		}
+		RenderSystem.depthMask(true);
+		RenderSystem.defaultBlendFunc();
+		RenderSystem.enableDepthTest();
+		RenderSystem.disableBlend();
+		RenderSystem.setShaderColor(1, 1, 1, 1);
 	}
 }
