@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.item.StopItem;
 import net.mcreator.craftkaisen.item.SleepItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
+import net.mcreator.craftkaisen.item.KatanaItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
@@ -105,6 +106,9 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> HIAR_HELMET = REGISTRY.register("hiar_helmet", () -> new HiarItem.Helmet());
 	public static final RegistryObject<Item> MEGUMI_FUSHIGURO_SPAWN_EGG = REGISTRY.register("megumi_fushiguro_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MEGUMI_FUSHIGURO, -16777114, -16777216, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> KATANA = REGISTRY.register("katana", () -> new KatanaItem());
+	public static final RegistryObject<Item> UNKNOWN_MAN_SPAWN_EGG = REGISTRY.register("unknown_man_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.UNKNOWN_MAN, -16777216, -1, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
