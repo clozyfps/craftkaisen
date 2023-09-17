@@ -4,9 +4,9 @@
     "type": "forge:any"
   },
   "spawners": {
-    "type": "craftkaisen:fly_head",
-    "weight": 20,
-    "minCount": 4,
-    "maxCount": 4
+    "type": "craftkaisen:sukuna",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 1
   }
 }

@@ -109,6 +109,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> KATANA = REGISTRY.register("katana", () -> new KatanaItem());
 	public static final RegistryObject<Item> UNKNOWN_MAN_SPAWN_EGG = REGISTRY.register("unknown_man_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.UNKNOWN_MAN, -16777216, -1, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> ITADORI_SPAWN_EGG = REGISTRY.register("itadori_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.ITADORI, -15788000, -25187, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> SUKUNA_SPAWN_EGG = REGISTRY.register("sukuna_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.SUKUNA, -15001051, -1597023, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

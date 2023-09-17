@@ -4,7 +4,7 @@
     "type": "forge:any"
   },
   "spawners": {
-    "type": "craftkaisen:cursedspiritgrasshopper",
+    "type": "craftkaisen:itadori",
     "weight": 1,
     "minCount": 1,
     "maxCount": 1

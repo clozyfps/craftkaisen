@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -26,17 +27,18 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.craftkaisen.procedures.SukunaOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
-public class CursedspiritgrasshopperEntity extends Monster {
-	public CursedspiritgrasshopperEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), world);
+public class SukunaEntity extends Monster {
+	public SukunaEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftkaisenModEntities.SUKUNA.get(), world);
 	}
 
-	public CursedspiritgrasshopperEntity(EntityType<CursedspiritgrasshopperEntity> type, Level world) {
+	public SukunaEntity(EntityType<SukunaEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
-		xpReward = 1;
+		xpReward = 5;
 		setNoAi(false);
 	}
 
@@ -48,24 +50,27 @@ public class CursedspiritgrasshopperEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.4, false) {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, true, true));
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.6, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, JujutsuStudentEntity.class, true, false));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, false));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, false));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public double getMyRidingOffset() {
+		return -0.35D;
 	}
 
 	@Override
@@ -78,19 +83,25 @@ public class CursedspiritgrasshopperEntity extends Monster {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		SukunaOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+	}
+
 	public static void init() {
-		SpawnPlacements.register(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
+		SpawnPlacements.register(CraftkaisenModEntities.SUKUNA.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
-		builder = builder.add(Attributes.MAX_HEALTH, 140);
-		builder = builder.add(Attributes.ARMOR, 0.1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 15);
+		builder = builder.add(Attributes.MAX_HEALTH, 850);
+		builder = builder.add(Attributes.ARMOR, 0.2);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 29);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 3);
 		return builder;
 	}
 }

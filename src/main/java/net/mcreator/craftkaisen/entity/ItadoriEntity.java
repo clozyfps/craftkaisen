@@ -6,9 +6,9 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -17,26 +17,33 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.craftkaisen.procedures.ItadoriOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
-public class CursedspiritgrasshopperEntity extends Monster {
-	public CursedspiritgrasshopperEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), world);
+import javax.annotation.Nullable;
+
+public class ItadoriEntity extends Monster {
+	public ItadoriEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftkaisenModEntities.ITADORI.get(), world);
 	}
 
-	public CursedspiritgrasshopperEntity(EntityType<CursedspiritgrasshopperEntity> type, Level world) {
+	public ItadoriEntity(EntityType<ItadoriEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
-		xpReward = 1;
+		xpReward = 2;
 		setNoAi(false);
 	}
 
@@ -48,7 +55,7 @@ public class CursedspiritgrasshopperEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.4, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.6, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -56,16 +63,18 @@ public class CursedspiritgrasshopperEntity extends Monster {
 		});
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, JujutsuStudentEntity.class, true, false));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, false));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, false));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
 
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public double getMyRidingOffset() {
+		return -0.35D;
 	}
 
 	@Override
@@ -78,18 +87,25 @@ public class CursedspiritgrasshopperEntity extends Monster {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
+	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		ItadoriOnInitialEntitySpawnProcedure.execute(this);
+		return retval;
+	}
+
 	public static void init() {
-		SpawnPlacements.register(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
+		SpawnPlacements.register(CraftkaisenModEntities.ITADORI.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.5);
-		builder = builder.add(Attributes.MAX_HEALTH, 140);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
+		builder = builder.add(Attributes.MAX_HEALTH, 230);
 		builder = builder.add(Attributes.ARMOR, 0.1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 15);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;
 	}

@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.craftkaisen.client.renderer.UnknownManRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
+import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
@@ -21,6 +22,7 @@ import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
+import net.mcreator.craftkaisen.client.renderer.ItadoriRenderer;
 import net.mcreator.craftkaisen.client.renderer.InventoryCurseRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
@@ -69,5 +71,7 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.MEGUMI_FUSHIGURO.get(), MegumiFushiguroRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK.get(), MagmaRockRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.UNKNOWN_MAN.get(), UnknownManRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.ITADORI.get(), ItadoriRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.SUKUNA.get(), SukunaRenderer::new);
 	}
 }

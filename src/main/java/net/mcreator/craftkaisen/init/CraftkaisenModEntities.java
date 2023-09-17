@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.entity.WoodenBallEntity;
 import net.mcreator.craftkaisen.entity.UnknownManEntity;
 import net.mcreator.craftkaisen.entity.TwistEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
+import net.mcreator.craftkaisen.entity.SukunaEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
@@ -30,6 +31,7 @@ import net.mcreator.craftkaisen.entity.MagmaRockEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
+import net.mcreator.craftkaisen.entity.ItadoriEntity;
 import net.mcreator.craftkaisen.entity.InventoryCurseEntity;
 import net.mcreator.craftkaisen.entity.InfiniteVoiddEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
@@ -55,7 +57,7 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 public class CraftkaisenModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, CraftkaisenMod.MODID);
 	public static final RegistryObject<EntityType<FlyHeadEntity>> FLY_HEAD = register("fly_head",
-			EntityType.Builder.<FlyHeadEntity>of(FlyHeadEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlyHeadEntity::new)
+			EntityType.Builder.<FlyHeadEntity>of(FlyHeadEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlyHeadEntity::new)
 
 					.sized(0.6f, 0.6f));
 	public static final RegistryObject<EntityType<HollowPurpleEntity>> HOLLOW_PURPLE = register("projectile_hollow_purple",
@@ -135,7 +137,7 @@ public class CraftkaisenModEntities {
 
 					.sized(0.6f, 0.4f));
 	public static final RegistryObject<EntityType<CursedspiritgrasshopperEntity>> CURSEDSPIRITGRASSHOPPER = register("cursedspiritgrasshopper",
-			EntityType.Builder.<CursedspiritgrasshopperEntity>of(CursedspiritgrasshopperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<CursedspiritgrasshopperEntity>of(CursedspiritgrasshopperEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(CursedspiritgrasshopperEntity::new)
 
 					.sized(0.6f, 1.8f));
@@ -147,6 +149,14 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<MagmaRockEntity>of(MagmaRockEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(MagmaRockEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<UnknownManEntity>> UNKNOWN_MAN = register("unknown_man",
 			EntityType.Builder.<UnknownManEntity>of(UnknownManEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UnknownManEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ItadoriEntity>> ITADORI = register("itadori",
+			EntityType.Builder.<ItadoriEntity>of(ItadoriEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ItadoriEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SukunaEntity>> SUKUNA = register("sukuna",
+			EntityType.Builder.<SukunaEntity>of(SukunaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SukunaEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -177,6 +187,8 @@ public class CraftkaisenModEntities {
 			MegumiFushiguroEntity.init();
 			MagmaRockEntity.init();
 			UnknownManEntity.init();
+			ItadoriEntity.init();
+			SukunaEntity.init();
 		});
 	}
 
@@ -202,5 +214,7 @@ public class CraftkaisenModEntities {
 		event.put(MEGUMI_FUSHIGURO.get(), MegumiFushiguroEntity.createAttributes().build());
 		event.put(MAGMA_ROCK.get(), MagmaRockEntity.createAttributes().build());
 		event.put(UNKNOWN_MAN.get(), UnknownManEntity.createAttributes().build());
+		event.put(ITADORI.get(), ItadoriEntity.createAttributes().build());
+		event.put(SUKUNA.get(), SukunaEntity.createAttributes().build());
 	}
 }
