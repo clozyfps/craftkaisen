@@ -51,15 +51,6 @@
           "x": 6,
           "y": 183
         }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "bloodlusted.png",
-          "use1Xscale": false,
-          "x": -795,
-          "y": -451
-        }
       }
     ],
     "baseTexture": "",

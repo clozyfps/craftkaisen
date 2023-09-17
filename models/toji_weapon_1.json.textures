@@ -2,7 +2,8 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "mainweapon1atlas"
+        "1": "mainweapon1atlas",
+        "2": "bladetexture"
       },
       "name": "default"
     }
