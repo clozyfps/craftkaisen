@@ -1,0 +1,7 @@
+{
+  "parent": "craftkaisen:custom/newkatana",
+  "textures": {
+    "2": "craftkaisen:blocks/cnykatana",
+    "particle": "craftkaisen:items/air102_layer_2"
+  }
+}

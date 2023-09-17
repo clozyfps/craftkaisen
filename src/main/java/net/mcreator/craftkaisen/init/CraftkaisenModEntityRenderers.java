@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.craftkaisen.client.renderer.UnknownManRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
@@ -67,5 +68,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MEGUMI_FUSHIGURO.get(), MegumiFushiguroRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK.get(), MagmaRockRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.UNKNOWN_MAN.get(), UnknownManRenderer::new);
 	}
 }

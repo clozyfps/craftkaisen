@@ -12,7 +12,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.Minecraft;
 
@@ -52,9 +51,6 @@ public class MainHUDOverlay {
 			RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/bloodlusted.png"));
 			Minecraft.getInstance().gui.blit(event.getPoseStack(), posX + -1008, posY + -571, 0, 0, 1920, 1080, 1920, 1080);
 
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quests"), posX + 90, posY + -112, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_empty"), posX + 90, posY + -103, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quest1"), posX + 90, posY + -94, -1);
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					DisplaySelectedTechniqueProcedure.execute(entity), posX + -207, posY + 75, -1);

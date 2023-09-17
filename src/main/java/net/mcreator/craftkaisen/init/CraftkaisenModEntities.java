@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.entity.WoodenBallEntity;
+import net.mcreator.craftkaisen.entity.UnknownManEntity;
 import net.mcreator.craftkaisen.entity.TwistEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
@@ -144,6 +145,10 @@ public class CraftkaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MagmaRockEntity>> MAGMA_ROCK = register("magma_rock",
 			EntityType.Builder.<MagmaRockEntity>of(MagmaRockEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(MagmaRockEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<UnknownManEntity>> UNKNOWN_MAN = register("unknown_man",
+			EntityType.Builder.<UnknownManEntity>of(UnknownManEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UnknownManEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -171,6 +176,7 @@ public class CraftkaisenModEntities {
 			CursedspiritgrasshopperEntity.init();
 			MegumiFushiguroEntity.init();
 			MagmaRockEntity.init();
+			UnknownManEntity.init();
 		});
 	}
 
@@ -195,5 +201,6 @@ public class CraftkaisenModEntities {
 		event.put(CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperEntity.createAttributes().build());
 		event.put(MEGUMI_FUSHIGURO.get(), MegumiFushiguroEntity.createAttributes().build());
 		event.put(MAGMA_ROCK.get(), MagmaRockEntity.createAttributes().build());
+		event.put(UNKNOWN_MAN.get(), UnknownManEntity.createAttributes().build());
 	}
 }
