@@ -4760,6 +4760,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/entity/FlyHeadEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/fly_head_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/fly_head_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/FlyHeadRenderer.java"
         ]
       },
@@ -9250,7 +9251,7 @@
           }
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Mobs"
     },
     {
       "name": "Katana",
@@ -9373,6 +9374,58 @@
       "path": "~/Advancements/Grades"
     },
     {
+      "name": "ItadoriEntityDies",
+      "type": "procedure",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itadori_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ItadoriEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SukunaOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
       "name": "ItadoriOnInitialEntitySpawn",
       "type": "procedure",
       "sortid": 401,
@@ -9446,54 +9499,61 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "Sukuna",
-      "type": "livingentity",
-      "sortid": 404,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sukuna",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craftkaisen/models/item/sukuna_spawn_egg.json",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/sukuna_biome_modifier.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/SukunaEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/SukunaRenderer.java"
-        ]
-      },
-      "path": "~/Mobs"
-    },
-    {
-      "name": "SukunaOnInitialEntitySpawn",
+      "name": "Knockback",
       "type": "procedure",
-      "sortid": 405,
+      "sortid": 409,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sukuna_on_initial_entity_spawn",
+      "registry_name": "knockback",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaOnInitialEntitySpawnProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/KnockbackProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Procedures"
     },
     {
-      "name": "ItadoriEntityDies",
+      "name": "FlyHeadOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 406,
+      "sortid": 408,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "itadori_entity_dies",
+      "registry_name": "fly_head_on_entity_tick_update",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ItadoriEntityDiesProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlyHeadOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -9551,15 +9611,15 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "FlyHeadOnEntityTickUpdate",
+      "name": "Limitless",
       "type": "procedure",
-      "sortid": 408,
+      "sortid": 393,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "fly_head_on_entity_tick_update",
+      "registry_name": "limitless",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlyHeadOnEntityTickUpdateProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessProcedure.java"
         ],
         "dependencies": [
           {
@@ -9584,26 +9644,22 @@
           }
         ]
       },
-      "path": "~/Mobs/Procedures"
+      "path": "~/Movesets"
     },
     {
-      "name": "Knockback",
+      "name": "Boogie",
       "type": "procedure",
-      "sortid": 409,
+      "sortid": 395,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "knockback",
+      "registry_name": "boogie",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/KnockbackProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/BoogieProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -9624,7 +9680,120 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Flames",
+      "type": "procedure",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlamesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Plants",
+      "type": "procedure",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlantsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Voice",
+      "type": "procedure",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VoiceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Sukuna",
+      "type": "livingentity",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/sukuna_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/sukuna_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/SukunaEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SukunaRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -10210,7 +10379,6 @@
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "gui.craftkaisen.main_menu.label_technique": "Technique:",
-      "entity.craftkaisen.unknown_man": "Unknown Man",
       "effect.craftkaisen.crushing": "Crushing",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
@@ -10224,7 +10392,6 @@
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "entity.craftkaisen.satoru_gojo_blindfold": "Satoru Gojo Blindfold",
-      "item.craftkaisen.itadori_spawn_egg": "Itadori Spawn Egg",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "entity.craftkaisen.fly_head": "Fly Head",
       "item.craftkaisen.clap": "Clap",
@@ -10238,7 +10405,6 @@
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
-      "item.craftkaisen.katana": "Katana",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "effect.craftkaisen.ember_floor": "FloorEmber",
       "gui.craftkaisen.main_menu.label_exp1": "Exp:",
@@ -10282,7 +10448,6 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2": "Click to upgrade secondary branch!",
-      "advancements.semi_grade_2.title": "Semi Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc1": "Click to upgrade secondary branch!",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_v_increases_cursed_energy_c": "CE V - Increases cursed energy cap.§9 3 SP \u0026 GRADE 3",
       "item.craftkaisen.explode": "Explode",
@@ -10300,7 +10465,6 @@
       "subtitles.clap": "",
       "item.craftkaisen.fly_head_spawn_egg": "Fly Head Spawn Egg",
       "death.attack.overuse": " fried their brain",
-      "entity.craftkaisen.itadori": "Itadori",
       "gui.craftkaisen.main_hud.label_quest3": "Quest3",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.main_hud.label_quest2": "Quest2",
@@ -10317,7 +10481,6 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_i_increases_at": "Attack Knockback I - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
-      "item.craftkaisen.unknown_man_spawn_egg": "Unknown Man Spawn Egg",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1": "Click to upgrade main cursed energy branch!",
@@ -10368,7 +10531,6 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_ii_increases_a": "Attack Knockback II - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
-      "advancements.semi_grade_2.descr": "Become a Semi Grade 2 Sorcerer",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
@@ -10509,6 +10671,10 @@
       },
       {
         "name": "Functions",
+        "children": []
+      },
+      {
+        "name": "Movesets",
         "children": []
       },
       {
