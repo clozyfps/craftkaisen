@@ -107,6 +107,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> MEGUMI_FUSHIGURO_SPAWN_EGG = REGISTRY.register("megumi_fushiguro_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MEGUMI_FUSHIGURO, -16777114, -16777216, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> KATANA = REGISTRY.register("katana", () -> new KatanaItem());
+	public static final RegistryObject<Item> SUKUNA = REGISTRY.register("sukuna", () -> new SukunaItem());
 	public static final RegistryObject<Item> UNKNOWN_MAN_SPAWN_EGG = REGISTRY.register("unknown_man_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.UNKNOWN_MAN, -16777216, -1, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 

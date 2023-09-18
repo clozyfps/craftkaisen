@@ -37,7 +37,7 @@ public class KatanaItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -2f, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKITEMS));
+		}, 3, -2f, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKWEAPONS));
 	}
 
 	@Override

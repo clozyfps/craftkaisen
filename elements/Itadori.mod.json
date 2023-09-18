@@ -2,10 +2,10 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Sukuna",
+    "mobName": "Itadori",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "itadori_sukuna.png",
+    "mobModelTexture": "itadori.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -16,11 +16,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -15001051,
+      "value": -15788000,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1597023,
+      "value": -25187,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -49,16 +49,16 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 29,
-    "attackKnockback": 3.0,
-    "knockbackResistance": 1.0,
-    "movementSpeed": 0.5,
+    "attackStrength": 16,
+    "attackKnockback": 2.0,
+    "knockbackResistance": 0.5,
+    "movementSpeed": 0.4,
     "stepHeight": 0.6,
-    "armorBaseValue": 0.2,
+    "armorBaseValue": 0.1,
     "trackingRange": 64,
-    "followRange": 50,
-    "health": 850,
-    "xpAmount": 5,
+    "followRange": 16,
+    "health": 230,
+    "xpAmount": 2,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -96,12 +96,12 @@
     "stepSound": {
       "value": ""
     },
-    "onMobTickUpdate": {
-      "name": "SukunaOnEntityTickUpdate"
+    "onInitialSpawn": {
+      "name": "ItadoriOnInitialEntitySpawn"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.6</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],

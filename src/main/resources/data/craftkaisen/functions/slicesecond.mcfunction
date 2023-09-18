@@ -1,4 +1,4 @@
-particle minecraft:dust 1 1 1 ^-0.823665 ^1.054215 ^-0.117326 0 0 0 0 1 force
-particle minecraft:dust 1 1 1 ^-0.732801 ^1.123354 ^-0.406904 0 0 0 0 1 force
-particle minecraft:dust 1 1 1 ^-0.395384 ^1.505820 ^-0.820823 0 0 0 0 1 force
-particle minecraft:dust 1 1 1 ^0.139599 ^1.904867 ^-0.958484 0 0 0 0 1 force
+particle minecraft:dust 1 1 1 1 ^-0.823665 ^1.054215 ^-0.117326 0 0 0 0 1 force
+particle minecraft:dust 1 1 1 1 ^-0.732801 ^1.123354 ^-0.406904 0 0 0 0 1 force
+particle minecraft:dust 1 1 1 1 ^-0.395384 ^1.505820 ^-0.820823 0 0 0 0 1 force
+particle minecraft:dust 1 1 1 1 ^0.139599 ^1.904867 ^-0.958484 0 0 0 0 1 force

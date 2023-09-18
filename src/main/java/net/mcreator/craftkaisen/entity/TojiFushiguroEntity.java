@@ -29,6 +29,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.craftkaisen.procedures.TojiFushiguroOnEntityTickUpdateProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
@@ -85,6 +86,12 @@ public class TojiFushiguroEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		TojiFushiguroOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
