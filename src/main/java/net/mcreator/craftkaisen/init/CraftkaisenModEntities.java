@@ -17,18 +17,22 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.craftkaisen.entity.WoodenBallEntity;
+import net.mcreator.craftkaisen.entity.UnknownManEntity;
 import net.mcreator.craftkaisen.entity.TwistEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
+import net.mcreator.craftkaisen.entity.SukunaEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
+import net.mcreator.craftkaisen.entity.MagmaRockProjectileEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
+import net.mcreator.craftkaisen.entity.ItadoriEntity;
 import net.mcreator.craftkaisen.entity.InventoryCurseEntity;
 import net.mcreator.craftkaisen.entity.InfiniteVoiddEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
@@ -40,6 +44,7 @@ import net.mcreator.craftkaisen.entity.FireArrowProjectileEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
+import net.mcreator.craftkaisen.entity.EsoEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
@@ -54,7 +59,7 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 public class CraftkaisenModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, CraftkaisenMod.MODID);
 	public static final RegistryObject<EntityType<FlyHeadEntity>> FLY_HEAD = register("fly_head",
-			EntityType.Builder.<FlyHeadEntity>of(FlyHeadEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlyHeadEntity::new)
+			EntityType.Builder.<FlyHeadEntity>of(FlyHeadEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FlyHeadEntity::new)
 
 					.sized(0.6f, 0.6f));
 	public static final RegistryObject<EntityType<HollowPurpleEntity>> HOLLOW_PURPLE = register("projectile_hollow_purple",
@@ -134,7 +139,7 @@ public class CraftkaisenModEntities {
 
 					.sized(0.6f, 0.4f));
 	public static final RegistryObject<EntityType<CursedspiritgrasshopperEntity>> CURSEDSPIRITGRASSHOPPER = register("cursedspiritgrasshopper",
-			EntityType.Builder.<CursedspiritgrasshopperEntity>of(CursedspiritgrasshopperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<CursedspiritgrasshopperEntity>of(CursedspiritgrasshopperEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 					.setCustomClientFactory(CursedspiritgrasshopperEntity::new)
 
 					.sized(0.6f, 1.8f));
@@ -144,6 +149,24 @@ public class CraftkaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MagmaRockEntity>> MAGMA_ROCK = register("magma_rock",
 			EntityType.Builder.<MagmaRockEntity>of(MagmaRockEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(0).setUpdateInterval(3).setCustomClientFactory(MagmaRockEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<UnknownManEntity>> UNKNOWN_MAN = register("unknown_man",
+			EntityType.Builder.<UnknownManEntity>of(UnknownManEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UnknownManEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ItadoriEntity>> ITADORI = register("itadori",
+			EntityType.Builder.<ItadoriEntity>of(ItadoriEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ItadoriEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SukunaEntity>> SUKUNA = register("sukuna",
+			EntityType.Builder.<SukunaEntity>of(SukunaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SukunaEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MagmaRockProjectileEntity>> MAGMA_ROCK_PROJECTILE = register("projectile_magma_rock_projectile", EntityType.Builder.<MagmaRockProjectileEntity>of(MagmaRockProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(MagmaRockProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EsoEntity>> ESO = register("eso",
+			EntityType.Builder.<EsoEntity>of(EsoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EsoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -171,6 +194,10 @@ public class CraftkaisenModEntities {
 			CursedspiritgrasshopperEntity.init();
 			MegumiFushiguroEntity.init();
 			MagmaRockEntity.init();
+			UnknownManEntity.init();
+			ItadoriEntity.init();
+			SukunaEntity.init();
+			EsoEntity.init();
 		});
 	}
 
@@ -195,5 +222,9 @@ public class CraftkaisenModEntities {
 		event.put(CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperEntity.createAttributes().build());
 		event.put(MEGUMI_FUSHIGURO.get(), MegumiFushiguroEntity.createAttributes().build());
 		event.put(MAGMA_ROCK.get(), MagmaRockEntity.createAttributes().build());
+		event.put(UNKNOWN_MAN.get(), UnknownManEntity.createAttributes().build());
+		event.put(ITADORI.get(), ItadoriEntity.createAttributes().build());
+		event.put(SUKUNA.get(), SukunaEntity.createAttributes().build());
+		event.put(ESO.get(), EsoEntity.createAttributes().build());
 	}
 }

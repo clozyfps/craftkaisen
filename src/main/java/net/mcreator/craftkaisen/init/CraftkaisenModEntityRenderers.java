@@ -11,21 +11,26 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.craftkaisen.client.renderer.UnknownManRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
+import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
+import net.mcreator.craftkaisen.client.renderer.MagmaRockProjectileRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
+import net.mcreator.craftkaisen.client.renderer.ItadoriRenderer;
 import net.mcreator.craftkaisen.client.renderer.InventoryCurseRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 import net.mcreator.craftkaisen.client.renderer.FireArrowRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
+import net.mcreator.craftkaisen.client.renderer.EsoRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritrugbyfieldRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
@@ -67,5 +72,10 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.CURSEDSPIRITGRASSHOPPER.get(), CursedspiritgrasshopperRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MEGUMI_FUSHIGURO.get(), MegumiFushiguroRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK.get(), MagmaRockRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.UNKNOWN_MAN.get(), UnknownManRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.ITADORI.get(), ItadoriRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.SUKUNA.get(), SukunaRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK_PROJECTILE.get(), MagmaRockProjectileRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.ESO.get(), EsoRenderer::new);
 	}
 }

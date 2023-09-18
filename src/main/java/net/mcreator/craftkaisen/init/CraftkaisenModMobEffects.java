@@ -17,6 +17,7 @@ import net.mcreator.craftkaisen.potion.TwistingMobEffect;
 import net.mcreator.craftkaisen.potion.ToughBodyMobEffect;
 import net.mcreator.craftkaisen.potion.StoppedMobEffect;
 import net.mcreator.craftkaisen.potion.SleepingMobEffect;
+import net.mcreator.craftkaisen.potion.SkyOfFlamesMobEffect;
 import net.mcreator.craftkaisen.potion.SixeyespotionMobEffect;
 import net.mcreator.craftkaisen.potion.ShrineMobEffect;
 import net.mcreator.craftkaisen.potion.RootsPotionMobEffect;
@@ -86,4 +87,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> DOMAIN_EXPANSION = REGISTRY.register("domain_expansion", () -> new DomainExpansionMobEffect());
 	public static final RegistryObject<MobEffect> BURNT_OUT_EFFECT = REGISTRY.register("burnt_out_effect", () -> new BurntOutEffectMobEffect());
 	public static final RegistryObject<MobEffect> CURSED_SPIRIT = REGISTRY.register("cursed_spirit", () -> new CursedSpiritMobEffect());
+	public static final RegistryObject<MobEffect> SKY_OF_FLAMES = REGISTRY.register("sky_of_flames", () -> new SkyOfFlamesMobEffect());
 }

@@ -35,9 +35,8 @@ import java.util.Comparator;
 public class BlackFlashProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 		}
 	}
 
