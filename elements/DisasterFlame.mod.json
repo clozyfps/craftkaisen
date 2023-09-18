@@ -36,6 +36,9 @@
     "onBulletHitsBlock": {
       "name": "DisasterFlameProjectileHitsBlock"
     },
+    "onBulletHitsEntity": {
+      "name": "DisasterFlameProjectileHitsLivingEntity"
+    },
     "onBulletFlyingTick": {
       "name": "DisasterFlameWhileProjectileFlyingTick"
     }

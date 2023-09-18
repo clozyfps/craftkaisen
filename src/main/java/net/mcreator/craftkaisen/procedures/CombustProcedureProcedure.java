@@ -22,7 +22,7 @@ public class CombustProcedureProcedure {
 		});
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(17 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					entityiterator.hurt(DamageSource.GENERIC, 15);
@@ -31,15 +31,5 @@ public class CombustProcedureProcedure {
 				}
 			}
 		}
-		ReversalRed1Procedure.execute(world, x, y, z, entity);
-		CraftkaisenMod.queueServerWork(3, () -> {
-			ReversalRed2Procedure.execute(world, x, y, z, entity);
-			CraftkaisenMod.queueServerWork(3, () -> {
-				ReversalRed3Procedure.execute(world, x, y, z, entity);
-				CraftkaisenMod.queueServerWork(3, () -> {
-					ReversalRed4Procedure.execute(world, x, y, z, entity);
-				});
-			});
-		});
 	}
 }

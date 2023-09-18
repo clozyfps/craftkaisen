@@ -1372,6 +1372,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1696,6 +1712,7 @@
     {
       "name": "MainHUD",
       "type": "overlay",
+      "sortid": 388,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_hud",
@@ -3553,113 +3570,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "SleepIncreaseMood",
-      "type": "procedure",
-      "sortid": 162,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sleep_increase_mood",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SleepIncreaseMoodProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Emotion Triggers"
-    },
-    {
-      "name": "MoodDisplayGreen",
-      "type": "procedure",
-      "sortid": 163,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_green",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayGreenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoodDisplayYellow",
-      "type": "procedure",
-      "sortid": 164,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_yellow",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayYellowProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoodDisplayRed",
-      "type": "procedure",
-      "sortid": 165,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mood_display_red",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoodDisplayRedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "DamageDecreaseMood",
-      "type": "procedure",
-      "sortid": 166,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "damage_decrease_mood",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DamageDecreaseMoodProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/Emotion Triggers"
-    },
-    {
       "name": "FoodsTag",
       "type": "tag",
       "sortid": 167,
@@ -3698,12 +3608,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/CheckEmotionalStateProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Procedures"
     },
@@ -3833,7 +3738,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "ClapProcedure",
@@ -4150,7 +4055,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "CursedFinger",
@@ -4855,7 +4760,6 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/entity/FlyHeadEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/fly_head_spawn_egg.json",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/fly_head_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/FlyHeadRenderer.java"
         ]
       },
@@ -5392,6 +5296,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -5461,6 +5369,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5492,6 +5404,10 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame6Procedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -5560,6 +5476,10 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame3Procedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -8371,8 +8291,8 @@
       "registry_name": "inventory_curse_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/InventoryCurseGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/InventoryCurseGUIMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -8476,7 +8396,7 @@
           }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/GUI/Procedures"
     },
     {
       "name": "InventoryCurseRightClickedOnEntity",
@@ -8870,7 +8790,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "MentorChat",
@@ -9018,8 +8938,8 @@
       "registry_name": "magma_rock",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -9086,6 +9006,7 @@
     {
       "name": "JujutsuSorcerer",
       "type": "achievement",
+      "sortid": 390,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jujutsu_sorcerer",
@@ -9227,209 +9148,932 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "MissionValue",
+      "type": "procedure",
+      "sortid": 386,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mission_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MissionValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "MissionOverlay",
+      "type": "overlay",
+      "sortid": 387,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mission_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/screens/MissionOverlayOverlay.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Grade3",
+      "type": "achievement",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grade_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/grade_3.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "KillCursedSpiritQuest",
+      "type": "procedure",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kill_cursed_spirit_quest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/KillCursedSpiritQuestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "InfinityAffectedEntities",
+      "type": "tag",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_affected_entities",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/entity_types/infinity_affected_entities.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "UnknownManEntityDies",
+      "type": "procedure",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unknown_man_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnknownManEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Katana",
+      "type": "tool",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "katana",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/katana.json",
+          "src/main/java/net/mcreator/craftkaisen/item/KatanaItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Slicefirst",
+      "type": "function",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicefirst",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/functions/slicefirst.mcfunction"
+        ]
+      },
+      "path": "~/Functions"
+    },
+    {
+      "name": "Slicesecond",
+      "type": "function",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicesecond",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/functions/slicesecond.mcfunction"
+        ]
+      },
+      "path": "~/Functions"
+    },
+    {
+      "name": "Slicethird",
+      "type": "function",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slicethird",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/functions/slicethird.mcfunction"
+        ]
+      },
+      "path": "~/Functions"
+    },
+    {
+      "name": "KatanaEntitySwingsItem",
+      "type": "procedure",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "katana_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/KatanaEntitySwingsItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "UnknownMan",
+      "type": "livingentity",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unknown_man",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/UnknownManRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/unknown_man_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/UnknownManEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/unknown_man_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SemiGrade2",
+      "type": "achievement",
+      "sortid": 400,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "semi_grade_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/semi_grade_2.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "ItadoriEntityDies",
+      "type": "procedure",
+      "sortid": 406,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itadori_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ItadoriEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SukunaOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 405,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "ItadoriOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 401,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itadori_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ItadoriOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "Itadori",
+      "type": "livingentity",
+      "sortid": 402,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itadori",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/itadori_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/itadori_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ItadoriRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ItadoriEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SukunaOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 403,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunaOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "Knockback",
+      "type": "procedure",
+      "sortid": 409,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "knockback",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/KnockbackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FlyHeadOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 408,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fly_head_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlyHeadOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "TojiFushiguroOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 407,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_fushiguro_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiFushiguroOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "Limitless",
+      "type": "procedure",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limitless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Boogie",
+      "type": "procedure",
+      "sortid": 395,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boogie",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BoogieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Flames",
+      "type": "procedure",
+      "sortid": 396,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FlamesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Plants",
+      "type": "procedure",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlantsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Voice",
+      "type": "procedure",
+      "sortid": 394,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "voice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VoiceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "Sukuna",
+      "type": "livingentity",
+      "sortid": 404,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukuna",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/sukuna_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/sukuna_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/SukunaEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/SukunaRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MagmaRockProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 410,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_rock_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MagmaRockProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MagmaRockProjectile",
+      "type": "rangeditem",
+      "sortid": 411,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_rock_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockProjectileRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/magma_rock_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockProjectileEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/MagmaRockProjectileItem.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SkyOfFlamesOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SkyOfFlamesEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "FlameSpark",
+      "type": "particle",
+      "sortid": 414,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flame_spark",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/flame_spark.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/FlameSparkParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SkyOfFlames",
+      "type": "potioneffect",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/SkyOfFlamesMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "SkyOfFlamesEffectExpires",
+      "type": "procedure",
+      "sortid": 416,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "SkyOfFlamesProcedure",
+      "type": "procedure",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Blood",
+      "type": "particle",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/blood.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ItadoriOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itadori_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ItadoriOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "DisasterFlameProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlameProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
     {
-      "name": "Level",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Exp",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SkillPoints",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Prestige",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Clan",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Technique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "ExpRequirement",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "100.0"
-    },
-    {
-      "name": "TechniqueSwitch",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SelectedTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move3Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "CursedEnergy",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0"
-    },
-    {
-      "name": "MoveUltimateCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "MoveSpecialCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "CursedEnergyCap",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move5Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move4Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move1Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move2Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Charging",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "Mood",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "75.0"
-    },
-    {
-      "name": "VowsEnabled",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "true"
-    },
-    {
-      "name": "VowSender",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": "\"\""
-    },
-    {
-      "name": "VowDescription",
-      "type": "string",
-      "scope": "player_lifetime",
-      "value": ""
-    },
-    {
-      "name": "Vessel",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "FingersEaten",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "ReincarnatedPlayer",
-      "type": "string",
-      "scope": "map",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselFound",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "VesselPlayer",
-      "type": "string",
-      "scope": "map",
-      "value": "\"\""
-    },
-    {
-      "name": "InParty",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "Checked",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
-      "name": "RCT",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "PartyLeader",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
-    },
-    {
-      "name": "Deaths",
+      "name": "AgilityTree",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -9441,16 +10085,22 @@
       "value": "false"
     },
     {
-      "name": "SelectedMoveset",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
+      "name": "Charging",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     },
     {
-      "name": "RCTMastery",
-      "type": "number",
+      "name": "Checked",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Clan",
+      "type": "string",
       "scope": "player_persistent",
-      "value": "0"
+      "value": ""
     },
     {
       "name": "Cost",
@@ -9459,37 +10109,13 @@
       "value": "0"
     },
     {
-      "name": "RCTExp",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "FireSpread",
+      "name": "CursedEnergy",
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
     },
     {
-      "name": "SkillSpeedCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "MoveUltimate",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "SkillStrengthCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "SkillDefenseCost",
+      "name": "CursedEnergyCap",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -9501,76 +10127,16 @@
       "value": "2.0"
     },
     {
-      "name": "SkillCurseCost",
+      "name": "CursedEnergyTree",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
-      "name": "MoveSpecial",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselPlayerTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move2",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move1",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move4",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move3",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move5",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "PowerTree",
+      "name": "Deaths",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "VesselFirstEnter",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "Grade",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "4"
-    },
-    {
-      "name": "Dimension",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
     },
     {
       "name": "DefenseTree",
@@ -9579,16 +10145,40 @@
       "value": "0"
     },
     {
-      "name": "CursedEnergyTree",
+      "name": "Dimension",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "DoingQuest",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "EmotionalState",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "Middle 50"
+    },
+    {
+      "name": "Exp",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
-      "name": "AgilityTree",
+      "name": "ExpRequirement",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "100.0"
+    },
+    {
+      "name": "Faction",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     },
     {
       "name": "Fame",
@@ -9597,7 +10187,31 @@
       "value": "0"
     },
     {
-      "name": "JoinsWorld",
+      "name": "FingersEaten",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "FireSpread",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Grade",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "4"
+    },
+    {
+      "name": "HasMentor",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "InParty",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -9609,16 +10223,208 @@
       "value": "false"
     },
     {
-      "name": "Slot10",
-      "type": "itemstack",
+      "name": "Job",
+      "type": "string",
       "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
+      "value": "\"\""
     },
     {
-      "name": "Slot11",
-      "type": "itemstack",
+      "name": "JoinsWorld",
+      "type": "logic",
       "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
+      "value": "false"
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Mentor",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move1Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move2Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move3Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move4",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move4Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move5",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move5Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MoveSpecial",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "MoveSpecialCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "MoveUltimate",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "MoveUltimateCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PartyLeader",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "PowerTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Prestige",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Quest",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "RCT",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "RCTExp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "RCTMastery",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ReincarnatedPlayer",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "SelectedMoveset",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "SelectedTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "SimpleDomainActive",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "SkillCurseCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillDefenseCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillPoints",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillSpeedCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SkillStrengthCost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     },
     {
       "name": "Slot00",
@@ -9681,34 +10487,82 @@
       "value": "ItemStack.EMPTY"
     },
     {
-      "name": "SimpleDomainActive",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
+      "name": "Slot10",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
     },
     {
-      "name": "Faction",
+      "name": "Slot11",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "Technique",
       "type": "string",
       "scope": "player_persistent",
       "value": ""
     },
     {
-      "name": "Mentor",
+      "name": "TechniqueSwitch",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Vessel",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
     },
     {
-      "name": "Job",
+      "name": "VesselFirstEnter",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "VesselFound",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "VesselPlayer",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "VesselPlayerTechnique",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
     },
     {
-      "name": "HasMentor",
+      "name": "VesselTechnique",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "VowDescription",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "VowsEnabled",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
+      "value": "true"
+    },
+    {
+      "name": "VowSender",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -9764,14 +10618,17 @@
   "language_map": {
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
+      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "effect.craftkaisen.charge_ce_effect": "Charging",
+      "effect.craftkaisen.sky_of_flames": "SkyOfFlames",
+      "item.craftkaisen.megumi_fushiguro_spawn_egg": "Megumi Fushiguro Spawn Egg",
       "key.craftkaisen.flash_step": "Flash Step",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
-      "effect.craftkaisen.sixeyespotion": "Six Eyes",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
+      "effect.craftkaisen.sixeyespotion": "Six Eyes",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
@@ -9786,6 +10643,7 @@
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
+      "gui.craftkaisen.main_menu.label_empty1": "Job:",
       "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
@@ -9796,6 +10654,8 @@
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
+      "gui.craftkaisen.main_menu.label_technique": "Technique:",
+      "entity.craftkaisen.unknown_man": "Unknown Man",
       "effect.craftkaisen.crushing": "Crushing",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
@@ -9809,20 +10669,28 @@
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "entity.craftkaisen.satoru_gojo_blindfold": "Satoru Gojo Blindfold",
+      "item.craftkaisen.itadori_spawn_egg": "Itadori Spawn Egg",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "entity.craftkaisen.fly_head": "Fly Head",
       "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iii_increases_melee_dama": "Power III - Increases melee damage.§9 2 SP \u0026 GRADE 4",
+      "item.craftkaisen.sukuna_spawn_egg": "Sukuna Spawn Egg",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
+      "entity.craftkaisen.magma_rock": "Magma Rock",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
+      "item.craftkaisen.katana": "Katana",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
+      "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "effect.craftkaisen.ember_floor": "FloorEmber",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
+      "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
+      "gui.craftkaisen.main_menu.label_empty": "SP:",
+      "advancements.grade_3.descr": "Become a Grade 3 Sorcerer",
       "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
       "effect.craftkaisen.sleeping": "Sleeping",
@@ -9848,16 +10716,19 @@
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "item.craftkaisen.blast_away": "Blast Away",
       "subtitles.veil.use": "Veil Used",
+      "gui.craftkaisen.main_menu.label_fame": "Fame:",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
-      "itemGroup.tabjjkmobs": "JJK Mobs",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
+      "itemGroup.tabjjkmobs": "JJK Mobs",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_ii_increases_speedss9": "Agility II - Increases speed.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
+      "item.craftkaisen.magma_rock_projectile": "Magma Rock Projectile",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2": "Click to upgrade secondary branch!",
+      "advancements.semi_grade_2.title": "Semi Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc1": "Click to upgrade secondary branch!",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_v_increases_cursed_energy_c": "CE V - Increases cursed energy cap.§9 3 SP \u0026 GRADE 3",
       "item.craftkaisen.explode": "Explode",
@@ -9868,23 +10739,31 @@
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "effect.craftkaisen.infinity": "Infinity",
+      "effect.craftkaisen.cursed_spirit": "Cursed Spirit",
+      "item.craftkaisen.hiar_helmet": "Hiar Helmet",
       "gui.craftkaisen.main_hud.label_x": "X",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",
       "item.craftkaisen.fly_head_spawn_egg": "Fly Head Spawn Egg",
       "death.attack.overuse": " fried their brain",
+      "entity.craftkaisen.itadori": "Itadori",
       "gui.craftkaisen.main_hud.label_quest3": "Quest3",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.main_hud.label_quest2": "Quest2",
       "effect.craftkaisen.divergent_fist": "DivergentFist",
+      "advancements.grade_3.title": "Grade 3",
+      "entity.craftkaisen.megumi_fushiguro": "Megumi Fushiguro",
+      "gui.craftkaisen.main_menu.label_level1": "Level:",
       "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
+      "entity.craftkaisen.sukuna": "Sukuna",
       "key.craftkaisen.block_bind": "Block",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_i_increases_at": "Attack Knockback I - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
+      "item.craftkaisen.unknown_man_spawn_egg": "Unknown Man Spawn Egg",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1": "Click to upgrade main cursed energy branch!",
@@ -9899,6 +10778,7 @@
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
+      "gui.craftkaisen.main_menu.label_grade": "Grade:",
       "subtitles.electric": "",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
@@ -9934,6 +10814,7 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_ii_increases_a": "Attack Knockback II - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
+      "advancements.semi_grade_2.descr": "Become a Semi Grade 2 Sorcerer",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
@@ -10004,7 +10885,12 @@
       },
       {
         "name": "Advancements",
-        "children": []
+        "children": [
+          {
+            "name": "Grades",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Blocks",
@@ -10069,6 +10955,10 @@
       },
       {
         "name": "Functions",
+        "children": []
+      },
+      {
+        "name": "Movesets",
         "children": []
       },
       {

@@ -7,51 +7,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_quests",
-          "text": {
-            "fixedValue": "Quests"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 303,
-          "y": 8
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_empty",
-          "text": {
-            "fixedValue": "---------------------"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 303,
-          "y": 17
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_quest1",
-          "text": {
-            "fixedValue": "Quest"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 303,
-          "y": 26
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_cursetechnique",
           "text": {
             "fixedValue": "CurseTechnique",
@@ -105,7 +60,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

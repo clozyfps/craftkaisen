@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.procedures.DisplaySelectedTechniqueProcedure;
@@ -38,9 +37,6 @@ public class MainHUDOverlay {
 			z = entity.getZ();
 		}
 		if (true) {
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quests"), posX + 90, posY + -112, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_empty"), posX + 90, posY + -103, -1);
-			Minecraft.getInstance().font.draw(event.getPoseStack(), Component.translatable("gui.craftkaisen.main_hud.label_quest1"), posX + 90, posY + -94, -1);
 			Minecraft.getInstance().font.draw(event.getPoseStack(),
 
 					DisplaySelectedTechniqueProcedure.execute(entity), posX + -207, posY + 75, -1);

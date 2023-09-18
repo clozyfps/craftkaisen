@@ -10,10 +10,13 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.stream.Collectors;
@@ -41,14 +44,17 @@ public class FlowerfieldsProjectileHitsLivingEntityProcedure {
 			loop = loop + 1;
 		}
 		CraftkaisenMod.queueServerWork(30, () -> {
-			int horizontalRadiusSphere = (int) 6 - 1;
-			int verticalRadiusSphere = (int) 6 - 1;
-			int yIterationsSphere = verticalRadiusSphere;
-			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
-				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-					for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-						double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+			int horizontalRadiusHemiTop = (int) 10 - 1;
+			int verticalRadiusHemiTop = (int) 10;
+			int yIterationsHemiTop = verticalRadiusHemiTop;
+			for (int i = 0; i < yIterationsHemiTop; i++) {
+				if (i == verticalRadiusHemiTop) {
+					continue;
+				}
+				for (int xi = -horizontalRadiusHemiTop; xi <= horizontalRadiusHemiTop; xi++) {
+					for (int zi = -horizontalRadiusHemiTop; zi <= horizontalRadiusHemiTop; zi++) {
+						double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop) + (i * i) / (double) (verticalRadiusHemiTop * verticalRadiusHemiTop)
+								+ (zi * zi) / (double) (horizontalRadiusHemiTop * horizontalRadiusHemiTop);
 						if (distanceSq <= 1.0) {
 							if ((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.AIR) {
 								world.setBlock(new BlockPos(x + xi, y + i, z + zi), Blocks.DARK_OAK_WOOD.defaultBlockState(), 3);
@@ -59,6 +65,26 @@ public class FlowerfieldsProjectileHitsLivingEntityProcedure {
 									for (Entity entityiterator : _entfound) {
 										if (!(sourceentity == entityiterator)) {
 											entityiterator.hurt(DamageSource.GENERIC, 12);
+											if (world instanceof ServerLevel _level)
+												_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLOOD.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 20, 3, 3, 3, 2);
+											if (world instanceof Level _level) {
+												if (!_level.isClientSide()) {
+													_level.playSound(null, new BlockPos(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
+															SoundSource.NEUTRAL, 2, 2);
+												} else {
+													_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")),
+															SoundSource.NEUTRAL, 2, 2, false);
+												}
+											}
+											if (world instanceof Level _level) {
+												if (!_level.isClientSide()) {
+													_level.playSound(null, new BlockPos(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craftkaisen:blood")),
+															SoundSource.NEUTRAL, 1, 1);
+												} else {
+													_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craftkaisen:blood")),
+															SoundSource.NEUTRAL, 1, 1, false);
+												}
+											}
 										}
 									}
 								}

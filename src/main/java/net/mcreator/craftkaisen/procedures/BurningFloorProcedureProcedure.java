@@ -11,6 +11,6 @@ public class BurningFloorProcedureProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.EMBER_FLOOR.get(), 120, 1, false, false));
+			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.EMBER_FLOOR.get(), 70, 1, false, false));
 	}
 }
