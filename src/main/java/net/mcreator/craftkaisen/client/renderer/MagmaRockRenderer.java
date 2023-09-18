@@ -2,19 +2,22 @@
 package net.mcreator.craftkaisen.client.renderer;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
+import net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer;
+import net.minecraft.client.renderer.entity.HumanoidMobRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.model.geom.ModelLayers;
+import net.minecraft.client.model.HumanoidModel;
 
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
-import net.mcreator.craftkaisen.client.model.Modelmagmaprojectile;
 
-public class MagmaRockRenderer extends MobRenderer<MagmaRockEntity, Modelmagmaprojectile<MagmaRockEntity>> {
+public class MagmaRockRenderer extends HumanoidMobRenderer<MagmaRockEntity, HumanoidModel<MagmaRockEntity>> {
 	public MagmaRockRenderer(EntityRendererProvider.Context context) {
-		super(context, new Modelmagmaprojectile(context.bakeLayer(Modelmagmaprojectile.LAYER_LOCATION)), 0.5f);
+		super(context, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER)), 0.5f);
+		this.addLayer(new HumanoidArmorLayer(this, new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_INNER_ARMOR)), new HumanoidModel(context.bakeLayer(ModelLayers.PLAYER_OUTER_ARMOR))));
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(MagmaRockEntity entity) {
-		return new ResourceLocation("craftkaisen:textures/entities/magmablock.png");
+		return new ResourceLocation("craftkaisen:textures/entities/air103_layer_2.png");
 	}
 }

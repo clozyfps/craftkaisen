@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.item.StopItem;
 import net.mcreator.craftkaisen.item.SleepItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
+import net.mcreator.craftkaisen.item.MagmaRockProjectileItem;
 import net.mcreator.craftkaisen.item.KatanaItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
@@ -111,6 +112,7 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.UNKNOWN_MAN, -16777216, -1, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> ITADORI_SPAWN_EGG = REGISTRY.register("itadori_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.ITADORI, -15788000, -25187, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> SUKUNA_SPAWN_EGG = REGISTRY.register("sukuna_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.SUKUNA, -15001051, -1597023, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> MAGMA_ROCK_PROJECTILE = REGISTRY.register("magma_rock_projectile", () -> new MagmaRockProjectileItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

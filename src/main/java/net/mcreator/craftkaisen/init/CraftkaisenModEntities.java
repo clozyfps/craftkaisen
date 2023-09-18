@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
+import net.mcreator.craftkaisen.entity.MagmaRockProjectileEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
@@ -159,6 +160,8 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<SukunaEntity>of(SukunaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SukunaEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MagmaRockProjectileEntity>> MAGMA_ROCK_PROJECTILE = register("projectile_magma_rock_projectile", EntityType.Builder.<MagmaRockProjectileEntity>of(MagmaRockProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(MagmaRockProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

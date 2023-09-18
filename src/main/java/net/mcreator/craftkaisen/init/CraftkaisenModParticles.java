@@ -14,7 +14,9 @@ import net.mcreator.craftkaisen.client.particle.RestParticle;
 import net.mcreator.craftkaisen.client.particle.RedElectricityParticle;
 import net.mcreator.craftkaisen.client.particle.LapseBlueParticleParticle;
 import net.mcreator.craftkaisen.client.particle.ImpactParticle;
+import net.mcreator.craftkaisen.client.particle.FlameSparkParticle;
 import net.mcreator.craftkaisen.client.particle.EvadeParticle;
+import net.mcreator.craftkaisen.client.particle.BloodParticle;
 import net.mcreator.craftkaisen.client.particle.BlackElectricityParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -28,5 +30,7 @@ public class CraftkaisenModParticles {
 		event.register(CraftkaisenModParticleTypes.BLACK_ELECTRICITY.get(), BlackElectricityParticle::provider);
 		event.register(CraftkaisenModParticleTypes.RED_ELECTRICITY.get(), RedElectricityParticle::provider);
 		event.register(CraftkaisenModParticleTypes.REVERSAL_RED_PARTICLE.get(), ReversalRedParticleParticle::provider);
+		event.register(CraftkaisenModParticleTypes.FLAME_SPARK.get(), FlameSparkParticle::provider);
+		event.register(CraftkaisenModParticleTypes.BLOOD.get(), BloodParticle::provider);
 	}
 }

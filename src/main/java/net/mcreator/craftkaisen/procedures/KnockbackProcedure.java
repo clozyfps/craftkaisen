@@ -16,6 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.ItadoriEntity;
 
 import javax.annotation.Nullable;
@@ -37,9 +38,9 @@ public class KnockbackProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof ItadoriEntity) {
-			if (Math.random() < 0.005) {
-				sourceentity.setDeltaMovement(new Vec3((1.5 * entity.getLookAngle().x), (1.2 * entity.getLookAngle().y), (1.5 * entity.getLookAngle().z)));
+		if (sourceentity instanceof ItadoriEntity || sourceentity instanceof SatoruGojoEntity) {
+			if (Math.random() < 0.07) {
+				entity.setDeltaMovement(new Vec3((2 * sourceentity.getLookAngle().x), (2.5 * sourceentity.getLookAngle().y), (2 * sourceentity.getLookAngle().z)));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
@@ -48,7 +49,7 @@ public class KnockbackProcedure {
 					}
 				}
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.POOF, x, y, z, 6, 1, 2, 1, 0.77);
+					_level.sendParticles(ParticleTypes.POOF, x, y, z, 8, 1, 2, 1, 1);
 			}
 		}
 	}

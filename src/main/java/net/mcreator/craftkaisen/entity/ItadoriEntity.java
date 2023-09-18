@@ -31,6 +31,8 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.craftkaisen.procedures.ItadoriOnInitialEntitySpawnProcedure;
+import net.mcreator.craftkaisen.procedures.ItadoriOnEntityTickUpdateProcedure;
+import net.mcreator.craftkaisen.procedures.ItadoriEntityDiesProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
 import javax.annotation.Nullable;
@@ -88,10 +90,22 @@ public class ItadoriEntity extends Monster {
 	}
 
 	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		ItadoriEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		ItadoriOnInitialEntitySpawnProcedure.execute(this);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		ItadoriOnEntityTickUpdateProcedure.execute(this);
 	}
 
 	public static void init() {

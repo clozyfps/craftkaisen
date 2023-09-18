@@ -5296,6 +5296,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -5365,6 +5369,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -5396,6 +5404,10 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame6Procedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -5464,6 +5476,10 @@
           "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlame3Procedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -9793,6 +9809,266 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "MagmaRockProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 410,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_rock_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MagmaRockProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MagmaRockProjectile",
+      "type": "rangeditem",
+      "sortid": 411,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magma_rock_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockProjectileRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/magma_rock_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockProjectileEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/item/MagmaRockProjectileItem.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SkyOfFlamesOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SkyOfFlamesEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "FlameSpark",
+      "type": "particle",
+      "sortid": 414,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flame_spark",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/flame_spark.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/FlameSparkParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SkyOfFlames",
+      "type": "potioneffect",
+      "sortid": 415,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/SkyOfFlamesMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "SkyOfFlamesEffectExpires",
+      "type": "procedure",
+      "sortid": 416,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "SkyOfFlamesProcedure",
+      "type": "procedure",
+      "sortid": 417,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Blood",
+      "type": "particle",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BloodParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/blood.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "ItadoriOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "itadori_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ItadoriOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "DisasterFlameProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disaster_flame_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisasterFlameProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
@@ -10347,6 +10623,7 @@
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "effect.craftkaisen.charge_ce_effect": "Charging",
+      "effect.craftkaisen.sky_of_flames": "SkyOfFlames",
       "item.craftkaisen.megumi_fushiguro_spawn_egg": "Megumi Fushiguro Spawn Egg",
       "key.craftkaisen.flash_step": "Flash Step",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
@@ -10446,6 +10723,7 @@
       "itemGroup.tabjjkmobs": "JJK Mobs",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_ii_increases_speedss9": "Agility II - Increases speed.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
+      "item.craftkaisen.magma_rock_projectile": "Magma Rock Projectile",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",

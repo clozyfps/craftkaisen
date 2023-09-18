@@ -96,6 +96,12 @@
     "stepSound": {
       "value": ""
     },
+    "whenMobDies": {
+      "name": "ItadoriEntityDies"
+    },
+    "onMobTickUpdate": {
+      "name": "ItadoriOnEntityTickUpdate"
+    },
     "onInitialSpawn": {
       "name": "ItadoriOnInitialEntitySpawn"
     },
