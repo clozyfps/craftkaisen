@@ -39,6 +39,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.mcreator.craftkaisen.procedures.SatoruGojoRightClickedOnEntityProcedure;
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnEntityTickUpdateProcedure;
+import net.mcreator.craftkaisen.procedures.SatoruGojoEntityIsHurtProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
@@ -97,6 +98,12 @@ public class SatoruGojoEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+	}
+
+	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		SatoruGojoEntityIsHurtProcedure.execute(this);
+		return super.hurt(source, amount);
 	}
 
 	@Override

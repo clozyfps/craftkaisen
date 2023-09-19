@@ -5,7 +5,7 @@
     "mobName": "Toji Fushiguro",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "toji.png",
+    "mobModelTexture": "toji_fushiguro.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -39,10 +39,10 @@
       "value": ""
     },
     "equipmentBody": {
-      "value": ""
+      "value": "CUSTOM:TojiArmor.body"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "CUSTOM:TojiArmor.legs"
     },
     "equipmentBoots": {
       "value": ""
@@ -50,7 +50,7 @@
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 28,
-    "attackKnockback": 4.0,
+    "attackKnockback": 2.0,
     "knockbackResistance": 0.1,
     "movementSpeed": 0.4,
     "stepHeight": 0.6,

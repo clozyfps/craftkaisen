@@ -119,7 +119,7 @@ public class ItadoriEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0.1);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.2);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;
 	}

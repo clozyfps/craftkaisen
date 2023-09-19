@@ -50,7 +50,7 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, CraftkaisenMod.MODID);
-	public static final RegistryObject<Item> FLY_HEAD_SPAWN_EGG = REGISTRY.register("fly_head_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.FLY_HEAD, -9481374, -10534831, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> FLY_HEAD_SPAWN_EGG = REGISTRY.register("fly_head_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.FLY_HEAD, -9481374, -10534831, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> HOLLOW_PURPLE = REGISTRY.register("hollow_purple", () -> new HollowPurpleItem());
 	public static final RegistryObject<Item> TES = REGISTRY.register("tes", () -> new TesItem());
 	public static final RegistryObject<Item> TEST_2 = REGISTRY.register("test_2", () -> new Test2Item());

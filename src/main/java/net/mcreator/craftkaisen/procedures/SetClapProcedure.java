@@ -9,7 +9,7 @@ public class SetClapProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "Clap";
+			String _setval = "Boogie";
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Technique = _setval;
 				capability.syncPlayerVariables(entity);

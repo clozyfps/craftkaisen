@@ -167,7 +167,7 @@ public class CraftkaisenModEntities {
 	public static final RegistryObject<EntityType<BigFistEntity>> BIG_FIST = register("big_fist",
 			EntityType.Builder.<BigFistEntity>of(BigFistEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BigFistEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<EsoEntity>> ESO = register("eso",
-			EntityType.Builder.<EsoEntity>of(EsoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EsoEntity::new)
+			EntityType.Builder.<EsoEntity>of(EsoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EsoEntity::new)
 
 					.sized(0.6f, 1.8f));
 

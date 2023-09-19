@@ -55,12 +55,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Reversal Red";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -73,12 +87,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
 					String _setval = "Grab and Throw";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -91,6 +119,13 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move5Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -100,12 +135,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 7) {
 				{
 					String _setval = "Unlimited Void";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveUltimateCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -158,12 +207,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Twist";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -176,12 +239,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
 					String _setval = "Sleep";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -194,12 +271,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move5Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
 					String _setval = "Blast Away";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -252,12 +343,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Rapid Clap";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -270,12 +375,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
 					String _setval = "Powerful Hook";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -288,12 +407,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move5Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
 					String _setval = "Tough Body";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -346,12 +479,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Flip Kick";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -364,12 +511,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
 					String _setval = "Cursed Combo";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -382,12 +543,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move5Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
 					String _setval = "Divergent Fist";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -440,12 +615,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Ember Insects";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -458,12 +647,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
 					String _setval = "Combust";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -476,12 +679,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
 					String _setval = "Coffin of the Iron Mountain";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveUltimateCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -534,12 +751,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Cleave";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -552,12 +783,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
 					String _setval = "Grab And Toss";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -570,6 +815,13 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 				{
@@ -579,11 +831,18 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveUltimateCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Plants")) {
 			if (!entity.isShiftKeyDown()) {
-				if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch < 5) {
+				if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch < 4) {
 					{
 						double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch + 1;
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -601,7 +860,7 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 					}
 				}
 			} else {
-				if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch <= 5
+				if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch <= 4
 						&& (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch != 1) {
 					{
 						double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch - 1;
@@ -612,7 +871,7 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 					}
 				} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 1) {
 					{
-						double _setval = 5;
+						double _setval = 4;
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.TechniqueSwitch = _setval;
 							capability.syncPlayerVariables(entity);
@@ -628,12 +887,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Wooden Ball";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -646,6 +919,13 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
@@ -655,12 +935,10 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			}
-			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
-					String _setval = "Ceremonial Sea of Light";
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.SelectedTechnique = _setval;
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -713,12 +991,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 2) {
 				{
 					String _setval = "Big Fist";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -731,6 +1023,13 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
 				{
@@ -740,12 +1039,26 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Cost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 				{
-					String _setval = "Cable Whipping";
+					String _setval = "Spike Fist";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveSpecialCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -755,6 +1068,13 @@ public class SwitchTechniqueOnKeyPressedProcedure {
 					String _setval = "Self Embodiment of Perfection";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).MoveUltimateCost;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

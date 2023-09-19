@@ -59,9 +59,11 @@ public class CursedspiritrugbyfieldEntity extends Monster {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, JujutsuStudentEntity.class, true, false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, false));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, JujutsuStudentEntity.class, true, true));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, MegumiFushiguroEntity.class, true, true));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, ItadoriEntity.class, true, true));
 	}
 
 	@Override

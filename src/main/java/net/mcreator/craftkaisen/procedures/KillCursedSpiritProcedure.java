@@ -18,8 +18,10 @@ import net.minecraft.advancements.Advancement;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.entity.SukunaEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
+import net.mcreator.craftkaisen.entity.EsoEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
@@ -118,6 +120,26 @@ public class KillCursedSpiritProcedure {
 						_player.displayClientMessage(Component.literal("\u00A7l Gained Fame"), true);
 					{
 						double _setval = (sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame + Mth.nextInt(RandomSource.create(), 1100, 1500);
+						sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Fame = _setval;
+							capability.syncPlayerVariables(sourceentity);
+						});
+					}
+				} else if (entity instanceof EsoEntity) {
+					if (sourceentity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7l Gained Fame"), true);
+					{
+						double _setval = (sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame + Mth.nextInt(RandomSource.create(), 600, 750);
+						sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Fame = _setval;
+							capability.syncPlayerVariables(sourceentity);
+						});
+					}
+				} else if (entity instanceof SukunaEntity) {
+					if (sourceentity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7l Gained Fame"), true);
+					{
+						double _setval = (sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame + Mth.nextInt(RandomSource.create(), 8000, 15000);
 						sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Fame = _setval;
 							capability.syncPlayerVariables(sourceentity);

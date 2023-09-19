@@ -8247,42 +8247,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "PlayerKill",
-      "type": "procedure",
-      "sortid": 357,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_kill",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PlayerKillProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "InventoryCurseGUI",
       "type": "gui",
       "sortid": 358,
@@ -9266,7 +9230,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "Katana",
@@ -10449,6 +10413,142 @@
         ]
       },
       "path": "~/Armor"
+    },
+    {
+      "name": "EsoOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 434,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eso_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EsoOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SpikeFistProcedure",
+      "type": "procedure",
+      "sortid": 435,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike_fist_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SpikeFistProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "Sukunas",
+      "type": "procedure",
+      "sortid": 436,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sukunas",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SukunasProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Movesets"
+    },
+    {
+      "name": "FireArrowOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 437,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FireArrowOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SatoruGojoEntityIsHurt",
+      "type": "procedure",
+      "sortid": 438,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satoru_gojo_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SatoruGojoEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
     }
   ],
   "variable_elements": [

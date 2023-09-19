@@ -56,7 +56,7 @@ public class FlipKickProcedureProcedure {
 						.collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
-						entityiterator.hurt(DamageSource.GENERIC, 6);
+						entityiterator.hurt(DamageSource.GENERIC, 12);
 						entityiterator.getPersistentData().putBoolean("aoe", true);
 					}
 				}

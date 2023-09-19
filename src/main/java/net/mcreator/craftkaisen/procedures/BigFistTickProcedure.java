@@ -35,9 +35,9 @@ public class BigFistTickProcedure {
 		if (entity == null)
 			return;
 		if (entity.getPersistentData().getBoolean("fistenlarge")) {
-			if (!world.getEntitiesOfClass(BigFistEntity.class, AABB.ofSize(new Vec3(x, y, z), 13, 13, 13), e -> true).isEmpty()) {
+			if (!world.getEntitiesOfClass(BigFistEntity.class, AABB.ofSize(new Vec3(x, y, z), 20, 20, 20), e -> true).isEmpty()) {
 				{
-					Entity _ent = ((Entity) world.getEntitiesOfClass(BigFistEntity.class, AABB.ofSize(new Vec3(x, y, z), 13, 13, 13), e -> true).stream().sorted(new Object() {
+					Entity _ent = ((Entity) world.getEntitiesOfClass(BigFistEntity.class, AABB.ofSize(new Vec3(x, y, z), 20, 20, 20), e -> true).stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 						}

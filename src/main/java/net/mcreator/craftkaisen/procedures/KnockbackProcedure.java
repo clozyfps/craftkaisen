@@ -18,6 +18,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.ItadoriEntity;
+import net.mcreator.craftkaisen.entity.EsoEntity;
 
 import javax.annotation.Nullable;
 
@@ -38,7 +39,7 @@ public class KnockbackProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof ItadoriEntity || sourceentity instanceof SatoruGojoEntity) {
+		if (sourceentity instanceof ItadoriEntity || sourceentity instanceof SatoruGojoEntity || sourceentity instanceof EsoEntity) {
 			if (Math.random() < 0.07) {
 				entity.setDeltaMovement(new Vec3((2 * sourceentity.getLookAngle().x), (2.5 * sourceentity.getLookAngle().y), (2 * sourceentity.getLookAngle().z)));
 				if (world instanceof Level _level) {

@@ -83,7 +83,7 @@ public class FlyHeadEntity extends Monster {
 			public void start() {
 				LivingEntity livingentity = FlyHeadEntity.this.getTarget();
 				Vec3 vec3d = livingentity.getEyePosition(1);
-				FlyHeadEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+				FlyHeadEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.6);
 			}
 
 			@Override
@@ -95,13 +95,13 @@ public class FlyHeadEntity extends Monster {
 					double d0 = FlyHeadEntity.this.distanceToSqr(livingentity);
 					if (d0 < 20) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
-						FlyHeadEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1);
+						FlyHeadEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.6);
 					}
 				}
 			}
 		});
 		this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers());
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8, 20) {
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 12, 20) {
 			@Override
 			protected Vec3 getPosition() {
 				RandomSource random = FlyHeadEntity.this.getRandom();
@@ -168,7 +168,7 @@ public class FlyHeadEntity extends Monster {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;

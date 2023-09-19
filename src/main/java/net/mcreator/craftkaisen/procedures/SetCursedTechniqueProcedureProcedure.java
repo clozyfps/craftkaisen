@@ -14,7 +14,7 @@ public class SetCursedTechniqueProcedureProcedure {
 			SetHeavenlyProcedure.execute(entity);
 		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Voice") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("voice")) {
 			SetVoiceProcedure.execute(entity);
-		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Clap") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("clap")) {
+		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Boogie") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("boogie")) {
 			SetClapProcedure.execute(entity);
 		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Divergent") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("divergent")) {
 			SetDivergentProcedure.execute(entity);

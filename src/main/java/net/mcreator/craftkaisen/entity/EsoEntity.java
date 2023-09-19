@@ -9,6 +9,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -23,7 +24,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
@@ -39,7 +39,7 @@ public class EsoEntity extends Monster {
 	public EsoEntity(EntityType<EsoEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
-		xpReward = 0;
+		xpReward = 3;
 		setNoAi(false);
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.ESO_ARMOR_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.ESO_ARMOR_LEGGINGS.get()));
@@ -53,16 +53,18 @@ public class EsoEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, true));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, ItadoriEntity.class, true, true));
+		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.5, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(5, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(7, new FloatGoal(this));
 	}
 
 	@Override
@@ -86,17 +88,18 @@ public class EsoEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CraftkaisenModEntities.ESO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
+		SpawnPlacements.register(CraftkaisenModEntities.ESO.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
+		builder = builder.add(Attributes.MAX_HEALTH, 240);
+		builder = builder.add(Attributes.ARMOR, 0.2);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;
 	}
 }
