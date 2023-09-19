@@ -1,8 +1,13 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class RepeatedSlicingMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.RepeatedSlicingOnEffectActiveTickProcedure;
+
+public class RepeatedSlicingMobEffect extends MobEffect {
 	public RepeatedSlicingMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,14 +19,11 @@ public class RepeatedSlicingMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		RepeatedSlicingOnEffectActiveTickProcedure.execute(
-
-		);
+		RepeatedSlicingOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }
