@@ -52,6 +52,7 @@ import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
 import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
+import net.mcreator.craftkaisen.entity.BigFistEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -162,6 +163,8 @@ public class CraftkaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MagmaRockProjectileEntity>> MAGMA_ROCK_PROJECTILE = register("projectile_magma_rock_projectile", EntityType.Builder.<MagmaRockProjectileEntity>of(MagmaRockProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(MagmaRockProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BigFistEntity>> BIG_FIST = register("big_fist",
+			EntityType.Builder.<BigFistEntity>of(BigFistEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BigFistEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -192,6 +195,7 @@ public class CraftkaisenModEntities {
 			UnknownManEntity.init();
 			ItadoriEntity.init();
 			SukunaEntity.init();
+			BigFistEntity.init();
 		});
 	}
 
@@ -219,5 +223,6 @@ public class CraftkaisenModEntities {
 		event.put(UNKNOWN_MAN.get(), UnknownManEntity.createAttributes().build());
 		event.put(ITADORI.get(), ItadoriEntity.createAttributes().build());
 		event.put(SUKUNA.get(), SukunaEntity.createAttributes().build());
+		event.put(BIG_FIST.get(), BigFistEntity.createAttributes().build());
 	}
 }

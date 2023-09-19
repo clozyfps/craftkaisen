@@ -24,6 +24,8 @@ public class SetCursedTechniqueProcedureProcedure {
 			SetSukunaProcedure.execute(entity);
 		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Plants") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("plants")) {
 			SetPlantsProcedure.execute(entity);
+		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("Transfiguration") || (cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("transfiguration")) {
+			SetTransfigurationProcedure.execute(entity);
 		}
 	}
 }

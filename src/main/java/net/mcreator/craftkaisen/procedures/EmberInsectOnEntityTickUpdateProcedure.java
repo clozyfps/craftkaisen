@@ -30,8 +30,8 @@ public class EmberInsectOnEntityTickUpdateProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
-				if (!(entity == entityiterator) && !(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.EMBER_CONTROL.get()) : false) && !(entityiterator instanceof EmberInsectEntity)) {
-					if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, z), 3, 3, 3), e -> true).isEmpty()) {
+				if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, z), 3, 3, 3), e -> true).isEmpty()) {
+					if (!(entity == entityiterator) && !(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.EMBER_CONTROL.get()) : false) && !(entityiterator instanceof EmberInsectEntity)) {
 						entityiterator.hurt(DamageSource.GENERIC, 5);
 						{
 							Entity _ent = entity;

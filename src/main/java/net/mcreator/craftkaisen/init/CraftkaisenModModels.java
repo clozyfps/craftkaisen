@@ -33,11 +33,13 @@ import net.mcreator.craftkaisen.client.model.Modelgojochestplate;
 import net.mcreator.craftkaisen.client.model.Modelgetosandalsnew;
 import net.mcreator.craftkaisen.client.model.Modelgetorobes;
 import net.mcreator.craftkaisen.client.model.Modelgetolegs;
+import net.mcreator.craftkaisen.client.model.Modelfist;
 import net.mcreator.craftkaisen.client.model.Modelemberinsect;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritrugbyfield;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritgrasshopper;
 import net.mcreator.craftkaisen.client.model.Modelcurse_1;
 import net.mcreator.craftkaisen.client.model.Modelblackblindfold;
+import net.mcreator.craftkaisen.client.model.ModelGoddessClanWings;
 import net.mcreator.craftkaisen.client.model.ModelFingerBearernew;
 import net.mcreator.craftkaisen.client.model.ModelFingerBearer;
 
@@ -48,6 +50,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelblackblindfold.LAYER_LOCATION, Modelblackblindfold::createBodyLayer);
 		event.registerLayerDefinition(Modeltoji_curse.LAYER_LOCATION, Modeltoji_curse::createBodyLayer);
 		event.registerLayerDefinition(Modelgetorobes.LAYER_LOCATION, Modelgetorobes::createBodyLayer);
+		event.registerLayerDefinition(Modelfist.LAYER_LOCATION, Modelfist::createBodyLayer);
 		event.registerLayerDefinition(Modelsixeyes.LAYER_LOCATION, Modelsixeyes::createBodyLayer);
 		event.registerLayerDefinition(Modelgojopants.LAYER_LOCATION, Modelgojopants::createBodyLayer);
 		event.registerLayerDefinition(Modelcurse_1.LAYER_LOCATION, Modelcurse_1::createBodyLayer);
@@ -65,6 +68,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelsunglasses.LAYER_LOCATION, Modelsunglasses::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurplenew.LAYER_LOCATION, Modelhollowpurplenew::createBodyLayer);
 		event.registerLayerDefinition(Modelsukunafacemark.LAYER_LOCATION, Modelsukunafacemark::createBodyLayer);
+		event.registerLayerDefinition(ModelGoddessClanWings.LAYER_LOCATION, ModelGoddessClanWings::createBodyLayer);
 		event.registerLayerDefinition(Modeltojipants.LAYER_LOCATION, Modeltojipants::createBodyLayer);
 		event.registerLayerDefinition(Modelemberinsect.LAYER_LOCATION, Modelemberinsect::createBodyLayer);
 		event.registerLayerDefinition(Modelcursedspiritrugbyfield.LAYER_LOCATION, Modelcursedspiritrugbyfield::createBodyLayer);

@@ -43,7 +43,7 @@ public class TojiFushiguroEntity extends Monster {
 		maxUpStep = 0.6f;
 		xpReward = 4;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(CraftkaisenModItems.PLAYFUL_CLOUD.get()));
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(CraftkaisenModItems.INVERTED_SPEAROF_HEAVEN.get()));
 	}
 
 	@Override
@@ -105,8 +105,8 @@ public class TojiFushiguroEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0.4);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 28);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 4);
 		return builder;
 	}
 }

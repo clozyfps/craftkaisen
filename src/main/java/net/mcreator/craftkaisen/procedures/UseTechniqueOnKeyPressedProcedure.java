@@ -20,6 +20,8 @@ public class UseTechniqueOnKeyPressedProcedure {
 		} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Sukuna")) {
 		} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Plants")) {
 			PlantsProcedure.execute(world, x, y, z, entity);
+		} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Technique).equals("Transfiguration")) {
+			TransfigurationProcedure.execute(world, x, y, z, entity);
 		}
 	}
 }

@@ -9266,7 +9266,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "Katana",
@@ -10036,7 +10036,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "DisasterFlameProjectileHitsLivingEntity",
@@ -10069,6 +10069,353 @@
         ]
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "BigFistOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BigFist",
+      "type": "livingentity",
+      "sortid": 422,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/BigFistRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/BigFistEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BigFistOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 423,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BigFistProcedure",
+      "type": "procedure",
+      "sortid": 424,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BigFistTick",
+      "type": "procedure",
+      "sortid": 425,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Transfiguration",
+      "type": "procedure",
+      "sortid": 426,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transfiguration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TransfigurationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SetTransfiguration",
+      "type": "procedure",
+      "sortid": 427,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_transfiguration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetTransfigurationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "TechniqueTick",
+      "type": "procedure",
+      "sortid": 428,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technique_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TechniqueTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "IdleTransfigurationOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 429,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idle_transfiguration_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/IdleTransfigurationOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "IdleTransfiguration",
+      "type": "potioneffect",
+      "sortid": 430,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idle_transfiguration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/IdleTransfigurationMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "RepeatedSlicingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 431,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeated_slicing_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RepeatedSlicingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "RepeatedSlicing",
+      "type": "potioneffect",
+      "sortid": 432,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeated_slicing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/RepeatedSlicingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "RepeatingSlicesProcedure",
+      "type": "procedure",
+      "sortid": 433,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeating_slices_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RepeatingSlicesProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
     }
   ],
   "variable_elements": [
@@ -10694,6 +11041,7 @@
       "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
       "effect.craftkaisen.sleeping": "Sleeping",
+      "effect.craftkaisen.idle_transfiguration": "Idle Transfiguration",
       "item.craftkaisen.wooden_ball": "Wooden Ball",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_i_increases_speedss9_1": "Agility I - Increases speed.§9 1 SP \u0026 GRADE 4",
@@ -10701,6 +11049,7 @@
       "effect.craftkaisen.ember_control": "InsectControl",
       "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
       "block.craftkaisen.unlimited_void": "Unlimited Void",
+      "effect.craftkaisen.repeated_slicing": "Rs",
       "gui.craftkaisen.main_hud.label_empty": "---------------------",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_ii_increases_cursed_energy": "CE II - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
@@ -10770,6 +11119,7 @@
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
       "itemGroup.tabjjkitems": "JJK Items",
+      "entity.craftkaisen.big_fist": "Big Fist",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten": "Resistance I - Upgrades resistance.§9 2 SP \u0026 GRADE 4",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "gui.craftkaisen.main_hud.label_quest1": "Quest",

@@ -30,7 +30,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "CUSTOM:PlayfulCloud"
+      "value": "CUSTOM:InvertedSpearofHeaven"
     },
     "equipmentOffHand": {
       "value": ""
@@ -50,8 +50,8 @@
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 28,
-    "attackKnockback": 2.0,
-    "knockbackResistance": 1.0,
+    "attackKnockback": 4.0,
+    "knockbackResistance": 0.1,
     "movementSpeed": 0.4,
     "stepHeight": 0.6,
     "armorBaseValue": 0.4,

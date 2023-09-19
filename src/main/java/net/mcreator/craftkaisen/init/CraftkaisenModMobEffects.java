@@ -23,6 +23,7 @@ import net.mcreator.craftkaisen.potion.ShrineMobEffect;
 import net.mcreator.craftkaisen.potion.RootsPotionMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
+import net.mcreator.craftkaisen.potion.RepeatedSlicingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MoveUltimateCooldownMobEffect;
@@ -35,6 +36,7 @@ import net.mcreator.craftkaisen.potion.Move1CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MasteredRCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.IrritatedThroatMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
+import net.mcreator.craftkaisen.potion.IdleTransfigurationMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.EmberFloorMobEffect;
@@ -88,4 +90,6 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> BURNT_OUT_EFFECT = REGISTRY.register("burnt_out_effect", () -> new BurntOutEffectMobEffect());
 	public static final RegistryObject<MobEffect> CURSED_SPIRIT = REGISTRY.register("cursed_spirit", () -> new CursedSpiritMobEffect());
 	public static final RegistryObject<MobEffect> SKY_OF_FLAMES = REGISTRY.register("sky_of_flames", () -> new SkyOfFlamesMobEffect());
+	public static final RegistryObject<MobEffect> IDLE_TRANSFIGURATION = REGISTRY.register("idle_transfiguration", () -> new IdleTransfigurationMobEffect());
+	public static final RegistryObject<MobEffect> REPEATED_SLICING = REGISTRY.register("repeated_slicing", () -> new RepeatedSlicingMobEffect());
 }
