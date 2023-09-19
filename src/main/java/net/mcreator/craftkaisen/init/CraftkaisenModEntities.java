@@ -44,6 +44,7 @@ import net.mcreator.craftkaisen.entity.FireArrowProjectileEntity;
 import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
+import net.mcreator.craftkaisen.entity.EsoEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
@@ -165,6 +166,10 @@ public class CraftkaisenModEntities {
 			.setCustomClientFactory(MagmaRockProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<BigFistEntity>> BIG_FIST = register("big_fist",
 			EntityType.Builder.<BigFistEntity>of(BigFistEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BigFistEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<EsoEntity>> ESO = register("eso",
+			EntityType.Builder.<EsoEntity>of(EsoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EsoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -196,6 +201,7 @@ public class CraftkaisenModEntities {
 			ItadoriEntity.init();
 			SukunaEntity.init();
 			BigFistEntity.init();
+			EsoEntity.init();
 		});
 	}
 
@@ -224,5 +230,6 @@ public class CraftkaisenModEntities {
 		event.put(ITADORI.get(), ItadoriEntity.createAttributes().build());
 		event.put(SUKUNA.get(), SukunaEntity.createAttributes().build());
 		event.put(BIG_FIST.get(), BigFistEntity.createAttributes().build());
+		event.put(ESO.get(), EsoEntity.createAttributes().build());
 	}
 }

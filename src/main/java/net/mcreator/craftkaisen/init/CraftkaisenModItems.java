@@ -37,6 +37,7 @@ import net.mcreator.craftkaisen.item.GetCrushedItem;
 import net.mcreator.craftkaisen.item.FlowerfieldsItem;
 import net.mcreator.craftkaisen.item.FireArrowProjectileItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
+import net.mcreator.craftkaisen.item.EsoArmorItem;
 import net.mcreator.craftkaisen.item.DisasterFlameItem;
 import net.mcreator.craftkaisen.item.CursedFingerItem;
 import net.mcreator.craftkaisen.item.CursedBudItem;
@@ -113,6 +114,9 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> ITADORI_SPAWN_EGG = REGISTRY.register("itadori_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.ITADORI, -15788000, -25187, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> SUKUNA_SPAWN_EGG = REGISTRY.register("sukuna_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.SUKUNA, -15001051, -1597023, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> MAGMA_ROCK_PROJECTILE = REGISTRY.register("magma_rock_projectile", () -> new MagmaRockProjectileItem());
+	public static final RegistryObject<Item> ESO_ARMOR_CHESTPLATE = REGISTRY.register("eso_armor_chestplate", () -> new EsoArmorItem.Chestplate());
+	public static final RegistryObject<Item> ESO_ARMOR_LEGGINGS = REGISTRY.register("eso_armor_leggings", () -> new EsoArmorItem.Leggings());
+	public static final RegistryObject<Item> ESO_SPAWN_EGG = REGISTRY.register("eso_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.ESO, -6790332, -14532754, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

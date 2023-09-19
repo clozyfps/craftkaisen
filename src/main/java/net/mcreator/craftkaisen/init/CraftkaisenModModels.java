@@ -34,6 +34,8 @@ import net.mcreator.craftkaisen.client.model.Modelgetosandalsnew;
 import net.mcreator.craftkaisen.client.model.Modelgetorobes;
 import net.mcreator.craftkaisen.client.model.Modelgetolegs;
 import net.mcreator.craftkaisen.client.model.Modelfist;
+import net.mcreator.craftkaisen.client.model.Modelesopants;
+import net.mcreator.craftkaisen.client.model.Modelesochestplate;
 import net.mcreator.craftkaisen.client.model.Modelemberinsect;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritrugbyfield;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritgrasshopper;
@@ -71,7 +73,9 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(ModelGoddessClanWings.LAYER_LOCATION, ModelGoddessClanWings::createBodyLayer);
 		event.registerLayerDefinition(Modeltojipants.LAYER_LOCATION, Modeltojipants::createBodyLayer);
 		event.registerLayerDefinition(Modelemberinsect.LAYER_LOCATION, Modelemberinsect::createBodyLayer);
+		event.registerLayerDefinition(Modelesochestplate.LAYER_LOCATION, Modelesochestplate::createBodyLayer);
 		event.registerLayerDefinition(Modelcursedspiritrugbyfield.LAYER_LOCATION, Modelcursedspiritrugbyfield::createBodyLayer);
+		event.registerLayerDefinition(Modelesopants.LAYER_LOCATION, Modelesopants::createBodyLayer);
 		event.registerLayerDefinition(Modelmahoraga_wheel.LAYER_LOCATION, Modelmahoraga_wheel::createBodyLayer);
 		event.registerLayerDefinition(Modellapseblue.LAYER_LOCATION, Modellapseblue::createBodyLayer);
 		event.registerLayerDefinition(Modelmagmaprojectile.LAYER_LOCATION, Modelmagmaprojectile::createBodyLayer);

@@ -30,6 +30,7 @@ import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 import net.mcreator.craftkaisen.client.renderer.FireArrowRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
+import net.mcreator.craftkaisen.client.renderer.EsoRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritrugbyfieldRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
@@ -77,5 +78,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.SUKUNA.get(), SukunaRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK_PROJECTILE.get(), MagmaRockProjectileRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BIG_FIST.get(), BigFistRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.ESO.get(), EsoRenderer::new);
 	}
 }

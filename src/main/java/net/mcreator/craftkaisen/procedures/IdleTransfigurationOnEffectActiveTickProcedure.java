@@ -1,11 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
 
 public class IdleTransfigurationOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {

@@ -1,12 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import javax.annotation.Nullable;
 
 public class TransfigurationProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -16,7 +12,6 @@ public class TransfigurationProcedure {
 			if (!entity.getPersistentData().getBoolean("prohibitUse") && !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.MOVE_2_COOLDOWN.get()) : false)
 					&& (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergy >= (entity
 							.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Cost) {
-				BigFistProcedureProcedure.execute(world, x, y, z, entity);
 				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.MOVE_2_COOLDOWN.get(), 180, 1, false, false));
 				{
@@ -33,7 +28,6 @@ public class TransfigurationProcedure {
 			if (!entity.getPersistentData().getBoolean("prohibitUse") && !(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.MOVE_3_COOLDOWN.get()) : false)
 					&& (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).CursedEnergy >= (entity
 							.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Cost) {
-				RepeatingSlicesProcedureProcedure.execute(entity);
 				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.MOVE_3_COOLDOWN.get(), 180, 1, false, false));
 				{
