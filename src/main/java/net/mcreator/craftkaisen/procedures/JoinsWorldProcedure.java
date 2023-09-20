@@ -81,7 +81,7 @@ public class JoinsWorldProcedure {
 				}
 			} else if (random == 6) {
 				{
-					String _setval = "Idle Transfiguration";
+					String _setval = "Transfiguration";
 					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Technique = _setval;
 						capability.syncPlayerVariables(entity);

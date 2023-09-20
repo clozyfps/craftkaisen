@@ -24,6 +24,7 @@ import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 
 import javax.annotation.Nullable;
@@ -32,8 +33,9 @@ import javax.annotation.Nullable;
 public class EntityHitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity());
 		}
 	}
 
@@ -111,6 +113,12 @@ public class EntityHitProcedure {
 					});
 				}
 			}
+		}
+		if (sourceentity instanceof MahitoEntity && !(sourceentity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.MOVE_1_COOLDOWN.get()) : false)) {
+			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.MOVE_1_COOLDOWN.get(), 300, 1, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.IDLE_TRANSFIGURATION.get(), 100, 1, false, false));
 		}
 	}
 }
