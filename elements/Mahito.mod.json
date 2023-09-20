@@ -2,10 +2,10 @@
   "_fv": 47,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Satoru Gojo",
+    "mobName": "Mahito",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "gojosatoru.png",
+    "mobModelTexture": "mahit.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -16,11 +16,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16514026,
+      "value": -14670799,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -2100742,
+      "value": -2621953,
       "falpha": 0.0
     },
     "creativeTab": {
@@ -36,29 +36,29 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:BandageBlindfold.helmet"
+      "value": ""
     },
     "equipmentBody": {
-      "value": "CUSTOM:GojoUniform.body"
+      "value": ""
     },
     "equipmentLeggings": {
-      "value": "CUSTOM:GojoUniform.legs"
+      "value": ""
     },
     "equipmentBoots": {
       "value": ""
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 35,
-    "attackKnockback": 4.0,
-    "knockbackResistance": 0.3,
+    "attackStrength": 18,
+    "attackKnockback": 1.0,
+    "knockbackResistance": 0.1,
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
-    "armorBaseValue": 0.8,
+    "armorBaseValue": 0.1,
     "trackingRange": 64,
     "followRange": 50,
-    "health": 900,
-    "xpAmount": 3,
+    "health": 450,
+    "xpAmount": 1,
     "waterMob": false,
     "flyingMob": false,
     "guiBoundTo": "<NONE>",
@@ -96,21 +96,9 @@
     "stepSound": {
       "value": ""
     },
-    "whenMobIsHurt": {
-      "name": "SatoruGojoEntityIsHurt"
-    },
-    "onRightClickedOn": {
-      "name": "SatoruGojoRightClickedOnEntity"
-    },
-    "onMobTickUpdate": {
-      "name": "SatoruGojoOnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "SatoruGojoOnInitialEntitySpawn"
-    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.8</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"119\" y=\"131\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:SatoruGojo</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:MegumiFushiguro</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:Itadori</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:JujutsuStudent</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.5</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -123,10 +111,10 @@
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 1,
-    "mobSpawningType": "ambient",
-    "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 1,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
     "spawnInDungeons": false
   }
