@@ -9,11 +9,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -62,7 +60,7 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					if (!(entityiterator.getPersistentData().getBoolean("lapseuser") == true)) {
-						entityiterator.hurt(DamageSource.GENERIC, 9);
+						entityiterator.hurt(DamageSource.GENERIC, 11);
 						entityiterator.getPersistentData().putBoolean("aoe", true);
 						entityiterator.getPersistentData().putBoolean("guardbreaks", true);
 						if (world instanceof ServerLevel _level)
@@ -84,42 +82,11 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:dust 0 1 1 2 ^0 ^0 ^0 2 2.5 2 0 20");
-		sx = -15;
-		percent = 10;
-		if (size >= 10 && size < 100) {
-			percent = 100;
-		} else if (size >= 100 && size < 1000) {
-			percent = 1000;
-		} else if (size >= 1000 && size < 10000) {
-			percent = 10000;
-		} else if (size >= 10000 && size < 100000) {
-			percent = 100000;
-		} else if (size >= 1000000) {
-			percent = 10000000;
-		}
-		startsize = 9;
-		size = startsize + Math.round(entity.getPersistentData().getDouble("eaten"));
-		growspeed = Math.round(size / percent);
+		if (world instanceof ServerLevel _level)
+			_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.LAPSE_BLUE_PARTICLE.get()), x, y, z, 1, 0.1, 2, 0.1, 0);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((size / 3) / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-					.collect(Collectors.toList());
-			for (Entity entityiterator : _entfound) {
-				if (entityiterator instanceof Player || entityiterator instanceof ServerPlayer) {
-					if (world instanceof ServerLevel _level)
-						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								("kill " + entityiterator.getDisplayName().getString()));
-					entity.getPersistentData().putDouble("eaten", (entity.getPersistentData().getDouble("eaten") + growspeed));
-				} else {
-					if (!entityiterator.level.isClientSide())
-						entityiterator.discard();
-					entity.getPersistentData().putDouble("eaten", (entity.getPersistentData().getDouble("eaten") + growspeed));
-				}
-			}
-		}
-		{
-			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(size / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator.getX() > entity.getX()) {
 					mx = -1;
@@ -139,38 +106,5 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 				entityiterator.setDeltaMovement(new Vec3(mx, my, mz));
 			}
 		}
-		sx = -3;
-		found = false;
-		for (int index0 = 0; index0 < 6; index0++) {
-			sy = -3;
-			for (int index1 = 0; index1 < 6; index1++) {
-				sz = -3;
-				for (int index2 = 0; index2 < 6; index2++) {
-					if (world.getBlockState(new BlockPos(x + sx, y + sy, z + sz)).canOcclude()) {
-						clickedBlock = (world.getBlockState(new BlockPos(x + sx, y + sy, z + sz)));
-						found = true;
-					}
-					sz = sz + 1;
-				}
-				sy = sy + 1;
-			}
-			sx = sx + 1;
-		}
-		if (found == true) {
-			step1 = ("" + clickedBlock).replace("Block{", "");
-			step2 = step1.replace("}", "");
-			step3 = step2.replace("[", "\",Properties:{");
-			step4 = step3.replace("]", "}}");
-			continousfiltering = step4.replace("=", ":");
-			continousfiltering = continousfiltering.replace("false", "\"false\"");
-			continousfiltering = continousfiltering.replace("true", "\"true\"");
-			blockid = continousfiltering;
-			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						("summon falling_block ~0.5 ~ ~0.5 {BlockState:{Name:\"" + "" + blockid + ",NoGravity:1b,Time:-1,Passengers:[{id:\"minecraft:armor_stand\",NoGravity:1b,Small:1b,Invisible:1b,NoBasePlate:1b}]}"));
-			world.setBlock(new BlockPos(x + sx, y + sy, z + sz), Blocks.AIR.defaultBlockState(), 3);
-		}
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.LAPSE_BLUE_PARTICLE.get()), x, y, z, 1, 0.1, 2, 0.1, 0);
 	}
 }

@@ -82,7 +82,7 @@ public class MentorChatProcedure {
 						}
 					} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame < 5000) {
 						if (entity instanceof Player _player && !_player.level.isClientSide())
-							_player.displayClientMessage(Component.literal("\u00A7a You need at least 5000 Fame to be referred to grade 3"), false);
+							_player.displayClientMessage(Component.literal("\u00A7a You need at least 5000 Fame to be referred to semi grade 2"), false);
 					}
 				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Grade).equals("Semi Grade 2")) {
 					if (event != null && event.isCancelable()) {
@@ -90,6 +90,27 @@ public class MentorChatProcedure {
 					}
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal("\u00A7a I see you want to rank up to Grade 2."), false);
+					if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame >= 10000) {
+						if (entity instanceof Player _player && !_player.level.isClientSide())
+							_player.displayClientMessage(Component.literal("\u00A7a You have enough fame to be referred to grade 2, here is a mission from Jujutsu High"), false);
+						{
+							String _setval = "Kill a Cursed Spirit Without Taking Damage";
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Quest = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.DoingQuest = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Fame < 10000) {
+						if (entity instanceof Player _player && !_player.level.isClientSide())
+							_player.displayClientMessage(Component.literal("\u00A7a You need at least 10000 Fame to be referred to grade 2"), false);
+					}
 				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Grade).equals("Grade 2")) {
 					if (event != null && event.isCancelable()) {
 						event.setCanceled(true);

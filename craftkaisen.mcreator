@@ -10988,6 +10988,99 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "MahitoSpikeOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 440,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_spike_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoSpikeOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MahitoSpike",
+      "type": "livingentity",
+      "sortid": 441,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_spike",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MahitoSpikeRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MahitoSpikeEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MahitoSpikeOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 442,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_spike_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoSpikeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MissionDamage",
+      "type": "procedure",
+      "sortid": 443,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mission_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MissionDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Grade2",
+      "type": "achievement",
+      "sortid": 444,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grade_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/grade_2.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
     }
   ],
   "variable_elements": [
@@ -11708,6 +11801,7 @@
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
       "effect.craftkaisen.infinity": "Infinity",
       "effect.craftkaisen.cursed_spirit": "Cursed Spirit",
+      "entity.craftkaisen.mahito_spike": "Mahito Spike",
       "item.craftkaisen.hiar_helmet": "Hiar Helmet",
       "gui.craftkaisen.main_hud.label_x": "X",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
@@ -11755,6 +11849,7 @@
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
+      "advancements.grade_2.descr": "Become a Grade 2 Sorcerer",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.fire_arrow_projectile": "Fire Arrow Projectile",
       "entity.craftkaisen.cursedspiritroppongi": "Cursed Spirit: Roppongi",
@@ -11766,6 +11861,7 @@
       "gui.craftkaisen.main_menu.button_prestige": "Skill Tree",
       "gui.craftkaisen.talisman_gui.label_sealing_menu": "Sealing Menu",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health4": "Defense V - Upgrades max health.§9 3 SP \u0026 GRADE 3",
+      "advancements.grade_2.title": "Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health1": "Defense II - Upgrades max health.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.sleep": "Sleep",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health3": "Defense IV - Upgrades max health.§9 2 SP \u0026 GRADE 3",

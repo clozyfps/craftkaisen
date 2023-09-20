@@ -84,6 +84,39 @@ public class KillCursedSpiritQuestProcedure {
 								}
 							}
 						}
+					} else if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Grade).equals("Semi Grade 2")) {
+						{
+							boolean _setval = false;
+							sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.DoingQuest = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						{
+							String _setval = "Grade 2";
+							sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Grade = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						{
+							String _setval = "";
+							sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Quest = _setval;
+								capability.syncPlayerVariables(sourceentity);
+							});
+						}
+						if (sourceentity instanceof Player _player && !_player.level.isClientSide())
+							_player.displayClientMessage(Component.literal("\u00A7a Congratulations! You ranked up to a Grade 2 Sorcerer!"), false);
+						if (sourceentity instanceof ServerPlayer _player) {
+							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craftkaisen:grade_2"));
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								Iterator _iterator = _ap.getRemainingCriteria().iterator();
+								while (_iterator.hasNext())
+									_player.getAdvancements().award(_adv, (String) _iterator.next());
+							}
+						}
 					}
 				}
 			}
