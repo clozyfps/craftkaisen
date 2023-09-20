@@ -17,6 +17,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.ItadoriEntity;
 import net.mcreator.craftkaisen.entity.EsoEntity;
 
@@ -26,8 +27,9 @@ import javax.annotation.Nullable;
 public class KnockbackProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity());
 		}
 	}
 
@@ -38,7 +40,7 @@ public class KnockbackProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (sourceentity instanceof ItadoriEntity || sourceentity instanceof SatoruGojoEntity || sourceentity instanceof EsoEntity) {
+		if (sourceentity instanceof ItadoriEntity || sourceentity instanceof SatoruGojoEntity || sourceentity instanceof EsoEntity || sourceentity instanceof MahitoEntity) {
 			if (Math.random() < 0.07) {
 				entity.setDeltaMovement(new Vec3((2 * sourceentity.getLookAngle().x), (2.5 * sourceentity.getLookAngle().y), (2 * sourceentity.getLookAngle().z)));
 				if (world instanceof Level _level) {

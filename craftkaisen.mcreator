@@ -1506,26 +1506,6 @@
       "path": "~/Functions"
     },
     {
-      "name": "RemoveWeaponRestriction",
-      "type": "procedure",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "remove_weapon_restriction",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RemoveWeaponRestrictionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "InvertedSpearOfHeavenProcedure",
       "type": "procedure",
       "sortid": 82,
@@ -11081,6 +11061,62 @@
         ]
       },
       "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "MahitoOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 460,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "MahitoOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 459,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
     }
   ],
   "variable_elements": [
