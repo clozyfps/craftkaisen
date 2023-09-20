@@ -10,6 +10,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.entity.SukunaEntity;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
 import net.mcreator.craftkaisen.entity.EsoEntity;
@@ -36,7 +38,7 @@ public class CursedSpiritSetProcedure {
 		if (entity instanceof CursedspiritgrasshopperEntity || entity instanceof CursedspiritroppongiEntity || entity instanceof CursedspiritrugbyfieldEntity || entity instanceof FlyHeadEntity) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CURSED_SPIRIT.get(), 999999, 0, false, false));
-		} else if (entity instanceof JogoEntity || entity instanceof EsoEntity) {
+		} else if (entity instanceof JogoEntity || entity instanceof EsoEntity || entity instanceof MahitoEntity || entity instanceof SukunaEntity) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CURSED_SPIRIT.get(), 999999, 1, false, false));
 		}

@@ -17,6 +17,7 @@ import net.mcreator.craftkaisen.client.model.Modelsukunafightingchestplate;
 import net.mcreator.craftkaisen.client.model.Modelsukunafacemark;
 import net.mcreator.craftkaisen.client.model.Modelsixeyes;
 import net.mcreator.craftkaisen.client.model.Modelroppongicursedspirit;
+import net.mcreator.craftkaisen.client.model.Modelmetalbat;
 import net.mcreator.craftkaisen.client.model.Modelmegumihair;
 import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
 import net.mcreator.craftkaisen.client.model.Modelmalevolentshrine;
@@ -54,6 +55,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelgetorobes.LAYER_LOCATION, Modelgetorobes::createBodyLayer);
 		event.registerLayerDefinition(Modelfist.LAYER_LOCATION, Modelfist::createBodyLayer);
 		event.registerLayerDefinition(Modelsixeyes.LAYER_LOCATION, Modelsixeyes::createBodyLayer);
+		event.registerLayerDefinition(Modelmetalbat.LAYER_LOCATION, Modelmetalbat::createBodyLayer);
 		event.registerLayerDefinition(Modelgojopants.LAYER_LOCATION, Modelgojopants::createBodyLayer);
 		event.registerLayerDefinition(Modelcurse_1.LAYER_LOCATION, Modelcurse_1::createBodyLayer);
 		event.registerLayerDefinition(Modelmalevolentshrine.LAYER_LOCATION, Modelmalevolentshrine::createBodyLayer);

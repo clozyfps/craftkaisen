@@ -20,7 +20,6 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
 import net.mcreator.craftkaisen.client.model.Modelesopants;
 import net.mcreator.craftkaisen.client.model.Modelesochestplate;
 
@@ -75,7 +74,7 @@ public abstract class EsoArmorItem extends ArmorItem {
 
 	public static class Chestplate extends EsoArmorItem {
 		public Chestplate() {
-			super(EquipmentSlot.CHEST, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
+			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
 		}
 
 		@Override
@@ -104,7 +103,7 @@ public abstract class EsoArmorItem extends ArmorItem {
 
 	public static class Leggings extends EsoArmorItem {
 		public Leggings() {
-			super(EquipmentSlot.LEGS, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
+			super(EquipmentSlot.LEGS, new Item.Properties().tab(null));
 		}
 
 		@Override
