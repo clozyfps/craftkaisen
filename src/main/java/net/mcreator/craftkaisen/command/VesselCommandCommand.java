@@ -31,7 +31,7 @@ public class VesselCommandCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					MainVesselCommandProcedure.execute(world, arguments, entity);
+					MainVesselCommandProcedure.execute();
 					return 0;
 				})));
 	}
