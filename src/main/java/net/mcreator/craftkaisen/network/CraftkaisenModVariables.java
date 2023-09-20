@@ -140,10 +140,10 @@ public class CraftkaisenModVariables {
 			clone.VesselPlayerTechnique = original.VesselPlayerTechnique;
 			clone.VesselTechnique = original.VesselTechnique;
 			clone.VowsEnabled = original.VowsEnabled;
-			clone.DefenseSecondaryTree = original.DefenseSecondaryTree;
 			clone.PowerSecondaryTree = original.PowerSecondaryTree;
-			clone.AgilitySecondaryTree = original.AgilitySecondaryTree;
+			clone.DefenseSecondaryTree = original.DefenseSecondaryTree;
 			clone.CursedEnergySecondaryTree = original.CursedEnergySecondaryTree;
+			clone.AgilitySecondaryTree = original.AgilitySecondaryTree;
 			clone.TalismanLink = original.TalismanLink;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
@@ -409,10 +409,10 @@ public class CraftkaisenModVariables {
 		public String VowDescription = "";
 		public boolean VowsEnabled = true;
 		public String VowSender = "\"\"";
-		public double DefenseSecondaryTree = 0;
 		public double PowerSecondaryTree = 0;
-		public double AgilitySecondaryTree = 0;
+		public double DefenseSecondaryTree = 0;
 		public double CursedEnergySecondaryTree = 0;
+		public double AgilitySecondaryTree = 0;
 		public ItemStack TalismanLink = ItemStack.EMPTY;
 
 		public void syncPlayerVariables(Entity entity) {
@@ -499,10 +499,10 @@ public class CraftkaisenModVariables {
 			nbt.putString("VowDescription", VowDescription);
 			nbt.putBoolean("VowsEnabled", VowsEnabled);
 			nbt.putString("VowSender", VowSender);
-			nbt.putDouble("DefenseSecondaryTree", DefenseSecondaryTree);
 			nbt.putDouble("PowerSecondaryTree", PowerSecondaryTree);
-			nbt.putDouble("AgilitySecondaryTree", AgilitySecondaryTree);
+			nbt.putDouble("DefenseSecondaryTree", DefenseSecondaryTree);
 			nbt.putDouble("CursedEnergySecondaryTree", CursedEnergySecondaryTree);
+			nbt.putDouble("AgilitySecondaryTree", AgilitySecondaryTree);
 			nbt.put("TalismanLink", TalismanLink.save(new CompoundTag()));
 			return nbt;
 		}
@@ -586,10 +586,10 @@ public class CraftkaisenModVariables {
 			VowDescription = nbt.getString("VowDescription");
 			VowsEnabled = nbt.getBoolean("VowsEnabled");
 			VowSender = nbt.getString("VowSender");
-			DefenseSecondaryTree = nbt.getDouble("DefenseSecondaryTree");
 			PowerSecondaryTree = nbt.getDouble("PowerSecondaryTree");
-			AgilitySecondaryTree = nbt.getDouble("AgilitySecondaryTree");
+			DefenseSecondaryTree = nbt.getDouble("DefenseSecondaryTree");
 			CursedEnergySecondaryTree = nbt.getDouble("CursedEnergySecondaryTree");
+			AgilitySecondaryTree = nbt.getDouble("AgilitySecondaryTree");
 			TalismanLink = ItemStack.of(nbt.getCompound("TalismanLink"));
 		}
 	}
@@ -692,10 +692,10 @@ public class CraftkaisenModVariables {
 					variables.VowDescription = message.data.VowDescription;
 					variables.VowsEnabled = message.data.VowsEnabled;
 					variables.VowSender = message.data.VowSender;
-					variables.DefenseSecondaryTree = message.data.DefenseSecondaryTree;
 					variables.PowerSecondaryTree = message.data.PowerSecondaryTree;
-					variables.AgilitySecondaryTree = message.data.AgilitySecondaryTree;
+					variables.DefenseSecondaryTree = message.data.DefenseSecondaryTree;
 					variables.CursedEnergySecondaryTree = message.data.CursedEnergySecondaryTree;
+					variables.AgilitySecondaryTree = message.data.AgilitySecondaryTree;
 					variables.TalismanLink = message.data.TalismanLink;
 				}
 			});

@@ -18,6 +18,7 @@ import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
+import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockProjectileRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
@@ -79,5 +80,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK_PROJECTILE.get(), MagmaRockProjectileRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BIG_FIST.get(), BigFistRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.ESO.get(), EsoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO.get(), MahitoRenderer::new);
 	}
 }

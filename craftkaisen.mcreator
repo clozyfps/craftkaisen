@@ -5741,7 +5741,20 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/MainVesselCommandProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Commands/Procedures"
     },
@@ -10538,15 +10551,16 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "ApplySkillTreeBuff",
+      "name": "DIsplayV",
       "type": "procedure",
-      "sortid": 439,
+      "sortid": 447,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "apply_skill_tree_buff",
+      "registry_name": "d_isplay_v",
       "metadata": {
+        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ApplySkillTreeBuffProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/DIsplayVProcedure.java"
         ],
         "dependencies": [
           {
@@ -10555,7 +10569,23 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "TalismanGUI",
+      "type": "gui",
+      "sortid": 457,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talisman_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/TalismanGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/TalismanGUIButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/TalismanGUIMenu.java"
+        ]
+      },
+      "path": "~/GUI"
     },
     {
       "name": "ApplySecondaryTreeBuff",
@@ -10578,6 +10608,46 @@
       "path": "~/Procedures"
     },
     {
+      "name": "PlusPressed",
+      "type": "procedure",
+      "sortid": 451,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plus_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlusPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SealPressed",
+      "type": "procedure",
+      "sortid": 458,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "seal_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SealPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
       "name": "SetSPCommand",
       "type": "command",
       "sortid": 441,
@@ -10592,80 +10662,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "SetSP",
-      "type": "procedure",
-      "sortid": 442,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_sp",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetSPProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "CursedToolTable",
-      "type": "block",
-      "sortid": 443,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_tool_table",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craftkaisen/blockstates/cursed_tool_table.json",
-          "src/main/resources/assets/craftkaisen/models/block/cursed_tool_table.json",
-          "src/main/java/net/mcreator/craftkaisen/block/CursedToolTableBlock.java",
-          "src/main/resources/assets/craftkaisen/models/item/cursed_tool_table.json"
-        ]
-      },
-      "path": "~/Blocks"
-    },
-    {
-      "name": "SwordCreator",
-      "type": "gui",
-      "sortid": 444,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sword_creator",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/SwordCreatorMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/SwordCreatorScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/SwordCreatorButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
-      "name": "DisplayCost",
-      "type": "procedure",
-      "sortid": 445,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_cost",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCostProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "DIsplayError",
       "type": "procedure",
       "sortid": 446,
@@ -10676,48 +10672,6 @@
         "return_type": "string",
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/DIsplayErrorProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "DIsplayV",
-      "type": "procedure",
-      "sortid": 447,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "d_isplay_v",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DIsplayVProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "DisplayAmount",
-      "type": "procedure",
-      "sortid": 448,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "display_amount",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAmountProcedure.java"
         ],
         "dependencies": [
           {
@@ -10753,62 +10707,6 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "OpenSwordCreatorGUI",
-      "type": "procedure",
-      "sortid": 450,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_sword_creator_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSwordCreatorGUIProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Procedures"
-    },
-    {
-      "name": "PlusPressed",
-      "type": "procedure",
-      "sortid": 451,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plus_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PlusPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
       "name": "PressedMinus",
       "type": "procedure",
       "sortid": 452,
@@ -10829,31 +10727,16 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "Talisman",
-      "type": "item",
-      "sortid": 453,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "talisman",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craftkaisen/models/item/talisman.json",
-          "src/main/java/net/mcreator/craftkaisen/item/TalismanItem.java"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "DisplayGlow",
+      "name": "DisplayAmount",
       "type": "procedure",
-      "sortid": 454,
+      "sortid": 448,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "display_glow",
+      "registry_name": "display_amount",
       "metadata": {
-        "return_type": "logic",
+        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayGlowProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAmountProcedure.java"
         ],
         "dependencies": [
           {
@@ -10862,7 +10745,27 @@
           }
         ]
       },
-      "path": "~/Items/Values"
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "ApplySkillTreeBuff",
+      "type": "procedure",
+      "sortid": 439,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apply_skill_tree_buff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ApplySkillTreeBuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "TalismanEffect",
@@ -10937,31 +10840,100 @@
       "path": "~/Items/Procedures"
     },
     {
-      "name": "TalismanGUI",
-      "type": "gui",
-      "sortid": 457,
+      "name": "Talisman",
+      "type": "item",
+      "sortid": 453,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "talisman_gui",
+      "registry_name": "talisman",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/TalismanGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/network/TalismanGUIButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/TalismanGUIMenu.java"
+          "src/main/resources/assets/craftkaisen/models/item/talisman.json",
+          "src/main/java/net/mcreator/craftkaisen/item/TalismanItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "CursedToolTable",
+      "type": "block",
+      "sortid": 443,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_tool_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/blockstates/cursed_tool_table.json",
+          "src/main/resources/assets/craftkaisen/models/block/cursed_tool_table.json",
+          "src/main/java/net/mcreator/craftkaisen/block/CursedToolTableBlock.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursed_tool_table.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "SwordCreator",
+      "type": "gui",
+      "sortid": 444,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_creator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SwordCreatorMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SwordCreatorScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/SwordCreatorButtonMessage.java"
         ]
       },
       "path": "~/GUI"
     },
     {
-      "name": "SealPressed",
+      "name": "OpenSwordCreatorGUI",
       "type": "procedure",
-      "sortid": 458,
+      "sortid": 450,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "seal_pressed",
+      "registry_name": "open_sword_creator_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SealPressedProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSwordCreatorGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "DisplayGlow",
+      "type": "procedure",
+      "sortid": 454,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_glow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayGlowProcedure.java"
         ],
         "dependencies": [
           {
@@ -10970,7 +10942,65 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
+      "path": "~/Items/Values"
+    },
+    {
+      "name": "SetSP",
+      "type": "procedure",
+      "sortid": 442,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "DisplayCost",
+      "type": "procedure",
+      "sortid": 445,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Mahito",
+      "type": "livingentity",
+      "sortid": 439,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/MahitoEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/mahito_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MahitoRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/mahito_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -11467,25 +11497,25 @@
       "value": "\"\""
     },
     {
-      "name": "DefenseSecondaryTree",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "PowerSecondaryTree",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
-      "name": "AgilitySecondaryTree",
+      "name": "DefenseSecondaryTree",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "CursedEnergySecondaryTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AgilitySecondaryTree",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -11552,9 +11582,7 @@
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
-      "gui.craftkaisen.sword_creator.label_materials": "Materials",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
-      "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "effect.craftkaisen.charge_ce_effect": "Charging",
       "effect.craftkaisen.sky_of_flames": "SkyOfFlames",
@@ -11567,14 +11595,14 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.domain_expansion": "Domain Expansion",
-      "effect.craftkaisen.vessel_cooldown": "Vessel CD",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
+      "effect.craftkaisen.vessel_cooldown": "Vessel CD",
       "entity.craftkaisen.eso": "Eso",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
-      "gui.craftkaisen.main_hud.label_special": "Special",
-      "item.craftkaisen.playful_cloud": "Playful Cloud",
-      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
       "entity.craftkaisen.inventory_curse": "Inventory Curse",
+      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
+      "item.craftkaisen.playful_cloud": "Playful Cloud",
+      "gui.craftkaisen.main_hud.label_special": "Special",
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
@@ -11584,9 +11612,8 @@
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "entity.craftkaisen.cursedspiritgrasshopper": "Cursed Spirit: Grasshopper",
-      "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
-      "gui.craftkaisen.sword_creator.label_cursed_energy_investment": "Cursed Energy Investment",
+      "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "item.craftkaisen.eso_armor_chestplate": "Eso Chestplate",
@@ -11604,7 +11631,6 @@
       "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
       "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
-      "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "entity.craftkaisen.satoru_gojo_blindfold": "Satoru Gojo Blindfold",
@@ -11613,56 +11639,48 @@
       "entity.craftkaisen.fly_head": "Fly Head",
       "item.craftkaisen.clap": "Clap",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iii_increases_melee_dama": "Power III - Increases melee damage.§9 2 SP \u0026 GRADE 4",
-      "item.craftkaisen.sukuna_spawn_egg": "Sukuna Spawn Egg",
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
+      "item.craftkaisen.sukuna_spawn_egg": "Sukuna Spawn Egg",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "entity.craftkaisen.magma_rock": "Magma Rock",
-      "gui.craftkaisen.sword_creator.label_diamond_blocks": "Diamond Blocks",
-      "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
+      "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
-      "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "effect.craftkaisen.ember_floor": "FloorEmber",
+      "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
       "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "gui.craftkaisen.main_menu.label_empty": "SP:",
       "advancements.grade_3.descr": "Become a Grade 3 Sorcerer",
-      "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
+      "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "effect.craftkaisen.sleeping": "Sleeping",
       "effect.craftkaisen.idle_transfiguration": "Idle Transfiguration",
       "item.craftkaisen.wooden_ball": "Wooden Ball",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",
-      "gui.craftkaisen.sword_creator.DaggerBox": "Dagger",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_i_increases_speedss9_1": "Agility I - Increases speed.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.tes": "Tes",
       "effect.craftkaisen.ember_control": "InsectControl",
-      "gui.craftkaisen.sword_creator.SwordName": "Name..",
       "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
       "block.craftkaisen.unlimited_void": "Unlimited Void",
       "effect.craftkaisen.repeated_slicing": "Rs",
-      "gui.craftkaisen.sword_creator.button_empty1": "-",
       "gui.craftkaisen.main_hud.label_empty": "---------------------",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_ii_increases_cursed_energy": "CE II - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
       "entity.craftkaisen.jogo": "Jogo",
       "block.craftkaisen.quest_board": "Quest Board",
-      "gui.craftkaisen.sword_creator.label_weapon_types": "Weapon Types",
       "gui.craftkaisen.main_hud.label_move_four": "Move Four",
       "item.craftkaisen.gojo_uniform_chestplate": "Gojo Uniform",
-      "gui.craftkaisen.sword_creator.label_1_cost": "+1 Cost",
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
-      "item.craftkaisen.talisman": "Talisman",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
-      "gui.craftkaisen.sword_creator.GreatswordBox": "Greatsword",
       "item.craftkaisen.blast_away": "Blast Away",
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
@@ -11686,7 +11704,6 @@
       "gamerule.ckCustomVessel.description": "Allows a player to reincarnate and become the sukuna of that world.",
       "entity.craftkaisen.cursedspiritrugbyfield": "Cursed Spirit: Rugby Field",
       "gui.craftkaisen.test.label_dawd": "dawd",
-      "gui.craftkaisen.talisman_gui.button_seal": "Seal",
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
       "effect.craftkaisen.infinity": "Infinity",
@@ -11722,9 +11739,7 @@
       "item.craftkaisen.twist": "Twist",
       "itemGroup.tabjjkitems": "JJK Items",
       "entity.craftkaisen.big_fist": "Big Fist",
-      "block.craftkaisen.cursed_tool_table": "Cursed Tool Table",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten": "Resistance I - Upgrades resistance.§9 2 SP \u0026 GRADE 4",
-      "gui.craftkaisen.sword_creator.label_iron_ingots": "Iron Ingots",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "gui.craftkaisen.main_hud.label_quest1": "Quest",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
@@ -11746,7 +11761,6 @@
       "item.craftkaisen.eso_armor_leggings": "Eso Pants",
       "item.craftkaisen.cursedspiritrugbyfield_spawn_egg": "Cursed Spirit: Rugby Field Spawn Egg",
       "gui.craftkaisen.main_menu.button_prestige": "Skill Tree",
-      "gui.craftkaisen.talisman_gui.label_sealing_menu": "Sealing Menu",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health4": "Defense V - Upgrades max health.§9 3 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health1": "Defense II - Upgrades max health.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.sleep": "Sleep",
@@ -11756,7 +11770,6 @@
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "item.craftkaisen.get_crushed": "Get Crushed",
-      "gui.craftkaisen.sword_creator.label_diamonds": "Diamonds",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten1": "Resistance II - Upgrades resistance.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ssfflashstep_3_sp_grade_3": "§fFlashstep - 3 SP \u0026 GRADE 3",
       "key.craftkaisen.use_technique": "Use Technique",
@@ -11792,11 +11805,8 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
-      "gui.craftkaisen.sword_creator.button_empty": "+",
-      "gui.craftkaisen.sword_creator.KatanaBox": "Katana",
       "effect.craftkaisen.shrine": "Shrine",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_iii_upgrades_resist": "Resistance III - Upgrades resistance.§9 2 SP \u0026 SEMI-GRADE 2",
-      "gui.craftkaisen.sword_creator.label_5_cost": "+5 Cost",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health": "Defense I - Upgrades max health.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
@@ -11895,11 +11905,11 @@
         "name": "Items",
         "children": [
           {
-            "name": "Procedures",
+            "name": "Values",
             "children": []
           },
           {
-            "name": "Values",
+            "name": "Procedures",
             "children": []
           }
         ]

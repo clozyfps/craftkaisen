@@ -18,7 +18,6 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
 import net.mcreator.craftkaisen.client.model.Modelmegumihair;
 
 import java.util.function.Consumer;
@@ -72,7 +71,7 @@ public abstract class HiarItem extends ArmorItem {
 
 	public static class Helmet extends HiarItem {
 		public Helmet() {
-			super(EquipmentSlot.HEAD, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKARMOR));
+			super(EquipmentSlot.HEAD, new Item.Properties().tab(null));
 		}
 
 		@Override
