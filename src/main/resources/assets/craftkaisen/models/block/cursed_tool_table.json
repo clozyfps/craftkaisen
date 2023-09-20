@@ -1,0 +1,9 @@
+{
+  "parent": "craftkaisen:custom/ct_table",
+  "textures": {
+    "all": "craftkaisen:blocks/ct_table_texture",
+    "particle": "craftkaisen:blocks/ct_table_texture",
+    "0": "craftkaisen:blocks/ct_table_texture"
+  },
+  "render_type": "solid"
+}

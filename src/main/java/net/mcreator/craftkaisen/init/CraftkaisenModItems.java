@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.item.TwistItem;
 import net.mcreator.craftkaisen.item.TojiArmorItem;
 import net.mcreator.craftkaisen.item.Test2Item;
 import net.mcreator.craftkaisen.item.TesItem;
+import net.mcreator.craftkaisen.item.TalismanItem;
 import net.mcreator.craftkaisen.item.SunglassesItem;
 import net.mcreator.craftkaisen.item.SukunaFightingArmorItem;
 import net.mcreator.craftkaisen.item.StopItem;
@@ -117,6 +118,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> ESO_ARMOR_CHESTPLATE = REGISTRY.register("eso_armor_chestplate", () -> new EsoArmorItem.Chestplate());
 	public static final RegistryObject<Item> ESO_ARMOR_LEGGINGS = REGISTRY.register("eso_armor_leggings", () -> new EsoArmorItem.Leggings());
 	public static final RegistryObject<Item> ESO_SPAWN_EGG = REGISTRY.register("eso_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.ESO, -6790332, -14532754, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> CURSED_TOOL_TABLE = block(CraftkaisenModBlocks.CURSED_TOOL_TABLE, CraftkaisenModTabs.TAB_JJKITEMS);
+	public static final RegistryObject<Item> TALISMAN = REGISTRY.register("talisman", () -> new TalismanItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
