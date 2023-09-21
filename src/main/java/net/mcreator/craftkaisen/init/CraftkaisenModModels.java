@@ -17,6 +17,11 @@ import net.mcreator.craftkaisen.client.model.Modelsukunafightingchestplate;
 import net.mcreator.craftkaisen.client.model.Modelsukunafacemark;
 import net.mcreator.craftkaisen.client.model.Modelsixeyes;
 import net.mcreator.craftkaisen.client.model.Modelroppongicursedspirit;
+import net.mcreator.craftkaisen.client.model.Modelprisonrealmmob;
+import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornewagain;
+import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornew;
+import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmor;
+import net.mcreator.craftkaisen.client.model.Modelprisonbox;
 import net.mcreator.craftkaisen.client.model.Modelmetalbat;
 import net.mcreator.craftkaisen.client.model.Modelmegumihair;
 import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
@@ -54,11 +59,14 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modeltoji_curse.LAYER_LOCATION, Modeltoji_curse::createBodyLayer);
 		event.registerLayerDefinition(Modelgetorobes.LAYER_LOCATION, Modelgetorobes::createBodyLayer);
 		event.registerLayerDefinition(Modelfist.LAYER_LOCATION, Modelfist::createBodyLayer);
+		event.registerLayerDefinition(Modelprisonrealmarmor.LAYER_LOCATION, Modelprisonrealmarmor::createBodyLayer);
 		event.registerLayerDefinition(Modelsixeyes.LAYER_LOCATION, Modelsixeyes::createBodyLayer);
 		event.registerLayerDefinition(Modelmetalbat.LAYER_LOCATION, Modelmetalbat::createBodyLayer);
 		event.registerLayerDefinition(Modelgojopants.LAYER_LOCATION, Modelgojopants::createBodyLayer);
 		event.registerLayerDefinition(Modelcurse_1.LAYER_LOCATION, Modelcurse_1::createBodyLayer);
+		event.registerLayerDefinition(Modelprisonbox.LAYER_LOCATION, Modelprisonbox::createBodyLayer);
 		event.registerLayerDefinition(Modelmalevolentshrine.LAYER_LOCATION, Modelmalevolentshrine::createBodyLayer);
+		event.registerLayerDefinition(Modelprisonrealmmob.LAYER_LOCATION, Modelprisonrealmmob::createBodyLayer);
 		event.registerLayerDefinition(Modelsukunafightingchestplate.LAYER_LOCATION, Modelsukunafightingchestplate::createBodyLayer);
 		event.registerLayerDefinition(Modelmegumihair.LAYER_LOCATION, Modelmegumihair::createBodyLayer);
 		event.registerLayerDefinition(Modelgetosandalsnew.LAYER_LOCATION, Modelgetosandalsnew::createBodyLayer);
@@ -85,6 +93,8 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
 		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurple.LAYER_LOCATION, Modelhollowpurple::createBodyLayer);
+		event.registerLayerDefinition(Modelprisonrealmarmornew.LAYER_LOCATION, Modelprisonrealmarmornew::createBodyLayer);
+		event.registerLayerDefinition(Modelprisonrealmarmornewagain.LAYER_LOCATION, Modelprisonrealmarmornewagain::createBodyLayer);
 		event.registerLayerDefinition(Modelroppongicursedspirit.LAYER_LOCATION, Modelroppongicursedspirit::createBodyLayer);
 	}
 }

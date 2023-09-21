@@ -26,6 +26,12 @@ import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
 import net.mcreator.craftkaisen.potion.RepeatedSlicingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.PrisonBoxSealedMobEffect;
+import net.mcreator.craftkaisen.potion.PrisonBoxReadyNewMobEffect;
+import net.mcreator.craftkaisen.potion.PrisonBoxReadyMobEffect;
+import net.mcreator.craftkaisen.potion.PrisonBoxReadyFinalMobEffect;
+import net.mcreator.craftkaisen.potion.PrisonBoxEffectMobEffect;
+import net.mcreator.craftkaisen.potion.PrisonBoxAffectMobEffect;
 import net.mcreator.craftkaisen.potion.MoveUltimateCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MoveSpecialCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.Move5CooldownMobEffect;
@@ -92,4 +98,10 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> SKY_OF_FLAMES = REGISTRY.register("sky_of_flames", () -> new SkyOfFlamesMobEffect());
 	public static final RegistryObject<MobEffect> IDLE_TRANSFIGURATION = REGISTRY.register("idle_transfiguration", () -> new IdleTransfigurationMobEffect());
 	public static final RegistryObject<MobEffect> REPEATED_SLICING = REGISTRY.register("repeated_slicing", () -> new RepeatedSlicingMobEffect());
+	public static final RegistryObject<MobEffect> PRISON_BOX_READY = REGISTRY.register("prison_box_ready", () -> new PrisonBoxReadyMobEffect());
+	public static final RegistryObject<MobEffect> PRISON_BOX_READY_NEW = REGISTRY.register("prison_box_ready_new", () -> new PrisonBoxReadyNewMobEffect());
+	public static final RegistryObject<MobEffect> PRISON_BOX_AFFECT = REGISTRY.register("prison_box_affect", () -> new PrisonBoxAffectMobEffect());
+	public static final RegistryObject<MobEffect> PRISON_BOX_EFFECT = REGISTRY.register("prison_box_effect", () -> new PrisonBoxEffectMobEffect());
+	public static final RegistryObject<MobEffect> PRISON_BOX_SEALED = REGISTRY.register("prison_box_sealed", () -> new PrisonBoxSealedMobEffect());
+	public static final RegistryObject<MobEffect> PRISON_BOX_READY_FINAL = REGISTRY.register("prison_box_ready_final", () -> new PrisonBoxReadyFinalMobEffect());
 }
