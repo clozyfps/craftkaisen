@@ -24,6 +24,8 @@ import net.mcreator.craftkaisen.item.SunglassesItem;
 import net.mcreator.craftkaisen.item.SukunaFightingArmorItem;
 import net.mcreator.craftkaisen.item.StopItem;
 import net.mcreator.craftkaisen.item.SleepItem;
+import net.mcreator.craftkaisen.item.PrisonRealmBoxItem;
+import net.mcreator.craftkaisen.item.PrisonRealmArmorItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.MagmaRockProjectileItem;
@@ -121,6 +123,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> MAHITO_SPAWN_EGG = REGISTRY.register("mahito_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.MAHITO, -14670799, -2621953, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> CURSED_TOOL_TABLE = block(CraftkaisenModBlocks.CURSED_TOOL_TABLE, CraftkaisenModTabs.TAB_JJKITEMS);
 	public static final RegistryObject<Item> TALISMAN = REGISTRY.register("talisman", () -> new TalismanItem());
+	public static final RegistryObject<Item> PRISON_REALM_BOX = REGISTRY.register("prison_realm_box", () -> new PrisonRealmBoxItem());
+	public static final RegistryObject<Item> PRISON_REALM_ARMOR_CHESTPLATE = REGISTRY.register("prison_realm_armor_chestplate", () -> new PrisonRealmArmorItem.Chestplate());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

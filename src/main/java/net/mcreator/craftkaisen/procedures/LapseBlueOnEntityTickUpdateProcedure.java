@@ -64,8 +64,6 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 						entityiterator.getPersistentData().putBoolean("aoe", true);
 						entityiterator.getPersistentData().putBoolean("guardbreaks", true);
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 0.2, 2, 0.2, 0);
-						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.POOF, x, y, z, 2, 0.2, 2, 0.2, 0);
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
