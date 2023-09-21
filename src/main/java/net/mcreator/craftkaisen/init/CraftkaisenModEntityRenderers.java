@@ -15,7 +15,6 @@ import net.mcreator.craftkaisen.client.renderer.UnknownManRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
-import net.mcreator.craftkaisen.client.renderer.PrisonBoxMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
@@ -84,6 +83,5 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.ESO.get(), EsoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO.get(), MahitoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO_SPIKE.get(), MahitoSpikeRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.PRISON_BOX_MOB.get(), PrisonBoxMobRenderer::new);
 	}
 }
