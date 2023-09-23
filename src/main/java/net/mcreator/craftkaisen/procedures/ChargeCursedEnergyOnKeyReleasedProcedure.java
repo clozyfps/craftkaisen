@@ -1,11 +1,10 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 
 public class ChargeCursedEnergyOnKeyReleasedProcedure {
 	public static void execute(Entity entity) {
@@ -18,12 +17,7 @@ public class ChargeCursedEnergyOnKeyReleasedProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		{
-			Entity _ent = entity;
-			if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-				_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4,
-						_ent.getName().getString(), _ent.getDisplayName(), _ent.level.getServer(), _ent), "effect clear @s craftkaisen:charge_ce_effect");
-			}
-		}
+		if (entity instanceof LivingEntity _entity)
+			_entity.removeEffect(CraftkaisenModMobEffects.CHARGE_CE_EFFECT.get());
 	}
 }

@@ -75,7 +75,6 @@ public class CraftkaisenModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.AgilityTree = original.AgilityTree;
 			clone.BlackFlash = original.BlackFlash;
-			clone.Clan = original.Clan;
 			clone.Cost = original.Cost;
 			clone.CursedEnergyCap = original.CursedEnergyCap;
 			clone.CursedEnergyChargeSpeed = original.CursedEnergyChargeSpeed;
@@ -95,20 +94,6 @@ public class CraftkaisenModVariables {
 			clone.JoinsWorld = original.JoinsWorld;
 			clone.Level = original.Level;
 			clone.Mentor = original.Mentor;
-			clone.Move1 = original.Move1;
-			clone.Move1Cost = original.Move1Cost;
-			clone.Move2 = original.Move2;
-			clone.Move2Cost = original.Move2Cost;
-			clone.Move3 = original.Move3;
-			clone.Move3Cost = original.Move3Cost;
-			clone.Move4 = original.Move4;
-			clone.Move4Cost = original.Move4Cost;
-			clone.Move5 = original.Move5;
-			clone.Move5Cost = original.Move5Cost;
-			clone.MoveSpecial = original.MoveSpecial;
-			clone.MoveSpecialCost = original.MoveSpecialCost;
-			clone.MoveUltimate = original.MoveUltimate;
-			clone.MoveUltimateCost = original.MoveUltimateCost;
 			clone.PartyLeader = original.PartyLeader;
 			clone.PowerTree = original.PowerTree;
 			clone.Prestige = original.Prestige;
@@ -136,9 +121,6 @@ public class CraftkaisenModVariables {
 			clone.Slot11 = original.Slot11;
 			clone.Technique = original.Technique;
 			clone.TechniqueSwitch = original.TechniqueSwitch;
-			clone.Vessel = original.Vessel;
-			clone.VesselPlayerTechnique = original.VesselPlayerTechnique;
-			clone.VesselTechnique = original.VesselTechnique;
 			clone.VowsEnabled = original.VowsEnabled;
 			clone.PowerSecondaryTree = original.PowerSecondaryTree;
 			clone.DefenseSecondaryTree = original.DefenseSecondaryTree;
@@ -219,9 +201,6 @@ public class CraftkaisenModVariables {
 		public static final String DATA_NAME = "craftkaisen_mapvars";
 		public double FingersEaten = 0;
 		public String ReincarnatedPlayer = "\"\"";
-		public boolean VesselFirstEnter = false;
-		public boolean VesselFound = false;
-		public String VesselPlayer = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -232,18 +211,12 @@ public class CraftkaisenModVariables {
 		public void read(CompoundTag nbt) {
 			FingersEaten = nbt.getDouble("FingersEaten");
 			ReincarnatedPlayer = nbt.getString("ReincarnatedPlayer");
-			VesselFirstEnter = nbt.getBoolean("VesselFirstEnter");
-			VesselFound = nbt.getBoolean("VesselFound");
-			VesselPlayer = nbt.getString("VesselPlayer");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putDouble("FingersEaten", FingersEaten);
 			nbt.putString("ReincarnatedPlayer", ReincarnatedPlayer);
-			nbt.putBoolean("VesselFirstEnter", VesselFirstEnter);
-			nbt.putBoolean("VesselFound", VesselFound);
-			nbt.putString("VesselPlayer", VesselPlayer);
 			return nbt;
 		}
 
@@ -336,7 +309,6 @@ public class CraftkaisenModVariables {
 		public boolean BlackFlash = false;
 		public boolean Charging = false;
 		public boolean Checked = false;
-		public String Clan = "";
 		public double Cost = 0;
 		public double CursedEnergy = 0;
 		public double CursedEnergyCap = 0;
@@ -360,20 +332,6 @@ public class CraftkaisenModVariables {
 		public boolean JoinsWorld = false;
 		public double Level = 0;
 		public String Mentor = "\"\"";
-		public String Move1 = "\"\"";
-		public double Move1Cost = 0;
-		public String Move2 = "\"\"";
-		public double Move2Cost = 0;
-		public String Move3 = "\"\"";
-		public double Move3Cost = 0;
-		public String Move4 = "\"\"";
-		public double Move4Cost = 0;
-		public String Move5 = "\"\"";
-		public double Move5Cost = 0;
-		public String MoveSpecial = "\"\"";
-		public double MoveSpecialCost = 0.0;
-		public String MoveUltimate = "\"\"";
-		public double MoveUltimateCost = 0;
 		public String PartyLeader = "";
 		public double PowerTree = 0;
 		public double Prestige = 0;
@@ -403,9 +361,6 @@ public class CraftkaisenModVariables {
 		public ItemStack Slot11 = ItemStack.EMPTY;
 		public String Technique = "";
 		public double TechniqueSwitch = 0;
-		public String Vessel = "\"\"";
-		public String VesselPlayerTechnique = "\"\"";
-		public String VesselTechnique = "\"\"";
 		public String VowDescription = "";
 		public boolean VowsEnabled = true;
 		public String VowSender = "\"\"";
@@ -426,7 +381,6 @@ public class CraftkaisenModVariables {
 			nbt.putBoolean("BlackFlash", BlackFlash);
 			nbt.putBoolean("Charging", Charging);
 			nbt.putBoolean("Checked", Checked);
-			nbt.putString("Clan", Clan);
 			nbt.putDouble("Cost", Cost);
 			nbt.putDouble("CursedEnergy", CursedEnergy);
 			nbt.putDouble("CursedEnergyCap", CursedEnergyCap);
@@ -450,20 +404,6 @@ public class CraftkaisenModVariables {
 			nbt.putBoolean("JoinsWorld", JoinsWorld);
 			nbt.putDouble("Level", Level);
 			nbt.putString("Mentor", Mentor);
-			nbt.putString("Move1", Move1);
-			nbt.putDouble("Move1Cost", Move1Cost);
-			nbt.putString("Move2", Move2);
-			nbt.putDouble("Move2Cost", Move2Cost);
-			nbt.putString("Move3", Move3);
-			nbt.putDouble("Move3Cost", Move3Cost);
-			nbt.putString("Move4", Move4);
-			nbt.putDouble("Move4Cost", Move4Cost);
-			nbt.putString("Move5", Move5);
-			nbt.putDouble("Move5Cost", Move5Cost);
-			nbt.putString("MoveSpecial", MoveSpecial);
-			nbt.putDouble("MoveSpecialCost", MoveSpecialCost);
-			nbt.putString("MoveUltimate", MoveUltimate);
-			nbt.putDouble("MoveUltimateCost", MoveUltimateCost);
 			nbt.putString("PartyLeader", PartyLeader);
 			nbt.putDouble("PowerTree", PowerTree);
 			nbt.putDouble("Prestige", Prestige);
@@ -493,9 +433,6 @@ public class CraftkaisenModVariables {
 			nbt.put("Slot11", Slot11.save(new CompoundTag()));
 			nbt.putString("Technique", Technique);
 			nbt.putDouble("TechniqueSwitch", TechniqueSwitch);
-			nbt.putString("Vessel", Vessel);
-			nbt.putString("VesselPlayerTechnique", VesselPlayerTechnique);
-			nbt.putString("VesselTechnique", VesselTechnique);
 			nbt.putString("VowDescription", VowDescription);
 			nbt.putBoolean("VowsEnabled", VowsEnabled);
 			nbt.putString("VowSender", VowSender);
@@ -513,7 +450,6 @@ public class CraftkaisenModVariables {
 			BlackFlash = nbt.getBoolean("BlackFlash");
 			Charging = nbt.getBoolean("Charging");
 			Checked = nbt.getBoolean("Checked");
-			Clan = nbt.getString("Clan");
 			Cost = nbt.getDouble("Cost");
 			CursedEnergy = nbt.getDouble("CursedEnergy");
 			CursedEnergyCap = nbt.getDouble("CursedEnergyCap");
@@ -537,20 +473,6 @@ public class CraftkaisenModVariables {
 			JoinsWorld = nbt.getBoolean("JoinsWorld");
 			Level = nbt.getDouble("Level");
 			Mentor = nbt.getString("Mentor");
-			Move1 = nbt.getString("Move1");
-			Move1Cost = nbt.getDouble("Move1Cost");
-			Move2 = nbt.getString("Move2");
-			Move2Cost = nbt.getDouble("Move2Cost");
-			Move3 = nbt.getString("Move3");
-			Move3Cost = nbt.getDouble("Move3Cost");
-			Move4 = nbt.getString("Move4");
-			Move4Cost = nbt.getDouble("Move4Cost");
-			Move5 = nbt.getString("Move5");
-			Move5Cost = nbt.getDouble("Move5Cost");
-			MoveSpecial = nbt.getString("MoveSpecial");
-			MoveSpecialCost = nbt.getDouble("MoveSpecialCost");
-			MoveUltimate = nbt.getString("MoveUltimate");
-			MoveUltimateCost = nbt.getDouble("MoveUltimateCost");
 			PartyLeader = nbt.getString("PartyLeader");
 			PowerTree = nbt.getDouble("PowerTree");
 			Prestige = nbt.getDouble("Prestige");
@@ -580,9 +502,6 @@ public class CraftkaisenModVariables {
 			Slot11 = ItemStack.of(nbt.getCompound("Slot11"));
 			Technique = nbt.getString("Technique");
 			TechniqueSwitch = nbt.getDouble("TechniqueSwitch");
-			Vessel = nbt.getString("Vessel");
-			VesselPlayerTechnique = nbt.getString("VesselPlayerTechnique");
-			VesselTechnique = nbt.getString("VesselTechnique");
 			VowDescription = nbt.getString("VowDescription");
 			VowsEnabled = nbt.getBoolean("VowsEnabled");
 			VowSender = nbt.getString("VowSender");
@@ -619,7 +538,6 @@ public class CraftkaisenModVariables {
 					variables.BlackFlash = message.data.BlackFlash;
 					variables.Charging = message.data.Charging;
 					variables.Checked = message.data.Checked;
-					variables.Clan = message.data.Clan;
 					variables.Cost = message.data.Cost;
 					variables.CursedEnergy = message.data.CursedEnergy;
 					variables.CursedEnergyCap = message.data.CursedEnergyCap;
@@ -643,20 +561,6 @@ public class CraftkaisenModVariables {
 					variables.JoinsWorld = message.data.JoinsWorld;
 					variables.Level = message.data.Level;
 					variables.Mentor = message.data.Mentor;
-					variables.Move1 = message.data.Move1;
-					variables.Move1Cost = message.data.Move1Cost;
-					variables.Move2 = message.data.Move2;
-					variables.Move2Cost = message.data.Move2Cost;
-					variables.Move3 = message.data.Move3;
-					variables.Move3Cost = message.data.Move3Cost;
-					variables.Move4 = message.data.Move4;
-					variables.Move4Cost = message.data.Move4Cost;
-					variables.Move5 = message.data.Move5;
-					variables.Move5Cost = message.data.Move5Cost;
-					variables.MoveSpecial = message.data.MoveSpecial;
-					variables.MoveSpecialCost = message.data.MoveSpecialCost;
-					variables.MoveUltimate = message.data.MoveUltimate;
-					variables.MoveUltimateCost = message.data.MoveUltimateCost;
 					variables.PartyLeader = message.data.PartyLeader;
 					variables.PowerTree = message.data.PowerTree;
 					variables.Prestige = message.data.Prestige;
@@ -686,9 +590,6 @@ public class CraftkaisenModVariables {
 					variables.Slot11 = message.data.Slot11;
 					variables.Technique = message.data.Technique;
 					variables.TechniqueSwitch = message.data.TechniqueSwitch;
-					variables.Vessel = message.data.Vessel;
-					variables.VesselPlayerTechnique = message.data.VesselPlayerTechnique;
-					variables.VesselTechnique = message.data.VesselTechnique;
 					variables.VowDescription = message.data.VowDescription;
 					variables.VowsEnabled = message.data.VowsEnabled;
 					variables.VowSender = message.data.VowSender;

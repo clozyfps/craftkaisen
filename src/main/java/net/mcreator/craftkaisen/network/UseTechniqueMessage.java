@@ -52,7 +52,7 @@ public class UseTechniqueMessage {
 			return;
 		if (type == 0) {
 
-			UseTechniqueOnKeyPressedProcedure.execute(world, x, y, z, entity);
+			UseTechniqueOnKeyPressedProcedure.execute();
 		}
 	}
 

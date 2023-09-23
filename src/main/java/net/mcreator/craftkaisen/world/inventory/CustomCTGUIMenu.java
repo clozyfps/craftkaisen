@@ -13,13 +13,14 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftkaisen.procedures.OpenCTGUIIfClosedProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModMenus;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class MainMenuMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class CustomCTGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -28,8 +29,8 @@ public class MainMenuMenu extends AbstractContainerMenu implements Supplier<Map<
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public MainMenuMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(CraftkaisenModMenus.MAIN_MENU.get(), id);
+	public CustomCTGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(CraftkaisenModMenus.CUSTOM_CTGUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);
@@ -50,6 +51,12 @@ public class MainMenuMenu extends AbstractContainerMenu implements Supplier<Map<
 	@Override
 	public ItemStack quickMoveStack(Player playerIn, int index) {
 		return ItemStack.EMPTY;
+	}
+
+	@Override
+	public void removed(Player playerIn) {
+		super.removed(playerIn);
+		OpenCTGUIIfClosedProcedure.execute(world, x, y, z, entity);
 	}
 
 	public Map<Integer, Slot> get() {

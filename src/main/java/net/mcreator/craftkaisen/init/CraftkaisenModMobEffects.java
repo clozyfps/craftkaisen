@@ -11,7 +11,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.craftkaisen.potion.WeaponCooldownMobEffect;
-import net.mcreator.craftkaisen.potion.VesselPotionEffectMobEffect;
 import net.mcreator.craftkaisen.potion.VesselCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.TwistingMobEffect;
 import net.mcreator.craftkaisen.potion.ToughBodyMobEffect;
@@ -80,7 +79,6 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> RCT_HEALING = REGISTRY.register("rct_healing", () -> new RCTHealingMobEffect());
 	public static final RegistryObject<MobEffect> MASTERED_RCT_HEALING = REGISTRY.register("mastered_rct_healing", () -> new MasteredRCTHealingMobEffect());
 	public static final RegistryObject<MobEffect> RCT_COOLDOWN = REGISTRY.register("rct_cooldown", () -> new RCTCooldownMobEffect());
-	public static final RegistryObject<MobEffect> VESSEL_POTION_EFFECT = REGISTRY.register("vessel_potion_effect", () -> new VesselPotionEffectMobEffect());
 	public static final RegistryObject<MobEffect> VESSEL_COOLDOWN = REGISTRY.register("vessel_cooldown", () -> new VesselCooldownMobEffect());
 	public static final RegistryObject<MobEffect> EMBER_CONTROL = REGISTRY.register("ember_control", () -> new EmberControlMobEffect());
 	public static final RegistryObject<MobEffect> EMBER_FLOOR = REGISTRY.register("ember_floor", () -> new EmberFloorMobEffect());

@@ -33,9 +33,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onFinishUsingItem": {
-      "name": "EatCursedFinger"
-    },
     "isFood": true,
     "nutritionalValue": 1,
     "saturation": 0.0,

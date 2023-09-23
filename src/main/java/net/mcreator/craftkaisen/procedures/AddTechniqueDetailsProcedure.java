@@ -7,7 +7,6 @@ import net.minecraftforge.client.event.RenderLivingEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
@@ -17,12 +16,9 @@ import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.client.model.Modeltoji_curse;
-import net.mcreator.craftkaisen.client.model.Modelsukunafacemark;
 import net.mcreator.craftkaisen.client.model.Modeljogo;
-import net.mcreator.craftkaisen.client.model.ModelGoddessClanWings;
 
 import javax.annotation.Nullable;
 
@@ -62,15 +58,6 @@ public class AddTechniqueDetailsProcedure {
 						.render((Mob) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.VESSEL_POTION_EFFECT.get()) : false) {
-			if (_evt.getRenderer() instanceof PlayerRenderer) {
-				if (_evt instanceof RenderLivingEvent.Pre) {
-					// _evt.setCanceled(true);
-				}
-				new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("craftkaisen:textures/entities/sukunafacemark.png"), new Modelsukunafacemark(context.bakeLayer(Modelsukunafacemark.LAYER_LOCATION)))
-						.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
-			}
-		}
 		if (entity.getPersistentData().getBoolean("jogomodel")) {
 			if (_evt.getRenderer() instanceof PlayerRenderer) {
 				if (_evt instanceof RenderLivingEvent.Pre) {
@@ -86,15 +73,6 @@ public class AddTechniqueDetailsProcedure {
 					_evt.setCanceled(true);
 				}
 				new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("craftkaisen:textures/entities/jogo.png"), new Modeljogo(context.bakeLayer(Modeljogo.LAYER_LOCATION)))
-						.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
-			}
-		}
-		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).SelectedTechnique).equals("Bird Wings")) {
-			if (_evt.getRenderer() instanceof PlayerRenderer) {
-				if (_evt instanceof RenderLivingEvent.Pre) {
-					// _evt.setCanceled(true);
-				}
-				new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("craftkaisen:textures/entities/goddess_clan_wings.png"), new ModelGoddessClanWings(context.bakeLayer(ModelGoddessClanWings.LAYER_LOCATION)))
 						.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
 			}
 		}
