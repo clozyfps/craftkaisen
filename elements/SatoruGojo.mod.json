@@ -36,7 +36,7 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:Sunglasses.helmet"
+      "value": "CUSTOM:BandageBlindfold.helmet"
     },
     "equipmentBody": {
       "value": "CUSTOM:GojoUniform.body"
@@ -51,7 +51,7 @@
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 35,
     "attackKnockback": 4.0,
-    "knockbackResistance": 2.0,
+    "knockbackResistance": 0.3,
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
     "armorBaseValue": 0.8,
@@ -95,6 +95,9 @@
     },
     "stepSound": {
       "value": ""
+    },
+    "whenMobIsHurt": {
+      "name": "SatoruGojoEntityIsHurt"
     },
     "onRightClickedOn": {
       "name": "SatoruGojoRightClickedOnEntity"

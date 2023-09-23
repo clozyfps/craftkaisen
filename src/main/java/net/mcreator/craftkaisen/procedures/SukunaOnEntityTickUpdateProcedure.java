@@ -7,9 +7,12 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
@@ -17,6 +20,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.stream.Collectors;
 import java.util.List;
@@ -82,6 +90,36 @@ public class SukunaOnEntityTickUpdateProcedure {
 				}
 				if (entity instanceof LivingEntity _entity)
 					_entity.swing(InteractionHand.MAIN_HAND, true);
+			}
+			if (Math.random() < 0.0009) {
+				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 400) {
+					{
+						final Vec3 _center = new Vec3(x, y, z);
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(30 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+								.collect(Collectors.toList());
+						for (Entity entityiterator : _entfound) {
+							if (!(entity == entityiterator)) {
+								entityiterator.getPersistentData().putBoolean("aoe", true);
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+									_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 17, 1, false, false));
+							}
+						}
+					}
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.SHRINE.get(), 300, 1, false, false));
+					CraftkaisenMod.queueServerWork(20, () -> {
+						if (world instanceof ServerLevel _level) {
+							Entity entityToSpawn = new MalevolentShrineEntity(CraftkaisenModEntities.MALEVOLENT_SHRINE.get(), _level);
+							entityToSpawn.moveTo(x, y, z, 0, 0);
+							entityToSpawn.setYBodyRot(0);
+							entityToSpawn.setYHeadRot(0);
+							entityToSpawn.setDeltaMovement(0, 0, 0);
+							if (entityToSpawn instanceof Mob _mobToSpawn)
+								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+							world.addFreshEntity(entityToSpawn);
+						}
+					});
+				}
 			}
 		}
 	}

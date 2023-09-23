@@ -1506,26 +1506,6 @@
       "path": "~/Functions"
     },
     {
-      "name": "RemoveWeaponRestriction",
-      "type": "procedure",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "remove_weapon_restriction",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RemoveWeaponRestrictionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "InvertedSpearOfHeavenProcedure",
       "type": "procedure",
       "sortid": 82,
@@ -4073,30 +4053,6 @@
       "path": "~/Items"
     },
     {
-      "name": "EatCursedFinger",
-      "type": "procedure",
-      "sortid": 182,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "eat_cursed_finger",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EatCursedFingerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Items/Procedures"
-    },
-    {
       "name": "TesRightclicked",
       "type": "procedure",
       "sortid": 184,
@@ -5090,42 +5046,6 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "SwitchMovesetPressed",
-      "type": "procedure",
-      "sortid": 226,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_moveset_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SwitchMovesetPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures"
-    },
-    {
       "name": "Jogo",
       "type": "livingentity",
       "sortid": 237,
@@ -5141,20 +5061,6 @@
         ]
       },
       "path": "~/Mobs"
-    },
-    {
-      "name": "SwitchMoveset",
-      "type": "keybind",
-      "sortid": 225,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_moveset",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/SwitchMovesetMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
     },
     {
       "name": "MasteredRCTHealing",
@@ -5731,55 +5637,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "MainVesselCommand",
-      "type": "procedure",
-      "sortid": 241,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "main_vessel_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MainVesselCommandProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "Move1CDDisplay",
-      "type": "procedure",
-      "sortid": 281,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_1_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move1CDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "Test",
       "type": "procedure",
       "sortid": 240,
@@ -5804,48 +5661,6 @@
       "path": "~/Commands/Procedures"
     },
     {
-      "name": "MoveSpecialDisplay",
-      "type": "procedure",
-      "sortid": 293,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_special_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveSpecialDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveUltimateCDDisplay",
-      "type": "procedure",
-      "sortid": 287,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_ultimate_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveUltimateCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "VesselCommand",
       "type": "command",
       "sortid": 237,
@@ -5860,69 +5675,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "Move3CDDisplay",
-      "type": "procedure",
-      "sortid": 283,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_3_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move3CDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "Move1Display",
-      "type": "procedure",
-      "sortid": 288,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_1_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move1DisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "Move3Display",
-      "type": "procedure",
-      "sortid": 290,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_3_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move3DisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "CkCustomVessel",
       "type": "gamerule",
       "sortid": 238,
@@ -5934,72 +5686,6 @@
         "type": "logic"
       },
       "path": "~/Gamerules"
-    },
-    {
-      "name": "VesselPotionEffectEffectExpires",
-      "type": "procedure",
-      "sortid": 244,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vessel_potion_effect_effect_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VesselPotionEffectEffectExpiresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "Move4CDDisplay",
-      "type": "procedure",
-      "sortid": 284,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_4_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move4CDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveSpecialCDDisplay",
-      "type": "procedure",
-      "sortid": 286,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_special_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveSpecialCDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
     },
     {
       "name": "SPDisplay",
@@ -6055,69 +5741,6 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "Move5CDDisplay",
-      "type": "procedure",
-      "sortid": 285,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_5_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move5CDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "Move5Display",
-      "type": "procedure",
-      "sortid": 292,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_5_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move5DisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "Move4Display",
-      "type": "procedure",
-      "sortid": 291,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_4_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move4DisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
       "name": "DisplayDefenseCost",
       "type": "procedure",
       "sortid": 271,
@@ -6151,83 +5774,6 @@
         ]
       },
       "path": "~/Commands"
-    },
-    {
-      "name": "Move2Display",
-      "type": "procedure",
-      "sortid": 289,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_2_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move2DisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "MoveUltimateDisplay",
-      "type": "procedure",
-      "sortid": 294,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_ultimate_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MoveUltimateDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "Move2CDDisplay",
-      "type": "procedure",
-      "sortid": 282,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "move_2_cd_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/Move2CDDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "VesselPotionEffect",
-      "type": "potioneffect",
-      "sortid": 242,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vessel_potion_effect",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/VesselPotionEffectMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
     },
     {
       "name": "EmberInsectOnEntityTickUpdate",
@@ -8247,42 +7793,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "PlayerKill",
-      "type": "procedure",
-      "sortid": 357,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_kill",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PlayerKillProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "InventoryCurseGUI",
       "type": "gui",
       "sortid": 358,
@@ -9626,174 +9136,6 @@
       "path": "~/Mobs/Procedures"
     },
     {
-      "name": "Limitless",
-      "type": "procedure",
-      "sortid": 393,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "limitless",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Movesets"
-    },
-    {
-      "name": "Boogie",
-      "type": "procedure",
-      "sortid": 395,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "boogie",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BoogieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Movesets"
-    },
-    {
-      "name": "Flames",
-      "type": "procedure",
-      "sortid": 396,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flames",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/FlamesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Movesets"
-    },
-    {
-      "name": "Plants",
-      "type": "procedure",
-      "sortid": 398,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "plants",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PlantsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Movesets"
-    },
-    {
-      "name": "Voice",
-      "type": "procedure",
-      "sortid": 394,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "voice",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/VoiceProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Movesets"
-    },
-    {
       "name": "Sukuna",
       "type": "livingentity",
       "sortid": 404,
@@ -10104,6 +9446,1133 @@
       "path": "~/Mobs"
     },
     {
+      "name": "BigFistOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 423,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MahitoOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 460,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "OpenCTGUIIfClosed",
+      "type": "procedure",
+      "sortid": 463,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_ctgui_if_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenCTGUIIfClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ApplySecondaryTreeBuff",
+      "type": "procedure",
+      "sortid": 440,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apply_secondary_tree_buff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ApplySecondaryTreeBuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SealPressed",
+      "type": "procedure",
+      "sortid": 458,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "seal_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SealPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SpikeFistProcedure",
+      "type": "procedure",
+      "sortid": 435,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spike_fist_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SpikeFistProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "RepeatingSlicesProcedure",
+      "type": "procedure",
+      "sortid": 433,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeating_slices_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RepeatingSlicesProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "FingerBearerKill",
+      "type": "procedure",
+      "sortid": 479,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finger_bearer_kill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FingerBearerKillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FireArrowOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 437,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FireArrowOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "OpenSwordCreatorGUI",
+      "type": "procedure",
+      "sortid": 450,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_sword_creator_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenSwordCreatorGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "RepeatedSlicingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 431,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeated_slicing_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RepeatedSlicingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "DisplayCost",
+      "type": "procedure",
+      "sortid": 445,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "TalismanGUI",
+      "type": "gui",
+      "sortid": 457,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talisman_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/TalismanGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/TalismanGUIButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/TalismanGUIScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "SpecialGrade",
+      "type": "achievement",
+      "sortid": 478,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "special_grade",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/special_grade.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "RepeatedSlicing",
+      "type": "potioneffect",
+      "sortid": 432,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "repeated_slicing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/RepeatedSlicingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "PlusPressed",
+      "type": "procedure",
+      "sortid": 451,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plus_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlusPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "SetSPCommand",
+      "type": "command",
+      "sortid": 441,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sp_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetSPCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "PressedMinus",
+      "type": "procedure",
+      "sortid": 452,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressed_minus",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PressedMinusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "BigFist",
+      "type": "livingentity",
+      "sortid": 422,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/BigFistRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/BigFistEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "DisplayAmount",
+      "type": "procedure",
+      "sortid": 448,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_amount",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayAmountProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "ApplySkillTreeBuff",
+      "type": "procedure",
+      "sortid": 439,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "apply_skill_tree_buff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ApplySkillTreeBuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Talisman",
+      "type": "item",
+      "sortid": 453,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talisman",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/TalismanItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/talisman.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "SwordCreator",
+      "type": "gui",
+      "sortid": 444,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sword_creator",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/SwordCreatorMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/SwordCreatorScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/SwordCreatorButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "MahitoSpike",
+      "type": "livingentity",
+      "sortid": 441,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_spike",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MahitoSpikeRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/MahitoSpikeEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "EsoOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 434,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eso_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EsoOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "IdleTransfigurationOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 429,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idle_transfiguration_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/IdleTransfigurationOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "DIsplayV",
+      "type": "procedure",
+      "sortid": 447,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "d_isplay_v",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DIsplayVProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "CustomCTGUI",
+      "type": "gui",
+      "sortid": 461,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "custom_ctgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/CustomCTGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/CustomCTGUIScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "MahitoSpikeOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 442,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_spike_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoSpikeOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Grade1",
+      "type": "achievement",
+      "sortid": 477,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grade_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/grade_1.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "BigFistTick",
+      "type": "procedure",
+      "sortid": 425,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Grade2",
+      "type": "achievement",
+      "sortid": 444,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grade_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/grade_2.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "SatoruGojoEntityIsHurt",
+      "type": "procedure",
+      "sortid": 438,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "satoru_gojo_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SatoruGojoEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "MissionDamage",
+      "type": "procedure",
+      "sortid": 443,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mission_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MissionDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MahitoOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 459,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SemiGrade1",
+      "type": "achievement",
+      "sortid": 476,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "semi_grade_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/semi_grade_1.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "TalismanEffect",
+      "type": "procedure",
+      "sortid": 455,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "talisman_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TalismanEffectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "OpenTalismanGUI",
+      "type": "procedure",
+      "sortid": 456,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_talisman_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenTalismanGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "CursedToolTable",
+      "type": "block",
+      "sortid": 443,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_tool_table",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/blockstates/cursed_tool_table.json",
+          "src/main/java/net/mcreator/craftkaisen/block/CursedToolTableBlock.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursed_tool_table.json",
+          "src/main/resources/assets/craftkaisen/models/block/cursed_tool_table.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "DisplayGlow",
+      "type": "procedure",
+      "sortid": 454,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_glow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayGlowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/Values"
+    },
+    {
+      "name": "SetSP",
+      "type": "procedure",
+      "sortid": 442,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetTransfiguration",
+      "type": "procedure",
+      "sortid": 427,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_transfiguration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetTransfigurationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "BigFistOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "DIsplayError",
+      "type": "procedure",
+      "sortid": 446,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "d_isplay_error",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DIsplayErrorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "CreatePressed",
+      "type": "procedure",
+      "sortid": 449,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CreatePressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "TechniqueTick",
+      "type": "procedure",
+      "sortid": 428,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technique_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TechniqueTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BasesGUI",
+      "type": "gui",
+      "sortid": 462,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bases_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/BasesGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/BasesGUIMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "IdleTransfiguration",
+      "type": "potioneffect",
+      "sortid": 430,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "idle_transfiguration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/IdleTransfigurationMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "BigFistProcedure",
+      "type": "procedure",
+      "sortid": 424,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "big_fist_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BigFistProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "MahitoSpikeOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 440,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mahito_spike_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MahitoSpikeOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
       "name": "Mahito",
       "type": "livingentity",
       "sortid": 423,
@@ -10145,12 +10614,6 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
-    },
-    {
-      "name": "Clan",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": ""
     },
     {
       "name": "Cost",
@@ -10295,90 +10758,6 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
-    },
-    {
-      "name": "Move1",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move1Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move2",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move2Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move3",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move3Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move4",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move4Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move5",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move5Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "MoveSpecial",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "MoveSpecialCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
-    },
-    {
-      "name": "MoveUltimate",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "MoveUltimateCost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "PartyLeader",
@@ -10561,42 +10940,6 @@
       "value": "0"
     },
     {
-      "name": "Vessel",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselFirstEnter",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "VesselFound",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "VesselPlayer",
-      "type": "string",
-      "scope": "map",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselPlayerTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "VesselTechnique",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
       "name": "VowDescription",
       "type": "string",
       "scope": "player_lifetime",
@@ -10613,6 +10956,36 @@
       "type": "string",
       "scope": "player_lifetime",
       "value": "\"\""
+    },
+    {
+      "name": "PowerSecondaryTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "DefenseSecondaryTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "CursedEnergySecondaryTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AgilitySecondaryTree",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "TalismanLink",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
     }
   ],
   "sound_elements": [
@@ -10908,7 +11281,12 @@
       },
       {
         "name": "Armor",
-        "children": []
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Abilities",
@@ -10988,13 +11366,25 @@
         ]
       },
       {
+        "name": "Dimensions",
+        "children": []
+      },
+      {
         "name": "Items",
         "children": [
+          {
+            "name": "Values",
+            "children": []
+          },
           {
             "name": "Procedures",
             "children": []
           }
         ]
+      },
+      {
+        "name": "Biomes",
+        "children": []
       },
       {
         "name": "Particles",

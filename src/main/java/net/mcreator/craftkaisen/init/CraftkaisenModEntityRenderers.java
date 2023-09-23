@@ -18,6 +18,7 @@ import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
+import net.mcreator.craftkaisen.client.renderer.MahitoSpikeRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockProjectileRenderer;
@@ -36,6 +37,7 @@ import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritrugbyfieldRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritgrasshopperRenderer;
+import net.mcreator.craftkaisen.client.renderer.BigFistRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftkaisenModEntityRenderers {
@@ -78,6 +80,8 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.SUKUNA.get(), SukunaRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAGMA_ROCK_PROJECTILE.get(), MagmaRockProjectileRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.ESO.get(), EsoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.BIG_FIST.get(), BigFistRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO.get(), MahitoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO_SPIKE.get(), MahitoSpikeRenderer::new);
 	}
 }

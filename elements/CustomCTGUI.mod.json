@@ -1,0 +1,73 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 100,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_technique_creator",
+          "text": {
+            "fixedValue": "Technique Creator"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 169,
+          "y": 77
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Technique Name..",
+          "name": "CTName",
+          "width": 120,
+          "height": 20,
+          "x": 153,
+          "y": 90
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_finish",
+          "text": "Finish",
+          "width": 56,
+          "height": 20,
+          "x": 185,
+          "y": 142
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_finish1",
+          "text": "Bases",
+          "width": 56,
+          "height": 20,
+          "x": 185,
+          "y": 116
+        }
+      }
+    ],
+    "onClosed": {
+      "name": "OpenCTGUIIfClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

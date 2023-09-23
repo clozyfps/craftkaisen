@@ -39,6 +39,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.mcreator.craftkaisen.procedures.SatoruGojoRightClickedOnEntityProcedure;
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnEntityTickUpdateProcedure;
+import net.mcreator.craftkaisen.procedures.SatoruGojoEntityIsHurtProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
@@ -54,7 +55,7 @@ public class SatoruGojoEntity extends Monster {
 		maxUpStep = 0.6f;
 		xpReward = 3;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.SUNGLASSES_HELMET.get()));
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.BANDAGE_BLINDFOLD_HELMET.get()));
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_LEGGINGS.get()));
 	}
@@ -100,6 +101,12 @@ public class SatoruGojoEntity extends Monster {
 	}
 
 	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		SatoruGojoEntityIsHurtProcedure.execute(this);
+		return super.hurt(source, amount);
+	}
+
+	@Override
 	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		SatoruGojoOnInitialEntitySpawnProcedure.execute(this);
@@ -124,7 +131,7 @@ public class SatoruGojoEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		SatoruGojoOnEntityTickUpdateProcedure.execute(this.level, this);
+		SatoruGojoOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
@@ -138,7 +145,7 @@ public class SatoruGojoEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0.8);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 35);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.3);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 4);
 		return builder;
 	}

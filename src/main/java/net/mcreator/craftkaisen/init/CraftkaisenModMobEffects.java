@@ -11,7 +11,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.craftkaisen.potion.WeaponCooldownMobEffect;
-import net.mcreator.craftkaisen.potion.VesselPotionEffectMobEffect;
 import net.mcreator.craftkaisen.potion.VesselCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.TwistingMobEffect;
 import net.mcreator.craftkaisen.potion.ToughBodyMobEffect;
@@ -23,6 +22,7 @@ import net.mcreator.craftkaisen.potion.ShrineMobEffect;
 import net.mcreator.craftkaisen.potion.RootsPotionMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
+import net.mcreator.craftkaisen.potion.RepeatedSlicingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MoveUltimateCooldownMobEffect;
@@ -35,6 +35,7 @@ import net.mcreator.craftkaisen.potion.Move1CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MasteredRCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.IrritatedThroatMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
+import net.mcreator.craftkaisen.potion.IdleTransfigurationMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.EmberFloorMobEffect;
@@ -78,7 +79,6 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> RCT_HEALING = REGISTRY.register("rct_healing", () -> new RCTHealingMobEffect());
 	public static final RegistryObject<MobEffect> MASTERED_RCT_HEALING = REGISTRY.register("mastered_rct_healing", () -> new MasteredRCTHealingMobEffect());
 	public static final RegistryObject<MobEffect> RCT_COOLDOWN = REGISTRY.register("rct_cooldown", () -> new RCTCooldownMobEffect());
-	public static final RegistryObject<MobEffect> VESSEL_POTION_EFFECT = REGISTRY.register("vessel_potion_effect", () -> new VesselPotionEffectMobEffect());
 	public static final RegistryObject<MobEffect> VESSEL_COOLDOWN = REGISTRY.register("vessel_cooldown", () -> new VesselCooldownMobEffect());
 	public static final RegistryObject<MobEffect> EMBER_CONTROL = REGISTRY.register("ember_control", () -> new EmberControlMobEffect());
 	public static final RegistryObject<MobEffect> EMBER_FLOOR = REGISTRY.register("ember_floor", () -> new EmberFloorMobEffect());
@@ -88,4 +88,6 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> BURNT_OUT_EFFECT = REGISTRY.register("burnt_out_effect", () -> new BurntOutEffectMobEffect());
 	public static final RegistryObject<MobEffect> CURSED_SPIRIT = REGISTRY.register("cursed_spirit", () -> new CursedSpiritMobEffect());
 	public static final RegistryObject<MobEffect> SKY_OF_FLAMES = REGISTRY.register("sky_of_flames", () -> new SkyOfFlamesMobEffect());
+	public static final RegistryObject<MobEffect> IDLE_TRANSFIGURATION = REGISTRY.register("idle_transfiguration", () -> new IdleTransfigurationMobEffect());
+	public static final RegistryObject<MobEffect> REPEATED_SLICING = REGISTRY.register("repeated_slicing", () -> new RepeatedSlicingMobEffect());
 }

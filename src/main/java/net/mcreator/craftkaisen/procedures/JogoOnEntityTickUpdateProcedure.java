@@ -30,7 +30,7 @@ public class JogoOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
-			if (Math.random() < 0.009) {
+			if (Math.random() < 0.004) {
 				{
 					Entity _shootFrom = entity;
 					Level projectileLevel = _shootFrom.level;
@@ -52,13 +52,13 @@ public class JogoOnEntityTickUpdateProcedure {
 					}
 				}
 			}
-			if (Math.random() < 0.005) {
+			if (Math.random() < 0.004) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.EMBER_FLOOR.get()) : false)) {
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.EMBER_FLOOR.get(), 60, 1, false, false));
 				}
 			}
-			if (Math.random() < 0.008) {
+			if (Math.random() < 0.005) {
 				entity.getPersistentData().putBoolean("aoefirst", true);
 				CraftkaisenMod.queueServerWork(20, () -> {
 					entity.getPersistentData().putBoolean("aoefirst", false);
@@ -86,7 +86,7 @@ public class JogoOnEntityTickUpdateProcedure {
 					});
 				});
 			}
-			if (Math.random() < 0.001) {
+			if (Math.random() < 0.0009) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = new MaximumMeteorEntity(CraftkaisenModEntities.MAXIMUM_METEOR.get(), _level);
 					entityToSpawn.moveTo(x, (y + 75), z, world.getRandom().nextFloat() * 360F, 0);
@@ -110,7 +110,7 @@ public class JogoOnEntityTickUpdateProcedure {
 					}
 				});
 			}
-			if (Math.random() < 0.001) {
+			if (Math.random() < 0.0008) {
 				if (!entity.getPersistentData().getBoolean("domainused")) {
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DOMAIN_EXPANSION.get(), 800, 1, false, false));

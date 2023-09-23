@@ -10,8 +10,12 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.entity.SukunaEntity;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
+import net.mcreator.craftkaisen.entity.FingerBearerEntity;
+import net.mcreator.craftkaisen.entity.EsoEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
@@ -35,7 +39,7 @@ public class CursedSpiritSetProcedure {
 		if (entity instanceof CursedspiritgrasshopperEntity || entity instanceof CursedspiritroppongiEntity || entity instanceof CursedspiritrugbyfieldEntity || entity instanceof FlyHeadEntity) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CURSED_SPIRIT.get(), 999999, 0, false, false));
-		} else if (entity instanceof JogoEntity) {
+		} else if (entity instanceof JogoEntity || entity instanceof EsoEntity || entity instanceof MahitoEntity || entity instanceof SukunaEntity || entity instanceof FingerBearerEntity) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CURSED_SPIRIT.get(), 999999, 1, false, false));
 		}

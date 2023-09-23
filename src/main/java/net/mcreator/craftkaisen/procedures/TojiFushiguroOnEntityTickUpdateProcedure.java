@@ -5,8 +5,10 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
 
@@ -29,6 +31,10 @@ public class TojiFushiguroOnEntityTickUpdateProcedure {
 						world.addFreshEntity(entityToSpawn);
 					}
 				}
+			}
+			if (Math.random() < 0.002) {
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DIVINE_REPOSITE_POTION.get(), 2, 1, false, false));
 			}
 		}
 	}

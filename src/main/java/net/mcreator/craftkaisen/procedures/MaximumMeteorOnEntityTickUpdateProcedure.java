@@ -70,7 +70,7 @@ public class MaximumMeteorOnEntityTickUpdateProcedure {
 						.collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
-						entityiterator.hurt(DamageSource.GENERIC, 45);
+						entityiterator.hurt(DamageSource.LAVA, 45);
 					}
 				}
 			}

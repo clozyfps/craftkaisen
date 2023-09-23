@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
+import net.mcreator.craftkaisen.entity.MahitoSpikeEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockProjectileEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
@@ -54,6 +55,7 @@ import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
 import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
+import net.mcreator.craftkaisen.entity.BigFistEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -165,11 +167,17 @@ public class CraftkaisenModEntities {
 	public static final RegistryObject<EntityType<MagmaRockProjectileEntity>> MAGMA_ROCK_PROJECTILE = register("projectile_magma_rock_projectile", EntityType.Builder.<MagmaRockProjectileEntity>of(MagmaRockProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(MagmaRockProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<EsoEntity>> ESO = register("eso",
-			EntityType.Builder.<EsoEntity>of(EsoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EsoEntity::new)
+			EntityType.Builder.<EsoEntity>of(EsoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EsoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BigFistEntity>> BIG_FIST = register("big_fist",
+			EntityType.Builder.<BigFistEntity>of(BigFistEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BigFistEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MahitoEntity>> MAHITO = register("mahito",
 			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MahitoSpikeEntity>> MAHITO_SPIKE = register("mahito_spike",
+			EntityType.Builder.<MahitoSpikeEntity>of(MahitoSpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoSpikeEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -203,7 +211,9 @@ public class CraftkaisenModEntities {
 			ItadoriEntity.init();
 			SukunaEntity.init();
 			EsoEntity.init();
+			BigFistEntity.init();
 			MahitoEntity.init();
+			MahitoSpikeEntity.init();
 		});
 	}
 
@@ -232,6 +242,8 @@ public class CraftkaisenModEntities {
 		event.put(ITADORI.get(), ItadoriEntity.createAttributes().build());
 		event.put(SUKUNA.get(), SukunaEntity.createAttributes().build());
 		event.put(ESO.get(), EsoEntity.createAttributes().build());
+		event.put(BIG_FIST.get(), BigFistEntity.createAttributes().build());
 		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
+		event.put(MAHITO_SPIKE.get(), MahitoSpikeEntity.createAttributes().build());
 	}
 }

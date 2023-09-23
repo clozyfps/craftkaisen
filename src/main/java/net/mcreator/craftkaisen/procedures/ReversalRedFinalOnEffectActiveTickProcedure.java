@@ -14,7 +14,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -33,9 +32,7 @@ public class ReversalRedFinalOnEffectActiveTickProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"particle minecraft:dust 0.96 0 0 8 ^-0.4 ^1 ^0.1 0.1 1 0.1 1 10");
-		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.FLASH, x, y, z, 6, 1, 2.5, 1, 1);
+					"particle minecraft:dust 0.96 0 0 8 ^-0.4 ^1 ^0.1 2 1 2 20");
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 5, 250, false, false));
 	}

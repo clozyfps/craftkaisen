@@ -73,7 +73,7 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 141,
+          "x": 105,
           "y": 53
         }
       },
@@ -89,7 +89,7 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 132,
+          "x": 105,
           "y": 71
         }
       },
@@ -121,7 +121,7 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 123,
+          "x": 105,
           "y": 89
         }
       },
@@ -167,7 +167,7 @@
             "value": -13627890,
             "falpha": 0.0
           },
-          "x": 141,
+          "x": 105,
           "y": 125
         }
       },
@@ -190,51 +190,6 @@
       {
         "type": "label",
         "data": {
-          "name": "label_level1",
-          "text": {
-            "fixedValue": "Level:"
-          },
-          "color": {
-            "value": -13627890,
-            "falpha": 0.0
-          },
-          "x": 105,
-          "y": 53
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_exp1",
-          "text": {
-            "fixedValue": "Exp:"
-          },
-          "color": {
-            "value": -13627890,
-            "falpha": 0.0
-          },
-          "x": 105,
-          "y": 71
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_empty",
-          "text": {
-            "fixedValue": "SP:"
-          },
-          "color": {
-            "value": -13827068,
-            "falpha": 0.0
-          },
-          "x": 105,
-          "y": 89
-        }
-      },
-      {
-        "type": "label",
-        "data": {
           "name": "label_empty1",
           "text": {
             "fixedValue": "Job:"
@@ -245,21 +200,6 @@
           },
           "x": 105,
           "y": 107
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_grade",
-          "text": {
-            "fixedValue": "Grade:"
-          },
-          "color": {
-            "value": -13824755,
-            "falpha": 0.0
-          },
-          "x": 105,
-          "y": 125
         }
       },
       {

@@ -97,30 +97,26 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack,
 
-				LevelDisplayProcedure.execute(entity), 52, 33, -13496561);
+				LevelDisplayProcedure.execute(entity), 16, 33, -13496561);
 		this.font.draw(poseStack,
 
-				ExpDisplayProcedure.execute(entity), 43, 51, -13496561);
+				ExpDisplayProcedure.execute(entity), 16, 51, -13496561);
 		this.font.draw(poseStack,
 
 				TechniqueDisplayProcedure.execute(entity), 70, 141, -13496561);
 		this.font.draw(poseStack,
 
-				SPDisplayProcedure.execute(entity), 34, 69, -13496561);
+				SPDisplayProcedure.execute(entity), 16, 69, -13496561);
 		this.font.draw(poseStack,
 
 				JobValueProcedure.execute(entity), 43, 87, -13627890);
 		this.font.draw(poseStack,
 
-				GradeValueProcedure.execute(entity), 52, 105, -13627890);
+				GradeValueProcedure.execute(entity), 16, 105, -13627890);
 		this.font.draw(poseStack,
 
 				FameValueProcedure.execute(entity), 52, 123, -13627890);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_level1"), 16, 33, -13627890);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_exp1"), 16, 51, -13627890);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_empty"), 16, 69, -13827068);
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_empty1"), 16, 87, -13824755);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_grade"), 16, 105, -13824755);
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_fame"), 16, 123, -13824755);
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.main_menu.label_technique"), 16, 141, -13824755);
 	}

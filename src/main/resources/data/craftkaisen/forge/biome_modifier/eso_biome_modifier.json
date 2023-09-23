@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "craftkaisen:eso",
-    "weight": 20,
+    "weight": 1,
     "minCount": 1,
     "maxCount": 1
   }

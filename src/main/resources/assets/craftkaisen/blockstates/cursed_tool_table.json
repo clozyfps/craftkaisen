@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "craftkaisen:block/cursed_tool_table"
+    },
+    "facing=east": {
+      "model": "craftkaisen:block/cursed_tool_table",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "craftkaisen:block/cursed_tool_table",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "craftkaisen:block/cursed_tool_table",
+      "y": 270
+    }
+  }
+}

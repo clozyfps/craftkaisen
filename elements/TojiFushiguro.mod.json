@@ -5,7 +5,7 @@
     "mobName": "Toji Fushiguro",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "toji.png",
+    "mobModelTexture": "toji_fushiguro.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -30,7 +30,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": "CUSTOM:PlayfulCloud"
+      "value": "CUSTOM:InvertedSpearofHeaven"
     },
     "equipmentOffHand": {
       "value": ""
@@ -39,10 +39,10 @@
       "value": ""
     },
     "equipmentBody": {
-      "value": ""
+      "value": "CUSTOM:TojiArmor.body"
     },
     "equipmentLeggings": {
-      "value": ""
+      "value": "CUSTOM:TojiArmor.legs"
     },
     "equipmentBoots": {
       "value": ""
@@ -51,7 +51,7 @@
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 28,
     "attackKnockback": 2.0,
-    "knockbackResistance": 1.0,
+    "knockbackResistance": 0.1,
     "movementSpeed": 0.4,
     "stepHeight": 0.6,
     "armorBaseValue": 0.4,
