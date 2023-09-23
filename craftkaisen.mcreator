@@ -518,12 +518,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/SwitchTechniqueOnKeyPressedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Keybinds/Procedures"
     },
@@ -562,28 +557,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/UseTechniqueOnKeyPressedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Keybinds/Procedures"
     },
@@ -4028,6 +4002,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -7680,6 +7666,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -10588,6 +10590,23 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "Cursedspiritmouth",
+      "type": "livingentity",
+      "sortid": 480,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursedspiritmouth",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritmouthRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritmouth_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritmouthEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritmouth_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -11041,14 +11060,18 @@
   "language_map": {
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
+      "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "gui.craftkaisen.sword_creator.label_materials": "Materials",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
+      "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "effect.craftkaisen.charge_ce_effect": "Charging",
       "effect.craftkaisen.sky_of_flames": "SkyOfFlames",
       "item.craftkaisen.megumi_fushiguro_spawn_egg": "Megumi Fushiguro Spawn Egg",
       "key.craftkaisen.flash_step": "Flash Step",
+      "advancements.semi_grade_1.descr": "Become a Semi Grade 1 Sorcerer",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
@@ -11069,19 +11092,25 @@
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "gui.craftkaisen.main_menu.label_empty1": "Job:",
       "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
+      "gui.craftkaisen.custom_ctgui.CTName": "Technique Name..",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
+      "gui.craftkaisen.bases_gui.button_jackpot": "Jackpot",
       "entity.craftkaisen.cursedspiritgrasshopper": "Cursed Spirit: Grasshopper",
+      "advancements.special_grade.title": "Special Grade",
       "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
+      "gui.craftkaisen.sword_creator.label_cursed_energy_investment": "Cursed Energy Investment",
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
+      "advancements.special_grade.descr": "Become a Special Grade Sorcerer",
       "item.craftkaisen.eso_armor_chestplate": "Eso Chestplate",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "gui.craftkaisen.main_menu.label_technique": "Technique:",
       "entity.craftkaisen.unknown_man": "Unknown Man",
       "effect.craftkaisen.crushing": "Crushing",
+      "gui.craftkaisen.custom_ctgui.button_finish1": "Bases",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
       "gui.craftkaisen.main_hud.label_x2": "X",
@@ -11091,10 +11120,12 @@
       "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
       "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
+      "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "entity.craftkaisen.satoru_gojo_blindfold": "Satoru Gojo Blindfold",
       "item.craftkaisen.itadori_spawn_egg": "Itadori Spawn Egg",
+      "advancements.grade_1.title": "Grade 1",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "entity.craftkaisen.fly_head": "Fly Head",
       "item.craftkaisen.clap": "Clap",
@@ -11105,6 +11136,7 @@
       "item.craftkaisen.test_2": "Test 2",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "entity.craftkaisen.magma_rock": "Magma Rock",
+      "gui.craftkaisen.sword_creator.label_diamond_blocks": "Diamond Blocks",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
@@ -11119,26 +11151,37 @@
       "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
       "effect.craftkaisen.sleeping": "Sleeping",
+      "effect.craftkaisen.idle_transfiguration": "Idle Transfiguration",
       "item.craftkaisen.wooden_ball": "Wooden Ball",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",
+      "gui.craftkaisen.sword_creator.DaggerBox": "Dagger",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_i_increases_speedss9_1": "Agility I - Increases speed.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.tes": "Tes",
       "effect.craftkaisen.ember_control": "InsectControl",
+      "gui.craftkaisen.sword_creator.SwordName": "Name..",
+      "gui.craftkaisen.bases_gui.button_plant": "Plant",
       "entity.craftkaisen.toji_fushiguro": "Toji Fushiguro",
+      "gui.craftkaisen.bases_gui.button_swap": "Swap",
       "block.craftkaisen.unlimited_void": "Unlimited Void",
+      "effect.craftkaisen.repeated_slicing": "Rs",
+      "gui.craftkaisen.sword_creator.button_empty1": "-",
       "gui.craftkaisen.main_hud.label_empty": "---------------------",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_ii_increases_cursed_energy": "CE II - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
       "entity.craftkaisen.jogo": "Jogo",
       "block.craftkaisen.quest_board": "Quest Board",
+      "gui.craftkaisen.sword_creator.label_weapon_types": "Weapon Types",
       "gui.craftkaisen.main_hud.label_move_four": "Move Four",
       "item.craftkaisen.gojo_uniform_chestplate": "Gojo Uniform",
+      "gui.craftkaisen.sword_creator.label_1_cost": "+1 Cost",
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
+      "item.craftkaisen.talisman": "Talisman",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
+      "gui.craftkaisen.sword_creator.GreatswordBox": "Greatsword",
       "item.craftkaisen.blast_away": "Blast Away",
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
@@ -11149,6 +11192,7 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_ii_increases_speedss9": "Agility II - Increases speed.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
       "item.craftkaisen.magma_rock_projectile": "Magma Rock Projectile",
+      "advancements.semi_grade_1.title": "Semi Grade 1",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
@@ -11162,12 +11206,18 @@
       "gamerule.ckCustomVessel.description": "Allows a player to reincarnate and become the sukuna of that world.",
       "entity.craftkaisen.cursedspiritrugbyfield": "Cursed Spirit: Rugby Field",
       "gui.craftkaisen.test.label_dawd": "dawd",
+      "gui.craftkaisen.talisman_gui.button_seal": "Seal",
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
       "effect.craftkaisen.infinity": "Infinity",
       "effect.craftkaisen.cursed_spirit": "Cursed Spirit",
+      "entity.craftkaisen.mahito_spike": "Mahito Spike",
       "item.craftkaisen.hiar_helmet": "Hiar Helmet",
+      "gui.craftkaisen.bases_gui.button_spatial": "Spatial",
+      "gui.craftkaisen.bases_gui.button_speech": "Speech",
+      "gui.craftkaisen.bases_gui.button_flame": "Flame",
       "gui.craftkaisen.main_hud.label_x": "X",
+      "gui.craftkaisen.bases_gui.button_back": "\u003c - Back",
       "item.craftkaisen.jujutsu_sorcerer_outfit_leggings": "Jujutsu Sorcerer Uniform",
       "subtitles.clap": "",
       "item.craftkaisen.fly_head_spawn_egg": "Fly Head Spawn Egg",
@@ -11192,16 +11242,21 @@
       "item.craftkaisen.unknown_man_spawn_egg": "Unknown Man Spawn Egg",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
+      "advancements.grade_1.descr": "Become a Grade 1 Sorcerer",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1": "Click to upgrade main cursed energy branch!",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
       "item.craftkaisen.mahito_spawn_egg": "Special Grade Cursed Spirit: Mahito Spawn Egg",
       "itemGroup.tabjjkitems": "JJK Items",
+      "entity.craftkaisen.big_fist": "Big Fist",
+      "block.craftkaisen.cursed_tool_table": "Cursed Tool Table",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten": "Resistance I - Upgrades resistance.§9 2 SP \u0026 GRADE 4",
+      "gui.craftkaisen.sword_creator.label_iron_ingots": "Iron Ingots",
       "itemGroup.tabjjkarmor": "JJK Armor",
       "gui.craftkaisen.main_hud.label_quest1": "Quest",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "entity.craftkaisen.ember_insect": "Ember Insect",
+      "gui.craftkaisen.bases_gui.button_transfigure": "Transfigure",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
@@ -11210,6 +11265,7 @@
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
+      "advancements.grade_2.descr": "Become a Grade 2 Sorcerer",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.fire_arrow_projectile": "Fire Arrow Projectile",
       "entity.craftkaisen.cursedspiritroppongi": "Cursed Spirit: Roppongi",
@@ -11219,19 +11275,25 @@
       "item.craftkaisen.eso_armor_leggings": "Eso Pants",
       "item.craftkaisen.cursedspiritrugbyfield_spawn_egg": "Cursed Spirit: Rugby Field Spawn Egg",
       "gui.craftkaisen.main_menu.button_prestige": "Skill Tree",
+      "gui.craftkaisen.talisman_gui.label_sealing_menu": "Sealing Menu",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health4": "Defense V - Upgrades max health.§9 3 SP \u0026 GRADE 3",
+      "advancements.grade_2.title": "Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health1": "Defense II - Upgrades max health.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.sleep": "Sleep",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health3": "Defense IV - Upgrades max health.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health2": "Defense III - Upgrades max health.§9 2 SP \u0026 GRADE 4",
+      "gui.craftkaisen.custom_ctgui.label_technique_creator": "Technique Creator",
       "item.craftkaisen.hollow_purple": "Hollow Purple",
+      "entity.craftkaisen.cursedspiritmouth": "Cursed Spirit: Mouth",
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "item.craftkaisen.get_crushed": "Get Crushed",
+      "gui.craftkaisen.sword_creator.label_diamonds": "Diamonds",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten1": "Resistance II - Upgrades resistance.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ssfflashstep_3_sp_grade_3": "§fFlashstep - 3 SP \u0026 GRADE 3",
       "key.craftkaisen.use_technique": "Use Technique",
       "entity.craftkaisen.malevolent_shrine": "Malevolent Shrine",
+      "gui.craftkaisen.custom_ctgui.button_finish": "Finish",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_ii_increases_melee_damag": "Power II - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.satoru_gojo_blindfold_spawn_egg": "Satoru Gojo Blindfold Spawn Egg",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc": "Click to upgrade secondary branch!",
@@ -11264,8 +11326,11 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
+      "gui.craftkaisen.sword_creator.button_empty": "+",
+      "gui.craftkaisen.sword_creator.KatanaBox": "Katana",
       "effect.craftkaisen.shrine": "Shrine",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_iii_upgrades_resist": "Resistance III - Upgrades resistance.§9 2 SP \u0026 SEMI-GRADE 2",
+      "gui.craftkaisen.sword_creator.label_5_cost": "+5 Cost",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health": "Defense I - Upgrades max health.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",

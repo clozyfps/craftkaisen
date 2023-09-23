@@ -51,6 +51,7 @@ import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritmouthEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
 import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
@@ -180,6 +181,10 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<MahitoSpikeEntity>of(MahitoSpikeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoSpikeEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CursedspiritmouthEntity>> CURSEDSPIRITMOUTH = register("cursedspiritmouth",
+			EntityType.Builder.<CursedspiritmouthEntity>of(CursedspiritmouthEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CursedspiritmouthEntity::new)
+
+					.sized(0.7f, 2.1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -214,6 +219,7 @@ public class CraftkaisenModEntities {
 			BigFistEntity.init();
 			MahitoEntity.init();
 			MahitoSpikeEntity.init();
+			CursedspiritmouthEntity.init();
 		});
 	}
 
@@ -245,5 +251,6 @@ public class CraftkaisenModEntities {
 		event.put(BIG_FIST.get(), BigFistEntity.createAttributes().build());
 		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
 		event.put(MAHITO_SPIKE.get(), MahitoSpikeEntity.createAttributes().build());
+		event.put(CURSEDSPIRITMOUTH.get(), CursedspiritmouthEntity.createAttributes().build());
 	}
 }

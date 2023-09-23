@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornewagain;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornew;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmor;
 import net.mcreator.craftkaisen.client.model.Modelprisonbox;
+import net.mcreator.craftkaisen.client.model.Modelmouthcursedspirit;
 import net.mcreator.craftkaisen.client.model.Modelmetalbat;
 import net.mcreator.craftkaisen.client.model.Modelmegumihair;
 import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
@@ -94,6 +95,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelmegumihair.LAYER_LOCATION, Modelmegumihair::createBodyLayer);
 		event.registerLayerDefinition(Modeltojishirt.LAYER_LOCATION, Modeltojishirt::createBodyLayer);
 		event.registerLayerDefinition(Modelsunglasses.LAYER_LOCATION, Modelsunglasses::createBodyLayer);
+		event.registerLayerDefinition(Modelmouthcursedspirit.LAYER_LOCATION, Modelmouthcursedspirit::createBodyLayer);
 		event.registerLayerDefinition(Modelmagmaprojectile.LAYER_LOCATION, Modelmagmaprojectile::createBodyLayer);
 		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurple.LAYER_LOCATION, Modelhollowpurple::createBodyLayer);

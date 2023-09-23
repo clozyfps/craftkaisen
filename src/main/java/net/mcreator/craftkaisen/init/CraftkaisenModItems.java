@@ -121,6 +121,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> MAHITO_SPAWN_EGG = REGISTRY.register("mahito_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.MAHITO, -3355444, -16764058, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> CURSED_TOOL_TABLE = block(CraftkaisenModBlocks.CURSED_TOOL_TABLE, CraftkaisenModTabs.TAB_JJKITEMS);
 	public static final RegistryObject<Item> TALISMAN = REGISTRY.register("talisman", () -> new TalismanItem());
+	public static final RegistryObject<Item> CURSEDSPIRITMOUTH_SPAWN_EGG = REGISTRY.register("cursedspiritmouth_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITMOUTH, -1, -39322, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

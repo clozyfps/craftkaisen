@@ -29,12 +29,12 @@ import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
-public class MahitoEntity extends Monster {
-	public MahitoEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftkaisenModEntities.MAHITO.get(), world);
+public class CursedspiritmouthEntity extends Monster {
+	public CursedspiritmouthEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftkaisenModEntities.CURSEDSPIRITMOUTH.get(), world);
 	}
 
-	public MahitoEntity(EntityType<MahitoEntity> type, Level world) {
+	public CursedspiritmouthEntity(EntityType<CursedspiritmouthEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
 		xpReward = 0;
@@ -59,11 +59,11 @@ public class MahitoEntity extends Monster {
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, ItadoriEntity.class, true, false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, MegumiFushiguroEntity.class, true, false));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, false));
-		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, JujutsuStudentEntity.class, true, false));
-		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, false));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, JujutsuStudentEntity.class, true, true));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, SatoruGojoEntity.class, true, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, MegumiFushiguroEntity.class, true, true));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, ItadoriEntity.class, true, true));
 	}
 
 	@Override
@@ -82,17 +82,19 @@ public class MahitoEntity extends Monster {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(CraftkaisenModEntities.MAHITO.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(CraftkaisenModEntities.CURSEDSPIRITMOUTH.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.4);
+		builder = builder.add(Attributes.MAX_HEALTH, 130);
+		builder = builder.add(Attributes.ARMOR, 0.15);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;
 	}
 }
