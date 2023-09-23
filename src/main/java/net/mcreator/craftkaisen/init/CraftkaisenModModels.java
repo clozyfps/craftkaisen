@@ -21,6 +21,7 @@ import net.mcreator.craftkaisen.client.model.Modelmegumihair;
 import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
 import net.mcreator.craftkaisen.client.model.Modelmalevolentshrine;
 import net.mcreator.craftkaisen.client.model.Modelmahoraga_wheel;
+import net.mcreator.craftkaisen.client.model.Modelmahito;
 import net.mcreator.craftkaisen.client.model.Modelmagmaprojectile;
 import net.mcreator.craftkaisen.client.model.Modellapseblue;
 import net.mcreator.craftkaisen.client.model.Modeljogo;
@@ -51,6 +52,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modeltoji_curse.LAYER_LOCATION, Modeltoji_curse::createBodyLayer);
 		event.registerLayerDefinition(Modelgetorobes.LAYER_LOCATION, Modelgetorobes::createBodyLayer);
 		event.registerLayerDefinition(Modelsixeyes.LAYER_LOCATION, Modelsixeyes::createBodyLayer);
+		event.registerLayerDefinition(Modelmahito.LAYER_LOCATION, Modelmahito::createBodyLayer);
 		event.registerLayerDefinition(Modelgojopants.LAYER_LOCATION, Modelgojopants::createBodyLayer);
 		event.registerLayerDefinition(Modelcurse_1.LAYER_LOCATION, Modelcurse_1::createBodyLayer);
 		event.registerLayerDefinition(Modelmalevolentshrine.LAYER_LOCATION, Modelmalevolentshrine::createBodyLayer);

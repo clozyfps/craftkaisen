@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockProjectileEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
@@ -167,6 +168,10 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<EsoEntity>of(EsoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EsoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MahitoEntity>> MAHITO = register("mahito",
+			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -198,6 +203,7 @@ public class CraftkaisenModEntities {
 			ItadoriEntity.init();
 			SukunaEntity.init();
 			EsoEntity.init();
+			MahitoEntity.init();
 		});
 	}
 
@@ -226,5 +232,6 @@ public class CraftkaisenModEntities {
 		event.put(ITADORI.get(), ItadoriEntity.createAttributes().build());
 		event.put(SUKUNA.get(), SukunaEntity.createAttributes().build());
 		event.put(ESO.get(), EsoEntity.createAttributes().build());
+		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
 	}
 }
