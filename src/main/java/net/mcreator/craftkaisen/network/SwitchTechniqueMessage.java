@@ -52,7 +52,7 @@ public class SwitchTechniqueMessage {
 			return;
 		if (type == 0) {
 
-			SwitchTechniqueOnKeyPressedProcedure.execute(entity);
+			SwitchTechniqueOnKeyPressedProcedure.execute();
 		}
 	}
 

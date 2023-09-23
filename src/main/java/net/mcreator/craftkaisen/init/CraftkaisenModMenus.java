@@ -16,7 +16,9 @@ import net.mcreator.craftkaisen.world.inventory.SwordCreatorMenu;
 import net.mcreator.craftkaisen.world.inventory.SkillTreeMainGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.InventoryCurseGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.BasesGUIMenu;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModMenus {
@@ -27,4 +29,6 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<InventoryCurseGUIMenu>> INVENTORY_CURSE_GUI = REGISTRY.register("inventory_curse_gui", () -> IForgeMenuType.create(InventoryCurseGUIMenu::new));
 	public static final RegistryObject<MenuType<SwordCreatorMenu>> SWORD_CREATOR = REGISTRY.register("sword_creator", () -> IForgeMenuType.create(SwordCreatorMenu::new));
 	public static final RegistryObject<MenuType<TalismanGUIMenu>> TALISMAN_GUI = REGISTRY.register("talisman_gui", () -> IForgeMenuType.create(TalismanGUIMenu::new));
+	public static final RegistryObject<MenuType<CustomCTGUIMenu>> CUSTOM_CTGUI = REGISTRY.register("custom_ctgui", () -> IForgeMenuType.create(CustomCTGUIMenu::new));
+	public static final RegistryObject<MenuType<BasesGUIMenu>> BASES_GUI = REGISTRY.register("bases_gui", () -> IForgeMenuType.create(BasesGUIMenu::new));
 }

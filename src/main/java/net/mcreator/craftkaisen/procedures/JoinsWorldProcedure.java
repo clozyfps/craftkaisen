@@ -1,32 +1,43 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.BlockPos;
 
+import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 import javax.annotation.Nullable;
+
+import io.netty.buffer.Unpooled;
 
 @Mod.EventBusSubscriber
 public class JoinsWorldProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player);
+			execute(event, event.player.level, event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
 		}
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double random = 0;
@@ -38,62 +49,20 @@ public class JoinsWorldProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			random = Mth.nextInt(RandomSource.create(), 1, 7);
-			if (random == 1) {
-				{
-					String _setval = "Limitless";
-					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Technique = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if (random == 2) {
-				{
-					String _setval = "Restricted";
-					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Technique = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if (random == 3) {
-				{
-					String _setval = "Flames";
-					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Technique = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if (random == 4) {
-				{
-					String _setval = "Plants";
-					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Technique = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if (random == 5) {
-				{
-					String _setval = "Voice";
-					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Technique = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if (random == 6) {
-				{
-					String _setval = "Transfiguration";
-					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Technique = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-			} else if (random == 7) {
-				{
-					String _setval = "Boogie";
-					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.Technique = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+			{
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = new BlockPos(x, y, z);
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("CustomCTGUI");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new CustomCTGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
 		}
