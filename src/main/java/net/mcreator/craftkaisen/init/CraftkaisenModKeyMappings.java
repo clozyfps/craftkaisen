@@ -108,6 +108,7 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping CHANT = new KeyMapping("key.craftkaisen.chant", GLFW.GLFW_KEY_U, "key.categories.jjk");
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -118,6 +119,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(OPEN_MAIN_MENU_BIND);
 		event.register(CHARGE_CURSED_ENERGY);
 		event.register(OPEN_INVENTORY_CURSE_BIND);
+		event.register(CHANT);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})

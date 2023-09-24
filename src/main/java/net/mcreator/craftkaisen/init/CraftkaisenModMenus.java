@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.world.inventory.SwordCreatorMenu;
 import net.mcreator.craftkaisen.world.inventory.SkillTreeMainGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.InventoryCurseGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.DesignGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.BasesGUIMenu;
@@ -31,4 +32,5 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<TalismanGUIMenu>> TALISMAN_GUI = REGISTRY.register("talisman_gui", () -> IForgeMenuType.create(TalismanGUIMenu::new));
 	public static final RegistryObject<MenuType<CustomCTGUIMenu>> CUSTOM_CTGUI = REGISTRY.register("custom_ctgui", () -> IForgeMenuType.create(CustomCTGUIMenu::new));
 	public static final RegistryObject<MenuType<BasesGUIMenu>> BASES_GUI = REGISTRY.register("bases_gui", () -> IForgeMenuType.create(BasesGUIMenu::new));
+	public static final RegistryObject<MenuType<DesignGUIMenu>> DESIGN_GUI = REGISTRY.register("design_gui", () -> IForgeMenuType.create(DesignGUIMenu::new));
 }

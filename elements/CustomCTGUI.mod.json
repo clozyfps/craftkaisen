@@ -54,7 +54,18 @@
           "text": "Bases",
           "width": 56,
           "height": 20,
-          "x": 185,
+          "x": 241,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_finish2",
+          "text": "Design",
+          "width": 56,
+          "height": 20,
+          "x": 129,
           "y": 116
         }
       }

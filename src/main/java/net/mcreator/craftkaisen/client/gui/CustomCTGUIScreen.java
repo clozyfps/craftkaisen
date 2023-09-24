@@ -25,6 +25,7 @@ public class CustomCTGUIScreen extends AbstractContainerScreen<CustomCTGUIMenu> 
 	EditBox CTName;
 	Button button_finish;
 	Button button_finish1;
+	Button button_finish2;
 
 	public CustomCTGUIScreen(CustomCTGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -124,9 +125,13 @@ public class CustomCTGUIScreen extends AbstractContainerScreen<CustomCTGUIMenu> 
 		});
 		guistate.put("button:button_finish", button_finish);
 		this.addRenderableWidget(button_finish);
-		button_finish1 = new Button(this.leftPos + 71, this.topPos + 46, 56, 20, Component.translatable("gui.craftkaisen.custom_ctgui.button_finish1"), e -> {
+		button_finish1 = new Button(this.leftPos + 127, this.topPos + 46, 56, 20, Component.translatable("gui.craftkaisen.custom_ctgui.button_finish1"), e -> {
 		});
 		guistate.put("button:button_finish1", button_finish1);
 		this.addRenderableWidget(button_finish1);
+		button_finish2 = new Button(this.leftPos + 15, this.topPos + 46, 56, 20, Component.translatable("gui.craftkaisen.custom_ctgui.button_finish2"), e -> {
+		});
+		guistate.put("button:button_finish2", button_finish2);
+		this.addRenderableWidget(button_finish2);
 	}
 }

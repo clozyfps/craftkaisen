@@ -127,6 +127,26 @@ public class CraftkaisenModVariables {
 			clone.CursedEnergySecondaryTree = original.CursedEnergySecondaryTree;
 			clone.AgilitySecondaryTree = original.AgilitySecondaryTree;
 			clone.TalismanLink = original.TalismanLink;
+			clone.Move1Name = original.Move1Name;
+			clone.Move1Cost = original.Move1Cost;
+			clone.Move1Damage = original.Move1Damage;
+			clone.Move1Type = original.Move1Type;
+			clone.Move2Name = original.Move2Name;
+			clone.Move2Cost = original.Move2Cost;
+			clone.Move2Damage = original.Move2Damage;
+			clone.Move2Type = original.Move2Type;
+			clone.Move3Name = original.Move3Name;
+			clone.Move3Cost = original.Move3Cost;
+			clone.Move3Damage = original.Move3Damage;
+			clone.Move3Type = original.Move3Type;
+			clone.Move4Name = original.Move4Name;
+			clone.Move4Cost = original.Move4Cost;
+			clone.Move4Damage = original.Move4Damage;
+			clone.Move4Type = original.Move4Type;
+			clone.Move5Name = original.Move5Name;
+			clone.Move5Cost = original.Move5Cost;
+			clone.Move5Damage = original.Move5Damage;
+			clone.Move5Type = original.Move5Type;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -369,6 +389,26 @@ public class CraftkaisenModVariables {
 		public double CursedEnergySecondaryTree = 0;
 		public double AgilitySecondaryTree = 0;
 		public ItemStack TalismanLink = ItemStack.EMPTY;
+		public String Move1Name = "\"\"";
+		public double Move1Cost = 0;
+		public double Move1Damage = 0;
+		public String Move1Type = "\"\"";
+		public String Move2Name = "\"\"";
+		public double Move2Cost = 0;
+		public double Move2Damage = 0;
+		public String Move2Type = "\"\"";
+		public String Move3Name = "\"\"";
+		public double Move3Cost = 0;
+		public double Move3Damage = 0;
+		public String Move3Type = "\"\"";
+		public String Move4Name = "\"\"";
+		public double Move4Cost = 0;
+		public double Move4Damage = 0;
+		public String Move4Type = "\"\"";
+		public String Move5Name = "\"\"";
+		public double Move5Cost = 0;
+		public double Move5Damage = 0;
+		public String Move5Type = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -441,6 +481,26 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("CursedEnergySecondaryTree", CursedEnergySecondaryTree);
 			nbt.putDouble("AgilitySecondaryTree", AgilitySecondaryTree);
 			nbt.put("TalismanLink", TalismanLink.save(new CompoundTag()));
+			nbt.putString("Move1Name", Move1Name);
+			nbt.putDouble("Move1Cost", Move1Cost);
+			nbt.putDouble("Move1Damage", Move1Damage);
+			nbt.putString("Move1Type", Move1Type);
+			nbt.putString("Move2Name", Move2Name);
+			nbt.putDouble("Move2Cost", Move2Cost);
+			nbt.putDouble("Move2Damage", Move2Damage);
+			nbt.putString("Move2Type", Move2Type);
+			nbt.putString("Move3Name", Move3Name);
+			nbt.putDouble("Move3Cost", Move3Cost);
+			nbt.putDouble("Move3Damage", Move3Damage);
+			nbt.putString("Move3Type", Move3Type);
+			nbt.putString("Move4Name", Move4Name);
+			nbt.putDouble("Move4Cost", Move4Cost);
+			nbt.putDouble("Move4Damage", Move4Damage);
+			nbt.putString("Move4Type", Move4Type);
+			nbt.putString("Move5Name", Move5Name);
+			nbt.putDouble("Move5Cost", Move5Cost);
+			nbt.putDouble("Move5Damage", Move5Damage);
+			nbt.putString("Move5Type", Move5Type);
 			return nbt;
 		}
 
@@ -510,6 +570,26 @@ public class CraftkaisenModVariables {
 			CursedEnergySecondaryTree = nbt.getDouble("CursedEnergySecondaryTree");
 			AgilitySecondaryTree = nbt.getDouble("AgilitySecondaryTree");
 			TalismanLink = ItemStack.of(nbt.getCompound("TalismanLink"));
+			Move1Name = nbt.getString("Move1Name");
+			Move1Cost = nbt.getDouble("Move1Cost");
+			Move1Damage = nbt.getDouble("Move1Damage");
+			Move1Type = nbt.getString("Move1Type");
+			Move2Name = nbt.getString("Move2Name");
+			Move2Cost = nbt.getDouble("Move2Cost");
+			Move2Damage = nbt.getDouble("Move2Damage");
+			Move2Type = nbt.getString("Move2Type");
+			Move3Name = nbt.getString("Move3Name");
+			Move3Cost = nbt.getDouble("Move3Cost");
+			Move3Damage = nbt.getDouble("Move3Damage");
+			Move3Type = nbt.getString("Move3Type");
+			Move4Name = nbt.getString("Move4Name");
+			Move4Cost = nbt.getDouble("Move4Cost");
+			Move4Damage = nbt.getDouble("Move4Damage");
+			Move4Type = nbt.getString("Move4Type");
+			Move5Name = nbt.getString("Move5Name");
+			Move5Cost = nbt.getDouble("Move5Cost");
+			Move5Damage = nbt.getDouble("Move5Damage");
+			Move5Type = nbt.getString("Move5Type");
 		}
 	}
 
@@ -598,6 +678,26 @@ public class CraftkaisenModVariables {
 					variables.CursedEnergySecondaryTree = message.data.CursedEnergySecondaryTree;
 					variables.AgilitySecondaryTree = message.data.AgilitySecondaryTree;
 					variables.TalismanLink = message.data.TalismanLink;
+					variables.Move1Name = message.data.Move1Name;
+					variables.Move1Cost = message.data.Move1Cost;
+					variables.Move1Damage = message.data.Move1Damage;
+					variables.Move1Type = message.data.Move1Type;
+					variables.Move2Name = message.data.Move2Name;
+					variables.Move2Cost = message.data.Move2Cost;
+					variables.Move2Damage = message.data.Move2Damage;
+					variables.Move2Type = message.data.Move2Type;
+					variables.Move3Name = message.data.Move3Name;
+					variables.Move3Cost = message.data.Move3Cost;
+					variables.Move3Damage = message.data.Move3Damage;
+					variables.Move3Type = message.data.Move3Type;
+					variables.Move4Name = message.data.Move4Name;
+					variables.Move4Cost = message.data.Move4Cost;
+					variables.Move4Damage = message.data.Move4Damage;
+					variables.Move4Type = message.data.Move4Type;
+					variables.Move5Name = message.data.Move5Name;
+					variables.Move5Cost = message.data.Move5Cost;
+					variables.Move5Damage = message.data.Move5Damage;
+					variables.Move5Type = message.data.Move5Type;
 				}
 			});
 			context.setPacketHandled(true);
