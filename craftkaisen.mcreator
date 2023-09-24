@@ -10270,6 +10270,21 @@
       "path": "~/GUI/Procedures"
     },
     {
+      "name": "DesignGUI",
+      "type": "gui",
+      "sortid": 466,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "design_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/DesignGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/DesignGUIMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
       "name": "Chant",
       "type": "keybind",
       "sortid": 464,
@@ -10299,19 +10314,87 @@
       "path": "~/Keybinds/Procedures"
     },
     {
-      "name": "DesignGUI",
-      "type": "gui",
-      "sortid": 466,
+      "name": "SemiGrade1",
+      "type": "achievement",
+      "sortid": 476,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "design_gui",
+      "registry_name": "semi_grade_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/DesignGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/DesignGUIMenu.java"
+          "src/main/resources/data/craftkaisen/advancements/semi_grade_1.json"
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "Cursedspiritmouth",
+      "type": "livingentity",
+      "sortid": 480,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursedspiritmouth",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritmouth_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritmouth_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritmouthRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritmouthEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FingerBearerKill",
+      "type": "procedure",
+      "sortid": 479,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "finger_bearer_kill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FingerBearerKillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SpecialGrade",
+      "type": "achievement",
+      "sortid": 478,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "special_grade",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/special_grade.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
+    },
+    {
+      "name": "Grade1",
+      "type": "achievement",
+      "sortid": 477,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grade_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/grade_1.json"
+        ]
+      },
+      "path": "~/Advancements/Grades"
     }
   ],
   "variable_elements": [
@@ -10712,13 +10795,19 @@
       "value": "ItemStack.EMPTY"
     },
     {
+      "name": "Move2Type",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
       "name": "Move1Name",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
     },
     {
-      "name": "Move1Cost",
+      "name": "Move3Damage",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -10730,31 +10819,7 @@
       "value": "0"
     },
     {
-      "name": "Move1Type",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move2Name",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move2Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move2Damage",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move2Type",
+      "name": "Move4Type",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
@@ -10766,16 +10831,52 @@
       "value": "\"\""
     },
     {
+      "name": "Move4Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move5Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move1Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move5Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
       "name": "Move3Cost",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
-      "name": "Move3Damage",
+      "name": "Move1Type",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move5Damage",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "Move2Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     },
     {
       "name": "Move3Type",
@@ -10796,40 +10897,22 @@
       "value": "0"
     },
     {
-      "name": "Move4Damage",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move4Type",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move5Name",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move5Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move5Damage",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "Move5Type",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "Move2Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move2Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -10902,40 +10985,38 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.flash_step_potion": "Flash Step",
       "effect.craftkaisen.domain_expansion": "Domain Expansion",
-      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
       "effect.craftkaisen.vessel_cooldown": "Vessel CD",
+      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
       "entity.craftkaisen.eso": "Eso",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
-      "entity.craftkaisen.inventory_curse": "Inventory Curse",
-      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
-      "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
+      "item.craftkaisen.playful_cloud": "Playful Cloud",
+      "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
+      "entity.craftkaisen.inventory_curse": "Inventory Curse",
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "gui.craftkaisen.bases_gui.button_confirm": "Confirm",
       "gui.craftkaisen.main_menu.label_empty1": "Job:",
-      "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
       "gui.craftkaisen.custom_ctgui.CTName": "Technique Name..",
-      "gui.craftkaisen.custom_ctgui.button_bases1": "\u003c - Design",
+      "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "gui.craftkaisen.bases_gui.button_jackpot": "Jackpot",
       "entity.craftkaisen.cursedspiritgrasshopper": "Cursed Spirit: Grasshopper",
-      "gui.craftkaisen.sword_creator.label_cursed_energy_investment": "Cursed Energy Investment",
-      "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "gui.craftkaisen.main_menu.label_level": "Level : ",
+      "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
+      "gui.craftkaisen.sword_creator.label_cursed_energy_investment": "Cursed Energy Investment",
       "effect.craftkaisen.stopped": "Stopped",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "gui.craftkaisen.bases_gui.label_bases": "Bases : ",
       "item.craftkaisen.eso_armor_chestplate": "Eso Chestplate",
-      "gui.craftkaisen.main_menu.label_technique": "Technique:",
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
+      "gui.craftkaisen.main_menu.label_technique": "Technique:",
       "entity.craftkaisen.unknown_man": "Unknown Man",
       "gui.craftkaisen.custom_ctgui.button_finish2": "Design",
       "effect.craftkaisen.crushing": "Crushing",
-      "gui.craftkaisen.sword_creator.label_errormessage": "ErrorMessage",
       "gui.craftkaisen.custom_ctgui.button_finish1": "Bases",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
@@ -10976,11 +11057,9 @@
       "advancements.grade_3.descr": "Become a Grade 3 Sorcerer",
       "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
-      "gui.craftkaisen.design_gui.PrimaryColor": "Primary color..",
       "effect.craftkaisen.sleeping": "Sleeping",
       "effect.craftkaisen.idle_transfiguration": "Idle Transfiguration",
       "item.craftkaisen.wooden_ball": "Wooden Ball",
-      "gui.craftkaisen.design_gui.SecondaryColor": "Secondary Color..",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",
       "gui.craftkaisen.bases_gui.ChoiceBox": "Choice..",
       "gui.craftkaisen.sword_creator.DaggerBox": "Dagger",
@@ -11021,7 +11100,6 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_ii_increases_speedss9": "Agility II - Increases speed.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
       "item.craftkaisen.magma_rock_projectile": "Magma Rock Projectile",
-      "gui.craftkaisen.custom_ctgui.button_bases": "Bases - \u003e",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
@@ -11107,7 +11185,6 @@
       "gui.craftkaisen.talisman_gui.label_sealing_menu": "Sealing Menu",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health4": "Defense V - Upgrades max health.§9 3 SP \u0026 GRADE 3",
       "advancements.grade_2.title": "Grade 2",
-      "gui.craftkaisen.design_gui.label_colors": "Colors :",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health1": "Defense II - Upgrades max health.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.sleep": "Sleep",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health3": "Defense IV - Upgrades max health.§9 2 SP \u0026 GRADE 3",
@@ -11116,7 +11193,6 @@
       "item.craftkaisen.hollow_purple": "Hollow Purple",
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
-      "key.craftkaisen.chant": "Chant",
       "item.craftkaisen.get_crushed": "Get Crushed",
       "gui.craftkaisen.sword_creator.label_diamonds": "Diamonds",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten1": "Resistance II - Upgrades resistance.§9 2 SP \u0026 GRADE 3",
@@ -11135,7 +11211,6 @@
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
       "entity.craftkaisen.mahito": "Mahito",
-      "gui.craftkaisen.design_gui.button_confirm": "Confirm",
       "advancements.semi_grade_2.descr": "Become a Semi Grade 2 Sorcerer",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
@@ -11147,10 +11222,12 @@
       "effect.craftkaisen.roots_potion": "RootsPotion",
       "item.craftkaisen.sukuna_fighting_armor_chestplate": "Sukuna Fighting Haori",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
+      "key.craftkaisen.switch_moveset": "Switch Moveset",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_i_increases_cursed_energy_c": "CE I - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.disaster_flame": "Disaster Flame",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ss4black_flash_5_sp_4_random": "§4Black Flash - 5 SP \u0026 4 RANDOM USES",
+      "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
       "item.craftkaisen.flowerfields": "Flowerfields",
       "gui.craftkaisen.bases_gui.label_string_world_marker": "String, World Marker",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
@@ -11165,7 +11242,6 @@
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health": "Defense I - Upgrades max health.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.main_menu.label_technique_limitless": "Technique : Limitless",
-      "gui.craftkaisen.design_gui.label_blue_yellow_red_purple_green": "Blue, Yellow, Red, Purple, Green, Orange, Black, White",
       "gui.craftkaisen.main_hud.label_move_one": "Move One"
     }
   },
@@ -11199,29 +11275,12 @@
         ]
       },
       {
-        "name": "Gamerules",
-        "children": []
-      },
-      {
-        "name": "Set Technique",
-        "children": []
-      },
-      {
         "name": "Procedures",
         "children": []
       },
       {
         "name": "Calls",
         "children": []
-      },
-      {
-        "name": "Advancements",
-        "children": [
-          {
-            "name": "Grades",
-            "children": []
-          }
-        ]
       },
       {
         "name": "Blocks",
@@ -11237,19 +11296,6 @@
         "children": []
       },
       {
-        "name": "Tags",
-        "children": []
-      },
-      {
-        "name": "Potion Effects",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "GUI",
         "children": [
           {
@@ -11263,17 +11309,8 @@
         ]
       },
       {
-        "name": "Items",
-        "children": [
-          {
-            "name": "Values",
-            "children": []
-          },
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "name": "Biomes",
+        "children": []
       },
       {
         "name": "Particles",
@@ -11289,11 +11326,58 @@
         ]
       },
       {
-        "name": "Functions",
+        "name": "Movesets",
         "children": []
       },
       {
-        "name": "Movesets",
+        "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "Set Technique",
+        "children": []
+      },
+      {
+        "name": "Advancements",
+        "children": [
+          {
+            "name": "Grades",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Tags",
+        "children": []
+      },
+      {
+        "name": "Potion Effects",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Dimensions",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": [
+          {
+            "name": "Values",
+            "children": []
+          },
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Functions",
         "children": []
       },
       {
@@ -11340,14 +11424,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Dimensions",
-        "children": []
-      },
-      {
-        "name": "Biomes",
-        "children": []
       }
     ]
   },

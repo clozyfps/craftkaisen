@@ -4,9 +4,9 @@
     "type": "forge:any"
   },
   "spawners": {
-    "type": "craftkaisen:mahito",
-    "weight": 20,
+    "type": "craftkaisen:cursedspiritmouth",
+    "weight": 10,
     "minCount": 1,
-    "maxCount": 1
+    "maxCount": 3
   }
 }
