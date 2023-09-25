@@ -3,7 +3,7 @@ package net.mcreator.craftkaisen.world.inventory;
 
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
-public class CustomCTGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class DesignGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -16,8 +16,8 @@ public class CustomCTGUIMenu extends AbstractContainerMenu implements Supplier<M
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public CustomCTGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(CraftkaisenModMenus.CUSTOM_CTGUI.get(), id);
+	public DesignGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(CraftkaisenModMenus.DESIGN_GUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

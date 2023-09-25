@@ -3,99 +3,93 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 176,
-    "height": 166,
+    "width": 512,
+    "height": 512,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": false,
+    "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
+        "type": "textfield",
         "data": {
-          "name": "button_back",
-          "text": "< - Back",
-          "width": 66,
+          "placeholder": "Choice..",
+          "name": "ChoiceBox",
+          "width": 120,
           "height": 20,
-          "x": 9,
-          "y": 9
+          "x": 123,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_bases",
+          "text": {
+            "fixedValue": "Bases : "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 28,
+          "y": 36
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spaitial_transfiguration_corru",
+          "text": {
+            "fixedValue": "Spaitial, Transfiguration, Corruption, Flame, Plant, Swap, Jackpot,"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 50,
+          "y": 51
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_string_world_marker",
+          "text": {
+            "fixedValue": "String, World Marker"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 50,
+          "y": 65
         }
       },
       {
         "type": "button",
         "data": {
-          "name": "button_spatial",
-          "text": "Spatial",
+          "name": "button_confirm",
+          "text": "Confirm",
           "width": 61,
           "height": 20,
-          "x": 85,
-          "y": 9
+          "x": 258,
+          "y": 17
         }
       },
       {
-        "type": "button",
+        "type": "label",
         "data": {
-          "name": "button_swap",
-          "text": "Swap",
-          "width": 46,
-          "height": 20,
-          "x": 330,
-          "y": 9
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_transfigure",
-          "text": "Transfigure",
-          "width": 82,
-          "height": 20,
-          "x": 159,
-          "y": 9
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_jackpot",
-          "text": "Jackpot",
-          "width": 61,
-          "height": 20,
-          "x": 254,
-          "y": 9
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_flame",
-          "text": "Flame",
-          "width": 51,
-          "height": 20,
-          "x": 85,
-          "y": 40
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_speech",
-          "text": "Speech",
-          "width": 56,
-          "height": 20,
-          "x": 152,
-          "y": 40
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_plant",
-          "text": "Plant",
-          "width": 51,
-          "height": 20,
-          "x": 224,
-          "y": 40
+          "name": "label_errmsg",
+          "text": {
+            "fixedValue": "ErrMsg"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "x": 124,
+          "y": 4
         }
       }
     ],

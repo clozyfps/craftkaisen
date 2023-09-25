@@ -915,20 +915,6 @@
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
     },
     {
-      "name": "SetCursedTechnique",
-      "type": "command",
-      "sortid": 118,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_cursed_technique",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/command/SetCursedTechniqueCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
       "name": "HollowPurpleProcedure",
       "type": "procedure",
       "sortid": 56,
@@ -1276,26 +1262,6 @@
       "path": "~/Procedures"
     },
     {
-      "name": "SetLimitless",
-      "type": "procedure",
-      "sortid": 71,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_limitless",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
       "name": "CursedEnergyDisplay",
       "type": "procedure",
       "sortid": 72,
@@ -1538,26 +1504,6 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
-    },
-    {
-      "name": "SetHeavenly",
-      "type": "procedure",
-      "sortid": 84,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_heavenly",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetHeavenlyProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
     },
     {
       "name": "WeaponCooldown",
@@ -2385,26 +2331,6 @@
         "type": "logic"
       },
       "path": "~/Gamerules"
-    },
-    {
-      "name": "SetVoice",
-      "type": "procedure",
-      "sortid": 124,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_voice",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetVoiceProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
     },
     {
       "name": "CombatTest",
@@ -3332,30 +3258,6 @@
       "path": "~/Commands"
     },
     {
-      "name": "SetCursedTechniqueProcedure",
-      "type": "procedure",
-      "sortid": 130,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_cursed_technique_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedTechniqueProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "cmdparams",
-            "type": "map"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
       "name": "CloseCurrentGUI",
       "type": "procedure",
       "sortid": 137,
@@ -3892,26 +3794,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "SetClap",
-      "type": "procedure",
-      "sortid": 176,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_clap",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetClapProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
       "name": "EntityHit",
       "type": "procedure",
       "sortid": 172,
@@ -4207,26 +4089,6 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
-    },
-    {
-      "name": "SetDivergent",
-      "type": "procedure",
-      "sortid": 191,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_divergent",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetDivergentProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
     },
     {
       "name": "SixEyesTick",
@@ -5429,26 +5291,6 @@
       "path": "~/Keybinds/Procedures/TechniqueProcedure/DisasterFlameDupe"
     },
     {
-      "name": "SetFlames",
-      "type": "procedure",
-      "sortid": 252,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_flames",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetFlamesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
       "name": "DisasterFlame5",
       "type": "procedure",
       "sortid": 247,
@@ -6584,26 +6426,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "SetSukuna",
-      "type": "procedure",
-      "sortid": 323,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_sukuna",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetSukunaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
       "name": "Cursedenergymax",
       "type": "procedure",
       "sortid": 324,
@@ -6966,26 +6788,6 @@
         ]
       },
       "path": "~/Abilities"
-    },
-    {
-      "name": "SetPlants",
-      "type": "procedure",
-      "sortid": 344,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_plants",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlantsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
     },
     {
       "name": "FlowerfieldsProjectileHitsLivingEntity",
@@ -8457,44 +8259,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "SetJob",
-      "type": "command",
-      "sortid": 379,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_job",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/command/SetJobCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "JobProcedure",
-      "type": "procedure",
-      "sortid": 378,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "job_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/JobProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "cmdparams",
-            "type": "map"
-          }
-        ]
-      },
-      "path": "~/Commands/Procedures"
-    },
-    {
       "name": "GradeValue",
       "type": "procedure",
       "sortid": 381,
@@ -9473,26 +9237,6 @@
         ]
       },
       "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "SetTransfiguration",
-      "type": "procedure",
-      "sortid": 427,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_transfiguration",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetTransfigurationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
     },
     {
       "name": "BigFistOnInitialEntitySpawn",
@@ -10592,6 +10336,22 @@
       "path": "~/GUI/Procedures"
     },
     {
+      "name": "TojiContractGui",
+      "type": "gui",
+      "sortid": 486,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_contract_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/TojiContractGuiButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/TojiContractGuiScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/TojiContractGuiMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
       "name": "YenSet",
       "type": "procedure",
       "sortid": 480,
@@ -10624,6 +10384,27 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "TojiTextValue",
+      "type": "procedure",
+      "sortid": 484,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_text_value",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiTextValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
     },
     {
       "name": "PurchaseToji",
@@ -10666,92 +10447,6 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "TojiPurchaseValue",
-      "type": "procedure",
-      "sortid": 483,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "toji_purchase_value",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/TojiPurchaseValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "TojiTextValue",
-      "type": "procedure",
-      "sortid": 484,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "toji_text_value",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/TojiTextValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/GUI/Values"
-    },
-    {
-      "name": "TojiContractDeath",
-      "type": "procedure",
-      "sortid": 485,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "toji_contract_death",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/TojiContractDeathProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
-      "name": "TojiContractGui",
-      "type": "gui",
-      "sortid": 486,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "toji_contract_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/TojiContractGuiButtonMessage.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/TojiContractGuiScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/TojiContractGuiMenu.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
       "name": "TojiFushiguroRightClickedOnEntity",
       "type": "procedure",
       "sortid": 487,
@@ -10786,6 +10481,116 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "TojiContractDeath",
+      "type": "procedure",
+      "sortid": 485,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_contract_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiContractDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TojiPurchaseValue",
+      "type": "procedure",
+      "sortid": 483,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_purchase_value",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiPurchaseValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DesignGUI",
+      "type": "gui",
+      "sortid": 466,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "design_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/DesignGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/DesignGUIScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Chant",
+      "type": "keybind",
+      "sortid": 464,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ChantMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Cursedspiritmouth",
+      "type": "livingentity",
+      "sortid": 480,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursedspiritmouth",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedspiritmouthRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedspiritmouthEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursedspiritmouth_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursedspiritmouth_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BeginChant",
+      "type": "procedure",
+      "sortid": 465,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "begin_chant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BeginChantProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Keybinds/Procedures"
     }
   ],
   "variable_elements": [
@@ -11190,6 +10995,126 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "Move2Type",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move1Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move3Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move1Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move4Type",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move3Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move4Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move5Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move1Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move5Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move3Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move1Type",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move5Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move2Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move3Type",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move4Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move4Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move5Type",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "Move2Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move2Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -11255,7 +11180,6 @@
       "effect.craftkaisen.sky_of_flames": "SkyOfFlames",
       "item.craftkaisen.megumi_fushiguro_spawn_egg": "Megumi Fushiguro Spawn Egg",
       "key.craftkaisen.flash_step": "Flash Step",
-      "advancements.semi_grade_1.descr": "Become a Semi Grade 1 Sorcerer",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
@@ -11274,28 +11198,27 @@
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
+      "gui.craftkaisen.bases_gui.button_confirm": "Confirm",
       "gui.craftkaisen.main_menu.label_empty1": "Job:",
-      "gui.craftkaisen.custom_ctgui.CTName": "Technique Name..",
       "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
-      "gui.craftkaisen.custom_ctgui.button_bases1": "\u003c - Design",
+      "gui.craftkaisen.custom_ctgui.CTName": "Technique Name..",
       "effect.craftkaisen.twisting": "Twisting",
       "effect.craftkaisen.tough_body": "Tough Body",
       "subtitles.blood": "",
       "gui.craftkaisen.bases_gui.button_jackpot": "Jackpot",
       "entity.craftkaisen.cursedspiritgrasshopper": "Cursed Spirit: Grasshopper",
-      "advancements.special_grade.title": "Special Grade",
       "gui.craftkaisen.sword_creator.label_cursed_energy_investment": "Cursed Energy Investment",
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.stopped": "Stopped",
-      "advancements.special_grade.descr": "Become a Special Grade Sorcerer",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
+      "gui.craftkaisen.bases_gui.label_bases": "Bases : ",
       "item.craftkaisen.eso_armor_chestplate": "Eso Chestplate",
-      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "gui.craftkaisen.main_menu.label_technique": "Technique:",
+      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "entity.craftkaisen.unknown_man": "Unknown Man",
+      "gui.craftkaisen.custom_ctgui.button_finish2": "Design",
       "effect.craftkaisen.crushing": "Crushing",
-      "gui.craftkaisen.sword_creator.label_errormessage": "ErrorMessage",
       "gui.craftkaisen.custom_ctgui.button_finish1": "Bases",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
@@ -11305,13 +11228,12 @@
       "gui.craftkaisen.main_hud.label_x1": "X",
       "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
-      "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
+      "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "entity.craftkaisen.satoru_gojo_blindfold": "Satoru Gojo Blindfold",
       "item.craftkaisen.itadori_spawn_egg": "Itadori Spawn Egg",
-      "advancements.grade_1.title": "Grade 1",
       "key.craftkaisen.switch_technique": "Switch Ability",
       "entity.craftkaisen.fly_head": "Fly Head",
       "item.craftkaisen.clap": "Clap",
@@ -11327,6 +11249,7 @@
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
+      "gui.craftkaisen.bases_gui.label_spaitial_transfiguration_corru": "Spaitial, Transfiguration, Corruption, Flame, Plant, Swap, Jackpot,",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "effect.craftkaisen.ember_floor": "FloorEmber",
@@ -11340,6 +11263,7 @@
       "effect.craftkaisen.idle_transfiguration": "Idle Transfiguration",
       "item.craftkaisen.wooden_ball": "Wooden Ball",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",
+      "gui.craftkaisen.bases_gui.ChoiceBox": "Choice..",
       "gui.craftkaisen.sword_creator.DaggerBox": "Dagger",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_i_increases_speedss9_1": "Agility I - Increases speed.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.tes": "Tes",
@@ -11365,7 +11289,6 @@
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
       "item.craftkaisen.talisman": "Talisman",
-      "gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for": "I\u0027ll assassinate somebody for",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "gui.craftkaisen.sword_creator.GreatswordBox": "Greatsword",
@@ -11379,11 +11302,8 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_ii_increases_speedss9": "Agility II - Increases speed.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
       "item.craftkaisen.magma_rock_projectile": "Magma Rock Projectile",
-      "advancements.semi_grade_1.title": "Semi Grade 1",
-      "gui.craftkaisen.custom_ctgui.button_bases": "Bases - \u003e",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
-      "gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat": "I cant assure you that ill beat them.",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2": "Click to upgrade secondary branch!",
       "advancements.semi_grade_2.title": "Semi Grade 2",
@@ -11397,6 +11317,7 @@
       "gui.craftkaisen.test.label_dawd": "dawd",
       "gui.craftkaisen.talisman_gui.button_seal": "Seal",
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
+      "gui.craftkaisen.bases_gui.label_errmsg": "ErrMsg",
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
       "effect.craftkaisen.infinity": "Infinity",
       "effect.craftkaisen.cursed_spirit": "Cursed Spirit",
@@ -11412,7 +11333,6 @@
       "item.craftkaisen.fly_head_spawn_egg": "Fly Head Spawn Egg",
       "death.attack.overuse": " fried their brain",
       "entity.craftkaisen.itadori": "Itadori",
-      "gui.craftkaisen.toji_contract_gui.label_20000_yen": "20,000 Yen",
       "gui.craftkaisen.main_hud.label_quest3": "Quest3",
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.main_hud.label_quest2": "Quest2",
@@ -11432,7 +11352,6 @@
       "item.craftkaisen.unknown_man_spawn_egg": "Unknown Man Spawn Egg",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
-      "advancements.grade_1.descr": "Become a Grade 1 Sorcerer",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1": "Click to upgrade main cursed energy branch!",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
@@ -11443,7 +11362,6 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten": "Resistance I - Upgrades resistance.§9 2 SP \u0026 GRADE 4",
       "gui.craftkaisen.sword_creator.label_iron_ingots": "Iron Ingots",
       "itemGroup.tabjjkarmor": "JJK Armor",
-      "gui.craftkaisen.toji_contract_gui.TojiPlayerKill": "PlayerName",
       "gui.craftkaisen.main_hud.label_quest1": "Quest",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "entity.craftkaisen.ember_insect": "Ember Insect",
@@ -11465,7 +11383,6 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_v_increases_melee_damage": "Power V - Increases melee damage.§9 3 SP \u0026 GRADE 3",
       "item.craftkaisen.eso_armor_leggings": "Eso Pants",
       "item.craftkaisen.cursedspiritrugbyfield_spawn_egg": "Cursed Spirit: Rugby Field Spawn Egg",
-      "gui.craftkaisen.toji_contract_gui.button_purchase": "Purchase",
       "gui.craftkaisen.main_menu.button_prestige": "Skill Tree",
       "gui.craftkaisen.talisman_gui.label_sealing_menu": "Sealing Menu",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health4": "Defense V - Upgrades max health.§9 3 SP \u0026 GRADE 3",
@@ -11507,14 +11424,18 @@
       "effect.craftkaisen.roots_potion": "RootsPotion",
       "item.craftkaisen.sukuna_fighting_armor_chestplate": "Sukuna Fighting Haori",
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
+      "key.craftkaisen.switch_moveset": "Switch Moveset",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_i_increases_cursed_energy_c": "CE I - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.disaster_flame": "Disaster Flame",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ss4black_flash_5_sp_4_random": "§4Black Flash - 5 SP \u0026 4 RANDOM USES",
+      "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
       "item.craftkaisen.flowerfields": "Flowerfields",
+      "gui.craftkaisen.bases_gui.label_string_world_marker": "String, World Marker",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
+      "gui.craftkaisen.bases_gui.button_corruption": "Corruption",
       "gui.craftkaisen.sword_creator.button_empty": "+",
       "gui.craftkaisen.sword_creator.KatanaBox": "Katana",
       "effect.craftkaisen.shrine": "Shrine",

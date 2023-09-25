@@ -36,6 +36,7 @@ import net.mcreator.craftkaisen.client.renderer.EsoRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritrugbyfieldRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
+import net.mcreator.craftkaisen.client.renderer.CursedspiritmouthRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritgrasshopperRenderer;
 import net.mcreator.craftkaisen.client.renderer.BigFistRenderer;
 
@@ -83,5 +84,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.ESO.get(), EsoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO.get(), MahitoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO_SPIKE.get(), MahitoSpikeRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.CURSEDSPIRITMOUTH.get(), CursedspiritmouthRenderer::new);
 	}
 }

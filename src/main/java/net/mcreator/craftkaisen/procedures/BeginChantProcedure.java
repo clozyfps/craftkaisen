@@ -4,7 +4,7 @@ import net.minecraftforge.eventbus.api.Event;
 
 import javax.annotation.Nullable;
 
-public class UseTechniqueOnKeyPressedProcedure {
+public class BeginChantProcedure {
 	public static void execute() {
 	}
 }

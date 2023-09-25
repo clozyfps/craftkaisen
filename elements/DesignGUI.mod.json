@@ -1,0 +1,85 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 512,
+    "height": 512,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Primary color..",
+          "name": "PrimaryColor",
+          "width": 120,
+          "height": 20,
+          "x": 241,
+          "y": 91
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Secondary Color..",
+          "name": "SecondaryColor",
+          "width": 120,
+          "height": 20,
+          "x": 241,
+          "y": 118
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_confirm",
+          "text": "Confirm",
+          "width": 61,
+          "height": 20,
+          "x": 364,
+          "y": 103
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_colors",
+          "text": {
+            "fixedValue": "Colors :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 11,
+          "y": 11
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_blue_yellow_red_purple_green",
+          "text": {
+            "fixedValue": "Blue, Yellow, Red, Purple, Green, Orange, Black, White"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 27,
+          "y": 25
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
