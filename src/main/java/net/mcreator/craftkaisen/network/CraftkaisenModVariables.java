@@ -127,6 +127,7 @@ public class CraftkaisenModVariables {
 			clone.CursedEnergySecondaryTree = original.CursedEnergySecondaryTree;
 			clone.AgilitySecondaryTree = original.AgilitySecondaryTree;
 			clone.TalismanLink = original.TalismanLink;
+			clone.Yen = original.Yen;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -369,6 +370,7 @@ public class CraftkaisenModVariables {
 		public double CursedEnergySecondaryTree = 0;
 		public double AgilitySecondaryTree = 0;
 		public ItemStack TalismanLink = ItemStack.EMPTY;
+		public double Yen = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -441,6 +443,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("CursedEnergySecondaryTree", CursedEnergySecondaryTree);
 			nbt.putDouble("AgilitySecondaryTree", AgilitySecondaryTree);
 			nbt.put("TalismanLink", TalismanLink.save(new CompoundTag()));
+			nbt.putDouble("Yen", Yen);
 			return nbt;
 		}
 
@@ -510,6 +513,7 @@ public class CraftkaisenModVariables {
 			CursedEnergySecondaryTree = nbt.getDouble("CursedEnergySecondaryTree");
 			AgilitySecondaryTree = nbt.getDouble("AgilitySecondaryTree");
 			TalismanLink = ItemStack.of(nbt.getCompound("TalismanLink"));
+			Yen = nbt.getDouble("Yen");
 		}
 	}
 
@@ -598,6 +602,7 @@ public class CraftkaisenModVariables {
 					variables.CursedEnergySecondaryTree = message.data.CursedEnergySecondaryTree;
 					variables.AgilitySecondaryTree = message.data.AgilitySecondaryTree;
 					variables.TalismanLink = message.data.TalismanLink;
+					variables.Yen = message.data.Yen;
 				}
 			});
 			context.setPacketHandled(true);

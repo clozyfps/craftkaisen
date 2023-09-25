@@ -11,6 +11,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
 
+import net.mcreator.craftkaisen.world.inventory.TojiContractGuiMenu;
 import net.mcreator.craftkaisen.world.inventory.TalismanGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.SwordCreatorMenu;
 import net.mcreator.craftkaisen.world.inventory.SkillTreeMainGUIMenu;
@@ -31,4 +32,5 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<TalismanGUIMenu>> TALISMAN_GUI = REGISTRY.register("talisman_gui", () -> IForgeMenuType.create(TalismanGUIMenu::new));
 	public static final RegistryObject<MenuType<CustomCTGUIMenu>> CUSTOM_CTGUI = REGISTRY.register("custom_ctgui", () -> IForgeMenuType.create(CustomCTGUIMenu::new));
 	public static final RegistryObject<MenuType<BasesGUIMenu>> BASES_GUI = REGISTRY.register("bases_gui", () -> IForgeMenuType.create(BasesGUIMenu::new));
+	public static final RegistryObject<MenuType<TojiContractGuiMenu>> TOJI_CONTRACT_GUI = REGISTRY.register("toji_contract_gui", () -> IForgeMenuType.create(TojiContractGuiMenu::new));
 }
