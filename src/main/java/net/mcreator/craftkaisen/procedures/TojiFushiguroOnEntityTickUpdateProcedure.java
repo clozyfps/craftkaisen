@@ -1,5 +1,7 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
@@ -11,6 +13,10 @@ import net.minecraft.server.level.ServerLevel;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 public class TojiFushiguroOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -35,6 +41,19 @@ public class TojiFushiguroOnEntityTickUpdateProcedure {
 			if (Math.random() < 0.002) {
 				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DIVINE_REPOSITE_POTION.get(), 2, 1, false, false));
+			}
+		}
+		if (entity.getPersistentData().getBoolean("TargetingToji")) {
+			{
+				final Vec3 _center = new Vec3(x, y, z);
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1e+39 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+						.collect(Collectors.toList());
+				for (Entity entityiterator : _entfound) {
+					if (entityiterator.getPersistentData().getBoolean("TojiTarget")) {
+						if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
+							_entity.setTarget(_ent);
+					}
+				}
 			}
 		}
 	}

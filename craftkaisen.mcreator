@@ -10228,7 +10228,6 @@
       "registry_name": "bases_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/BasesGUIButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/BasesGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/BasesGUIMenu.java"
         ]
@@ -10400,15 +10399,15 @@
       "path": "~/Advancements/Grades"
     },
     {
-      "name": "OpenBasesGUI",
+      "name": "DesignConfirm",
       "type": "procedure",
-      "sortid": 481,
+      "sortid": 485,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "open_bases_gui",
+      "registry_name": "design_confirm",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenBasesGUIProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/DesignConfirmProcedure.java"
         ],
         "dependencies": [
           {
@@ -10416,40 +10415,8 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "OpenDesignGUI",
-      "type": "procedure",
-      "sortid": 482,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_design_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenDesignGUIProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
+            "name": "guistate",
+            "type": "map"
           },
           {
             "name": "x",
@@ -10512,6 +10479,67 @@
       "path": "~/GUI/Procedures"
     },
     {
+      "name": "RevealingOnesHandEffectStarted",
+      "type": "procedure",
+      "sortid": 492,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revealing_ones_hand_effect_started",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RevealingOnesHandEffectStartedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "ErrorDisplay",
+      "type": "procedure",
+      "sortid": 486,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "error_display",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ErrorDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RevealingOnesHandEffectExpires",
+      "type": "procedure",
+      "sortid": 493,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revealing_ones_hand_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RevealingOnesHandEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
       "name": "BasesConfirm",
       "type": "procedure",
       "sortid": 484,
@@ -10546,67 +10574,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "DesignConfirm",
-      "type": "procedure",
-      "sortid": 485,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "design_confirm",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DesignConfirmProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "ErrorDisplay",
-      "type": "procedure",
-      "sortid": 486,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "error_display",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ErrorDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -10704,6 +10671,42 @@
       "path": "~/Abilities"
     },
     {
+      "name": "OpenBasesGUI",
+      "type": "procedure",
+      "sortid": 481,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_bases_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenBasesGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
       "name": "RevealingOnesHand",
       "type": "potioneffect",
       "sortid": 491,
@@ -10718,15 +10721,72 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "RevealingOnesHandEffectStarted",
+      "name": "OpenDesignGUI",
       "type": "procedure",
-      "sortid": 492,
+      "sortid": 482,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "revealing_ones_hand_effect_started",
+      "registry_name": "open_design_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RevealingOnesHandEffectStartedProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenDesignGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "YenSet",
+      "type": "procedure",
+      "sortid": 480,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yen_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/YenSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "TojiTextValue",
+      "type": "procedure",
+      "sortid": 484,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_text_value",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiTextValueProcedure.java"
         ],
         "dependencies": [
           {
@@ -10735,18 +10795,249 @@
           }
         ]
       },
-      "path": "~/Potion Effects/Procedures"
+      "path": "~/GUI/Values"
     },
     {
-      "name": "RevealingOnesHandEffectExpires",
+      "name": "PurchaseToji",
+      "type": "procedure",
+      "sortid": 482,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purchase_toji",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PurchaseTojiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "TojiFushiguroRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 487,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_fushiguro_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiFushiguroRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RestrictionSet",
+      "type": "procedure",
+      "sortid": 495,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "restriction_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RestrictionSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "MechamaruArmor",
+      "type": "armor",
+      "sortid": 500,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mechamaru_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/mechamaru_armor_helmet.json",
+          "src/main/resources/assets/craftkaisen/models/item/mechamaru_armor_chestplate.json",
+          "src/main/resources/assets/craftkaisen/models/item/mechamaru_armor_leggings.json",
+          "src/main/java/net/mcreator/craftkaisen/item/MechamaruArmorItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "LeaveMech",
+      "type": "keybind",
+      "sortid": 498,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leave_mech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/LeaveMechMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "TojiPurchaseValue",
+      "type": "procedure",
+      "sortid": 483,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_purchase_value",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiPurchaseValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "TojiContractGui",
+      "type": "gui",
+      "sortid": 486,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_contract_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/TojiContractGuiMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/TojiContractGuiScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/TojiContractGuiButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "GiveRestriction",
+      "type": "command",
+      "sortid": 494,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_restriction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/GiveRestrictionCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetYenCommand",
+      "type": "command",
+      "sortid": 481,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_yen_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetYenCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "UltimateMechamaruOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 488,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultimate_mechamaru_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UltimateMechamaruOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "RestrictionPro",
       "type": "procedure",
       "sortid": 493,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "revealing_ones_hand_effect_expires",
+      "registry_name": "restriction_pro",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RevealingOnesHandEffectExpiresProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/RestrictionProProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "MechArmorTick",
+      "type": "procedure",
+      "sortid": 501,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mech_armor_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MechArmorTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -10755,7 +11046,191 @@
           }
         ]
       },
-      "path": "~/Potion Effects/Procedures"
+      "path": "~/Procedures"
+    },
+    {
+      "name": "UltimateMechamaru",
+      "type": "livingentity",
+      "sortid": 489,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultimate_mechamaru",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/UltimateMechamaruRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/UltimateMechamaruEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/ultimate_mechamaru_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SetRestrictionType",
+      "type": "command",
+      "sortid": 496,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_restriction_type",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetRestrictionTypeCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "TojiContractDeath",
+      "type": "procedure",
+      "sortid": 485,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "toji_contract_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TojiContractDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FragileTick",
+      "type": "procedure",
+      "sortid": 499,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fragile_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FragileTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "EmptyMechamaru",
+      "type": "livingentity",
+      "sortid": 491,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_mechamaru",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/EmptyMechamaruEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/EmptyMechamaruRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "LeaveMechOnKeyPressed",
+      "type": "procedure",
+      "sortid": 497,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leave_mech_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LeaveMechOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "WrappedUp",
+      "type": "livingentity",
+      "sortid": 492,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wrapped_up",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/WrappedUpRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/WrappedUpEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "EmptyMechamaruRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 490,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_mechamaru_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EmptyMechamaruRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
     }
   ],
   "variable_elements": [
@@ -11276,6 +11751,24 @@
       "value": "0"
     },
     {
+      "name": "KnownTechniques",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Move6Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move7Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "PrimaryColor",
       "type": "string",
       "scope": "player_persistent",
@@ -11286,6 +11779,24 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "Move7Damage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move6Cost",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Move7Name",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     },
     {
       "name": "Base",
@@ -11300,40 +11811,10 @@
       "value": "\"\""
     },
     {
-      "name": "Move6Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move6Damage",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "Move6Type",
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
-    },
-    {
-      "name": "Move7Name",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "\"\""
-    },
-    {
-      "name": "Move7Cost",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Move7Damage",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     },
     {
       "name": "Move7Type",
@@ -11342,10 +11823,22 @@
       "value": "\"\""
     },
     {
-      "name": "KnownTechniques",
+      "name": "Yen",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Restricted",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "RestrictedType",
       "type": "string",
       "scope": "player_persistent",
-      "value": ""
+      "value": "\"\""
     }
   ],
   "sound_elements": [

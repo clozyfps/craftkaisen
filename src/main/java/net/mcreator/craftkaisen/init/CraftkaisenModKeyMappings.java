@@ -19,6 +19,7 @@ import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.OpenInventoryCurseBindMessage;
+import net.mcreator.craftkaisen.network.LeaveMechMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -109,6 +110,19 @@ public class CraftkaisenModKeyMappings {
 		}
 	};
 	public static final KeyMapping CHANT = new KeyMapping("key.craftkaisen.chant", GLFW.GLFW_KEY_U, "key.categories.jjk");
+	public static final KeyMapping LEAVE_MECH = new KeyMapping("key.craftkaisen.leave_mech", GLFW.GLFW_KEY_B, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new LeaveMechMessage(0, 0));
+				LeaveMechMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -120,6 +134,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(CHARGE_CURSED_ENERGY);
 		event.register(OPEN_INVENTORY_CURSE_BIND);
 		event.register(CHANT);
+		event.register(LEAVE_MECH);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -133,6 +148,7 @@ public class CraftkaisenModKeyMappings {
 				OPEN_MAIN_MENU_BIND.consumeClick();
 				CHARGE_CURSED_ENERGY.consumeClick();
 				OPEN_INVENTORY_CURSE_BIND.consumeClick();
+				LEAVE_MECH.consumeClick();
 			}
 		}
 	}

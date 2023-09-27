@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "B",
+    "keyBindingName": "Leave Mech",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "LeaveMechOnKeyPressed"
+    }
+  }
+}

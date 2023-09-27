@@ -147,18 +147,21 @@ public class CraftkaisenModVariables {
 			clone.Move5Type = original.Move5Type;
 			clone.Move2Damage = original.Move2Damage;
 			clone.Move2Cost = original.Move2Cost;
+			clone.KnownTechniques = original.KnownTechniques;
+			clone.Move6Damage = original.Move6Damage;
+			clone.Move7Cost = original.Move7Cost;
 			clone.PrimaryColor = original.PrimaryColor;
 			clone.SecondaryColor = original.SecondaryColor;
+			clone.Move7Damage = original.Move7Damage;
+			clone.Move6Cost = original.Move6Cost;
+			clone.Move7Name = original.Move7Name;
 			clone.Base = original.Base;
 			clone.Move6Name = original.Move6Name;
-			clone.Move6Cost = original.Move6Cost;
-			clone.Move6Damage = original.Move6Damage;
 			clone.Move6Type = original.Move6Type;
-			clone.Move7Name = original.Move7Name;
-			clone.Move7Cost = original.Move7Cost;
-			clone.Move7Damage = original.Move7Damage;
 			clone.Move7Type = original.Move7Type;
-			clone.KnownTechniques = original.KnownTechniques;
+			clone.Yen = original.Yen;
+			clone.Restricted = original.Restricted;
+			clone.RestrictedType = original.RestrictedType;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -421,18 +424,21 @@ public class CraftkaisenModVariables {
 		public String Move5Type = "\"\"";
 		public double Move2Damage = 0;
 		public double Move2Cost = 0;
+		public String KnownTechniques = "";
+		public double Move6Damage = 0;
+		public double Move7Cost = 0;
 		public String PrimaryColor = "";
 		public String SecondaryColor = "";
+		public double Move7Damage = 0;
+		public double Move6Cost = 0;
+		public String Move7Name = "\"\"";
 		public String Base = "\"\"";
 		public String Move6Name = "\"\"";
-		public double Move6Cost = 0;
-		public double Move6Damage = 0;
 		public String Move6Type = "\"\"";
-		public String Move7Name = "\"\"";
-		public double Move7Cost = 0;
-		public double Move7Damage = 0;
 		public String Move7Type = "\"\"";
-		public String KnownTechniques = "";
+		public double Yen = 0;
+		public boolean Restricted = false;
+		public String RestrictedType = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -525,18 +531,21 @@ public class CraftkaisenModVariables {
 			nbt.putString("Move5Type", Move5Type);
 			nbt.putDouble("Move2Damage", Move2Damage);
 			nbt.putDouble("Move2Cost", Move2Cost);
+			nbt.putString("KnownTechniques", KnownTechniques);
+			nbt.putDouble("Move6Damage", Move6Damage);
+			nbt.putDouble("Move7Cost", Move7Cost);
 			nbt.putString("PrimaryColor", PrimaryColor);
 			nbt.putString("SecondaryColor", SecondaryColor);
+			nbt.putDouble("Move7Damage", Move7Damage);
+			nbt.putDouble("Move6Cost", Move6Cost);
+			nbt.putString("Move7Name", Move7Name);
 			nbt.putString("Base", Base);
 			nbt.putString("Move6Name", Move6Name);
-			nbt.putDouble("Move6Cost", Move6Cost);
-			nbt.putDouble("Move6Damage", Move6Damage);
 			nbt.putString("Move6Type", Move6Type);
-			nbt.putString("Move7Name", Move7Name);
-			nbt.putDouble("Move7Cost", Move7Cost);
-			nbt.putDouble("Move7Damage", Move7Damage);
 			nbt.putString("Move7Type", Move7Type);
-			nbt.putString("KnownTechniques", KnownTechniques);
+			nbt.putDouble("Yen", Yen);
+			nbt.putBoolean("Restricted", Restricted);
+			nbt.putString("RestrictedType", RestrictedType);
 			return nbt;
 		}
 
@@ -626,18 +635,21 @@ public class CraftkaisenModVariables {
 			Move5Type = nbt.getString("Move5Type");
 			Move2Damage = nbt.getDouble("Move2Damage");
 			Move2Cost = nbt.getDouble("Move2Cost");
+			KnownTechniques = nbt.getString("KnownTechniques");
+			Move6Damage = nbt.getDouble("Move6Damage");
+			Move7Cost = nbt.getDouble("Move7Cost");
 			PrimaryColor = nbt.getString("PrimaryColor");
 			SecondaryColor = nbt.getString("SecondaryColor");
+			Move7Damage = nbt.getDouble("Move7Damage");
+			Move6Cost = nbt.getDouble("Move6Cost");
+			Move7Name = nbt.getString("Move7Name");
 			Base = nbt.getString("Base");
 			Move6Name = nbt.getString("Move6Name");
-			Move6Cost = nbt.getDouble("Move6Cost");
-			Move6Damage = nbt.getDouble("Move6Damage");
 			Move6Type = nbt.getString("Move6Type");
-			Move7Name = nbt.getString("Move7Name");
-			Move7Cost = nbt.getDouble("Move7Cost");
-			Move7Damage = nbt.getDouble("Move7Damage");
 			Move7Type = nbt.getString("Move7Type");
-			KnownTechniques = nbt.getString("KnownTechniques");
+			Yen = nbt.getDouble("Yen");
+			Restricted = nbt.getBoolean("Restricted");
+			RestrictedType = nbt.getString("RestrictedType");
 		}
 	}
 
@@ -746,18 +758,21 @@ public class CraftkaisenModVariables {
 					variables.Move5Type = message.data.Move5Type;
 					variables.Move2Damage = message.data.Move2Damage;
 					variables.Move2Cost = message.data.Move2Cost;
+					variables.KnownTechniques = message.data.KnownTechniques;
+					variables.Move6Damage = message.data.Move6Damage;
+					variables.Move7Cost = message.data.Move7Cost;
 					variables.PrimaryColor = message.data.PrimaryColor;
 					variables.SecondaryColor = message.data.SecondaryColor;
+					variables.Move7Damage = message.data.Move7Damage;
+					variables.Move6Cost = message.data.Move6Cost;
+					variables.Move7Name = message.data.Move7Name;
 					variables.Base = message.data.Base;
 					variables.Move6Name = message.data.Move6Name;
-					variables.Move6Cost = message.data.Move6Cost;
-					variables.Move6Damage = message.data.Move6Damage;
 					variables.Move6Type = message.data.Move6Type;
-					variables.Move7Name = message.data.Move7Name;
-					variables.Move7Cost = message.data.Move7Cost;
-					variables.Move7Damage = message.data.Move7Damage;
 					variables.Move7Type = message.data.Move7Type;
-					variables.KnownTechniques = message.data.KnownTechniques;
+					variables.Yen = message.data.Yen;
+					variables.Restricted = message.data.Restricted;
+					variables.RestrictedType = message.data.RestrictedType;
 				}
 			});
 			context.setPacketHandled(true);
