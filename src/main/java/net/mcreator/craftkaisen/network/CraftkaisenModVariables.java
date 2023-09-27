@@ -148,6 +148,8 @@ public class CraftkaisenModVariables {
 			clone.Move5Type = original.Move5Type;
 			clone.Move2Damage = original.Move2Damage;
 			clone.Move2Cost = original.Move2Cost;
+			clone.Restricted = original.Restricted;
+			clone.RestrictedType = original.RestrictedType;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -411,6 +413,8 @@ public class CraftkaisenModVariables {
 		public String Move5Type = "\"\"";
 		public double Move2Damage = 0;
 		public double Move2Cost = 0;
+		public boolean Restricted = false;
+		public String RestrictedType = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -504,6 +508,8 @@ public class CraftkaisenModVariables {
 			nbt.putString("Move5Type", Move5Type);
 			nbt.putDouble("Move2Damage", Move2Damage);
 			nbt.putDouble("Move2Cost", Move2Cost);
+			nbt.putBoolean("Restricted", Restricted);
+			nbt.putString("RestrictedType", RestrictedType);
 			return nbt;
 		}
 
@@ -594,6 +600,8 @@ public class CraftkaisenModVariables {
 			Move5Type = nbt.getString("Move5Type");
 			Move2Damage = nbt.getDouble("Move2Damage");
 			Move2Cost = nbt.getDouble("Move2Cost");
+			Restricted = nbt.getBoolean("Restricted");
+			RestrictedType = nbt.getString("RestrictedType");
 		}
 	}
 
@@ -703,6 +711,8 @@ public class CraftkaisenModVariables {
 					variables.Move5Type = message.data.Move5Type;
 					variables.Move2Damage = message.data.Move2Damage;
 					variables.Move2Cost = message.data.Move2Cost;
+					variables.Restricted = message.data.Restricted;
+					variables.RestrictedType = message.data.RestrictedType;
 				}
 			});
 			context.setPacketHandled(true);

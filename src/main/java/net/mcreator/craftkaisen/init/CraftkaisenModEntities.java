@@ -16,8 +16,10 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.craftkaisen.entity.WrappedUpEntity;
 import net.mcreator.craftkaisen.entity.WoodenBallEntity;
 import net.mcreator.craftkaisen.entity.UnknownManEntity;
+import net.mcreator.craftkaisen.entity.UltimateMechamaruEntity;
 import net.mcreator.craftkaisen.entity.TwistEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.SukunaEntity;
@@ -47,6 +49,7 @@ import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.EsoEntity;
+import net.mcreator.craftkaisen.entity.EmptyMechamaruEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
@@ -185,6 +188,18 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<CursedspiritmouthEntity>of(CursedspiritmouthEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CursedspiritmouthEntity::new)
 
 					.sized(0.7f, 2.1f));
+	public static final RegistryObject<EntityType<UltimateMechamaruEntity>> ULTIMATE_MECHAMARU = register("ultimate_mechamaru",
+			EntityType.Builder.<UltimateMechamaruEntity>of(UltimateMechamaruEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UltimateMechamaruEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<EmptyMechamaruEntity>> EMPTY_MECHAMARU = register("empty_mechamaru",
+			EntityType.Builder.<EmptyMechamaruEntity>of(EmptyMechamaruEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EmptyMechamaruEntity::new)
+
+					.sized(1.5f, 1.5f));
+	public static final RegistryObject<EntityType<WrappedUpEntity>> WRAPPED_UP = register("wrapped_up",
+			EntityType.Builder.<WrappedUpEntity>of(WrappedUpEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WrappedUpEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -220,6 +235,9 @@ public class CraftkaisenModEntities {
 			MahitoEntity.init();
 			MahitoSpikeEntity.init();
 			CursedspiritmouthEntity.init();
+			UltimateMechamaruEntity.init();
+			EmptyMechamaruEntity.init();
+			WrappedUpEntity.init();
 		});
 	}
 
@@ -252,5 +270,8 @@ public class CraftkaisenModEntities {
 		event.put(MAHITO.get(), MahitoEntity.createAttributes().build());
 		event.put(MAHITO_SPIKE.get(), MahitoSpikeEntity.createAttributes().build());
 		event.put(CURSEDSPIRITMOUTH.get(), CursedspiritmouthEntity.createAttributes().build());
+		event.put(ULTIMATE_MECHAMARU.get(), UltimateMechamaruEntity.createAttributes().build());
+		event.put(EMPTY_MECHAMARU.get(), EmptyMechamaruEntity.createAttributes().build());
+		event.put(WRAPPED_UP.get(), WrappedUpEntity.createAttributes().build());
 	}
 }

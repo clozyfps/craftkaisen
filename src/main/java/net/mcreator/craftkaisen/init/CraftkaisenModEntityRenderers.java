@@ -11,7 +11,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.craftkaisen.client.renderer.WrappedUpRenderer;
 import net.mcreator.craftkaisen.client.renderer.UnknownManRenderer;
+import net.mcreator.craftkaisen.client.renderer.UltimateMechamaruRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
@@ -33,6 +35,7 @@ import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 import net.mcreator.craftkaisen.client.renderer.FireArrowRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
 import net.mcreator.craftkaisen.client.renderer.EsoRenderer;
+import net.mcreator.craftkaisen.client.renderer.EmptyMechamaruRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritrugbyfieldRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
@@ -85,5 +88,8 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO.get(), MahitoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAHITO_SPIKE.get(), MahitoSpikeRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.CURSEDSPIRITMOUTH.get(), CursedspiritmouthRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.ULTIMATE_MECHAMARU.get(), UltimateMechamaruRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.EMPTY_MECHAMARU.get(), EmptyMechamaruRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.WRAPPED_UP.get(), WrappedUpRenderer::new);
 	}
 }

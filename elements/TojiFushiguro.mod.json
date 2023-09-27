@@ -96,6 +96,9 @@
     "stepSound": {
       "value": ""
     },
+    "onRightClickedOn": {
+      "name": "TojiFushiguroRightClickedOnEntity"
+    },
     "onMobTickUpdate": {
       "name": "TojiFushiguroOnEntityTickUpdate"
     },

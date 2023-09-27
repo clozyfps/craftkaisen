@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.item.SukunaFightingArmorItem;
 import net.mcreator.craftkaisen.item.StopItem;
 import net.mcreator.craftkaisen.item.SleepItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.MechamaruArmorItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.MagmaRockProjectileItem;
 import net.mcreator.craftkaisen.item.KatanaItem;
@@ -123,6 +124,11 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> TALISMAN = REGISTRY.register("talisman", () -> new TalismanItem());
 	public static final RegistryObject<Item> CURSEDSPIRITMOUTH_SPAWN_EGG = REGISTRY.register("cursedspiritmouth_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSEDSPIRITMOUTH, -1, -39322, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> ULTIMATE_MECHAMARU_SPAWN_EGG = REGISTRY.register("ultimate_mechamaru_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.ULTIMATE_MECHAMARU, -15921894, -11388626, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> MECHAMARU_ARMOR_HELMET = REGISTRY.register("mechamaru_armor_helmet", () -> new MechamaruArmorItem.Helmet());
+	public static final RegistryObject<Item> MECHAMARU_ARMOR_CHESTPLATE = REGISTRY.register("mechamaru_armor_chestplate", () -> new MechamaruArmorItem.Chestplate());
+	public static final RegistryObject<Item> MECHAMARU_ARMOR_LEGGINGS = REGISTRY.register("mechamaru_armor_leggings", () -> new MechamaruArmorItem.Leggings());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
