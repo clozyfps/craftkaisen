@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.craftkaisen.client.gui.TechniqueCreatorGUIScreen;
 import net.mcreator.craftkaisen.client.gui.TalismanGUIScreen;
 import net.mcreator.craftkaisen.client.gui.SwordCreatorScreen;
 import net.mcreator.craftkaisen.client.gui.SkillTreeMainGUIScreen;
@@ -35,6 +36,7 @@ public class CraftkaisenModScreens {
 			MenuScreens.register(CraftkaisenModMenus.CUSTOM_CTGUI.get(), CustomCTGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.BASES_GUI.get(), BasesGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.DESIGN_GUI.get(), DesignGUIScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.TECHNIQUE_CREATOR_GUI.get(), TechniqueCreatorGUIScreen::new);
 		});
 	}
 }

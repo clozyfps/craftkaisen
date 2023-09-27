@@ -1,0 +1,73 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 135,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Technique Name..",
+          "name": "TechniqueName",
+          "width": 120,
+          "height": 20,
+          "x": 153,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_create",
+          "text": "Create",
+          "width": 56,
+          "height": 20,
+          "x": 185,
+          "y": 177
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "ImbueTechnique",
+          "text": "Imbue Technique?",
+          "x": 153,
+          "y": 113
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "ReverseEffect",
+          "text": "Reverse Effect?",
+          "x": 153,
+          "y": 147
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_technique_specific_settings",
+          "text": "Technique Settings",
+          "width": 166,
+          "height": 20,
+          "x": 130,
+          "y": 56
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

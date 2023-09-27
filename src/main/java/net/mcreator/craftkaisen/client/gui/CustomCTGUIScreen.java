@@ -11,6 +11,10 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
+import net.mcreator.craftkaisen.procedures.ErrorDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.DIsplayErrorProcedure;
+import net.mcreator.craftkaisen.network.CustomCTGUIButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -83,6 +87,10 @@ public class CustomCTGUIScreen extends AbstractContainerScreen<CustomCTGUIMenu> 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.custom_ctgui.label_technique_creator"), 55, 7, -12829636);
+		if (ErrorDisplayProcedure.execute(entity))
+			this.font.draw(poseStack,
+
+					DIsplayErrorProcedure.execute(entity), 74, 50, -65536);
 	}
 
 	@Override
@@ -122,14 +130,26 @@ public class CustomCTGUIScreen extends AbstractContainerScreen<CustomCTGUIMenu> 
 		guistate.put("text:CTName", CTName);
 		this.addWidget(this.CTName);
 		button_finish = new Button(this.leftPos + 71, this.topPos + 72, 56, 20, Component.translatable("gui.craftkaisen.custom_ctgui.button_finish"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new CustomCTGUIButtonMessage(0, x, y, z));
+				CustomCTGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_finish", button_finish);
 		this.addRenderableWidget(button_finish);
 		button_finish1 = new Button(this.leftPos + 127, this.topPos + 46, 56, 20, Component.translatable("gui.craftkaisen.custom_ctgui.button_finish1"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new CustomCTGUIButtonMessage(1, x, y, z));
+				CustomCTGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		});
 		guistate.put("button:button_finish1", button_finish1);
 		this.addRenderableWidget(button_finish1);
 		button_finish2 = new Button(this.leftPos + 15, this.topPos + 46, 56, 20, Component.translatable("gui.craftkaisen.custom_ctgui.button_finish2"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new CustomCTGUIButtonMessage(2, x, y, z));
+				CustomCTGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		});
 		guistate.put("button:button_finish2", button_finish2);
 		this.addRenderableWidget(button_finish2);

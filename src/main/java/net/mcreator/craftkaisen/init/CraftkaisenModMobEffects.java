@@ -22,6 +22,7 @@ import net.mcreator.craftkaisen.potion.ShrineMobEffect;
 import net.mcreator.craftkaisen.potion.RootsPotionMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedMobEffect;
 import net.mcreator.craftkaisen.potion.ReversalRedFinalMobEffect;
+import net.mcreator.craftkaisen.potion.RevealingOnesHandMobEffect;
 import net.mcreator.craftkaisen.potion.RepeatedSlicingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTCooldownMobEffect;
@@ -90,4 +91,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> SKY_OF_FLAMES = REGISTRY.register("sky_of_flames", () -> new SkyOfFlamesMobEffect());
 	public static final RegistryObject<MobEffect> IDLE_TRANSFIGURATION = REGISTRY.register("idle_transfiguration", () -> new IdleTransfigurationMobEffect());
 	public static final RegistryObject<MobEffect> REPEATED_SLICING = REGISTRY.register("repeated_slicing", () -> new RepeatedSlicingMobEffect());
+	public static final RegistryObject<MobEffect> REVEALING_ONES_HAND = REGISTRY.register("revealing_ones_hand", () -> new RevealingOnesHandMobEffect());
 }

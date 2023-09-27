@@ -28,7 +28,7 @@
       {
         "type": "textfield",
         "data": {
-          "placeholder": "Technique Name..",
+          "placeholder": "Curse Technique Name..",
           "name": "CTName",
           "width": 120,
           "height": 20,
@@ -41,6 +41,9 @@
         "data": {
           "name": "button_finish",
           "text": "Finish",
+          "onClick": {
+            "name": "FinishPressed"
+          },
           "width": 56,
           "height": 20,
           "x": 185,
@@ -52,6 +55,9 @@
         "data": {
           "name": "button_finish1",
           "text": "Bases",
+          "onClick": {
+            "name": "OpenBasesGUI"
+          },
           "width": 56,
           "height": 20,
           "x": 241,
@@ -63,10 +69,32 @@
         "data": {
           "name": "button_finish2",
           "text": "Design",
+          "onClick": {
+            "name": "OpenDesignGUI"
+          },
           "width": 56,
           "height": 20,
           "x": 129,
           "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_errmsg",
+          "text": {
+            "fixedValue": "ErrMsg",
+            "name": "DIsplayError"
+          },
+          "color": {
+            "value": -65536,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ErrorDisplay"
+          },
+          "x": 188,
+          "y": 120
         }
       }
     ],

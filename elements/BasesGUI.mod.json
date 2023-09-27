@@ -56,7 +56,7 @@
         "data": {
           "name": "label_string_world_marker",
           "text": {
-            "fixedValue": "String, World Marker"
+            "fixedValue": "String, Marker"
           },
           "color": {
             "value": -12829636,
@@ -71,6 +71,9 @@
         "data": {
           "name": "button_confirm",
           "text": "Confirm",
+          "onClick": {
+            "name": "BasesConfirm"
+          },
           "width": 61,
           "height": 20,
           "x": 258,
@@ -82,11 +85,15 @@
         "data": {
           "name": "label_errmsg",
           "text": {
-            "fixedValue": "ErrMsg"
+            "fixedValue": "ErrMsg",
+            "name": "DIsplayError"
           },
           "color": {
             "value": -65536,
             "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ErrorDisplay"
           },
           "x": 124,
           "y": 4

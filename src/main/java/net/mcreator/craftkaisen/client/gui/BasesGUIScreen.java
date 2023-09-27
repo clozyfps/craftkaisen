@@ -11,6 +11,10 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.BasesGUIMenu;
+import net.mcreator.craftkaisen.procedures.ErrorDisplayProcedure;
+import net.mcreator.craftkaisen.procedures.DIsplayErrorProcedure;
+import net.mcreator.craftkaisen.network.BasesGUIButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -78,7 +82,10 @@ public class BasesGUIScreen extends AbstractContainerScreen<BasesGUIMenu> {
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.bases_gui.label_bases"), 70, 172, -12829636);
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.bases_gui.label_spaitial_transfiguration_corru"), 92, 187, -12829636);
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.bases_gui.label_string_world_marker"), 92, 201, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.bases_gui.label_errmsg"), 166, 140, -65536);
+		if (ErrorDisplayProcedure.execute(entity))
+			this.font.draw(poseStack,
+
+					DIsplayErrorProcedure.execute(entity), 166, 140, -65536);
 	}
 
 	@Override
@@ -118,6 +125,10 @@ public class BasesGUIScreen extends AbstractContainerScreen<BasesGUIMenu> {
 		guistate.put("text:ChoiceBox", ChoiceBox);
 		this.addWidget(this.ChoiceBox);
 		button_confirm = new Button(this.leftPos + 300, this.topPos + 153, 61, 20, Component.translatable("gui.craftkaisen.bases_gui.button_confirm"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BasesGUIButtonMessage(0, x, y, z));
+				BasesGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_confirm", button_confirm);
 		this.addRenderableWidget(button_confirm);
