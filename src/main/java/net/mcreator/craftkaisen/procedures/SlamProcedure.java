@@ -12,6 +12,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -36,14 +38,18 @@ public class SlamProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
 		if (entity.getPersistentData().getBoolean("slam")) {
-			if (!((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.AIR) && !((world.getBlockState(new BlockPos(x, y, z))).getBlock() == Blocks.DARK_OAK_WOOD)) {
+			if (!((world.getBlockState(new BlockPos(x + Mth.nextInt(RandomSource.create(), -2, 4), y + Mth.nextInt(RandomSource.create(), 2, 3), z + Mth.nextInt(RandomSource.create(), -2, 4)))).getBlock() == Blocks.AIR)) {
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 4, 3, 2, 3, 0);
+					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 10, 2, 2, 2, 0);
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.POOF, x, y, z, 4, 3, 2, 3, 0.6);
+					_level.sendParticles(ParticleTypes.POOF, x, y, z, 4, 3, 2, 3, 0);
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.LARGE_SMOKE, x, y, z, 15, 3, 2, 3, 0.1);
+					_level.sendParticles(ParticleTypes.LARGE_SMOKE, x, y, z, 15, 3, 2, 3, 0);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
@@ -56,6 +62,24 @@ public class SlamProcedure {
 				world.destroyBlock(new BlockPos(x, y, z), false);
 				entity.getPersistentData().putBoolean("slam", false);
 				entity.hurt(DamageSource.GENERIC, 9);
+				sx = -3;
+				found = false;
+				for (int index0 = 0; index0 < 6; index0++) {
+					sy = -3;
+					for (int index1 = 0; index1 < 6; index1++) {
+						sz = -3;
+						for (int index2 = 0; index2 < 6; index2++) {
+							found = true;
+							sz = sz + 1;
+						}
+						sy = sy + 1;
+					}
+					sx = sx + 1;
+				}
+				if (found == true) {
+					if (world instanceof ServerLevel _level)
+						FallingBlockEntity.fall(_level, new BlockPos(x + sx, y + sy, z + sz), (world.getBlockState(new BlockPos(x + sx, y + sy, z + sz))));
+				}
 			}
 		}
 	}

@@ -129,6 +129,10 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> MECHAMARU_ARMOR_HELMET = REGISTRY.register("mechamaru_armor_helmet", () -> new MechamaruArmorItem.Helmet());
 	public static final RegistryObject<Item> MECHAMARU_ARMOR_CHESTPLATE = REGISTRY.register("mechamaru_armor_chestplate", () -> new MechamaruArmorItem.Chestplate());
 	public static final RegistryObject<Item> MECHAMARU_ARMOR_LEGGINGS = REGISTRY.register("mechamaru_armor_leggings", () -> new MechamaruArmorItem.Leggings());
+	public static final RegistryObject<Item> RIKO_AMANAI_SPAWN_EGG = REGISTRY.register("riko_amanai_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.RIKO_AMANAI, -1, -16777165, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> BAG_MASK_MAN_SPAWN_EGG = REGISTRY.register("bag_mask_man_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.BAG_MASK_MAN, -1, -1586528, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

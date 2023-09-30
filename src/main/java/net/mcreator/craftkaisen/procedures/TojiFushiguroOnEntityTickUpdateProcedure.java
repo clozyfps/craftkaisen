@@ -1,7 +1,5 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
@@ -14,9 +12,7 @@ import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
 
-import java.util.stream.Collectors;
-import java.util.List;
-import java.util.Comparator;
+import java.util.ArrayList;
 
 public class TojiFushiguroOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -44,15 +40,10 @@ public class TojiFushiguroOnEntityTickUpdateProcedure {
 			}
 		}
 		if (entity.getPersistentData().getBoolean("TargetingToji")) {
-			{
-				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1e+39 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-						.collect(Collectors.toList());
-				for (Entity entityiterator : _entfound) {
-					if (entityiterator.getPersistentData().getBoolean("TojiTarget")) {
-						if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
-							_entity.setTarget(_ent);
-					}
+			for (Entity entityiterator : new ArrayList<>(world.players())) {
+				if (entityiterator.getPersistentData().getBoolean("TojiTarget")) {
+					if (entity instanceof Mob _entity && entityiterator instanceof LivingEntity _ent)
+						_entity.setTarget(_ent);
 				}
 			}
 		}

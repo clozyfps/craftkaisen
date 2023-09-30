@@ -70,6 +70,13 @@ public class JoinsWorldProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					{
+						double _setval = Mth.nextInt(RandomSource.create(), 900, 2500);
+						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.CursedEnergy = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 				if (restrictionrandom == 2) {
 					if (entity instanceof Player _player && !_player.level.isClientSide())
@@ -78,6 +85,13 @@ public class JoinsWorldProcedure {
 						String _setval = "Physically Gifted";
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.RestrictedType = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						double _setval = 0;
+						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.CursedEnergy = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}

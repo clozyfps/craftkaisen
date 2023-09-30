@@ -1,8 +1,25 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.network.NetworkHooks;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.BlockPos;
+import net.minecraft.client.gui.components.EditBox;
+
+import net.mcreator.craftkaisen.world.inventory.TechniqueCreatorGUIMenu;
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+
+import java.util.HashMap;
+
+import io.netty.buffer.Unpooled;
 
 public class FinishPressedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
@@ -35,9 +52,30 @@ public class FinishPressedProcedure {
 		}
 		if (entity.getPersistentData().getDouble("progressCT") == 3) {
 			{
+				String _setval = entity.getPersistentData().getString("primary");
+				entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.PrimaryColor = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = entity.getPersistentData().getString("secondary");
+				entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SecondaryColor = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
 				String _setval = guistate.containsKey("text:CTName") ? ((EditBox) guistate.get("text:CTName")).getValue() : "";
 				entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Technique = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = entity.getPersistentData().getString("base");
+				entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Base = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
