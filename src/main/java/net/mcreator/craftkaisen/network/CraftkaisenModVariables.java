@@ -163,6 +163,18 @@ public class CraftkaisenModVariables {
 			clone.Restricted = original.Restricted;
 			clone.RestrictedType = original.RestrictedType;
 			clone.UnlockedMoves = original.UnlockedMoves;
+			clone.Move1Imbue = original.Move1Imbue;
+			clone.Move2Imbue = original.Move2Imbue;
+			clone.Move3Imbue = original.Move3Imbue;
+			clone.Move4Imbue = original.Move4Imbue;
+			clone.Move5Imbue = original.Move5Imbue;
+			clone.Move6Imbue = original.Move6Imbue;
+			clone.Move1Reverse = original.Move1Reverse;
+			clone.Move2Reverse = original.Move2Reverse;
+			clone.Move3Reverse = original.Move3Reverse;
+			clone.Move4Reverse = original.Move4Reverse;
+			clone.Move5Reverse = original.Move5Reverse;
+			clone.Move6Reverse = original.Move6Reverse;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -437,6 +449,18 @@ public class CraftkaisenModVariables {
 		public boolean Restricted = false;
 		public String RestrictedType = "\"\"";
 		public double UnlockedMoves = 0;
+		public boolean Move1Imbue = false;
+		public boolean Move2Imbue = false;
+		public boolean Move3Imbue = false;
+		public boolean Move4Imbue = false;
+		public boolean Move5Imbue = false;
+		public boolean Move6Imbue = false;
+		public boolean Move1Reverse = false;
+		public boolean Move2Reverse = false;
+		public boolean Move3Reverse = false;
+		public boolean Move4Reverse = false;
+		public boolean Move5Reverse = false;
+		public boolean Move6Reverse = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -543,6 +567,18 @@ public class CraftkaisenModVariables {
 			nbt.putBoolean("Restricted", Restricted);
 			nbt.putString("RestrictedType", RestrictedType);
 			nbt.putDouble("UnlockedMoves", UnlockedMoves);
+			nbt.putBoolean("Move1Imbue", Move1Imbue);
+			nbt.putBoolean("Move2Imbue", Move2Imbue);
+			nbt.putBoolean("Move3Imbue", Move3Imbue);
+			nbt.putBoolean("Move4Imbue", Move4Imbue);
+			nbt.putBoolean("Move5Imbue", Move5Imbue);
+			nbt.putBoolean("Move6Imbue", Move6Imbue);
+			nbt.putBoolean("Move1Reverse", Move1Reverse);
+			nbt.putBoolean("Move2Reverse", Move2Reverse);
+			nbt.putBoolean("Move3Reverse", Move3Reverse);
+			nbt.putBoolean("Move4Reverse", Move4Reverse);
+			nbt.putBoolean("Move5Reverse", Move5Reverse);
+			nbt.putBoolean("Move6Reverse", Move6Reverse);
 			return nbt;
 		}
 
@@ -646,6 +682,18 @@ public class CraftkaisenModVariables {
 			Restricted = nbt.getBoolean("Restricted");
 			RestrictedType = nbt.getString("RestrictedType");
 			UnlockedMoves = nbt.getDouble("UnlockedMoves");
+			Move1Imbue = nbt.getBoolean("Move1Imbue");
+			Move2Imbue = nbt.getBoolean("Move2Imbue");
+			Move3Imbue = nbt.getBoolean("Move3Imbue");
+			Move4Imbue = nbt.getBoolean("Move4Imbue");
+			Move5Imbue = nbt.getBoolean("Move5Imbue");
+			Move6Imbue = nbt.getBoolean("Move6Imbue");
+			Move1Reverse = nbt.getBoolean("Move1Reverse");
+			Move2Reverse = nbt.getBoolean("Move2Reverse");
+			Move3Reverse = nbt.getBoolean("Move3Reverse");
+			Move4Reverse = nbt.getBoolean("Move4Reverse");
+			Move5Reverse = nbt.getBoolean("Move5Reverse");
+			Move6Reverse = nbt.getBoolean("Move6Reverse");
 		}
 	}
 
@@ -768,6 +816,18 @@ public class CraftkaisenModVariables {
 					variables.Restricted = message.data.Restricted;
 					variables.RestrictedType = message.data.RestrictedType;
 					variables.UnlockedMoves = message.data.UnlockedMoves;
+					variables.Move1Imbue = message.data.Move1Imbue;
+					variables.Move2Imbue = message.data.Move2Imbue;
+					variables.Move3Imbue = message.data.Move3Imbue;
+					variables.Move4Imbue = message.data.Move4Imbue;
+					variables.Move5Imbue = message.data.Move5Imbue;
+					variables.Move6Imbue = message.data.Move6Imbue;
+					variables.Move1Reverse = message.data.Move1Reverse;
+					variables.Move2Reverse = message.data.Move2Reverse;
+					variables.Move3Reverse = message.data.Move3Reverse;
+					variables.Move4Reverse = message.data.Move4Reverse;
+					variables.Move5Reverse = message.data.Move5Reverse;
+					variables.Move6Reverse = message.data.Move6Reverse;
 				}
 			});
 			context.setPacketHandled(true);
