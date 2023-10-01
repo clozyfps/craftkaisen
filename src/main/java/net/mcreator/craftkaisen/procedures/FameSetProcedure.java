@@ -15,7 +15,7 @@ public class FameSetProcedure {
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "fameplayer")) {
 				{
-					double _setval = DoubleArgumentType.getDouble(arguments, "fameplayer");
+					double _setval = DoubleArgumentType.getDouble(arguments, "famenumber");
 					entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Fame = _setval;
 						capability.syncPlayerVariables(entityiterator);

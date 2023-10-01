@@ -7908,7 +7908,7 @@
       "name": "MentorChat",
       "type": "procedure",
       "sortid": 377,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mentor_chat",
       "metadata": {
@@ -11429,13 +11429,232 @@
       "registry_name": "riko_amanai",
       "metadata": {
         "files": [
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/riko_amanai_biome_modifier.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/RikoAmanaiRenderer.java",
           "src/main/java/net/mcreator/craftkaisen/entity/RikoAmanaiEntity.java",
           "src/main/resources/assets/craftkaisen/models/item/riko_amanai_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "BaggedHeadCurseUserOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 525,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bagged_head_curse_user_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BaggedHeadCurseUserOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "BaggedHeadCurseUserClone",
+      "type": "livingentity",
+      "sortid": 526,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bagged_head_curse_user_clone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/BaggedHeadCurseUserCloneRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/BaggedHeadCurseUserCloneEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BaggedHeadCurseUser",
+      "type": "livingentity",
+      "sortid": 527,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bagged_head_curse_user",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/BaggedHeadCurseUserEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/BaggedHeadCurseUserRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/bagged_head_curse_user_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/bagged_head_curse_user_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BaggedHeadCurseUserOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 528,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bagged_head_curse_user_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BaggedHeadCurseUserOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "BaggedHeadCurseUserCloneOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 529,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bagged_head_curse_user_clone_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BaggedHeadCurseUserCloneOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "StarPlasmaVessel",
+      "type": "procedure",
+      "sortid": 530,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_plasma_vessel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/StarPlasmaVesselProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "RikoAmanaiDeath",
+      "type": "procedure",
+      "sortid": 531,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riko_amanai_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RikoAmanaiDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SpecialGradeCurseDeath",
+      "type": "procedure",
+      "sortid": 532,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "special_grade_curse_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SpecialGradeCurseDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -12217,6 +12436,7 @@
       "effect.craftkaisen.divine_reposite_potion": "Divine Reposite",
       "gui.craftkaisen.main_menu.label_level": "Level : ",
       "effect.craftkaisen.stopped": "Stopped",
+      "entity.craftkaisen.bagged_head_curse_user": "Bagged Head Curse User",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "advancements.special_grade.descr": "Become a Special Grade Sorcerer",
       "gui.craftkaisen.bases_gui.label_bases": "Bases : ",
@@ -12258,6 +12478,7 @@
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "item.craftkaisen.mechamaru_armor_helmet": "Mechamaru",
+      "entity.craftkaisen.bagged_head_curse_user_clone": "Bagged Head Curse User Clone",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
       "item.craftkaisen.mechamaru_armor_chestplate": "Mechamaru",
@@ -12303,6 +12524,7 @@
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "block.craftkaisen.prison_realm": "Prison Realm",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
+      "item.craftkaisen.bagged_head_curse_user_spawn_egg": "Bagged Head Curse User Spawn Egg",
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
       "item.craftkaisen.talisman": "Talisman",
       "gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for": "I\u0027ll assassinate somebody for",

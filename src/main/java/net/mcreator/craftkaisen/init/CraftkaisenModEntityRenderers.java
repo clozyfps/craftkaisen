@@ -43,6 +43,8 @@ import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritmouthRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritgrasshopperRenderer;
 import net.mcreator.craftkaisen.client.renderer.BigFistRenderer;
+import net.mcreator.craftkaisen.client.renderer.BaggedHeadCurseUserRenderer;
+import net.mcreator.craftkaisen.client.renderer.BaggedHeadCurseUserCloneRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftkaisenModEntityRenderers {
@@ -93,5 +95,7 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.EMPTY_MECHAMARU.get(), EmptyMechamaruRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.WRAPPED_UP.get(), WrappedUpRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.RIKO_AMANAI.get(), RikoAmanaiRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER_CLONE.get(), BaggedHeadCurseUserCloneRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER.get(), BaggedHeadCurseUserRenderer::new);
 	}
 }

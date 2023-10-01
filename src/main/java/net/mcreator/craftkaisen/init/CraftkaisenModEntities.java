@@ -61,6 +61,8 @@ import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.entity.BigFistEntity;
+import net.mcreator.craftkaisen.entity.BaggedHeadCurseUserEntity;
+import net.mcreator.craftkaisen.entity.BaggedHeadCurseUserCloneEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -205,6 +207,15 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<RikoAmanaiEntity>of(RikoAmanaiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RikoAmanaiEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BaggedHeadCurseUserCloneEntity>> BAGGED_HEAD_CURSE_USER_CLONE = register("bagged_head_curse_user_clone",
+			EntityType.Builder.<BaggedHeadCurseUserCloneEntity>of(BaggedHeadCurseUserCloneEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+					.setCustomClientFactory(BaggedHeadCurseUserCloneEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BaggedHeadCurseUserEntity>> BAGGED_HEAD_CURSE_USER = register("bagged_head_curse_user",
+			EntityType.Builder.<BaggedHeadCurseUserEntity>of(BaggedHeadCurseUserEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BaggedHeadCurseUserEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -244,6 +255,8 @@ public class CraftkaisenModEntities {
 			EmptyMechamaruEntity.init();
 			WrappedUpEntity.init();
 			RikoAmanaiEntity.init();
+			BaggedHeadCurseUserCloneEntity.init();
+			BaggedHeadCurseUserEntity.init();
 		});
 	}
 
@@ -280,5 +293,7 @@ public class CraftkaisenModEntities {
 		event.put(EMPTY_MECHAMARU.get(), EmptyMechamaruEntity.createAttributes().build());
 		event.put(WRAPPED_UP.get(), WrappedUpEntity.createAttributes().build());
 		event.put(RIKO_AMANAI.get(), RikoAmanaiEntity.createAttributes().build());
+		event.put(BAGGED_HEAD_CURSE_USER_CLONE.get(), BaggedHeadCurseUserCloneEntity.createAttributes().build());
+		event.put(BAGGED_HEAD_CURSE_USER.get(), BaggedHeadCurseUserEntity.createAttributes().build());
 	}
 }
