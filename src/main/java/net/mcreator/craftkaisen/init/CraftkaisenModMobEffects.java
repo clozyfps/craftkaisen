@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.potion.RevealingOnesHandMobEffect;
 import net.mcreator.craftkaisen.potion.RepeatedSlicingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.PunchBarragePotionMobEffect;
 import net.mcreator.craftkaisen.potion.PhysicallyGiftedCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MoveUltimateCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MoveSpecialCooldownMobEffect;
@@ -94,4 +95,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> REPEATED_SLICING = REGISTRY.register("repeated_slicing", () -> new RepeatedSlicingMobEffect());
 	public static final RegistryObject<MobEffect> REVEALING_ONES_HAND = REGISTRY.register("revealing_ones_hand", () -> new RevealingOnesHandMobEffect());
 	public static final RegistryObject<MobEffect> PHYSICALLY_GIFTED_COOLDOWN = REGISTRY.register("physically_gifted_cooldown", () -> new PhysicallyGiftedCooldownMobEffect());
+	public static final RegistryObject<MobEffect> PUNCH_BARRAGE_POTION = REGISTRY.register("punch_barrage_potion", () -> new PunchBarragePotionMobEffect());
 }
