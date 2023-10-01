@@ -79,7 +79,7 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for"), 6, 6, -16777216);
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_20000_yen"), 6, 17, -16777216);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat"), 2, 104, -16777216);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat"), 4, 104, -16777216);
 	}
 
 	@Override

@@ -10929,12 +10929,12 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
-            "name": "cmdparams",
-            "type": "map"
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -11494,6 +11494,285 @@
           },
           {
             "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ShowQuestOverlay",
+      "type": "procedure",
+      "sortid": 511,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_quest_overlay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ShowQuestOverlayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "PhysicallyGiftedCooldown",
+      "type": "potioneffect",
+      "sortid": 512,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physically_gifted_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/PhysicallyGiftedCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "PhysicallyGiftedAttack",
+      "type": "procedure",
+      "sortid": 513,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physically_gifted_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PhysicallyGiftedAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PhysicallyGiftedTick",
+      "type": "procedure",
+      "sortid": 514,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "physically_gifted_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PhysicallyGiftedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "VillagerCurseTick",
+      "type": "procedure",
+      "sortid": 515,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "villager_curse_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VillagerCurseTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GradeSet",
+      "type": "procedure",
+      "sortid": 516,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grade_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/GradeSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetGrade",
+      "type": "command",
+      "sortid": 517,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_grade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetGradeCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "FameSet",
+      "type": "procedure",
+      "sortid": 518,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fame_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/FameSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetFame",
+      "type": "command",
+      "sortid": 519,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_fame",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/SetFameCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Whitelist",
+      "type": "procedure",
+      "sortid": 520,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whitelist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/WhitelistProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "VillageCurseHurt",
+      "type": "procedure",
+      "sortid": 521,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "village_curse_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VillageCurseHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "VillageCurseSpawn",
+      "type": "procedure",
+      "sortid": 522,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "village_curse_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/VillageCurseSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
             "type": "entity"
           }
         ]
@@ -12188,6 +12467,7 @@
       "item.craftkaisen.riko_amanai_spawn_egg": "Riko Amanai Spawn Egg",
       "entity.craftkaisen.eso": "Eso",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
+      "effect.craftkaisen.physically_gifted_cooldown": "Cooldown",
       "entity.craftkaisen.inventory_curse": "Inventory Curse",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
       "item.craftkaisen.playful_cloud": "Playful Cloud",

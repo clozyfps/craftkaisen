@@ -10,6 +10,6 @@ public class MahitoOnInitialEntitySpawnProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 99999, 2, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 99999, 3, false, false));
 	}
 }

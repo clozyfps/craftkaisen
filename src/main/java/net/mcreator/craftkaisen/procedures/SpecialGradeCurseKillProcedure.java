@@ -38,11 +38,18 @@ public class SpecialGradeCurseKillProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.CURSED_SPIRIT.get()) : false)
-				&& (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CraftkaisenModMobEffects.CURSED_SPIRIT.get()) ? _livEnt.getEffect(CraftkaisenModMobEffects.CURSED_SPIRIT.get()).getAmplifier() : 0) >= 2) {
+				&& (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(CraftkaisenModMobEffects.CURSED_SPIRIT.get()) ? _livEnt.getEffect(CraftkaisenModMobEffects.CURSED_SPIRIT.get()).getAmplifier() : 0) >= 1) {
 			if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Quest)
 					.equals("Kill " + sourceentity.getPersistentData().getDouble("specialgradequest") + " / 5" + " Special Grade Cursed Spirits")
 					&& (sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).DoingQuest == true) {
 				sourceentity.getPersistentData().putDouble("specialgradequest", (sourceentity.getPersistentData().getDouble("specialgradequest") + 1));
+				{
+					String _setval = "Kill " + sourceentity.getPersistentData().getDouble("specialgradequest") + " / 5" + " Special Grade Cursed Spirits";
+					sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Quest = _setval;
+						capability.syncPlayerVariables(sourceentity);
+					});
+				}
 				if (sourceentity.getPersistentData().getDouble("specialgradequest") >= 5) {
 					{
 						String _setval = "";

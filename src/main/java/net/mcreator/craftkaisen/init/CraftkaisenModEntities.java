@@ -180,7 +180,7 @@ public class CraftkaisenModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MahitoEntity>> MAHITO = register("mahito",
-			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
+			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MahitoSpikeEntity>> MAHITO_SPIKE = register("mahito_spike",
