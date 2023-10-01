@@ -162,6 +162,7 @@ public class CraftkaisenModVariables {
 			clone.Yen = original.Yen;
 			clone.Restricted = original.Restricted;
 			clone.RestrictedType = original.RestrictedType;
+			clone.UnlockedMoves = original.UnlockedMoves;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -171,8 +172,6 @@ public class CraftkaisenModVariables {
 				clone.FireSpread = original.FireSpread;
 				clone.Quest = original.Quest;
 				clone.SimpleDomainActive = original.SimpleDomainActive;
-				clone.VowDescription = original.VowDescription;
-				clone.VowSender = original.VowSender;
 			}
 		}
 
@@ -396,9 +395,7 @@ public class CraftkaisenModVariables {
 		public ItemStack Slot11 = ItemStack.EMPTY;
 		public String Technique = "";
 		public double TechniqueSwitch = 0;
-		public String VowDescription = "";
 		public boolean VowsEnabled = true;
-		public String VowSender = "\"\"";
 		public double PowerSecondaryTree = 0;
 		public double DefenseSecondaryTree = 0;
 		public double CursedEnergySecondaryTree = 0;
@@ -439,6 +436,7 @@ public class CraftkaisenModVariables {
 		public double Yen = 0;
 		public boolean Restricted = false;
 		public String RestrictedType = "\"\"";
+		public double UnlockedMoves = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -503,9 +501,7 @@ public class CraftkaisenModVariables {
 			nbt.put("Slot11", Slot11.save(new CompoundTag()));
 			nbt.putString("Technique", Technique);
 			nbt.putDouble("TechniqueSwitch", TechniqueSwitch);
-			nbt.putString("VowDescription", VowDescription);
 			nbt.putBoolean("VowsEnabled", VowsEnabled);
-			nbt.putString("VowSender", VowSender);
 			nbt.putDouble("PowerSecondaryTree", PowerSecondaryTree);
 			nbt.putDouble("DefenseSecondaryTree", DefenseSecondaryTree);
 			nbt.putDouble("CursedEnergySecondaryTree", CursedEnergySecondaryTree);
@@ -546,6 +542,7 @@ public class CraftkaisenModVariables {
 			nbt.putDouble("Yen", Yen);
 			nbt.putBoolean("Restricted", Restricted);
 			nbt.putString("RestrictedType", RestrictedType);
+			nbt.putDouble("UnlockedMoves", UnlockedMoves);
 			return nbt;
 		}
 
@@ -607,9 +604,7 @@ public class CraftkaisenModVariables {
 			Slot11 = ItemStack.of(nbt.getCompound("Slot11"));
 			Technique = nbt.getString("Technique");
 			TechniqueSwitch = nbt.getDouble("TechniqueSwitch");
-			VowDescription = nbt.getString("VowDescription");
 			VowsEnabled = nbt.getBoolean("VowsEnabled");
-			VowSender = nbt.getString("VowSender");
 			PowerSecondaryTree = nbt.getDouble("PowerSecondaryTree");
 			DefenseSecondaryTree = nbt.getDouble("DefenseSecondaryTree");
 			CursedEnergySecondaryTree = nbt.getDouble("CursedEnergySecondaryTree");
@@ -650,6 +645,7 @@ public class CraftkaisenModVariables {
 			Yen = nbt.getDouble("Yen");
 			Restricted = nbt.getBoolean("Restricted");
 			RestrictedType = nbt.getString("RestrictedType");
+			UnlockedMoves = nbt.getDouble("UnlockedMoves");
 		}
 	}
 
@@ -730,9 +726,7 @@ public class CraftkaisenModVariables {
 					variables.Slot11 = message.data.Slot11;
 					variables.Technique = message.data.Technique;
 					variables.TechniqueSwitch = message.data.TechniqueSwitch;
-					variables.VowDescription = message.data.VowDescription;
 					variables.VowsEnabled = message.data.VowsEnabled;
-					variables.VowSender = message.data.VowSender;
 					variables.PowerSecondaryTree = message.data.PowerSecondaryTree;
 					variables.DefenseSecondaryTree = message.data.DefenseSecondaryTree;
 					variables.CursedEnergySecondaryTree = message.data.CursedEnergySecondaryTree;
@@ -773,6 +767,7 @@ public class CraftkaisenModVariables {
 					variables.Yen = message.data.Yen;
 					variables.Restricted = message.data.Restricted;
 					variables.RestrictedType = message.data.RestrictedType;
+					variables.UnlockedMoves = message.data.UnlockedMoves;
 				}
 			});
 			context.setPacketHandled(true);

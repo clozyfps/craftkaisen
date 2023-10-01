@@ -17,7 +17,6 @@ import net.mcreator.craftkaisen.client.renderer.UltimateMechamaruRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
-import net.mcreator.craftkaisen.client.renderer.RikoAmanaiRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
@@ -43,8 +42,6 @@ import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritmouthRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritgrasshopperRenderer;
 import net.mcreator.craftkaisen.client.renderer.BigFistRenderer;
-import net.mcreator.craftkaisen.client.renderer.BagMaskManRenderer;
-import net.mcreator.craftkaisen.client.renderer.BagMaskCloneRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftkaisenModEntityRenderers {
@@ -94,8 +91,5 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.ULTIMATE_MECHAMARU.get(), UltimateMechamaruRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.EMPTY_MECHAMARU.get(), EmptyMechamaruRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.WRAPPED_UP.get(), WrappedUpRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.RIKO_AMANAI.get(), RikoAmanaiRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.BAG_MASK_MAN.get(), BagMaskManRenderer::new);
-		event.registerEntityRenderer(CraftkaisenModEntities.BAG_MASK_CLONE.get(), BagMaskCloneRenderer::new);
 	}
 }

@@ -52,7 +52,11 @@ public class UseTechniqueMessage {
 			return;
 		if (type == 0) {
 
+<<<<<<< HEAD
+			UseTechniqueOnKeyPressedProcedure.execute(world, entity);
+=======
 			UseTechniqueOnKeyPressedProcedure.execute(world, x, y, z, entity);
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 		}
 	}
 

@@ -1,0 +1,7 @@
+{
+  "parent": "craftkaisen:custom/prisonrealmsealed",
+  "textures": {
+    "0": "craftkaisen:blocks/prisonrealmtexturesealed",
+    "particle": "craftkaisen:items/air102_layer_2"
+  }
+}

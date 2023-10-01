@@ -5,11 +5,16 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 
+<<<<<<< HEAD
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+=======
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
@@ -17,9 +22,12 @@ import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 
 import javax.annotation.Nullable;
 
+<<<<<<< HEAD
+=======
 import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Comparator;
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import java.util.ArrayList;
 
 @Mod.EventBusSubscriber

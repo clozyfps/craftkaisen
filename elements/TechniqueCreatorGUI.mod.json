@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 176,
+    "width": 400,
     "height": 135,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -17,8 +17,8 @@
           "name": "TechniqueName",
           "width": 120,
           "height": 20,
-          "x": 153,
-          "y": 83
+          "x": 290,
+          "y": 78
         }
       },
       {
@@ -26,10 +26,13 @@
         "data": {
           "name": "button_create",
           "text": "Create",
+          "onClick": {
+            "name": "TeachniqueCreatePressed"
+          },
           "width": 56,
           "height": 20,
-          "x": 185,
-          "y": 177
+          "x": 360,
+          "y": 176
         }
       },
       {
@@ -37,8 +40,8 @@
         "data": {
           "name": "ImbueTechnique",
           "text": "Imbue Technique?",
-          "x": 153,
-          "y": 113
+          "x": 296,
+          "y": 108
         }
       },
       {
@@ -46,8 +49,8 @@
         "data": {
           "name": "ReverseEffect",
           "text": "Reverse Effect?",
-          "x": 153,
-          "y": 147
+          "x": 296,
+          "y": 140
         }
       },
       {
@@ -57,17 +60,97 @@
           "text": "Technique Settings",
           "width": 166,
           "height": 20,
-          "x": 130,
+          "x": 243,
           "y": 56
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_imbues_your_current_ct_in_the_at",
+          "text": {
+            "fixedValue": "Imbues your current CT in the attacks type."
+          },
+          "width": 24,
+          "height": 24,
+          "x": 294,
+          "y": 106
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_reverses_the_imbued_technique",
+          "text": {
+            "fixedValue": "Reverses the imbued technique."
+          },
+          "width": 24,
+          "height": 24,
+          "x": 294,
+          "y": 138
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "OrbBox",
+          "text": "Orb",
+          "x": 24,
+          "y": 68
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "ExplosionBox",
+          "text": "Explosion",
+          "x": 24,
+          "y": 108
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "PulseBox",
+          "text": "Pulse",
+          "x": 24,
+          "y": 148
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "AreaBox",
+          "text": "Area",
+          "x": 144,
+          "y": 68
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "BoltBox",
+          "text": "Bolt",
+          "x": 144,
+          "y": 108
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "BeamBox",
+          "text": "Beam",
+          "x": 144,
+          "y": 148
         }
       }
     ],
     "gridSettings": {
-      "sx": 18,
-      "sy": 18,
-      "ox": 11,
-      "oy": 15,
-      "snapOnGrid": false
+      "sx": 20,
+      "sy": 20,
+      "ox": 27,
+      "oy": 35,
+      "snapOnGrid": true
     }
   }
 }

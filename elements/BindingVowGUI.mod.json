@@ -2,126 +2,124 @@
   "_fv": 47,
   "_type": "gui",
   "definition": {
-    "type": 0,
-    "width": 193,
-    "height": 130,
+    "type": 1,
+    "width": 300,
+    "height": 226,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
+    "inventoryOffsetY": -29,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
       {
+        "type": "checkbox",
+        "data": {
+          "name": "KillVow",
+          "text": "",
+          "x": 74,
+          "y": 19
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Player..",
+          "name": "PlayerNameKill",
+          "width": 120,
+          "height": 20,
+          "x": 84,
+          "y": 179
+        }
+      },
+      {
         "type": "label",
         "data": {
-          "name": "label_binding_vow",
+          "name": "label_dont_kill_player",
           "text": {
-            "fixedValue": "Binding Vow"
+            "fixedValue": "Dont Kill Specific Player"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 184,
+          "x": 102,
+          "y": 24
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_submit",
+          "text": "Submit",
+          "width": 56,
+          "height": 20,
+          "x": 186,
+          "y": 205
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "ItemVow",
+          "text": "",
+          "x": 74,
           "y": 59
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_dev_has_offered_a_vow",
+          "name": "label_dont_pick_up_specific_item",
           "text": {
-            "fixedValue": "MyNameIsName has offered a vow.",
-            "name": "VowSenderDisplay"
+            "fixedValue": "Dont Pick Up Specific Item"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 130,
-          "y": 77
+          "x": 102,
+          "y": 63
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 294,
+          "y": 179
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_empty",
+          "name": "label_item",
           "text": {
-            "fixedValue": "--------------------------------"
+            "fixedValue": "Item ->"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 130,
-          "y": 95
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_description",
-          "text": {
-            "fixedValue": "\"Description\"",
-            "name": "VowDescriptionDisplay"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 130,
-          "y": 113
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_do_you_accept",
-          "text": {
-            "fixedValue": "Do you accept?"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 177,
-          "y": 140
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_yes",
-          "text": "Yes",
-          "onClick": {
-            "name": "VowYesProcedure"
-          },
-          "width": 40,
-          "height": 20,
-          "x": 139,
-          "y": 158
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_yes1",
-          "text": "No",
-          "onClick": {
-            "name": "CloseVowGUI"
-          },
-          "width": 40,
-          "height": 20,
-          "x": 249,
-          "y": 158
+          "x": 253,
+          "y": 183
         }
       }
     ],
     "gridSettings": {
-      "sx": 18,
-      "sy": 18,
-      "ox": 28,
-      "oy": 9,
-      "snapOnGrid": true
+      "sx": 20,
+      "sy": 20,
+      "ox": 46,
+      "oy": 16,
+      "snapOnGrid": false
     }
   }
 }

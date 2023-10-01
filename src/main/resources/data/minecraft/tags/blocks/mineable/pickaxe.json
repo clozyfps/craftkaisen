@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "craftkaisen:unlimited_void"
+    "craftkaisen:unlimited_void",
+    "craftkaisen:prison_realm"
   ]
 }

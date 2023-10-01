@@ -26,7 +26,6 @@ import net.mcreator.craftkaisen.entity.SukunaEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
-import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
@@ -61,8 +60,6 @@ import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.entity.BigFistEntity;
-import net.mcreator.craftkaisen.entity.BagMaskManEntity;
-import net.mcreator.craftkaisen.entity.BagMaskCloneEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -203,18 +200,6 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<WrappedUpEntity>of(WrappedUpEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WrappedUpEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<RikoAmanaiEntity>> RIKO_AMANAI = register("riko_amanai",
-			EntityType.Builder.<RikoAmanaiEntity>of(RikoAmanaiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RikoAmanaiEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<BagMaskManEntity>> BAG_MASK_MAN = register("bag_mask_man",
-			EntityType.Builder.<BagMaskManEntity>of(BagMaskManEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BagMaskManEntity::new)
-
-					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<BagMaskCloneEntity>> BAG_MASK_CLONE = register("bag_mask_clone",
-			EntityType.Builder.<BagMaskCloneEntity>of(BagMaskCloneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BagMaskCloneEntity::new)
-
-					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -253,9 +238,6 @@ public class CraftkaisenModEntities {
 			UltimateMechamaruEntity.init();
 			EmptyMechamaruEntity.init();
 			WrappedUpEntity.init();
-			RikoAmanaiEntity.init();
-			BagMaskManEntity.init();
-			BagMaskCloneEntity.init();
 		});
 	}
 
@@ -291,8 +273,5 @@ public class CraftkaisenModEntities {
 		event.put(ULTIMATE_MECHAMARU.get(), UltimateMechamaruEntity.createAttributes().build());
 		event.put(EMPTY_MECHAMARU.get(), EmptyMechamaruEntity.createAttributes().build());
 		event.put(WRAPPED_UP.get(), WrappedUpEntity.createAttributes().build());
-		event.put(RIKO_AMANAI.get(), RikoAmanaiEntity.createAttributes().build());
-		event.put(BAG_MASK_MAN.get(), BagMaskManEntity.createAttributes().build());
-		event.put(BAG_MASK_CLONE.get(), BagMaskCloneEntity.createAttributes().build());
 	}
 }

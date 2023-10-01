@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.craftkaisen.block.VeilMainBlockBlock;
 import net.mcreator.craftkaisen.block.UnlimitedVoidBlock;
 import net.mcreator.craftkaisen.block.QuestBoardBlock;
+import net.mcreator.craftkaisen.block.PrisonRealmBlock;
 import net.mcreator.craftkaisen.block.CursedToolTableBlock;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -22,4 +23,5 @@ public class CraftkaisenModBlocks {
 	public static final RegistryObject<Block> UNLIMITED_VOID = REGISTRY.register("unlimited_void", () -> new UnlimitedVoidBlock());
 	public static final RegistryObject<Block> QUEST_BOARD = REGISTRY.register("quest_board", () -> new QuestBoardBlock());
 	public static final RegistryObject<Block> CURSED_TOOL_TABLE = REGISTRY.register("cursed_tool_table", () -> new CursedToolTableBlock());
+	public static final RegistryObject<Block> PRISON_REALM = REGISTRY.register("prison_realm", () -> new PrisonRealmBlock());
 }
