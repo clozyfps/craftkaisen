@@ -1,33 +1,16 @@
 package net.mcreator.craftkaisen.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.craftkaisen.world.inventory.DesignGUIMenu;
-import net.mcreator.craftkaisen.procedures.ErrorDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.DIsplayErrorProcedure;
-import net.mcreator.craftkaisen.network.DesignGUIButtonMessage;
-import net.mcreator.craftkaisen.CraftkaisenMod;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
+
 	private final static HashMap<String, Object> guistate = DesignGUIMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	EditBox PrimaryColor;
 	EditBox SecondaryColor;
+
 	Button button_confirm;
 
 	public DesignGUIScreen(DesignGUIMenu container, Inventory inventory, Component text) {
@@ -46,10 +29,14 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
+
 		super.render(ms, mouseX, mouseY, partialTicks);
+
 		PrimaryColor.render(ms, mouseX, mouseY, partialTicks);
 		SecondaryColor.render(ms, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(ms, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -57,8 +44,10 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -68,10 +57,12 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		if (PrimaryColor.isFocused())
 			return PrimaryColor.keyPressed(key, b, c);
 		if (SecondaryColor.isFocused())
 			return SecondaryColor.keyPressed(key, b, c);
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -86,7 +77,11 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.design_gui.label_colors"), 53, 147, -12829636);
 		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.design_gui.label_blue_yellow_red_purple_green"), 69, 161, -12829636);
-		if (ErrorDisplayProcedure.execute(entity))
+		if (
+
+		ErrorDisplayProcedure.execute(entity)
+
+		)
 			this.font.draw(poseStack,
 
 					DIsplayErrorProcedure.execute(entity), 284, 277, -65536);
@@ -101,7 +96,9 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 	@Override
 	public void init() {
 		super.init();
+
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+
 		PrimaryColor = new EditBox(this.font, this.leftPos + 283, this.topPos + 227, 120, 20, Component.translatable("gui.craftkaisen.design_gui.PrimaryColor")) {
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.design_gui.PrimaryColor").getString());
@@ -110,6 +107,7 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
+
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.craftkaisen.design_gui.PrimaryColor").getString());
 				else
@@ -119,6 +117,7 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 			@Override
 			public void moveCursorTo(int pos) {
 				super.moveCursorTo(pos);
+
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.craftkaisen.design_gui.PrimaryColor").getString());
 				else
@@ -126,6 +125,7 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 			}
 		};
 		PrimaryColor.setMaxLength(32767);
+
 		guistate.put("text:PrimaryColor", PrimaryColor);
 		this.addWidget(this.PrimaryColor);
 		SecondaryColor = new EditBox(this.font, this.leftPos + 283, this.topPos + 254, 120, 20, Component.translatable("gui.craftkaisen.design_gui.SecondaryColor")) {
@@ -136,6 +136,7 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
+
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.craftkaisen.design_gui.SecondaryColor").getString());
 				else
@@ -145,6 +146,7 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 			@Override
 			public void moveCursorTo(int pos) {
 				super.moveCursorTo(pos);
+
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.craftkaisen.design_gui.SecondaryColor").getString());
 				else
@@ -152,15 +154,20 @@ public class DesignGUIScreen extends AbstractContainerScreen<DesignGUIMenu> {
 			}
 		};
 		SecondaryColor.setMaxLength(32767);
+
 		guistate.put("text:SecondaryColor", SecondaryColor);
 		this.addWidget(this.SecondaryColor);
+
 		button_confirm = new Button(this.leftPos + 406, this.topPos + 239, 61, 20, Component.translatable("gui.craftkaisen.design_gui.button_confirm"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new DesignGUIButtonMessage(0, x, y, z));
 				DesignGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
+
 		guistate.put("button:button_confirm", button_confirm);
 		this.addRenderableWidget(button_confirm);
+
 	}
+
 }
