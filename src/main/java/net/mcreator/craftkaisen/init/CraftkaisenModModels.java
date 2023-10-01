@@ -24,6 +24,7 @@ import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornewagain;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornew;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmor;
 import net.mcreator.craftkaisen.client.model.Modelprisonbox;
+import net.mcreator.craftkaisen.client.model.Modelprison_realm_mob;
 import net.mcreator.craftkaisen.client.model.Modelmummy;
 import net.mcreator.craftkaisen.client.model.Modelmouthcursedspirit;
 import net.mcreator.craftkaisen.client.model.Modelmetalbat;
@@ -63,6 +64,7 @@ import net.mcreator.craftkaisen.client.model.ModelFingerBearer;
 public class CraftkaisenModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelprison_realm_mob.LAYER_LOCATION, Modelprison_realm_mob::createBodyLayer);
 		event.registerLayerDefinition(Modelfist.LAYER_LOCATION, Modelfist::createBodyLayer);
 		event.registerLayerDefinition(Modelsixeyes.LAYER_LOCATION, Modelsixeyes::createBodyLayer);
 		event.registerLayerDefinition(Modelmahito.LAYER_LOCATION, Modelmahito::createBodyLayer);

@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.client.gui.TechniqueCreatorGUIScreen;
 import net.mcreator.craftkaisen.client.gui.TalismanGUIScreen;
 import net.mcreator.craftkaisen.client.gui.SwordCreatorScreen;
 import net.mcreator.craftkaisen.client.gui.SkillTreeMainGUIScreen;
+import net.mcreator.craftkaisen.client.gui.PrisonRealmGUIScreen;
 import net.mcreator.craftkaisen.client.gui.MainMenuScreen;
 import net.mcreator.craftkaisen.client.gui.InventoryCurseGUIScreen;
 import net.mcreator.craftkaisen.client.gui.DesignGUIScreen;
@@ -39,6 +40,7 @@ public class CraftkaisenModScreens {
 			MenuScreens.register(CraftkaisenModMenus.DESIGN_GUI.get(), DesignGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.TOJI_CONTRACT_GUI.get(), TojiContractGuiScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.TECHNIQUE_CREATOR_GUI.get(), TechniqueCreatorGUIScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.PRISON_REALM_GUI.get(), PrisonRealmGUIScreen::new);
 		});
 	}
 }

@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
+import net.mcreator.craftkaisen.network.ReverseCursedTechniqueBindMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.OpenInventoryCurseBindMessage;
 import net.mcreator.craftkaisen.network.LeaveEnterMechMessage;
@@ -123,6 +124,19 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping REVERSE_CURSED_TECHNIQUE_BIND = new KeyMapping("key.craftkaisen.reverse_cursed_technique_bind", GLFW.GLFW_KEY_H, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ReverseCursedTechniqueBindMessage(0, 0));
+				ReverseCursedTechniqueBindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -135,6 +149,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(OPEN_INVENTORY_CURSE_BIND);
 		event.register(CHANT);
 		event.register(LEAVE_ENTER_MECH);
+		event.register(REVERSE_CURSED_TECHNIQUE_BIND);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -149,6 +164,7 @@ public class CraftkaisenModKeyMappings {
 				CHARGE_CURSED_ENERGY.consumeClick();
 				OPEN_INVENTORY_CURSE_BIND.consumeClick();
 				LEAVE_ENTER_MECH.consumeClick();
+				REVERSE_CURSED_TECHNIQUE_BIND.consumeClick();
 			}
 		}
 	}

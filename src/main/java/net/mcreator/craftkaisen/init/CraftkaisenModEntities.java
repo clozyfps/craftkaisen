@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
+import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
@@ -220,6 +221,8 @@ public class CraftkaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ReversalRedEntityEntity>> REVERSAL_RED_ENTITY = register("reversal_red_entity", EntityType.Builder.<ReversalRedEntityEntity>of(ReversalRedEntityEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReversalRedEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PrisonRealmMobEntity>> PRISON_REALM_MOB = register("prison_realm_mob", EntityType.Builder.<PrisonRealmMobEntity>of(PrisonRealmMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(6).setUpdateInterval(3).setCustomClientFactory(PrisonRealmMobEntity::new).fireImmune().sized(0.9f, 0.9f));
 	public static final RegistryObject<EntityType<BoltProjectileEntity>> BOLT_PROJECTILE = register("projectile_bolt_projectile",
 			EntityType.Builder.<BoltProjectileEntity>of(BoltProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BoltProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
@@ -264,6 +267,7 @@ public class CraftkaisenModEntities {
 			BaggedHeadCurseUserCloneEntity.init();
 			BaggedHeadCurseUserEntity.init();
 			ReversalRedEntityEntity.init();
+			PrisonRealmMobEntity.init();
 		});
 	}
 
@@ -303,5 +307,6 @@ public class CraftkaisenModEntities {
 		event.put(BAGGED_HEAD_CURSE_USER_CLONE.get(), BaggedHeadCurseUserCloneEntity.createAttributes().build());
 		event.put(BAGGED_HEAD_CURSE_USER.get(), BaggedHeadCurseUserEntity.createAttributes().build());
 		event.put(REVERSAL_RED_ENTITY.get(), ReversalRedEntityEntity.createAttributes().build());
+		event.put(PRISON_REALM_MOB.get(), PrisonRealmMobEntity.createAttributes().build());
 	}
 }

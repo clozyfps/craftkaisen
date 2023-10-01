@@ -4656,42 +4656,6 @@
       "path": "~/Armor"
     },
     {
-      "name": "RCTHealingActiveTick",
-      "type": "procedure",
-      "sortid": 222,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rct_healing_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RCTHealingActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
       "name": "Jogo",
       "type": "livingentity",
       "sortid": 237,
@@ -4707,20 +4671,6 @@
         ]
       },
       "path": "~/Mobs"
-    },
-    {
-      "name": "MasteredRCTHealing",
-      "type": "potioneffect",
-      "sortid": 227,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mastered_rct_healing",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/MasteredRCTHealingMobEffect.java"
-        ]
-      },
-      "path": "~/Potion Effects"
     },
     {
       "name": "RCTCooldown",
@@ -4776,62 +4726,6 @@
         ]
       },
       "path": "~/Commands/Procedures"
-    },
-    {
-      "name": "MasteredRCTHealingActiveTick",
-      "type": "procedure",
-      "sortid": 228,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mastered_rct_healing_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/MasteredRCTHealingActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
-    },
-    {
-      "name": "RCTHealingExpires",
-      "type": "procedure",
-      "sortid": 235,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rct_healing_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RCTHealingExpiresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
     },
     {
       "name": "DisasterFlameProcedure",
@@ -11876,6 +11770,198 @@
         ]
       },
       "path": "~/Potion Effects"
+    },
+    {
+      "name": "PrisonRealmPlaced",
+      "type": "procedure",
+      "sortid": 534,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_placed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PrisonRealmPlacedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "ReverseCursedTechniqueBind",
+      "type": "keybind",
+      "sortid": 539,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reverse_cursed_technique_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ReverseCursedTechniqueBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "PrisonRealmCommands",
+      "type": "procedure",
+      "sortid": 535,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_commands",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PrisonRealmCommandsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "PrisonRealmTimer",
+      "type": "procedure",
+      "sortid": 537,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_timer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PrisonRealmTimerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "PrisonRealmGUI",
+      "type": "gui",
+      "sortid": 542,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/PrisonRealmGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/PrisonRealmGUIMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "AddTagOwner",
+      "type": "procedure",
+      "sortid": 538,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "add_tag_owner",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/AddTagOwnerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Blocks/Procedures"
+    },
+    {
+      "name": "PrisonRealmMob",
+      "type": "livingentity",
+      "sortid": 536,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_mob",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/PrisonRealmMobEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/PrisonRealmMobRenderer.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "RCTPressed",
+      "type": "procedure",
+      "sortid": 540,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RCTPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
     }
   ],
   "variable_elements": [
@@ -12640,7 +12726,6 @@
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
       "item.craftkaisen.stop": "Stop",
-      "effect.craftkaisen.punch_barrage_potion": "Punch Barrage",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "gui.craftkaisen.bases_gui.button_confirm": "Confirm",
@@ -12712,7 +12797,6 @@
       "advancements.jujutsu_sorcerer.title": "Jujutsu Sorcerer",
       "gui.craftkaisen.main_menu.label_empty": "SP:",
       "advancements.grade_3.descr": "Become a Grade 3 Sorcerer",
-      "effect.craftkaisen.mastered_rct_healing": "Reverse Cursed Technique Healing",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
       "gui.craftkaisen.design_gui.PrimaryColor": "Primary color..",
       "effect.craftkaisen.sleeping": "Sleeping",
@@ -12757,7 +12841,6 @@
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
-      "entity.craftkaisen.reversal_red_entity": "Reversal Red Entity",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "itemGroup.tabjjkmobs": "JJK Mobs",
@@ -12816,7 +12899,6 @@
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
-      "item.craftkaisen.bolt_projectile": "Bolt Projectile",
       "entity.craftkaisen.sukuna": "Sukuna",
       "key.craftkaisen.block_bind": "Block",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
@@ -12842,6 +12924,7 @@
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "entity.craftkaisen.ember_insect": "Ember Insect",
       "gui.craftkaisen.bases_gui.button_transfigure": "Transfigure",
+      "gui.craftkaisen.prison_realm_gui.Target": "Target",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
@@ -12965,6 +13048,10 @@
         "children": [
           {
             "name": "AbilitySetup",
+            "children": []
+          },
+          {
+            "name": "CustomAbilities",
             "children": []
           },
           {
