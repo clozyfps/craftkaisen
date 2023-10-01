@@ -1,32 +1,16 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-import net.minecraft.client.gui.components.EditBox;
-
-import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
-
-import java.util.HashMap;
-
-import io.netty.buffer.Unpooled;
+import javax.annotation.Nullable;
 
 public class BasesConfirmProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
 		if (entity == null || guistate == null)
 			return;
 		entity.getPersistentData().putBoolean("showErr", false);
-		if ((guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Spaitial")
-				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("spaitial")
+		if ((guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Spatial")
+				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("spatial")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Transfiguration")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("transfiguration")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Corruption")
@@ -39,6 +23,8 @@ public class BasesConfirmProcedure {
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("swap")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Jackpot")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("jackpot")
+				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("String")
+				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("string")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Marker")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("marker")) {
 			entity.getPersistentData().putString("base", (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : ""));

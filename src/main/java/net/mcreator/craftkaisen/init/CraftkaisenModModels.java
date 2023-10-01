@@ -17,6 +17,7 @@ import net.mcreator.craftkaisen.client.model.Modelsukunafightingchestplate;
 import net.mcreator.craftkaisen.client.model.Modelsukunafacemark;
 import net.mcreator.craftkaisen.client.model.Modelsixeyes;
 import net.mcreator.craftkaisen.client.model.Modelroppongicursedspirit;
+import net.mcreator.craftkaisen.client.model.Modelreversalred;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmseal;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmmob;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornewagain;
@@ -108,6 +109,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelmummy.LAYER_LOCATION, Modelmummy::createBodyLayer);
 		event.registerLayerDefinition(Modelsunglasses.LAYER_LOCATION, Modelsunglasses::createBodyLayer);
 		event.registerLayerDefinition(Modelmouthcursedspirit.LAYER_LOCATION, Modelmouthcursedspirit::createBodyLayer);
+		event.registerLayerDefinition(Modelreversalred.LAYER_LOCATION, Modelreversalred::createBodyLayer);
 		event.registerLayerDefinition(Modelmagmaprojectile.LAYER_LOCATION, Modelmagmaprojectile::createBodyLayer);
 		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurple.LAYER_LOCATION, Modelhollowpurple::createBodyLayer);

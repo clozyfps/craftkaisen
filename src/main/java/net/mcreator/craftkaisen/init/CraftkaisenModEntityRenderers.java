@@ -18,6 +18,7 @@ import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikoAmanaiRenderer;
+import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.PrisonRealmMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
@@ -98,6 +99,8 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.RIKO_AMANAI.get(), RikoAmanaiRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER_CLONE.get(), BaggedHeadCurseUserCloneRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER.get(), BaggedHeadCurseUserRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.REVERSAL_RED_ENTITY.get(), ReversalRedEntityRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.PRISON_REALM_MOB.get(), PrisonRealmMobRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.BOLT_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

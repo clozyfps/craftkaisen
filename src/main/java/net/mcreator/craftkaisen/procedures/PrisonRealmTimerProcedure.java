@@ -1,27 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftkaisen.init.CraftkaisenModItems;
-import net.mcreator.craftkaisen.init.CraftkaisenModBlocks;
-import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 
 import javax.annotation.Nullable;
-
-import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class PrisonRealmTimerProcedure {

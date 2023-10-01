@@ -77,6 +77,7 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> TOUGH_BODY = REGISTRY.register("tough_body", () -> new ToughBodyMobEffect());
 	public static final RegistryObject<MobEffect> SIXEYESPOTION = REGISTRY.register("sixeyespotion", () -> new SixeyespotionMobEffect());
 	public static final RegistryObject<MobEffect> DIVERGENT_FIST = REGISTRY.register("divergent_fist", () -> new DivergentFistMobEffect());
+	public static final RegistryObject<MobEffect> RCT_HEALING = REGISTRY.register("rct_healing", () -> new RCTHealingMobEffect());
 	public static final RegistryObject<MobEffect> RCT_COOLDOWN = REGISTRY.register("rct_cooldown", () -> new RCTCooldownMobEffect());
 	public static final RegistryObject<MobEffect> VESSEL_COOLDOWN = REGISTRY.register("vessel_cooldown", () -> new VesselCooldownMobEffect());
 	public static final RegistryObject<MobEffect> EMBER_CONTROL = REGISTRY.register("ember_control", () -> new EmberControlMobEffect());
@@ -91,5 +92,4 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> REPEATED_SLICING = REGISTRY.register("repeated_slicing", () -> new RepeatedSlicingMobEffect());
 	public static final RegistryObject<MobEffect> REVEALING_ONES_HAND = REGISTRY.register("revealing_ones_hand", () -> new RevealingOnesHandMobEffect());
 	public static final RegistryObject<MobEffect> PHYSICALLY_GIFTED_COOLDOWN = REGISTRY.register("physically_gifted_cooldown", () -> new PhysicallyGiftedCooldownMobEffect());
-	public static final RegistryObject<MobEffect> RCT_HEALING = REGISTRY.register("rct_healing", () -> new RCTHealingMobEffect());
 }

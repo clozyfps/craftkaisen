@@ -9,13 +9,13 @@ import net.minecraft.sounds.SoundEvent;
 
 import javax.annotation.Nullable;
 
-public class PrisonRealmMobEntity extends Monster {
+public class ReversalRedEntityEntity extends Monster {
 
-	public PrisonRealmMobEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(CraftkaisenModEntities.PRISON_REALM_MOB.get(), world);
+	public ReversalRedEntityEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(CraftkaisenModEntities.REVERSAL_RED_ENTITY.get(), world);
 	}
 
-	public PrisonRealmMobEntity(EntityType<PrisonRealmMobEntity> type, Level world) {
+	public ReversalRedEntityEntity(EntityType<ReversalRedEntityEntity> type, Level world) {
 		super(type, world);
 		maxUpStep = 0.6f;
 		xpReward = 0;
@@ -41,12 +41,12 @@ public class PrisonRealmMobEntity extends Monster {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
 	@Override
@@ -81,6 +81,15 @@ public class PrisonRealmMobEntity extends Monster {
 	}
 
 	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		ReversalRedEntityOnInitialEntitySpawnProcedure.execute(
+
+		);
+		return retval;
+	}
+
+	@Override
 	public boolean isPushable() {
 		return false;
 	}
@@ -99,11 +108,11 @@ public class PrisonRealmMobEntity extends Monster {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0);
-		builder = builder.add(Attributes.MAX_HEALTH, 1000);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 6);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 
 		return builder;
 	}

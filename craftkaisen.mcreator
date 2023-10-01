@@ -4592,6 +4592,20 @@
       "path": "~/Procedures"
     },
     {
+      "name": "RCTHealing",
+      "type": "potioneffect",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_healing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/RCTHealingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
       "name": "SetRCTLevelCommand",
       "type": "command",
       "sortid": 230,
@@ -11617,6 +11631,20 @@
       "path": "~/Blocks/Procedures"
     },
     {
+      "name": "ReverseCursedTechniqueBind",
+      "type": "keybind",
+      "sortid": 539,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reverse_cursed_technique_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ReverseCursedTechniqueBindMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
       "name": "PrisonRealmCommands",
       "type": "procedure",
       "sortid": 535,
@@ -11657,21 +11685,6 @@
       "path": "~/Blocks/Procedures"
     },
     {
-      "name": "PrisonRealmMob",
-      "type": "livingentity",
-      "sortid": 536,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "prison_realm_mob",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/PrisonRealmMobEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/PrisonRealmMobRenderer.java"
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
       "name": "PrisonRealmTimer",
       "type": "procedure",
       "sortid": 537,
@@ -11708,6 +11721,21 @@
       "path": "~/Blocks/Procedures"
     },
     {
+      "name": "PrisonRealmGUI",
+      "type": "gui",
+      "sortid": 542,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/PrisonRealmGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/PrisonRealmGUIMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
       "name": "AddTagOwner",
       "type": "procedure",
       "sortid": 538,
@@ -11728,18 +11756,19 @@
       "path": "~/Blocks/Procedures"
     },
     {
-      "name": "ReverseCursedTechniqueBind",
-      "type": "keybind",
-      "sortid": 539,
+      "name": "PrisonRealmMob",
+      "type": "livingentity",
+      "sortid": 536,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "reverse_cursed_technique_bind",
+      "registry_name": "prison_realm_mob",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/ReverseCursedTechniqueBindMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/PrisonRealmMobEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/PrisonRealmMobRenderer.java"
         ]
       },
-      "path": "~/Keybinds"
+      "path": "~/Abilities"
     },
     {
       "name": "RCTPressed",
@@ -11762,33 +11791,139 @@
       "path": "~/Keybinds/Procedures"
     },
     {
-      "name": "RCTHealing",
-      "type": "potioneffect",
-      "sortid": 541,
+      "name": "ReversalRedEntity",
+      "type": "livingentity",
+      "sortid": 535,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "rct_healing",
+      "registry_name": "reversal_red_entity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/potion/RCTHealingMobEffect.java"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java"
         ]
       },
-      "path": "~/Potion Effects"
+      "path": "~/Abilities"
     },
     {
-      "name": "PrisonRealmGUI",
-      "type": "gui",
-      "sortid": 542,
+      "name": "EntityComboSystem",
+      "type": "procedure",
+      "sortid": 533,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "prison_realm_gui",
+      "registry_name": "entity_combo_system",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/gui/PrisonRealmGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/PrisonRealmGUIMenu.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntityComboSystemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
-      "path": "~/GUI"
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ReversalRedEntityOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 534,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_entity_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedEntityOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BoltProjectile",
+      "type": "rangeditem",
+      "sortid": 537,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bolt_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/BoltProjectileEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/bolt_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/BoltProjectileItem.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BoltProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 536,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bolt_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BoltProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
@@ -12520,8 +12655,8 @@
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
-      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -12588,8 +12723,8 @@
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_hud.label_x1": "X",
+      "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
-      "effect.craftkaisen.rct_healing": "Reverse Cursed Healing",
       "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
       "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
@@ -12661,7 +12796,6 @@
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
       "item.craftkaisen.talisman": "Talisman",
       "gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for": "I\u0027ll assassinate somebody for",
-      "key.craftkaisen.reverse_cursed_technique_bind": "Reverse Cursed Technique",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "gui.craftkaisen.sword_creator.GreatswordBox": "Greatsword",
@@ -12679,7 +12813,6 @@
       "item.craftkaisen.prison_realm_sealed": "Prison Realm Sealed",
       "advancements.semi_grade_1.title": "Semi Grade 1",
       "key.craftkaisen.leave_mech": "Leave Mech",
-      "entity.craftkaisen.prison_realm_mob": "Prison Realm",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat": "I cant assure you that ill beat them.",
@@ -12814,12 +12947,10 @@
       "gui.craftkaisen.technique_creator_gui.OrbBox": "Orb",
       "gui.craftkaisen.technique_creator_gui.PulseBox": "Pulse",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
-      "gui.craftkaisen.prison_realm_gui.button_finish": "Finish",
       "entity.craftkaisen.mahito": "Special Grade Cursed Spirit: Mahito",
       "gui.craftkaisen.technique_creator_gui.button_create": "Create",
       "gui.craftkaisen.design_gui.button_confirm": "Confirm",
       "advancements.semi_grade_2.descr": "Become a Semi Grade 2 Sorcerer",
-      "gui.craftkaisen.prison_realm_gui.TargetPlayer": "Target",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
@@ -12882,11 +13013,11 @@
             "children": []
           },
           {
-            "name": "Inumaki",
+            "name": "CustomAbilities",
             "children": []
           },
           {
-            "name": "CustomAbilities",
+            "name": "Inumaki",
             "children": []
           }
         ]
