@@ -12,8 +12,11 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.TechniqueCreatorGUIMenu;
+<<<<<<< HEAD
 import net.mcreator.craftkaisen.network.TechniqueCreatorGUIButtonMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
+=======
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 
 import java.util.HashMap;
 
@@ -28,12 +31,15 @@ public class TechniqueCreatorGUIScreen extends AbstractContainerScreen<Technique
 	EditBox TechniqueName;
 	Checkbox ImbueTechnique;
 	Checkbox ReverseEffect;
+<<<<<<< HEAD
 	Checkbox OrbBox;
 	Checkbox ExplosionBox;
 	Checkbox PulseBox;
 	Checkbox AreaBox;
 	Checkbox BoltBox;
 	Checkbox BeamBox;
+=======
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 	Button button_create;
 	Button button_technique_specific_settings;
 
@@ -56,10 +62,13 @@ public class TechniqueCreatorGUIScreen extends AbstractContainerScreen<Technique
 		super.render(ms, mouseX, mouseY, partialTicks);
 		TechniqueName.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
+<<<<<<< HEAD
 		if (mouseX > leftPos + 280 && mouseX < leftPos + 304 && mouseY > topPos + 53 && mouseY < topPos + 77)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.technique_creator_gui.tooltip_imbues_your_current_ct_in_the_at"), mouseX, mouseY);
 		if (mouseX > leftPos + 280 && mouseX < leftPos + 304 && mouseY > topPos + 85 && mouseY < topPos + 109)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.technique_creator_gui.tooltip_reverses_the_imbued_technique"), mouseX, mouseY);
+=======
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 	}
 
 	@Override
@@ -103,7 +112,11 @@ public class TechniqueCreatorGUIScreen extends AbstractContainerScreen<Technique
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+<<<<<<< HEAD
 		TechniqueName = new EditBox(this.font, this.leftPos + 276, this.topPos + 25, 120, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.TechniqueName")) {
+=======
+		TechniqueName = new EditBox(this.font, this.leftPos + 27, this.topPos + 30, 120, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.TechniqueName")) {
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.technique_creator_gui.TechniqueName").getString());
 			}
@@ -129,22 +142,38 @@ public class TechniqueCreatorGUIScreen extends AbstractContainerScreen<Technique
 		TechniqueName.setMaxLength(32767);
 		guistate.put("text:TechniqueName", TechniqueName);
 		this.addWidget(this.TechniqueName);
+<<<<<<< HEAD
 		button_create = new Button(this.leftPos + 346, this.topPos + 123, 56, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.button_create"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new TechniqueCreatorGUIButtonMessage(0, x, y, z));
 				TechniqueCreatorGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
+=======
+		button_create = new Button(this.leftPos + 59, this.topPos + 124, 56, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.button_create"), e -> {
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 		});
 		guistate.put("button:button_create", button_create);
 		this.addRenderableWidget(button_create);
+<<<<<<< HEAD
 		button_technique_specific_settings = new Button(this.leftPos + 229, this.topPos + 3, 166, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.button_technique_specific_settings"), e -> {
+=======
+		button_technique_specific_settings = new Button(this.leftPos + 4, this.topPos + 3, 166, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.button_technique_specific_settings"), e -> {
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 		});
 		guistate.put("button:button_technique_specific_settings", button_technique_specific_settings);
 		this.addRenderableWidget(button_technique_specific_settings);
+<<<<<<< HEAD
 		ImbueTechnique = new Checkbox(this.leftPos + 282, this.topPos + 55, 20, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.ImbueTechnique"), false);
+=======
+		ImbueTechnique = new Checkbox(this.leftPos + 27, this.topPos + 60, 20, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.ImbueTechnique"), false);
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 		guistate.put("checkbox:ImbueTechnique", ImbueTechnique);
 		this.addRenderableWidget(ImbueTechnique);
+<<<<<<< HEAD
 		ReverseEffect = new Checkbox(this.leftPos + 282, this.topPos + 87, 20, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.ReverseEffect"), false);
+=======
+		ReverseEffect = new Checkbox(this.leftPos + 27, this.topPos + 94, 20, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.ReverseEffect"), false);
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 		guistate.put("checkbox:ReverseEffect", ReverseEffect);
 		this.addRenderableWidget(ReverseEffect);
 		OrbBox = new Checkbox(this.leftPos + 10, this.topPos + 15, 20, 20, Component.translatable("gui.craftkaisen.technique_creator_gui.OrbBox"), false);

@@ -49,7 +49,7 @@ public class CursedspiritmouthEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.5, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
@@ -64,6 +64,7 @@ public class CursedspiritmouthEntity extends Monster {
 		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, true));
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, MegumiFushiguroEntity.class, true, true));
 		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, ItadoriEntity.class, true, true));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, UltimateMechamaruEntity.class, true, true));
 	}
 
 	@Override
@@ -92,7 +93,7 @@ public class CursedspiritmouthEntity extends Monster {
 		builder = builder.add(Attributes.MAX_HEALTH, 130);
 		builder = builder.add(Attributes.ARMOR, 0.15);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;

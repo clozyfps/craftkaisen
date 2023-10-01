@@ -89,7 +89,11 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+<<<<<<< HEAD
 		TojiPlayerKill = new EditBox(this.font, this.leftPos + 5, this.topPos + 5, 120, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.TojiPlayerKill")) {
+=======
+		TojiPlayerKill = new EditBox(this.font, this.leftPos + 34, this.topPos + 67, 120, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.TojiPlayerKill")) {
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.toji_contract_gui.TojiPlayerKill").getString());
 			}
@@ -115,7 +119,11 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 		TojiPlayerKill.setMaxLength(32767);
 		guistate.put("text:TojiPlayerKill", TojiPlayerKill);
 		this.addWidget(this.TojiPlayerKill);
+<<<<<<< HEAD
 		button_purchase = new Button(this.leftPos + 32, this.topPos + 26, 67, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.button_purchase"), e -> {
+=======
+		button_purchase = new Button(this.leftPos + 63, this.topPos + 45, 67, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.button_purchase"), e -> {
+>>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new TojiContractGuiButtonMessage(0, x, y, z));
 				TojiContractGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);

@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Empty Mechamaru",
     "mobLabel": "",
-    "mobModelName": "Modelmechamaruoffline",
+    "mobModelName": "Modelmechamaruofflinenew",
     "mobModelTexture": "mechmaruoffline.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
@@ -95,9 +95,6 @@
     },
     "stepSound": {
       "value": ""
-    },
-    "onRightClickedOn": {
-      "name": "EmptyMechamaruRightClickedOnEntity"
     },
     "hasAI": false,
     "aiBase": "(none)",
