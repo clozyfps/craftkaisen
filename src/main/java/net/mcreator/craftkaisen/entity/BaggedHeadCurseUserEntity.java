@@ -1,16 +1,42 @@
 
 package net.mcreator.craftkaisen.entity;
 
-import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.nbt.Tag;
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.SpawnGroupData;
+import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
+
+import net.mcreator.craftkaisen.procedures.BaggedHeadCurseUserOnInitialEntitySpawnProcedure;
+import net.mcreator.craftkaisen.procedures.BaggedHeadCurseUserOnEntityTickUpdateProcedure;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
 import javax.annotation.Nullable;
 
 public class BaggedHeadCurseUserEntity extends Monster {
-
 	public BaggedHeadCurseUserEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER.get(), world);
 	}
@@ -20,7 +46,6 @@ public class BaggedHeadCurseUserEntity extends Monster {
 		maxUpStep = 0.6f;
 		xpReward = 0;
 		setNoAi(false);
-
 	}
 
 	@Override
@@ -31,20 +56,16 @@ public class BaggedHeadCurseUserEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.5, true) {
-
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
-
 		});
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(5, new FloatGoal(this));
-
 	}
 
 	@Override
@@ -82,7 +103,6 @@ public class BaggedHeadCurseUserEntity extends Monster {
 
 	public static void init() {
 		SpawnPlacements.register(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER.get(), SpawnPlacements.Type.NO_RESTRICTIONS, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Mob::checkMobSpawnRules);
-
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -92,12 +112,8 @@ public class BaggedHeadCurseUserEntity extends Monster {
 		builder = builder.add(Attributes.ARMOR, 0.1);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
-
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.1);
-
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
-
 		return builder;
 	}
-
 }

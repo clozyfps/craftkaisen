@@ -60,7 +60,7 @@ public class BasesConfirmProcedure {
 					}, _bpos);
 				}
 			}
-			if (guistate.get("text:textFieldName") instanceof EditBox _tf)
+			if (guistate.get("text:CTName") instanceof EditBox _tf)
 				_tf.setValue((entity.getPersistentData().getString("ctName")));
 		} else {
 			if (!entity.getPersistentData().getBoolean("showErr")) {

@@ -1,8 +1,37 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
+
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
+import net.mcreator.craftkaisen.entity.BaggedHeadCurseUserEntity;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import javax.annotation.Nullable;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Iterator;
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class StarPlasmaVesselProcedure {
@@ -75,7 +104,7 @@ public class StarPlasmaVesselProcedure {
 			}
 			if (entity.getPersistentData().getDouble("boxheadtimer") == 5000) {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new BaggedHeadCurseUserEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), _level);
+					Entity entityToSpawn = new BaggedHeadCurseUserEntity(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER.get(), _level);
 					entityToSpawn.moveTo(x, y, z, 0, 0);
 					entityToSpawn.setYBodyRot(0);
 					entityToSpawn.setYHeadRot(0);
