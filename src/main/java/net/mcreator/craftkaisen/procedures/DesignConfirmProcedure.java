@@ -75,6 +75,8 @@ public class DesignConfirmProcedure {
 					}, _bpos);
 				}
 			}
+			if (guistate.get("text:CTName") instanceof EditBox _tf)
+				_tf.setValue((entity.getPersistentData().getString("ctName")));
 		} else {
 			if (!entity.getPersistentData().getBoolean("showErr")) {
 				entity.getPersistentData().putString("errMsg", "Colors typed incorrectly or is empty!");

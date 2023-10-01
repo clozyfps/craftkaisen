@@ -70,11 +70,11 @@ public class CustomCTGUIButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			OpenBasesGUIProcedure.execute(world, x, y, z, entity);
+			OpenBasesGUIProcedure.execute(world, x, y, z, entity, guistate);
 		}
 		if (buttonID == 2) {
 
-			OpenDesignGUIProcedure.execute(world, x, y, z, entity);
+			OpenDesignGUIProcedure.execute(world, x, y, z, entity, guistate);
 		}
 	}
 

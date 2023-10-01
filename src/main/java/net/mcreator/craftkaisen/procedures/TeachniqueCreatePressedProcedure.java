@@ -458,6 +458,151 @@ public class TeachniqueCreatePressedProcedure {
 					}
 				}
 			}
+			if (guistate.containsKey("checkbox:ImbueTechnique") ? ((Checkbox) guistate.get("checkbox:ImbueTechnique")).selected() : false) {
+				if (guistate.containsKey("checkbox:ReverseEffect") ? ((Checkbox) guistate.get("checkbox:ReverseEffect")).selected() : false) {
+					if (entity.getPersistentData().getBoolean("move1")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move1Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move1Reverse = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move2")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move2Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move2Reverse = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move3")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move3Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move3Reverse = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move4")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move4Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move4Reverse = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move5")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move5Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move5Reverse = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move6")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move6Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move6Reverse = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				} else {
+					if (entity.getPersistentData().getBoolean("move1")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move1Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move2")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move2Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move3")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move3Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move4")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move4Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move5")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move5Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (entity.getPersistentData().getBoolean("move6")) {
+						{
+							boolean _setval = true;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.Move6Imbue = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				}
+			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();
 			{

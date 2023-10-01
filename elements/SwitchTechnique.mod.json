@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "R",
     "keyBindingName": "Switch Ability",
-    "keyBindingCategoryKey": "jjk"
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "SwitchTechniquePressed"
+    }
   }
 }

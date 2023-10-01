@@ -11657,6 +11657,21 @@
       "path": "~/Procedures"
     },
     {
+      "name": "ReversalRedEntity",
+      "type": "livingentity",
+      "sortid": 535,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
       "name": "EntityComboSystem",
       "type": "procedure",
       "sortid": 533,
@@ -11721,19 +11736,44 @@
       "path": "~/Abilities"
     },
     {
-      "name": "ReversalRedEntity",
-      "type": "livingentity",
-      "sortid": 535,
+      "name": "SwitchTechniquePressed",
+      "type": "procedure",
+      "sortid": 523,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "reversal_red_entity",
+      "registry_name": "switch_technique_pressed",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedEntityEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/ReversalRedEntityRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/SwitchTechniquePressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/Abilities"
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "UseTechniquePressed",
+      "type": "procedure",
+      "sortid": 533,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_technique_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UseTechniquePressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
     }
   ],
   "variable_elements": [
@@ -12465,8 +12505,8 @@
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
-      "gui.craftkaisen.sword_creator.label_materials": "Materials",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "gui.craftkaisen.sword_creator.label_materials": "Materials",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -12614,7 +12654,6 @@
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
-      "entity.craftkaisen.reversal_red_entity": "Reversal Red Entity",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "itemGroup.tabjjkmobs": "JJK Mobs",
