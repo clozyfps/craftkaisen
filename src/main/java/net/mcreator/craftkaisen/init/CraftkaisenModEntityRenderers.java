@@ -99,5 +99,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER_CLONE.get(), BaggedHeadCurseUserCloneRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER.get(), BaggedHeadCurseUserRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.REVERSAL_RED_ENTITY.get(), ReversalRedEntityRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.BOLT_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

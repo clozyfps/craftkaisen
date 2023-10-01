@@ -25,8 +25,8 @@ public class BasesConfirmProcedure {
 		if (entity == null || guistate == null)
 			return;
 		entity.getPersistentData().putBoolean("showErr", false);
-		if ((guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Spaitial")
-				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("spaitial")
+		if ((guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Spatial")
+				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("spatial")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Transfiguration")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("transfiguration")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Corruption")

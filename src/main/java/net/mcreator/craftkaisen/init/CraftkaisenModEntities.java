@@ -60,6 +60,7 @@ import net.mcreator.craftkaisen.entity.CursedspiritmouthEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
 import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
+import net.mcreator.craftkaisen.entity.BoltProjectileEntity;
 import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.entity.BigFistEntity;
 import net.mcreator.craftkaisen.entity.BaggedHeadCurseUserEntity;
@@ -219,6 +220,8 @@ public class CraftkaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<ReversalRedEntityEntity>> REVERSAL_RED_ENTITY = register("reversal_red_entity", EntityType.Builder.<ReversalRedEntityEntity>of(ReversalRedEntityEntity::new, MobCategory.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ReversalRedEntityEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<BoltProjectileEntity>> BOLT_PROJECTILE = register("projectile_bolt_projectile",
+			EntityType.Builder.<BoltProjectileEntity>of(BoltProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BoltProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

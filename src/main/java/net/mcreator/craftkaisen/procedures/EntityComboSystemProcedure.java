@@ -1,8 +1,31 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.particles.ParticleTypes;
+
+import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.MahitoEntity;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import javax.annotation.Nullable;
+
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class EntityComboSystemProcedure {
@@ -57,6 +80,7 @@ public class EntityComboSystemProcedure {
 							_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
 					}
 					CraftkaisenMod.queueServerWork(1, () -> {
+						entity.setDeltaMovement(new Vec3((2.5 * sourceentity.getLookAngle().x), ((-2) * sourceentity.getLookAngle().y), (2.5 * sourceentity.getLookAngle().z)));
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 40, 2, 3, 2, 0);
 						{

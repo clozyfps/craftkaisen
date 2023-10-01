@@ -10503,6 +10503,10 @@
             "type": "entity"
           },
           {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -10551,6 +10555,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
           },
           {
             "name": "x",
@@ -11774,6 +11782,62 @@
         ]
       },
       "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "BoltProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 536,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bolt_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BoltProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BoltProjectile",
+      "type": "rangeditem",
+      "sortid": 537,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bolt_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/BoltProjectileItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/bolt_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/BoltProjectileEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
@@ -12505,8 +12569,8 @@
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
-      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -12601,7 +12665,7 @@
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
       "item.craftkaisen.mechamaru_armor_chestplate": "Mechamaru",
-      "gui.craftkaisen.bases_gui.label_spaitial_transfiguration_corru": "Spaitial, Transfiguration, Corruption, Flame, Plant, Swap, Jackpot,",
+      "gui.craftkaisen.bases_gui.label_spaitial_transfiguration_corru": "Spatial, Transfiguration, Corruption, Flame, Plant, Swap, Jackpot,",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "effect.craftkaisen.ember_floor": "FloorEmber",
@@ -12654,6 +12718,7 @@
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
+      "entity.craftkaisen.reversal_red_entity": "Reversal Red Entity",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "itemGroup.tabjjkmobs": "JJK Mobs",
@@ -12712,6 +12777,7 @@
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
+      "item.craftkaisen.bolt_projectile": "Bolt Projectile",
       "entity.craftkaisen.sukuna": "Sukuna",
       "key.craftkaisen.block_bind": "Block",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
