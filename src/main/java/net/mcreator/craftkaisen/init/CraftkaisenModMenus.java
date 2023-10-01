@@ -4,26 +4,7 @@
  */
 package net.mcreator.craftkaisen.init;
 
-import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.common.extensions.IForgeMenuType;
-
-import net.minecraft.world.inventory.MenuType;
-
-import net.mcreator.craftkaisen.world.inventory.TojiContractGuiMenu;
-import net.mcreator.craftkaisen.world.inventory.TechniqueCreatorGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.TalismanGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.SwordCreatorMenu;
-import net.mcreator.craftkaisen.world.inventory.SkillTreeMainGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.PrisonRealmGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
-import net.mcreator.craftkaisen.world.inventory.InventoryCurseGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.DesignGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
-import net.mcreator.craftkaisen.world.inventory.BasesGUIMenu;
-import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, CraftkaisenMod.MODID);
