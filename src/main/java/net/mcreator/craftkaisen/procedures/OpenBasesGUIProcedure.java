@@ -12,14 +12,17 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.gui.components.EditBox;
 
 import net.mcreator.craftkaisen.world.inventory.BasesGUIMenu;
+
+import java.util.HashMap;
 
 import io.netty.buffer.Unpooled;
 
 public class OpenBasesGUIProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, HashMap guistate) {
+		if (entity == null || guistate == null)
 			return;
 		{
 			if (entity instanceof ServerPlayer _ent) {
@@ -37,5 +40,6 @@ public class OpenBasesGUIProcedure {
 				}, _bpos);
 			}
 		}
+		entity.getPersistentData().putString("ctName", (guistate.containsKey("text:CTName") ? ((EditBox) guistate.get("text:CTName")).getValue() : ""));
 	}
 }

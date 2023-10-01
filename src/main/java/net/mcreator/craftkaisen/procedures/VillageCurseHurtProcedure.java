@@ -1,6 +1,12 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+
+import net.minecraft.world.entity.npc.Villager;
+import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
@@ -8,9 +14,8 @@ import javax.annotation.Nullable;
 public class VillageCurseHurtProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity);
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity());
 		}
 	}
 

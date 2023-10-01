@@ -1,21 +1,14 @@
 package net.mcreator.craftkaisen.procedures;
 
-<<<<<<< HEAD
-=======
 import net.minecraftforge.items.IItemHandler;
->>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
-<<<<<<< HEAD
-
-=======
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
->>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -40,16 +33,6 @@ public class FragileTickProcedure {
 		execute(null, world, entity);
 	}
 
-<<<<<<< HEAD
-	private static void execute(@Nullable Event event, Entity entity) {
-		if (entity == null)
-			return;
-		if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).RestrictedType).equals("Fragile")) {
-			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 999999, 1, false, false));
-			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 999999, 1, false, false));
-=======
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
@@ -78,7 +61,6 @@ public class FragileTickProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 5, 0, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 5, 1, false, false));
->>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 		}
 	}
 }
