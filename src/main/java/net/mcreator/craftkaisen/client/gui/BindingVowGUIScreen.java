@@ -6,14 +6,12 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
-import net.mcreator.craftkaisen.procedures.VowSenderDisplayProcedure;
-import net.mcreator.craftkaisen.procedures.VowDescriptionDisplayProcedure;
-import net.mcreator.craftkaisen.network.BindingVowGUIButtonMessage;
-import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -25,8 +23,10 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_yes;
-	Button button_yes1;
+	EditBox PlayerNameKill;
+	Checkbox KillVow;
+	Checkbox ItemVow;
+	Button button_submit;
 
 	public BindingVowGUIScreen(BindingVowGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -35,8 +35,8 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 193;
-		this.imageHeight = 130;
+		this.imageWidth = 300;
+		this.imageHeight = 226;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("craftkaisen:textures/screens/binding_vow_gui.png");
@@ -45,6 +45,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
+		PlayerNameKill.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
 	}
 
@@ -64,25 +65,22 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+		if (PlayerNameKill.isFocused())
+			return PlayerNameKill.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
 	@Override
 	public void containerTick() {
 		super.containerTick();
+		PlayerNameKill.tick();
 	}
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_binding_vow"), 67, 4, -12829636);
-		this.font.draw(poseStack,
-
-				VowSenderDisplayProcedure.execute(entity), 13, 22, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_empty"), 13, 40, -12829636);
-		this.font.draw(poseStack,
-
-				VowDescriptionDisplayProcedure.execute(entity), 13, 58, -12829636);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_do_you_accept"), 60, 85, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_dont_kill_player"), 38, 17, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_dont_pick_up_specific_item"), 38, 56, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_item"), 189, 176, -12829636);
 	}
 
 	@Override
@@ -95,21 +93,41 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		button_yes = new Button(this.leftPos + 22, this.topPos + 103, 40, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_yes"), e -> {
-			if (true) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BindingVowGUIButtonMessage(0, x, y, z));
-				BindingVowGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+		PlayerNameKill = new EditBox(this.font, this.leftPos + 20, this.topPos + 172, 120, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill")) {
+			{
+				setSuggestion(Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill").getString());
 			}
-		});
-		guistate.put("button:button_yes", button_yes);
-		this.addRenderableWidget(button_yes);
-		button_yes1 = new Button(this.leftPos + 132, this.topPos + 103, 40, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_yes1"), e -> {
-			if (true) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BindingVowGUIButtonMessage(1, x, y, z));
-				BindingVowGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+
+			@Override
+			public void insertText(String text) {
+				super.insertText(text);
+				if (getValue().isEmpty())
+					setSuggestion(Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill").getString());
+				else
+					setSuggestion(null);
 			}
+
+			@Override
+			public void moveCursorTo(int pos) {
+				super.moveCursorTo(pos);
+				if (getValue().isEmpty())
+					setSuggestion(Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill").getString());
+				else
+					setSuggestion(null);
+			}
+		};
+		PlayerNameKill.setMaxLength(32767);
+		guistate.put("text:PlayerNameKill", PlayerNameKill);
+		this.addWidget(this.PlayerNameKill);
+		button_submit = new Button(this.leftPos + 122, this.topPos + 198, 56, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_submit"), e -> {
 		});
-		guistate.put("button:button_yes1", button_yes1);
-		this.addRenderableWidget(button_yes1);
+		guistate.put("button:button_submit", button_submit);
+		this.addRenderableWidget(button_submit);
+		KillVow = new Checkbox(this.leftPos + 10, this.topPos + 12, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.KillVow"), false);
+		guistate.put("checkbox:KillVow", KillVow);
+		this.addRenderableWidget(KillVow);
+		ItemVow = new Checkbox(this.leftPos + 10, this.topPos + 52, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.ItemVow"), false);
+		guistate.put("checkbox:ItemVow", ItemVow);
+		this.addRenderableWidget(ItemVow);
 	}
 }

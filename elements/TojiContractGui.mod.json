@@ -3,43 +3,13 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 200,
-    "height": 120,
+    "width": 132,
+    "height": 32,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ill_assassinate_somebody_for",
-          "text": {
-            "fixedValue": "I'll assassinate somebody for"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "x": 120,
-          "y": 66
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_20000_yen",
-          "text": {
-            "fixedValue": "20,000 Yen"
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "x": 120,
-          "y": 77
-        }
-      },
       {
         "type": "button",
         "data": {
@@ -50,34 +20,19 @@
           },
           "width": 67,
           "height": 20,
-          "x": 177,
-          "y": 105
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_i_cant_assure_you_that_ill_beat",
-          "text": {
-            "fixedValue": "I cant assure you that ill beat them."
-          },
-          "color": {
-            "value": -16777216,
-            "falpha": 0.0
-          },
-          "x": 116,
-          "y": 164
+          "x": 180,
+          "y": 130
         }
       },
       {
         "type": "textfield",
         "data": {
-          "placeholder": "PlayerName",
+          "placeholder": "Player name..",
           "name": "TojiPlayerKill",
           "width": 120,
           "height": 20,
-          "x": 148,
-          "y": 127
+          "x": 153,
+          "y": 109
         }
       }
     ],

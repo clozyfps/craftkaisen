@@ -50,7 +50,7 @@ public class JoinsWorldProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			random = Mth.nextInt(RandomSource.create(), 1, 2);
+			random = Mth.nextInt(RandomSource.create(), 1, 100);
 			restrictionrandom = Mth.nextInt(RandomSource.create(), 1, 7);
 			if (random == 1) {
 				{
@@ -83,7 +83,7 @@ public class JoinsWorldProcedure {
 					}
 				}
 			}
-			if (random == 2) {
+			if (random >= 2) {
 				{
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = new BlockPos(x, y, z);

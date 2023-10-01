@@ -11,40 +11,39 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
-import net.mcreator.craftkaisen.procedures.VowYesProcedureProcedure;
-import net.mcreator.craftkaisen.procedures.CloseVowGUIProcedure;
+import net.mcreator.craftkaisen.world.inventory.TechniqueCreatorGUIMenu;
+import net.mcreator.craftkaisen.procedures.TeachniqueCreatePressedProcedure;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class BindingVowGUIButtonMessage {
+public class TechniqueCreatorGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public BindingVowGUIButtonMessage(FriendlyByteBuf buffer) {
+	public TechniqueCreatorGUIButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public BindingVowGUIButtonMessage(int buttonID, int x, int y, int z) {
+	public TechniqueCreatorGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(BindingVowGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(TechniqueCreatorGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(BindingVowGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(TechniqueCreatorGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -59,22 +58,18 @@ public class BindingVowGUIButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = BindingVowGUIMenu.guistate;
+		HashMap guistate = TechniqueCreatorGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			VowYesProcedureProcedure.execute(world, entity);
-		}
-		if (buttonID == 1) {
-
-			CloseVowGUIProcedure.execute(world, entity);
+			TeachniqueCreatePressedProcedure.execute(entity, guistate);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		CraftkaisenMod.addNetworkMessage(BindingVowGUIButtonMessage.class, BindingVowGUIButtonMessage::buffer, BindingVowGUIButtonMessage::new, BindingVowGUIButtonMessage::handler);
+		CraftkaisenMod.addNetworkMessage(TechniqueCreatorGUIButtonMessage.class, TechniqueCreatorGUIButtonMessage::buffer, TechniqueCreatorGUIButtonMessage::new, TechniqueCreatorGUIButtonMessage::handler);
 	}
 }

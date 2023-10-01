@@ -1,0 +1,9 @@
+{
+  "parent": "craftkaisen:custom/prison_realm",
+  "textures": {
+    "all": "craftkaisen:blocks/prisonrealmtextureunsealed",
+    "particle": "craftkaisen:blocks/prisonrealmtextureunsealed",
+    "0": "craftkaisen:blocks/prisonrealmtextureunsealed"
+  },
+  "render_type": "solid"
+}
