@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
+import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
@@ -216,6 +217,8 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<BaggedHeadCurseUserEntity>of(BaggedHeadCurseUserEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BaggedHeadCurseUserEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<PrisonRealmMobEntity>> PRISON_REALM_MOB = register("prison_realm_mob", EntityType.Builder.<PrisonRealmMobEntity>of(PrisonRealmMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(6).setUpdateInterval(3).setCustomClientFactory(PrisonRealmMobEntity::new).fireImmune().sized(0.9f, 0.9f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -257,6 +260,7 @@ public class CraftkaisenModEntities {
 			RikoAmanaiEntity.init();
 			BaggedHeadCurseUserCloneEntity.init();
 			BaggedHeadCurseUserEntity.init();
+			PrisonRealmMobEntity.init();
 		});
 	}
 
@@ -295,5 +299,6 @@ public class CraftkaisenModEntities {
 		event.put(RIKO_AMANAI.get(), RikoAmanaiEntity.createAttributes().build());
 		event.put(BAGGED_HEAD_CURSE_USER_CLONE.get(), BaggedHeadCurseUserCloneEntity.createAttributes().build());
 		event.put(BAGGED_HEAD_CURSE_USER.get(), BaggedHeadCurseUserEntity.createAttributes().build());
+		event.put(PRISON_REALM_MOB.get(), PrisonRealmMobEntity.createAttributes().build());
 	}
 }

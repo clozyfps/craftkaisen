@@ -16,6 +16,7 @@ import net.mcreator.craftkaisen.world.inventory.TechniqueCreatorGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.TalismanGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.SwordCreatorMenu;
 import net.mcreator.craftkaisen.world.inventory.SkillTreeMainGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.PrisonRealmGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.InventoryCurseGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DesignGUIMenu;
@@ -37,4 +38,5 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<DesignGUIMenu>> DESIGN_GUI = REGISTRY.register("design_gui", () -> IForgeMenuType.create(DesignGUIMenu::new));
 	public static final RegistryObject<MenuType<TojiContractGuiMenu>> TOJI_CONTRACT_GUI = REGISTRY.register("toji_contract_gui", () -> IForgeMenuType.create(TojiContractGuiMenu::new));
 	public static final RegistryObject<MenuType<TechniqueCreatorGUIMenu>> TECHNIQUE_CREATOR_GUI = REGISTRY.register("technique_creator_gui", () -> IForgeMenuType.create(TechniqueCreatorGUIMenu::new));
+	public static final RegistryObject<MenuType<PrisonRealmGUIMenu>> PRISON_REALM_GUI = REGISTRY.register("prison_realm_gui", () -> IForgeMenuType.create(PrisonRealmGUIMenu::new));
 }

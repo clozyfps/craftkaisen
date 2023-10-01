@@ -42,11 +42,6 @@ public class CustomCTGUIScreen extends AbstractContainerScreen<CustomCTGUIMenu> 
 		this.imageHeight = 100;
 	}
 
-	@Override
-	public boolean isPauseScreen() {
-		return true;
-	}
-
 	private static final ResourceLocation texture = new ResourceLocation("craftkaisen:textures/screens/custom_ctgui.png");
 
 	@Override

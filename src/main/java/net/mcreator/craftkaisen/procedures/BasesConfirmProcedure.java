@@ -39,8 +39,6 @@ public class BasesConfirmProcedure {
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("swap")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Jackpot")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("jackpot")
-				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("String")
-				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("string")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("Marker")
 				|| (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : "").contains("marker")) {
 			entity.getPersistentData().putString("base", (guistate.containsKey("text:ChoiceBox") ? ((EditBox) guistate.get("text:ChoiceBox")).getValue() : ""));
