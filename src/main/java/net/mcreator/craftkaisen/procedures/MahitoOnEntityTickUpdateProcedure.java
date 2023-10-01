@@ -6,7 +6,6 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -22,8 +21,6 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
-import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.BigFistEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.stream.Collectors;
@@ -35,25 +32,9 @@ public class MahitoOnEntityTickUpdateProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) instanceof LivingEntity) {
-			if (Math.random() < 0.004) {
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = new BigFistEntity(CraftkaisenModEntities.BIG_FIST.get(), _level);
-					entityToSpawn.moveTo(x, y, z, 0, 0);
-					entityToSpawn.setYBodyRot(0);
-					entityToSpawn.setYHeadRot(0);
-					entityToSpawn.setDeltaMovement(0, 0, 0);
-					if (entityToSpawn instanceof Mob _mobToSpawn)
-						_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-					world.addFreshEntity(entityToSpawn);
-				}
-				entity.getPersistentData().putBoolean("fistenlarge", true);
-				CraftkaisenMod.queueServerWork(100, () -> {
-					entity.getPersistentData().putBoolean("fistenlarge", false);
-				});
-			}
 			if (Math.random() < 0.001) {
 				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-					_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.REPEATED_SLICING.get(), 20, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.REPEATED_SLICING.get(), 15, 1, false, false));
 			}
 			if (Math.random() < 0.002) {
 				if (entity instanceof LivingEntity _entity)
