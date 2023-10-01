@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.entity.SukunaEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
@@ -177,7 +178,7 @@ public class CraftkaisenModEntities {
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MahitoEntity>> MAHITO = register("mahito",
-			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
+			EntityType.Builder.<MahitoEntity>of(MahitoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MahitoEntity::new)
 
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<MahitoSpikeEntity>> MAHITO_SPIKE = register("mahito_spike",
@@ -198,6 +199,10 @@ public class CraftkaisenModEntities {
 					.sized(1.5f, 1.5f));
 	public static final RegistryObject<EntityType<WrappedUpEntity>> WRAPPED_UP = register("wrapped_up",
 			EntityType.Builder.<WrappedUpEntity>of(WrappedUpEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(WrappedUpEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<RikoAmanaiEntity>> RIKO_AMANAI = register("riko_amanai",
+			EntityType.Builder.<RikoAmanaiEntity>of(RikoAmanaiEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RikoAmanaiEntity::new)
 
 					.sized(0.6f, 1.8f));
 
@@ -238,6 +243,7 @@ public class CraftkaisenModEntities {
 			UltimateMechamaruEntity.init();
 			EmptyMechamaruEntity.init();
 			WrappedUpEntity.init();
+			RikoAmanaiEntity.init();
 		});
 	}
 
@@ -273,5 +279,6 @@ public class CraftkaisenModEntities {
 		event.put(ULTIMATE_MECHAMARU.get(), UltimateMechamaruEntity.createAttributes().build());
 		event.put(EMPTY_MECHAMARU.get(), EmptyMechamaruEntity.createAttributes().build());
 		event.put(WRAPPED_UP.get(), WrappedUpEntity.createAttributes().build());
+		event.put(RIKO_AMANAI.get(), RikoAmanaiEntity.createAttributes().build());
 	}
 }

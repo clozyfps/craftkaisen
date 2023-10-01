@@ -16,8 +16,9 @@ import javax.annotation.Nullable;
 public class SatoruGojoEntityIsHurtProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity);
 		}
 	}
 

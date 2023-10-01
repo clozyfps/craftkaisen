@@ -15,42 +15,17 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
-import net.mcreator.craftkaisen.network.UseTechniqueMessage;
-import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.OpenInventoryCurseBindMessage;
+import net.mcreator.craftkaisen.network.LeaveEnterMechMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class CraftkaisenModKeyMappings {
-	public static final KeyMapping SWITCH_TECHNIQUE = new KeyMapping("key.craftkaisen.switch_technique", GLFW.GLFW_KEY_R, "key.categories.jjk") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SwitchTechniqueMessage(0, 0));
-				SwitchTechniqueMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
-	public static final KeyMapping USE_TECHNIQUE = new KeyMapping("key.craftkaisen.use_technique", GLFW.GLFW_KEY_F, "key.categories.jjk") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				CraftkaisenMod.PACKET_HANDLER.sendToServer(new UseTechniqueMessage(0, 0));
-				UseTechniqueMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
+	public static final KeyMapping SWITCH_TECHNIQUE = new KeyMapping("key.craftkaisen.switch_technique", GLFW.GLFW_KEY_R, "key.categories.jjk");
+	public static final KeyMapping USE_TECHNIQUE = new KeyMapping("key.craftkaisen.use_technique", GLFW.GLFW_KEY_F, "key.categories.jjk");
 	public static final KeyMapping FLASH_STEP = new KeyMapping("key.craftkaisen.flash_step", GLFW.GLFW_KEY_C, "key.categories.jjk") {
 		private boolean isDownOld = false;
 
@@ -109,6 +84,19 @@ public class CraftkaisenModKeyMappings {
 		}
 	};
 	public static final KeyMapping CHANT = new KeyMapping("key.craftkaisen.chant", GLFW.GLFW_KEY_U, "key.categories.jjk");
+	public static final KeyMapping LEAVE_ENTER_MECH = new KeyMapping("key.craftkaisen.leave_enter_mech", GLFW.GLFW_KEY_B, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new LeaveEnterMechMessage(0, 0));
+				LeaveEnterMechMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -120,6 +108,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(CHARGE_CURSED_ENERGY);
 		event.register(OPEN_INVENTORY_CURSE_BIND);
 		event.register(CHANT);
+		event.register(LEAVE_ENTER_MECH);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -127,12 +116,11 @@ public class CraftkaisenModKeyMappings {
 		@SubscribeEvent
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
-				SWITCH_TECHNIQUE.consumeClick();
-				USE_TECHNIQUE.consumeClick();
 				FLASH_STEP.consumeClick();
 				OPEN_MAIN_MENU_BIND.consumeClick();
 				CHARGE_CURSED_ENERGY.consumeClick();
 				OPEN_INVENTORY_CURSE_BIND.consumeClick();
+				LEAVE_ENTER_MECH.consumeClick();
 			}
 		}
 	}

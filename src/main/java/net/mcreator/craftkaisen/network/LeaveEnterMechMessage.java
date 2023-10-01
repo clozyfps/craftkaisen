@@ -16,25 +16,25 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class LeaveMechMessage {
+public class LeaveEnterMechMessage {
 	int type, pressedms;
 
-	public LeaveMechMessage(int type, int pressedms) {
+	public LeaveEnterMechMessage(int type, int pressedms) {
 		this.type = type;
 		this.pressedms = pressedms;
 	}
 
-	public LeaveMechMessage(FriendlyByteBuf buffer) {
+	public LeaveEnterMechMessage(FriendlyByteBuf buffer) {
 		this.type = buffer.readInt();
 		this.pressedms = buffer.readInt();
 	}
 
-	public static void buffer(LeaveMechMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(LeaveEnterMechMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.type);
 		buffer.writeInt(message.pressedms);
 	}
 
-	public static void handler(LeaveMechMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(LeaveEnterMechMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			pressAction(context.getSender(), message.type, message.pressedms);
@@ -58,6 +58,6 @@ public class LeaveMechMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		CraftkaisenMod.addNetworkMessage(LeaveMechMessage.class, LeaveMechMessage::buffer, LeaveMechMessage::new, LeaveMechMessage::handler);
+		CraftkaisenMod.addNetworkMessage(LeaveEnterMechMessage.class, LeaveEnterMechMessage::buffer, LeaveEnterMechMessage::new, LeaveEnterMechMessage::handler);
 	}
 }

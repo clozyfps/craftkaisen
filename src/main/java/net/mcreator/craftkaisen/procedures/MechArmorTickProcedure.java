@@ -5,10 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
-<<<<<<< HEAD
-=======
 import net.minecraft.world.level.block.Blocks;
->>>>>>> branch 'master' of https://github.com/clozyfps/craftkaisen.git
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;

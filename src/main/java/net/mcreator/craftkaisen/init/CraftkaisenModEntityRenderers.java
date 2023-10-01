@@ -17,6 +17,7 @@ import net.mcreator.craftkaisen.client.renderer.UltimateMechamaruRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
+import net.mcreator.craftkaisen.client.renderer.RikoAmanaiRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
@@ -91,5 +92,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.ULTIMATE_MECHAMARU.get(), UltimateMechamaruRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.EMPTY_MECHAMARU.get(), EmptyMechamaruRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.WRAPPED_UP.get(), WrappedUpRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.RIKO_AMANAI.get(), RikoAmanaiRenderer::new);
 	}
 }

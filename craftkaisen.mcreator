@@ -508,26 +508,6 @@
       "path": "~/Keybinds"
     },
     {
-      "name": "SwitchTechniqueOnKeyPressed",
-      "type": "procedure",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "switch_technique_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SwitchTechniqueOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures"
-    },
-    {
       "name": "LapseBlueProcedure",
       "type": "procedure",
       "sortid": 42,
@@ -550,42 +530,6 @@
         ]
       },
       "path": "~/Keybinds/Procedures/TechniqueProcedure"
-    },
-    {
-      "name": "UseTechniqueOnKeyPressed",
-      "type": "procedure",
-      "sortid": 43,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "use_technique_on_key_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/UseTechniqueOnKeyPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Keybinds/Procedures"
     },
     {
       "name": "ReversalRed1",
@@ -3238,7 +3182,6 @@
       "registry_name": "binding_vow_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/BindingVowGUIButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/BindingVowGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/BindingVowGUIMenu.java"
         ]
@@ -3276,36 +3219,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/VowMainProcedureProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "cmdparams",
-            "type": "map"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Commands/Procedures"
     },
@@ -7994,7 +7908,7 @@
       "name": "MentorChat",
       "type": "procedure",
       "sortid": 377,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "mentor_chat",
       "metadata": {
@@ -10490,7 +10404,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/world/inventory/TechniqueCreatorGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/client/gui/TechniqueCreatorGUIScreen.java"
+          "src/main/java/net/mcreator/craftkaisen/client/gui/TechniqueCreatorGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/TechniqueCreatorGUIButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -10787,12 +10702,12 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "arguments",
+            "type": "cmdcontext"
           },
           {
-            "name": "cmdparams",
-            "type": "map"
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -11438,20 +11353,6 @@
       "path": "~/Blocks"
     },
     {
-      "name": "LeaveMech",
-      "type": "keybind",
-      "sortid": 498,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "leave_mech",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/LeaveMechMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
       "name": "PrisonRealmArmor",
       "type": "armor",
       "sortid": 503,
@@ -11504,6 +11405,37 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "LeaveEnterMech",
+      "type": "keybind",
+      "sortid": 523,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leave_enter_mech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/LeaveEnterMechMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "RikoAmanai",
+      "type": "livingentity",
+      "sortid": 524,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "riko_amanai",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/riko_amanai_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/RikoAmanaiRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/RikoAmanaiEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/riko_amanai_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -12257,9 +12189,11 @@
       "effect.craftkaisen.domain_expansion": "Domain Expansion",
       "effect.craftkaisen.vessel_cooldown": "Vessel CD",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
+      "item.craftkaisen.riko_amanai_spawn_egg": "Riko Amanai Spawn Egg",
       "entity.craftkaisen.eso": "Eso",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
       "gui.craftkaisen.binding_vow_gui.PlayerNameKill": "Player..",
+      "effect.craftkaisen.physically_gifted_cooldown": "Cooldown",
       "gui.craftkaisen.technique_creator_gui.AreaBox": "Area",
       "entity.craftkaisen.inventory_curse": "Inventory Curse",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
@@ -12294,6 +12228,7 @@
       "effect.craftkaisen.crushing": "Crushing",
       "gui.craftkaisen.custom_ctgui.button_finish1": "Bases",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
+      "entity.craftkaisen.riko_amanai": "Riko Amanai",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
       "gui.craftkaisen.main_hud.label_x2": "X",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
@@ -12366,6 +12301,7 @@
       "item.craftkaisen.gojo_uniform_chestplate": "Gojo Uniform",
       "gui.craftkaisen.sword_creator.label_1_cost": "+1 Cost",
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
+      "block.craftkaisen.prison_realm": "Prison Realm",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
       "item.craftkaisen.talisman": "Talisman",
@@ -12384,6 +12320,7 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
       "gui.craftkaisen.technique_creator_gui.BoltBox": "Bolt",
       "item.craftkaisen.magma_rock_projectile": "Magma Rock Projectile",
+      "item.craftkaisen.prison_realm_sealed": "Prison Realm Sealed",
       "advancements.semi_grade_1.title": "Semi Grade 1",
       "key.craftkaisen.leave_mech": "Leave Mech",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
@@ -12466,6 +12403,7 @@
       "subtitles.electric": "",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
+      "key.craftkaisen.leave_enter_mech": "Leave Enter Mech",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "advancements.grade_2.descr": "Become a Grade 2 Sorcerer",
       "gui.craftkaisen.main_menu.button_skill_tree1": "Quests",
@@ -12501,6 +12439,7 @@
       "item.craftkaisen.get_crushed": "Get Crushed",
       "gui.craftkaisen.sword_creator.label_diamonds": "Diamonds",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten1": "Resistance II - Upgrades resistance.§9 2 SP \u0026 GRADE 3",
+      "item.craftkaisen.prison_realm_armor_chestplate": "Prison Realm",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ssfflashstep_3_sp_grade_3": "§fFlashstep - 3 SP \u0026 GRADE 3",
       "key.craftkaisen.use_technique": "Use Technique",
       "entity.craftkaisen.malevolent_shrine": "Malevolent Shrine",

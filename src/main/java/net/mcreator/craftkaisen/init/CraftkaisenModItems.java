@@ -134,6 +134,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> PRISON_REALM_ARMOR_CHESTPLATE = REGISTRY.register("prison_realm_armor_chestplate", () -> new PrisonRealmArmorItem.Chestplate());
 	public static final RegistryObject<Item> PRISON_REALM = block(CraftkaisenModBlocks.PRISON_REALM, CraftkaisenModTabs.TAB_JJKITEMS);
 	public static final RegistryObject<Item> PRISON_REALM_SEALED = REGISTRY.register("prison_realm_sealed", () -> new PrisonRealmSealedItem());
+	public static final RegistryObject<Item> RIKO_AMANAI_SPAWN_EGG = REGISTRY.register("riko_amanai_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.RIKO_AMANAI, -1, -1, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

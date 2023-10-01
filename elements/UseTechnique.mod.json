@@ -4,9 +4,6 @@
   "definition": {
     "triggerKey": "F",
     "keyBindingName": "Use Technique",
-    "keyBindingCategoryKey": "jjk",
-    "onKeyPressed": {
-      "name": "UseTechniqueOnKeyPressed"
-    }
+    "keyBindingCategoryKey": "jjk"
   }
 }

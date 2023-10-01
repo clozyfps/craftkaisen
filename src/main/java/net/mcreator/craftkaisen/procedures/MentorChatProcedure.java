@@ -20,7 +20,6 @@ import net.minecraft.network.chat.Component;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import javax.annotation.Nullable;
@@ -156,7 +155,7 @@ public class MentorChatProcedure {
 							});
 						}
 						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = new RikoAmanaiEntity(CraftkaisenModEntities.RIKO_AMANAI.get(), _level);
+							Entity entityToSpawn = new RikoAmanaiEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), _level);
 							entityToSpawn.moveTo(x, y, z, world.getRandom().nextFloat() * 360F, 0);
 							if (entityToSpawn instanceof Mob _mobToSpawn)
 								_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);

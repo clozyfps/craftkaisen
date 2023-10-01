@@ -1,11 +1,14 @@
 
 package net.mcreator.craftkaisen.item;
 
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import javax.annotation.Nullable;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
 public class PrisonRealmSealedItem extends Item {
-
 	public PrisonRealmSealedItem() {
 		super(new Item.Properties().tab(null).stacksTo(1).fireResistant().rarity(Rarity.EPIC));
 	}
@@ -25,5 +28,4 @@ public class PrisonRealmSealedItem extends Item {
 	public boolean isFoil(ItemStack itemstack) {
 		return true;
 	}
-
 }
