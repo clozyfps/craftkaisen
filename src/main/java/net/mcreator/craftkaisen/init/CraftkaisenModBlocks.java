@@ -14,6 +14,8 @@ import net.mcreator.craftkaisen.block.VeilMainBlockBlock;
 import net.mcreator.craftkaisen.block.UnlimitedVoidBlock;
 import net.mcreator.craftkaisen.block.QuestBoardBlock;
 import net.mcreator.craftkaisen.block.PrisonRealmBlock;
+import net.mcreator.craftkaisen.block.DomainBlockTwoBlock;
+import net.mcreator.craftkaisen.block.DomainBlockOneBlock;
 import net.mcreator.craftkaisen.block.CursedToolTableBlock;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -24,4 +26,6 @@ public class CraftkaisenModBlocks {
 	public static final RegistryObject<Block> QUEST_BOARD = REGISTRY.register("quest_board", () -> new QuestBoardBlock());
 	public static final RegistryObject<Block> CURSED_TOOL_TABLE = REGISTRY.register("cursed_tool_table", () -> new CursedToolTableBlock());
 	public static final RegistryObject<Block> PRISON_REALM = REGISTRY.register("prison_realm", () -> new PrisonRealmBlock());
+	public static final RegistryObject<Block> DOMAIN_BLOCK_ONE = REGISTRY.register("domain_block_one", () -> new DomainBlockOneBlock());
+	public static final RegistryObject<Block> DOMAIN_BLOCK_TWO = REGISTRY.register("domain_block_two", () -> new DomainBlockTwoBlock());
 }

@@ -56,7 +56,7 @@
         "data": {
           "name": "label_string_world_marker",
           "text": {
-            "fixedValue": "String, Marker"
+            "fixedValue": "Marker"
           },
           "color": {
             "value": -12829636,

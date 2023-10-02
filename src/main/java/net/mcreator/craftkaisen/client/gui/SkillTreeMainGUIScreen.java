@@ -69,7 +69,7 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-		if (mouseX > leftPos + -59 && mouseX < leftPos + -35 && mouseY > topPos + -59 && mouseY < topPos + -35)
+		if (mouseX > leftPos + -59 && mouseX < leftPos + -35 && mouseY > topPos + -60 && mouseY < topPos + -36)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health"), mouseX, mouseY);
 		if (mouseX > leftPos + -97 && mouseX < leftPos + -73 && mouseY > topPos + -59 && mouseY < topPos + -35)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health1"), mouseX, mouseY);
@@ -119,27 +119,27 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2"), mouseX, mouseY);
 		if (mouseX > leftPos + 57 && mouseX < leftPos + 81 && mouseY > topPos + 13 && mouseY < topPos + 37)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_ssfflashstep_3_sp_grade_3"), mouseX, mouseY);
-		if (mouseX > leftPos + -181 && mouseX < leftPos + -157 && mouseY > topPos + 36 && mouseY < topPos + 60)
+		if (mouseX > leftPos + -182 && mouseX < leftPos + -158 && mouseY > topPos + 36 && mouseY < topPos + 60)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_i_increases_at"), mouseX, mouseY);
 		if (mouseX > leftPos + -158 && mouseX < leftPos + -134 && mouseY > topPos + 14 && mouseY < topPos + 38)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_ii_increases_a"), mouseX, mouseY);
 		if (mouseX > leftPos + -121 && mouseX < leftPos + -97 && mouseY > topPos + 14 && mouseY < topPos + 38)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases"), mouseX, mouseY);
-		if (mouseX > leftPos + -38 && mouseX < leftPos + -14 && mouseY > topPos + -24 && mouseY < topPos + 0)
+		if (mouseX > leftPos + -173 && mouseX < leftPos + -149 && mouseY > topPos + -60 && mouseY < topPos + -36)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc"), mouseX, mouseY);
-		if (mouseX > leftPos + -24 && mouseX < leftPos + 0 && mouseY > topPos + -39 && mouseY < topPos + -15)
+		if (mouseX > leftPos + -59 && mouseX < leftPos + -35 && mouseY > topPos + -60 && mouseY < topPos + -36)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br"), mouseX, mouseY);
-		if (mouseX > leftPos + -24 && mouseX < leftPos + 0 && mouseY > topPos + 16 && mouseY < topPos + 40)
+		if (mouseX > leftPos + -182 && mouseX < leftPos + -158 && mouseY > topPos + 36 && mouseY < topPos + 60)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc1"), mouseX, mouseY);
-		if (mouseX > leftPos + -38 && mouseX < leftPos + -14 && mouseY > topPos + 0 && mouseY < topPos + 24)
+		if (mouseX > leftPos + -59 && mouseX < leftPos + -35 && mouseY > topPos + 35 && mouseY < topPos + 59)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran"), mouseX, mouseY);
-		if (mouseX > leftPos + 0 && mouseX < leftPos + 24 && mouseY > topPos + 16 && mouseY < topPos + 40)
+		if (mouseX > leftPos + 35 && mouseX < leftPos + 59 && mouseY > topPos + 36 && mouseY < topPos + 60)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br"), mouseX, mouseY);
-		if (mouseX > leftPos + 16 && mouseX < leftPos + 40 && mouseY > topPos + -24 && mouseY < topPos + 0)
+		if (mouseX > leftPos + 35 && mouseX < leftPos + 59 && mouseY > topPos + -60 && mouseY < topPos + -36)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1"), mouseX, mouseY);
-		if (mouseX > leftPos + 16 && mouseX < leftPos + 40 && mouseY > topPos + 0 && mouseY < topPos + 24)
+		if (mouseX > leftPos + 57 && mouseX < leftPos + 81 && mouseY > topPos + 13 && mouseY < topPos + 37)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2"), mouseX, mouseY);
-		if (mouseX > leftPos + 0 && mouseX < leftPos + 24 && mouseY > topPos + -39 && mouseY < topPos + -15)
+		if (mouseX > leftPos + 112 && mouseX < leftPos + 136 && mouseY > topPos + -104 && mouseY < topPos + -80)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3"), mouseX, mouseY);
 	}
 

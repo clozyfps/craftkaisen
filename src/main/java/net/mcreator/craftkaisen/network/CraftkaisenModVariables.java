@@ -175,6 +175,9 @@ public class CraftkaisenModVariables {
 			clone.Move4Reverse = original.Move4Reverse;
 			clone.Move5Reverse = original.Move5Reverse;
 			clone.Move6Reverse = original.Move6Reverse;
+			clone.DomainFirstBlock = original.DomainFirstBlock;
+			clone.DomainSecondaryBlock = original.DomainSecondaryBlock;
+			clone.DomainVariation = original.DomainVariation;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -461,6 +464,9 @@ public class CraftkaisenModVariables {
 		public boolean Move4Reverse = false;
 		public boolean Move5Reverse = false;
 		public boolean Move6Reverse = false;
+		public ItemStack DomainFirstBlock = ItemStack.EMPTY;
+		public ItemStack DomainSecondaryBlock = ItemStack.EMPTY;
+		public String DomainVariation = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -579,6 +585,9 @@ public class CraftkaisenModVariables {
 			nbt.putBoolean("Move4Reverse", Move4Reverse);
 			nbt.putBoolean("Move5Reverse", Move5Reverse);
 			nbt.putBoolean("Move6Reverse", Move6Reverse);
+			nbt.put("DomainFirstBlock", DomainFirstBlock.save(new CompoundTag()));
+			nbt.put("DomainSecondaryBlock", DomainSecondaryBlock.save(new CompoundTag()));
+			nbt.putString("DomainVariation", DomainVariation);
 			return nbt;
 		}
 
@@ -694,6 +703,9 @@ public class CraftkaisenModVariables {
 			Move4Reverse = nbt.getBoolean("Move4Reverse");
 			Move5Reverse = nbt.getBoolean("Move5Reverse");
 			Move6Reverse = nbt.getBoolean("Move6Reverse");
+			DomainFirstBlock = ItemStack.of(nbt.getCompound("DomainFirstBlock"));
+			DomainSecondaryBlock = ItemStack.of(nbt.getCompound("DomainSecondaryBlock"));
+			DomainVariation = nbt.getString("DomainVariation");
 		}
 	}
 
@@ -828,6 +840,9 @@ public class CraftkaisenModVariables {
 					variables.Move4Reverse = message.data.Move4Reverse;
 					variables.Move5Reverse = message.data.Move5Reverse;
 					variables.Move6Reverse = message.data.Move6Reverse;
+					variables.DomainFirstBlock = message.data.DomainFirstBlock;
+					variables.DomainSecondaryBlock = message.data.DomainSecondaryBlock;
+					variables.DomainVariation = message.data.DomainVariation;
 				}
 			});
 			context.setPacketHandled(true);

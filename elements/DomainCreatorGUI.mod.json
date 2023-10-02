@@ -1,0 +1,140 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 260,
+    "height": 166,
+    "inventoryOffsetX": -42,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 150,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_primary_block",
+          "text": {
+            "fixedValue": "Block 1 :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_secondary_block",
+          "text": {
+            "fixedValue": "Block 2 :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 150,
+          "y": 71
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Domain Name..",
+          "name": "DomainName",
+          "width": 120,
+          "height": 20,
+          "x": 90,
+          "y": 94
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_create",
+          "text": "Create",
+          "onClick": {
+            "name": "DomainCreatePressed"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 267,
+          "y": 143
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "SureHitEffect",
+          "text": "Sure Hit Effect",
+          "x": 222,
+          "y": 42
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "RepeatedAttack",
+          "text": "Repeated Attack",
+          "x": 222,
+          "y": 69
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "SelfEffect",
+          "text": "Self Effect",
+          "x": 222,
+          "y": 96
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

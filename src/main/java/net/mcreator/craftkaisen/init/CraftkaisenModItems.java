@@ -139,6 +139,8 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> BAGGED_HEAD_CURSE_USER_SPAWN_EGG = REGISTRY.register("bagged_head_curse_user_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.BAGGED_HEAD_CURSE_USER, -1, -1454728, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> BOLT_PROJECTILE = REGISTRY.register("bolt_projectile", () -> new BoltProjectileItem());
+	public static final RegistryObject<Item> DOMAIN_BLOCK_ONE = block(CraftkaisenModBlocks.DOMAIN_BLOCK_ONE, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> DOMAIN_BLOCK_TWO = block(CraftkaisenModBlocks.DOMAIN_BLOCK_TWO, CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

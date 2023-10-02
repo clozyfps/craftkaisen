@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "craftkaisen:block/domain_block_one"
+    }
+  }
+}
