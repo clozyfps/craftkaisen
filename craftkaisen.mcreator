@@ -9996,35 +9996,6 @@
       "path": "~/GUI"
     },
     {
-      "name": "Chant",
-      "type": "keybind",
-      "sortid": 464,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chant",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/ChantMessage.java"
-        ]
-      },
-      "path": "~/Keybinds"
-    },
-    {
-      "name": "BeginChant",
-      "type": "procedure",
-      "sortid": 465,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "begin_chant",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BeginChantProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Keybinds/Procedures"
-    },
-    {
       "name": "SemiGrade1",
       "type": "achievement",
       "sortid": 476,
@@ -11924,6 +11895,151 @@
         ]
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "BoltAttack",
+      "type": "procedure",
+      "sortid": 543,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bolt_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BoltAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/CustomAbilities"
+    },
+    {
+      "name": "DomainCreatorGUI",
+      "type": "gui",
+      "sortid": 544,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_creator_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/DomainCreatorGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/DomainCreatorGUIMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/network/DomainCreatorGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "DomainCreatePressed",
+      "type": "procedure",
+      "sortid": 545,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_create_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DomainCreatePressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "DomainBlockOne",
+      "type": "block",
+      "sortid": 546,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_block_one",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/block/DomainBlockOneBlock.java",
+          "src/main/resources/assets/craftkaisen/models/item/domain_block_one.json",
+          "src/main/resources/assets/craftkaisen/blockstates/domain_block_one.json",
+          "src/main/resources/assets/craftkaisen/models/block/domain_block_one.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "DomainBlockTwo",
+      "type": "block",
+      "sortid": 547,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_block_two",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/block/domain_block_two.json",
+          "src/main/java/net/mcreator/craftkaisen/block/DomainBlockTwoBlock.java",
+          "src/main/resources/assets/craftkaisen/models/item/domain_block_two.json",
+          "src/main/resources/assets/craftkaisen/blockstates/domain_block_two.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "DomainTriggered",
+      "type": "procedure",
+      "sortid": 548,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_triggered",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DomainTriggeredProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities/CustomAbilities"
+    },
+    {
+      "name": "Placedwadw",
+      "type": "procedure",
+      "sortid": 549,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "placedwadw",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlacedwadwProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -12598,6 +12714,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "DomainFirstBlock",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "DomainSecondaryBlock",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "DomainVariation",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -12654,6 +12788,7 @@
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
+      "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
@@ -12687,6 +12822,8 @@
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
+      "gui.craftkaisen.domain_creator_gui.label_primary_block": "Block 1 :",
+      "gui.craftkaisen.domain_creator_gui.button_create": "Create",
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
@@ -12723,7 +12860,7 @@
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_hud.label_x1": "X",
-      "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
+      "effect.craftkaisen.rct_healing": "Reverse Cursed Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
       "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
       "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
@@ -12741,6 +12878,7 @@
       "effect.craftkaisen.move_special_cooldown": "Special Cooldown",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
       "item.craftkaisen.test_2": "Test 2",
+      "block.craftkaisen.domain_block_one": "Veil Main Block",
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "entity.craftkaisen.magma_rock": "Magma Rock",
       "gui.craftkaisen.sword_creator.label_diamond_blocks": "Diamond Blocks",
@@ -12751,7 +12889,7 @@
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
       "item.craftkaisen.mechamaru_armor_chestplate": "Mechamaru",
-      "gui.craftkaisen.bases_gui.label_spaitial_transfiguration_corru": "Spaitial, Transfiguration, Corruption, Flame, Plant, Swap, Jackpot,",
+      "gui.craftkaisen.bases_gui.label_spaitial_transfiguration_corru": "Spatial, Transfiguration, Corruption, Flame, Plant, Swap, Jackpot,",
       "item.craftkaisen.mahoraga_wheel_helmet": "Mahoraga Wheel",
       "gui.craftkaisen.main_menu.label_exp1": "Exp:",
       "effect.craftkaisen.ember_floor": "FloorEmber",
@@ -12769,6 +12907,7 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases": "Attack Knockback III - Increases Attack Knockback.§9 3 SP \u0026 GRADE 2",
       "gui.craftkaisen.bases_gui.ChoiceBox": "Choice..",
       "gui.craftkaisen.sword_creator.DaggerBox": "Dagger",
+      "block.craftkaisen.domain_block_two": "Veil Main Block",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_i_increases_speedss9_1": "Agility I - Increases speed.§9 1 SP \u0026 GRADE 4",
       "item.craftkaisen.tes": "Tes",
       "effect.craftkaisen.ember_control": "InsectControl",
@@ -12780,6 +12919,7 @@
       "effect.craftkaisen.repeated_slicing": "Rs",
       "gui.craftkaisen.sword_creator.button_empty1": "-",
       "gui.craftkaisen.main_hud.label_empty": "---------------------",
+      "gui.craftkaisen.domain_creator_gui.SelfEffect": "Self Effect",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_ii_increases_cursed_energy": "CE II - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
       "effect.craftkaisen.move_3_cooldown": "Move Three Cooldown",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
@@ -12796,6 +12936,7 @@
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
       "item.craftkaisen.talisman": "Talisman",
       "gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for": "I\u0027ll assassinate somebody for",
+      "key.craftkaisen.reverse_cursed_technique_bind": "Reverse Cursed Technique",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "gui.craftkaisen.sword_creator.GreatswordBox": "Greatsword",
@@ -12803,6 +12944,7 @@
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
+      "entity.craftkaisen.reversal_red_entity": "Reversal Red Entity",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "itemGroup.tabjjkmobs": "JJK Mobs",
@@ -12813,6 +12955,7 @@
       "item.craftkaisen.prison_realm_sealed": "Prison Realm Sealed",
       "advancements.semi_grade_1.title": "Semi Grade 1",
       "key.craftkaisen.leave_mech": "Leave Mech",
+      "entity.craftkaisen.prison_realm_mob": "Prison Realm",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat": "I cant assure you that ill beat them.",
@@ -12839,6 +12982,7 @@
       "item.craftkaisen.hiar_helmet": "Hiar Helmet",
       "gui.craftkaisen.bases_gui.button_spatial": "Spatial",
       "gui.craftkaisen.bases_gui.button_speech": "Speech",
+      "gui.craftkaisen.domain_creator_gui.RepeatedAttack": "Repeated Attack",
       "gui.craftkaisen.bases_gui.button_flame": "Flame",
       "gui.craftkaisen.main_hud.label_x": "X",
       "gui.craftkaisen.bases_gui.button_back": "\u003c - Back",
@@ -12861,6 +13005,7 @@
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
+      "item.craftkaisen.bolt_projectile": "Bolt Projectile",
       "entity.craftkaisen.sukuna": "Sukuna",
       "key.craftkaisen.block_bind": "Block",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
@@ -12926,7 +13071,6 @@
       "item.craftkaisen.geto_armor_leggings": "Geto Pants",
       "effect.craftkaisen.move_4_cooldown": "Move Four Cooldown",
       "gui.craftkaisen.binding_vow_gui.label_dont_pick_up_specific_item": "Dont Pick Up Specific Item",
-      "key.craftkaisen.chant": "Chant",
       "item.craftkaisen.get_crushed": "Get Crushed",
       "gui.craftkaisen.sword_creator.label_diamonds": "Diamonds",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten1": "Resistance II - Upgrades resistance.§9 2 SP \u0026 GRADE 3",
@@ -12947,10 +13091,13 @@
       "gui.craftkaisen.technique_creator_gui.OrbBox": "Orb",
       "gui.craftkaisen.technique_creator_gui.PulseBox": "Pulse",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
+      "gui.craftkaisen.prison_realm_gui.button_finish": "Finish",
+      "gui.craftkaisen.domain_creator_gui.DomainName": "Domain Name..",
       "entity.craftkaisen.mahito": "Special Grade Cursed Spirit: Mahito",
       "gui.craftkaisen.technique_creator_gui.button_create": "Create",
       "gui.craftkaisen.design_gui.button_confirm": "Confirm",
       "advancements.semi_grade_2.descr": "Become a Semi Grade 2 Sorcerer",
+      "gui.craftkaisen.prison_realm_gui.TargetPlayer": "Target",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",
@@ -12964,12 +13111,13 @@
       "gui.craftkaisen.main_hud.label_move_two": "Move Two",
       "key.craftkaisen.switch_moveset": "Switch Moveset",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_i_increases_cursed_energy_c": "CE I - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
+      "gui.craftkaisen.domain_creator_gui.label_secondary_block": "Block 2 :",
       "gui.craftkaisen.main_hud.label_quests": "Quests",
       "item.craftkaisen.disaster_flame": "Disaster Flame",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ss4black_flash_5_sp_4_random": "§4Black Flash - 5 SP \u0026 4 RANDOM USES",
       "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
       "item.craftkaisen.flowerfields": "Flowerfields",
-      "gui.craftkaisen.bases_gui.label_string_world_marker": "String, Marker",
+      "gui.craftkaisen.bases_gui.label_string_world_marker": "Marker",
       "entity.craftkaisen.empty_mechamaru": "Empty Mechamaru",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",

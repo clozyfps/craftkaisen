@@ -1,6 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-public class BeginChantProcedure {
+public class DomainTriggeredProcedure {
 	public static void execute() {
 	}
 }

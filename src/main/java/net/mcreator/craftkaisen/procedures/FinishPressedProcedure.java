@@ -14,7 +14,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.gui.components.EditBox;
 
-import net.mcreator.craftkaisen.world.inventory.TechniqueCreatorGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.DomainCreatorGUIMenu;
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 import java.util.HashMap;
@@ -85,12 +85,12 @@ public class FinishPressedProcedure {
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return Component.literal("TechniqueCreatorGUI");
+							return Component.literal("DomainCreatorGUI");
 						}
 
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new TechniqueCreatorGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new DomainCreatorGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

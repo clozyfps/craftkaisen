@@ -1,8 +1,29 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.ServerChatEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 
 import javax.annotation.Nullable;
+
+import java.util.Comparator;
+import java.util.ArrayList;
 
 @Mod.EventBusSubscriber
 public class PrisonRealmCommandsProcedure {
@@ -24,7 +45,7 @@ public class PrisonRealmCommandsProcedure {
 				if (entityiterator.getPersistentData().getBoolean("targeted")) {
 					world.setBlock(new BlockPos(entityiterator.getPersistentData().getDouble("prX"), entityiterator.getPersistentData().getDouble("prY"), entityiterator.getPersistentData().getDouble("prZ")), Blocks.AIR.defaultBlockState(), 3);
 					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new PrisonRealmMobEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), _level);
+						Entity entityToSpawn = new PrisonRealmMobEntity(CraftkaisenModEntities.PRISON_REALM_MOB.get(), _level);
 						entityToSpawn.moveTo((entityiterator.getPersistentData().getDouble("prX")), (entityiterator.getPersistentData().getDouble("prY")), (entityiterator.getPersistentData().getDouble("prZ")), 0, 0);
 						entityToSpawn.setYBodyRot(0);
 						entityToSpawn.setYHeadRot(0);
