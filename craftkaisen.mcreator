@@ -11590,7 +11590,7 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
@@ -11962,6 +11962,46 @@
         ]
       },
       "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "EntityEvading",
+      "type": "procedure",
+      "sortid": 543,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_evading",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntityEvadingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
@@ -12726,6 +12766,7 @@
       "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
       "item.craftkaisen.stop": "Stop",
+      "effect.craftkaisen.punch_barrage_potion": "Punch Barrage",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "gui.craftkaisen.bases_gui.button_confirm": "Confirm",
@@ -12761,7 +12802,7 @@
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_hud.label_x1": "X",
-      "effect.craftkaisen.rct_healing": "Reverse Cursed Technique Healing",
+      "effect.craftkaisen.rct_healing": "Reverse Cursed Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
       "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
       "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
@@ -12834,6 +12875,7 @@
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
       "item.craftkaisen.talisman": "Talisman",
       "gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for": "I\u0027ll assassinate somebody for",
+      "key.craftkaisen.reverse_cursed_technique_bind": "Reverse Cursed Technique",
       "entity.craftkaisen.finger_bearer": "Finger Bearer",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "gui.craftkaisen.sword_creator.GreatswordBox": "Greatsword",
@@ -12841,6 +12883,7 @@
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
+      "entity.craftkaisen.reversal_red_entity": "Reversal Red Entity",
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "itemGroup.tabjjkmobs": "JJK Mobs",
@@ -12851,6 +12894,7 @@
       "item.craftkaisen.prison_realm_sealed": "Prison Realm Sealed",
       "advancements.semi_grade_1.title": "Semi Grade 1",
       "key.craftkaisen.leave_mech": "Leave Mech",
+      "entity.craftkaisen.prison_realm_mob": "Prison Realm",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat": "I cant assure you that ill beat them.",
@@ -12899,6 +12943,7 @@
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
+      "item.craftkaisen.bolt_projectile": "Bolt Projectile",
       "entity.craftkaisen.sukuna": "Sukuna",
       "key.craftkaisen.block_bind": "Block",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
@@ -12985,10 +13030,12 @@
       "gui.craftkaisen.technique_creator_gui.OrbBox": "Orb",
       "gui.craftkaisen.technique_creator_gui.PulseBox": "Pulse",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
+      "gui.craftkaisen.prison_realm_gui.button_finish": "Finish",
       "entity.craftkaisen.mahito": "Special Grade Cursed Spirit: Mahito",
       "gui.craftkaisen.technique_creator_gui.button_create": "Create",
       "gui.craftkaisen.design_gui.button_confirm": "Confirm",
       "advancements.semi_grade_2.descr": "Become a Semi Grade 2 Sorcerer",
+      "gui.craftkaisen.prison_realm_gui.TargetPlayer": "Target",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "itemGroup.tabjjkweapons": "JJK Weapons",

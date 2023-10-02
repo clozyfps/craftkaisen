@@ -1,8 +1,13 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class PunchBarragePotionMobEffect extends MobEffect {
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.craftkaisen.procedures.PunchBarragePotionOnEffectActiveTickProcedure;
+
+public class PunchBarragePotionMobEffect extends MobEffect {
 	public PunchBarragePotionMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -21,5 +26,4 @@ public class PunchBarragePotionMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

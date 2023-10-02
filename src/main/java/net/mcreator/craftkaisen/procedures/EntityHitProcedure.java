@@ -87,9 +87,10 @@ public class EntityHitProcedure {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftkaisenModItems.INVERTED_SPEAROF_HEAVEN.get()) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(CraftkaisenModMobEffects.INFINITY.get());
-			}
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
+			} else {
+				if (event != null && event.isCancelable()) {
+					event.setCanceled(true);
+				}
 			}
 		}
 	}
