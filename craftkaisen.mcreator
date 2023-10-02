@@ -11897,26 +11897,6 @@
       "path": "~/Abilities"
     },
     {
-      "name": "BoltAttack",
-      "type": "procedure",
-      "sortid": 543,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bolt_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BoltAttackProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Abilities/CustomAbilities"
-    },
-    {
       "name": "DomainCreatorGUI",
       "type": "gui",
       "sortid": 544,
@@ -11931,30 +11911,6 @@
         ]
       },
       "path": "~/GUI"
-    },
-    {
-      "name": "DomainCreatePressed",
-      "type": "procedure",
-      "sortid": 545,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "domain_create_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DomainCreatePressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
     },
     {
       "name": "DomainBlockOne",
@@ -11972,38 +11928,6 @@
         ]
       },
       "path": "~/Blocks"
-    },
-    {
-      "name": "DomainBlockTwo",
-      "type": "block",
-      "sortid": 547,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "domain_block_two",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/craftkaisen/models/block/domain_block_two.json",
-          "src/main/java/net/mcreator/craftkaisen/block/DomainBlockTwoBlock.java",
-          "src/main/resources/assets/craftkaisen/models/item/domain_block_two.json",
-          "src/main/resources/assets/craftkaisen/blockstates/domain_block_two.json"
-        ]
-      },
-      "path": "~/Blocks"
-    },
-    {
-      "name": "DomainTriggered",
-      "type": "procedure",
-      "sortid": 548,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "domain_triggered",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/DomainTriggeredProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Abilities/CustomAbilities"
     },
     {
       "name": "Placedwadw",
@@ -12040,6 +11964,120 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "DomainCreatePressed",
+      "type": "procedure",
+      "sortid": 545,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_create_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DomainCreatePressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "DomainBlockTwo",
+      "type": "block",
+      "sortid": 547,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_block_two",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/block/domain_block_two.json",
+          "src/main/java/net/mcreator/craftkaisen/block/DomainBlockTwoBlock.java",
+          "src/main/resources/assets/craftkaisen/models/item/domain_block_two.json",
+          "src/main/resources/assets/craftkaisen/blockstates/domain_block_two.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "BoltAttack",
+      "type": "procedure",
+      "sortid": 543,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bolt_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BoltAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/CustomAbilities"
+    },
+    {
+      "name": "DomainTriggered",
+      "type": "procedure",
+      "sortid": 548,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_triggered",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DomainTriggeredProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Abilities/CustomAbilities"
+    },
+    {
+      "name": "PunchBarragePotionOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 538,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PunchBarragePotionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "PunchBarragePotion",
+      "type": "potioneffect",
+      "sortid": 539,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "punch_barrage_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/PunchBarragePotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
     }
   ],
   "variable_elements": [

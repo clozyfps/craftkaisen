@@ -1,10 +1,10 @@
 {
   "item.craftkaisen.toji_armor_leggings": "Toji Pants",
   "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
-  "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
   "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
-  "gui.craftkaisen.sword_creator.label_materials": "Materials",
+  "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
   "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+  "gui.craftkaisen.sword_creator.label_materials": "Materials",
   "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
   "gui.craftkaisen.sword_creator.button_create": "Create",
   "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
