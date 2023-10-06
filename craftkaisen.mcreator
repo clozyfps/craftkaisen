@@ -11561,7 +11561,7 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
+            "name": "immediatesourceentity",
             "type": "entity"
           },
           {
@@ -11935,46 +11935,6 @@
       "path": "~/Keybinds/Procedures"
     },
     {
-      "name": "EntityEvading",
-      "type": "procedure",
-      "sortid": 543,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "entity_evading",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/EntityEvadingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "DomainCreatorGUI",
       "type": "gui",
       "sortid": 544,
@@ -12118,6 +12078,109 @@
         "dependencies": []
       },
       "path": "~/Abilities/CustomAbilities"
+    },
+    {
+      "name": "Flowers",
+      "type": "tag",
+      "sortid": 550,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowers",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/blocks/flowers.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "AbilityChangerRightclicked",
+      "type": "procedure",
+      "sortid": 551,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_changer_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/AbilityChangerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "AbilityChanger",
+      "type": "item",
+      "sortid": 552,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_changer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/ability_changer.json",
+          "src/main/java/net/mcreator/craftkaisen/item/AbilityChangerItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "Resetcursedtechnique",
+      "type": "procedure",
+      "sortid": 553,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resetcursedtechnique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ResetcursedtechniqueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "ResetCursedTechnique",
+      "type": "command",
+      "sortid": 554,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_cursed_technique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/ResetCursedTechniqueCommand.java"
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -12866,10 +12929,10 @@
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
-      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
-      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -12903,6 +12966,7 @@
       "gui.craftkaisen.domain_creator_gui.label_primary_block": "Block 1 :",
       "gui.craftkaisen.domain_creator_gui.button_create": "Create",
       "item.craftkaisen.stop": "Stop",
+      "effect.craftkaisen.punch_barrage_potion": "Punch Barrage",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "gui.craftkaisen.bases_gui.button_confirm": "Confirm",
@@ -13198,6 +13262,7 @@
       "gui.craftkaisen.bases_gui.label_string_world_marker": "Marker",
       "entity.craftkaisen.empty_mechamaru": "Empty Mechamaru",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
+      "item.craftkaisen.ability_changer": "Ability Changer",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
       "gui.craftkaisen.bases_gui.button_corruption": "Corruption",

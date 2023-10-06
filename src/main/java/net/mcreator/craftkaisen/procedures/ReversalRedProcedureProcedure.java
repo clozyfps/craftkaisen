@@ -21,7 +21,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.stream.Collectors;
@@ -32,8 +31,6 @@ public class ReversalRedProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.REVERSAL_RED_FINAL.get(), 40, 1, false, true));
 		CraftkaisenMod.queueServerWork(40, () -> {
 			entity.getPersistentData().putBoolean("aoefirst", true);
 			CraftkaisenMod.queueServerWork(20, () -> {
