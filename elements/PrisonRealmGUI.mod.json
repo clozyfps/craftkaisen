@@ -26,6 +26,9 @@
         "data": {
           "name": "button_finish",
           "text": "Finish",
+          "onClick": {
+            "name": "PrisonRealmFinish"
+          },
           "width": 56,
           "height": 20,
           "x": 185,

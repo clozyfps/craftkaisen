@@ -13,11 +13,11 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.PrisonRealmGUIMenu;
 
 import io.netty.buffer.Unpooled;
 
-public class VowMainProcedureProcedure {
+public class OpenPRGUIProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -27,12 +27,12 @@ public class VowMainProcedureProcedure {
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 					@Override
 					public Component getDisplayName() {
-						return Component.literal("BindingVowGUI");
+						return Component.literal("PrisonRealmGUI");
 					}
 
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-						return new BindingVowGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						return new PrisonRealmGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

@@ -11,39 +11,39 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.craftkaisen.world.inventory.DomainCreatorGUIMenu;
-import net.mcreator.craftkaisen.procedures.DomainCreatePressedProcedure;
+import net.mcreator.craftkaisen.world.inventory.PrisonRealmGUIMenu;
+import net.mcreator.craftkaisen.procedures.PrisonRealmFinishProcedure;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class DomainCreatorGUIButtonMessage {
+public class PrisonRealmGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public DomainCreatorGUIButtonMessage(FriendlyByteBuf buffer) {
+	public PrisonRealmGUIButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public DomainCreatorGUIButtonMessage(int buttonID, int x, int y, int z) {
+	public PrisonRealmGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(DomainCreatorGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(PrisonRealmGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(DomainCreatorGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(PrisonRealmGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -58,18 +58,18 @@ public class DomainCreatorGUIButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
-		HashMap guistate = DomainCreatorGUIMenu.guistate;
+		HashMap guistate = PrisonRealmGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			DomainCreatePressedProcedure.execute(entity, guistate);
+			PrisonRealmFinishProcedure.execute(world, entity, guistate);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		CraftkaisenMod.addNetworkMessage(DomainCreatorGUIButtonMessage.class, DomainCreatorGUIButtonMessage::buffer, DomainCreatorGUIButtonMessage::new, DomainCreatorGUIButtonMessage::handler);
+		CraftkaisenMod.addNetworkMessage(PrisonRealmGUIButtonMessage.class, PrisonRealmGUIButtonMessage::buffer, PrisonRealmGUIButtonMessage::new, PrisonRealmGUIButtonMessage::handler);
 	}
 }

@@ -11,6 +11,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.PrisonRealmGUIMenu;
+import net.mcreator.craftkaisen.network.PrisonRealmGUIButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 import java.util.HashMap;
 
@@ -114,6 +116,10 @@ public class PrisonRealmGUIScreen extends AbstractContainerScreen<PrisonRealmGUI
 		guistate.put("text:TargetPlayer", TargetPlayer);
 		this.addWidget(this.TargetPlayer);
 		button_finish = new Button(this.leftPos + 35, this.topPos + 28, 56, 20, Component.translatable("gui.craftkaisen.prison_realm_gui.button_finish"), e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new PrisonRealmGUIButtonMessage(0, x, y, z));
+				PrisonRealmGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
 		guistate.put("button:button_finish", button_finish);
 		this.addRenderableWidget(button_finish);

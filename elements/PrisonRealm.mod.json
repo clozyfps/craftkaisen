@@ -119,8 +119,11 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "PrisonRealmPlaced"
+    "onRightClicked": {
+      "name": "OpenPRGUI"
+    },
+    "onBlockAdded": {
+      "name": "AddXYZCoords"
     },
     "onBlockPlayedBy": {
       "name": "AddTagOwner"

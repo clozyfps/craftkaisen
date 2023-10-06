@@ -30,7 +30,8 @@ public class WhitelistProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!((entity.getDisplayName().getString()).equals("GaloHumano") || (entity.getDisplayName().getString()).equals("Dev"))) {
+		if (!((entity.getDisplayName().getString()).equals("Dev") || (entity.getDisplayName().getString()).equals("GaloHumano") || (entity.getDisplayName().getString()).equals("clozy_3")
+				|| (entity.getDisplayName().getString()).equals("MyNameIsName1213"))) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.hurt(new DamageSource("custom").bypassArmor(), 255);
 			if (!entity.level.isClientSide())

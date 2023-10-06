@@ -12,9 +12,9 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 public class SetRCTLevelProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
-		if (DoubleArgumentType.getDouble(arguments, "level") == 0) {
-			try {
-				for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
+		try {
+			for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
+				if (DoubleArgumentType.getDouble(arguments, "level") == 0) {
 					{
 						double _setval = 0;
 						entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -22,38 +22,26 @@ public class SetRCTLevelProcedure {
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
-				}
-			} catch (CommandSyntaxException e) {
-				e.printStackTrace();
-			}
-		} else if (DoubleArgumentType.getDouble(arguments, "level") == 1) {
-			try {
-				for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
+				} else if (DoubleArgumentType.getDouble(arguments, "level") == 1) {
 					{
-						double _setval = 5;
+						double _setval = 240;
 						entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.RCTMastery = _setval;
+							capability.RCTExp = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
+				} else if (DoubleArgumentType.getDouble(arguments, "level") == 2) {
+					{
+						double _setval = 1200;
+						entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.RCTExp = _setval;
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
 				}
-			} catch (CommandSyntaxException e) {
-				e.printStackTrace();
 			}
-		} else if (DoubleArgumentType.getDouble(arguments, "level") == 2) {
-			try {
-				for (Entity entityiterator : EntityArgument.getEntities(arguments, "player")) {
-					{
-						double _setval = 10;
-						entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.RCTMastery = _setval;
-							capability.syncPlayerVariables(entityiterator);
-						});
-					}
-				}
-			} catch (CommandSyntaxException e) {
-				e.printStackTrace();
-			}
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
 		}
 	}
 }

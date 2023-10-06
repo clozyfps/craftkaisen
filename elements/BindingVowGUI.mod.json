@@ -3,10 +3,10 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 300,
-    "height": 226,
-    "inventoryOffsetX": 0,
-    "inventoryOffsetY": -29,
+    "width": 512,
+    "height": 512,
+    "inventoryOffsetX": -117,
+    "inventoryOffsetY": -10,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -14,9 +14,9 @@
         "type": "checkbox",
         "data": {
           "name": "KillVow",
-          "text": "",
-          "x": 74,
-          "y": 19
+          "text": "Don't Kill Specific Player",
+          "x": 15,
+          "y": 5
         }
       },
       {
@@ -26,23 +26,8 @@
           "name": "PlayerNameKill",
           "width": 120,
           "height": 20,
-          "x": 84,
-          "y": 179
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_dont_kill_player",
-          "text": {
-            "fixedValue": "Dont Kill Specific Player"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 102,
-          "y": 24
+          "x": 15,
+          "y": 83
         }
       },
       {
@@ -50,34 +35,22 @@
         "data": {
           "name": "button_submit",
           "text": "Submit",
+          "onClick": {
+            "name": "BindingVowSubmit"
+          },
           "width": 56,
           "height": 20,
-          "x": 186,
-          "y": 205
+          "x": 152,
+          "y": 70
         }
       },
       {
         "type": "checkbox",
         "data": {
           "name": "ItemVow",
-          "text": "",
-          "x": 74,
-          "y": 59
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_dont_pick_up_specific_item",
-          "text": {
-            "fixedValue": "Dont Pick Up Specific Item"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 102,
-          "y": 63
+          "text": "Don't Pick Up Item Type",
+          "x": 15,
+          "y": 34
         }
       },
       {
@@ -94,23 +67,72 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 294,
-          "y": 179
+          "x": 164,
+          "y": 35
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Vow Recipient..",
+          "name": "Player",
+          "width": 120,
+          "height": 20,
+          "x": 15,
+          "y": 58
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_item",
+          "name": "label_offers",
           "text": {
-            "fixedValue": "Item ->"
+            "fixedValue": "Offers"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 253,
-          "y": 183
+          "x": 326,
+          "y": 4
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "GiveItem",
+          "text": "Give Item",
+          "x": 257,
+          "y": 14
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 386,
+          "y": 15
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_self_vow",
+          "text": "Self Vow",
+          "width": 66,
+          "height": 20,
+          "x": 14,
+          "y": 201
         }
       }
     ],

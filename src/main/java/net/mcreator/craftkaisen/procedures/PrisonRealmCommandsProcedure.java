@@ -6,13 +6,15 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.ServerChatEvent;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -22,8 +24,9 @@ import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 
 import javax.annotation.Nullable;
 
+import java.util.stream.Collectors;
+import java.util.List;
 import java.util.Comparator;
-import java.util.ArrayList;
 
 @Mod.EventBusSubscriber
 public class PrisonRealmCommandsProcedure {
@@ -40,40 +43,45 @@ public class PrisonRealmCommandsProcedure {
 		if (entity == null || text == null)
 			return;
 		Entity entityPr = null;
-		if ((text).equals("Gate, Open")) {
-			for (Entity entityiterator : new ArrayList<>(world.players())) {
-				if (entityiterator.getPersistentData().getBoolean("targeted")) {
-					world.setBlock(new BlockPos(entityiterator.getPersistentData().getDouble("prX"), entityiterator.getPersistentData().getDouble("prY"), entityiterator.getPersistentData().getDouble("prZ")), Blocks.AIR.defaultBlockState(), 3);
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = new PrisonRealmMobEntity(CraftkaisenModEntities.PRISON_REALM_MOB.get(), _level);
-						entityToSpawn.moveTo((entityiterator.getPersistentData().getDouble("prX")), (entityiterator.getPersistentData().getDouble("prY")), (entityiterator.getPersistentData().getDouble("prZ")), 0, 0);
-						entityToSpawn.setYBodyRot(0);
-						entityToSpawn.setYHeadRot(0);
-						entityToSpawn.setDeltaMovement(0, 0, 0);
-						if (entityToSpawn instanceof Mob _mobToSpawn)
-							_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
-						world.addFreshEntity(entityToSpawn);
+		if (text.contains("Gate, Open") && entity.getPersistentData().getBoolean("prOwner") && !(new Object() {
+			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getString(tag);
+				return "";
+			}
+		}.getValue(world, new BlockPos(entity.getPersistentData().getDouble("prX"), entity.getPersistentData().getDouble("prY"), entity.getPersistentData().getDouble("prZ")), "targetedPlayer")).isEmpty()) {
+			world.destroyBlock(new BlockPos(entity.getPersistentData().getDouble("prX"), entity.getPersistentData().getDouble("prY"), entity.getPersistentData().getDouble("prZ")), false);
+			if (world instanceof ServerLevel _level) {
+				Entity entityToSpawn = new PrisonRealmMobEntity(CraftkaisenModEntities.PRISON_REALM_MOB.get(), _level);
+				entityToSpawn.moveTo((entity.getPersistentData().getDouble("prX")), (entity.getPersistentData().getDouble("prY")), (entity.getPersistentData().getDouble("prZ")), 0, 0);
+				entityToSpawn.setYBodyRot(0);
+				entityToSpawn.setYHeadRot(0);
+				entityToSpawn.setDeltaMovement(0, 0, 0);
+				if (entityToSpawn instanceof Mob _mobToSpawn)
+					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
+				world.addFreshEntity(entityToSpawn);
+			}
+		} else if (text.contains("Gate, Close") && entity.getPersistentData().getBoolean("prOwner") && !(new Object() {
+			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+				BlockEntity blockEntity = world.getBlockEntity(pos);
+				if (blockEntity != null)
+					return blockEntity.getPersistentData().getString(tag);
+				return "";
+			}
+		}.getValue(world, new BlockPos(entity.getPersistentData().getDouble("prX"), entity.getPersistentData().getDouble("prY"), entity.getPersistentData().getDouble("prZ")), "targetedPlayer")).isEmpty()) {
+			{
+				final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("prX")), (entity.getPersistentData().getDouble("prY")), (entity.getPersistentData().getDouble("prZ")));
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10000 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+						.collect(Collectors.toList());
+				for (Entity entityiterator : _entfound) {
+					if (entityiterator instanceof PrisonRealmMobEntity) {
+						if (!entityiterator.level.isClientSide())
+							entityiterator.discard();
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									"summon item ~ ~ ~ {Item:{id:\"craftkaisen:prison_realm_sealed\",Count:1b}}");
 					}
-					{
-						Entity _ent = ((Entity) world.getEntitiesOfClass(PrisonRealmMobEntity.class, AABB.ofSize(new Vec3(x, y, z), 200, 200, 200), e -> true).stream().sorted(new Object() {
-							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-								return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-							}
-						}.compareDistOf(x, y, z)).findFirst().orElse(null));
-						if (!_ent.level.isClientSide() && _ent.getServer() != null) {
-							_ent.getServer().getCommands()
-									.performPrefixedCommand(
-											new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level instanceof ServerLevel ? (ServerLevel) _ent.level : null, 4, _ent.getName().getString(),
-													_ent.getDisplayName(), _ent.level.getServer(), _ent),
-											("execute as " + ((Entity) world.getEntitiesOfClass(PrisonRealmMobEntity.class, AABB.ofSize(new Vec3(x, y, z), 200, 200, 200), e -> true).stream().sorted(new Object() {
-												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-													return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-												}
-											}.compareDistOf(x, y, z)).findFirst().orElse(null)).getStringUUID() + " at @s run tp @s ~ ~ ~ facing entity " + entityiterator.getStringUUID()));
-						}
-					}
-					entityiterator.getPersistentData().putBoolean("beginTimerPr", true);
-					entity.getPersistentData().putDouble("timerPrison", 100);
 				}
 			}
 		}

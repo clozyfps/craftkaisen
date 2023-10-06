@@ -16,8 +16,16 @@ public class RCTPressedProcedure {
 		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).RCT) {
 			if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.RCT_COOLDOWN.get()) : false)) {
 				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.RCT_HEALING.get()) : false)) {
-					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.RCT_HEALING.get(), 300, 0, true, false));
+					if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).RCTMastery == 0) {
+						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.RCT_HEALING.get(), 300, 0, true, false));
+					} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).RCTMastery == 1) {
+						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.RCT_HEALING.get(), 400, 1, true, false));
+					} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).RCTMastery == 2) {
+						if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+							_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.RCT_HEALING.get(), 500, 2, true, false));
+					}
 				} else {
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(CraftkaisenModMobEffects.RCT_HEALING.get());
