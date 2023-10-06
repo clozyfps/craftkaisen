@@ -36,7 +36,7 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 		});
 		{
 			final Vec3 _center = new Vec3(x, y, z);
-			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(35 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					if (!(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.SHRINE.get()) : false)) {
@@ -54,6 +54,6 @@ public class MalevolentShrineOnEntityTickUpdateProcedure {
 			}
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.SWEEP_ATTACK, x, y, z, 10, 10, 4, 10, 0);
+			_level.sendParticles(ParticleTypes.SWEEP_ATTACK, x, y, z, 200, 25, 4, 25, 0);
 	}
 }

@@ -30,8 +30,9 @@ import javax.annotation.Nullable;
 public class EntityHitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity());
 		}
 	}
 
@@ -86,9 +87,10 @@ public class EntityHitProcedure {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftkaisenModItems.INVERTED_SPEAROF_HEAVEN.get()) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(CraftkaisenModMobEffects.INFINITY.get());
-			}
-			if (event != null && event.isCancelable()) {
-				event.setCanceled(true);
+			} else {
+				if (event != null && event.isCancelable()) {
+					event.setCanceled(true);
+				}
 			}
 		}
 	}

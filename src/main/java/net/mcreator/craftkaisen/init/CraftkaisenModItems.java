@@ -51,6 +51,7 @@ import net.mcreator.craftkaisen.item.BoltProjectileItem;
 import net.mcreator.craftkaisen.item.BlindfoldItem;
 import net.mcreator.craftkaisen.item.BlastAwayItem;
 import net.mcreator.craftkaisen.item.BandageBlindfoldItem;
+import net.mcreator.craftkaisen.item.AbilityChangerItem;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModItems {
@@ -141,6 +142,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> BOLT_PROJECTILE = REGISTRY.register("bolt_projectile", () -> new BoltProjectileItem());
 	public static final RegistryObject<Item> DOMAIN_BLOCK_ONE = block(CraftkaisenModBlocks.DOMAIN_BLOCK_ONE, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> DOMAIN_BLOCK_TWO = block(CraftkaisenModBlocks.DOMAIN_BLOCK_TWO, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> ABILITY_CHANGER = REGISTRY.register("ability_changer", () -> new AbilityChangerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

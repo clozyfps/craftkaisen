@@ -18,6 +18,12 @@ public class ItadoriOnEntityTickUpdateProcedure {
 						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DIVERGENT_FIST.get(), 150, 1, false, false));
 				}
 			}
+			if (Math.random() < 0.008) {
+				if (!(entity instanceof LivingEntity _livEnt ? _livEnt.hasEffect(CraftkaisenModMobEffects.PUNCH_BARRAGE_POTION.get()) : false)) {
+					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.PUNCH_BARRAGE_POTION.get(), 20, 1, false, false));
+				}
+			}
 		}
 	}
 }

@@ -178,8 +178,8 @@ public class CraftkaisenModVariables {
 			clone.DomainFirstBlock = original.DomainFirstBlock;
 			clone.DomainSecondaryBlock = original.DomainSecondaryBlock;
 			clone.DomainVariation = original.DomainVariation;
-			clone.ArmorSaveHelmet = original.ArmorSaveHelmet;
 			clone.ArmorSaveChestplate = original.ArmorSaveChestplate;
+			clone.ArmorSaveHelmet = original.ArmorSaveHelmet;
 			clone.ArmorSaveLeggings = original.ArmorSaveLeggings;
 			clone.ArmorSaveBoots = original.ArmorSaveBoots;
 			if (!event.isWasDeath()) {
@@ -474,13 +474,13 @@ public class CraftkaisenModVariables {
 		public ItemStack DomainFirstBlock = ItemStack.EMPTY;
 		public ItemStack DomainSecondaryBlock = ItemStack.EMPTY;
 		public String DomainVariation = "\"\"";
-		public ItemStack ArmorSaveHelmet = ItemStack.EMPTY;
-		public ItemStack ArmorSaveChestplate = ItemStack.EMPTY;
-		public ItemStack ArmorSaveLeggings = ItemStack.EMPTY;
-		public ItemStack ArmorSaveBoots = ItemStack.EMPTY;
 		public ItemStack VowItem = ItemStack.EMPTY;
+		public ItemStack ArmorSaveChestplate = ItemStack.EMPTY;
+		public ItemStack ArmorSaveHelmet = ItemStack.EMPTY;
 		public String VowPlayer = "\"\"";
+		public ItemStack ArmorSaveLeggings = ItemStack.EMPTY;
 		public ItemStack OfferItem = ItemStack.EMPTY;
+		public ItemStack ArmorSaveBoots = ItemStack.EMPTY;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -602,13 +602,13 @@ public class CraftkaisenModVariables {
 			nbt.put("DomainFirstBlock", DomainFirstBlock.save(new CompoundTag()));
 			nbt.put("DomainSecondaryBlock", DomainSecondaryBlock.save(new CompoundTag()));
 			nbt.putString("DomainVariation", DomainVariation);
-			nbt.put("ArmorSaveHelmet", ArmorSaveHelmet.save(new CompoundTag()));
-			nbt.put("ArmorSaveChestplate", ArmorSaveChestplate.save(new CompoundTag()));
-			nbt.put("ArmorSaveLeggings", ArmorSaveLeggings.save(new CompoundTag()));
-			nbt.put("ArmorSaveBoots", ArmorSaveBoots.save(new CompoundTag()));
 			nbt.put("VowItem", VowItem.save(new CompoundTag()));
+			nbt.put("ArmorSaveChestplate", ArmorSaveChestplate.save(new CompoundTag()));
+			nbt.put("ArmorSaveHelmet", ArmorSaveHelmet.save(new CompoundTag()));
 			nbt.putString("VowPlayer", VowPlayer);
+			nbt.put("ArmorSaveLeggings", ArmorSaveLeggings.save(new CompoundTag()));
 			nbt.put("OfferItem", OfferItem.save(new CompoundTag()));
+			nbt.put("ArmorSaveBoots", ArmorSaveBoots.save(new CompoundTag()));
 			return nbt;
 		}
 
@@ -727,13 +727,13 @@ public class CraftkaisenModVariables {
 			DomainFirstBlock = ItemStack.of(nbt.getCompound("DomainFirstBlock"));
 			DomainSecondaryBlock = ItemStack.of(nbt.getCompound("DomainSecondaryBlock"));
 			DomainVariation = nbt.getString("DomainVariation");
-			ArmorSaveHelmet = ItemStack.of(nbt.getCompound("ArmorSaveHelmet"));
-			ArmorSaveChestplate = ItemStack.of(nbt.getCompound("ArmorSaveChestplate"));
-			ArmorSaveLeggings = ItemStack.of(nbt.getCompound("ArmorSaveLeggings"));
-			ArmorSaveBoots = ItemStack.of(nbt.getCompound("ArmorSaveBoots"));
 			VowItem = ItemStack.of(nbt.getCompound("VowItem"));
+			ArmorSaveChestplate = ItemStack.of(nbt.getCompound("ArmorSaveChestplate"));
+			ArmorSaveHelmet = ItemStack.of(nbt.getCompound("ArmorSaveHelmet"));
 			VowPlayer = nbt.getString("VowPlayer");
+			ArmorSaveLeggings = ItemStack.of(nbt.getCompound("ArmorSaveLeggings"));
 			OfferItem = ItemStack.of(nbt.getCompound("OfferItem"));
+			ArmorSaveBoots = ItemStack.of(nbt.getCompound("ArmorSaveBoots"));
 		}
 	}
 
@@ -871,13 +871,13 @@ public class CraftkaisenModVariables {
 					variables.DomainFirstBlock = message.data.DomainFirstBlock;
 					variables.DomainSecondaryBlock = message.data.DomainSecondaryBlock;
 					variables.DomainVariation = message.data.DomainVariation;
-					variables.ArmorSaveHelmet = message.data.ArmorSaveHelmet;
-					variables.ArmorSaveChestplate = message.data.ArmorSaveChestplate;
-					variables.ArmorSaveLeggings = message.data.ArmorSaveLeggings;
-					variables.ArmorSaveBoots = message.data.ArmorSaveBoots;
 					variables.VowItem = message.data.VowItem;
+					variables.ArmorSaveChestplate = message.data.ArmorSaveChestplate;
+					variables.ArmorSaveHelmet = message.data.ArmorSaveHelmet;
 					variables.VowPlayer = message.data.VowPlayer;
+					variables.ArmorSaveLeggings = message.data.ArmorSaveLeggings;
 					variables.OfferItem = message.data.OfferItem;
+					variables.ArmorSaveBoots = message.data.ArmorSaveBoots;
 				}
 			});
 			context.setPacketHandled(true);

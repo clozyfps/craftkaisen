@@ -3182,7 +3182,6 @@
       "registry_name": "binding_vow_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/BindingVowGUIButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/BindingVowGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/BindingVowGUIMenu.java"
         ]
@@ -3220,28 +3219,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/VowMainProcedureProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Commands/Procedures"
     },
@@ -11660,6 +11638,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -11674,7 +11668,6 @@
       "registry_name": "prison_realm_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/network/PrisonRealmGUIButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/PrisonRealmGUIScreen.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/PrisonRealmGUIMenu.java"
         ]
@@ -12055,70 +12048,6 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "PrisonRealmFinish",
-      "type": "procedure",
-      "sortid": 550,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "prison_realm_finish",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PrisonRealmFinishProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "guistate",
-            "type": "map"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "OpenPRGUI",
-      "type": "procedure",
-      "sortid": 551,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_prgui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/OpenPRGUIProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Blocks/Procedures"
-    },
-    {
       "name": "AddXYZCoords",
       "type": "procedure",
       "sortid": 552,
@@ -12149,30 +12078,6 @@
         ]
       },
       "path": "~/Blocks/Procedures"
-    },
-    {
-      "name": "RCTHealingOnEffectActiveTick",
-      "type": "procedure",
-      "sortid": 553,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "rct_healing_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/RCTHealingOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "amplifier",
-            "type": "number"
-          }
-        ]
-      },
-      "path": "~/Potion Effects/Procedures"
     },
     {
       "name": "RCTExpCheck",
@@ -12231,15 +12136,15 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "BindingVowSubmit",
+      "name": "OpenPRGUI",
       "type": "procedure",
-      "sortid": 556,
+      "sortid": 551,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "binding_vow_submit",
+      "registry_name": "open_prgui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/BindingVowSubmitProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenPRGUIProcedure.java"
         ],
         "dependencies": [
           {
@@ -12247,8 +12152,16 @@
             "type": "entity"
           },
           {
-            "name": "guistate",
-            "type": "map"
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -12256,49 +12169,7 @@
           }
         ]
       },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "VowCommand",
-      "type": "command",
-      "sortid": 557,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "vow_command",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/command/VowCommandCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "CheckVowChat",
-      "type": "procedure",
-      "sortid": 558,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "check_vow_chat",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/CheckVowChatProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "text",
-            "type": "string"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
+      "path": "~/Blocks/Procedures"
     },
     {
       "name": "VowHarmCheck",
@@ -12339,6 +12210,231 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "BindingVowSubmit",
+      "type": "procedure",
+      "sortid": 556,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "binding_vow_submit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BindingVowSubmitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "PrisonRealmFinish",
+      "type": "procedure",
+      "sortid": 550,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_finish",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PrisonRealmFinishProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "RCTHealingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 553,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rct_healing_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RCTHealingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amplifier",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "CheckVowChat",
+      "type": "procedure",
+      "sortid": 558,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_vow_chat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckVowChatProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "VowCommand",
+      "type": "command",
+      "sortid": 557,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vow_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/VowCommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "ResetCursedTechnique",
+      "type": "command",
+      "sortid": 554,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_cursed_technique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/command/ResetCursedTechniqueCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "AbilityChangerRightclicked",
+      "type": "procedure",
+      "sortid": 551,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_changer_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/AbilityChangerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "Resetcursedtechnique",
+      "type": "procedure",
+      "sortid": 553,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resetcursedtechnique",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ResetcursedtechniqueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "Flowers",
+      "type": "tag",
+      "sortid": 550,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowers",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/blocks/flowers.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "AbilityChanger",
+      "type": "item",
+      "sortid": 552,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_changer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/ability_changer.json",
+          "src/main/java/net/mcreator/craftkaisen/item/AbilityChangerItem.java"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -13033,9 +13129,9 @@
       "value": "\"\""
     },
     {
-      "name": "ArmorSaveHelmet",
+      "name": "VowItem",
       "type": "itemstack",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "ItemStack.EMPTY"
     },
     {
@@ -13045,21 +13141,9 @@
       "value": "ItemStack.EMPTY"
     },
     {
-      "name": "ArmorSaveLeggings",
+      "name": "ArmorSaveHelmet",
       "type": "itemstack",
       "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "ArmorSaveBoots",
-      "type": "itemstack",
-      "scope": "player_persistent",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "VowItem",
-      "type": "itemstack",
-      "scope": "player_lifetime",
       "value": "ItemStack.EMPTY"
     },
     {
@@ -13069,9 +13153,21 @@
       "value": "\"\""
     },
     {
+      "name": "ArmorSaveLeggings",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": "ItemStack.EMPTY"
+    },
+    {
       "name": "OfferItem",
       "type": "itemstack",
       "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "ArmorSaveBoots",
+      "type": "itemstack",
+      "scope": "player_persistent",
       "value": "ItemStack.EMPTY"
     }
   ],

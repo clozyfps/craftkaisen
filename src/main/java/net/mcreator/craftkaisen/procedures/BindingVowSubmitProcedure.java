@@ -1,20 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.components.EditBox;
-import net.minecraft.client.gui.components.Checkbox;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
-
-import java.util.function.Supplier;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.ArrayList;
+import javax.annotation.Nullable;
 
 public class BindingVowSubmitProcedure {
 	public static void execute(LevelAccessor world, Entity entity, HashMap guistate) {
@@ -84,26 +72,12 @@ public class BindingVowSubmitProcedure {
 				if ((guistate.containsKey("text:Player") ? ((EditBox) guistate.get("text:Player")).getValue() : "").equals(entityiterator.getDisplayName().getString())
 						&& (!entityiterator.getPersistentData().getBoolean("vowPending") || !entityiterator.getPersistentData().getBoolean("vowPendingSender"))) {
 					if (entity.getPersistentData().getBoolean("killvow")) {
-						{
-							String _setval = guistate.containsKey("text:PlayerNameKill") ? ((EditBox) guistate.get("text:PlayerNameKill")).getValue() : "";
-							entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.VowPlayer = _setval;
-								capability.syncPlayerVariables(entityiterator);
-							});
-						}
 						if (entityiterator instanceof Player _player && !_player.level.isClientSide())
 							_player.displayClientMessage(Component.literal(("\u00A7cVow proposed by " + entity.getDisplayName().getString() + ", they request that you do not kill or harm "
 									+ (guistate.containsKey("text:PlayerNameKill") ? ((EditBox) guistate.get("text:PlayerNameKill")).getValue() : "") + " and in return you will get a "
 									+ ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getDisplayName().getString())
 									+ ". You can accept by saying \"Accept\" or deny by saying \"Deny\".")), false);
 					} else if (entity.getPersistentData().getBoolean("itemvow")) {
-						{
-							ItemStack _setval = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY);
-							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.VowItem = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
 						if (entity.getPersistentData().getBoolean("offerItem")) {
 							if (entityiterator instanceof Player _player && !_player.level.isClientSide())
 								_player.displayClientMessage(Component.literal(("\u00A7cVow proposed by " + entity.getDisplayName().getString() + ", they request that you do not pick up any type of "
@@ -116,13 +90,6 @@ public class BindingVowSubmitProcedure {
 						}
 					}
 					if (entity.getPersistentData().getBoolean("itemvow")) {
-						{
-							ItemStack _setval = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY);
-							entityiterator.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.OfferItem = _setval;
-								capability.syncPlayerVariables(entityiterator);
-							});
-						}
 					}
 					if (entity instanceof Player _player)
 						_player.closeContainer();

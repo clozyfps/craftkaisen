@@ -31,24 +31,25 @@ import java.util.Comparator;
 public class EntityComboSystemProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getDirectEntity());
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
-		execute(null, world, x, y, z, entity, sourceentity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
+		execute(null, world, x, y, z, entity, immediatesourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
-		if (entity == null || sourceentity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
+		if (entity == null || immediatesourceentity == null)
 			return;
-		if (sourceentity instanceof SatoruGojoEntity) {
-			if (Math.random() < 0.01) {
-				sourceentity.setDeltaMovement(new Vec3(0, (y + 2), 0));
+		if (immediatesourceentity instanceof SatoruGojoEntity) {
+			if (Math.random() < 0.07) {
+				immediatesourceentity.setDeltaMovement(new Vec3(0, (y + 2), 0));
 				CraftkaisenMod.queueServerWork(5, () -> {
 					{
-						Entity _ent = sourceentity;
+						Entity _ent = immediatesourceentity;
 						_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
@@ -61,7 +62,7 @@ public class EntityComboSystemProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 									.collect(Collectors.toList());
 							for (Entity entityiterator : _entfound) {
-								if (!(sourceentity == entityiterator)) {
+								if (!(immediatesourceentity == entityiterator)) {
 									entityiterator.hurt(DamageSource.GENERIC, 10);
 								}
 							}
@@ -69,17 +70,17 @@ public class EntityComboSystemProcedure {
 					});
 				});
 			}
-			if (Math.random() < 0.009) {
-				entity.setDeltaMovement(new Vec3((2.5 * sourceentity.getLookAngle().x), (2 * sourceentity.getLookAngle().y), (2.5 * sourceentity.getLookAngle().z)));
+			if (Math.random() < 0.07) {
+				entity.setDeltaMovement(new Vec3((2.5 * immediatesourceentity.getLookAngle().x), (2 * immediatesourceentity.getLookAngle().y), (2.5 * immediatesourceentity.getLookAngle().z)));
 				CraftkaisenMod.queueServerWork(10, () -> {
 					{
-						Entity _ent = sourceentity;
+						Entity _ent = immediatesourceentity;
 						_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
 					}
 					CraftkaisenMod.queueServerWork(1, () -> {
-						entity.setDeltaMovement(new Vec3((2.5 * sourceentity.getLookAngle().x), ((-2) * sourceentity.getLookAngle().y), (2.5 * sourceentity.getLookAngle().z)));
+						entity.setDeltaMovement(new Vec3((2.5 * immediatesourceentity.getLookAngle().x), ((-2) * immediatesourceentity.getLookAngle().y), (2.5 * immediatesourceentity.getLookAngle().z)));
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 40, 2, 3, 2, 0);
 						{
@@ -87,7 +88,7 @@ public class EntityComboSystemProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 									.collect(Collectors.toList());
 							for (Entity entityiterator : _entfound) {
-								if (!(sourceentity == entityiterator)) {
+								if (!(immediatesourceentity == entityiterator)) {
 									entityiterator.hurt(DamageSource.GENERIC, 10);
 								}
 							}
@@ -95,18 +96,19 @@ public class EntityComboSystemProcedure {
 					});
 				});
 			}
-		} else if (sourceentity instanceof MahitoEntity) {
-			if (Math.random() < 0.008) {
-				entity.setDeltaMovement(new Vec3(0, (y + 2.5), 0));
+		} else if (immediatesourceentity instanceof MahitoEntity) {
+			if (Math.random() < 0.08) {
+				entity.setDeltaMovement(new Vec3(0, (entity.getDeltaMovement().y() + 2.5), 0));
 				CraftkaisenMod.queueServerWork(10, () -> {
 					{
-						Entity _ent = sourceentity;
+						Entity _ent = immediatesourceentity;
 						_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
 					}
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 20, 1, false, false));
+					entity.getPersistentData().putBoolean("slam", true);
 					CraftkaisenMod.queueServerWork(1, () -> {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 40, 2, 3, 2, 0);
@@ -115,16 +117,18 @@ public class EntityComboSystemProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 									.collect(Collectors.toList());
 							for (Entity entityiterator : _entfound) {
-								if (!(sourceentity == entityiterator)) {
+								if (!(immediatesourceentity == entityiterator)) {
 									entityiterator.hurt(DamageSource.GENERIC, 10);
 								}
 							}
 						}
+						entity.getPersistentData().putBoolean("slam", true);
 						CraftkaisenMod.queueServerWork(5, () -> {
-							entity.setDeltaMovement(new Vec3((sourceentity.getLookAngle().x * 2), (y - 2.5), 0));
+							entity.setDeltaMovement(new Vec3((immediatesourceentity.getLookAngle().x * 2), (entity.getDeltaMovement().y() - 2.5), 0));
+							entity.getPersistentData().putBoolean("slam", true);
 							CraftkaisenMod.queueServerWork(5, () -> {
 								{
-									Entity _ent = sourceentity;
+									Entity _ent = immediatesourceentity;
 									_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
 									if (_ent instanceof ServerPlayer _serverPlayer)
 										_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
@@ -136,11 +140,12 @@ public class EntityComboSystemProcedure {
 									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 											.collect(Collectors.toList());
 									for (Entity entityiterator : _entfound) {
-										if (!(sourceentity == entityiterator)) {
+										if (!(immediatesourceentity == entityiterator)) {
 											entityiterator.hurt(DamageSource.GENERIC, 10);
 										}
 									}
 								}
+								entity.getPersistentData().putBoolean("slam", true);
 							});
 						});
 					});
