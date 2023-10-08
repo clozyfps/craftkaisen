@@ -22,7 +22,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-public class PrisonRealmGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class DomainClashGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -35,8 +35,8 @@ public class PrisonRealmGUIMenu extends AbstractContainerMenu implements Supplie
 	private Entity boundEntity = null;
 	private BlockEntity boundBlockEntity = null;
 
-	public PrisonRealmGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(CraftkaisenModMenus.PRISON_REALM_GUI.get(), id);
+	public DomainClashGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(CraftkaisenModMenus.DOMAIN_CLASH_GUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.client.gui.PrisonRealmGUIScreen;
 import net.mcreator.craftkaisen.client.gui.MainMenuScreen;
 import net.mcreator.craftkaisen.client.gui.InventoryCurseGUIScreen;
 import net.mcreator.craftkaisen.client.gui.DomainCreatorGUIScreen;
+import net.mcreator.craftkaisen.client.gui.DomainClashGUIScreen;
 import net.mcreator.craftkaisen.client.gui.DesignGUIScreen;
 import net.mcreator.craftkaisen.client.gui.CustomCTGUIScreen;
 import net.mcreator.craftkaisen.client.gui.BindingVowGUIScreen;
@@ -43,6 +44,7 @@ public class CraftkaisenModScreens {
 			MenuScreens.register(CraftkaisenModMenus.TECHNIQUE_CREATOR_GUI.get(), TechniqueCreatorGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.PRISON_REALM_GUI.get(), PrisonRealmGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.DOMAIN_CREATOR_GUI.get(), DomainCreatorGUIScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.DOMAIN_CLASH_GUI.get(), DomainClashGUIScreen::new);
 		});
 	}
 }

@@ -20,6 +20,7 @@ import net.mcreator.craftkaisen.world.inventory.PrisonRealmGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.InventoryCurseGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DomainCreatorGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.DomainClashGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DesignGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
@@ -41,4 +42,5 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<TechniqueCreatorGUIMenu>> TECHNIQUE_CREATOR_GUI = REGISTRY.register("technique_creator_gui", () -> IForgeMenuType.create(TechniqueCreatorGUIMenu::new));
 	public static final RegistryObject<MenuType<PrisonRealmGUIMenu>> PRISON_REALM_GUI = REGISTRY.register("prison_realm_gui", () -> IForgeMenuType.create(PrisonRealmGUIMenu::new));
 	public static final RegistryObject<MenuType<DomainCreatorGUIMenu>> DOMAIN_CREATOR_GUI = REGISTRY.register("domain_creator_gui", () -> IForgeMenuType.create(DomainCreatorGUIMenu::new));
+	public static final RegistryObject<MenuType<DomainClashGUIMenu>> DOMAIN_CLASH_GUI = REGISTRY.register("domain_clash_gui", () -> IForgeMenuType.create(DomainClashGUIMenu::new));
 }
