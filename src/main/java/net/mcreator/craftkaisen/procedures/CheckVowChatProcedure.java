@@ -1,8 +1,22 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.ServerChatEvent;
+
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 import javax.annotation.Nullable;
+
+import java.util.ArrayList;
 
 @Mod.EventBusSubscriber
 public class CheckVowChatProcedure {
@@ -29,18 +43,32 @@ public class CheckVowChatProcedure {
 							_player.displayClientMessage(Component.literal("Vow accepted."), false);
 						if (entity.getPersistentData().getBoolean("offerItemSent")) {
 							if (entity instanceof Player _player) {
-								ItemStack _setstack = new ItemStack();
+								ItemStack _setstack = ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).OfferItem);
 								_setstack.setCount(1);
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
 							if (entityiterator instanceof Player _player) {
-								ItemStack _stktoremove = new ItemStack();
+								ItemStack _stktoremove = ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).OfferItem);
 								_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 							}
 						}
 					}
 				}
 			} else if ((text).equals("Deny") || (text).equals("deny")) {
+				{
+					ItemStack _setval = ItemStack.EMPTY;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.VowItem = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = "\"\"";
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.VowPlayer = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				entity.getPersistentData().putBoolean("vowPending", false);
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(Component.literal("Vow denied."), false);

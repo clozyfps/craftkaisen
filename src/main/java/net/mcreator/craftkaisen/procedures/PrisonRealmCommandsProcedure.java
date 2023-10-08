@@ -8,8 +8,8 @@ import net.minecraftforge.event.ServerChatEvent;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
@@ -43,14 +43,9 @@ public class PrisonRealmCommandsProcedure {
 		if (entity == null || text == null)
 			return;
 		Entity entityPr = null;
-		if (text.contains("Gate, Open") && entity.getPersistentData().getBoolean("prOwner") && !(new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, new BlockPos(entity.getPersistentData().getDouble("prX"), entity.getPersistentData().getDouble("prY"), entity.getPersistentData().getDouble("prZ")), "targetedPlayer")).isEmpty()) {
+		if (text.contains("Gate, Open") && entity.getPersistentData().getBoolean("prOwner")) {
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("Gate is gay"), false);
 			world.destroyBlock(new BlockPos(entity.getPersistentData().getDouble("prX"), entity.getPersistentData().getDouble("prY"), entity.getPersistentData().getDouble("prZ")), false);
 			if (world instanceof ServerLevel _level) {
 				Entity entityToSpawn = new PrisonRealmMobEntity(CraftkaisenModEntities.PRISON_REALM_MOB.get(), _level);
@@ -62,14 +57,7 @@ public class PrisonRealmCommandsProcedure {
 					_mobToSpawn.finalizeSpawn(_level, world.getCurrentDifficultyAt(entityToSpawn.blockPosition()), MobSpawnType.MOB_SUMMONED, null, null);
 				world.addFreshEntity(entityToSpawn);
 			}
-		} else if (text.contains("Gate, Close") && entity.getPersistentData().getBoolean("prOwner") && !(new Object() {
-			public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getString(tag);
-				return "";
-			}
-		}.getValue(world, new BlockPos(entity.getPersistentData().getDouble("prX"), entity.getPersistentData().getDouble("prY"), entity.getPersistentData().getDouble("prZ")), "targetedPlayer")).isEmpty()) {
+		} else if (text.contains("Gate, Close") && entity.getPersistentData().getBoolean("prOwner")) {
 			{
 				final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("prX")), (entity.getPersistentData().getDouble("prY")), (entity.getPersistentData().getDouble("prZ")));
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10000 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))

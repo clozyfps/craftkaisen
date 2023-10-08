@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -30,13 +29,9 @@ public class BindingVowGUIMenu extends AbstractContainerMenu implements Supplier
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
-	private ContainerLevelAccess access = ContainerLevelAccess.NULL;
 	private IItemHandler internal;
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
-	private Supplier<Boolean> boundItemMatcher = null;
-	private Entity boundEntity = null;
-	private BlockEntity boundBlockEntity = null;
 
 	public BindingVowGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
 		super(CraftkaisenModMenus.BINDING_VOW_GUI.get(), id);
@@ -49,57 +44,52 @@ public class BindingVowGUIMenu extends AbstractContainerMenu implements Supplier
 			this.x = pos.getX();
 			this.y = pos.getY();
 			this.z = pos.getZ();
-			access = ContainerLevelAccess.create(world, pos);
 		}
 		if (pos != null) {
 			if (extraData.readableBytes() == 1) { // bound to item
 				byte hand = extraData.readByte();
-				ItemStack itemstack = hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem();
-				this.boundItemMatcher = () -> itemstack == (hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem());
+				ItemStack itemstack;
+				if (hand == 0)
+					itemstack = this.entity.getMainHandItem();
+				else
+					itemstack = this.entity.getOffhandItem();
 				itemstack.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 					this.internal = capability;
 					this.bound = true;
 				});
-			} else if (extraData.readableBytes() > 1) { // bound to entity
+			} else if (extraData.readableBytes() > 1) {
 				extraData.readByte(); // drop padding
-				boundEntity = world.getEntity(extraData.readVarInt());
-				if (boundEntity != null)
-					boundEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+				Entity entity = world.getEntity(extraData.readVarInt());
+				if (entity != null)
+					entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						this.internal = capability;
 						this.bound = true;
 					});
 			} else { // might be bound to block
-				boundBlockEntity = this.world.getBlockEntity(pos);
-				if (boundBlockEntity != null)
-					boundBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+				BlockEntity ent = inv.player != null ? inv.player.level.getBlockEntity(pos) : null;
+				if (ent != null) {
+					ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						this.internal = capability;
 						this.bound = true;
 					});
+				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 207, 172) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 56, 219) {
 			private final int slot = 0;
 		}));
-		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 429, 152) {
+		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 344, 158) {
 			private final int slot = 1;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
-				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 51 + 8 + sj * 18, 163 + 84 + si * 18));
+				this.addSlot(new Slot(inv, sj + (si + 1) * 9, 51 + 8 + sj * 18, 181 + 84 + si * 18));
 		for (int si = 0; si < 9; ++si)
-			this.addSlot(new Slot(inv, si, 51 + 8 + si * 18, 163 + 142));
+			this.addSlot(new Slot(inv, si, 51 + 8 + si * 18, 181 + 142));
 	}
 
 	@Override
 	public boolean stillValid(Player player) {
-		if (this.bound) {
-			if (this.boundItemMatcher != null)
-				return this.boundItemMatcher.get();
-			else if (this.boundBlockEntity != null)
-				return AbstractContainerMenu.stillValid(this.access, player, this.boundBlockEntity.getBlockState().getBlock());
-			else if (this.boundEntity != null)
-				return this.boundEntity.isAlive();
-		}
 		return true;
 	}
 

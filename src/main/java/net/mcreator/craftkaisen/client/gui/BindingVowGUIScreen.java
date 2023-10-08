@@ -87,7 +87,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_offers"), 368, 140, -12829636);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.binding_vow_gui.label_offers"), 264, 140, -12829636);
 	}
 
 	@Override
@@ -100,7 +100,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		PlayerNameKill = new EditBox(this.font, this.leftPos + 57, this.topPos + 219, 120, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill")) {
+		PlayerNameKill = new EditBox(this.font, this.leftPos + 54, this.topPos + 170, 120, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill")) {
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill").getString());
 			}
@@ -126,7 +126,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		PlayerNameKill.setMaxLength(32767);
 		guistate.put("text:PlayerNameKill", PlayerNameKill);
 		this.addWidget(this.PlayerNameKill);
-		Player = new EditBox(this.font, this.leftPos + 57, this.topPos + 194, 120, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.Player")) {
+		Player = new EditBox(this.font, this.leftPos + 56, this.topPos + 240, 120, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.Player")) {
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.binding_vow_gui.Player").getString());
 			}
@@ -152,7 +152,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		Player.setMaxLength(32767);
 		guistate.put("text:Player", Player);
 		this.addWidget(this.Player);
-		button_submit = new Button(this.leftPos + 194, this.topPos + 206, 56, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_submit"), e -> {
+		button_submit = new Button(this.leftPos + 181, this.topPos + 240, 56, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_submit"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new BindingVowGUIButtonMessage(0, x, y, z));
 				BindingVowGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -160,17 +160,17 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		});
 		guistate.put("button:button_submit", button_submit);
 		this.addRenderableWidget(button_submit);
-		button_self_vow = new Button(this.leftPos + 56, this.topPos + 337, 66, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_self_vow"), e -> {
+		button_self_vow = new Button(this.leftPos + 56, this.topPos + 347, 66, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.button_self_vow"), e -> {
 		});
 		guistate.put("button:button_self_vow", button_self_vow);
 		this.addRenderableWidget(button_self_vow);
-		KillVow = new Checkbox(this.leftPos + 57, this.topPos + 141, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.KillVow"), false);
+		KillVow = new Checkbox(this.leftPos + 54, this.topPos + 146, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.KillVow"), false);
 		guistate.put("checkbox:KillVow", KillVow);
 		this.addRenderableWidget(KillVow);
-		ItemVow = new Checkbox(this.leftPos + 57, this.topPos + 170, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.ItemVow"), false);
+		ItemVow = new Checkbox(this.leftPos + 54, this.topPos + 195, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.ItemVow"), false);
 		guistate.put("checkbox:ItemVow", ItemVow);
 		this.addRenderableWidget(ItemVow);
-		GiveItem = new Checkbox(this.leftPos + 299, this.topPos + 150, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.GiveItem"), false);
+		GiveItem = new Checkbox(this.leftPos + 264, this.topPos + 156, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.GiveItem"), false);
 		guistate.put("checkbox:GiveItem", GiveItem);
 		this.addRenderableWidget(GiveItem);
 	}
