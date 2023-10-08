@@ -40,6 +40,7 @@ import net.mcreator.craftkaisen.potion.InfinityMobEffect;
 import net.mcreator.craftkaisen.potion.IdleTransfigurationMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepPotionMobEffect;
 import net.mcreator.craftkaisen.potion.FlashStepCooldownMobEffect;
+import net.mcreator.craftkaisen.potion.ExplosionEffectMobEffect;
 import net.mcreator.craftkaisen.potion.EmberFloorMobEffect;
 import net.mcreator.craftkaisen.potion.EmberControlMobEffect;
 import net.mcreator.craftkaisen.potion.DomainExpansionMobEffect;
@@ -94,4 +95,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> REVEALING_ONES_HAND = REGISTRY.register("revealing_ones_hand", () -> new RevealingOnesHandMobEffect());
 	public static final RegistryObject<MobEffect> PHYSICALLY_GIFTED_COOLDOWN = REGISTRY.register("physically_gifted_cooldown", () -> new PhysicallyGiftedCooldownMobEffect());
 	public static final RegistryObject<MobEffect> PUNCH_BARRAGE_POTION = REGISTRY.register("punch_barrage_potion", () -> new PunchBarragePotionMobEffect());
+	public static final RegistryObject<MobEffect> EXPLOSION_EFFECT = REGISTRY.register("explosion_effect", () -> new ExplosionEffectMobEffect());
 }

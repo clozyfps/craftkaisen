@@ -6,7 +6,7 @@
     "width": 512,
     "height": 512,
     "inventoryOffsetX": -117,
-    "inventoryOffsetY": -10,
+    "inventoryOffsetY": 8,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -14,9 +14,9 @@
         "type": "checkbox",
         "data": {
           "name": "KillVow",
-          "text": "Don't Kill Specific Player",
-          "x": 15,
-          "y": 5
+          "text": "Don't Harm Specific Player",
+          "x": 12,
+          "y": 10
         }
       },
       {
@@ -26,8 +26,8 @@
           "name": "PlayerNameKill",
           "width": 120,
           "height": 20,
-          "x": 15,
-          "y": 83
+          "x": 12,
+          "y": 34
         }
       },
       {
@@ -40,8 +40,8 @@
           },
           "width": 56,
           "height": 20,
-          "x": 152,
-          "y": 70
+          "x": 139,
+          "y": 104
         }
       },
       {
@@ -49,8 +49,8 @@
         "data": {
           "name": "ItemVow",
           "text": "Don't Pick Up Item Type",
-          "x": 15,
-          "y": 34
+          "x": 12,
+          "y": 59
         }
       },
       {
@@ -67,8 +67,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 164,
-          "y": 35
+          "x": 13,
+          "y": 82
         }
       },
       {
@@ -78,8 +78,8 @@
           "name": "Player",
           "width": 120,
           "height": 20,
-          "x": 15,
-          "y": 58
+          "x": 14,
+          "y": 104
         }
       },
       {
@@ -93,7 +93,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 326,
+          "x": 222,
           "y": 4
         }
       },
@@ -102,8 +102,8 @@
         "data": {
           "name": "GiveItem",
           "text": "Give Item",
-          "x": 257,
-          "y": 14
+          "x": 222,
+          "y": 20
         }
       },
       {
@@ -120,8 +120,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": false,
-          "x": 386,
-          "y": 15
+          "x": 301,
+          "y": 21
         }
       },
       {
@@ -132,7 +132,7 @@
           "width": 66,
           "height": 20,
           "x": 14,
-          "y": 201
+          "y": 211
         }
       }
     ],

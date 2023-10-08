@@ -1,0 +1,92 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 220,
+    "height": 200,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_self_vows",
+          "text": {
+            "fixedValue": "Self Vows"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 190,
+          "y": 27
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "HeartsForCE",
+          "text": "Trade Hearts For Higher Cap",
+          "x": 117,
+          "y": 43
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_will_trade_2_hearts_for_100_more",
+          "text": {
+            "fixedValue": "Will Trade 2 Hearts for 100 more to you CE cap."
+          },
+          "width": 24,
+          "height": 24,
+          "x": 115,
+          "y": 41
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "CEForHearts",
+          "text": "Lower Cap For More Hearts",
+          "x": 117,
+          "y": 73
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_will_trade_100_from_your_ce_cap",
+          "text": {
+            "fixedValue": "Will Trade 100 from your CE cap for 2 more hearts."
+          },
+          "width": 24,
+          "height": 24,
+          "x": 115,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_vow",
+          "text": "Vow",
+          "width": 40,
+          "height": 20,
+          "x": 194,
+          "y": 193
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 17,
+      "oy": 17,
+      "snapOnGrid": false
+    }
+  }
+}
