@@ -251,6 +251,36 @@ public class BoltProjectileWhileProjectileFlyingTickProcedure {
 							}
 						}
 					}
+				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Jackpot")) {
+					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Reverse) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.LUCK);
+								}
+							}
+						}
+					} else {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.UNLUCK);
+								}
+							}
+						}
+					}
 				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Marker")) {
 					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Reverse) {
 						{
@@ -418,6 +448,36 @@ public class BoltProjectileWhileProjectileFlyingTickProcedure {
 													false);
 										}
 									}
+								}
+							}
+						}
+					}
+				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Jackpot")) {
+					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move2Reverse) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.LUCK);
+								}
+							}
+						}
+					} else {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.UNLUCK);
 								}
 							}
 						}
@@ -593,6 +653,36 @@ public class BoltProjectileWhileProjectileFlyingTickProcedure {
 							}
 						}
 					}
+				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Jackpot")) {
+					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Reverse) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.LUCK);
+								}
+							}
+						}
+					} else {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.UNLUCK);
+								}
+							}
+						}
+					}
 				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Marker")) {
 					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move3Reverse) {
 						{
@@ -760,6 +850,36 @@ public class BoltProjectileWhileProjectileFlyingTickProcedure {
 													false);
 										}
 									}
+								}
+							}
+						}
+					}
+				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Jackpot")) {
+					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move4Reverse) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.LUCK);
+								}
+							}
+						}
+					} else {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.UNLUCK);
 								}
 							}
 						}
@@ -935,6 +1055,36 @@ public class BoltProjectileWhileProjectileFlyingTickProcedure {
 							}
 						}
 					}
+				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Jackpot")) {
+					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move5Reverse) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.LUCK);
+								}
+							}
+						}
+					} else {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.UNLUCK);
+								}
+							}
+						}
+					}
 				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Marker")) {
 					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move5Reverse) {
 						{
@@ -1102,6 +1252,36 @@ public class BoltProjectileWhileProjectileFlyingTickProcedure {
 													false);
 										}
 									}
+								}
+							}
+						}
+					}
+				} else if (((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Base).equals("Jackpot")) {
+					if (!(entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move6Reverse) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.UNLUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.LUCK);
+								}
+							}
+						}
+					} else {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+									.collect(Collectors.toList());
+							for (Entity entityiterator : _entfound) {
+								if (!(entity == entityiterator)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.LUCK, 3600, 1));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.removeEffect(MobEffects.UNLUCK);
 								}
 							}
 						}

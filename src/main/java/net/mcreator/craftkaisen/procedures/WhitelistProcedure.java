@@ -30,8 +30,20 @@ public class WhitelistProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!((entity.getDisplayName().getString()).equals("Dev") || (entity.getDisplayName().getString()).equals("GaloHumano") || (entity.getDisplayName().getString()).equals("clozy_3")
-				|| (entity.getDisplayName().getString()).equals("MyNameIsName1213"))) {
+		if (!((entity.getDisplayName().getString()).equals("Dev") || (entity.getDisplayName().getString()).equals("GaloHumano") || (entity.getDisplayName().getString()).equals("clozy_3") || (entity.getDisplayName().getString()).equals("Void_Asriel")
+				|| (entity.getDisplayName().getString()).equals("Bode97") || (entity.getDisplayName().getString()).equals("ShadowSideX2") || (entity.getDisplayName().getString()).equals("enzyo112")
+				|| (entity.getDisplayName().getString()).equals("Tremolicious") || (entity.getDisplayName().getString()).equals("POKE_theboxcats") || (entity.getDisplayName().getString()).equals("_foily")
+				|| (entity.getDisplayName().getString()).equals("realpancakes3") || (entity.getDisplayName().getString()).equals("marylotl") || (entity.getDisplayName().getString()).equals("vin_jo")
+				|| (entity.getDisplayName().getString()).equals("RedRabbitPlayz") || (entity.getDisplayName().getString()).equals("Ninjamaster1052") || (entity.getDisplayName().getString()).equals("NortherrorZaGod")
+				|| (entity.getDisplayName().getString()).equals("DevilWhoDares") || (entity.getDisplayName().getString()).equals("CatProtector24") || (entity.getDisplayName().getString()).equals("Shadow843671")
+				|| (entity.getDisplayName().getString()).equals("Blackdyn0nite26") || (entity.getDisplayName().getString()).equals("vampricboss") || (entity.getDisplayName().getString()).equals("DonquixoteSteel")
+				|| (entity.getDisplayName().getString()).equals("babiedes26") || (entity.getDisplayName().getString()).equals("MrSkalter") || (entity.getDisplayName().getString()).equals("Ditto_guy")
+				|| (entity.getDisplayName().getString()).equals("bruh") || (entity.getDisplayName().getString()).equals("Mindlesshas234") || (entity.getDisplayName().getString()).equals("Ducky_Ben")
+				|| (entity.getDisplayName().getString()).equals("ShadowStar4343") || (entity.getDisplayName().getString()).equals("Mr_MonkeStrong") || (entity.getDisplayName().getString()).equals("ZarekX2")
+				|| (entity.getDisplayName().getString()).equals("Tiaayo") || (entity.getDisplayName().getString()).equals("notpatientthe") || (entity.getDisplayName().getString()).equals("marylotl")
+				|| (entity.getDisplayName().getString()).equals("bode97") || (entity.getDisplayName().getString()).equals("minicrafter0810") || (entity.getDisplayName().getString()).equals("KashenGames")
+				|| (entity.getDisplayName().getString()).equals("HZD_Hybrid") || (entity.getDisplayName().getString()).equals("TheRealDemonKing") || (entity.getDisplayName().getString()).equals("Azj12365")
+				|| (entity.getDisplayName().getString()).equals("Tremolicious") || (entity.getDisplayName().getString()).equals("MyNameIsName1213"))) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.hurt(new DamageSource("custom").bypassArmor(), 255);
 			if (!entity.level.isClientSide())

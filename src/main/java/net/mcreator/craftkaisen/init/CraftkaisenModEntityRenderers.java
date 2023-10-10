@@ -102,5 +102,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.REVERSAL_RED_ENTITY.get(), ReversalRedEntityRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.PRISON_REALM_MOB.get(), PrisonRealmMobRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BOLT_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.ROOT_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }
