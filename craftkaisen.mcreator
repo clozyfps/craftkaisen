@@ -5471,18 +5471,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -13300,6 +13288,38 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "ReversalRedEntityOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 587,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_entity_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedEntityOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     }
   ],
   "variable_elements": [
@@ -14090,10 +14110,10 @@
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
-      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
-      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",

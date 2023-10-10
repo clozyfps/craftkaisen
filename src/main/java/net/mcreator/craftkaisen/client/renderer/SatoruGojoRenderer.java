@@ -18,6 +18,6 @@ public class SatoruGojoRenderer extends HumanoidMobRenderer<SatoruGojoEntity, Hu
 
 	@Override
 	public ResourceLocation getTextureLocation(SatoruGojoEntity entity) {
-		return new ResourceLocation("craftkaisen:textures/entities/gojosatoru.png");
+		return new ResourceLocation("craftkaisen:textures/entities/satoru_gojo.png");
 	}
 }
