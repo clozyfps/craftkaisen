@@ -1,16 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.Explosion;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
 
 import javax.annotation.Nullable;
 
@@ -44,7 +34,7 @@ public class WhitelistProcedure {
 				|| (entity.getDisplayName().getString()).equals("bode97") || (entity.getDisplayName().getString()).equals("minicrafter0810") || (entity.getDisplayName().getString()).equals("KashenGames")
 				|| (entity.getDisplayName().getString()).equals("HZD_Hybrid") || (entity.getDisplayName().getString()).equals("TheRealDemonKing") || (entity.getDisplayName().getString()).equals("CreepyDisc68031")
 				|| (entity.getDisplayName().getString()).equals("Azj12365") || (entity.getDisplayName().getString()).equals("Void_Asriel") || (entity.getDisplayName().getString()).equals("NoNameIsMyName")
-				|| (entity.getDisplayName().getString()).equals("stewystew9308") || (entity.getDisplayName().getString()).equals("Tremolicious") || (entity.getDisplayName().getString()).equals("MyNameIsName1213"))) {
+				|| (entity.getDisplayName().getString()).equals("Seiji5961") || (entity.getDisplayName().getString()).equals("Tremolicious") || (entity.getDisplayName().getString()).equals("MyNameIsName1213"))) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.hurt(new DamageSource("custom").bypassArmor(), 255);
 			if (!entity.level.isClientSide())
