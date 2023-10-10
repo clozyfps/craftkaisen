@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.entity.SukunaEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
+import net.mcreator.craftkaisen.entity.RootProjectileEntity;
 import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
@@ -225,6 +226,8 @@ public class CraftkaisenModEntities {
 			.setTrackingRange(6).setUpdateInterval(3).setCustomClientFactory(PrisonRealmMobEntity::new).fireImmune().sized(0.9f, 0.9f));
 	public static final RegistryObject<EntityType<BoltProjectileEntity>> BOLT_PROJECTILE = register("projectile_bolt_projectile",
 			EntityType.Builder.<BoltProjectileEntity>of(BoltProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BoltProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RootProjectileEntity>> ROOT_PROJECTILE = register("projectile_root_projectile",
+			EntityType.Builder.<RootProjectileEntity>of(RootProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(RootProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

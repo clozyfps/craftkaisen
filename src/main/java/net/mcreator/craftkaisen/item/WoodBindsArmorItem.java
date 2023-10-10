@@ -1,32 +1,12 @@
 
 package net.mcreator.craftkaisen.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.client.extensions.common.IClientItemExtensions;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.model.geom.ModelPart;
-import net.minecraft.client.model.HumanoidModel;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.craftkaisen.client.model.Modelwood_binds;
-
 import java.util.function.Consumer;
-import java.util.Map;
-import java.util.Collections;
+import net.minecraft.client.model.Model;
 
 public abstract class WoodBindsArmorItem extends ArmorItem {
+
 	public WoodBindsArmorItem(EquipmentSlot slot, Item.Properties properties) {
 		super(new ArmorMaterial() {
 			@Override
@@ -72,6 +52,7 @@ public abstract class WoodBindsArmorItem extends ArmorItem {
 	}
 
 	public static class Chestplate extends WoodBindsArmorItem {
+
 		public Chestplate() {
 			super(EquipmentSlot.CHEST, new Item.Properties().tab(null));
 		}
@@ -98,5 +79,7 @@ public abstract class WoodBindsArmorItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "craftkaisen:textures/entities/spruce_log_1.png";
 		}
+
 	}
+
 }

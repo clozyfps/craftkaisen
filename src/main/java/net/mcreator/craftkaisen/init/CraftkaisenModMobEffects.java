@@ -48,6 +48,7 @@ import net.mcreator.craftkaisen.potion.DivineRepositePotionMobEffect;
 import net.mcreator.craftkaisen.potion.DivergentFistMobEffect;
 import net.mcreator.craftkaisen.potion.CursedSpiritMobEffect;
 import net.mcreator.craftkaisen.potion.CrushingMobEffect;
+import net.mcreator.craftkaisen.potion.CorruptedPotionMobEffect;
 import net.mcreator.craftkaisen.potion.ClapRushMobEffect;
 import net.mcreator.craftkaisen.potion.ChargeCEEffectMobEffect;
 import net.mcreator.craftkaisen.potion.BurntOutEffectMobEffect;
@@ -96,4 +97,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> PHYSICALLY_GIFTED_COOLDOWN = REGISTRY.register("physically_gifted_cooldown", () -> new PhysicallyGiftedCooldownMobEffect());
 	public static final RegistryObject<MobEffect> PUNCH_BARRAGE_POTION = REGISTRY.register("punch_barrage_potion", () -> new PunchBarragePotionMobEffect());
 	public static final RegistryObject<MobEffect> EXPLOSION_EFFECT = REGISTRY.register("explosion_effect", () -> new ExplosionEffectMobEffect());
+	public static final RegistryObject<MobEffect> CORRUPTED_POTION = REGISTRY.register("corrupted_potion", () -> new CorruptedPotionMobEffect());
 }

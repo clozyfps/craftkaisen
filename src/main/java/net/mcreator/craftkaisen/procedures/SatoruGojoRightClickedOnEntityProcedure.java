@@ -40,7 +40,7 @@ public class SatoruGojoRightClickedOnEntityProcedure {
 				}
 			} else if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Mentor).equals("Gojo")) {
 				if (sourceentity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7a Whats up? Pick a Option - 1. Grade Referral 2. Mission "), false);
+					_player.displayClientMessage(Component.literal("\u00A7a Whats up? Pick a Option - 1. Grade Referral 2. WIP"), false);
 				sourceentity.getPersistentData().putBoolean("mentorselect", true);
 				CraftkaisenMod.queueServerWork(400, () -> {
 					sourceentity.getPersistentData().putBoolean("mentorselect", false);

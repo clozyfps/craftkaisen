@@ -217,10 +217,6 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "immediatesourceentity",
             "type": "entity"
           },
@@ -12862,19 +12858,24 @@
       "path": "~/Potion Effects/Procedures"
     },
     {
-      "name": "WoodBindsArmor",
-      "type": "armor",
-      "sortid": 573,
+      "name": "SetLimitless",
+      "type": "procedure",
+      "sortid": 577,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wood_binds_armor",
+      "registry_name": "set_limitless",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/wood_binds_armor_chestplate.json",
-          "src/main/java/net/mcreator/craftkaisen/item/WoodBindsArmorItem.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/Armor"
+      "path": "~/Set Technique"
     },
     {
       "name": "EntityMovementHandler",
@@ -12897,117 +12898,19 @@
       "path": "~/Abilities/CustomAbilities"
     },
     {
-      "name": "PlayerMovementHandler",
-      "type": "procedure",
-      "sortid": 575,
+      "name": "WoodBindsArmor",
+      "type": "armor",
+      "sortid": 573,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "player_movement_handler",
+      "registry_name": "wood_binds_armor",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/PlayerMovementHandlerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/resources/assets/craftkaisen/models/item/wood_binds_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/WoodBindsArmorItem.java"
         ]
       },
-      "path": "~/Abilities/CustomAbilities"
-    },
-    {
-      "name": "CkAllowCustomTechniques",
-      "type": "gamerule",
-      "sortid": 576,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ck_allow_custom_techniques",
-      "metadata": {
-        "files": [],
-        "type": "logic"
-      },
-      "path": "~/Gamerules"
-    },
-    {
-      "name": "SetLimitless",
-      "type": "procedure",
-      "sortid": 577,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_limitless",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
-      "name": "SetCursedSpeech",
-      "type": "procedure",
-      "sortid": 578,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_cursed_speech",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedSpeechProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
-      "name": "SetFlames",
-      "type": "procedure",
-      "sortid": 579,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_flames",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetFlamesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
-    },
-    {
-      "name": "SetSukuna",
-      "type": "procedure",
-      "sortid": 580,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_sukuna",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SetSukunaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Set Technique"
+      "path": "~/Armor"
     },
     {
       "name": "SetTransfiguration",
@@ -13050,6 +12953,26 @@
       "path": "~/Set Technique"
     },
     {
+      "name": "PlayerMovementHandler",
+      "type": "procedure",
+      "sortid": 575,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_movement_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlayerMovementHandlerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/CustomAbilities"
+    },
+    {
       "name": "SetClap",
       "type": "procedure",
       "sortid": 583,
@@ -13068,6 +12991,199 @@
         ]
       },
       "path": "~/Set Technique"
+    },
+    {
+      "name": "SetCursedSpeech",
+      "type": "procedure",
+      "sortid": 578,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "CkAllowCustomTechniques",
+      "type": "gamerule",
+      "sortid": 576,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_allow_custom_techniques",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "SetFlames",
+      "type": "procedure",
+      "sortid": 579,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetFlamesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "SetSukuna",
+      "type": "procedure",
+      "sortid": 580,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sukuna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSukunaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "RootProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 574,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "root_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RootProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Corrupted",
+      "type": "tag",
+      "sortid": 573,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/tags/blocks/corrupted.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "RootProjectile",
+      "type": "rangeditem",
+      "sortid": 575,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "root_projectile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/root_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/RootProjectileItem.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/RootProjectileEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "CorruptedPotionOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 576,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_potion_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CorruptedPotionOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "CorruptedPotion",
+      "type": "potioneffect",
+      "sortid": 577,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corrupted_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/CorruptedPotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
     }
   ],
   "variable_elements": [
