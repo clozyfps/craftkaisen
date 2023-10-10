@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -21,6 +22,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModGameRules;
 
 import javax.annotation.Nullable;
 
@@ -42,6 +44,9 @@ public class JoinsWorldProcedure {
 			return;
 		double random = 0;
 		double restrictionrandom = 0;
+		double ctrandom = 0;
+		if (world instanceof Level _level)
+			_level.getGameRules().getRule(CraftkaisenModGameRules.CK_ALLOW_CUSTOM_TECHNIQUES).set(false, _level.getServer());
 		if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).JoinsWorld == false) {
 			{
 				boolean _setval = true;
@@ -51,7 +56,8 @@ public class JoinsWorldProcedure {
 				});
 			}
 			random = Mth.nextInt(RandomSource.create(), 1, 100);
-			restrictionrandom = Mth.nextInt(RandomSource.create(), 1, 7);
+			ctrandom = Mth.nextInt(RandomSource.create(), 1, 7);
+			restrictionrandom = Mth.nextInt(RandomSource.create(), 1, 2);
 			if (random == 1) {
 				{
 					boolean _setval = true;
@@ -70,8 +76,7 @@ public class JoinsWorldProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
-				}
-				if (restrictionrandom == 2) {
+				} else if (restrictionrandom == 2) {
 					if (entity instanceof Player _player && !_player.level.isClientSide())
 						_player.displayClientMessage(Component.literal(("You were born with Heavenly Restriction!" + "You are very physically gifted")), false);
 					{
@@ -84,20 +89,87 @@ public class JoinsWorldProcedure {
 				}
 			}
 			if (random >= 2) {
-				{
-					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = new BlockPos(x, y, z);
-						NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
-							@Override
-							public Component getDisplayName() {
-								return Component.literal("CustomCTGUI");
-							}
+				if (world.getLevelData().getGameRules().getBoolean(CraftkaisenModGameRules.CK_ALLOW_CUSTOM_TECHNIQUES)) {
+					{
+						if (entity instanceof ServerPlayer _ent) {
+							BlockPos _bpos = new BlockPos(x, y, z);
+							NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+								@Override
+								public Component getDisplayName() {
+									return Component.literal("CustomCTGUI");
+								}
 
-							@Override
-							public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-								return new CustomCTGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
+								@Override
+								public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+									return new CustomCTGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+								}
+							}, _bpos);
+						}
+					}
+				} else {
+					if (ctrandom == 1) {
+						SetLimitlessProcedure.execute(entity);
+						{
+							double _setval = 7;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 2) {
+						SetCursedSpeechProcedure.execute(entity);
+						{
+							double _setval = 6;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 3) {
+						SetFlamesProcedure.execute(entity);
+						{
+							double _setval = 6;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 4) {
+						SetSukunaProcedure.execute(entity);
+						{
+							double _setval = 6;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 5) {
+						SetTransfigurationProcedure.execute(entity);
+						{
+							double _setval = 5;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 6) {
+						SetPlantsProcedure.execute(entity);
+						{
+							double _setval = 4;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 7) {
+						SetClapProcedure.execute(entity);
+						{
+							double _setval = 5;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					}
 				}
 			}

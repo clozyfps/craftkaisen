@@ -6,6 +6,10 @@ public class TouchHandlerProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putBoolean("usingTouch", true);
+		if (!entity.getPersistentData().getBoolean("usingTouch")) {
+			entity.getPersistentData().putBoolean("usingTouch", true);
+		} else {
+			entity.getPersistentData().putBoolean("usingTouch", false);
+		}
 	}
 }

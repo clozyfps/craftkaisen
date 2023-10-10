@@ -410,7 +410,7 @@ public class TeachniqueCreatePressedProcedure {
 			} else if (guistate.containsKey("checkbox:BeamBox") ? ((Checkbox) guistate.get("checkbox:BeamBox")).selected() : false) {
 				if (entity.getPersistentData().getBoolean("move1")) {
 					{
-						String _setval = "Beam";
+						String _setval = "Touch";
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Move1Type = _setval;
 							capability.syncPlayerVariables(entity);
@@ -418,7 +418,7 @@ public class TeachniqueCreatePressedProcedure {
 					}
 				} else if (entity.getPersistentData().getBoolean("move2")) {
 					{
-						String _setval = "Beam";
+						String _setval = "Touch";
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Move2Type = _setval;
 							capability.syncPlayerVariables(entity);
@@ -426,7 +426,7 @@ public class TeachniqueCreatePressedProcedure {
 					}
 				} else if (entity.getPersistentData().getBoolean("move3")) {
 					{
-						String _setval = "Beam";
+						String _setval = "Touch";
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Move3Type = _setval;
 							capability.syncPlayerVariables(entity);
@@ -434,7 +434,7 @@ public class TeachniqueCreatePressedProcedure {
 					}
 				} else if (entity.getPersistentData().getBoolean("move4")) {
 					{
-						String _setval = "Beam";
+						String _setval = "Touch";
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Move4Type = _setval;
 							capability.syncPlayerVariables(entity);
@@ -442,7 +442,7 @@ public class TeachniqueCreatePressedProcedure {
 					}
 				} else if (entity.getPersistentData().getBoolean("move5")) {
 					{
-						String _setval = "Beam";
+						String _setval = "Touch";
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Move5Type = _setval;
 							capability.syncPlayerVariables(entity);
@@ -450,7 +450,7 @@ public class TeachniqueCreatePressedProcedure {
 					}
 				} else if (entity.getPersistentData().getBoolean("move6")) {
 					{
-						String _setval = "Beam";
+						String _setval = "Touch";
 						entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.Move6Type = _setval;
 							capability.syncPlayerVariables(entity);

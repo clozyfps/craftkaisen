@@ -15,6 +15,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.craftkaisen.item.WoodenBallItem;
+import net.mcreator.craftkaisen.item.WoodBindsArmorItem;
 import net.mcreator.craftkaisen.item.TwistItem;
 import net.mcreator.craftkaisen.item.TojiArmorItem;
 import net.mcreator.craftkaisen.item.Test2Item;
@@ -146,6 +147,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> DOMAIN_BLOCK_ONE = block(CraftkaisenModBlocks.DOMAIN_BLOCK_ONE, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> DOMAIN_BLOCK_TWO = block(CraftkaisenModBlocks.DOMAIN_BLOCK_TWO, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> ABILITY_CHANGER = REGISTRY.register("ability_changer", () -> new AbilityChangerItem());
+	public static final RegistryObject<Item> WOOD_BINDS_ARMOR_CHESTPLATE = REGISTRY.register("wood_binds_armor_chestplate", () -> new WoodBindsArmorItem.Chestplate());
 	public static final RegistryObject<Item> ROOT_PROJECTILE = REGISTRY.register("root_projectile", () -> new RootProjectileItem());
 	public static final RegistryObject<Item> PONY_TAIL_HELMET = REGISTRY.register("pony_tail_helmet", () -> new PonyTailItem.Helmet());
 	public static final RegistryObject<Item> MAKI_ZENIN_SPAWN_EGG = REGISTRY.register("maki_zenin_spawn_egg",
