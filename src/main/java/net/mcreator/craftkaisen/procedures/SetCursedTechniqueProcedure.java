@@ -1,8 +1,12 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
+import net.minecraft.commands.CommandSourceStack;
 
-import javax.annotation.Nullable;
+import com.mojang.brigadier.context.CommandContext;
+import com.mojang.brigadier.arguments.StringArgumentType;
 
 public class SetCursedTechniqueProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
