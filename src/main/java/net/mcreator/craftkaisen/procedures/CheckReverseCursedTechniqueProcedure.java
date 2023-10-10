@@ -38,9 +38,8 @@ import java.util.Iterator;
 public class CheckReverseCursedTechniqueProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
 		}
 	}
 
@@ -67,7 +66,7 @@ public class CheckReverseCursedTechniqueProcedure {
 					randomRCT = Mth.nextInt(RandomSource.create(), 1, 100);
 					if (randomRCT >= 95) {
 						if (entity instanceof ServerPlayer _player) {
-							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craftkaisen:deleted_mod_element"));
+							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("craftkaisen:reverse_cursed_technique_advancement"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
 								Iterator _iterator = _ap.getRemainingCriteria().iterator();

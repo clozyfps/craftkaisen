@@ -852,7 +852,7 @@
       "name": "ReversalRedProcedure",
       "type": "procedure",
       "sortid": 54,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "reversal_red_procedure",
       "metadata": {
@@ -863,18 +863,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -3706,18 +3694,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -5495,6 +5471,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -5636,8 +5624,7 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/entity/FireArrowEntity.java",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/FireArrowRenderer.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/fire_arrow_biome_modifier.json"
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/FireArrowRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -14061,10 +14048,10 @@
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
-      "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
-      "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "gui.craftkaisen.sword_creator.label_materials": "Materials",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",

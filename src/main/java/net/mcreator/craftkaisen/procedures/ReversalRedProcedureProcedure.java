@@ -15,7 +15,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -46,7 +45,7 @@ public class ReversalRedProcedureProcedure {
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
 						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new ReversalRedProjectileEntity(CraftkaisenModEntities.REVERSAL_RED_PROJECTILE.get(), level);
+							AbstractArrow entityToSpawn = new ReversalRedProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
 							entityToSpawn.setOwner(shooter);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);

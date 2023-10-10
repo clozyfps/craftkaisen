@@ -9,6 +9,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
@@ -42,8 +43,6 @@ public class MakiZeninEntity extends Monster {
 		setNoAi(false);
 		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(CraftkaisenModItems.NAGINATA.get()));
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.PONY_TAIL_HELMET.get()));
-		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.JUJUTSU_SORCERER_OUTFIT_CHESTPLATE.get()));
-		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.JUJUTSU_SORCERER_OUTFIT_LEGGINGS.get()));
 	}
 
 	@Override
@@ -54,16 +53,25 @@ public class MakiZeninEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.7, true) {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, CursedspiritgrasshopperEntity.class, true, true));
+		this.targetSelector.addGoal(2, new NearestAttackableTargetGoal(this, CursedspiritrugbyfieldEntity.class, true, true));
+		this.targetSelector.addGoal(3, new NearestAttackableTargetGoal(this, CursedspiritroppongiEntity.class, true, true));
+		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, BaggedHeadCurseUserEntity.class, true, true));
+		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, MahitoEntity.class, true, true));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, CursedspiritrugbyfieldEntity.class, true, true));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, JogoEntity.class, true, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, FingerBearerEntity.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, TojiFushiguroEntity.class, true, true));
+		this.goalSelector.addGoal(10, new MeleeAttackGoal(this, 1.7, true) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(11, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(12, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(13, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(14, new FloatGoal(this));
 	}
 
 	@Override
@@ -74,6 +82,11 @@ public class MakiZeninEntity extends Monster {
 	@Override
 	public double getMyRidingOffset() {
 		return -0.35D;
+	}
+
+	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(CraftkaisenModItems.NAGINATA.get()));
 	}
 
 	@Override
