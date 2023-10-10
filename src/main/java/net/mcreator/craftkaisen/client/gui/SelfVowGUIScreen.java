@@ -1,16 +1,29 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Checkbox;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.SelfVowGUIMenu;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class SelfVowGUIScreen extends AbstractContainerScreen<SelfVowGUIMenu> {
-
 	private final static HashMap<String, Object> guistate = SelfVowGUIMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Checkbox HeartsForCE;
 	Checkbox CEForHearts;
-
 	Button button_vow;
 
 	public SelfVowGUIScreen(SelfVowGUIMenu container, Inventory inventory, Component text) {
@@ -29,11 +42,8 @@ public class SelfVowGUIScreen extends AbstractContainerScreen<SelfVowGUIMenu> {
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
-
 		super.render(ms, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(ms, mouseX, mouseY);
-
 		if (mouseX > leftPos + 11 && mouseX < leftPos + 35 && mouseY > topPos + 21 && mouseY < topPos + 45)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.self_vow_gui.tooltip_will_trade_2_hearts_for_100_more"), mouseX, mouseY);
 		if (mouseX > leftPos + 11 && mouseX < leftPos + 35 && mouseY > topPos + 51 && mouseY < topPos + 75)
@@ -45,10 +55,8 @@ public class SelfVowGUIScreen extends AbstractContainerScreen<SelfVowGUIMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -58,7 +66,6 @@ public class SelfVowGUIScreen extends AbstractContainerScreen<SelfVowGUIMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -81,23 +88,16 @@ public class SelfVowGUIScreen extends AbstractContainerScreen<SelfVowGUIMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		button_vow = new Button(this.leftPos + 90, this.topPos + 173, 40, 20, Component.translatable("gui.craftkaisen.self_vow_gui.button_vow"), e -> {
 		});
-
 		guistate.put("button:button_vow", button_vow);
 		this.addRenderableWidget(button_vow);
-
 		HeartsForCE = new Checkbox(this.leftPos + 13, this.topPos + 23, 20, 20, Component.translatable("gui.craftkaisen.self_vow_gui.HeartsForCE"), false);
-
 		guistate.put("checkbox:HeartsForCE", HeartsForCE);
 		this.addRenderableWidget(HeartsForCE);
 		CEForHearts = new Checkbox(this.leftPos + 13, this.topPos + 53, 20, 20, Component.translatable("gui.craftkaisen.self_vow_gui.CEForHearts"), false);
-
 		guistate.put("checkbox:CEForHearts", CEForHearts);
 		this.addRenderableWidget(CEForHearts);
 	}
-
 }
