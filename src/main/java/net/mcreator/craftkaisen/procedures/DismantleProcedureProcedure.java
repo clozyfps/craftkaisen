@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Comparator;
 
 public class DismantleProcedureProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		{
@@ -38,8 +38,22 @@ public class DismantleProcedureProcedure {
 				if (!(entity == entityiterator)) {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 1, 0.5, 2, 0.5, 0);
+					int horizontalRadiusSphere = (int) 4 - 1;
+					int verticalRadiusSphere = (int) 4 - 1;
+					int yIterationsSphere = verticalRadiusSphere;
+					for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+						for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+							for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+								double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+										+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+								if (distanceSq <= 1.0) {
+									world.destroyBlock(new BlockPos(x + xi, y + i, z + zi), false);
+								}
+							}
+						}
+					}
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLOOD.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 10, 1, 2, 1, 1);
+						_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLOOD.get()), (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 19, 2, 2, 2, 1);
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
 							_level.playSound(null, new BlockPos(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 2,
@@ -56,7 +70,7 @@ public class DismantleProcedureProcedure {
 						}
 					}
 					entityiterator.hurt(DamageSource.GENERIC, 25);
-					entityiterator.setDeltaMovement(new Vec3((0.6 * entity.getLookAngle().x), (0 * entity.getLookAngle().y), (0.6 * entity.getLookAngle().z)));
+					entityiterator.setDeltaMovement(new Vec3((1.5 * entity.getLookAngle().x), (2.2 * entity.getLookAngle().y), (1.5 * entity.getLookAngle().z)));
 				}
 			}
 		}
