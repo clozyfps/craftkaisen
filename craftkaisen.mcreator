@@ -217,6 +217,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "immediatesourceentity",
             "type": "entity"
           },
@@ -11586,6 +11590,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -11674,9 +11694,9 @@
       "registry_name": "prison_realm_gui",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/PrisonRealmGUIButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/client/gui/PrisonRealmGUIScreen.java",
-          "src/main/java/net/mcreator/craftkaisen/world/inventory/PrisonRealmGUIMenu.java",
-          "src/main/java/net/mcreator/craftkaisen/network/PrisonRealmGUIButtonMessage.java"
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/PrisonRealmGUIMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -12663,7 +12683,20 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/CheckMoveHitProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Procedures"
     },
@@ -12827,6 +12860,214 @@
         "dependencies": []
       },
       "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "WoodBindsArmor",
+      "type": "armor",
+      "sortid": 573,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_binds_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/wood_binds_armor_chestplate.json",
+          "src/main/java/net/mcreator/craftkaisen/item/WoodBindsArmorItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "EntityMovementHandler",
+      "type": "procedure",
+      "sortid": 574,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_movement_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/EntityMovementHandlerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/CustomAbilities"
+    },
+    {
+      "name": "PlayerMovementHandler",
+      "type": "procedure",
+      "sortid": 575,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_movement_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PlayerMovementHandlerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities/CustomAbilities"
+    },
+    {
+      "name": "CkAllowCustomTechniques",
+      "type": "gamerule",
+      "sortid": 576,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ck_allow_custom_techniques",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "SetLimitless",
+      "type": "procedure",
+      "sortid": 577,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_limitless",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetLimitlessProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "SetCursedSpeech",
+      "type": "procedure",
+      "sortid": 578,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_cursed_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetCursedSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "SetFlames",
+      "type": "procedure",
+      "sortid": 579,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_flames",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetFlamesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "SetSukuna",
+      "type": "procedure",
+      "sortid": 580,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sukuna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetSukunaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "SetTransfiguration",
+      "type": "procedure",
+      "sortid": 581,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_transfiguration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetTransfigurationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "SetPlants",
+      "type": "procedure",
+      "sortid": 582,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_plants",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetPlantsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "SetClap",
+      "type": "procedure",
+      "sortid": 583,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_clap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetClapProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
     }
   ],
   "variable_elements": [
@@ -13625,11 +13866,13 @@
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "effect.craftkaisen.charge_ce_effect": "Charging",
+      "gamerule.ckAllowCustomTechniques": "Allow Custom Techniques",
       "effect.craftkaisen.sky_of_flames": "SkyOfFlames",
       "item.craftkaisen.megumi_fushiguro_spawn_egg": "Megumi Fushiguro Spawn Egg",
       "key.craftkaisen.flash_step": "Flash Step",
       "advancements.semi_grade_1.descr": "Become a Semi Grade 1 Sorcerer",
       "gui.craftkaisen.binding_vow_gui.label_item": "Item -\u003e",
+      "gui.craftkaisen.self_vow_gui.button_vow": "Vow",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "item.craftkaisen.mechamaru_armor_leggings": "Mechamaru",
       "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
@@ -13648,6 +13891,7 @@
       "gui.craftkaisen.binding_vow_gui.PlayerNameKill": "Player..",
       "effect.craftkaisen.physically_gifted_cooldown": "Cooldown",
       "gui.craftkaisen.technique_creator_gui.AreaBox": "Area",
+      "gui.craftkaisen.self_vow_gui.label_self_vows": "Self Vows",
       "entity.craftkaisen.inventory_curse": "Inventory Curse",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
       "item.craftkaisen.playful_cloud": "Playful Cloud",
@@ -13732,6 +13976,7 @@
       "advancements.grade_3.descr": "Become a Grade 3 Sorcerer",
       "entity.craftkaisen.maximum_meteor": "Maximum Meteor",
       "gui.craftkaisen.design_gui.PrimaryColor": "Primary color..",
+      "gamerule.ckAllowCustomTechniques.description": "Allows custom curse techniques (also disables premade techniques).",
       "effect.craftkaisen.sleeping": "Sleeping",
       "entity.craftkaisen.ultimate_mechamaru": "Ultimate Mechamaru",
       "effect.craftkaisen.idle_transfiguration": "Idle Transfiguration",
@@ -13765,6 +14010,7 @@
       "gui.craftkaisen.sword_creator.label_1_cost": "+1 Cost",
       "item.craftkaisen.bandage_blindfold_helmet": "Bandage Blindfold",
       "block.craftkaisen.prison_realm": "Prison Realm",
+      "gui.craftkaisen.self_vow_gui.tooltip_will_trade_100_from_your_ce_cap": "Will Trade 100 from your CE cap for 2 more hearts.",
       "effect.craftkaisen.weapon_cooldown": "Weapon Cooldown",
       "item.craftkaisen.bagged_head_curse_user_spawn_egg": "Bagged Head Curse User Spawn Egg",
       "key.craftkaisen.open_inventory_curse_bind": "Open Inventory Curse Bind",
@@ -13792,6 +14038,7 @@
       "entity.craftkaisen.prison_realm_mob": "Prison Realm",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
+      "gui.craftkaisen.self_vow_gui.HeartsForCE": "Trade Hearts For Higher Cap",
       "gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat": "I cant assure you that ill beat them.",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2": "Click to upgrade secondary branch!",
@@ -13809,7 +14056,7 @@
       "gui.craftkaisen.binding_vow_gui.label_binding_vow": "Binding Vow",
       "gui.craftkaisen.bases_gui.label_errmsg": "ErrMsg",
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
-      "gui.craftkaisen.technique_creator_gui.BeamBox": "Beam",
+      "gui.craftkaisen.technique_creator_gui.BeamBox": "Touch",
       "effect.craftkaisen.infinity": "Infinity",
       "effect.craftkaisen.cursed_spirit": "Cursed Spirit",
       "entity.craftkaisen.mahito_spike": "Mahito Spike",
@@ -13835,7 +14082,7 @@
       "gui.craftkaisen.main_menu.label_level1": "Level:",
       "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "entity.craftkaisen.wrapped_up": "Wrapped Up",
-      "gui.craftkaisen.binding_vow_gui.KillVow": "Don\u0027t Kill Specific Player",
+      "gui.craftkaisen.binding_vow_gui.KillVow": "Don\u0027t Harm Specific Player",
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
@@ -13854,6 +14101,7 @@
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
       "item.craftkaisen.mahito_spawn_egg": "Special Grade Cursed Spirit: Mahito Spawn Egg",
+      "item.craftkaisen.wood_binds_armor_chestplate": "Wood Binds",
       "itemGroup.tabjjkitems": "JJK Items",
       "entity.craftkaisen.big_fist": "Big Fist",
       "block.craftkaisen.cursed_tool_table": "Cursed Tool Table",
@@ -13863,6 +14111,7 @@
       "gui.craftkaisen.technique_creator_gui.tooltip_imbues_your_current_ct_in_the_at": "Imbues your current CT in the attacks type.",
       "gui.craftkaisen.toji_contract_gui.TojiPlayerKill": "PlayerName",
       "gui.craftkaisen.main_hud.label_quest1": "Quest",
+      "effect.craftkaisen.explosion_effect": "Explosion",
       "item.craftkaisen.blindfold_helmet": "Blindfold",
       "entity.craftkaisen.ember_insect": "Ember Insect",
       "gui.craftkaisen.bases_gui.button_transfigure": "Transfigure",
@@ -13874,6 +14123,7 @@
       "subtitles.electric": "",
       "gamerule.ckProgressivePrestigeDifficulty.description": "Only spawn high level mobs when over a certain prestige",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
+      "gui.craftkaisen.self_vow_gui.tooltip_will_trade_2_hearts_for_100_more": "Will Trade 2 Hearts for 100 more to you CE cap.",
       "key.craftkaisen.leave_enter_mech": "Leave Enter Mech",
       "gui.craftkaisen.binding_vow_gui.label_description": "\"Description\"",
       "advancements.grade_2.descr": "Become a Grade 2 Sorcerer",
@@ -13959,6 +14209,7 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
       "item.craftkaisen.ability_changer": "Ability Changer",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
+      "gui.craftkaisen.self_vow_gui.CEForHearts": "Lower Cap For More Hearts",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
       "gui.craftkaisen.bases_gui.button_corruption": "Corruption",
       "gui.craftkaisen.sword_creator.button_empty": "+",

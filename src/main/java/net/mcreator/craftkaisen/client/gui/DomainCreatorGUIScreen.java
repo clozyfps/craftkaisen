@@ -1,19 +1,34 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.gui.components.Checkbox;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.DomainCreatorGUIMenu;
+import net.mcreator.craftkaisen.network.DomainCreatorGUIButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreatorGUIMenu> {
-
 	private final static HashMap<String, Object> guistate = DomainCreatorGUIMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	EditBox DomainName;
-
 	Checkbox SureHitEffect;
 	Checkbox RepeatedAttack;
 	Checkbox SelfEffect;
-
 	Button button_create;
 
 	public DomainCreatorGUIScreen(DomainCreatorGUIMenu container, Inventory inventory, Component text) {
@@ -32,13 +47,9 @@ public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreato
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
-
 		super.render(ms, mouseX, mouseY, partialTicks);
-
 		DomainName.render(ms, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -46,10 +57,8 @@ public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreato
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -59,10 +68,8 @@ public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreato
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		if (DomainName.isFocused())
 			return DomainName.keyPressed(key, b, c);
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -87,9 +94,7 @@ public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreato
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		DomainName = new EditBox(this.font, this.leftPos + 6, this.topPos + 57, 120, 20, Component.translatable("gui.craftkaisen.domain_creator_gui.DomainName")) {
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.domain_creator_gui.DomainName").getString());
@@ -98,7 +103,6 @@ public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreato
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
-
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.craftkaisen.domain_creator_gui.DomainName").getString());
 				else
@@ -108,7 +112,6 @@ public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreato
 			@Override
 			public void moveCursorTo(int pos) {
 				super.moveCursorTo(pos);
-
 				if (getValue().isEmpty())
 					setSuggestion(Component.translatable("gui.craftkaisen.domain_creator_gui.DomainName").getString());
 				else
@@ -116,32 +119,24 @@ public class DomainCreatorGUIScreen extends AbstractContainerScreen<DomainCreato
 			}
 		};
 		DomainName.setMaxLength(32767);
-
 		guistate.put("text:DomainName", DomainName);
 		this.addWidget(this.DomainName);
-
 		button_create = new Button(this.leftPos + 183, this.topPos + 106, 56, 20, Component.translatable("gui.craftkaisen.domain_creator_gui.button_create"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new DomainCreatorGUIButtonMessage(0, x, y, z));
 				DomainCreatorGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_create", button_create);
 		this.addRenderableWidget(button_create);
-
 		SureHitEffect = new Checkbox(this.leftPos + 138, this.topPos + 5, 20, 20, Component.translatable("gui.craftkaisen.domain_creator_gui.SureHitEffect"), false);
-
 		guistate.put("checkbox:SureHitEffect", SureHitEffect);
 		this.addRenderableWidget(SureHitEffect);
 		RepeatedAttack = new Checkbox(this.leftPos + 138, this.topPos + 32, 20, 20, Component.translatable("gui.craftkaisen.domain_creator_gui.RepeatedAttack"), false);
-
 		guistate.put("checkbox:RepeatedAttack", RepeatedAttack);
 		this.addRenderableWidget(RepeatedAttack);
 		SelfEffect = new Checkbox(this.leftPos + 138, this.topPos + 59, 20, 20, Component.translatable("gui.craftkaisen.domain_creator_gui.SelfEffect"), false);
-
 		guistate.put("checkbox:SelfEffect", SelfEffect);
 		this.addRenderableWidget(SelfEffect);
 	}
-
 }

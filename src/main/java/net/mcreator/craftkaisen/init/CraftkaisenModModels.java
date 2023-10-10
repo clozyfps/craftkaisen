@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.craftkaisen.client.model.Modelwood_binds;
 import net.mcreator.craftkaisen.client.model.Modeltojishirt;
 import net.mcreator.craftkaisen.client.model.Modeltojipants;
 import net.mcreator.craftkaisen.client.model.Modeltoji_curse;
@@ -95,6 +96,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(ModelFingerBearernew.LAYER_LOCATION, ModelFingerBearernew::createBodyLayer);
 		event.registerLayerDefinition(Modeljjkoutfiot.LAYER_LOCATION, Modeljjkoutfiot::createBodyLayer);
 		event.registerLayerDefinition(Modelprisonrealmarmornew.LAYER_LOCATION, Modelprisonrealmarmornew::createBodyLayer);
+		event.registerLayerDefinition(Modelwood_binds.LAYER_LOCATION, Modelwood_binds::createBodyLayer);
 		event.registerLayerDefinition(Modelroppongicursedspirit.LAYER_LOCATION, Modelroppongicursedspirit::createBodyLayer);
 		event.registerLayerDefinition(Modelblackblindfold.LAYER_LOCATION, Modelblackblindfold::createBodyLayer);
 		event.registerLayerDefinition(Modeltoji_curse.LAYER_LOCATION, Modeltoji_curse::createBodyLayer);

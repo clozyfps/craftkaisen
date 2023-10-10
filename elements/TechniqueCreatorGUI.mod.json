@@ -139,7 +139,7 @@
         "type": "checkbox",
         "data": {
           "name": "BeamBox",
-          "text": "Beam",
+          "text": "Touch",
           "x": 144,
           "y": 148
         }

@@ -113,6 +113,21 @@ public class SwitchTechniquePressedProcedure {
 						});
 					}
 				}
+			} else {
+				{
+					double _setval = 1;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TechniqueSwitch = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Name;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 3) {
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).UnlockedMoves >= 4) {
@@ -146,6 +161,21 @@ public class SwitchTechniquePressedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+				}
+			} else {
+				{
+					double _setval = 1;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TechniqueSwitch = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Name;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 		} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 4) {
@@ -181,6 +211,21 @@ public class SwitchTechniquePressedProcedure {
 						});
 					}
 				}
+			} else {
+				{
+					double _setval = 1;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TechniqueSwitch = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Name;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 5) {
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).UnlockedMoves >= 6) {
@@ -215,6 +260,21 @@ public class SwitchTechniquePressedProcedure {
 						});
 					}
 				}
+			} else {
+				{
+					double _setval = 1;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TechniqueSwitch = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Name;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 6) {
 			if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).UnlockedMoves >= 7) {
@@ -248,6 +308,21 @@ public class SwitchTechniquePressedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+				}
+			} else {
+				{
+					double _setval = 1;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.TechniqueSwitch = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					String _setval = (entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Move1Name;
+					entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.SelectedTechnique = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 		} else if ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).TechniqueSwitch == 7) {
