@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.item.SukunaFightingArmorItem;
 import net.mcreator.craftkaisen.item.StopItem;
 import net.mcreator.craftkaisen.item.SleepItem;
 import net.mcreator.craftkaisen.item.RootProjectileItem;
+import net.mcreator.craftkaisen.item.ReversalRedProjectileItem;
 import net.mcreator.craftkaisen.item.PrisonRealmSealedItem;
 import net.mcreator.craftkaisen.item.PrisonRealmArmorItem;
 import net.mcreator.craftkaisen.item.PonyTailItem;
@@ -153,6 +154,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> MAKI_ZENIN_SPAWN_EGG = REGISTRY.register("maki_zenin_spawn_egg",
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MAKI_ZENIN, -15000778, -14068422, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> NAGINATA = REGISTRY.register("naginata", () -> new NaginataItem());
+	public static final RegistryObject<Item> REVERSAL_RED_PROJECTILE = REGISTRY.register("reversal_red_projectile", () -> new ReversalRedProjectileItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

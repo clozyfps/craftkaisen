@@ -852,7 +852,7 @@
       "name": "ReversalRedProcedure",
       "type": "procedure",
       "sortid": 54,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_procedure",
       "metadata": {
@@ -13161,19 +13161,19 @@
       "path": "~/Potion Effects"
     },
     {
-      "name": "Naginata",
-      "type": "tool",
-      "sortid": 580,
+      "name": "PonyTail",
+      "type": "armor",
+      "sortid": 578,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "naginata",
+      "registry_name": "pony_tail",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/NaginataItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/naginata.json"
+          "src/main/java/net/mcreator/craftkaisen/item/PonyTailItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/pony_tail_helmet.json"
         ]
       },
-      "path": "~/Items"
+      "path": "~/Armor"
     },
     {
       "name": "MakiZenin",
@@ -13193,19 +13193,75 @@
       "path": "~/Mobs"
     },
     {
-      "name": "PonyTail",
-      "type": "armor",
-      "sortid": 578,
+      "name": "Naginata",
+      "type": "tool",
+      "sortid": 580,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "pony_tail",
+      "registry_name": "naginata",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/PonyTailItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/pony_tail_helmet.json"
+          "src/main/java/net/mcreator/craftkaisen/item/NaginataItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/naginata.json"
         ]
       },
-      "path": "~/Armor"
+      "path": "~/Items"
+    },
+    {
+      "name": "ReversalRedProjectile",
+      "type": "rangeditem",
+      "sortid": 585,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ReversalRedProjectileEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/reversal_red_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/item/ReversalRedProjectileItem.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ReversalRedProjectileWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 584,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reversal_red_projectile_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReversalRedProjectileWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
     },
     {
       "name": "SetCursedTechnique",
@@ -13244,20 +13300,6 @@
         ]
       },
       "path": "~/Commands"
-    },
-    {
-      "name": "ReverseCursedTechniqueAdvancement",
-      "type": "achievement",
-      "sortid": 587,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "reverse_cursed_technique_advancement",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/craftkaisen/advancements/reverse_cursed_technique_advancement.json"
-        ]
-      },
-      "path": "~/Advancements"
     }
   ],
   "variable_elements": [
@@ -14048,10 +14090,10 @@
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
-      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
-      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -14214,6 +14256,7 @@
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
       "gui.craftkaisen.sword_creator.GreatswordBox": "Greatsword",
       "item.craftkaisen.blast_away": "Blast Away",
+      "item.craftkaisen.reversal_red_projectile": "Reversal Red Projectile",
       "subtitles.veil.use": "Veil Used",
       "gui.craftkaisen.main_menu.label_fame": "Fame:",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iv_increases_speedss9": "Agility IV - Increases speed.§9 2 SP \u0026 GRADE 3",
@@ -14290,14 +14333,12 @@
       "item.craftkaisen.unknown_man_spawn_egg": "Unknown Man Spawn Egg",
       "item.craftkaisen.root_projectile": "Root Projectile",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
-      "advancements.reverse_cursed_technique_advancement.descr": "The core of cursed energy.",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "advancements.grade_1.descr": "Become a Grade 1 Sorcerer",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1": "Click to upgrade main cursed energy branch!",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
       "item.craftkaisen.mahito_spawn_egg": "Special Grade Cursed Spirit: Mahito Spawn Egg",
-      "advancements.reverse_cursed_technique_advancement.title": "Reverse Cursed Technique",
       "item.craftkaisen.wood_binds_armor_chestplate": "Wood Binds",
       "itemGroup.tabjjkitems": "JJK Items",
       "entity.craftkaisen.big_fist": "Big Fist",

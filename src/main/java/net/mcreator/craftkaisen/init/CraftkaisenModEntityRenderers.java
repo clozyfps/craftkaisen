@@ -105,5 +105,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.BOLT_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.ROOT_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAKI_ZENIN.get(), MakiZeninRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.REVERSAL_RED_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

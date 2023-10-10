@@ -81,6 +81,70 @@ public class SkillTreeMainGUIButtonMessage {
 
 			ClickedMainPowerProcedure.execute(entity);
 		}
+		if (buttonID == 4) {
+
+			ClickedMainDefenseProcedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			ClickedMainDefenseProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			ClickedMainDefenseProcedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			ClickedMainDefenseProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			ClickedMainCursedEnergyProcedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			ClickedMainCursedEnergyProcedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			ClickedMainCursedEnergyProcedure.execute(entity);
+		}
+		if (buttonID == 11) {
+
+			ClickedMainCursedEnergyProcedure.execute(entity);
+		}
+		if (buttonID == 12) {
+
+			ClickedMainPowerProcedure.execute(entity);
+		}
+		if (buttonID == 13) {
+
+			ClickedMainPowerProcedure.execute(entity);
+		}
+		if (buttonID == 14) {
+
+			ClickedMainPowerProcedure.execute(entity);
+		}
+		if (buttonID == 15) {
+
+			ClickedMainPowerProcedure.execute(entity);
+		}
+		if (buttonID == 16) {
+
+			ClickedMainAgilityProcedure.execute(entity);
+		}
+		if (buttonID == 17) {
+
+			ClickedMainAgilityProcedure.execute(entity);
+		}
+		if (buttonID == 18) {
+
+			ClickedMainAgilityProcedure.execute(entity);
+		}
+		if (buttonID == 19) {
+
+			ClickedMainAgilityProcedure.execute(entity);
+		}
 	}
 
 	@SubscribeEvent
