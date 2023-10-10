@@ -9,7 +9,7 @@ public class ReversalRedEntityOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		CraftkaisenMod.queueServerWork(60, () -> {
+		CraftkaisenMod.queueServerWork(32, () -> {
 			if (!entity.level.isClientSide())
 				entity.discard();
 		});

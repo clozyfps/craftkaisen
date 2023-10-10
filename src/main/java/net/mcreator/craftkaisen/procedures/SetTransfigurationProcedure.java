@@ -37,7 +37,7 @@ public class SetTransfigurationProcedure {
 			});
 		}
 		{
-			String _setval = "Bird Wings";
+			String _setval = "Big Fist";
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move3Name = _setval;
 				capability.syncPlayerVariables(entity);
@@ -51,7 +51,7 @@ public class SetTransfigurationProcedure {
 			});
 		}
 		{
-			String _setval = "Self Embodiment Of Perfection";
+			String _setval = "Bird Wings";
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move5Name = _setval;
 				capability.syncPlayerVariables(entity);

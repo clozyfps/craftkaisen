@@ -62,23 +62,20 @@ public class SlamProcedure {
 				world.destroyBlock(new BlockPos(x, y, z), false);
 				entity.getPersistentData().putBoolean("slam", false);
 				entity.hurt(DamageSource.GENERIC, 9);
-				sx = -3;
-				found = false;
-				for (int index0 = 0; index0 < 6; index0++) {
-					sy = -3;
-					for (int index1 = 0; index1 < 6; index1++) {
-						sz = -3;
-						for (int index2 = 0; index2 < 6; index2++) {
-							found = true;
-							sz = sz + 1;
+				int horizontalRadiusSphere = (int) 4 - 1;
+				int verticalRadiusSphere = (int) 4 - 1;
+				int yIterationsSphere = verticalRadiusSphere;
+				for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
+					for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
+						for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
+							double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
+									+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
+							if (distanceSq <= 1.0) {
+								if (world instanceof ServerLevel _level)
+									FallingBlockEntity.fall(_level, new BlockPos(x, y, z), (world.getBlockState(new BlockPos(x + xi, y + i, z + zi))));
+							}
 						}
-						sy = sy + 1;
 					}
-					sx = sx + 1;
-				}
-				if (found == true) {
-					if (world instanceof ServerLevel _level)
-						FallingBlockEntity.fall(_level, new BlockPos(x + sx, y + sy, z + sz), (world.getBlockState(new BlockPos(x + sx, y + sy, z + sz))));
 				}
 			}
 		}
