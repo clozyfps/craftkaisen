@@ -30,7 +30,7 @@
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
     "equipmentMainHand": {
-      "value": ""
+      "value": "CUSTOM:Naginata"
     },
     "equipmentOffHand": {
       "value": ""
