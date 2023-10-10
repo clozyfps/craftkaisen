@@ -40,6 +40,7 @@ public class MakiZeninEntity extends Monster {
 		maxUpStep = 0.6f;
 		xpReward = 0;
 		setNoAi(false);
+		this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(CraftkaisenModItems.NAGINATA.get()));
 		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.PONY_TAIL_HELMET.get()));
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.JUJUTSU_SORCERER_OUTFIT_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.JUJUTSU_SORCERER_OUTFIT_LEGGINGS.get()));

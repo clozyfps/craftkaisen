@@ -1,6 +1,18 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.network.chat.Component;
+
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 import javax.annotation.Nullable;
 
@@ -8,8 +20,9 @@ import javax.annotation.Nullable;
 public class CheckMoveHitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity, event.getSource().getEntity());
 		}
 	}
 

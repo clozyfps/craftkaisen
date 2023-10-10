@@ -1,8 +1,45 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.RootProjectileEntity;
+import net.mcreator.craftkaisen.CraftkaisenMod;
+
+import java.util.stream.Collectors;
+import java.util.Map;
+import java.util.List;
+import java.util.Comparator;
 
 public class ExplosionEffectEffectStartedAppliedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -165,7 +202,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 150, 1));
+										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CORRUPTED_POTION.get(), 150, 1));
 								}
 							}
 						}
@@ -177,7 +214,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity)
-										_entity.removeEffect(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get());
+										_entity.removeEffect(CraftkaisenModMobEffects.CORRUPTED_POTION.get());
 								}
 							}
 						}
@@ -213,7 +250,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -262,7 +299,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -465,7 +502,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 150, 1));
+										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CORRUPTED_POTION.get(), 150, 1));
 								}
 							}
 						}
@@ -477,7 +514,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity)
-										_entity.removeEffect(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get());
+										_entity.removeEffect(CraftkaisenModMobEffects.CORRUPTED_POTION.get());
 								}
 							}
 						}
@@ -513,7 +550,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -562,7 +599,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -765,7 +802,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 150, 1));
+										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CORRUPTED_POTION.get(), 150, 1));
 								}
 							}
 						}
@@ -777,7 +814,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity)
-										_entity.removeEffect(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get());
+										_entity.removeEffect(CraftkaisenModMobEffects.CORRUPTED_POTION.get());
 								}
 							}
 						}
@@ -813,7 +850,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -862,7 +899,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1065,7 +1102,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 150, 1));
+										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CORRUPTED_POTION.get(), 150, 1));
 								}
 							}
 						}
@@ -1077,7 +1114,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity)
-										_entity.removeEffect(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get());
+										_entity.removeEffect(CraftkaisenModMobEffects.CORRUPTED_POTION.get());
 								}
 							}
 						}
@@ -1113,7 +1150,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1162,7 +1199,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1365,7 +1402,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 150, 1));
+										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CORRUPTED_POTION.get(), 150, 1));
 								}
 							}
 						}
@@ -1377,7 +1414,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity)
-										_entity.removeEffect(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get());
+										_entity.removeEffect(CraftkaisenModMobEffects.CORRUPTED_POTION.get());
 								}
 							}
 						}
@@ -1413,7 +1450,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1462,7 +1499,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1665,7 +1702,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level.isClientSide())
-										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get(), 150, 1));
+										_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CORRUPTED_POTION.get(), 150, 1));
 								}
 							}
 						}
@@ -1677,7 +1714,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
 									if (entityiterator instanceof LivingEntity _entity)
-										_entity.removeEffect(CraftkaisenModMobEffects.DELETED_MOD_ELEMENT.get());
+										_entity.removeEffect(CraftkaisenModMobEffects.CORRUPTED_POTION.get());
 								}
 							}
 						}
@@ -1713,7 +1750,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1762,7 +1799,7 @@ public class ExplosionEffectEffectStartedAppliedProcedure {
 							if (world instanceof ServerLevel projectileLevel) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new RootProjectileEntity(CraftkaisenModEntities.ROOT_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
