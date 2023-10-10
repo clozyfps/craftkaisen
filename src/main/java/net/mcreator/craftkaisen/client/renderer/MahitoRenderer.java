@@ -18,6 +18,6 @@ public class MahitoRenderer extends HumanoidMobRenderer<MahitoEntity, HumanoidMo
 
 	@Override
 	public ResourceLocation getTextureLocation(MahitoEntity entity) {
-		return new ResourceLocation("craftkaisen:textures/entities/mahitoh.png");
+		return new ResourceLocation("craftkaisen:textures/entities/mahit.png");
 	}
 }

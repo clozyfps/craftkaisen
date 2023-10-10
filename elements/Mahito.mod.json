@@ -5,7 +5,7 @@
     "mobName": "Special Grade Cursed Spirit: Mahito",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "mahitoh.png",
+    "mobModelTexture": "mahit.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false

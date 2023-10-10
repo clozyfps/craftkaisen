@@ -39,7 +39,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.mcreator.craftkaisen.procedures.SatoruGojoRightClickedOnEntityProcedure;
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnInitialEntitySpawnProcedure;
 import net.mcreator.craftkaisen.procedures.SatoruGojoOnEntityTickUpdateProcedure;
-import net.mcreator.craftkaisen.procedures.SatoruGojoEntityIsHurtProcedure;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 
@@ -55,7 +54,7 @@ public class SatoruGojoEntity extends Monster {
 		maxUpStep = 0.6f;
 		xpReward = 3;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.BANDAGE_BLINDFOLD_HELMET.get()));
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.BLINDFOLD_HELMET.get()));
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_LEGGINGS.get()));
 	}
@@ -98,12 +97,6 @@ public class SatoruGojoEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
-	}
-
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		SatoruGojoEntityIsHurtProcedure.execute(this);
-		return super.hurt(source, amount);
 	}
 
 	@Override

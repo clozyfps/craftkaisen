@@ -5,7 +5,7 @@
     "mobName": "Satoru Gojo",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "gojosatoru.png",
+    "mobModelTexture": "satoru_gojo.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -36,7 +36,7 @@
       "value": ""
     },
     "equipmentHelmet": {
-      "value": "CUSTOM:BandageBlindfold.helmet"
+      "value": "CUSTOM:Blindfold.helmet"
     },
     "equipmentBody": {
       "value": "CUSTOM:GojoUniform.body"
@@ -95,9 +95,6 @@
     },
     "stepSound": {
       "value": ""
-    },
-    "whenMobIsHurt": {
-      "name": "SatoruGojoEntityIsHurt"
     },
     "onRightClickedOn": {
       "name": "SatoruGojoRightClickedOnEntity"
