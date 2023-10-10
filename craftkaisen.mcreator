@@ -12973,6 +12973,53 @@
         ]
       },
       "path": "~/Potion Effects"
+    },
+    {
+      "name": "PonyTail",
+      "type": "armor",
+      "sortid": 578,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pony_tail",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/pony_tail_helmet.json",
+          "src/main/java/net/mcreator/craftkaisen/item/PonyTailItem.java"
+        ]
+      },
+      "path": "~/Armor"
+    },
+    {
+      "name": "MakiZenin",
+      "type": "livingentity",
+      "sortid": 579,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maki_zenin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MakiZeninRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/maki_zenin_biome_modifier.json",
+          "src/main/resources/assets/craftkaisen/models/item/maki_zenin_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/MakiZeninEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Naginata",
+      "type": "tool",
+      "sortid": 580,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naginata",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/NaginataItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/naginata.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -13763,10 +13810,10 @@
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
-      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
-      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -13774,6 +13821,7 @@
       "effect.craftkaisen.sky_of_flames": "SkyOfFlames",
       "item.craftkaisen.megumi_fushiguro_spawn_egg": "Megumi Fushiguro Spawn Egg",
       "key.craftkaisen.flash_step": "Flash Step",
+      "item.craftkaisen.naginata": "Naginata",
       "advancements.semi_grade_1.descr": "Become a Semi Grade 1 Sorcerer",
       "gui.craftkaisen.binding_vow_gui.label_item": "Item -\u003e",
       "gui.craftkaisen.self_vow_gui.button_vow": "Vow",
@@ -13841,6 +13889,7 @@
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
       "advancements.flash_step_advancement.title": "Flash Step",
       "gui.craftkaisen.main_hud.label_x1": "X",
+      "item.craftkaisen.maki_zenin_spawn_egg": "Maki Zenin Spawn Egg",
       "effect.craftkaisen.rct_healing": "Reverse Cursed Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
       "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
@@ -13863,6 +13912,7 @@
       "gui.craftkaisen.main_hud.label_ultimate": "Ultimate",
       "entity.craftkaisen.magma_rock": "Magma Rock",
       "gui.craftkaisen.sword_creator.label_diamond_blocks": "Diamond Blocks",
+      "entity.craftkaisen.maki_zenin": "Maki Zenin",
       "key.craftkaisen.charge_cursed_energy": "Charge Cursed Energy",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "item.craftkaisen.mechamaru_armor_helmet": "Mechamaru",
@@ -13936,6 +13986,7 @@
       "gui.craftkaisen.technique_creator_gui.BoltBox": "Bolt",
       "item.craftkaisen.magma_rock_projectile": "Magma Rock Projectile",
       "item.craftkaisen.prison_realm_sealed": "Prison Realm Sealed",
+      "item.craftkaisen.pony_tail_helmet": "Pony Tail",
       "advancements.semi_grade_1.title": "Semi Grade 1",
       "key.craftkaisen.leave_mech": "Leave Mech",
       "entity.craftkaisen.prison_realm_mob": "Prison Realm",
