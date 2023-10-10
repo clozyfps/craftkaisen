@@ -35,6 +35,7 @@ import net.mcreator.craftkaisen.client.model.Modelmechamaruofflinenew;
 import net.mcreator.craftkaisen.client.model.Modelmechamaruoffline;
 import net.mcreator.craftkaisen.client.model.Modelmaximummeteornewwww;
 import net.mcreator.craftkaisen.client.model.Modelmalevolentshrine;
+import net.mcreator.craftkaisen.client.model.Modelmakiponytail;
 import net.mcreator.craftkaisen.client.model.Modelmahoraga_wheel;
 import net.mcreator.craftkaisen.client.model.Modelmahito;
 import net.mcreator.craftkaisen.client.model.Modelmagmaprojectile;
@@ -65,6 +66,7 @@ import net.mcreator.craftkaisen.client.model.ModelFingerBearer;
 public class CraftkaisenModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelmakiponytail.LAYER_LOCATION, Modelmakiponytail::createBodyLayer);
 		event.registerLayerDefinition(Modelprison_realm_mob.LAYER_LOCATION, Modelprison_realm_mob::createBodyLayer);
 		event.registerLayerDefinition(Modelfist.LAYER_LOCATION, Modelfist::createBodyLayer);
 		event.registerLayerDefinition(Modelsixeyes.LAYER_LOCATION, Modelsixeyes::createBodyLayer);

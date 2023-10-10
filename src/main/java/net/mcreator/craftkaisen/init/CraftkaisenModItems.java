@@ -28,7 +28,9 @@ import net.mcreator.craftkaisen.item.SleepItem;
 import net.mcreator.craftkaisen.item.RootProjectileItem;
 import net.mcreator.craftkaisen.item.PrisonRealmSealedItem;
 import net.mcreator.craftkaisen.item.PrisonRealmArmorItem;
+import net.mcreator.craftkaisen.item.PonyTailItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MechamaruArmorItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.MagmaRockProjectileItem;
@@ -147,6 +149,10 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> ABILITY_CHANGER = REGISTRY.register("ability_changer", () -> new AbilityChangerItem());
 	public static final RegistryObject<Item> WOOD_BINDS_ARMOR_CHESTPLATE = REGISTRY.register("wood_binds_armor_chestplate", () -> new WoodBindsArmorItem.Chestplate());
 	public static final RegistryObject<Item> ROOT_PROJECTILE = REGISTRY.register("root_projectile", () -> new RootProjectileItem());
+	public static final RegistryObject<Item> PONY_TAIL_HELMET = REGISTRY.register("pony_tail_helmet", () -> new PonyTailItem.Helmet());
+	public static final RegistryObject<Item> MAKI_ZENIN_SPAWN_EGG = REGISTRY.register("maki_zenin_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MAKI_ZENIN, -15000778, -14068422, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> NAGINATA = REGISTRY.register("naginata", () -> new NaginataItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

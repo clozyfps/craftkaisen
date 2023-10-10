@@ -22,6 +22,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
+import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 
 import javax.annotation.Nullable;
@@ -87,6 +88,13 @@ public class EntityHitProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(CraftkaisenModMobEffects.INFINITY.get());
 			} else {
+				if (event != null && event.isCancelable()) {
+					event.setCanceled(true);
+				}
+			}
+		}
+		if (entity instanceof SatoruGojoEntity) {
+			if (!((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == CraftkaisenModItems.INVERTED_SPEAROF_HEAVEN.get())) {
 				if (event != null && event.isCancelable()) {
 					event.setCanceled(true);
 				}

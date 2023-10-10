@@ -12707,12 +12707,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ExplosionAttackProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Abilities/CustomAbilities"
     },
@@ -12858,28 +12853,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/ExplosionEffectEffectStartedAppliedProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Potion Effects/Procedures"
     },
@@ -13224,6 +13198,53 @@
         ]
       },
       "path": "~/Advancements"
+    },
+    {
+      "name": "Naginata",
+      "type": "tool",
+      "sortid": 580,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "naginata",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/NaginataItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/naginata.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "MakiZenin",
+      "type": "livingentity",
+      "sortid": 579,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maki_zenin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/MakiZeninEntity.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/maki_zenin_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MakiZeninRenderer.java",
+          "src/main/resources/assets/craftkaisen/models/item/maki_zenin_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "PonyTail",
+      "type": "armor",
+      "sortid": 578,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pony_tail",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/PonyTailItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/pony_tail_helmet.json"
+        ]
+      },
+      "path": "~/Armor"
     }
   ],
   "variable_elements": [
@@ -14252,14 +14273,12 @@
       "item.craftkaisen.unknown_man_spawn_egg": "Unknown Man Spawn Egg",
       "item.craftkaisen.root_projectile": "Root Projectile",
       "effect.craftkaisen.move_5_cooldown": "Move Five Cooldown",
-      "advancements.reverse_cursed_technique_advancement.descr": "The core of cursed energy.",
       "effect.craftkaisen.move_2_cooldown": "Move Two Cooldown",
       "advancements.grade_1.descr": "Become a Grade 1 Sorcerer",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1": "Click to upgrade main cursed energy branch!",
       "effect.craftkaisen.move_ultimate_cooldown": "Ultimate Cooldown",
       "item.craftkaisen.twist": "Twist",
       "item.craftkaisen.mahito_spawn_egg": "Special Grade Cursed Spirit: Mahito Spawn Egg",
-      "advancements.reverse_cursed_technique_advancement.title": "Reverse Cursed Technique",
       "item.craftkaisen.wood_binds_armor_chestplate": "Wood Binds",
       "itemGroup.tabjjkitems": "JJK Items",
       "entity.craftkaisen.big_fist": "Big Fist",

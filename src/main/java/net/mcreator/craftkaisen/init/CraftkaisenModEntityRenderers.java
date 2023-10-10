@@ -23,6 +23,7 @@ import net.mcreator.craftkaisen.client.renderer.PrisonRealmMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
+import net.mcreator.craftkaisen.client.renderer.MakiZeninRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoSpikeRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
@@ -103,5 +104,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.PRISON_REALM_MOB.get(), PrisonRealmMobRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.BOLT_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.ROOT_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.MAKI_ZENIN.get(), MakiZeninRenderer::new);
 	}
 }

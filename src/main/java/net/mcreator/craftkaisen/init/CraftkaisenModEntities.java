@@ -33,6 +33,7 @@ import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
+import net.mcreator.craftkaisen.entity.MakiZeninEntity;
 import net.mcreator.craftkaisen.entity.MahitoSpikeEntity;
 import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockProjectileEntity;
@@ -228,6 +229,10 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<BoltProjectileEntity>of(BoltProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BoltProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<RootProjectileEntity>> ROOT_PROJECTILE = register("projectile_root_projectile",
 			EntityType.Builder.<RootProjectileEntity>of(RootProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(RootProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<MakiZeninEntity>> MAKI_ZENIN = register("maki_zenin",
+			EntityType.Builder.<MakiZeninEntity>of(MakiZeninEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MakiZeninEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -271,6 +276,7 @@ public class CraftkaisenModEntities {
 			BaggedHeadCurseUserEntity.init();
 			ReversalRedEntityEntity.init();
 			PrisonRealmMobEntity.init();
+			MakiZeninEntity.init();
 		});
 	}
 
@@ -311,5 +317,6 @@ public class CraftkaisenModEntities {
 		event.put(BAGGED_HEAD_CURSE_USER.get(), BaggedHeadCurseUserEntity.createAttributes().build());
 		event.put(REVERSAL_RED_ENTITY.get(), ReversalRedEntityEntity.createAttributes().build());
 		event.put(PRISON_REALM_MOB.get(), PrisonRealmMobEntity.createAttributes().build());
+		event.put(MAKI_ZENIN.get(), MakiZeninEntity.createAttributes().build());
 	}
 }
