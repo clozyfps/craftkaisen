@@ -18,6 +18,7 @@ import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.EsoEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritmouthEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
 
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public class CursedSpiritSetProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof CursedspiritgrasshopperEntity || entity instanceof CursedspiritroppongiEntity || entity instanceof CursedspiritrugbyfieldEntity || entity instanceof FlyHeadEntity) {
+		if (entity instanceof CursedspiritgrasshopperEntity || entity instanceof CursedspiritroppongiEntity || entity instanceof CursedspiritrugbyfieldEntity || entity instanceof CursedspiritmouthEntity || entity instanceof FlyHeadEntity) {
 			if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.CURSED_SPIRIT.get(), 999999, 0, false, false));
 		} else if (entity instanceof JogoEntity || entity instanceof EsoEntity || entity instanceof MahitoEntity || entity instanceof SukunaEntity || entity instanceof FingerBearerEntity) {

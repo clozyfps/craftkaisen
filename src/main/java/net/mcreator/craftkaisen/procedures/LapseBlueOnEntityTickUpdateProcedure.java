@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
@@ -81,23 +80,6 @@ public class LapseBlueOnEntityTickUpdateProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!(entityiterator == entity)) {
 					entityiterator.setDeltaMovement(new Vec3((entity.getX() - entityiterator.getX()), (entity.getY() - entityiterator.getY()), (entity.getZ() - entityiterator.getZ())));
-				}
-			}
-		}
-		int horizontalRadiusSphere = (int) 6 - 1;
-		int verticalRadiusSphere = (int) 6 - 1;
-		int yIterationsSphere = verticalRadiusSphere;
-		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
-			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-					if (distanceSq <= 1.0) {
-						if (!((world.getBlockState(new BlockPos(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR)) {
-							if (world instanceof ServerLevel _level)
-								FallingBlockEntity.fall(_level, new BlockPos(entity.getX(), entity.getY(), entity.getZ()), (world.getBlockState(new BlockPos(x + xi, y + i, z + zi))));
-						}
-					}
 				}
 			}
 		}

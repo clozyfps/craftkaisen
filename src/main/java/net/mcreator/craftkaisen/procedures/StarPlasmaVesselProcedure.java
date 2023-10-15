@@ -123,6 +123,7 @@ public class StarPlasmaVesselProcedure {
 					}.compareDistOf(x, y, z)).findFirst().orElse(null)) instanceof Mob _entity && entity instanceof LivingEntity _ent)
 						_entity.setTarget(_ent);
 				});
+				entity.getPersistentData().putDouble("boxheadtimer", 0);
 			}
 		}
 	}

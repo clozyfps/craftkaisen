@@ -39,12 +39,17 @@ public class SatoruGojoRightClickedOnEntityProcedure {
 					});
 				}
 			} else if (((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).Mentor).equals("Gojo")) {
-				if (sourceentity instanceof Player _player && !_player.level.isClientSide())
-					_player.displayClientMessage(Component.literal("\u00A7a Whats up? Pick a Option - 1. Grade Referral 2. WIP"), false);
-				sourceentity.getPersistentData().putBoolean("mentorselect", true);
-				CraftkaisenMod.queueServerWork(400, () -> {
-					sourceentity.getPersistentData().putBoolean("mentorselect", false);
-				});
+				if ((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).DoingQuest == false) {
+					if (sourceentity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7a Whats up? Pick a Option - 1. Grade Referral 2. WIP"), false);
+					sourceentity.getPersistentData().putBoolean("mentorselect", true);
+					CraftkaisenMod.queueServerWork(400, () -> {
+						sourceentity.getPersistentData().putBoolean("mentorselect", false);
+					});
+				} else if ((sourceentity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).DoingQuest == true) {
+					if (sourceentity instanceof Player _player && !_player.level.isClientSide())
+						_player.displayClientMessage(Component.literal("\u00A7l Doing Mission Already.."), false);
+				}
 			}
 		}
 	}
