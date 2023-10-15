@@ -384,110 +384,6 @@
         }
       },
       {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_secondary_branc",
-          "text": {
-            "fixedValue": "Click to upgrade secondary branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 40,
-          "y": 60
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_main_defense_br",
-          "text": {
-            "fixedValue": "Click to upgrade main defense branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 154,
-          "y": 60
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_secondary_branc1",
-          "text": {
-            "fixedValue": "Click to upgrade secondary branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 31,
-          "y": 156
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_main_power_bran",
-          "text": {
-            "fixedValue": "Click to upgrade main power branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 154,
-          "y": 155
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_main_agility_br",
-          "text": {
-            "fixedValue": "Click to upgrade main agility branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 249,
-          "y": 156
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_main_power_bran1",
-          "text": {
-            "fixedValue": "Click to upgrade main cursed energy branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 249,
-          "y": 60
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_secondary_branc2",
-          "text": {
-            "fixedValue": "Click to upgrade secondary branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 271,
-          "y": 133
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_click_to_upgrade_secondary_branc3",
-          "text": {
-            "fixedValue": "Click to upgrade secondary branch!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 326,
-          "y": 16
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_clicked_core",
@@ -496,8 +392,8 @@
           "onClick": {
             "name": "ClickedMainDefense"
           },
-          "x": 189,
-          "y": 81
+          "x": 154,
+          "y": 60
         }
       },
       {
@@ -509,8 +405,8 @@
           "onClick": {
             "name": "ClickedMainCursedEnergy"
           },
-          "x": 231,
-          "y": 96
+          "x": 249,
+          "y": 60
         }
       },
       {
@@ -522,8 +418,8 @@
           "onClick": {
             "name": "ClickedMainAgility"
           },
-          "x": 214,
-          "y": 137
+          "x": 249,
+          "y": 156
         }
       },
       {
@@ -535,8 +431,8 @@
           "onClick": {
             "name": "ClickedMainPower"
           },
-          "x": 175,
-          "y": 121
+          "x": 155,
+          "y": 156
         }
       },
       {
@@ -777,6 +673,214 @@
           },
           "x": 345,
           "y": 174
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core4",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainDefense"
+          },
+          "x": 116,
+          "y": 61
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core5",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainDefense"
+          },
+          "x": 78,
+          "y": 62
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core6",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainDefense"
+          },
+          "x": 100,
+          "y": 38
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core7",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainDefense"
+          },
+          "x": 62,
+          "y": 38
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core8",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainCursedEnergy"
+          },
+          "x": 286,
+          "y": 60
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core9",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainCursedEnergy"
+          },
+          "x": 325,
+          "y": 61
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core10",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainCursedEnergy"
+          },
+          "x": 347,
+          "y": 38
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core11",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainCursedEnergy"
+          },
+          "x": 370,
+          "y": 16
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core12",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainPower"
+          },
+          "x": 132,
+          "y": 178
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core13",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainPower"
+          },
+          "x": 110,
+          "y": 157
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core14",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainPower"
+          },
+          "x": 72,
+          "y": 157
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core15",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainPower"
+          },
+          "x": 49,
+          "y": 179
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core16",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainAgility"
+          },
+          "x": 249,
+          "y": 193
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core17",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainAgility"
+          },
+          "x": 272,
+          "y": 172
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core18",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainAgility"
+          },
+          "x": 307,
+          "y": 172
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_clicked_core19",
+          "image": "clicked_core.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedMainAgility"
+          },
+          "x": 343,
+          "y": 172
         }
       }
     ],

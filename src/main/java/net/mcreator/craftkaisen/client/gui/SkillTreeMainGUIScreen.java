@@ -47,6 +47,22 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 	ImageButton imagebutton_clicked_core1;
 	ImageButton imagebutton_clicked_core2;
 	ImageButton imagebutton_clicked_core3;
+	ImageButton imagebutton_clicked_core4;
+	ImageButton imagebutton_clicked_core5;
+	ImageButton imagebutton_clicked_core6;
+	ImageButton imagebutton_clicked_core7;
+	ImageButton imagebutton_clicked_core8;
+	ImageButton imagebutton_clicked_core9;
+	ImageButton imagebutton_clicked_core10;
+	ImageButton imagebutton_clicked_core11;
+	ImageButton imagebutton_clicked_core12;
+	ImageButton imagebutton_clicked_core13;
+	ImageButton imagebutton_clicked_core14;
+	ImageButton imagebutton_clicked_core15;
+	ImageButton imagebutton_clicked_core16;
+	ImageButton imagebutton_clicked_core17;
+	ImageButton imagebutton_clicked_core18;
+	ImageButton imagebutton_clicked_core19;
 
 	public SkillTreeMainGUIScreen(SkillTreeMainGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -125,22 +141,6 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_ii_increases_a"), mouseX, mouseY);
 		if (mouseX > leftPos + -121 && mouseX < leftPos + -97 && mouseY > topPos + 14 && mouseY < topPos + 38)
 			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_iii_increases"), mouseX, mouseY);
-		if (mouseX > leftPos + -173 && mouseX < leftPos + -149 && mouseY > topPos + -60 && mouseY < topPos + -36)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc"), mouseX, mouseY);
-		if (mouseX > leftPos + -59 && mouseX < leftPos + -35 && mouseY > topPos + -60 && mouseY < topPos + -36)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br"), mouseX, mouseY);
-		if (mouseX > leftPos + -182 && mouseX < leftPos + -158 && mouseY > topPos + 36 && mouseY < topPos + 60)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc1"), mouseX, mouseY);
-		if (mouseX > leftPos + -59 && mouseX < leftPos + -35 && mouseY > topPos + 35 && mouseY < topPos + 59)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran"), mouseX, mouseY);
-		if (mouseX > leftPos + 35 && mouseX < leftPos + 59 && mouseY > topPos + 36 && mouseY < topPos + 60)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br"), mouseX, mouseY);
-		if (mouseX > leftPos + 35 && mouseX < leftPos + 59 && mouseY > topPos + -60 && mouseY < topPos + -36)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1"), mouseX, mouseY);
-		if (mouseX > leftPos + 57 && mouseX < leftPos + 81 && mouseY > topPos + 13 && mouseY < topPos + 37)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2"), mouseX, mouseY);
-		if (mouseX > leftPos + 112 && mouseX < leftPos + 136 && mouseY > topPos + -104 && mouseY < topPos + -80)
-			this.renderTooltip(ms, Component.translatable("gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3"), mouseX, mouseY);
 	}
 
 	@Override
@@ -263,7 +263,7 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		imagebutton_clicked_core = new ImageButton(this.leftPos + -24, this.topPos + -39, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core.png"), 23, 46, e -> {
+		imagebutton_clicked_core = new ImageButton(this.leftPos + -59, this.topPos + -60, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(0, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -271,7 +271,7 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 		});
 		guistate.put("button:imagebutton_clicked_core", imagebutton_clicked_core);
 		this.addRenderableWidget(imagebutton_clicked_core);
-		imagebutton_clicked_core1 = new ImageButton(this.leftPos + 17, this.topPos + -24, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core1.png"), 23, 46, e -> {
+		imagebutton_clicked_core1 = new ImageButton(this.leftPos + 35, this.topPos + -60, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core1.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(1, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -279,7 +279,7 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 		});
 		guistate.put("button:imagebutton_clicked_core1", imagebutton_clicked_core1);
 		this.addRenderableWidget(imagebutton_clicked_core1);
-		imagebutton_clicked_core2 = new ImageButton(this.leftPos + 0, this.topPos + 17, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core2.png"), 23, 46, e -> {
+		imagebutton_clicked_core2 = new ImageButton(this.leftPos + 35, this.topPos + 36, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core2.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(2, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -287,7 +287,7 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 		});
 		guistate.put("button:imagebutton_clicked_core2", imagebutton_clicked_core2);
 		this.addRenderableWidget(imagebutton_clicked_core2);
-		imagebutton_clicked_core3 = new ImageButton(this.leftPos + -38, this.topPos + 1, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core3.png"), 23, 46, e -> {
+		imagebutton_clicked_core3 = new ImageButton(this.leftPos + -58, this.topPos + 36, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core3.png"), 23, 46, e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(3, x, y, z));
 				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -295,5 +295,133 @@ public class SkillTreeMainGUIScreen extends AbstractContainerScreen<SkillTreeMai
 		});
 		guistate.put("button:imagebutton_clicked_core3", imagebutton_clicked_core3);
 		this.addRenderableWidget(imagebutton_clicked_core3);
+		imagebutton_clicked_core4 = new ImageButton(this.leftPos + -97, this.topPos + -59, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core4.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(4, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core4", imagebutton_clicked_core4);
+		this.addRenderableWidget(imagebutton_clicked_core4);
+		imagebutton_clicked_core5 = new ImageButton(this.leftPos + -135, this.topPos + -58, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core5.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(5, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core5", imagebutton_clicked_core5);
+		this.addRenderableWidget(imagebutton_clicked_core5);
+		imagebutton_clicked_core6 = new ImageButton(this.leftPos + -113, this.topPos + -82, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core6.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(6, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core6", imagebutton_clicked_core6);
+		this.addRenderableWidget(imagebutton_clicked_core6);
+		imagebutton_clicked_core7 = new ImageButton(this.leftPos + -151, this.topPos + -82, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core7.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(7, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core7", imagebutton_clicked_core7);
+		this.addRenderableWidget(imagebutton_clicked_core7);
+		imagebutton_clicked_core8 = new ImageButton(this.leftPos + 72, this.topPos + -60, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core8.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(8, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core8", imagebutton_clicked_core8);
+		this.addRenderableWidget(imagebutton_clicked_core8);
+		imagebutton_clicked_core9 = new ImageButton(this.leftPos + 111, this.topPos + -59, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core9.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(9, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 9, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core9", imagebutton_clicked_core9);
+		this.addRenderableWidget(imagebutton_clicked_core9);
+		imagebutton_clicked_core10 = new ImageButton(this.leftPos + 133, this.topPos + -82, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core10.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(10, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core10", imagebutton_clicked_core10);
+		this.addRenderableWidget(imagebutton_clicked_core10);
+		imagebutton_clicked_core11 = new ImageButton(this.leftPos + 156, this.topPos + -104, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core11.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(11, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core11", imagebutton_clicked_core11);
+		this.addRenderableWidget(imagebutton_clicked_core11);
+		imagebutton_clicked_core12 = new ImageButton(this.leftPos + -81, this.topPos + 58, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core12.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(12, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 12, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core12", imagebutton_clicked_core12);
+		this.addRenderableWidget(imagebutton_clicked_core12);
+		imagebutton_clicked_core13 = new ImageButton(this.leftPos + -103, this.topPos + 37, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core13.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(13, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 13, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core13", imagebutton_clicked_core13);
+		this.addRenderableWidget(imagebutton_clicked_core13);
+		imagebutton_clicked_core14 = new ImageButton(this.leftPos + -141, this.topPos + 37, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core14.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(14, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 14, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core14", imagebutton_clicked_core14);
+		this.addRenderableWidget(imagebutton_clicked_core14);
+		imagebutton_clicked_core15 = new ImageButton(this.leftPos + -164, this.topPos + 59, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core15.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(15, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 15, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core15", imagebutton_clicked_core15);
+		this.addRenderableWidget(imagebutton_clicked_core15);
+		imagebutton_clicked_core16 = new ImageButton(this.leftPos + 35, this.topPos + 73, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core16.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(16, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 16, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core16", imagebutton_clicked_core16);
+		this.addRenderableWidget(imagebutton_clicked_core16);
+		imagebutton_clicked_core17 = new ImageButton(this.leftPos + 58, this.topPos + 52, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core17.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(17, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 17, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core17", imagebutton_clicked_core17);
+		this.addRenderableWidget(imagebutton_clicked_core17);
+		imagebutton_clicked_core18 = new ImageButton(this.leftPos + 93, this.topPos + 52, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core18.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(18, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 18, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core18", imagebutton_clicked_core18);
+		this.addRenderableWidget(imagebutton_clicked_core18);
+		imagebutton_clicked_core19 = new ImageButton(this.leftPos + 129, this.topPos + 52, 23, 23, 0, 0, 23, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_clicked_core19.png"), 23, 46, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SkillTreeMainGUIButtonMessage(19, x, y, z));
+				SkillTreeMainGUIButtonMessage.handleButtonAction(entity, 19, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_clicked_core19", imagebutton_clicked_core19);
+		this.addRenderableWidget(imagebutton_clicked_core19);
 	}
 }
