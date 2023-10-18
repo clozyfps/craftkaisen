@@ -39,7 +39,6 @@ import net.mcreator.craftkaisen.init.CraftkaisenModFeatures;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
 import net.mcreator.craftkaisen.init.CraftkaisenModBlocks;
 import net.mcreator.craftkaisen.init.CraftkaisenModBlockEntities;
-import net.mcreator.craftkaisen.init.CraftkaisenModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -70,7 +69,7 @@ public class CraftkaisenMod {
 
 		CraftkaisenModParticleTypes.REGISTRY.register(bus);
 		CraftkaisenModMenus.REGISTRY.register(bus);
-		CraftkaisenModBiomes.REGISTRY.register(bus);
+
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
