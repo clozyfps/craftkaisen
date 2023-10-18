@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.craftkaisen.entity.YutaOkkotsuEntity;
 import net.mcreator.craftkaisen.entity.WrappedUpEntity;
 import net.mcreator.craftkaisen.entity.WoodenBallEntity;
 import net.mcreator.craftkaisen.entity.UnknownManEntity;
@@ -23,6 +24,7 @@ import net.mcreator.craftkaisen.entity.UltimateMechamaruEntity;
 import net.mcreator.craftkaisen.entity.TwistEntity;
 import net.mcreator.craftkaisen.entity.TojiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.SukunaEntity;
+import net.mcreator.craftkaisen.entity.SuguruGetoEntity;
 import net.mcreator.craftkaisen.entity.StopEntity;
 import net.mcreator.craftkaisen.entity.SleepEntity;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
@@ -31,6 +33,7 @@ import net.mcreator.craftkaisen.entity.RikoAmanaiEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
+import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
@@ -40,6 +43,7 @@ import net.mcreator.craftkaisen.entity.MahitoEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockProjectileEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
+import net.mcreator.craftkaisen.entity.KenjakuEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.ItadoriEntity;
@@ -55,6 +59,7 @@ import net.mcreator.craftkaisen.entity.FireArrowEntity;
 import net.mcreator.craftkaisen.entity.FingerBearerEntity;
 import net.mcreator.craftkaisen.entity.ExplodeEntity;
 import net.mcreator.craftkaisen.entity.EsoEntity;
+import net.mcreator.craftkaisen.entity.EnergyBeamEntity;
 import net.mcreator.craftkaisen.entity.EmptyMechamaruEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
@@ -62,6 +67,8 @@ import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritmouthEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
+import net.mcreator.craftkaisen.entity.CursedSpiritZombaEntity;
+import net.mcreator.craftkaisen.entity.CursedSpiritKissEntity;
 import net.mcreator.craftkaisen.entity.CursedBudEntity;
 import net.mcreator.craftkaisen.entity.ClapEntity;
 import net.mcreator.craftkaisen.entity.BoltProjectileEntity;
@@ -69,6 +76,7 @@ import net.mcreator.craftkaisen.entity.BlastAwayEntity;
 import net.mcreator.craftkaisen.entity.BigFistEntity;
 import net.mcreator.craftkaisen.entity.BaggedHeadCurseUserEntity;
 import net.mcreator.craftkaisen.entity.BaggedHeadCurseUserCloneEntity;
+import net.mcreator.craftkaisen.entity.AoiTodoEntity;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -237,6 +245,36 @@ public class CraftkaisenModEntities {
 	public static final RegistryObject<EntityType<ReversalRedProjectileEntity>> REVERSAL_RED_PROJECTILE = register("projectile_reversal_red_projectile",
 			EntityType.Builder.<ReversalRedProjectileEntity>of(ReversalRedProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(ReversalRedProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<YutaOkkotsuEntity>> YUTA_OKKOTSU = register("yuta_okkotsu",
+			EntityType.Builder.<YutaOkkotsuEntity>of(YutaOkkotsuEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(YutaOkkotsuEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<SuguruGetoEntity>> SUGURU_GETO = register("suguru_geto",
+			EntityType.Builder.<SuguruGetoEntity>of(SuguruGetoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SuguruGetoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<EnergyBeamEntity>> ENERGY_BEAM = register("energy_beam",
+			EntityType.Builder.<EnergyBeamEntity>of(EnergyBeamEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(EnergyBeamEntity::new).fireImmune().sized(0f, 0f));
+	public static final RegistryObject<EntityType<CursedSpiritZombaEntity>> CURSED_SPIRIT_ZOMBA = register("cursed_spirit_zomba",
+			EntityType.Builder.<CursedSpiritZombaEntity>of(CursedSpiritZombaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CursedSpiritZombaEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CursedSpiritKissEntity>> CURSED_SPIRIT_KISS = register("cursed_spirit_kiss",
+			EntityType.Builder.<CursedSpiritKissEntity>of(CursedSpiritKissEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CursedSpiritKissEntity::new)
+
+					.sized(1.1f, 2.1f));
+	public static final RegistryObject<EntityType<KenjakuEntity>> KENJAKU = register("kenjaku",
+			EntityType.Builder.<KenjakuEntity>of(KenjakuEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KenjakuEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<NanamiKentoEntity>> NANAMI_KENTO = register("nanami_kento",
+			EntityType.Builder.<NanamiKentoEntity>of(NanamiKentoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiKentoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<AoiTodoEntity>> AOI_TODO = register("aoi_todo",
+			EntityType.Builder.<AoiTodoEntity>of(AoiTodoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AoiTodoEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -281,6 +319,14 @@ public class CraftkaisenModEntities {
 			ReversalRedEntityEntity.init();
 			PrisonRealmMobEntity.init();
 			MakiZeninEntity.init();
+			YutaOkkotsuEntity.init();
+			SuguruGetoEntity.init();
+			EnergyBeamEntity.init();
+			CursedSpiritZombaEntity.init();
+			CursedSpiritKissEntity.init();
+			KenjakuEntity.init();
+			NanamiKentoEntity.init();
+			AoiTodoEntity.init();
 		});
 	}
 
@@ -322,5 +368,13 @@ public class CraftkaisenModEntities {
 		event.put(REVERSAL_RED_ENTITY.get(), ReversalRedEntityEntity.createAttributes().build());
 		event.put(PRISON_REALM_MOB.get(), PrisonRealmMobEntity.createAttributes().build());
 		event.put(MAKI_ZENIN.get(), MakiZeninEntity.createAttributes().build());
+		event.put(YUTA_OKKOTSU.get(), YutaOkkotsuEntity.createAttributes().build());
+		event.put(SUGURU_GETO.get(), SuguruGetoEntity.createAttributes().build());
+		event.put(ENERGY_BEAM.get(), EnergyBeamEntity.createAttributes().build());
+		event.put(CURSED_SPIRIT_ZOMBA.get(), CursedSpiritZombaEntity.createAttributes().build());
+		event.put(CURSED_SPIRIT_KISS.get(), CursedSpiritKissEntity.createAttributes().build());
+		event.put(KENJAKU.get(), KenjakuEntity.createAttributes().build());
+		event.put(NANAMI_KENTO.get(), NanamiKentoEntity.createAttributes().build());
+		event.put(AOI_TODO.get(), AoiTodoEntity.createAttributes().build());
 	}
 }

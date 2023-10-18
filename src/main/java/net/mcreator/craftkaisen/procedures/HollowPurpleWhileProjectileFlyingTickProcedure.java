@@ -52,7 +52,7 @@ public class HollowPurpleWhileProjectileFlyingTickProcedure {
 							_serverPlayer.connection.teleport(x, y, z, _ent.getYRot(), _ent.getXRot());
 					}
 				} else {
-					entityiterator.hurt(DamageSource.GENERIC, 40);
+					entityiterator.hurt(DamageSource.GENERIC, 55);
 				}
 			}
 		}

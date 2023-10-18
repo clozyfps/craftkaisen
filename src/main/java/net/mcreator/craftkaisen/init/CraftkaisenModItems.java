@@ -14,6 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.craftkaisen.item.YutaKatanaItem;
 import net.mcreator.craftkaisen.item.WoodenBallItem;
 import net.mcreator.craftkaisen.item.WoodBindsArmorItem;
 import net.mcreator.craftkaisen.item.TwistItem;
@@ -31,6 +32,7 @@ import net.mcreator.craftkaisen.item.PrisonRealmSealedItem;
 import net.mcreator.craftkaisen.item.PrisonRealmArmorItem;
 import net.mcreator.craftkaisen.item.PonyTailItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
+import net.mcreator.craftkaisen.item.NanamiKnifeItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MechamaruArmorItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
@@ -48,6 +50,7 @@ import net.mcreator.craftkaisen.item.FireArrowProjectileItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
 import net.mcreator.craftkaisen.item.EsoArmorItem;
 import net.mcreator.craftkaisen.item.DisasterFlameItem;
+import net.mcreator.craftkaisen.item.CursedSpiritOrbItem;
 import net.mcreator.craftkaisen.item.CursedFingerItem;
 import net.mcreator.craftkaisen.item.CursedBudItem;
 import net.mcreator.craftkaisen.item.CoughSyrupItem;
@@ -155,6 +158,21 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.MAKI_ZENIN, -15000778, -14068422, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> NAGINATA = REGISTRY.register("naginata", () -> new NaginataItem());
 	public static final RegistryObject<Item> REVERSAL_RED_PROJECTILE = REGISTRY.register("reversal_red_projectile", () -> new ReversalRedProjectileItem());
+	public static final RegistryObject<Item> YUTA_OKKOTSU_SPAWN_EGG = REGISTRY.register("yuta_okkotsu_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.YUTA_OKKOTSU, -1, -16777216, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> YUTA_KATANA = REGISTRY.register("yuta_katana", () -> new YutaKatanaItem());
+	public static final RegistryObject<Item> SUGURU_GETO_SPAWN_EGG = REGISTRY.register("suguru_geto_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.SUGURU_GETO, -16777216, -256, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> CURSED_SPIRIT_ZOMBA_SPAWN_EGG = REGISTRY.register("cursed_spirit_zomba_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSED_SPIRIT_ZOMBA, -10767437, -5002371, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> CURSED_SPIRIT_KISS_SPAWN_EGG = REGISTRY.register("cursed_spirit_kiss_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.CURSED_SPIRIT_KISS, -2910256, -13226961, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> KENJAKU_SPAWN_EGG = REGISTRY.register("kenjaku_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.KENJAKU, -13945533, -14080, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> CURSED_SPIRIT_ORB = REGISTRY.register("cursed_spirit_orb", () -> new CursedSpiritOrbItem());
+	public static final RegistryObject<Item> NANAMI_KENTO_SPAWN_EGG = REGISTRY.register("nanami_kento_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.NANAMI_KENTO, -1, -2631783, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> AOI_TODO_SPAWN_EGG = REGISTRY.register("aoi_todo_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.AOI_TODO, -2636401, -15132391, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> NANAMI_KNIFE = REGISTRY.register("nanami_knife", () -> new NanamiKnifeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

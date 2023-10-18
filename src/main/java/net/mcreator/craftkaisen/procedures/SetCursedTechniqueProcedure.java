@@ -26,9 +26,11 @@ public class SetCursedTechniqueProcedure {
 			SetPlantsProcedure.execute(entity);
 		} else if ((StringArgumentType.getString(arguments, "technique")).equals("Clap") || (StringArgumentType.getString(arguments, "technique")).equals("clap")) {
 			SetClapProcedure.execute(entity);
+		} else if ((StringArgumentType.getString(arguments, "technique")).equals("Manipulation") || (StringArgumentType.getString(arguments, "technique")).equals("manipulation")) {
+			SetManipulationProcedure.execute(entity);
 		} else {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("Not recognized, must be Limitless, Flames, Sukuna, Clap, Plants, Transfiguration, or Speech."), false);
+				_player.displayClientMessage(Component.literal("Not recognized, must be Limitless, Flames, Sukuna, Clap, Plants, Transfiguration, Manipulation or Speech."), false);
 		}
 	}
 }

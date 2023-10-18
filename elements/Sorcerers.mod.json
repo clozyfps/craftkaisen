@@ -1,0 +1,42 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:JujutsuStudent"
+      },
+      {
+        "value": "CUSTOM:Itadori"
+      },
+      {
+        "value": "CUSTOM:MakiZenin"
+      },
+      {
+        "value": "CUSTOM:MegumiFushiguro"
+      },
+      {
+        "value": "CUSTOM:NanamiKento"
+      },
+      {
+        "value": "CUSTOM:SatoruGojo"
+      },
+      {
+        "value": "CUSTOM:SuguruGeto"
+      },
+      {
+        "value": "CUSTOM:AoiTodo"
+      },
+      {
+        "value": "CUSTOM:YutaOkkotsu"
+      }
+    ],
+    "biomes": [],
+    "name": "sorcerers",
+    "namespace": "mod"
+  }
+}

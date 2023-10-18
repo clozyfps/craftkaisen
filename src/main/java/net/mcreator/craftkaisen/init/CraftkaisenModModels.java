@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmornew;
 import net.mcreator.craftkaisen.client.model.Modelprisonrealmarmor;
 import net.mcreator.craftkaisen.client.model.Modelprisonbox;
 import net.mcreator.craftkaisen.client.model.Modelprison_realm_mob;
+import net.mcreator.craftkaisen.client.model.Modelpinkspirit;
 import net.mcreator.craftkaisen.client.model.Modelmummy;
 import net.mcreator.craftkaisen.client.model.Modelmouthcursedspirit;
 import net.mcreator.craftkaisen.client.model.Modelmetalbat;
@@ -57,6 +58,7 @@ import net.mcreator.craftkaisen.client.model.Modelemberinsect;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritrugbyfield;
 import net.mcreator.craftkaisen.client.model.Modelcursedspiritgrasshopper;
 import net.mcreator.craftkaisen.client.model.Modelcurse_1;
+import net.mcreator.craftkaisen.client.model.Modelbluecurse;
 import net.mcreator.craftkaisen.client.model.Modelblackblindfold;
 import net.mcreator.craftkaisen.client.model.ModelGoddessClanWings;
 import net.mcreator.craftkaisen.client.model.ModelFingerBearernew;
@@ -83,6 +85,7 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelgojochestplate.LAYER_LOCATION, Modelgojochestplate::createBodyLayer);
 		event.registerLayerDefinition(Modelinventorycurseground.LAYER_LOCATION, Modelinventorycurseground::createBodyLayer);
 		event.registerLayerDefinition(ModelFingerBearer.LAYER_LOCATION, ModelFingerBearer::createBodyLayer);
+		event.registerLayerDefinition(Modelbluecurse.LAYER_LOCATION, Modelbluecurse::createBodyLayer);
 		event.registerLayerDefinition(Modelcursedspiritgrasshopper.LAYER_LOCATION, Modelcursedspiritgrasshopper::createBodyLayer);
 		event.registerLayerDefinition(Modeljogo.LAYER_LOCATION, Modeljogo::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurplenew.LAYER_LOCATION, Modelhollowpurplenew::createBodyLayer);
@@ -118,5 +121,6 @@ public class CraftkaisenModModels {
 		event.registerLayerDefinition(Modelmaximummeteornewwww.LAYER_LOCATION, Modelmaximummeteornewwww::createBodyLayer);
 		event.registerLayerDefinition(Modelhollowpurple.LAYER_LOCATION, Modelhollowpurple::createBodyLayer);
 		event.registerLayerDefinition(Modelprisonrealmarmornewagain.LAYER_LOCATION, Modelprisonrealmarmornewagain::createBodyLayer);
+		event.registerLayerDefinition(Modelpinkspirit.LAYER_LOCATION, Modelpinkspirit::createBodyLayer);
 	}
 }

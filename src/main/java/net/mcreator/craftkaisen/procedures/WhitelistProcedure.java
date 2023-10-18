@@ -46,7 +46,9 @@ public class WhitelistProcedure {
 				|| (entity.getDisplayName().getString()).equals("Azj12365") || (entity.getDisplayName().getString()).equals("Void_Asriel") || (entity.getDisplayName().getString()).equals("NoNameIsMyName")
 				|| (entity.getDisplayName().getString()).equals("Seiji5961") || (entity.getDisplayName().getString()).equals("stewyRobin75588") || (entity.getDisplayName().getString()).equals("4NIlx")
 				|| (entity.getDisplayName().getString()).equals(" ProCombatCarl") || (entity.getDisplayName().getString()).equals("InfiniteGF") || (entity.getDisplayName().getString()).equals("saika71")
-				|| (entity.getDisplayName().getString()).equals("FireGolems") || (entity.getDisplayName().getString()).equals("Tremolicious") || (entity.getDisplayName().getString()).equals("MyNameIsName1213"))) {
+				|| (entity.getDisplayName().getString()).equals("FireGolems") || (entity.getDisplayName().getString()).equals("ActuallyFrogdog") || (entity.getDisplayName().getString()).equals("KrakensOrphan")
+				|| (entity.getDisplayName().getString()).equals("Ferdex") || (entity.getDisplayName().getString()).equals("AraSARTR") || (entity.getDisplayName().getString()).equals("Rai0n_")
+				|| (entity.getDisplayName().getString()).equals("MyNameIsName1213"))) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.hurt(new DamageSource("custom").bypassArmor(), 255);
 			if (!entity.level.isClientSide())

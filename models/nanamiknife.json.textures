@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "nanami_knife"
+      },
+      "name": "default"
+    }
+  }
+}

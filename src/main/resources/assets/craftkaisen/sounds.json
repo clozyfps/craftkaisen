@@ -47,5 +47,21 @@
         "stream": false
       }
     ]
+  },
+  "kiss": {
+    "sounds": [
+      {
+        "name": "craftkaisen:smoochykiss",
+        "stream": false
+      }
+    ]
+  },
+  "domainexpansion": {
+    "sounds": [
+      {
+        "name": "craftkaisen:domainexpansion",
+        "stream": false
+      }
+    ]
   }
 }
