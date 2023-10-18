@@ -13,39 +13,10 @@
       {
         "type": "image",
         "data": {
-          "image": "mainmenu.png",
-          "use1Xscale": false,
-          "x": 88,
-          "y": 20
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_x",
-          "image": "x.png",
-          "hoveredImage": "",
-          "x": 241,
-          "y": 171
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_x1",
-          "image": "x.png",
-          "hoveredImage": "",
-          "x": 266,
-          "y": 170
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "lightning.png",
-          "use1Xscale": false,
-          "x": 262,
-          "y": 160
+          "image": "newmenu.png",
+          "use1Xscale": true,
+          "x": -5,
+          "y": -7
         }
       },
       {
@@ -57,8 +28,8 @@
           "scale": 30,
           "rotationX": 0,
           "followMouseMovement": false,
-          "x": 256,
-          "y": 140
+          "x": 145,
+          "y": 148
         }
       },
       {
@@ -73,8 +44,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 105,
-          "y": 53
+          "x": 15,
+          "y": 17
         }
       },
       {
@@ -89,8 +60,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 105,
-          "y": 71
+          "x": 15,
+          "y": 35
         }
       },
       {
@@ -105,8 +76,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 159,
-          "y": 161
+          "x": 15,
+          "y": 125
         }
       },
       {
@@ -121,22 +92,8 @@
             "value": -13496561,
             "falpha": 0.0
           },
-          "x": 105,
-          "y": 89
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_prestige",
-          "text": "Skill Tree",
-          "onClick": {
-            "name": "OpenSkillTreeGUI"
-          },
-          "width": 67,
-          "height": 20,
-          "x": 96,
-          "y": 179
+          "x": 15,
+          "y": 53
         }
       },
       {
@@ -151,8 +108,8 @@
             "value": -13627890,
             "falpha": 0.0
           },
-          "x": 132,
-          "y": 107
+          "x": 15,
+          "y": 71
         }
       },
       {
@@ -167,8 +124,8 @@
             "value": -13627890,
             "falpha": 0.0
           },
-          "x": 105,
-          "y": 125
+          "x": 15,
+          "y": 89
         }
       },
       {
@@ -183,53 +140,21 @@
             "value": -13627890,
             "falpha": 0.0
           },
-          "x": 141,
-          "y": 143
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_empty1",
-          "text": {
-            "fixedValue": "Job:"
-          },
-          "color": {
-            "value": -13824755,
-            "falpha": 0.0
-          },
-          "x": 105,
+          "x": 15,
           "y": 107
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_fame",
-          "text": {
-            "fixedValue": "Fame:"
+          "name": "imagebutton_st_button_2",
+          "image": "st_button_2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "OpenSkillTreeGUI"
           },
-          "color": {
-            "value": -13824755,
-            "falpha": 0.0
-          },
-          "x": 105,
-          "y": 143
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_technique",
-          "text": {
-            "fixedValue": "Technique:"
-          },
-          "color": {
-            "value": -13824755,
-            "falpha": 0.0
-          },
-          "x": 105,
-          "y": 161
+          "x": 23,
+          "y": 147
         }
       }
     ],
@@ -238,7 +163,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

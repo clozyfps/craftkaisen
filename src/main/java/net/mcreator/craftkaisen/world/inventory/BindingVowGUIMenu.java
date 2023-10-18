@@ -75,7 +75,7 @@ public class BindingVowGUIMenu extends AbstractContainerMenu implements Supplier
 				}
 			}
 		}
-		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 56, 219) {
+		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 57, 220) {
 			private final int slot = 0;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 344, 158) {
@@ -207,14 +207,10 @@ public class BindingVowGUIMenu extends AbstractContainerMenu implements Supplier
 		if (!bound && playerIn instanceof ServerPlayer serverPlayer) {
 			if (!serverPlayer.isAlive() || serverPlayer.hasDisconnected()) {
 				for (int j = 0; j < internal.getSlots(); ++j) {
-					if (j == 1)
-						continue;
 					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
-					if (i == 1)
-						continue;
 					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}
 			}

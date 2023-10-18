@@ -13320,6 +13320,73 @@
         ]
       },
       "path": "~/Abilities"
+    },
+    {
+      "name": "CheckForPR",
+      "type": "procedure",
+      "sortid": 588,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_for_pr",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CheckForPRProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PrisonRealmBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_biome",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/features/treedecorators/PrisonRealmBiomeFruitDecorator.java",
+          "src/main/java/net/mcreator/craftkaisen/world/features/treedecorators/PrisonRealmBiomeTrunkDecorator.java",
+          "src/main/java/net/mcreator/craftkaisen/world/biome/PrisonRealmBiomeBiome.java",
+          "src/main/java/net/mcreator/craftkaisen/world/features/treedecorators/PrisonRealmBiomeLeaveDecorator.java"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "PrisonRealmDimension",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prison_realm_dimension",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/dimension/PrisonRealmDimensionDimension.java",
+          "src/main/resources/data/craftkaisen/dimension/prison_realm_dimension.json",
+          "src/main/resources/data/craftkaisen/dimension_type/prison_realm_dimension.json"
+        ]
+      },
+      "path": "~/Dimensions"
     }
   ],
   "variable_elements": [
@@ -14110,10 +14177,10 @@
     "en_us": {
       "item.craftkaisen.toji_armor_leggings": "Toji Pants",
       "item.craftkaisen.cursedspiritmouth_spawn_egg": "Cursed Spirit: Mouth Spawn Egg",
-      "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
       "advancements.jujutsu_sorcerer.descr": "Kill 3 Curses",
-      "gui.craftkaisen.sword_creator.label_materials": "Materials",
+      "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
+      "gui.craftkaisen.sword_creator.label_materials": "Materials",
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gui.craftkaisen.sword_creator.button_create": "Create",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
@@ -14284,6 +14351,7 @@
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_i_increases_melee_damage": "Power I - Increases melee damage.§9 1 SP \u0026 GRADE 4",
       "itemGroup.tabjjkmobs": "JJK Mobs",
+      "biome.craftkaisen.prison_realm_biome": "Prison Realm",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_ii_increases_speedss9": "Agility II - Increases speed.§9 1 SP \u0026 GRADE 4",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
       "gui.craftkaisen.technique_creator_gui.BoltBox": "Bolt",

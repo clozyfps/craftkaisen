@@ -20,7 +20,7 @@ public class PrisonRealmFinishProcedure {
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 		for (Entity entityiterator : new ArrayList<>(world.players())) {
-			if ((guistate.containsKey("text:TargetPlayer") ? ((EditBox) guistate.get("text:TargetPlayer")).getValue() : "").equals(entityiterator.getDisplayName().getString())) {
+			if ((guistate.containsKey("text:TargetPlayer") ? ((EditBox) guistate.get("text:TargetPlayer")).getValue() : "").equals(entityiterator.getDisplayName().getString()) && entity.getPersistentData().getBoolean("prOwner")) {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(Component.literal("Player Connected."), true);
 				if (!world.isClientSide()) {
@@ -32,6 +32,8 @@ public class PrisonRealmFinishProcedure {
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
+				entityiterator.getPersistentData().putBoolean("prTarget", true);
+				entityiterator.getPersistentData().putDouble("timerPrison", 200);
 			} else {
 				if (entity instanceof Player _player && !_player.level.isClientSide())
 					_player.displayClientMessage(Component.literal("Player not found!"), true);

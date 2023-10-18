@@ -1,6 +1,7 @@
 package net.mcreator.craftkaisen.client.model;
 
 import net.minecraft.world.entity.Entity;
+import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
@@ -69,5 +70,7 @@ public class Modelprisonrealmseal<T extends Entity> extends EntityModel<T> {
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+		this.RightArm.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.LeftArm.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
 	}
 }

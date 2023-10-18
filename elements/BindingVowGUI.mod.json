@@ -15,7 +15,7 @@
         "data": {
           "name": "KillVow",
           "text": "Don't Harm Specific Player",
-          "x": 12,
+          "x": 13,
           "y": 10
         }
       },
@@ -26,7 +26,7 @@
           "name": "PlayerNameKill",
           "width": 120,
           "height": 20,
-          "x": 12,
+          "x": 13,
           "y": 34
         }
       },
@@ -49,7 +49,7 @@
         "data": {
           "name": "ItemVow",
           "text": "Don't Pick Up Item Type",
-          "x": 12,
+          "x": 13,
           "y": 59
         }
       },
@@ -67,8 +67,8 @@
             "fixedValue": false
           },
           "dropItemsWhenNotBound": true,
-          "x": 13,
-          "y": 82
+          "x": 14,
+          "y": 83
         }
       },
       {
@@ -119,7 +119,7 @@
           "disablePickup": {
             "fixedValue": false
           },
-          "dropItemsWhenNotBound": false,
+          "dropItemsWhenNotBound": true,
           "x": 301,
           "y": 21
         }
@@ -139,8 +139,8 @@
     "gridSettings": {
       "sx": 20,
       "sy": 20,
-      "ox": 46,
-      "oy": 16,
+      "ox": 24,
+      "oy": 2,
       "snapOnGrid": false
     }
   }

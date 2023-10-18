@@ -20,7 +20,7 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.craftkaisen.client.model.Modelprisonrealmseal;
+import net.mcreator.craftkaisen.client.model.Modelprsealarmor;
 
 import java.util.function.Consumer;
 import java.util.Map;
@@ -82,9 +82,9 @@ public abstract class PrisonRealmArmorItem extends ArmorItem {
 				@Override
 				@OnlyIn(Dist.CLIENT)
 				public HumanoidModel getHumanoidArmorModel(LivingEntity living, ItemStack stack, EquipmentSlot slot, HumanoidModel defaultModel) {
-					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelprisonrealmseal(Minecraft.getInstance().getEntityModels().bakeLayer(Modelprisonrealmseal.LAYER_LOCATION)).Body,
-							"left_arm", new Modelprisonrealmseal(Minecraft.getInstance().getEntityModels().bakeLayer(Modelprisonrealmseal.LAYER_LOCATION)).LeftArm, "right_arm",
-							new Modelprisonrealmseal(Minecraft.getInstance().getEntityModels().bakeLayer(Modelprisonrealmseal.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
+					HumanoidModel armorModel = new HumanoidModel(new ModelPart(Collections.emptyList(), Map.of("body", new Modelprsealarmor(Minecraft.getInstance().getEntityModels().bakeLayer(Modelprsealarmor.LAYER_LOCATION)).Body, "left_arm",
+							new Modelprsealarmor(Minecraft.getInstance().getEntityModels().bakeLayer(Modelprsealarmor.LAYER_LOCATION)).LeftArm, "right_arm",
+							new Modelprsealarmor(Minecraft.getInstance().getEntityModels().bakeLayer(Modelprsealarmor.LAYER_LOCATION)).RightArm, "head", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "hat",
 							new ModelPart(Collections.emptyList(), Collections.emptyMap()), "right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()), "left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap()))));
 					armorModel.crouching = living.isShiftKeyDown();
 					armorModel.riding = defaultModel.riding;
