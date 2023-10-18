@@ -2,22 +2,26 @@ package net.mcreator.craftkaisen.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.player.AbstractClientPlayer;
 
-import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.ClapEntity;
+import java.util.stream.Collectors;
+import java.util.List;
+import java.util.Comparator;
 
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
@@ -29,23 +33,29 @@ public class ClapProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		entity.getPersistentData().putBoolean("white", true);
+		if (entity.getPersistentData().getDouble("claptick") < 10) {
+			entity.getPersistentData().putDouble("claptick", (entity.getPersistentData().getDouble("claptick") + 1));
+			entity.getPersistentData().putBoolean("white", false);
+		}
 		{
-			Entity _shootFrom = entity;
-			Level projectileLevel = _shootFrom.level;
-			if (!projectileLevel.isClientSide()) {
-				Projectile _entityToSpawn = new Object() {
-					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-						AbstractArrow entityToSpawn = new ClapEntity(CraftkaisenModEntities.CLAP.get(), level);
-						entityToSpawn.setOwner(shooter);
-						entityToSpawn.setBaseDamage(damage);
-						entityToSpawn.setKnockback(knockback);
-						entityToSpawn.setSilent(true);
-						return entityToSpawn;
+			final Vec3 _center = new Vec3(x, y, z);
+			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(9 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
+			for (Entity entityiterator : _entfound) {
+				if (!(entity == entityiterator)) {
+					{
+						Entity _ent = entity;
+						_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
 					}
-				}.getArrow(projectileLevel, entity, 0, 0);
-				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 6, 0);
-				projectileLevel.addFreshEntity(_entityToSpawn);
+					{
+						Entity _ent = entityiterator;
+						_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
+					}
+				}
 			}
 		}
 		if (world instanceof Level _level) {
@@ -67,5 +77,7 @@ public class ClapProcedureProcedure {
 				}
 			}
 		}
+		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 10, 250, false, false));
 	}
 }

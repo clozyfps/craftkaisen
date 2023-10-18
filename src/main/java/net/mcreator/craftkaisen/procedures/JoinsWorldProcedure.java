@@ -173,6 +173,20 @@ public class JoinsWorldProcedure {
 					}
 				}
 			}
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A76\u00A7l How to Play"), false);
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A7l\u2014---------------------------------------------------"), false);
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A76\u00A7l To get started, kill 3 cursed spirits. "), false);
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A76\u00A7l After killing 3 cursed spirits, you should be a sorcerer."), false);
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A76\u00A7l Find Gojo and make him your mentor. Then you will right click him again and ask him for a referral by typing \"Referral\" in chat."), false);
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A76\u00A7l To level up, kill mobs."), false);
+			if (entity instanceof Player _player && !_player.level.isClientSide())
+				_player.displayClientMessage(Component.literal("\u00A76\u00A7l To grade up, do the referral quests given by gojo."), false);
 		}
 	}
 }

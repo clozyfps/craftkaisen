@@ -15,6 +15,7 @@ import net.mcreator.craftkaisen.potion.VesselCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.TwistingMobEffect;
 import net.mcreator.craftkaisen.potion.ToughBodyMobEffect;
 import net.mcreator.craftkaisen.potion.StoppedMobEffect;
+import net.mcreator.craftkaisen.potion.SorcererMobEffect;
 import net.mcreator.craftkaisen.potion.SleepingMobEffect;
 import net.mcreator.craftkaisen.potion.SkyOfFlamesMobEffect;
 import net.mcreator.craftkaisen.potion.SixeyespotionMobEffect;
@@ -98,4 +99,5 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> PUNCH_BARRAGE_POTION = REGISTRY.register("punch_barrage_potion", () -> new PunchBarragePotionMobEffect());
 	public static final RegistryObject<MobEffect> EXPLOSION_EFFECT = REGISTRY.register("explosion_effect", () -> new ExplosionEffectMobEffect());
 	public static final RegistryObject<MobEffect> CORRUPTED_POTION = REGISTRY.register("corrupted_potion", () -> new CorruptedPotionMobEffect());
+	public static final RegistryObject<MobEffect> SORCERER = REGISTRY.register("sorcerer", () -> new SorcererMobEffect());
 }

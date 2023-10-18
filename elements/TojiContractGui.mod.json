@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 200,
+    "width": 0,
     "height": 120,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -21,8 +21,8 @@
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 120,
-          "y": 66
+          "x": 119,
+          "y": 62
         }
       },
       {
@@ -37,7 +37,7 @@
             "falpha": 0.0
           },
           "x": 120,
-          "y": 77
+          "y": 74
         }
       },
       {
@@ -50,8 +50,8 @@
           },
           "width": 67,
           "height": 20,
-          "x": 177,
-          "y": 105
+          "x": 169,
+          "y": 107
         }
       },
       {
@@ -65,8 +65,8 @@
             "value": -16777216,
             "falpha": 0.0
           },
-          "x": 118,
-          "y": 164
+          "x": 111,
+          "y": 165
         }
       },
       {
@@ -76,8 +76,17 @@
           "name": "TojiPlayerKill",
           "width": 120,
           "height": 20,
-          "x": 148,
-          "y": 127
+          "x": 142,
+          "y": 129
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "talismannew.png",
+          "use1Xscale": false,
+          "x": 83,
+          "y": -11
         }
       }
     ],

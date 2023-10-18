@@ -54,7 +54,7 @@ public class SatoruGojoEntity extends Monster {
 		maxUpStep = 0.6f;
 		xpReward = 3;
 		setNoAi(false);
-		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.BLINDFOLD_HELMET.get()));
+		this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(CraftkaisenModItems.SUNGLASSES_HELMET.get()));
 		this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_CHESTPLATE.get()));
 		this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(CraftkaisenModItems.GOJO_UNIFORM_LEGGINGS.get()));
 	}

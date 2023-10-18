@@ -34,7 +34,7 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 200;
+		this.imageWidth = 0;
 		this.imageHeight = 120;
 	}
 
@@ -55,6 +55,10 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("craftkaisen:textures/screens/talismannew.png"));
+		this.blit(ms, this.leftPos + -130, this.topPos + -71, 0, 0, 256, 256, 256, 256);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -77,9 +81,9 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 
 	@Override
 	protected void renderLabels(PoseStack poseStack, int mouseX, int mouseY) {
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for"), 6, 6, -16777216);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_20000_yen"), 6, 17, -16777216);
-		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat"), 4, 104, -16777216);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for"), -94, 2, -16777216);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_20000_yen"), -93, 14, -16777216);
+		this.font.draw(poseStack, Component.translatable("gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat"), -102, 105, -16777216);
 	}
 
 	@Override
@@ -92,7 +96,7 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		TojiPlayerKill = new EditBox(this.font, this.leftPos + 34, this.topPos + 67, 120, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.TojiPlayerKill")) {
+		TojiPlayerKill = new EditBox(this.font, this.leftPos + -71, this.topPos + 69, 120, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.TojiPlayerKill")) {
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.toji_contract_gui.TojiPlayerKill").getString());
 			}
@@ -118,7 +122,7 @@ public class TojiContractGuiScreen extends AbstractContainerScreen<TojiContractG
 		TojiPlayerKill.setMaxLength(32767);
 		guistate.put("text:TojiPlayerKill", TojiPlayerKill);
 		this.addWidget(this.TojiPlayerKill);
-		button_purchase = new Button(this.leftPos + 63, this.topPos + 45, 67, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.button_purchase"), e -> {
+		button_purchase = new Button(this.leftPos + -44, this.topPos + 47, 67, 20, Component.translatable("gui.craftkaisen.toji_contract_gui.button_purchase"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new TojiContractGuiButtonMessage(0, x, y, z));
 				TojiContractGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);

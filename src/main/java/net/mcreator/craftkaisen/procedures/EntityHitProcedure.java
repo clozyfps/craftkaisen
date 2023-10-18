@@ -26,6 +26,7 @@ import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
 import net.mcreator.craftkaisen.entity.SatoruGojoEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
+import net.mcreator.craftkaisen.entity.CursedSpiritKissEntity;
 
 import javax.annotation.Nullable;
 
@@ -33,8 +34,9 @@ import javax.annotation.Nullable;
 public class EntityHitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity(), event.getSource().getEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity.getX(), entity.getY(), entity.getZ(), entity, event.getSource().getEntity());
 		}
 	}
 
@@ -107,6 +109,17 @@ public class EntityHitProcedure {
 				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.IDLE_TRANSFIGURATION.get(), 250, 1, false, false));
 			if (sourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 				_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.MOVE_1_COOLDOWN.get(), 200, 1, false, false));
+		}
+		if (sourceentity instanceof CursedSpiritKissEntity) {
+			if (Math.random() < 0.2) {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craftkaisen:kiss")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("craftkaisen:kiss")), SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
+			}
 		}
 	}
 }

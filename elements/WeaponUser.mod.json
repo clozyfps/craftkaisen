@@ -1,0 +1,24 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:NanamiKento"
+      },
+      {
+        "value": "CUSTOM:YutaOkkotsu"
+      },
+      {
+        "value": "CUSTOM:MakiZenin"
+      }
+    ],
+    "biomes": [],
+    "name": "weapon_user",
+    "namespace": "mod"
+  }
+}

@@ -15,7 +15,7 @@ public class MalevolentShrineOnInitialEntitySpawnProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		CraftkaisenMod.queueServerWork(300, () -> {
+		CraftkaisenMod.queueServerWork(800, () -> {
 			if (!entity.level.isClientSide())
 				entity.discard();
 		});

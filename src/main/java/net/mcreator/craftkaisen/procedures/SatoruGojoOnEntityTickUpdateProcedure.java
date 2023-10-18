@@ -1,13 +1,19 @@
 package net.mcreator.craftkaisen.procedures;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModMobEffects;
 import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
@@ -63,6 +69,25 @@ public class SatoruGojoOnEntityTickUpdateProcedure {
 						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.MOVE_SPECIAL_COOLDOWN.get(), 200, 1, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 						_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.INFINITY.get(), 100, 1, false, true));
+				}
+			}
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 200) {
+				if (!entity.getPersistentData().getBoolean("gojoskin")) {
+					entity.getPersistentData().putBoolean("gojoskin", true);
+					if (world.isClientSide()) {
+						Minecraft.getInstance().getTextureManager().bindForSetup(new ResourceLocation("craftkaisen:textures/entities/gojo_loucao.png"));
+						Minecraft.getInstance().getTextureManager().register(new ResourceLocation("craftkaisen:textures/entities/satoru_gojo.png"),
+								Minecraft.getInstance().getTextureManager().getTexture(new ResourceLocation("craftkaisen:textures/entities/gojo_loucao.png")));
+					}
+					{
+						Entity _entity = entity;
+						if (_entity instanceof Player _player) {
+							_player.getInventory().armor.set(3, new ItemStack(Blocks.AIR));
+							_player.getInventory().setChanged();
+						} else if (_entity instanceof LivingEntity _living) {
+							_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Blocks.AIR));
+						}
+					}
 				}
 			}
 		}

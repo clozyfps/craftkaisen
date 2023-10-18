@@ -36,7 +36,7 @@ public class FlameSparkParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 4f;
+		this.quadSize *= 3f;
 		this.lifetime = 7;
 		this.gravity = 0f;
 		this.hasPhysics = true;
@@ -60,7 +60,7 @@ public class FlameSparkParticle extends TextureSheetParticle {
 	public void tick() {
 		super.tick();
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 2) % 6 + 1, 6));
+			this.setSprite(this.spriteSet.get((this.age / 2) % 3 + 1, 3));
 		}
 	}
 }

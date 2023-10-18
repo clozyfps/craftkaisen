@@ -11,15 +11,18 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.craftkaisen.client.renderer.YutaOkkotsuRenderer;
 import net.mcreator.craftkaisen.client.renderer.WrappedUpRenderer;
 import net.mcreator.craftkaisen.client.renderer.UnknownManRenderer;
 import net.mcreator.craftkaisen.client.renderer.UltimateMechamaruRenderer;
 import net.mcreator.craftkaisen.client.renderer.TojiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.SukunaRenderer;
+import net.mcreator.craftkaisen.client.renderer.SuguruGetoRenderer;
 import net.mcreator.craftkaisen.client.renderer.SatoruGojoRenderer;
 import net.mcreator.craftkaisen.client.renderer.RikoAmanaiRenderer;
 import net.mcreator.craftkaisen.client.renderer.ReversalRedEntityRenderer;
 import net.mcreator.craftkaisen.client.renderer.PrisonRealmMobRenderer;
+import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
@@ -29,6 +32,7 @@ import net.mcreator.craftkaisen.client.renderer.MahitoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockProjectileRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
+import net.mcreator.craftkaisen.client.renderer.KenjakuRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
 import net.mcreator.craftkaisen.client.renderer.ItadoriRenderer;
@@ -39,15 +43,19 @@ import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 import net.mcreator.craftkaisen.client.renderer.FireArrowRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
 import net.mcreator.craftkaisen.client.renderer.EsoRenderer;
+import net.mcreator.craftkaisen.client.renderer.EnergyBeamRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmptyMechamaruRenderer;
 import net.mcreator.craftkaisen.client.renderer.EmberInsectRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritrugbyfieldRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritroppongiRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritmouthRenderer;
 import net.mcreator.craftkaisen.client.renderer.CursedspiritgrasshopperRenderer;
+import net.mcreator.craftkaisen.client.renderer.CursedSpiritZombaRenderer;
+import net.mcreator.craftkaisen.client.renderer.CursedSpiritKissRenderer;
 import net.mcreator.craftkaisen.client.renderer.BigFistRenderer;
 import net.mcreator.craftkaisen.client.renderer.BaggedHeadCurseUserRenderer;
 import net.mcreator.craftkaisen.client.renderer.BaggedHeadCurseUserCloneRenderer;
+import net.mcreator.craftkaisen.client.renderer.AoiTodoRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CraftkaisenModEntityRenderers {
@@ -106,5 +114,13 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.ROOT_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.MAKI_ZENIN.get(), MakiZeninRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.REVERSAL_RED_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.YUTA_OKKOTSU.get(), YutaOkkotsuRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.SUGURU_GETO.get(), SuguruGetoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.ENERGY_BEAM.get(), EnergyBeamRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.CURSED_SPIRIT_ZOMBA.get(), CursedSpiritZombaRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.CURSED_SPIRIT_KISS.get(), CursedSpiritKissRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.KENJAKU.get(), KenjakuRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.NANAMI_KENTO.get(), NanamiKentoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.AOI_TODO.get(), AoiTodoRenderer::new);
 	}
 }

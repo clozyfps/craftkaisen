@@ -1,0 +1,30 @@
+{
+  "_fv": 47,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:AoiTodo"
+      },
+      {
+        "value": "CUSTOM:Eso"
+      },
+      {
+        "value": "CUSTOM:TojiFushiguro"
+      },
+      {
+        "value": "CUSTOM:SatoruGojo"
+      },
+      {
+        "value": "CUSTOM:Itadori"
+      }
+    ],
+    "biomes": [],
+    "name": "blunt_powerful",
+    "namespace": "mod"
+  }
+}

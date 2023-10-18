@@ -1,0 +1,9 @@
+{
+  "parent": "craftkaisen:custom/yutasword",
+  "textures": {
+    "0": "craftkaisen:blocks/yuta1",
+    "1": "craftkaisen:blocks/yuta2",
+    "2": "craftkaisen:blocks/yuta3",
+    "particle": "craftkaisen:items/air102_layer_2"
+  }
+}
