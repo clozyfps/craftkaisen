@@ -3,7 +3,7 @@
   "textures": {
     "all": "craftkaisen:blocks/texturepr",
     "particle": "craftkaisen:blocks/texturepr",
-    "0": "craftkaisen:blocks/prisonrealmtextureunsealed"
+    "0": "craftkaisen:blocks/texturepr"
   },
   "render_type": "solid"
 }
