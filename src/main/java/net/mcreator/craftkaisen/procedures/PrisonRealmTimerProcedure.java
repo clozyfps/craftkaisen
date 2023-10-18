@@ -6,11 +6,14 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 
 import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 import net.mcreator.craftkaisen.init.CraftkaisenModItems;
@@ -33,6 +36,7 @@ public class PrisonRealmTimerProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		ItemStack v = ItemStack.EMPTY;
 		if (entity.getPersistentData().getBoolean("beginTimerPr")) {
 			if (entity.getPersistentData().getDouble("timerPrison") > 0) {
 				entity.getPersistentData().putDouble("timerPrison", (entity.getPersistentData().getDouble("timerPrison") - 1));
@@ -65,6 +69,8 @@ public class PrisonRealmTimerProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				v = new ItemStack(CraftkaisenModItems.PRISON_REALM_ARMOR_CHESTPLATE.get());
+				(v).enchant(Enchantments.BINDING_CURSE, 1);
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
@@ -77,10 +83,10 @@ public class PrisonRealmTimerProcedure {
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(2, new ItemStack(CraftkaisenModItems.PRISON_REALM_ARMOR_CHESTPLATE.get()));
+						_player.getInventory().armor.set(2, v);
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(CraftkaisenModItems.PRISON_REALM_ARMOR_CHESTPLATE.get()));
+						_living.setItemSlot(EquipmentSlot.CHEST, v);
 					}
 				}
 				{
@@ -101,6 +107,14 @@ public class PrisonRealmTimerProcedure {
 						_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(Blocks.AIR));
 					}
 				}
+				entity.getPersistentData().putBoolean("prohibitUse", true);
+				entity.getPersistentData().putBoolean("sealedInPr", true);
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 999999, 255, true, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 999999, 255, true, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 999999, 128, true, false));
 			}
 		}
 	}

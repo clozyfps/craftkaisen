@@ -100,7 +100,7 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		PlayerNameKill = new EditBox(this.font, this.leftPos + 54, this.topPos + 170, 120, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill")) {
+		PlayerNameKill = new EditBox(this.font, this.leftPos + 55, this.topPos + 170, 120, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill")) {
 			{
 				setSuggestion(Component.translatable("gui.craftkaisen.binding_vow_gui.PlayerNameKill").getString());
 			}
@@ -164,10 +164,10 @@ public class BindingVowGUIScreen extends AbstractContainerScreen<BindingVowGUIMe
 		});
 		guistate.put("button:button_self_vow", button_self_vow);
 		this.addRenderableWidget(button_self_vow);
-		KillVow = new Checkbox(this.leftPos + 54, this.topPos + 146, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.KillVow"), false);
+		KillVow = new Checkbox(this.leftPos + 55, this.topPos + 146, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.KillVow"), false);
 		guistate.put("checkbox:KillVow", KillVow);
 		this.addRenderableWidget(KillVow);
-		ItemVow = new Checkbox(this.leftPos + 54, this.topPos + 195, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.ItemVow"), false);
+		ItemVow = new Checkbox(this.leftPos + 55, this.topPos + 195, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.ItemVow"), false);
 		guistate.put("checkbox:ItemVow", ItemVow);
 		this.addRenderableWidget(ItemVow);
 		GiveItem = new Checkbox(this.leftPos + 264, this.topPos + 156, 20, 20, Component.translatable("gui.craftkaisen.binding_vow_gui.GiveItem"), false);

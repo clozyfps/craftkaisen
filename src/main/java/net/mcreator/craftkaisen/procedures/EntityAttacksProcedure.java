@@ -36,9 +36,8 @@ import java.util.Comparator;
 public class EntityAttacksProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		Entity entity = event.getEntity();
-		if (event != null && entity != null) {
-			execute(event, entity.getLevel(), entity, event.getSource().getDirectEntity());
+		if (event != null && event.getEntity() != null) {
+			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getDirectEntity());
 		}
 	}
 
