@@ -1,8 +1,17 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritmouthEntity;
+import net.mcreator.craftkaisen.entity.CursedspiritgrasshopperEntity;
+import net.mcreator.craftkaisen.entity.CursedSpiritZombaEntity;
+import net.mcreator.craftkaisen.entity.CursedSpiritKissEntity;
 
 public class Slot2ValueProcedure {
 	public static Entity execute(LevelAccessor world, Entity entity) {

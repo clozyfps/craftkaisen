@@ -1,8 +1,16 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
+import net.mcreator.craftkaisen.entity.DarkAtomEntity;
+import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class MultiBoltsProcedureProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -14,7 +22,7 @@ public class MultiBoltsProcedureProcedure {
 			if (!projectileLevel.isClientSide()) {
 				Projectile _entityToSpawn = new Object() {
 					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-						AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+						AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DARK_ATOM.get(), level);
 						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setBaseDamage(damage);
 						entityToSpawn.setKnockback(knockback);
@@ -37,7 +45,7 @@ public class MultiBoltsProcedureProcedure {
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
 						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-							AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+							AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DARK_ATOM.get(), level);
 							entityToSpawn.setOwner(shooter);
 							entityToSpawn.setBaseDamage(damage);
 							entityToSpawn.setKnockback(knockback);
@@ -60,7 +68,7 @@ public class MultiBoltsProcedureProcedure {
 					if (!projectileLevel.isClientSide()) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+								AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DARK_ATOM.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -83,7 +91,7 @@ public class MultiBoltsProcedureProcedure {
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
+									AbstractArrow entityToSpawn = new DarkAtomEntity(CraftkaisenModEntities.DARK_ATOM.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);

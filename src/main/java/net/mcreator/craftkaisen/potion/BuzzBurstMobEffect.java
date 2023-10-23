@@ -1,8 +1,19 @@
 
 package net.mcreator.craftkaisen.potion;
 
-public class BuzzBurstMobEffect extends MobEffect {
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+
+import net.mcreator.craftkaisen.procedures.BuzzBurstOnEffectActiveTickProcedure;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+
+public class BuzzBurstMobEffect extends MobEffect {
 	public BuzzBurstMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
@@ -14,9 +25,7 @@ public class BuzzBurstMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		BuzzBurstOnEffectActiveTickProcedure.execute(
-
-		);
+		BuzzBurstOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

@@ -1,13 +1,28 @@
 package net.mcreator.craftkaisen.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.craftkaisen.world.inventory.ManipulationSlotGuiMenu;
+import net.mcreator.craftkaisen.network.ManipulationSlotGuiButtonMessage;
+import net.mcreator.craftkaisen.CraftkaisenMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class ManipulationSlotGuiScreen extends AbstractContainerScreen<ManipulationSlotGuiMenu> {
-
 	private final static HashMap<String, Object> guistate = ManipulationSlotGuiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	Button button_1;
 	Button button_2;
 	Button button_3;
@@ -29,11 +44,8 @@ public class ManipulationSlotGuiScreen extends AbstractContainerScreen<Manipulat
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(ms);
-
 		super.render(ms, mouseX, mouseY, partialTicks);
-
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -41,10 +53,8 @@ public class ManipulationSlotGuiScreen extends AbstractContainerScreen<Manipulat
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -54,7 +64,6 @@ public class ManipulationSlotGuiScreen extends AbstractContainerScreen<Manipulat
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -77,49 +86,38 @@ public class ManipulationSlotGuiScreen extends AbstractContainerScreen<Manipulat
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		button_1 = new Button(this.leftPos + 17, this.topPos + 46, 30, 20, Component.translatable("gui.craftkaisen.manipulation_slot_gui.button_1"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ManipulationSlotGuiButtonMessage(0, x, y, z));
 				ManipulationSlotGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_1", button_1);
 		this.addRenderableWidget(button_1);
-
 		button_2 = new Button(this.leftPos + 71, this.topPos + 46, 30, 20, Component.translatable("gui.craftkaisen.manipulation_slot_gui.button_2"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ManipulationSlotGuiButtonMessage(1, x, y, z));
 				ManipulationSlotGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_2", button_2);
 		this.addRenderableWidget(button_2);
-
 		button_3 = new Button(this.leftPos + 122, this.topPos + 46, 30, 20, Component.translatable("gui.craftkaisen.manipulation_slot_gui.button_3"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ManipulationSlotGuiButtonMessage(2, x, y, z));
 				ManipulationSlotGuiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
-
 		button_4 = new Button(this.leftPos + 171, this.topPos + 46, 30, 20, Component.translatable("gui.craftkaisen.manipulation_slot_gui.button_4"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ManipulationSlotGuiButtonMessage(3, x, y, z));
 				ManipulationSlotGuiButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
-
 		guistate.put("button:button_4", button_4);
 		this.addRenderableWidget(button_4);
-
 	}
-
 }
