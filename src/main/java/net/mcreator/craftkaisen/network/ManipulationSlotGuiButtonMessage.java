@@ -1,28 +1,9 @@
 
 package net.mcreator.craftkaisen.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftkaisen.world.inventory.ManipulationSlotGuiMenu;
-import net.mcreator.craftkaisen.procedures.Slot4SelectedManipulationProcedure;
-import net.mcreator.craftkaisen.procedures.Slot3SelectedManipulationProcedure;
-import net.mcreator.craftkaisen.procedures.Slot2SelectedManipulationProcedure;
-import net.mcreator.craftkaisen.procedures.Slot1SelectedManipulationProcedure;
-import net.mcreator.craftkaisen.CraftkaisenMod;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ManipulationSlotGuiButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public ManipulationSlotGuiButtonMessage(FriendlyByteBuf buffer) {
@@ -54,6 +35,7 @@ public class ManipulationSlotGuiButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -62,9 +44,11 @@ public class ManipulationSlotGuiButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = ManipulationSlotGuiMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
 			Slot1SelectedManipulationProcedure.execute(world, entity);
@@ -87,4 +71,5 @@ public class ManipulationSlotGuiButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftkaisenMod.addNetworkMessage(ManipulationSlotGuiButtonMessage.class, ManipulationSlotGuiButtonMessage::buffer, ManipulationSlotGuiButtonMessage::new, ManipulationSlotGuiButtonMessage::handler);
 	}
+
 }

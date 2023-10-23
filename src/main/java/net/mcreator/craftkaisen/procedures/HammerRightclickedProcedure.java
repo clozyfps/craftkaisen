@@ -1,25 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
-import net.mcreator.craftkaisen.init.CraftkaisenModItems;
-import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.NailProjectileEntity;
-import net.mcreator.craftkaisen.CraftkaisenMod;
+import javax.annotation.Nullable;
 
 public class HammerRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -45,7 +28,7 @@ public class HammerRightclickedProcedure {
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new NailProjectileEntity(CraftkaisenModEntities.NAIL_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new NailProjectileEntity(CraftkaisenModEntities.DELETED_MOD_ELEMENT.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);

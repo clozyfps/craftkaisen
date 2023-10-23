@@ -974,7 +974,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Creative Tabs"
+      "path": "~/Mobs"
     },
     {
       "name": "FlashStep",
@@ -1114,8 +1114,7 @@
       "registry_name": "jjkarmor",
       "metadata": {
         "files": []
-      },
-      "path": "~/Creative Tabs"
+      }
     },
     {
       "name": "StrongHitProcedure",
@@ -1336,7 +1335,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Creative Tabs"
+      "path": "~/Items"
     },
     {
       "name": "PlayfulCloudLivingEntityIsHitWithTool",
@@ -2897,7 +2896,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Creative Tabs"
+      "path": "~/Items"
     },
     {
       "name": "Explode",
@@ -15266,32 +15265,20 @@
       "path": "~/Particles"
     },
     {
-      "name": "ExpansionProcedure",
+      "name": "NailProjectileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 678,
+      "sortid": 681,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "expansion_procedure",
+      "registry_name": "nail_projectile_while_projectile_flying_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/ExpansionProcedureProcedure.java"
+          "src/main/java/net/mcreator/craftkaisen/procedures/NailProjectileWhileProjectileFlyingTickProcedure.java"
         ],
         "dependencies": [
           {
-            "name": "entity",
+            "name": "immediatesourceentity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -15299,7 +15286,22 @@
           }
         ]
       },
-      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Hammer",
+      "type": "tool",
+      "sortid": 680,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/HammerItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/hammer.json"
+        ]
+      },
+      "path": "~/Items"
     },
     {
       "name": "Nail",
@@ -15328,113 +15330,6 @@
         ]
       },
       "path": "~/Recipe"
-    },
-    {
-      "name": "Hammer",
-      "type": "tool",
-      "sortid": 680,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "hammer",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/HammerItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/hammer.json"
-        ]
-      },
-      "path": "~/Items"
-    },
-    {
-      "name": "NailProjectileWhileProjectileFlyingTick",
-      "type": "procedure",
-      "sortid": 681,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nail_projectile_while_projectile_flying_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/NailProjectileWhileProjectileFlyingTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "NailProjectileProjectileHitsBlock",
-      "type": "procedure",
-      "sortid": 682,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nail_projectile_projectile_hits_block",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/NailProjectileProjectileHitsBlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "NailProjectileProjectileHitsLivingEntity",
-      "type": "procedure",
-      "sortid": 683,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nail_projectile_projectile_hits_living_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/NailProjectileProjectileHitsLivingEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "NailProjectile",
-      "type": "rangeditem",
-      "sortid": 684,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nail_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/item/NailProjectileItem.java",
-          "src/main/resources/assets/craftkaisen/models/item/nail_projectile.json",
-          "src/main/java/net/mcreator/craftkaisen/entity/NailProjectileEntity.java"
-        ]
-      },
-      "path": "~/Abilities"
     },
     {
       "name": "HammerRightclicked",
@@ -15477,6 +15372,58 @@
       "path": "~/Items/Values"
     },
     {
+      "name": "NailProjectile",
+      "type": "rangeditem",
+      "sortid": 684,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nail_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/NailProjectileItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/nail_projectile.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/NailProjectileEntity.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ExpansionProcedure",
+      "type": "procedure",
+      "sortid": 678,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "expansion_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ExpansionProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
       "name": "SetStrawDoll",
       "type": "procedure",
       "sortid": 686,
@@ -15495,6 +15442,168 @@
         ]
       },
       "path": "~/Set Technique"
+    },
+    {
+      "name": "NailProjectileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 683,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nail_projectile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/NailProjectileProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "NailProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 682,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nail_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/NailProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "PurpleMist",
+      "type": "particle",
+      "sortid": 620,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_mist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleMistParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/purple_mist.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "RedMist",
+      "type": "particle",
+      "sortid": 624,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_mist",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/red_mist.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RedMistParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PurplePulse",
+      "type": "particle",
+      "sortid": 621,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_pulse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurplePulseParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/purple_pulse.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "HollowPurpleTick",
+      "type": "procedure",
+      "sortid": 625,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlueMist",
+      "type": "particle",
+      "sortid": 623,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_mist",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/blue_mist.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BlueMistParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PurpleLightning",
+      "type": "particle",
+      "sortid": 622,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleLightningParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/purple_lightning.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -16873,6 +16982,10 @@
         "children": []
       },
       {
+        "name": "Recipe",
+        "children": []
+      },
+      {
         "name": "Gamerules",
         "children": []
       },
@@ -16897,11 +17010,11 @@
         "name": "Potion Effects",
         "children": [
           {
-            "name": "Procedures",
+            "name": "Status",
             "children": []
           },
           {
-            "name": "Status",
+            "name": "Procedures",
             "children": []
           }
         ]
@@ -16922,6 +17035,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Functions",
+        "children": []
       },
       {
         "name": "Structures",
@@ -16967,14 +17084,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Recipe",
-        "children": []
-      },
-      {
-        "name": "Functions",
-        "children": []
       }
     ]
   },
