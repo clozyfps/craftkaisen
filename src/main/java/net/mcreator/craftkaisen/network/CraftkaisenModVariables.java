@@ -182,10 +182,10 @@ public class CraftkaisenModVariables {
 			clone.ArmorSaveHelmet = original.ArmorSaveHelmet;
 			clone.ArmorSaveLeggings = original.ArmorSaveLeggings;
 			clone.ArmorSaveBoots = original.ArmorSaveBoots;
-			clone.ConsumedSpirit1 = original.ConsumedSpirit1;
-			clone.ConsumedSpirit2 = original.ConsumedSpirit2;
 			clone.ConsumedSpirit3 = original.ConsumedSpirit3;
 			clone.ConsumedSpirit4 = original.ConsumedSpirit4;
+			clone.ConsumedSpirit1 = original.ConsumedSpirit1;
+			clone.ConsumedSpirit2 = original.ConsumedSpirit2;
 			clone.ConsumedSpirit5 = original.ConsumedSpirit5;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
@@ -486,10 +486,10 @@ public class CraftkaisenModVariables {
 		public ItemStack ArmorSaveLeggings = ItemStack.EMPTY;
 		public ItemStack OfferItem = ItemStack.EMPTY;
 		public ItemStack ArmorSaveBoots = ItemStack.EMPTY;
-		public String ConsumedSpirit1 = "\"\"";
-		public String ConsumedSpirit2 = "\"\"";
 		public String ConsumedSpirit3 = "\"\"";
 		public String ConsumedSpirit4 = "\"\"";
+		public String ConsumedSpirit1 = "\"\"";
+		public String ConsumedSpirit2 = "\"\"";
 		public String ConsumedSpirit5 = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
@@ -619,10 +619,10 @@ public class CraftkaisenModVariables {
 			nbt.put("ArmorSaveLeggings", ArmorSaveLeggings.save(new CompoundTag()));
 			nbt.put("OfferItem", OfferItem.save(new CompoundTag()));
 			nbt.put("ArmorSaveBoots", ArmorSaveBoots.save(new CompoundTag()));
-			nbt.putString("ConsumedSpirit1", ConsumedSpirit1);
-			nbt.putString("ConsumedSpirit2", ConsumedSpirit2);
 			nbt.putString("ConsumedSpirit3", ConsumedSpirit3);
 			nbt.putString("ConsumedSpirit4", ConsumedSpirit4);
+			nbt.putString("ConsumedSpirit1", ConsumedSpirit1);
+			nbt.putString("ConsumedSpirit2", ConsumedSpirit2);
 			nbt.putString("ConsumedSpirit5", ConsumedSpirit5);
 			return nbt;
 		}
@@ -749,10 +749,10 @@ public class CraftkaisenModVariables {
 			ArmorSaveLeggings = ItemStack.of(nbt.getCompound("ArmorSaveLeggings"));
 			OfferItem = ItemStack.of(nbt.getCompound("OfferItem"));
 			ArmorSaveBoots = ItemStack.of(nbt.getCompound("ArmorSaveBoots"));
-			ConsumedSpirit1 = nbt.getString("ConsumedSpirit1");
-			ConsumedSpirit2 = nbt.getString("ConsumedSpirit2");
 			ConsumedSpirit3 = nbt.getString("ConsumedSpirit3");
 			ConsumedSpirit4 = nbt.getString("ConsumedSpirit4");
+			ConsumedSpirit1 = nbt.getString("ConsumedSpirit1");
+			ConsumedSpirit2 = nbt.getString("ConsumedSpirit2");
 			ConsumedSpirit5 = nbt.getString("ConsumedSpirit5");
 		}
 	}
@@ -898,10 +898,10 @@ public class CraftkaisenModVariables {
 					variables.ArmorSaveLeggings = message.data.ArmorSaveLeggings;
 					variables.OfferItem = message.data.OfferItem;
 					variables.ArmorSaveBoots = message.data.ArmorSaveBoots;
-					variables.ConsumedSpirit1 = message.data.ConsumedSpirit1;
-					variables.ConsumedSpirit2 = message.data.ConsumedSpirit2;
 					variables.ConsumedSpirit3 = message.data.ConsumedSpirit3;
 					variables.ConsumedSpirit4 = message.data.ConsumedSpirit4;
+					variables.ConsumedSpirit1 = message.data.ConsumedSpirit1;
+					variables.ConsumedSpirit2 = message.data.ConsumedSpirit2;
 					variables.ConsumedSpirit5 = message.data.ConsumedSpirit5;
 				}
 			});

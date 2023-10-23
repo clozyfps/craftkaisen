@@ -217,6 +217,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "immediatesourceentity",
             "type": "entity"
           },
@@ -13959,6 +13963,116 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "PurpleMist",
+      "type": "particle",
+      "sortid": 620,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_mist",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/purple_mist.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleMistParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PurplePulse",
+      "type": "particle",
+      "sortid": 621,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_pulse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurplePulseParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/purple_pulse.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PurpleLightning",
+      "type": "particle",
+      "sortid": 622,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_lightning",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/purple_lightning.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleLightningParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "BlueMist",
+      "type": "particle",
+      "sortid": 623,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_mist",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/particles/blue_mist.json",
+          "src/main/java/net/mcreator/craftkaisen/client/particle/BlueMistParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "RedMist",
+      "type": "particle",
+      "sortid": 624,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_mist",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RedMistParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/red_mist.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "HollowPurpleTick",
+      "type": "procedure",
+      "sortid": 625,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_purple_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HollowPurpleTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
