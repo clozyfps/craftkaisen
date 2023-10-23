@@ -24,220 +24,75 @@ public class VeilPlaceProcedure {
 		if (entity == null)
 			return;
 		if (world instanceof ServerLevel _serverworld) {
-			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_eight_veil"));
+			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "newveil1"));
 			if (template != null) {
-				template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 24, z - 22), new BlockPos(x - 22, y + 24, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
-						_serverworld.random, 3);
+				template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 			}
 		}
-		CraftkaisenMod.queueServerWork(1, () -> {
+		CraftkaisenMod.queueServerWork(5, () -> {
 			if (world instanceof ServerLevel _serverworld) {
-				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_seven_veil"));
+				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "newveil2"));
 				if (template != null) {
-					template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 23, z - 22), new BlockPos(x - 22, y + 23, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
-							_serverworld.random, 3);
+					template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random,
+							3);
 				}
 			}
-			CraftkaisenMod.queueServerWork(1, () -> {
+			CraftkaisenMod.queueServerWork(5, () -> {
 				if (world instanceof ServerLevel _serverworld) {
-					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_six_veil"));
+					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin1"));
 					if (template != null) {
-						template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 22, z - 22), new BlockPos(x - 22, y + 22, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+						template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
 								_serverworld.random, 3);
 					}
 				}
-				CraftkaisenMod.queueServerWork(1, () -> {
+				CraftkaisenMod.queueServerWork(5, () -> {
 					if (world instanceof ServerLevel _serverworld) {
-						StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_five_veil"));
+						StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "coffin1"));
 						if (template != null) {
-							template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 21, z - 22), new BlockPos(x - 22, y + 21, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+							template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
 									_serverworld.random, 3);
 						}
 					}
-					CraftkaisenMod.queueServerWork(1, () -> {
+					CraftkaisenMod.queueServerWork(5, () -> {
 						if (world instanceof ServerLevel _serverworld) {
-							StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_four_veil"));
+							StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "newveil5"));
 							if (template != null) {
-								template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 20, z - 22), new BlockPos(x - 22, y + 20, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+								template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
 										_serverworld.random, 3);
 							}
 						}
-						CraftkaisenMod.queueServerWork(1, () -> {
+						CraftkaisenMod.queueServerWork(5, () -> {
 							if (world instanceof ServerLevel _serverworld) {
-								StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_three_veil"));
+								StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "newveil6"));
 								if (template != null) {
-									template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 19, z - 22), new BlockPos(x - 22, y + 19, z - 22),
-											new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+									template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+											_serverworld.random, 3);
 								}
 							}
-							CraftkaisenMod.queueServerWork(1, () -> {
+							CraftkaisenMod.queueServerWork(5, () -> {
 								if (world instanceof ServerLevel _serverworld) {
-									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_three_veil"));
+									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "newveil7"));
 									if (template != null) {
-										template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 18, z - 22), new BlockPos(x - 22, y + 18, z - 22),
-												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+										template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+												_serverworld.random, 3);
 									}
 								}
-								CraftkaisenMod.queueServerWork(1, () -> {
+								CraftkaisenMod.queueServerWork(5, () -> {
 									if (world instanceof ServerLevel _serverworld) {
-										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_three_veil"));
+										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "newveil8"));
 										if (template != null) {
-											template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 17, z - 22), new BlockPos(x - 22, y + 17, z - 22),
-													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
+											template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22), new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false),
+													_serverworld.random, 3);
 										}
 									}
-									CraftkaisenMod.queueServerWork(1, () -> {
+									CraftkaisenMod.queueServerWork(5, () -> {
 										if (world instanceof ServerLevel _serverworld) {
-											StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_three_veil"));
+											StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "newveil9"));
 											if (template != null) {
-												template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 16, z - 22), new BlockPos(x - 22, y + 16, z - 22),
+												template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22),
 														new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
 											}
 										}
-										CraftkaisenMod.queueServerWork(1, () -> {
-											if (world instanceof ServerLevel _serverworld) {
-												StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_three_veil"));
-												if (template != null) {
-													template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 15, z - 22), new BlockPos(x - 22, y + 15, z - 22),
-															new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-												}
-											}
-											CraftkaisenMod.queueServerWork(1, () -> {
-												if (world instanceof ServerLevel _serverworld) {
-													StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_three_veil"));
-													if (template != null) {
-														template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 14, z - 22), new BlockPos(x - 22, y + 14, z - 22),
-																new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-													}
-												}
-												CraftkaisenMod.queueServerWork(1, () -> {
-													if (world instanceof ServerLevel _serverworld) {
-														StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_two_veil"));
-														if (template != null) {
-															template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 13, z - 22), new BlockPos(x - 22, y + 13, z - 22),
-																	new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-														}
-													}
-													CraftkaisenMod.queueServerWork(1, () -> {
-														if (world instanceof ServerLevel _serverworld) {
-															StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_two_veil"));
-															if (template != null) {
-																template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 12, z - 22), new BlockPos(x - 22, y + 12, z - 22),
-																		new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-															}
-														}
-														CraftkaisenMod.queueServerWork(1, () -> {
-															if (world instanceof ServerLevel _serverworld) {
-																StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_two_veil"));
-																if (template != null) {
-																	template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 11, z - 22), new BlockPos(x - 22, y + 11, z - 22),
-																			new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																}
-															}
-															CraftkaisenMod.queueServerWork(1, () -> {
-																if (world instanceof ServerLevel _serverworld) {
-																	StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_two_veil"));
-																	if (template != null) {
-																		template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 10, z - 22), new BlockPos(x - 22, y + 10, z - 22),
-																				new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																	}
-																}
-																CraftkaisenMod.queueServerWork(1, () -> {
-																	if (world instanceof ServerLevel _serverworld) {
-																		StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_two_veil"));
-																		if (template != null) {
-																			template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 9, z - 22), new BlockPos(x - 22, y + 9, z - 22),
-																					new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																		}
-																	}
-																	CraftkaisenMod.queueServerWork(1, () -> {
-																		if (world instanceof ServerLevel _serverworld) {
-																			StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_two_veil"));
-																			if (template != null) {
-																				template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 8, z - 22), new BlockPos(x - 22, y + 8, z - 22),
-																						new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																			}
-																		}
-																		CraftkaisenMod.queueServerWork(1, () -> {
-																			if (world instanceof ServerLevel _serverworld) {
-																				StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																				if (template != null) {
-																					template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 7, z - 22), new BlockPos(x - 22, y + 7, z - 22),
-																							new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																				}
-																			}
-																			CraftkaisenMod.queueServerWork(1, () -> {
-																				if (world instanceof ServerLevel _serverworld) {
-																					StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																					if (template != null) {
-																						template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 6, z - 22), new BlockPos(x - 22, y + 6, z - 22),
-																								new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																					}
-																				}
-																				CraftkaisenMod.queueServerWork(1, () -> {
-																					if (world instanceof ServerLevel _serverworld) {
-																						StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																						if (template != null) {
-																							template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 5, z - 22), new BlockPos(x - 22, y + 5, z - 22),
-																									new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																						}
-																					}
-																					CraftkaisenMod.queueServerWork(1, () -> {
-																						if (world instanceof ServerLevel _serverworld) {
-																							StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																							if (template != null) {
-																								template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 4, z - 22), new BlockPos(x - 22, y + 4, z - 22),
-																										new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																							}
-																						}
-																						CraftkaisenMod.queueServerWork(1, () -> {
-																							if (world instanceof ServerLevel _serverworld) {
-																								StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																								if (template != null) {
-																									template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 3, z - 22), new BlockPos(x - 22, y + 3, z - 22),
-																											new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																								}
-																							}
-																							CraftkaisenMod.queueServerWork(1, () -> {
-																								if (world instanceof ServerLevel _serverworld) {
-																									StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																									if (template != null) {
-																										template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 2, z - 22), new BlockPos(x - 22, y + 2, z - 22),
-																												new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																									}
-																								}
-																								CraftkaisenMod.queueServerWork(1, () -> {
-																									if (world instanceof ServerLevel _serverworld) {
-																										StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																										if (template != null) {
-																											template.placeInWorld(_serverworld, new BlockPos(x - 22, y + 1, z - 22), new BlockPos(x - 22, y + 1, z - 22),
-																													new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																										}
-																									}
-																									CraftkaisenMod.queueServerWork(1, () -> {
-																										if (world instanceof ServerLevel _serverworld) {
-																											StructureTemplate template = _serverworld.getStructureManager().getOrCreate(new ResourceLocation("craftkaisen", "layer_one_veil"));
-																											if (template != null) {
-																												template.placeInWorld(_serverworld, new BlockPos(x - 22, y, z - 22), new BlockPos(x - 22, y, z - 22),
-																														new StructurePlaceSettings().setRotation(Rotation.NONE).setMirror(Mirror.NONE).setIgnoreEntities(false), _serverworld.random, 3);
-																											}
-																										}
-																									});
-																								});
-																							});
-																						});
-																					});
-																				});
-																			});
-																		});
-																	});
-																});
-															});
-														});
-													});
-												});
-											});
-										});
 									});
 								});
 							});

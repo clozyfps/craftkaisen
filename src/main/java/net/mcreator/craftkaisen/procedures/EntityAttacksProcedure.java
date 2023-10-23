@@ -36,8 +36,9 @@ import java.util.Comparator;
 public class EntityAttacksProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity().level, event.getEntity(), event.getSource().getDirectEntity());
+		Entity entity = event.getEntity();
+		if (event != null && entity != null) {
+			execute(event, entity.getLevel(), entity, event.getSource().getDirectEntity());
 		}
 	}
 
@@ -49,7 +50,7 @@ public class EntityAttacksProcedure {
 		if (entity == null || immediatesourceentity == null)
 			return;
 		if (immediatesourceentity.getType().is(TagKey.create(Registry.ENTITY_TYPE_REGISTRY, new ResourceLocation("blunt_powerful")))) {
-			if (Math.random() < 0.5) {
+			if (Math.random() < 0.7) {
 				entity.setDeltaMovement(new Vec3((2 * immediatesourceentity.getLookAngle().x), (2.2 * immediatesourceentity.getLookAngle().y), (2 * immediatesourceentity.getLookAngle().z)));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -63,11 +64,11 @@ public class EntityAttacksProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, (immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ()), 15, 2, 2, 2, 0);
 			}
-			if (Math.random() < 0.5) {
+			if (Math.random() < 0.7) {
 				if (immediatesourceentity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 					_entity.addEffect(new MobEffectInstance(CraftkaisenModMobEffects.PUNCH_BARRAGE_POTION.get(), 30, 1, false, false));
 			}
-			if (Math.random() < 0.5) {
+			if (Math.random() < 0.7) {
 				immediatesourceentity.setDeltaMovement(new Vec3((immediatesourceentity.getDeltaMovement().x()), (immediatesourceentity.getDeltaMovement().y() + 1.5), (immediatesourceentity.getDeltaMovement().y())));
 				CraftkaisenMod.queueServerWork(20, () -> {
 					immediatesourceentity.setDeltaMovement(new Vec3((immediatesourceentity.getDeltaMovement().x()), (immediatesourceentity.getDeltaMovement().y() - 5), (immediatesourceentity.getDeltaMovement().y())));
@@ -97,7 +98,7 @@ public class EntityAttacksProcedure {
 					});
 				});
 			}
-			if (Math.random() < 0.5) {
+			if (Math.random() < 0.7) {
 				entity.setDeltaMovement(new Vec3((1.9 * immediatesourceentity.getLookAngle().x), (2 * immediatesourceentity.getLookAngle().y), (1.9 * immediatesourceentity.getLookAngle().z)));
 				CraftkaisenMod.queueServerWork(20, () -> {
 					CraftkaisenMod.queueServerWork(5, () -> {

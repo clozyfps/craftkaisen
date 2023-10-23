@@ -186,7 +186,7 @@ public class CraftkaisenModVariables {
 			clone.ConsumedSpirit4 = original.ConsumedSpirit4;
 			clone.ConsumedSpirit1 = original.ConsumedSpirit1;
 			clone.ConsumedSpirit2 = original.ConsumedSpirit2;
-			clone.ConsumedSpirit5 = original.ConsumedSpirit5;
+			clone.SelectedSpirit = original.SelectedSpirit;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -490,7 +490,7 @@ public class CraftkaisenModVariables {
 		public String ConsumedSpirit4 = "\"\"";
 		public String ConsumedSpirit1 = "\"\"";
 		public String ConsumedSpirit2 = "\"\"";
-		public String ConsumedSpirit5 = "\"\"";
+		public String SelectedSpirit = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -623,7 +623,7 @@ public class CraftkaisenModVariables {
 			nbt.putString("ConsumedSpirit4", ConsumedSpirit4);
 			nbt.putString("ConsumedSpirit1", ConsumedSpirit1);
 			nbt.putString("ConsumedSpirit2", ConsumedSpirit2);
-			nbt.putString("ConsumedSpirit5", ConsumedSpirit5);
+			nbt.putString("SelectedSpirit", SelectedSpirit);
 			return nbt;
 		}
 
@@ -753,7 +753,7 @@ public class CraftkaisenModVariables {
 			ConsumedSpirit4 = nbt.getString("ConsumedSpirit4");
 			ConsumedSpirit1 = nbt.getString("ConsumedSpirit1");
 			ConsumedSpirit2 = nbt.getString("ConsumedSpirit2");
-			ConsumedSpirit5 = nbt.getString("ConsumedSpirit5");
+			SelectedSpirit = nbt.getString("SelectedSpirit");
 		}
 	}
 
@@ -902,7 +902,7 @@ public class CraftkaisenModVariables {
 					variables.ConsumedSpirit4 = message.data.ConsumedSpirit4;
 					variables.ConsumedSpirit1 = message.data.ConsumedSpirit1;
 					variables.ConsumedSpirit2 = message.data.ConsumedSpirit2;
-					variables.ConsumedSpirit5 = message.data.ConsumedSpirit5;
+					variables.SelectedSpirit = message.data.SelectedSpirit;
 				}
 			});
 			context.setPacketHandled(true);

@@ -14,6 +14,7 @@ import net.mcreator.craftkaisen.block.VeilMainBlockBlock;
 import net.mcreator.craftkaisen.block.UnlimitedVoidBlock;
 import net.mcreator.craftkaisen.block.QuestBoardBlock;
 import net.mcreator.craftkaisen.block.PrisonRealmBlock;
+import net.mcreator.craftkaisen.block.GreenVeilBlockBlock;
 import net.mcreator.craftkaisen.block.DomainBlockTwoBlock;
 import net.mcreator.craftkaisen.block.DomainBlockOneBlock;
 import net.mcreator.craftkaisen.block.CursedToolTableBlock;
@@ -28,4 +29,5 @@ public class CraftkaisenModBlocks {
 	public static final RegistryObject<Block> PRISON_REALM = REGISTRY.register("prison_realm", () -> new PrisonRealmBlock());
 	public static final RegistryObject<Block> DOMAIN_BLOCK_ONE = REGISTRY.register("domain_block_one", () -> new DomainBlockOneBlock());
 	public static final RegistryObject<Block> DOMAIN_BLOCK_TWO = REGISTRY.register("domain_block_two", () -> new DomainBlockTwoBlock());
+	public static final RegistryObject<Block> GREEN_VEIL_BLOCK = REGISTRY.register("green_veil_block", () -> new GreenVeilBlockBlock());
 }

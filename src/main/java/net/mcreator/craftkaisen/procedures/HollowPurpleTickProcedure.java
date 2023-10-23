@@ -1,22 +1,6 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.Direction;
-
-import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
-import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
 
 import javax.annotation.Nullable;
 
@@ -38,7 +22,7 @@ public class HollowPurpleTickProcedure {
 			entity.getPersistentData().putDouble("hollowPurple", (entity.getPersistentData().getDouble("hollowPurple") - 1));
 			entity.getPersistentData().putDouble("hollowDistance", (entity.getPersistentData().getDouble("hollowDistance") + 0.12857143));
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.PURPLE_LIGHTNING.get()), x, y, z, 1, 1.5, 1, 1.5, 1);
+				_level.sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), x, y, z, 1, 1.5, 1, 1.5, 1);
 			if (entity.getPersistentData().getDouble("hollowPurple") >= 1) {
 				if ((entity.getDirection()) == Direction.EAST) {
 					{
@@ -80,9 +64,9 @@ public class HollowPurpleTickProcedure {
 										double posZ = (z - (4.5 - entity.getPersistentData().getDouble("hollowDistance"))) + zz;
 										if (true) {
 											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
+												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
 										} else {
-											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, 0, 0, 0);
+											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, 0, 0, 0);
 										}
 									}
 								}
@@ -129,9 +113,9 @@ public class HollowPurpleTickProcedure {
 										double posZ = (z - (4.5 - entity.getPersistentData().getDouble("hollowDistance"))) + zz;
 										if (true) {
 											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
+												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
 										} else {
-											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, 0, 0, 0);
+											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, 0, 0, 0);
 										}
 									}
 								}
@@ -178,9 +162,9 @@ public class HollowPurpleTickProcedure {
 										double posZ = z + zz;
 										if (true) {
 											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
+												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
 										} else {
-											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, 0, 0, 0);
+											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, 0, 0, 0);
 										}
 									}
 								}
@@ -227,9 +211,9 @@ public class HollowPurpleTickProcedure {
 										double posZ = z + zz;
 										if (true) {
 											if (world instanceof ServerLevel)
-												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
+												((ServerLevel) world).sendParticles((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, (int) 1, 0.01, 0.01, 0.01, 0);
 										} else {
-											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.BLUE_MIST.get()), posX, posY, posZ, 0, 0, 0);
+											world.addParticle((SimpleParticleType) (CraftkaisenModParticleTypes.DELETED_MOD_ELEMENT.get()), posX, posY, posZ, 0, 0, 0);
 										}
 									}
 								}

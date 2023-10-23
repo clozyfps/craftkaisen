@@ -36,6 +36,7 @@ import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
+import net.mcreator.craftkaisen.entity.ManipulationPortalEntity;
 import net.mcreator.craftkaisen.entity.MalevolentShrineEntity;
 import net.mcreator.craftkaisen.entity.MakiZeninEntity;
 import net.mcreator.craftkaisen.entity.MahitoSpikeEntity;
@@ -44,6 +45,7 @@ import net.mcreator.craftkaisen.entity.MagmaRockProjectileEntity;
 import net.mcreator.craftkaisen.entity.MagmaRockEntity;
 import net.mcreator.craftkaisen.entity.LapseBlueEntity;
 import net.mcreator.craftkaisen.entity.KenjakuEntity;
+import net.mcreator.craftkaisen.entity.KasumiMiwaEntity;
 import net.mcreator.craftkaisen.entity.JujutsuStudentEntity;
 import net.mcreator.craftkaisen.entity.JogoEntity;
 import net.mcreator.craftkaisen.entity.ItadoriEntity;
@@ -51,6 +53,8 @@ import net.mcreator.craftkaisen.entity.InventoryCurseEntity;
 import net.mcreator.craftkaisen.entity.InfiniteVoiddEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntityEntity;
 import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
+import net.mcreator.craftkaisen.entity.HanamiEntity;
+import net.mcreator.craftkaisen.entity.HajimeKashimoEntity;
 import net.mcreator.craftkaisen.entity.GetCrushedEntity;
 import net.mcreator.craftkaisen.entity.FlyHeadEntity;
 import net.mcreator.craftkaisen.entity.FlowerfieldsEntity;
@@ -63,6 +67,7 @@ import net.mcreator.craftkaisen.entity.EnergyBeamEntity;
 import net.mcreator.craftkaisen.entity.EmptyMechamaruEntity;
 import net.mcreator.craftkaisen.entity.EmberInsectEntity;
 import net.mcreator.craftkaisen.entity.DisasterFlameEntity;
+import net.mcreator.craftkaisen.entity.DarkAtomEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritrugbyfieldEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritroppongiEntity;
 import net.mcreator.craftkaisen.entity.CursedspiritmouthEntity;
@@ -275,6 +280,22 @@ public class CraftkaisenModEntities {
 			EntityType.Builder.<AoiTodoEntity>of(AoiTodoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(AoiTodoEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<ManipulationPortalEntity>> MANIPULATION_PORTAL = register("manipulation_portal", EntityType.Builder.<ManipulationPortalEntity>of(ManipulationPortalEntity::new, MobCategory.MONSTER)
+			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ManipulationPortalEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<KasumiMiwaEntity>> KASUMI_MIWA = register("kasumi_miwa",
+			EntityType.Builder.<KasumiMiwaEntity>of(KasumiMiwaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KasumiMiwaEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HanamiEntity>> HANAMI = register("hanami",
+			EntityType.Builder.<HanamiEntity>of(HanamiEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HanamiEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<HajimeKashimoEntity>> HAJIME_KASHIMO = register("hajime_kashimo",
+			EntityType.Builder.<HajimeKashimoEntity>of(HajimeKashimoEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(HajimeKashimoEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DarkAtomEntity>> DARK_ATOM = register("projectile_dark_atom",
+			EntityType.Builder.<DarkAtomEntity>of(DarkAtomEntity::new, MobCategory.MISC).setCustomClientFactory(DarkAtomEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -327,6 +348,10 @@ public class CraftkaisenModEntities {
 			KenjakuEntity.init();
 			NanamiKentoEntity.init();
 			AoiTodoEntity.init();
+			ManipulationPortalEntity.init();
+			KasumiMiwaEntity.init();
+			HanamiEntity.init();
+			HajimeKashimoEntity.init();
 		});
 	}
 
@@ -376,5 +401,9 @@ public class CraftkaisenModEntities {
 		event.put(KENJAKU.get(), KenjakuEntity.createAttributes().build());
 		event.put(NANAMI_KENTO.get(), NanamiKentoEntity.createAttributes().build());
 		event.put(AOI_TODO.get(), AoiTodoEntity.createAttributes().build());
+		event.put(MANIPULATION_PORTAL.get(), ManipulationPortalEntity.createAttributes().build());
+		event.put(KASUMI_MIWA.get(), KasumiMiwaEntity.createAttributes().build());
+		event.put(HANAMI.get(), HanamiEntity.createAttributes().build());
+		event.put(HAJIME_KASHIMO.get(), HajimeKashimoEntity.createAttributes().build());
 	}
 }
