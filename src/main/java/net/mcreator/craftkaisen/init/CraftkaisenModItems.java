@@ -34,10 +34,12 @@ import net.mcreator.craftkaisen.item.PonyTailItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.NanamiKnifeItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
+import net.mcreator.craftkaisen.item.MiwaKatanaItem;
 import net.mcreator.craftkaisen.item.MechamaruArmorItem;
 import net.mcreator.craftkaisen.item.MahoragaWheelItem;
 import net.mcreator.craftkaisen.item.MagmaRockProjectileItem;
 import net.mcreator.craftkaisen.item.KatanaItem;
+import net.mcreator.craftkaisen.item.KashimoStaffItem;
 import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
@@ -50,6 +52,7 @@ import net.mcreator.craftkaisen.item.FireArrowProjectileItem;
 import net.mcreator.craftkaisen.item.ExplodeItem;
 import net.mcreator.craftkaisen.item.EsoArmorItem;
 import net.mcreator.craftkaisen.item.DisasterFlameItem;
+import net.mcreator.craftkaisen.item.DarkAtomItem;
 import net.mcreator.craftkaisen.item.CursedSpiritOrbItem;
 import net.mcreator.craftkaisen.item.CursedFingerItem;
 import net.mcreator.craftkaisen.item.CursedBudItem;
@@ -173,6 +176,15 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.NANAMI_KENTO, -1, -2631783, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> AOI_TODO_SPAWN_EGG = REGISTRY.register("aoi_todo_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.AOI_TODO, -2636401, -15132391, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> NANAMI_KNIFE = REGISTRY.register("nanami_knife", () -> new NanamiKnifeItem());
+	public static final RegistryObject<Item> GREEN_VEIL_BLOCK = block(CraftkaisenModBlocks.GREEN_VEIL_BLOCK, CraftkaisenModTabs.TAB_JJKMOBS);
+	public static final RegistryObject<Item> MIWA_KATANA = REGISTRY.register("miwa_katana", () -> new MiwaKatanaItem());
+	public static final RegistryObject<Item> KASUMI_MIWA_SPAWN_EGG = REGISTRY.register("kasumi_miwa_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.KASUMI_MIWA, -15921885, -16726785, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> HANAMI_SPAWN_EGG = REGISTRY.register("hanami_spawn_egg", () -> new ForgeSpawnEggItem(CraftkaisenModEntities.HANAMI, -4473973, -1, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> HAJIME_KASHIMO_SPAWN_EGG = REGISTRY.register("hajime_kashimo_spawn_egg",
+			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.HAJIME_KASHIMO, -3414549, -16726785, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
+	public static final RegistryObject<Item> KASHIMO_STAFF = REGISTRY.register("kashimo_staff", () -> new KashimoStaffItem());
+	public static final RegistryObject<Item> DARK_ATOM = REGISTRY.register("dark_atom", () -> new DarkAtomItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

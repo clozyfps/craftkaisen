@@ -25,6 +25,7 @@ import net.mcreator.craftkaisen.client.renderer.PrisonRealmMobRenderer;
 import net.mcreator.craftkaisen.client.renderer.NanamiKentoRenderer;
 import net.mcreator.craftkaisen.client.renderer.MegumiFushiguroRenderer;
 import net.mcreator.craftkaisen.client.renderer.MaximumMeteorRenderer;
+import net.mcreator.craftkaisen.client.renderer.ManipulationPortalRenderer;
 import net.mcreator.craftkaisen.client.renderer.MalevolentShrineRenderer;
 import net.mcreator.craftkaisen.client.renderer.MakiZeninRenderer;
 import net.mcreator.craftkaisen.client.renderer.MahitoSpikeRenderer;
@@ -33,12 +34,15 @@ import net.mcreator.craftkaisen.client.renderer.MagmaRockRenderer;
 import net.mcreator.craftkaisen.client.renderer.MagmaRockProjectileRenderer;
 import net.mcreator.craftkaisen.client.renderer.LapseBlueRenderer;
 import net.mcreator.craftkaisen.client.renderer.KenjakuRenderer;
+import net.mcreator.craftkaisen.client.renderer.KasumiMiwaRenderer;
 import net.mcreator.craftkaisen.client.renderer.JujutsuStudentRenderer;
 import net.mcreator.craftkaisen.client.renderer.JogoRenderer;
 import net.mcreator.craftkaisen.client.renderer.ItadoriRenderer;
 import net.mcreator.craftkaisen.client.renderer.InventoryCurseRenderer;
 import net.mcreator.craftkaisen.client.renderer.InfiniteVoiddRenderer;
 import net.mcreator.craftkaisen.client.renderer.HollowPurpleEntityRenderer;
+import net.mcreator.craftkaisen.client.renderer.HanamiRenderer;
+import net.mcreator.craftkaisen.client.renderer.HajimeKashimoRenderer;
 import net.mcreator.craftkaisen.client.renderer.FlyHeadRenderer;
 import net.mcreator.craftkaisen.client.renderer.FireArrowRenderer;
 import net.mcreator.craftkaisen.client.renderer.FingerBearerRenderer;
@@ -122,5 +126,10 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.KENJAKU.get(), KenjakuRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.NANAMI_KENTO.get(), NanamiKentoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.AOI_TODO.get(), AoiTodoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.MANIPULATION_PORTAL.get(), ManipulationPortalRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.KASUMI_MIWA.get(), KasumiMiwaRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.HANAMI.get(), HanamiRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.HAJIME_KASHIMO.get(), HajimeKashimoRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.DARK_ATOM.get(), ThrownItemRenderer::new);
 	}
 }

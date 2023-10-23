@@ -1,5 +1,6 @@
 {
   "blood": {
+    "subtitle": "subtitles.blood",
     "sounds": [
       {
         "name": "craftkaisen:dicesteak",
@@ -8,6 +9,7 @@
     ]
   },
   "clap": {
+    "subtitle": "subtitles.clap",
     "sounds": [
       {
         "name": "craftkaisen:clap",
@@ -16,6 +18,7 @@
     ]
   },
   "bones": {
+    "subtitle": "subtitles.bones",
     "sounds": [
       {
         "name": "craftkaisen:bone_crash",
@@ -24,6 +27,7 @@
     ]
   },
   "hit": {
+    "subtitle": "subtitles.hit",
     "sounds": [
       {
         "name": "craftkaisen:punch_hit1",
@@ -41,6 +45,7 @@
     ]
   },
   "electric": {
+    "subtitle": "subtitles.electric",
     "sounds": [
       {
         "name": "craftkaisen:electric_shock",
@@ -49,6 +54,7 @@
     ]
   },
   "kiss": {
+    "subtitle": "subtitles.kiss",
     "sounds": [
       {
         "name": "craftkaisen:smoochykiss",
@@ -57,9 +63,37 @@
     ]
   },
   "domainexpansion": {
+    "subtitle": "subtitles.domainexpansion",
     "sounds": [
       {
         "name": "craftkaisen:domainexpansion",
+        "stream": false
+      }
+    ]
+  },
+  "slice": {
+    "subtitle": "subtitles.slice",
+    "sounds": [
+      {
+        "name": "craftkaisen:mixkit-dagger-woosh-1487",
+        "stream": false
+      }
+    ]
+  },
+  "sweep": {
+    "subtitle": "subtitles.sweep",
+    "sounds": [
+      {
+        "name": "craftkaisen:sword_sweep",
+        "stream": false
+      }
+    ]
+  },
+  "splatter": {
+    "subtitle": "subtitles.splatter",
+    "sounds": [
+      {
+        "name": "craftkaisen:bloody",
         "stream": false
       }
     ]

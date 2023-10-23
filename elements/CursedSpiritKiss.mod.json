@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Cursed Spirit: Kiss",
     "mobLabel": "",
-    "mobModelName": "Modelpinkspirit",
-    "mobModelTexture": "pinkcursetexture.png",
+    "mobModelName": "Modelpinksprite",
+    "mobModelTexture": "pink_sprite.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false

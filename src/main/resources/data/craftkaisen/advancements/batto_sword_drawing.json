@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "craftkaisen:miwa_katana"
+    },
+    "title": {
+      "translate": "advancements.batto_sword_drawing.title"
+    },
+    "description": {
+      "translate": "advancements.batto_sword_drawing.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "batto_sword_drawing": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "craftkaisen:jujutsu_sorcerer"
+}

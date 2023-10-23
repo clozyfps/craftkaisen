@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Magma Rock",
     "mobLabel": "",
-    "mobModelName": "Biped",
-    "mobModelTexture": "air103_layer_2.png",
+    "mobModelName": "Modelmagmaprojectile",
+    "mobModelTexture": "magmablock.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false

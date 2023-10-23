@@ -1,0 +1,93 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 220,
+    "height": 120,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "onClick": {
+            "name": "Slot1SelectedManipulation"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 121,
+          "y": 106
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "onClick": {
+            "name": "Slot2SelectedManipulation"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 175,
+          "y": 106
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "onClick": {
+            "name": "Slot3SelectedManipulation"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 226,
+          "y": 106
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "onClick": {
+            "name": "Slot4SelectedManipulation"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 275,
+          "y": 106
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_select_the_slot_of_the_cursed_sp",
+          "text": {
+            "fixedValue": "Select the slot of the cursed spirit."
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "x": 117,
+          "y": 87
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

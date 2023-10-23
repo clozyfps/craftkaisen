@@ -28,6 +28,7 @@ import net.mcreator.craftkaisen.potion.RepeatedSlicingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTHealingMobEffect;
 import net.mcreator.craftkaisen.potion.RCTCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.PunchBarragePotionMobEffect;
+import net.mcreator.craftkaisen.potion.PropellMobEffect;
 import net.mcreator.craftkaisen.potion.PhysicallyGiftedCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MoveUltimateCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.MoveSpecialCooldownMobEffect;
@@ -36,6 +37,7 @@ import net.mcreator.craftkaisen.potion.Move4CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.Move3CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.Move2CooldownMobEffect;
 import net.mcreator.craftkaisen.potion.Move1CooldownMobEffect;
+import net.mcreator.craftkaisen.potion.ManipulationCooldownMobEffect;
 import net.mcreator.craftkaisen.potion.IrritatedThroatMobEffect;
 import net.mcreator.craftkaisen.potion.InfinityMobEffect;
 import net.mcreator.craftkaisen.potion.IdleTransfigurationMobEffect;
@@ -52,7 +54,9 @@ import net.mcreator.craftkaisen.potion.CrushingMobEffect;
 import net.mcreator.craftkaisen.potion.CorruptedPotionMobEffect;
 import net.mcreator.craftkaisen.potion.ClapRushMobEffect;
 import net.mcreator.craftkaisen.potion.ChargeCEEffectMobEffect;
+import net.mcreator.craftkaisen.potion.BuzzBurstMobEffect;
 import net.mcreator.craftkaisen.potion.BurntOutEffectMobEffect;
+import net.mcreator.craftkaisen.potion.BleedingMobEffect;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 public class CraftkaisenModMobEffects {
@@ -100,4 +104,8 @@ public class CraftkaisenModMobEffects {
 	public static final RegistryObject<MobEffect> EXPLOSION_EFFECT = REGISTRY.register("explosion_effect", () -> new ExplosionEffectMobEffect());
 	public static final RegistryObject<MobEffect> CORRUPTED_POTION = REGISTRY.register("corrupted_potion", () -> new CorruptedPotionMobEffect());
 	public static final RegistryObject<MobEffect> SORCERER = REGISTRY.register("sorcerer", () -> new SorcererMobEffect());
+	public static final RegistryObject<MobEffect> MANIPULATION_COOLDOWN = REGISTRY.register("manipulation_cooldown", () -> new ManipulationCooldownMobEffect());
+	public static final RegistryObject<MobEffect> BUZZ_BURST = REGISTRY.register("buzz_burst", () -> new BuzzBurstMobEffect());
+	public static final RegistryObject<MobEffect> BLEEDING = REGISTRY.register("bleeding", () -> new BleedingMobEffect());
+	public static final RegistryObject<MobEffect> PROPELL = REGISTRY.register("propell", () -> new PropellMobEffect());
 }

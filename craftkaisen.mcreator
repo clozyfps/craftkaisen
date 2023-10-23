@@ -4441,9 +4441,9 @@
       "registry_name": "malevolent_shrine",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/malevolent_shrine_spawn_egg.json",
           "src/main/java/net/mcreator/craftkaisen/client/renderer/MalevolentShrineRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/MalevolentShrineEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/MalevolentShrineEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/malevolent_shrine_spawn_egg.json"
         ]
       },
       "path": "~/Abilities"
@@ -7940,8 +7940,8 @@
       "registry_name": "magma_rock",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java",
-          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/MagmaRockEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/MagmaRockRenderer.java"
         ]
       },
       "path": "~/Abilities"
@@ -8670,26 +8670,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesOnEffectActiveTickProcedure.java"
         ],
-        "dependencies": []
-      },
-      "path": "~/Abilities"
-    },
-    {
-      "name": "SkyOfFlamesEffectStartedapplied",
-      "type": "procedure",
-      "sortid": 413,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sky_of_flames_effect_startedapplied",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesEffectStartedappliedProcedure.java"
-        ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -8707,6 +8688,21 @@
             "type": "world"
           }
         ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "SkyOfFlamesEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sky_of_flames_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": []
       },
       "path": "~/Abilities"
     },
@@ -8750,16 +8746,7 @@
         "files": [
           "src/main/java/net/mcreator/craftkaisen/procedures/SkyOfFlamesEffectExpiresProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Potion Effects/Procedures"
     },
@@ -8778,22 +8765,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -13574,8 +13545,8 @@
       "registry_name": "cursed_spirit_orb",
       "metadata": {
         "files": [
-          "src/main/resources/assets/craftkaisen/models/item/cursed_spirit_orb.json",
-          "src/main/java/net/mcreator/craftkaisen/item/CursedSpiritOrbItem.java"
+          "src/main/java/net/mcreator/craftkaisen/item/CursedSpiritOrbItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursed_spirit_orb.json"
         ]
       },
       "path": "~/Items"
@@ -13908,10 +13879,10 @@
       "registry_name": "cursed_spirit_kiss",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/craftkaisen/entity/CursedSpiritKissEntity.java",
-          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursed_spirit_kiss_biome_modifier.json",
           "src/main/resources/assets/craftkaisen/models/item/cursed_spirit_kiss_spawn_egg.json",
-          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedSpiritKissRenderer.java"
+          "src/main/java/net/mcreator/craftkaisen/entity/CursedSpiritKissEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/CursedSpiritKissRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/cursed_spirit_kiss_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -13959,6 +13930,1339 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "GreenVeilBlock",
+      "type": "block",
+      "sortid": 620,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_veil_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/green_veil_block.json",
+          "src/main/resources/assets/craftkaisen/models/block/green_veil_block.json",
+          "src/main/java/net/mcreator/craftkaisen/block/GreenVeilBlockBlock.java",
+          "src/main/resources/assets/craftkaisen/blockstates/green_veil_block.json"
+        ]
+      },
+      "path": "~/Blocks"
+    },
+    {
+      "name": "ManipulationSlotGui",
+      "type": "gui",
+      "sortid": 621,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_slot_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/ManipulationSlotGuiMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/ManipulationSlotGuiScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/ManipulationSlotGuiButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "CursedSpiritOrbPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 622,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_spirit_orb_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/CursedSpiritOrbPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Procedures"
+    },
+    {
+      "name": "Slot1SelectedManipulation",
+      "type": "procedure",
+      "sortid": 623,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_1_selected_manipulation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot1SelectedManipulationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Slot2SelectedManipulation",
+      "type": "procedure",
+      "sortid": 624,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_2_selected_manipulation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot2SelectedManipulationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Slot3SelectedManipulation",
+      "type": "procedure",
+      "sortid": 625,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_3_selected_manipulation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot3SelectedManipulationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Slot4SelectedManipulation",
+      "type": "procedure",
+      "sortid": 626,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_4_selected_manipulation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot4SelectedManipulationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ManipulationWheel",
+      "type": "gui",
+      "sortid": 627,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_wheel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/gui/ManipulationWheelScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/ManipulationWheelMenu.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Line",
+      "type": "gui",
+      "sortid": 628,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "line",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/LineMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/LineScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "Slot1Value",
+      "type": "procedure",
+      "sortid": 629,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_1_value",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot1ValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Slot2Value",
+      "type": "procedure",
+      "sortid": 630,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_2_value",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot2ValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Slot3Value",
+      "type": "procedure",
+      "sortid": 631,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_3_value",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot3ValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "Slot4Value",
+      "type": "procedure",
+      "sortid": 632,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_4_value",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot4ValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "ManipulationCooldown",
+      "type": "potioneffect",
+      "sortid": 633,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/ManipulationCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "ManipulationPortalOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 634,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_portal_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ManipulationPortalOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ManipulationPortalOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 635,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_portal_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ManipulationPortalOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "ManipulationPortal",
+      "type": "livingentity",
+      "sortid": 636,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/ManipulationPortalEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/ManipulationPortalRenderer.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "KeepGuiOpen",
+      "type": "procedure",
+      "sortid": 637,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keep_gui_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/KeepGuiOpenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ManipulationWheelOpenOnKeyPressed",
+      "type": "procedure",
+      "sortid": 638,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_wheel_open_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ManipulationWheelOpenOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "ManipulationWheelOpenOnKeyReleased",
+      "type": "procedure",
+      "sortid": 639,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_wheel_open_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ManipulationWheelOpenOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "ManipulationWheelOpen",
+      "type": "keybind",
+      "sortid": 640,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manipulation_wheel_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/ManipulationWheelOpenMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "MiwaKatana",
+      "type": "tool",
+      "sortid": 641,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miwa_katana",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/miwa_katana.json",
+          "src/main/java/net/mcreator/craftkaisen/item/MiwaKatanaItem.java"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "KasumiMiwa",
+      "type": "livingentity",
+      "sortid": 642,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kasumi_miwa",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/kasumi_miwa_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/KasumiMiwaRenderer.java",
+          "src/main/java/net/mcreator/craftkaisen/entity/KasumiMiwaEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/kasumi_miwa_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "SimpleDomainOnKeyPressed",
+      "type": "procedure",
+      "sortid": 643,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_domain_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SimpleDomainOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "SimpleDomainOnKeyReleased",
+      "type": "procedure",
+      "sortid": 644,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_domain_on_key_released",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SimpleDomainOnKeyReleasedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "SimpleDomain",
+      "type": "keybind",
+      "sortid": 645,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_domain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/SimpleDomainMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "BattoSwordDrawing",
+      "type": "achievement",
+      "sortid": 646,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "batto_sword_drawing",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/advancements/batto_sword_drawing.json"
+        ]
+      },
+      "path": "~/Advancements"
+    },
+    {
+      "name": "KasumiMiwaOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 647,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kasumi_miwa_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/KasumiMiwaOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "HanamiOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 648,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hanami_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HanamiOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "Hanami",
+      "type": "livingentity",
+      "sortid": 649,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hanami",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/hanami_spawn_egg.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/HanamiEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HanamiRenderer.java",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/hanami_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Slot1Summon",
+      "type": "procedure",
+      "sortid": 650,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_1_summon",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot1SummonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Slot2Summon",
+      "type": "procedure",
+      "sortid": 651,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_2_summon",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot2SummonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Slot3Summon",
+      "type": "procedure",
+      "sortid": 652,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_3_summon",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot3SummonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "Slot4Summon",
+      "type": "procedure",
+      "sortid": 653,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_4_summon",
+      "metadata": {
+        "return_type": "entity",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Slot4SummonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "HajimeKashimo",
+      "type": "livingentity",
+      "sortid": 654,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hajime_kashimo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/craftkaisen/models/item/hajime_kashimo_spawn_egg.json",
+          "src/main/resources/data/craftkaisen/forge/biome_modifier/hajime_kashimo_biome_modifier.json",
+          "src/main/java/net/mcreator/craftkaisen/entity/HajimeKashimoEntity.java",
+          "src/main/java/net/mcreator/craftkaisen/client/renderer/HajimeKashimoRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "KashimoStaff",
+      "type": "tool",
+      "sortid": 655,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kashimo_staff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/KashimoStaffItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/kashimo_staff.json"
+        ]
+      },
+      "path": "~/Items"
+    },
+    {
+      "name": "PurpleElectricity",
+      "type": "particle",
+      "sortid": 656,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_electricity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/PurpleElectricityParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/purple_electricity.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SetElectricity",
+      "type": "procedure",
+      "sortid": 657,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_electricity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetElectricityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "BuzzBurstFunction",
+      "type": "function",
+      "sortid": 658,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buzz_burst_function",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/craftkaisen/functions/buzz_burst_function.mcfunction"
+        ]
+      },
+      "path": "~/Functions"
+    },
+    {
+      "name": "BuzzBurstOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 659,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buzz_burst_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BuzzBurstOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Procedures"
+    },
+    {
+      "name": "BuzzBurst",
+      "type": "potioneffect",
+      "sortid": 660,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buzz_burst",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/BuzzBurstMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects"
+    },
+    {
+      "name": "DarkAtomWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 661,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dark_atom_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DarkAtomWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BleedingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 662,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BleedingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Status"
+    },
+    {
+      "name": "BleedingEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 663,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BleedingEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potion Effects/Status"
+    },
+    {
+      "name": "Bleeding",
+      "type": "potioneffect",
+      "sortid": 664,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleeding",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/BleedingMobEffect.java"
+        ]
+      },
+      "path": "~/Potion Effects/Status"
+    },
+    {
+      "name": "DarkAtom",
+      "type": "rangeditem",
+      "sortid": 665,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dark_atom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/entity/DarkAtomEntity.java",
+          "src/main/resources/assets/craftkaisen/models/item/dark_atom.json",
+          "src/main/java/net/mcreator/craftkaisen/item/DarkAtomItem.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "BuzzBurstProcedure",
+      "type": "procedure",
+      "sortid": 666,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buzz_burst_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BuzzBurstProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "DartAtomProcedure",
+      "type": "procedure",
+      "sortid": 667,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dart_atom_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DartAtomProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "MultiBoltsProcedure",
+      "type": "procedure",
+      "sortid": 668,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "multi_bolts_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/MultiBoltsProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "PropellOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 669,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propell_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PropellOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "PropellEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 670,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propell_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PropellEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "PropellEffectExpires",
+      "type": "procedure",
+      "sortid": 671,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propell_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PropellEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "Propell",
+      "type": "potioneffect",
+      "sortid": 672,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "propell",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/potion/PropellMobEffect.java"
+        ]
+      },
+      "path": "~/Abilities"
+    },
+    {
+      "name": "LightningPropellProcedure",
+      "type": "procedure",
+      "sortid": 673,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_propell_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LightningPropellProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures/TechniqueProcedure"
+    },
+    {
+      "name": "HajimeKashimoOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 674,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hajime_kashimo_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/HajimeKashimoOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SetRatio",
+      "type": "procedure",
+      "sortid": 675,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ratio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetRatioProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Set Technique"
+    },
+    {
+      "name": "RatioHit",
+      "type": "procedure",
+      "sortid": 676,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ratio_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/RatioHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Ratio",
+      "type": "particle",
+      "sortid": 677,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ratio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/client/particle/RatioParticle.java",
+          "src/main/resources/assets/craftkaisen/particles/ratio.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -14719,10 +16023,10 @@
       "value": "\"\""
     },
     {
-      "name": "ConsumedSpirit5",
+      "name": "SelectedSpirit",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -14732,7 +16036,7 @@
         "dicesteak"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Blood Splatter"
     },
     {
       "name": "clap",
@@ -14740,7 +16044,7 @@
         "clap"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Clap"
     },
     {
       "name": "bones",
@@ -14748,7 +16052,7 @@
         "bone_crash"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Exoskeleton Tighten"
     },
     {
       "name": "hit",
@@ -14756,7 +16060,7 @@
         "punch_hit1"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Strong Hit"
     },
     {
       "name": "rct.heartbeat",
@@ -14772,7 +16076,7 @@
         "electric_shock"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Electricity"
     },
     {
       "name": "kiss",
@@ -14780,7 +16084,7 @@
         "smoochykiss"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Smooch"
     },
     {
       "name": "domainexpansion",
@@ -14788,7 +16092,31 @@
         "domainexpansion"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Domain Expansion"
+    },
+    {
+      "name": "slice",
+      "files": [
+        "mixkit-dagger-woosh-1487"
+      ],
+      "category": "neutral",
+      "subtitle": "Slice"
+    },
+    {
+      "name": "sweep",
+      "files": [
+        "sword_sweep"
+      ],
+      "category": "neutral",
+      "subtitle": "Slicing"
+    },
+    {
+      "name": "splatter",
+      "files": [
+        "bloody"
+      ],
+      "category": "neutral",
+      "subtitle": "splatter"
     }
   ],
   "language_map": {
@@ -14801,63 +16129,65 @@
       "advancements.semi_grade_1.descr": "Become a Semi Grade 1 Sorcerer",
       "gui.craftkaisen.self_vow_gui.button_vow": "Vow",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
-      "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
+      "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.domain_expansion": "Domain Expansion",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
       "item.craftkaisen.riko_amanai_spawn_egg": "Riko Amanai Spawn Egg",
       "entity.craftkaisen.eso": "Eso",
-      "effect.craftkaisen.physically_gifted_cooldown": "Cooldown",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
+      "effect.craftkaisen.physically_gifted_cooldown": "Cooldown",
       "gui.craftkaisen.technique_creator_gui.AreaBox": "Area",
-      "gui.craftkaisen.domain_creator_gui.button_create": "Create",
-      "entity.craftkaisen.inventory_curse": "Inventory Curse",
-      "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
+      "item.craftkaisen.playful_cloud": "Playful Cloud",
+      "entity.craftkaisen.inventory_curse": "Inventory Curse",
+      "gui.craftkaisen.domain_creator_gui.button_create": "Create",
       "item.craftkaisen.stop": "Stop",
-      "subtitles.bones": "",
+      "subtitles.bones": "Exoskeleton Tighten",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "gui.craftkaisen.bases_gui.button_confirm": "Confirm",
       "entity.craftkaisen.energy_beam": "Energy Beam",
       "gui.craftkaisen.custom_ctgui.CTName": "Curse Technique Name..",
+      "subtitles.blood": "Blood Splatter",
       "item.craftkaisen.ultimate_mechamaru_spawn_egg": "Ultimate Mechamaru Spawn Egg",
-      "subtitles.blood": "",
       "advancements.special_grade.title": "Special Grade",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
+      "subtitles.sweep": "Slicing",
       "item.craftkaisen.eso_armor_chestplate": "Eso Chestplate",
       "gui.craftkaisen.domain_clash_gui.button_empty": "+",
-      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
-      "gui.craftkaisen.main_menu.label_technique": "Technique:",
       "effect.craftkaisen.sorcerer": "Sorcerer",
+      "gui.craftkaisen.main_menu.label_technique": "Technique:",
+      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "entity.craftkaisen.unknown_man": "Unknown Man",
       "effect.craftkaisen.crushing": "Crushing",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
       "gui.craftkaisen.main_hud.label_x2": "X",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
-      "gui.craftkaisen.main_hud.label_x1": "X",
+      "entity.craftkaisen.manipulation_portal": "Manipulation Portal",
       "item.craftkaisen.yuta_katana": "Yuta Katana",
+      "gui.craftkaisen.main_hud.label_x1": "X",
       "entity.craftkaisen.kenjaku": "Kenjaku",
       "effect.craftkaisen.rct_healing": "Reverse Cursed Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
-      "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
+      "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "item.craftkaisen.itadori_spawn_egg": "Itadori Spawn Egg",
-      "gui.craftkaisen.technique_creator_gui.button_technique_specific_settings": "Technique Settings",
       "key.craftkaisen.switch_technique": "Switch Ability",
+      "gui.craftkaisen.technique_creator_gui.button_technique_specific_settings": "Technique Settings",
       "entity.craftkaisen.fly_head": "Fly Head",
-      "block.craftkaisen.domain_block_one": "Veil Main Block",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
-      "subtitles.domainexpansion": "",
+      "block.craftkaisen.domain_block_one": "Veil Main Block",
+      "subtitles.domainexpansion": "Domain Expansion",
       "entity.craftkaisen.maki_zenin": "Maki Zenin",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "item.craftkaisen.mechamaru_armor_helmet": "Mechamaru",
-      "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
+      "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
       "gui.craftkaisen.main_menu.label_empty": "SP:",
       "gamerule.ckAllowCustomTechniques.description": "Allows custom curse techniques (also disables premade techniques).",
@@ -14867,15 +16197,19 @@
       "item.craftkaisen.tes": "Tes",
       "item.craftkaisen.nanami_kento_spawn_egg": "Nanami Kento Spawn Egg",
       "gui.craftkaisen.sword_creator.SwordName": "Name..",
+      "item.craftkaisen.hajime_kashimo_spawn_egg": "Hajime Kashimo Spawn Egg",
       "gui.craftkaisen.bases_gui.button_plant": "Plant",
       "block.craftkaisen.unlimited_void": "Unlimited Void",
+      "advancements.batto_sword_drawing.title": "Batto Sword Drawing",
       "gui.craftkaisen.domain_creator_gui.SelfEffect": "Self Effect",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_ii_increases_cursed_energy": "CE II - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
+      "item.craftkaisen.kasumi_miwa_spawn_egg": "Kasumi Miwa Spawn Egg",
       "item.craftkaisen.geto_armor_boots": "Geto Sandals",
       "entity.craftkaisen.jogo": "Jogo",
       "block.craftkaisen.prison_realm": "Prison Realm",
       "gui.craftkaisen.self_vow_gui.tooltip_will_trade_100_from_your_ce_cap": "Will Trade 100 from your CE cap for 2 more hearts.",
       "item.craftkaisen.talisman": "Talisman",
+      "gui.craftkaisen.manipulation_slot_gui.label_select_the_slot_of_the_cursed_sp": "Select the slot of the cursed spirit.",
       "gui.craftkaisen.toji_contract_gui.label_ill_assassinate_somebody_for": "I\u0027ll assassinate somebody for",
       "key.craftkaisen.reverse_cursed_technique_bind": "Reverse Cursed Technique",
       "gui.craftkaisen.binding_vow_gui.label_do_you_accept": "Do you accept?",
@@ -14886,14 +16220,15 @@
       "item.craftkaisen.jujutsu_sorcerer_outfit_chestplate": "Jujutsu Sorcerer Uniform",
       "itemGroup.tabjjkmobs": "JJK Mobs",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_agility_br": "Click to upgrade main agility branch!",
+      "effect.craftkaisen.manipulation_cooldown": "Manipulation Cooldown",
       "gui.craftkaisen.technique_creator_gui.BoltBox": "Bolt",
       "item.craftkaisen.prison_realm_sealed": "Prison Realm Sealed",
       "key.craftkaisen.leave_mech": "Leave Mech",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.self_vow_gui.HeartsForCE": "Trade Hearts For Higher Cap",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
-      "advancements.semi_grade_2.title": "Semi Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2": "Click to upgrade secondary branch!",
+      "advancements.semi_grade_2.title": "Semi Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc1": "Click to upgrade secondary branch!",
       "item.craftkaisen.explode": "Explode",
       "effect.craftkaisen.clap_rush": "Clap Rush",
@@ -14901,19 +16236,21 @@
       "gui.craftkaisen.technique_creator_gui.ImbueTechnique": "Imbue Technique?",
       "entity.craftkaisen.cursedspiritrugbyfield": "Cursed Spirit: Rugby Field",
       "gui.craftkaisen.talisman_gui.button_seal": "Seal",
+      "subtitles.splatter": "splatter",
+      "effect.craftkaisen.propell": "Propell",
       "gui.craftkaisen.bases_gui.label_errmsg": "ErrMsg",
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
       "entity.craftkaisen.yuta_okkotsu": "Yuta Okkotsu",
-      "item.craftkaisen.hiar_helmet": "Hiar Helmet",
-      "gui.craftkaisen.bases_gui.button_spatial": "Spatial",
       "gui.craftkaisen.bases_gui.button_speech": "Speech",
+      "gui.craftkaisen.bases_gui.button_spatial": "Spatial",
+      "item.craftkaisen.hiar_helmet": "Hiar Helmet",
       "gui.craftkaisen.bases_gui.button_flame": "Flame",
-      "subtitles.clap": "",
+      "subtitles.clap": "Clap",
       "entity.craftkaisen.itadori": "Itadori",
       "item.craftkaisen.aoi_todo_spawn_egg": "Aoi Todo Spawn Egg",
       "entity.craftkaisen.megumi_fushiguro": "Megumi Fushiguro",
-      "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "entity.craftkaisen.wrapped_up": "Wrapped Up",
+      "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.bolt_projectile": "Bolt Projectile",
       "entity.craftkaisen.sukuna": "Sukuna",
@@ -14926,8 +16263,9 @@
       "gui.craftkaisen.sword_creator.label_iron_ingots": "Iron Ingots",
       "gui.craftkaisen.technique_creator_gui.tooltip_imbues_your_current_ct_in_the_at": "Imbues your current CT in the attacks type.",
       "effect.craftkaisen.explosion_effect": "Explosion",
-      "item.craftkaisen.blindfold_helmet": "Blindfold",
+      "subtitles.hit": "Strong Hit",
       "gui.craftkaisen.bases_gui.button_transfigure": "Transfigure",
+      "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",
@@ -14968,16 +16306,21 @@
       "gui.craftkaisen.design_gui.button_confirm": "Confirm",
       "advancements.semi_grade_2.descr": "Become a Semi Grade 2 Sorcerer",
       "effect.craftkaisen.corrupted_potion": "Corrupt",
+      "item.craftkaisen.kashimo_staff": "Kashimo Staff",
       "block.craftkaisen.veil_main_block": "Veil Main Block",
       "effect.craftkaisen.burnt_out_effect": "Burnt Out",
+      "JujutsuKaisen": "key.categories.jjk",
+      "effect.craftkaisen.bleeding": "Bleeding",
       "effect.craftkaisen.roots_potion": "RootsPotion",
       "key.craftkaisen.switch_moveset": "Switch Moveset",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_i_increases_cursed_energy_c": "CE I - Increases cursed energy cap.§9 1 SP \u0026 GRADE 4",
+      "block.craftkaisen.green_veil_block": "Green Veil Block",
       "gui.craftkaisen.domain_creator_gui.label_secondary_block": "Block 2 :",
       "item.craftkaisen.flowerfields": "Flowerfields",
       "gui.craftkaisen.domain_clash_gui.label_domain_clash": "Domain Clash!",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_defense_br": "Click to upgrade main defense branch!",
       "item.craftkaisen.ability_changer": "Ability Changer",
+      "key.craftkaisen.simple_domain": "Simple Domain",
       "item.craftkaisen.cursed_spirit_kiss_spawn_egg": "Cursed Spirit: Kiss Spawn Egg",
       "item.craftkaisen.jujutsu_student_spawn_egg": "Jujutsu Student Spawn Egg",
       "gui.craftkaisen.self_vow_gui.CEForHearts": "Lower Cap For More Hearts",
@@ -14986,7 +16329,9 @@
       "gui.craftkaisen.sword_creator.label_5_cost": "+5 Cost",
       "gamerule.ckProgressivePrestigeDifficulty": "Progressive Prestige Difficulty",
       "gui.craftkaisen.technique_creator_gui.TechniqueName": "Technique Name..",
+      "entity.craftkaisen.hajime_kashimo": "Hajime Kashimo",
       "gui.craftkaisen.design_gui.label_blue_yellow_red_purple_green": "Blue, Yellow, Red, Purple, Green, Orange, Black, White",
+      "entity.craftkaisen.hanami": "Hanami",
       "gui.craftkaisen.domain_creator_gui.SureHitEffect": "Sure Hit Effect",
       "item.craftkaisen.toji_fushiguro_spawn_egg": "Toji Fushiguro Spawn Egg",
       "gui.craftkaisen.sword_creator.label_materials": "Materials",
@@ -15088,7 +16433,7 @@
       "item.craftkaisen.pony_tail_helmet": "Pony Tail",
       "advancements.semi_grade_1.title": "Semi Grade 1",
       "entity.craftkaisen.prison_realm_mob": "Prison Realm",
-      "subtitles.kiss": "",
+      "subtitles.kiss": "Smooch",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_power_iv_increases_melee_damag": "Power IV - Increases melee damage.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.toji_contract_gui.label_i_cant_assure_you_that_ill_beat": "I cant assure you that ill beat them.",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_v_increases_cursed_energy_c": "CE V - Increases cursed energy cap.§9 3 SP \u0026 GRADE 3",
@@ -15112,6 +16457,9 @@
       "gui.craftkaisen.main_hud.label_move_five": "Move Five",
       "gui.craftkaisen.main_hud.label_quest2": "Quest2",
       "item.craftkaisen.yuta_okkotsu_spawn_egg": "Yuta Okkotsu Spawn Egg",
+      "gui.craftkaisen.manipulation_slot_gui.button_2": "2",
+      "gui.craftkaisen.manipulation_slot_gui.button_1": "1",
+      "item.craftkaisen.hanami_spawn_egg": "Hanami Spawn Egg",
       "effect.craftkaisen.divergent_fist": "DivergentFist",
       "advancements.grade_3.title": "Grade 3",
       "gui.craftkaisen.main_menu.label_level1": "Level:",
@@ -15119,11 +16467,14 @@
       "item.craftkaisen.inverted_spearof_heaven": "Inverted Spear Of Heaven",
       "gui.craftkaisen.main_menu.label_exp": "Exp : ",
       "gui.craftkaisen.binding_vow_gui.button_self_vow": "Self Vow",
+      "gui.craftkaisen.manipulation_slot_gui.button_4": "4",
+      "gui.craftkaisen.manipulation_slot_gui.button_3": "3",
       "key.craftkaisen.block_bind": "Block",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_v_increases_speedss9_2": "Agility V - Increases speed.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_i_increases_at": "Attack Knockback I - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "entity.craftkaisen.infinite_voidd": "Infinite Void",
       "item.craftkaisen.unknown_man_spawn_egg": "Unknown Man Spawn Egg",
+      "item.craftkaisen.dark_atom": "Dark Atom",
       "advancements.grade_1.descr": "Become a Grade 1 Sorcerer",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran1": "Click to upgrade main cursed energy branch!",
       "item.craftkaisen.twist": "Twist",
@@ -15134,9 +16485,11 @@
       "itemGroup.tabjjkarmor": "JJK Armor",
       "gui.craftkaisen.toji_contract_gui.TojiPlayerKill": "PlayerName",
       "gui.craftkaisen.main_hud.label_quest1": "Quest",
+      "advancements.batto_sword_drawing.descr": "Use a Sword More than your first when you unlock  simple domain",
       "entity.craftkaisen.ember_insect": "Ember Insect",
       "gui.craftkaisen.prison_realm_gui.Target": "Target",
-      "subtitles.electric": "",
+      "key.craftkaisen.manipulation_wheel_open": "Manipulation Wheel",
+      "subtitles.electric": "Electricity",
       "gui.craftkaisen.binding_vow_gui.label_dev_has_offered_a_vow": "MyNameIsName has offered a vow.",
       "gui.craftkaisen.self_vow_gui.tooltip_will_trade_2_hearts_for_100_more": "Will Trade 2 Hearts for 100 more to you CE cap.",
       "advancements.grade_2.descr": "Become a Grade 2 Sorcerer",
@@ -15147,6 +16500,7 @@
       "gui.craftkaisen.binding_vow_gui.button_submit": "Submit",
       "gui.craftkaisen.binding_vow_gui.GiveItem": "Give Item",
       "item.craftkaisen.cursedspiritrugbyfield_spawn_egg": "Cursed Spirit: Rugby Field Spawn Egg",
+      "effect.craftkaisen.buzz_burst": "Buzz Burst",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_defense_i_upgrades_max_health4": "Defense V - Upgrades max health.§9 3 SP \u0026 GRADE 3",
       "advancements.grade_2.title": "Grade 2",
       "gui.craftkaisen.design_gui.label_colors": "Colors :",
@@ -15163,11 +16517,13 @@
       "gui.craftkaisen.skill_tree_main_gui.tooltip_attck_knockback_ii_increases_a": "Attack Knockback II - Increases Attack Knockback.§9 2 SP \u0026 GRADE 3",
       "gui.craftkaisen.technique_creator_gui.OrbBox": "Orb",
       "gui.craftkaisen.main_hud.label_move_3": "Move Three",
+      "item.craftkaisen.miwa_katana": "Miwa Katana",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_agility_iii_increases_speedss9": "Agility III - Increases speed.§9 2 SP \u0026 GRADE 4",
       "entity.craftkaisen.mahito": "Special Grade Cursed Spirit: Mahito",
       "item.craftkaisen.kenjaku_spawn_egg": "Kenjaku Spawn Egg",
       "gui.craftkaisen.prison_realm_gui.TargetPlayer": "Target",
       "entity.craftkaisen.jujutsu_student": "Jujutsu Student",
+      "entity.craftkaisen.kasumi_miwa": "Kasumi Miwa",
       "itemGroup.tabjjkweapons": "JJK Weapons",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iv_increases_cursed_energy": "CE IV - Increases cursed energy cap.§9 2 SP \u0026 GRADE 3",
       "advancements.flash_step_advancement.descr": "WIP",
@@ -15181,6 +16537,7 @@
       "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
       "gui.craftkaisen.bases_gui.label_string_world_marker": "Marker",
       "entity.craftkaisen.empty_mechamaru": "Empty Mechamaru",
+      "subtitles.slice": "Slice",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
       "gui.craftkaisen.bases_gui.button_corruption": "Corruption",
       "effect.craftkaisen.shrine": "Shrine",
@@ -15306,6 +16663,10 @@
         "children": [
           {
             "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Status",
             "children": []
           }
         ]

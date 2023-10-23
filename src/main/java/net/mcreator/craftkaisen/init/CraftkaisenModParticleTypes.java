@@ -24,4 +24,6 @@ public class CraftkaisenModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> REVERSAL_RED_PARTICLE = REGISTRY.register("reversal_red_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> FLAME_SPARK = REGISTRY.register("flame_spark", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> BLOOD = REGISTRY.register("blood", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> PURPLE_ELECTRICITY = REGISTRY.register("purple_electricity", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> RATIO = REGISTRY.register("ratio", () -> new SimpleParticleType(false));
 }

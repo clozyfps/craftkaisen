@@ -33,6 +33,9 @@ public class ClapProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double clapx = 0;
+		double clapy = 0;
+		double clapz = 0;
 		entity.getPersistentData().putBoolean("white", true);
 		if (entity.getPersistentData().getDouble("claptick") < 10) {
 			entity.getPersistentData().putDouble("claptick", (entity.getPersistentData().getDouble("claptick") + 1));
@@ -43,17 +46,20 @@ public class ClapProcedureProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(9 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					{
-						Entity _ent = entity;
-						_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
-						if (_ent instanceof ServerPlayer _serverPlayer)
-							_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
-					}
+					entity.getPersistentData().putDouble("clapx", (entityiterator.getX()));
+					entity.getPersistentData().putDouble("clapz", (entityiterator.getZ()));
+					entity.getPersistentData().putDouble("clapy", (entityiterator.getY()));
 					{
 						Entity _ent = entityiterator;
 						_ent.teleportTo((entity.getX()), (entity.getY()), (entity.getZ()));
 						if (_ent instanceof ServerPlayer _serverPlayer)
 							_serverPlayer.connection.teleport((entity.getX()), (entity.getY()), (entity.getZ()), _ent.getYRot(), _ent.getXRot());
+					}
+					{
+						Entity _ent = entity;
+						_ent.teleportTo((entity.getPersistentData().getDouble("clapx")), (entity.getPersistentData().getDouble("clapy")), (entity.getPersistentData().getDouble("clapz")));
+						if (_ent instanceof ServerPlayer _serverPlayer)
+							_serverPlayer.connection.teleport((entity.getPersistentData().getDouble("clapx")), (entity.getPersistentData().getDouble("clapy")), (entity.getPersistentData().getDouble("clapz")), _ent.getYRot(), _ent.getXRot());
 					}
 				}
 			}

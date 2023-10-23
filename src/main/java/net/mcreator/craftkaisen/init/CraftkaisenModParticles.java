@@ -12,6 +12,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.mcreator.craftkaisen.client.particle.ReversalRedParticleParticle;
 import net.mcreator.craftkaisen.client.particle.RestParticle;
 import net.mcreator.craftkaisen.client.particle.RedElectricityParticle;
+import net.mcreator.craftkaisen.client.particle.RatioParticle;
+import net.mcreator.craftkaisen.client.particle.PurpleElectricityParticle;
 import net.mcreator.craftkaisen.client.particle.LapseBlueParticleParticle;
 import net.mcreator.craftkaisen.client.particle.ImpactParticle;
 import net.mcreator.craftkaisen.client.particle.FlameSparkParticle;
@@ -32,5 +34,7 @@ public class CraftkaisenModParticles {
 		event.register(CraftkaisenModParticleTypes.REVERSAL_RED_PARTICLE.get(), ReversalRedParticleParticle::provider);
 		event.register(CraftkaisenModParticleTypes.FLAME_SPARK.get(), FlameSparkParticle::provider);
 		event.register(CraftkaisenModParticleTypes.BLOOD.get(), BloodParticle::provider);
+		event.register(CraftkaisenModParticleTypes.PURPLE_ELECTRICITY.get(), PurpleElectricityParticle::provider);
+		event.register(CraftkaisenModParticleTypes.RATIO.get(), RatioParticle::provider);
 	}
 }

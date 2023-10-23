@@ -1,0 +1,15 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "N",
+    "keyBindingName": "Simple Domain",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "SimpleDomainOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "SimpleDomainOnKeyReleased"
+    }
+  }
+}

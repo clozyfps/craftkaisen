@@ -1,0 +1,15 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "M",
+    "keyBindingName": "Manipulation Wheel",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "ManipulationWheelOpenOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "ManipulationWheelOpenOnKeyReleased"
+    }
+  }
+}

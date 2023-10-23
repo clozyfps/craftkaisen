@@ -18,7 +18,10 @@ import net.mcreator.craftkaisen.client.gui.SwordCreatorScreen;
 import net.mcreator.craftkaisen.client.gui.SkillTreeMainGUIScreen;
 import net.mcreator.craftkaisen.client.gui.SelfVowGUIScreen;
 import net.mcreator.craftkaisen.client.gui.PrisonRealmGUIScreen;
+import net.mcreator.craftkaisen.client.gui.ManipulationWheelScreen;
+import net.mcreator.craftkaisen.client.gui.ManipulationSlotGuiScreen;
 import net.mcreator.craftkaisen.client.gui.MainMenuScreen;
+import net.mcreator.craftkaisen.client.gui.LineScreen;
 import net.mcreator.craftkaisen.client.gui.InventoryCurseGUIScreen;
 import net.mcreator.craftkaisen.client.gui.DomainCreatorGUIScreen;
 import net.mcreator.craftkaisen.client.gui.DomainClashGUIScreen;
@@ -47,6 +50,9 @@ public class CraftkaisenModScreens {
 			MenuScreens.register(CraftkaisenModMenus.DOMAIN_CREATOR_GUI.get(), DomainCreatorGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.DOMAIN_CLASH_GUI.get(), DomainClashGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.SELF_VOW_GUI.get(), SelfVowGUIScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.MANIPULATION_SLOT_GUI.get(), ManipulationSlotGuiScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.MANIPULATION_WHEEL.get(), ManipulationWheelScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.LINE.get(), LineScreen::new);
 		});
 	}
 }

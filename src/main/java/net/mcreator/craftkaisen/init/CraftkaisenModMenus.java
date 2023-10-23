@@ -18,7 +18,10 @@ import net.mcreator.craftkaisen.world.inventory.SwordCreatorMenu;
 import net.mcreator.craftkaisen.world.inventory.SkillTreeMainGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.SelfVowGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.PrisonRealmGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.ManipulationWheelMenu;
+import net.mcreator.craftkaisen.world.inventory.ManipulationSlotGuiMenu;
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
+import net.mcreator.craftkaisen.world.inventory.LineMenu;
 import net.mcreator.craftkaisen.world.inventory.InventoryCurseGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DomainCreatorGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DomainClashGUIMenu;
@@ -45,4 +48,7 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<DomainCreatorGUIMenu>> DOMAIN_CREATOR_GUI = REGISTRY.register("domain_creator_gui", () -> IForgeMenuType.create(DomainCreatorGUIMenu::new));
 	public static final RegistryObject<MenuType<DomainClashGUIMenu>> DOMAIN_CLASH_GUI = REGISTRY.register("domain_clash_gui", () -> IForgeMenuType.create(DomainClashGUIMenu::new));
 	public static final RegistryObject<MenuType<SelfVowGUIMenu>> SELF_VOW_GUI = REGISTRY.register("self_vow_gui", () -> IForgeMenuType.create(SelfVowGUIMenu::new));
+	public static final RegistryObject<MenuType<ManipulationSlotGuiMenu>> MANIPULATION_SLOT_GUI = REGISTRY.register("manipulation_slot_gui", () -> IForgeMenuType.create(ManipulationSlotGuiMenu::new));
+	public static final RegistryObject<MenuType<ManipulationWheelMenu>> MANIPULATION_WHEEL = REGISTRY.register("manipulation_wheel", () -> IForgeMenuType.create(ManipulationWheelMenu::new));
+	public static final RegistryObject<MenuType<LineMenu>> LINE = REGISTRY.register("line", () -> IForgeMenuType.create(LineMenu::new));
 }

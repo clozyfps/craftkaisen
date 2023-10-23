@@ -28,9 +28,13 @@ public class SetCursedTechniqueProcedure {
 			SetClapProcedure.execute(entity);
 		} else if ((StringArgumentType.getString(arguments, "technique")).equals("Manipulation") || (StringArgumentType.getString(arguments, "technique")).equals("manipulation")) {
 			SetManipulationProcedure.execute(entity);
+		} else if ((StringArgumentType.getString(arguments, "technique")).equals("Electricity") || (StringArgumentType.getString(arguments, "technique")).equals("electricity")) {
+			SetElectricityProcedure.execute(entity);
+		} else if ((StringArgumentType.getString(arguments, "technique")).equals("Ratio") || (StringArgumentType.getString(arguments, "technique")).equals("ratio")) {
+			SetRatioProcedure.execute(entity);
 		} else {
 			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(Component.literal("Not recognized, must be Limitless, Flames, Sukuna, Clap, Plants, Transfiguration, Manipulation or Speech."), false);
+				_player.displayClientMessage(Component.literal("Not recognized, must be Limitless, Flames, Sukuna, Clap, Plants, Transfiguration, Manipulation, Speech, Electricity, or Ratio."), false);
 		}
 	}
 }

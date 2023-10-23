@@ -23,4 +23,7 @@ public class CraftkaisenModSounds {
 	public static final RegistryObject<SoundEvent> ELECTRIC = REGISTRY.register("electric", () -> new SoundEvent(new ResourceLocation("craftkaisen", "electric")));
 	public static final RegistryObject<SoundEvent> KISS = REGISTRY.register("kiss", () -> new SoundEvent(new ResourceLocation("craftkaisen", "kiss")));
 	public static final RegistryObject<SoundEvent> DOMAINEXPANSION = REGISTRY.register("domainexpansion", () -> new SoundEvent(new ResourceLocation("craftkaisen", "domainexpansion")));
+	public static final RegistryObject<SoundEvent> SLICE = REGISTRY.register("slice", () -> new SoundEvent(new ResourceLocation("craftkaisen", "slice")));
+	public static final RegistryObject<SoundEvent> SWEEP = REGISTRY.register("sweep", () -> new SoundEvent(new ResourceLocation("craftkaisen", "sweep")));
+	public static final RegistryObject<SoundEvent> SPLATTER = REGISTRY.register("splatter", () -> new SoundEvent(new ResourceLocation("craftkaisen", "splatter")));
 }

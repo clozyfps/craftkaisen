@@ -17,9 +17,11 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.craftkaisen.network.UseTechniqueMessage;
 import net.mcreator.craftkaisen.network.SwitchTechniqueMessage;
+import net.mcreator.craftkaisen.network.SimpleDomainMessage;
 import net.mcreator.craftkaisen.network.ReverseCursedTechniqueBindMessage;
 import net.mcreator.craftkaisen.network.OpenMainMenuBindMessage;
 import net.mcreator.craftkaisen.network.OpenInventoryCurseBindMessage;
+import net.mcreator.craftkaisen.network.ManipulationWheelOpenMessage;
 import net.mcreator.craftkaisen.network.LeaveEnterMechMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
@@ -136,7 +138,45 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping MANIPULATION_WHEEL_OPEN = new KeyMapping("key.craftkaisen.manipulation_wheel_open", GLFW.GLFW_KEY_M, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ManipulationWheelOpenMessage(0, 0));
+				ManipulationWheelOpenMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				MANIPULATION_WHEEL_OPEN_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - MANIPULATION_WHEEL_OPEN_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new ManipulationWheelOpenMessage(1, dt));
+				ManipulationWheelOpenMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping SIMPLE_DOMAIN = new KeyMapping("key.craftkaisen.simple_domain", GLFW.GLFW_KEY_N, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SimpleDomainMessage(0, 0));
+				SimpleDomainMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				SIMPLE_DOMAIN_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - SIMPLE_DOMAIN_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new SimpleDomainMessage(1, dt));
+				SimpleDomainMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
+	private static long MANIPULATION_WHEEL_OPEN_LASTPRESS = 0;
+	private static long SIMPLE_DOMAIN_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -148,6 +188,8 @@ public class CraftkaisenModKeyMappings {
 		event.register(OPEN_INVENTORY_CURSE_BIND);
 		event.register(LEAVE_ENTER_MECH);
 		event.register(REVERSE_CURSED_TECHNIQUE_BIND);
+		event.register(MANIPULATION_WHEEL_OPEN);
+		event.register(SIMPLE_DOMAIN);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -163,6 +205,8 @@ public class CraftkaisenModKeyMappings {
 				OPEN_INVENTORY_CURSE_BIND.consumeClick();
 				LEAVE_ENTER_MECH.consumeClick();
 				REVERSE_CURSED_TECHNIQUE_BIND.consumeClick();
+				MANIPULATION_WHEEL_OPEN.consumeClick();
+				SIMPLE_DOMAIN.consumeClick();
 			}
 		}
 	}

@@ -56,7 +56,7 @@ public class JoinsWorldProcedure {
 				});
 			}
 			random = Mth.nextInt(RandomSource.create(), 1, 100);
-			ctrandom = Mth.nextInt(RandomSource.create(), 1, 7);
+			ctrandom = Mth.nextInt(RandomSource.create(), 1, 9);
 			restrictionrandom = Mth.nextInt(RandomSource.create(), 1, 2);
 			if (random == 1) {
 				{
@@ -165,6 +165,24 @@ public class JoinsWorldProcedure {
 						SetClapProcedure.execute(entity);
 						{
 							double _setval = 5;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 8) {
+						SetElectricityProcedure.execute(entity);
+						{
+							double _setval = 5;
+							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.UnlockedMoves = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					} else if (ctrandom == 9) {
+						SetRatioProcedure.execute(entity);
+						{
+							double _setval = 1;
 							entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.UnlockedMoves = _setval;
 								capability.syncPlayerVariables(entity);
