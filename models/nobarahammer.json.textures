@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "nobara1",
+        "1": "nobara2",
+        "2": "nobara3"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -33,6 +33,8 @@ import net.mcreator.craftkaisen.item.PrisonRealmArmorItem;
 import net.mcreator.craftkaisen.item.PonyTailItem;
 import net.mcreator.craftkaisen.item.PlayfulCloudItem;
 import net.mcreator.craftkaisen.item.NanamiKnifeItem;
+import net.mcreator.craftkaisen.item.NailProjectileItem;
+import net.mcreator.craftkaisen.item.NailItem;
 import net.mcreator.craftkaisen.item.NaginataItem;
 import net.mcreator.craftkaisen.item.MiwaKatanaItem;
 import net.mcreator.craftkaisen.item.MechamaruArmorItem;
@@ -44,6 +46,7 @@ import net.mcreator.craftkaisen.item.JujutsuSorcererOutfitItem;
 import net.mcreator.craftkaisen.item.InvertedSpearofHeavenItem;
 import net.mcreator.craftkaisen.item.HollowPurpleItem;
 import net.mcreator.craftkaisen.item.HiarItem;
+import net.mcreator.craftkaisen.item.HammerItem;
 import net.mcreator.craftkaisen.item.GojoUniformItem;
 import net.mcreator.craftkaisen.item.GetoArmorItem;
 import net.mcreator.craftkaisen.item.GetCrushedItem;
@@ -185,6 +188,9 @@ public class CraftkaisenModItems {
 			() -> new ForgeSpawnEggItem(CraftkaisenModEntities.HAJIME_KASHIMO, -3414549, -16726785, new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKMOBS)));
 	public static final RegistryObject<Item> KASHIMO_STAFF = REGISTRY.register("kashimo_staff", () -> new KashimoStaffItem());
 	public static final RegistryObject<Item> DARK_ATOM = REGISTRY.register("dark_atom", () -> new DarkAtomItem());
+	public static final RegistryObject<Item> NAIL = REGISTRY.register("nail", () -> new NailItem());
+	public static final RegistryObject<Item> HAMMER = REGISTRY.register("hammer", () -> new HammerItem());
+	public static final RegistryObject<Item> NAIL_PROJECTILE = REGISTRY.register("nail_projectile", () -> new NailProjectileItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

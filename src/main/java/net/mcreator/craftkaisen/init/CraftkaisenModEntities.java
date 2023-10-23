@@ -34,6 +34,7 @@ import net.mcreator.craftkaisen.entity.ReversalRedProjectileEntity;
 import net.mcreator.craftkaisen.entity.ReversalRedEntityEntity;
 import net.mcreator.craftkaisen.entity.PrisonRealmMobEntity;
 import net.mcreator.craftkaisen.entity.NanamiKentoEntity;
+import net.mcreator.craftkaisen.entity.NailProjectileEntity;
 import net.mcreator.craftkaisen.entity.MegumiFushiguroEntity;
 import net.mcreator.craftkaisen.entity.MaximumMeteorEntity;
 import net.mcreator.craftkaisen.entity.ManipulationPortalEntity;
@@ -296,6 +297,8 @@ public class CraftkaisenModEntities {
 					.sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<DarkAtomEntity>> DARK_ATOM = register("projectile_dark_atom",
 			EntityType.Builder.<DarkAtomEntity>of(DarkAtomEntity::new, MobCategory.MISC).setCustomClientFactory(DarkAtomEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<NailProjectileEntity>> NAIL_PROJECTILE = register("projectile_nail_projectile",
+			EntityType.Builder.<NailProjectileEntity>of(NailProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(NailProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

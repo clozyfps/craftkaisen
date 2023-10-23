@@ -109,7 +109,7 @@ public class RatioHitProcedure {
 					immediatesourceentity.getPersistentData().putBoolean("aoefirst", false);
 				});
 			} else {
-				immediatesourceentity.getPersistentData().putDouble("ratiochance", (immediatesourceentity.getPersistentData().getDouble("ratiochance") + 5));
+				immediatesourceentity.getPersistentData().putDouble("ratiochance", (immediatesourceentity.getPersistentData().getDouble("ratiochance") + 1));
 			}
 		}
 	}

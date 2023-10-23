@@ -131,5 +131,6 @@ public class CraftkaisenModEntityRenderers {
 		event.registerEntityRenderer(CraftkaisenModEntities.HANAMI.get(), HanamiRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.HAJIME_KASHIMO.get(), HajimeKashimoRenderer::new);
 		event.registerEntityRenderer(CraftkaisenModEntities.DARK_ATOM.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(CraftkaisenModEntities.NAIL_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

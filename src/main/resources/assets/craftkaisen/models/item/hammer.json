@@ -1,0 +1,9 @@
+{
+  "parent": "craftkaisen:custom/nobarahammer",
+  "textures": {
+    "0": "craftkaisen:blocks/nobara1",
+    "1": "craftkaisen:blocks/nobara2",
+    "2": "craftkaisen:blocks/nobara3",
+    "particle": "craftkaisen:items/hammer"
+  }
+}
