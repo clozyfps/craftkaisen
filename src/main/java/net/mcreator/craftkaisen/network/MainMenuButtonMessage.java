@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
+import net.mcreator.craftkaisen.procedures.OpenTechniqueMenuProcedure;
 import net.mcreator.craftkaisen.procedures.OpenSkillTreeGUIProcedure;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
@@ -63,6 +64,10 @@ public class MainMenuButtonMessage {
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
+
+			OpenTechniqueMenuProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 1) {
 
 			OpenSkillTreeGUIProcedure.execute(world, x, y, z, entity);
 		}

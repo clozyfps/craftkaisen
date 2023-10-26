@@ -6,17 +6,12 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.Direction;
 
 import net.mcreator.craftkaisen.init.CraftkaisenModParticleTypes;
-import net.mcreator.craftkaisen.init.CraftkaisenModEntities;
-import net.mcreator.craftkaisen.entity.HollowPurpleEntity;
 
 import javax.annotation.Nullable;
 
@@ -43,7 +38,7 @@ public class HollowPurpleTickProcedure {
 				if ((entity.getDirection()) == Direction.EAST) {
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -67,7 +62,7 @@ public class HollowPurpleTickProcedure {
 					}
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -92,7 +87,7 @@ public class HollowPurpleTickProcedure {
 				} else if ((entity.getDirection()) == Direction.WEST) {
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -116,7 +111,7 @@ public class HollowPurpleTickProcedure {
 					}
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -141,7 +136,7 @@ public class HollowPurpleTickProcedure {
 				} else if ((entity.getDirection()) == Direction.NORTH) {
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -165,7 +160,7 @@ public class HollowPurpleTickProcedure {
 					}
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -190,7 +185,7 @@ public class HollowPurpleTickProcedure {
 				} else if ((entity.getDirection()) == Direction.SOUTH) {
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -214,7 +209,7 @@ public class HollowPurpleTickProcedure {
 					}
 					{
 						// Get the radius of the sphere
-						double radius = 1.5; // 3 blocks
+						double radius = (entity.getPersistentData().getDouble("purpleCharge") * 0.01); // 3 blocks
 						// Set the tolerance for how close to the surface a point must be to create a particle
 						double tolerance = 0.15; // 0.1 blocks
 						for (double xx = -radius; xx <= radius; xx += 0.1) {
@@ -239,26 +234,8 @@ public class HollowPurpleTickProcedure {
 				}
 			}
 			if (entity.getPersistentData().getDouble("hollowPurple") == 1) {
-				{
-					Entity _shootFrom = entity;
-					Level projectileLevel = _shootFrom.level;
-					if (!projectileLevel.isClientSide()) {
-						Projectile _entityToSpawn = new Object() {
-							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new HollowPurpleEntity(CraftkaisenModEntities.HOLLOW_PURPLE.get(), level);
-								entityToSpawn.setOwner(shooter);
-								entityToSpawn.setBaseDamage(damage);
-								entityToSpawn.setKnockback(knockback);
-								entityToSpawn.setSilent(true);
-								entityToSpawn.setPierceLevel(piercing);
-								return entityToSpawn;
-							}
-						}.getArrow(projectileLevel, entity, 5, 1, (byte) 10);
-						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-						projectileLevel.addFreshEntity(_entityToSpawn);
-					}
-				}
+				entity.getPersistentData().putDouble("purpleDistance", 0);
+				entity.getPersistentData().putBoolean("purple", true);
 			}
 		}
 	}

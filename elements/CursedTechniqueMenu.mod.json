@@ -1,0 +1,213 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_technique",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnTechnique"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 177,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_return_move_cost",
+          "text": {
+            "fixedValue": "",
+            "name": "ReturnMoveCost"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_unlock",
+          "text": "Unlock",
+          "onClick": {
+            "name": "UnlockButton"
+          },
+          "displayCondition": {
+            "name": "Displaymovebutton"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 231,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_sp_display",
+          "text": {
+            "fixedValue": "",
+            "name": "SPDisplay"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 152
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "onClick": {
+            "name": "SetMove1"
+          },
+          "width": 9,
+          "height": 20,
+          "x": 303,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "onClick": {
+            "name": "SetMove2"
+          },
+          "width": 9,
+          "height": 20,
+          "x": 303,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "onClick": {
+            "name": "SetMove3"
+          },
+          "width": 9,
+          "height": 20,
+          "x": 303,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "onClick": {
+            "name": "SetMove4"
+          },
+          "width": 9,
+          "height": 20,
+          "x": 303,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "onClick": {
+            "name": "SetMove5"
+          },
+          "width": 9,
+          "height": 20,
+          "x": 303,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_6",
+          "text": "6",
+          "onClick": {
+            "name": "SetMove6"
+          },
+          "width": 9,
+          "height": 20,
+          "x": 321,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_7",
+          "text": "7",
+          "onClick": {
+            "name": "SetMove7"
+          },
+          "width": 9,
+          "height": 20,
+          "x": 321,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "->",
+          "onClick": {
+            "name": "ForwardButton"
+          },
+          "width": 18,
+          "height": 20,
+          "x": 267,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "<-",
+          "onClick": {
+            "name": "BackwardButton"
+          },
+          "width": 18,
+          "height": 20,
+          "x": 150,
+          "y": 44
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

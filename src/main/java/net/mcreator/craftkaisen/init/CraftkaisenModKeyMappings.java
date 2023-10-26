@@ -25,6 +25,13 @@ import net.mcreator.craftkaisen.network.ManipulationWheelOpenMessage;
 import net.mcreator.craftkaisen.network.LeaveEnterMechMessage;
 import net.mcreator.craftkaisen.network.FlashStepMessage;
 import net.mcreator.craftkaisen.network.ChargeCursedEnergyMessage;
+import net.mcreator.craftkaisen.network.Ability7Message;
+import net.mcreator.craftkaisen.network.Ability6Message;
+import net.mcreator.craftkaisen.network.Ability5Message;
+import net.mcreator.craftkaisen.network.Ability4Message;
+import net.mcreator.craftkaisen.network.Ability3Message;
+import net.mcreator.craftkaisen.network.Ability2Message;
+import net.mcreator.craftkaisen.network.Ability1Message;
 import net.mcreator.craftkaisen.CraftkaisenMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -175,9 +182,142 @@ public class CraftkaisenModKeyMappings {
 		}
 	};
 	public static final KeyMapping DOMAIN_EXPANSION_KEY = new KeyMapping("key.craftkaisen.domain_expansion_key", GLFW.GLFW_KEY_Y, "key.categories.jjk");
+	public static final KeyMapping ABILITY_1 = new KeyMapping("key.craftkaisen.ability_1", GLFW.GLFW_KEY_Z, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability1Message(0, 0));
+				Ability1Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				ABILITY_1_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - ABILITY_1_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability1Message(1, dt));
+				Ability1Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping ABILITY_2 = new KeyMapping("key.craftkaisen.ability_2", GLFW.GLFW_KEY_X, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability2Message(0, 0));
+				Ability2Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				ABILITY_2_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - ABILITY_2_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability2Message(1, dt));
+				Ability2Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping ABILITY_3 = new KeyMapping("key.craftkaisen.ability_3", GLFW.GLFW_KEY_C, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability3Message(0, 0));
+				Ability3Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				ABILITY_3_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - ABILITY_3_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability3Message(1, dt));
+				Ability3Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping ABILITY_4 = new KeyMapping("key.craftkaisen.ability_4", GLFW.GLFW_KEY_V, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability4Message(0, 0));
+				Ability4Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				ABILITY_4_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - ABILITY_4_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability4Message(1, dt));
+				Ability4Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping ABILITY_5 = new KeyMapping("key.craftkaisen.ability_5", GLFW.GLFW_KEY_B, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability5Message(0, 0));
+				Ability5Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				ABILITY_5_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - ABILITY_5_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability5Message(1, dt));
+				Ability5Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping ABILITY_6 = new KeyMapping("key.craftkaisen.ability_6", GLFW.GLFW_KEY_N, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability6Message(0, 0));
+				Ability6Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				ABILITY_6_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - ABILITY_6_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability6Message(1, dt));
+				Ability6Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping ABILITY_7 = new KeyMapping("key.craftkaisen.ability_7", GLFW.GLFW_KEY_M, "key.categories.jjk") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability7Message(0, 0));
+				Ability7Message.pressAction(Minecraft.getInstance().player, 0, 0);
+				ABILITY_7_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - ABILITY_7_LASTPRESS);
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new Ability7Message(1, dt));
+				Ability7Message.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long CHARGE_CURSED_ENERGY_LASTPRESS = 0;
 	private static long MANIPULATION_WHEEL_OPEN_LASTPRESS = 0;
 	private static long SIMPLE_DOMAIN_LASTPRESS = 0;
+	private static long ABILITY_1_LASTPRESS = 0;
+	private static long ABILITY_2_LASTPRESS = 0;
+	private static long ABILITY_3_LASTPRESS = 0;
+	private static long ABILITY_4_LASTPRESS = 0;
+	private static long ABILITY_5_LASTPRESS = 0;
+	private static long ABILITY_6_LASTPRESS = 0;
+	private static long ABILITY_7_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -192,6 +332,13 @@ public class CraftkaisenModKeyMappings {
 		event.register(MANIPULATION_WHEEL_OPEN);
 		event.register(SIMPLE_DOMAIN);
 		event.register(DOMAIN_EXPANSION_KEY);
+		event.register(ABILITY_1);
+		event.register(ABILITY_2);
+		event.register(ABILITY_3);
+		event.register(ABILITY_4);
+		event.register(ABILITY_5);
+		event.register(ABILITY_6);
+		event.register(ABILITY_7);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -209,6 +356,13 @@ public class CraftkaisenModKeyMappings {
 				REVERSE_CURSED_TECHNIQUE_BIND.consumeClick();
 				MANIPULATION_WHEEL_OPEN.consumeClick();
 				SIMPLE_DOMAIN.consumeClick();
+				ABILITY_1.consumeClick();
+				ABILITY_2.consumeClick();
+				ABILITY_3.consumeClick();
+				ABILITY_4.consumeClick();
+				ABILITY_5.consumeClick();
+				ABILITY_6.consumeClick();
+				ABILITY_7.consumeClick();
 			}
 		}
 	}

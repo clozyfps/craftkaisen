@@ -156,6 +156,20 @@
           "x": 23,
           "y": 147
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_technique",
+          "text": "Technique",
+          "onClick": {
+            "name": "OpenTechniqueMenu"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 114,
+          "y": 14
+        }
       }
     ],
     "gridSettings": {

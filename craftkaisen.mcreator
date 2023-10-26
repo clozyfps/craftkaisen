@@ -1118,8 +1118,7 @@
       "registry_name": "jjkarmor",
       "metadata": {
         "files": []
-      },
-      "path": "~/Creative Tabs"
+      }
     },
     {
       "name": "StrongHitProcedure",
@@ -15639,6 +15638,683 @@
         ]
       },
       "path": "~/Items"
+    },
+    {
+      "name": "CursedTechniqueMenu",
+      "type": "gui",
+      "sortid": 694,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_technique_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/CursedTechniqueMenuButtonMessage.java",
+          "src/main/java/net/mcreator/craftkaisen/world/inventory/CursedTechniqueMenuMenu.java",
+          "src/main/java/net/mcreator/craftkaisen/client/gui/CursedTechniqueMenuScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "UnlockButton",
+      "type": "procedure",
+      "sortid": 692,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unlock_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UnlockButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForwardButton",
+      "type": "procedure",
+      "sortid": 702,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "forward_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ForwardButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ab3keypressed",
+      "type": "procedure",
+      "sortid": 715,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ab_3keypressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Ab3keypressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Displaymovebutton",
+      "type": "procedure",
+      "sortid": 693,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "displaymovebutton",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplaymovebuttonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ability1OnKeyPressed",
+      "type": "procedure",
+      "sortid": 713,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_1_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Ability1OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "SetAbilities1",
+      "type": "procedure",
+      "sortid": 688,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_abilities_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetAbilities1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ab7pressed",
+      "type": "procedure",
+      "sortid": 719,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ab_7pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Ab7pressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ab4keypressed",
+      "type": "procedure",
+      "sortid": 716,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ab_4keypressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Ab4keypressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ReturnMoveCost",
+      "type": "procedure",
+      "sortid": 691,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_move_cost",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnMoveCostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMove5",
+      "type": "procedure",
+      "sortid": 699,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMove5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMove6",
+      "type": "procedure",
+      "sortid": 700,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMove6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMove3",
+      "type": "procedure",
+      "sortid": 697,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMove3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMove4",
+      "type": "procedure",
+      "sortid": 698,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMove4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMove7",
+      "type": "procedure",
+      "sortid": 701,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMove7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Release",
+      "type": "procedure",
+      "sortid": 706,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "release",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReleaseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "UseMoves",
+      "type": "procedure",
+      "sortid": 720,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "use_moves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/UseMovesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LimitlessTick",
+      "type": "procedure",
+      "sortid": 687,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "limitless_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/LimitlessTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMove1",
+      "type": "procedure",
+      "sortid": 695,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMove1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMove2",
+      "type": "procedure",
+      "sortid": 696,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_move_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/SetMove2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ReturnTechnique",
+      "type": "procedure",
+      "sortid": 689,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_technique",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ReturnTechniqueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ab2keypressed",
+      "type": "procedure",
+      "sortid": 714,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ab_2keypressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Ab2keypressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ab5pressed",
+      "type": "procedure",
+      "sortid": 717,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ab_5pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Ab5pressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability7",
+      "type": "keybind",
+      "sortid": 712,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability7Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ab6pressed",
+      "type": "procedure",
+      "sortid": 718,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ab_6pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/Ab6pressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability6",
+      "type": "keybind",
+      "sortid": 711,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability6Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability5",
+      "type": "keybind",
+      "sortid": 710,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability5Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability4",
+      "type": "keybind",
+      "sortid": 709,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability4Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "TechniqueMenu",
+      "type": "procedure",
+      "sortid": 690,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technique_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/TechniqueMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenTechniqueMenu",
+      "type": "procedure",
+      "sortid": 704,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_technique_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/OpenTechniqueMenuProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ability3",
+      "type": "keybind",
+      "sortid": 708,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability3Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "Ability2",
+      "type": "keybind",
+      "sortid": 707,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability2Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ChargeOnTick",
+      "type": "procedure",
+      "sortid": 721,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "charge_on_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/ChargeOnTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ability1",
+      "type": "keybind",
+      "sortid": 705,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/Ability1Message.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "BackwardButton",
+      "type": "procedure",
+      "sortid": 703,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backward_button",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/BackwardButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -16403,6 +17079,54 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
+    },
+    {
+      "name": "ability1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "ability6",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "ability7",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "ability2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "ability3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "ability4",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "movelist",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "ability5",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -16601,7 +17325,6 @@
       "gui.craftkaisen.technique_creator_gui.BoltBox": "Bolt",
       "item.craftkaisen.prison_realm_sealed": "Prison Realm Sealed",
       "key.craftkaisen.leave_mech": "Leave Mech",
-      "key.craftkaisen.domain_expansion_key": "Domain Expansion",
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.self_vow_gui.HeartsForCE": "Trade Hearts For Higher Cap",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
@@ -16669,6 +17392,7 @@
       "gui.craftkaisen.binding_vow_gui.label_dont_pick_up_specific_item": "Dont Pick Up Specific Item",
       "item.craftkaisen.get_crushed": "Get Crushed",
       "gui.craftkaisen.sword_creator.label_diamonds": "Diamonds",
+      "gui.craftkaisen.main_menu.button_technique": "Technique",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_resistence_i_upgrades_resisten1": "Resistance II - Upgrades resistance.§9 2 SP \u0026 GRADE 3",
       "item.craftkaisen.prison_realm_armor_chestplate": "Prison Realm",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ssfflashstep_3_sp_grade_3": "§fFlashstep - 3 SP \u0026 GRADE 3",
@@ -16917,7 +17641,6 @@
       "effect.craftkaisen.vessel_potion_effect": "Vessel Mode",
       "gui.craftkaisen.bases_gui.label_string_world_marker": "Marker",
       "entity.craftkaisen.empty_mechamaru": "Empty Mechamaru",
-      "item.craftkaisen.cursed_womb_death_painting": "Cursed Womb Death Painting",
       "subtitles.slice": "Slice",
       "gui.craftkaisen.main_menu.label_clan": "Clan :",
       "gui.craftkaisen.bases_gui.button_corruption": "Corruption",

@@ -1,16 +1,11 @@
 
 package net.mcreator.craftkaisen.item;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-
-import net.mcreator.craftkaisen.init.CraftkaisenModTabs;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import javax.annotation.Nullable;
 
 public class CursedWombDeathPaintingItem extends Item {
+
 	public CursedWombDeathPaintingItem() {
 		super(new Item.Properties().tab(CraftkaisenModTabs.TAB_JJKITEMS).stacksTo(1).rarity(Rarity.EPIC));
 	}
@@ -20,4 +15,5 @@ public class CursedWombDeathPaintingItem extends Item {
 	public boolean isFoil(ItemStack itemstack) {
 		return true;
 	}
+
 }
