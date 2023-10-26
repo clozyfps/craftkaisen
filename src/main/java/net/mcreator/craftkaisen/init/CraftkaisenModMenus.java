@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.world.inventory.DomainCreatorGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DomainClashGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.DesignGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.CustomCTGUIMenu;
+import net.mcreator.craftkaisen.world.inventory.CursedTechniqueMenuMenu;
 import net.mcreator.craftkaisen.world.inventory.BindingVowGUIMenu;
 import net.mcreator.craftkaisen.world.inventory.BasesGUIMenu;
 import net.mcreator.craftkaisen.CraftkaisenMod;
@@ -51,4 +52,5 @@ public class CraftkaisenModMenus {
 	public static final RegistryObject<MenuType<ManipulationSlotGuiMenu>> MANIPULATION_SLOT_GUI = REGISTRY.register("manipulation_slot_gui", () -> IForgeMenuType.create(ManipulationSlotGuiMenu::new));
 	public static final RegistryObject<MenuType<ManipulationWheelMenu>> MANIPULATION_WHEEL = REGISTRY.register("manipulation_wheel", () -> IForgeMenuType.create(ManipulationWheelMenu::new));
 	public static final RegistryObject<MenuType<LineMenu>> LINE = REGISTRY.register("line", () -> IForgeMenuType.create(LineMenu::new));
+	public static final RegistryObject<MenuType<CursedTechniqueMenuMenu>> CURSED_TECHNIQUE_MENU = REGISTRY.register("cursed_technique_menu", () -> IForgeMenuType.create(CursedTechniqueMenuMenu::new));
 }

@@ -9,6 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.craftkaisen.world.inventory.MainMenuMenu;
@@ -33,6 +34,7 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_technique;
 	ImageButton imagebutton_st_button_2;
 
 	public MainMenuScreen(MainMenuMenu container, Inventory inventory, Component text) {
@@ -122,10 +124,18 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		imagebutton_st_button_2 = new ImageButton(this.leftPos + -65, this.topPos + 127, 74, 13, 0, 0, 13, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_st_button_2.png"), 74, 26, e -> {
+		button_technique = new Button(this.leftPos + 25, this.topPos + -6, 72, 20, Component.translatable("gui.craftkaisen.main_menu.button_technique"), e -> {
 			if (true) {
 				CraftkaisenMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(0, x, y, z));
 				MainMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		});
+		guistate.put("button:button_technique", button_technique);
+		this.addRenderableWidget(button_technique);
+		imagebutton_st_button_2 = new ImageButton(this.leftPos + -65, this.topPos + 127, 74, 13, 0, 0, 13, new ResourceLocation("craftkaisen:textures/screens/atlas/imagebutton_st_button_2.png"), 74, 26, e -> {
+			if (true) {
+				CraftkaisenMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(1, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_st_button_2", imagebutton_st_button_2);

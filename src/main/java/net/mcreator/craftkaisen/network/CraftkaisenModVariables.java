@@ -187,6 +187,14 @@ public class CraftkaisenModVariables {
 			clone.ConsumedSpirit1 = original.ConsumedSpirit1;
 			clone.ConsumedSpirit2 = original.ConsumedSpirit2;
 			clone.SelectedSpirit = original.SelectedSpirit;
+			clone.ability1 = original.ability1;
+			clone.ability2 = original.ability2;
+			clone.ability3 = original.ability3;
+			clone.ability4 = original.ability4;
+			clone.ability5 = original.ability5;
+			clone.ability6 = original.ability6;
+			clone.ability7 = original.ability7;
+			clone.movelist = original.movelist;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -491,6 +499,14 @@ public class CraftkaisenModVariables {
 		public String ConsumedSpirit1 = "\"\"";
 		public String ConsumedSpirit2 = "\"\"";
 		public String SelectedSpirit = "";
+		public String ability1 = "";
+		public String ability2 = "";
+		public String ability3 = "";
+		public String ability4 = "";
+		public String ability5 = "";
+		public String ability6 = "";
+		public String ability7 = "";
+		public String movelist = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -624,6 +640,14 @@ public class CraftkaisenModVariables {
 			nbt.putString("ConsumedSpirit1", ConsumedSpirit1);
 			nbt.putString("ConsumedSpirit2", ConsumedSpirit2);
 			nbt.putString("SelectedSpirit", SelectedSpirit);
+			nbt.putString("ability1", ability1);
+			nbt.putString("ability2", ability2);
+			nbt.putString("ability3", ability3);
+			nbt.putString("ability4", ability4);
+			nbt.putString("ability5", ability5);
+			nbt.putString("ability6", ability6);
+			nbt.putString("ability7", ability7);
+			nbt.putString("movelist", movelist);
 			return nbt;
 		}
 
@@ -754,6 +778,14 @@ public class CraftkaisenModVariables {
 			ConsumedSpirit1 = nbt.getString("ConsumedSpirit1");
 			ConsumedSpirit2 = nbt.getString("ConsumedSpirit2");
 			SelectedSpirit = nbt.getString("SelectedSpirit");
+			ability1 = nbt.getString("ability1");
+			ability2 = nbt.getString("ability2");
+			ability3 = nbt.getString("ability3");
+			ability4 = nbt.getString("ability4");
+			ability5 = nbt.getString("ability5");
+			ability6 = nbt.getString("ability6");
+			ability7 = nbt.getString("ability7");
+			movelist = nbt.getString("movelist");
 		}
 	}
 
@@ -903,6 +935,14 @@ public class CraftkaisenModVariables {
 					variables.ConsumedSpirit1 = message.data.ConsumedSpirit1;
 					variables.ConsumedSpirit2 = message.data.ConsumedSpirit2;
 					variables.SelectedSpirit = message.data.SelectedSpirit;
+					variables.ability1 = message.data.ability1;
+					variables.ability2 = message.data.ability2;
+					variables.ability3 = message.data.ability3;
+					variables.ability4 = message.data.ability4;
+					variables.ability5 = message.data.ability5;
+					variables.ability6 = message.data.ability6;
+					variables.ability7 = message.data.ability7;
+					variables.movelist = message.data.movelist;
 				}
 			});
 			context.setPacketHandled(true);

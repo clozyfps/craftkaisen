@@ -27,6 +27,7 @@ import net.mcreator.craftkaisen.client.gui.DomainCreatorGUIScreen;
 import net.mcreator.craftkaisen.client.gui.DomainClashGUIScreen;
 import net.mcreator.craftkaisen.client.gui.DesignGUIScreen;
 import net.mcreator.craftkaisen.client.gui.CustomCTGUIScreen;
+import net.mcreator.craftkaisen.client.gui.CursedTechniqueMenuScreen;
 import net.mcreator.craftkaisen.client.gui.BindingVowGUIScreen;
 import net.mcreator.craftkaisen.client.gui.BasesGUIScreen;
 
@@ -53,6 +54,7 @@ public class CraftkaisenModScreens {
 			MenuScreens.register(CraftkaisenModMenus.MANIPULATION_SLOT_GUI.get(), ManipulationSlotGuiScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.MANIPULATION_WHEEL.get(), ManipulationWheelScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.LINE.get(), LineScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.CURSED_TECHNIQUE_MENU.get(), CursedTechniqueMenuScreen::new);
 		});
 	}
 }
