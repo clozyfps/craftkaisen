@@ -55,7 +55,7 @@ public class LimitlessTickProcedure {
 					}
 				}
 			}
-			if (entity.getPersistentData().getDouble("purpleDistance") >= entity.getPersistentData().getDouble("purpleCharge") * 2) {
+			if (entity.getPersistentData().getDouble("purpleDistance") >= entity.getPersistentData().getDouble("purpleCharge") * 1) {
 				entity.getPersistentData().putBoolean("purple", false);
 				entity.getPersistentData().putDouble("purpleCharge", 0);
 			}
