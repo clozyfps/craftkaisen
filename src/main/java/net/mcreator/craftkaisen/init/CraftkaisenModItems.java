@@ -56,6 +56,7 @@ import net.mcreator.craftkaisen.item.ExplodeItem;
 import net.mcreator.craftkaisen.item.EsoArmorItem;
 import net.mcreator.craftkaisen.item.DisasterFlameItem;
 import net.mcreator.craftkaisen.item.DarkAtomItem;
+import net.mcreator.craftkaisen.item.CursedWombDeathPaintingItem;
 import net.mcreator.craftkaisen.item.CursedSpiritOrbItem;
 import net.mcreator.craftkaisen.item.CursedFingerItem;
 import net.mcreator.craftkaisen.item.CursedBudItem;
@@ -191,6 +192,7 @@ public class CraftkaisenModItems {
 	public static final RegistryObject<Item> NAIL = REGISTRY.register("nail", () -> new NailItem());
 	public static final RegistryObject<Item> HAMMER = REGISTRY.register("hammer", () -> new HammerItem());
 	public static final RegistryObject<Item> NAIL_PROJECTILE = REGISTRY.register("nail_projectile", () -> new NailProjectileItem());
+	public static final RegistryObject<Item> CURSED_WOMB_DEATH_PAINTING = REGISTRY.register("cursed_womb_death_painting", () -> new CursedWombDeathPaintingItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
