@@ -195,6 +195,11 @@ public class CraftkaisenModVariables {
 			clone.ability4 = original.ability4;
 			clone.movelist = original.movelist;
 			clone.ability5 = original.ability5;
+			clone.strength = original.strength;
+			clone.energyControl = original.energyControl;
+			clone.agility = original.agility;
+			clone.body = original.body;
+			clone.cursedEnergyStat = original.cursedEnergyStat;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -507,6 +512,11 @@ public class CraftkaisenModVariables {
 		public String ability4 = "";
 		public String movelist = "\"\"";
 		public String ability5 = "";
+		public double strength = 0;
+		public double energyControl = 0;
+		public double agility = 0;
+		public double body = 0;
+		public double cursedEnergyStat = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -648,6 +658,11 @@ public class CraftkaisenModVariables {
 			nbt.putString("ability4", ability4);
 			nbt.putString("movelist", movelist);
 			nbt.putString("ability5", ability5);
+			nbt.putDouble("strength", strength);
+			nbt.putDouble("energyControl", energyControl);
+			nbt.putDouble("agility", agility);
+			nbt.putDouble("body", body);
+			nbt.putDouble("cursedEnergyStat", cursedEnergyStat);
 			return nbt;
 		}
 
@@ -786,6 +801,11 @@ public class CraftkaisenModVariables {
 			ability4 = nbt.getString("ability4");
 			movelist = nbt.getString("movelist");
 			ability5 = nbt.getString("ability5");
+			strength = nbt.getDouble("strength");
+			energyControl = nbt.getDouble("energyControl");
+			agility = nbt.getDouble("agility");
+			body = nbt.getDouble("body");
+			cursedEnergyStat = nbt.getDouble("cursedEnergyStat");
 		}
 	}
 
@@ -943,6 +963,11 @@ public class CraftkaisenModVariables {
 					variables.ability4 = message.data.ability4;
 					variables.movelist = message.data.movelist;
 					variables.ability5 = message.data.ability5;
+					variables.strength = message.data.strength;
+					variables.energyControl = message.data.energyControl;
+					variables.agility = message.data.agility;
+					variables.body = message.data.body;
+					variables.cursedEnergyStat = message.data.cursedEnergyStat;
 				}
 			});
 			context.setPacketHandled(true);

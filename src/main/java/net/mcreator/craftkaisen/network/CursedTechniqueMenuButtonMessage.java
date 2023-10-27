@@ -1,34 +1,9 @@
 
 package net.mcreator.craftkaisen.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.craftkaisen.world.inventory.CursedTechniqueMenuMenu;
-import net.mcreator.craftkaisen.procedures.UnlockButtonProcedure;
-import net.mcreator.craftkaisen.procedures.SetMove7Procedure;
-import net.mcreator.craftkaisen.procedures.SetMove6Procedure;
-import net.mcreator.craftkaisen.procedures.SetMove5Procedure;
-import net.mcreator.craftkaisen.procedures.SetMove4Procedure;
-import net.mcreator.craftkaisen.procedures.SetMove3Procedure;
-import net.mcreator.craftkaisen.procedures.SetMove2Procedure;
-import net.mcreator.craftkaisen.procedures.SetMove1Procedure;
-import net.mcreator.craftkaisen.procedures.ForwardButtonProcedure;
-import net.mcreator.craftkaisen.procedures.BackwardButtonProcedure;
-import net.mcreator.craftkaisen.CraftkaisenMod;
-
-import java.util.function.Supplier;
-import java.util.HashMap;
-
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class CursedTechniqueMenuButtonMessage {
+
 	private final int buttonID, x, y, z;
 
 	public CursedTechniqueMenuButtonMessage(FriendlyByteBuf buffer) {
@@ -60,6 +35,7 @@ public class CursedTechniqueMenuButtonMessage {
 			int x = message.x;
 			int y = message.y;
 			int z = message.z;
+
 			handleButtonAction(entity, buttonID, x, y, z);
 		});
 		context.setPacketHandled(true);
@@ -68,9 +44,11 @@ public class CursedTechniqueMenuButtonMessage {
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level;
 		HashMap guistate = CursedTechniqueMenuMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+
 		if (buttonID == 0) {
 
 			UnlockButtonProcedure.execute(entity);
@@ -117,4 +95,5 @@ public class CursedTechniqueMenuButtonMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftkaisenMod.addNetworkMessage(CursedTechniqueMenuButtonMessage.class, CursedTechniqueMenuButtonMessage::buffer, CursedTechniqueMenuButtonMessage::new, CursedTechniqueMenuButtonMessage::handler);
 	}
+
 }

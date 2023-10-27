@@ -1,23 +1,8 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingEvent;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-
-import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 import javax.annotation.Nullable;
-
-import java.util.stream.Collectors;
-import java.util.List;
-import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class LimitlessTickProcedure {
@@ -26,12 +11,12 @@ public class LimitlessTickProcedure {
 		execute(event, event.getEntity().level, event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
+		execute(null, world, x, y, z, entity, immediatesourceentity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
+		if (entity == null || immediatesourceentity == null)
 			return;
 		boolean found = false;
 		double chakraSteal = 0;
@@ -41,7 +26,7 @@ public class LimitlessTickProcedure {
 		if (entity.getPersistentData().getBoolean("purple") == true) {
 			entity.getPersistentData().putDouble("purpleDistance", (entity.getPersistentData().getDouble("purpleDistance") + 1));
 			HollowPurpleWhileProjectileFlyingTickProcedure.execute(world, (x + entity.getLookAngle().x * (entity.getPersistentData().getDouble("purpleDistance") + 3)),
-					(y + entity.getLookAngle().y * entity.getPersistentData().getDouble("purpleDistance")), (z + entity.getLookAngle().z * (entity.getPersistentData().getDouble("purpleDistance") + 3)), entity);
+					(y + entity.getLookAngle().y * entity.getPersistentData().getDouble("purpleDistance")), (z + entity.getLookAngle().z * (entity.getPersistentData().getDouble("purpleDistance") + 3)), entity, immediatesourceentity);
 			{
 				final Vec3 _center = new Vec3((x + entity.getLookAngle().x * entity.getPersistentData().getDouble("purpleDistance")), (y + entity.getLookAngle().y * entity.getPersistentData().getDouble("purpleDistance")),
 						(z + entity.getLookAngle().z * entity.getPersistentData().getDouble("purpleDistance")));
@@ -55,7 +40,7 @@ public class LimitlessTickProcedure {
 					}
 				}
 			}
-			if (entity.getPersistentData().getDouble("purpleDistance") >= entity.getPersistentData().getDouble("purpleCharge") * 2) {
+			if (entity.getPersistentData().getDouble("purpleDistance") >= entity.getPersistentData().getDouble("purpleCharge") * 1) {
 				entity.getPersistentData().putBoolean("purple", false);
 				entity.getPersistentData().putDouble("purpleCharge", 0);
 			}
