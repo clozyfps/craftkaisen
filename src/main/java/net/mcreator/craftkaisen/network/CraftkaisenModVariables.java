@@ -196,10 +196,10 @@ public class CraftkaisenModVariables {
 			clone.ability7 = original.ability7;
 			clone.movelist = original.movelist;
 			clone.strength = original.strength;
-			clone.agility = original.agility;
-			clone.cursedEnergyStat = original.cursedEnergyStat;
 			clone.energyControl = original.energyControl;
+			clone.agility = original.agility;
 			clone.body = original.body;
+			clone.cursedEnergyStat = original.cursedEnergyStat;
 			if (!event.isWasDeath()) {
 				clone.Charging = original.Charging;
 				clone.Checked = original.Checked;
@@ -513,10 +513,10 @@ public class CraftkaisenModVariables {
 		public String ability7 = "";
 		public String movelist = "\"\"";
 		public double strength = 0;
-		public double agility = 0;
-		public double cursedEnergyStat = 0;
 		public double energyControl = 0;
+		public double agility = 0;
 		public double body = 0;
+		public double cursedEnergyStat = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -659,10 +659,10 @@ public class CraftkaisenModVariables {
 			nbt.putString("ability7", ability7);
 			nbt.putString("movelist", movelist);
 			nbt.putDouble("strength", strength);
-			nbt.putDouble("agility", agility);
-			nbt.putDouble("cursedEnergyStat", cursedEnergyStat);
 			nbt.putDouble("energyControl", energyControl);
+			nbt.putDouble("agility", agility);
 			nbt.putDouble("body", body);
+			nbt.putDouble("cursedEnergyStat", cursedEnergyStat);
 			return nbt;
 		}
 
@@ -802,10 +802,10 @@ public class CraftkaisenModVariables {
 			ability7 = nbt.getString("ability7");
 			movelist = nbt.getString("movelist");
 			strength = nbt.getDouble("strength");
-			agility = nbt.getDouble("agility");
-			cursedEnergyStat = nbt.getDouble("cursedEnergyStat");
 			energyControl = nbt.getDouble("energyControl");
+			agility = nbt.getDouble("agility");
 			body = nbt.getDouble("body");
+			cursedEnergyStat = nbt.getDouble("cursedEnergyStat");
 		}
 	}
 
@@ -964,10 +964,10 @@ public class CraftkaisenModVariables {
 					variables.ability7 = message.data.ability7;
 					variables.movelist = message.data.movelist;
 					variables.strength = message.data.strength;
-					variables.agility = message.data.agility;
-					variables.cursedEnergyStat = message.data.cursedEnergyStat;
 					variables.energyControl = message.data.energyControl;
+					variables.agility = message.data.agility;
 					variables.body = message.data.body;
+					variables.cursedEnergyStat = message.data.cursedEnergyStat;
 				}
 			});
 			context.setPacketHandled(true);

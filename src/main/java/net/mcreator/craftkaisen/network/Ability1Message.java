@@ -1,23 +1,11 @@
 
 package net.mcreator.craftkaisen.network;
 
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.network.FriendlyByteBuf;
-
-import net.mcreator.craftkaisen.procedures.ReleaseProcedure;
-import net.mcreator.craftkaisen.procedures.Ability1OnKeyPressedProcedure;
 import net.mcreator.craftkaisen.CraftkaisenMod;
-
-import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Ability1Message {
+
 	int type, pressedms;
 
 	public Ability1Message(int type, int pressedms) {
@@ -48,13 +36,16 @@ public class Ability1Message {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
+
 		if (type == 0) {
 
 			Ability1OnKeyPressedProcedure.execute(entity);
 		}
+
 		if (type == 1) {
 
 			ReleaseProcedure.execute(entity);
@@ -65,4 +56,5 @@ public class Ability1Message {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftkaisenMod.addNetworkMessage(Ability1Message.class, Ability1Message::buffer, Ability1Message::new, Ability1Message::handler);
 	}
+
 }

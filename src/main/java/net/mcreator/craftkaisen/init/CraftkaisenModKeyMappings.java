@@ -181,6 +181,7 @@ public class CraftkaisenModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping DOMAIN_EXPANSION_KEY = new KeyMapping("key.craftkaisen.domain_expansion_key", GLFW.GLFW_KEY_Y, "key.categories.jjk");
 	public static final KeyMapping ABILITY_1 = new KeyMapping("key.craftkaisen.ability_1", GLFW.GLFW_KEY_Z, "key.categories.jjk") {
 		private boolean isDownOld = false;
 
@@ -330,6 +331,7 @@ public class CraftkaisenModKeyMappings {
 		event.register(REVERSE_CURSED_TECHNIQUE_BIND);
 		event.register(MANIPULATION_WHEEL_OPEN);
 		event.register(SIMPLE_DOMAIN);
+		event.register(DOMAIN_EXPANSION_KEY);
 		event.register(ABILITY_1);
 		event.register(ABILITY_2);
 		event.register(ABILITY_3);

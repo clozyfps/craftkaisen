@@ -16313,6 +16313,35 @@
           }
         ]
       }
+    },
+    {
+      "name": "DomainExpansionKey",
+      "type": "keybind",
+      "sortid": 687,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "domain_expansion_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/network/DomainExpansionKeyMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "CursedWombDeathPainting",
+      "type": "item",
+      "sortid": 688,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_womb_death_painting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/item/CursedWombDeathPaintingItem.java",
+          "src/main/resources/assets/craftkaisen/models/item/cursed_womb_death_painting.json"
+        ]
+      },
+      "path": "~/Items"
     }
   ],
   "variable_elements": [
@@ -17133,25 +17162,25 @@
       "value": "0"
     },
     {
-      "name": "agility",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "cursedEnergyStat",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "energyControl",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
+      "name": "agility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "body",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "cursedEnergyStat",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -17255,7 +17284,6 @@
       "gui.craftkaisen.binding_vow_gui.button_yes1": "No",
       "gamerule.ckCustomVessel": "Custom Vessel Allowed?",
       "advancements.semi_grade_1.descr": "Become a Semi Grade 1 Sorcerer",
-      "gui.craftkaisen.cursed_technique_menu.button_unlock": "Unlock",
       "gui.craftkaisen.self_vow_gui.button_vow": "Vow",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
@@ -17290,16 +17318,9 @@
       "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "gui.craftkaisen.main_menu.label_technique": "Technique:",
       "effect.craftkaisen.sorcerer": "Sorcerer",
-      "key.craftkaisen.ability_4": "Ability 4",
       "entity.craftkaisen.unknown_man": "Unknown Man",
-      "key.craftkaisen.ability_3": "Ability 3",
-      "key.craftkaisen.ability_2": "Ability 2",
       "effect.craftkaisen.crushing": "Crushing",
-      "key.craftkaisen.ability_1": "Ability 1",
-      "key.craftkaisen.ability_7": "Ability 7",
-      "key.craftkaisen.ability_6": "Ability 6",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
-      "key.craftkaisen.ability_5": "Ability 5",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
       "gui.craftkaisen.main_hud.label_x2": "X",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
@@ -17323,7 +17344,6 @@
       "entity.craftkaisen.maki_zenin": "Maki Zenin",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "item.craftkaisen.mechamaru_armor_helmet": "Mechamaru",
-      "gui.craftkaisen.cursed_technique_menu.button_empty1": "\u003c-",
       "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
@@ -17379,16 +17399,9 @@
       "gui.craftkaisen.bases_gui.label_errmsg": "ErrMsg",
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
       "entity.craftkaisen.yuta_okkotsu": "Yuta Okkotsu",
-      "gui.craftkaisen.cursed_technique_menu.button_1": "1",
-      "gui.craftkaisen.cursed_technique_menu.button_2": "2",
-      "gui.craftkaisen.cursed_technique_menu.button_3": "3",
       "item.craftkaisen.hiar_helmet": "Hiar Helmet",
       "gui.craftkaisen.bases_gui.button_spatial": "Spatial",
       "gui.craftkaisen.bases_gui.button_speech": "Speech",
-      "gui.craftkaisen.cursed_technique_menu.button_4": "4",
-      "gui.craftkaisen.cursed_technique_menu.button_5": "5",
-      "gui.craftkaisen.cursed_technique_menu.button_6": "6",
-      "gui.craftkaisen.cursed_technique_menu.button_7": "7",
       "gui.craftkaisen.bases_gui.button_flame": "Flame",
       "subtitles.clap": "Clap",
       "entity.craftkaisen.itadori": "Itadori",
@@ -17504,7 +17517,6 @@
       "gui.craftkaisen.domain_creator_gui.label_primary_block": "Block 1 :",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse": "Inventory Curse",
       "effect.craftkaisen.punch_barrage_potion": "Punch Barrage",
-      "gui.craftkaisen.cursed_technique_menu.button_empty": "-\u003e",
       "gui.craftkaisen.main_menu.label_empty1": "Job:",
       "item.craftkaisen.cursed_finger": "Sukuna\u0027s Cursed Finger",
       "effect.craftkaisen.twisting": "Twisting",
