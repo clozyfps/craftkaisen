@@ -1,11 +1,19 @@
 
 package net.mcreator.craftkaisen.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.network.FriendlyByteBuf;
+
 import net.mcreator.craftkaisen.CraftkaisenMod;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DomainExpansionKeyMessage {
-
 	int type, pressedms;
 
 	public DomainExpansionKeyMessage(int type, int pressedms) {
@@ -34,5 +42,4 @@ public class DomainExpansionKeyMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		CraftkaisenMod.addNetworkMessage(DomainExpansionKeyMessage.class, DomainExpansionKeyMessage::buffer, DomainExpansionKeyMessage::new, DomainExpansionKeyMessage::handler);
 	}
-
 }

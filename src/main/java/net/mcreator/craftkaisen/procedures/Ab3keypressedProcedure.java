@@ -1,16 +1,16 @@
 package net.mcreator.craftkaisen.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.craftkaisen.network.CraftkaisenModVariables;
 
 public class Ab3keypressedProcedure {
-public static void execute(
-Entity entity
-) {
-if(
-entity == null
-) return ;
-if (entity.getPersistentData().getDouble("chargeTime")==0) {entity.getPersistentData().putString("currentMove", );entity.getPersistentData().putBoolean("hold", true);}
-}
+	public static void execute(Entity entity) {
+		if (entity == null)
+			return;
+		if (entity.getPersistentData().getDouble("chargeTime") == 0) {
+			entity.getPersistentData().putString("currentMove", ((entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new CraftkaisenModVariables.PlayerVariables())).ability3));
+			entity.getPersistentData().putBoolean("hold", true);
+		}
+	}
 }
