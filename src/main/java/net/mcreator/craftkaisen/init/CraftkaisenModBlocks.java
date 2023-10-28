@@ -22,10 +22,10 @@ import net.mcreator.craftkaisen.CraftkaisenMod;
 public class CraftkaisenModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, CraftkaisenMod.MODID);
 	public static final RegistryObject<Block> VEIL_MAIN_BLOCK = REGISTRY.register("veil_main_block", () -> new VeilMainBlockBlock());
-	public static final RegistryObject<Block> UNLIMITED_VOID = REGISTRY.register("unlimited_void", () -> new UnlimitedVoidBlock());
 	public static final RegistryObject<Block> QUEST_BOARD = REGISTRY.register("quest_board", () -> new QuestBoardBlock());
-	public static final RegistryObject<Block> CURSED_TOOL_TABLE = REGISTRY.register("cursed_tool_table", () -> new CursedToolTableBlock());
-	public static final RegistryObject<Block> PRISON_REALM = REGISTRY.register("prison_realm", () -> new PrisonRealmBlock());
 	public static final RegistryObject<Block> DOMAIN_BLOCK_ONE = REGISTRY.register("domain_block_one", () -> new DomainBlockOneBlock());
 	public static final RegistryObject<Block> DOMAIN_BLOCK_TWO = REGISTRY.register("domain_block_two", () -> new DomainBlockTwoBlock());
+	public static final RegistryObject<Block> CURSED_TOOL_TABLE = REGISTRY.register("cursed_tool_table", () -> new CursedToolTableBlock());
+	public static final RegistryObject<Block> PRISON_REALM = REGISTRY.register("prison_realm", () -> new PrisonRealmBlock());
+	public static final RegistryObject<Block> UNLIMITED_VOID = REGISTRY.register("unlimited_void", () -> new UnlimitedVoidBlock());
 }

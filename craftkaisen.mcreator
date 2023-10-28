@@ -3,7 +3,7 @@
     {
       "name": "Tes",
       "type": "item",
-      "sortid": 29,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tes",
@@ -18,7 +18,7 @@
     {
       "name": "MainLevelingSystemProcedure",
       "type": "procedure",
-      "sortid": 12,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_leveling_system_procedure",
@@ -46,7 +46,7 @@
     {
       "name": "CkProgressivePrestigeDifficulty",
       "type": "gamerule",
-      "sortid": 123,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ck_progressive_prestige_difficulty",
@@ -59,7 +59,7 @@
     {
       "name": "HollowPurple",
       "type": "rangeditem",
-      "sortid": 16,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple",
@@ -75,7 +75,7 @@
     {
       "name": "ReversalRed",
       "type": "potioneffect",
-      "sortid": 21,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red",
@@ -89,7 +89,7 @@
     {
       "name": "HollowPurpleTest",
       "type": "procedure",
-      "sortid": 27,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_test",
@@ -109,7 +109,7 @@
     {
       "name": "HollowPurpleEntity",
       "type": "livingentity",
-      "sortid": 17,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_entity",
@@ -124,7 +124,7 @@
     {
       "name": "HollowPurpleProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 18,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_projectile_hits_block",
@@ -139,7 +139,7 @@
     {
       "name": "ReversalRedOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_on_effect_active_tick",
@@ -175,7 +175,7 @@
     {
       "name": "HollowPurpleProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 15,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_projectile_hits_living_entity",
@@ -207,7 +207,7 @@
     {
       "name": "HollowPurpleWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 14,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_while_projectile_flying_tick",
@@ -243,7 +243,7 @@
     {
       "name": "HollowPurpleEntityOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 13,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_entity_on_initial_entity_spawn",
@@ -263,7 +263,7 @@
     {
       "name": "ReversalRedEffectExpires",
       "type": "procedure",
-      "sortid": 30,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_effect_expires",
@@ -299,7 +299,7 @@
     {
       "name": "LapseBlueOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 31,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lapse_blue_on_entity_tick_update",
@@ -335,7 +335,7 @@
     {
       "name": "LapseBlueTest",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lapse_blue_test",
@@ -359,7 +359,7 @@
     {
       "name": "LapseBlueOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lapse_blue_on_initial_entity_spawn",
@@ -395,7 +395,7 @@
     {
       "name": "LapseBlue",
       "type": "livingentity",
-      "sortid": 32,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lapse_blue",
@@ -410,7 +410,7 @@
     {
       "name": "Test2",
       "type": "item",
-      "sortid": 34,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test_2",
@@ -425,7 +425,7 @@
     {
       "name": "WhileBlocking",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "while_blocking",
@@ -461,7 +461,7 @@
     {
       "name": "CallDirection",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "call_direction",
@@ -482,7 +482,7 @@
     {
       "name": "SwitchTechnique",
       "type": "keybind",
-      "sortid": 37,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "switch_technique",
@@ -496,7 +496,7 @@
     {
       "name": "UseTechnique",
       "type": "keybind",
-      "sortid": 39,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "use_technique",
@@ -510,7 +510,7 @@
     {
       "name": "LapseBlueProcedure",
       "type": "procedure",
-      "sortid": 42,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lapse_blue_procedure",
@@ -534,7 +534,7 @@
     {
       "name": "ReversalRed1",
       "type": "procedure",
-      "sortid": 44,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_1",
@@ -570,7 +570,7 @@
     {
       "name": "ReversalRed2",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_2",
@@ -606,7 +606,7 @@
     {
       "name": "ReversalRed3",
       "type": "procedure",
-      "sortid": 46,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_3",
@@ -642,7 +642,7 @@
     {
       "name": "ReversalRed4",
       "type": "procedure",
-      "sortid": 47,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_4",
@@ -678,7 +678,7 @@
     {
       "name": "ReversalRed5",
       "type": "procedure",
-      "sortid": 48,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_5",
@@ -714,7 +714,7 @@
     {
       "name": "RedReversal6",
       "type": "procedure",
-      "sortid": 49,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "red_reversal_6",
@@ -750,7 +750,7 @@
     {
       "name": "RedReversal7",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "red_reversal_7",
@@ -786,7 +786,7 @@
     {
       "name": "ReversalRedFinal",
       "type": "potioneffect",
-      "sortid": 51,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_final",
@@ -800,7 +800,7 @@
     {
       "name": "ReversalRedFinalOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_final_on_effect_active_tick",
@@ -836,7 +836,7 @@
     {
       "name": "ReversalRedFinalEffectExpires",
       "type": "procedure",
-      "sortid": 53,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_final_effect_expires",
@@ -851,7 +851,7 @@
     {
       "name": "ReversalRedProcedure",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_procedure",
@@ -875,7 +875,7 @@
     {
       "name": "HollowPurpleProcedure",
       "type": "procedure",
-      "sortid": 56,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_procedure",
@@ -899,7 +899,7 @@
     {
       "name": "Impact",
       "type": "particle",
-      "sortid": 65,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "impact",
@@ -914,7 +914,7 @@
     {
       "name": "InfiniteComboProcedure",
       "type": "procedure",
-      "sortid": 57,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinite_combo_procedure",
@@ -950,7 +950,7 @@
     {
       "name": "JujutsuStudent",
       "type": "livingentity",
-      "sortid": 58,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jujutsu_student",
@@ -967,7 +967,7 @@
     {
       "name": "Jjkmobs",
       "type": "tab",
-      "sortid": 68,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jjkmobs",
@@ -979,7 +979,7 @@
     {
       "name": "FlashStep",
       "type": "keybind",
-      "sortid": 59,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flash_step",
@@ -993,7 +993,7 @@
     {
       "name": "FlashStepPotionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flash_step_potion_on_effect_active_tick",
@@ -1029,7 +1029,7 @@
     {
       "name": "FlashStepPotion",
       "type": "potioneffect",
-      "sortid": 61,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flash_step_potion",
@@ -1043,7 +1043,7 @@
     {
       "name": "FlashStepCooldown",
       "type": "potioneffect",
-      "sortid": 62,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flash_step_cooldown",
@@ -1057,7 +1057,7 @@
     {
       "name": "FlashStepOnKeyPressed",
       "type": "procedure",
-      "sortid": 63,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flash_step_on_key_pressed",
@@ -1077,7 +1077,7 @@
     {
       "name": "Evade",
       "type": "particle",
-      "sortid": 64,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "evade",
@@ -1092,7 +1092,7 @@
     {
       "name": "JujutsuSorcererOutfit",
       "type": "armor",
-      "sortid": 66,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jujutsu_sorcerer_outfit",
@@ -1108,18 +1108,19 @@
     {
       "name": "Jjkarmor",
       "type": "tab",
-      "sortid": 67,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jjkarmor",
       "metadata": {
         "files": []
-      }
+      },
+      "path": "~/Armor"
     },
     {
       "name": "StrongHitProcedure",
       "type": "procedure",
-      "sortid": 70,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "strong_hit_procedure",
@@ -1155,7 +1156,7 @@
     {
       "name": "Infinity",
       "type": "potioneffect",
-      "sortid": 71,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity",
@@ -1169,7 +1170,7 @@
     {
       "name": "ReversalRedFinalOnEffectActiveTick2",
       "type": "procedure",
-      "sortid": 69,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_final_on_effect_active_tick_2",
@@ -1201,7 +1202,7 @@
     {
       "name": "MainRandomizerSystem",
       "type": "procedure",
-      "sortid": 70,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_randomizer_system",
@@ -1221,7 +1222,7 @@
     {
       "name": "CursedEnergyDisplay",
       "type": "procedure",
-      "sortid": 72,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_energy_display",
@@ -1242,7 +1243,7 @@
     {
       "name": "RegenCursedEnergy",
       "type": "procedure",
-      "sortid": 69,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "regen_cursed_energy",
@@ -1257,7 +1258,7 @@
     {
       "name": "InfinityOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 73,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_on_effect_active_tick",
@@ -1293,7 +1294,7 @@
     {
       "name": "InfinityProcedure",
       "type": "procedure",
-      "sortid": 74,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_procedure",
@@ -1313,7 +1314,7 @@
     {
       "name": "PlayfulCloud",
       "type": "tool",
-      "sortid": 75,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "playful_cloud",
@@ -1328,7 +1329,7 @@
     {
       "name": "Jjkweapons",
       "type": "tab",
-      "sortid": 76,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jjkweapons",
@@ -1340,7 +1341,7 @@
     {
       "name": "PlayfulCloudLivingEntityIsHitWithTool",
       "type": "procedure",
-      "sortid": 77,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "registry_name": "playful_cloud_living_entity_is_hit_with_tool",
@@ -1376,7 +1377,7 @@
     {
       "name": "InvertedSpearofHeaven",
       "type": "tool",
-      "sortid": 78,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inverted_spearof_heaven",
@@ -1391,7 +1392,7 @@
     {
       "name": "SacredLunge",
       "type": "function",
-      "sortid": 92,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sacred_lunge",
@@ -1405,7 +1406,7 @@
     {
       "name": "InvertedSpearOfHeavenProcedure",
       "type": "procedure",
-      "sortid": 82,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inverted_spear_of_heaven_procedure",
@@ -1429,7 +1430,7 @@
     {
       "name": "SacredLungeProcedure",
       "type": "procedure",
-      "sortid": 83,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sacred_lunge_procedure",
@@ -1465,7 +1466,7 @@
     {
       "name": "WeaponCooldown",
       "type": "potioneffect",
-      "sortid": 81,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "registry_name": "weapon_cooldown",
@@ -1479,7 +1480,7 @@
     {
       "name": "PlayfulCloudProcedure",
       "type": "procedure",
-      "sortid": 79,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "registry_name": "playful_cloud_procedure",
@@ -1503,7 +1504,7 @@
     {
       "name": "OpenMainMenu",
       "type": "procedure",
-      "sortid": 82,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_main_menu",
@@ -1539,7 +1540,7 @@
     {
       "name": "OpenMainMenuBind",
       "type": "keybind",
-      "sortid": 85,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_main_menu_bind",
@@ -1553,7 +1554,7 @@
     {
       "name": "MainMenu",
       "type": "gui",
-      "sortid": 80,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_menu",
@@ -1569,7 +1570,7 @@
     {
       "name": "MainHUD",
       "type": "overlay",
-      "sortid": 388,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_hud",
@@ -1583,7 +1584,7 @@
     {
       "name": "HeavenlyBarrageProcedure",
       "type": "procedure",
-      "sortid": 87,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "heavenly_barrage_procedure",
@@ -1619,7 +1620,7 @@
     {
       "name": "DivineReposite",
       "type": "function",
-      "sortid": 88,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "registry_name": "divine_reposite",
@@ -1633,7 +1634,7 @@
     {
       "name": "DivineRepositePotionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 90,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "registry_name": "divine_reposite_potion_on_effect_active_tick",
@@ -1669,7 +1670,7 @@
     {
       "name": "DivineRepositePotion",
       "type": "potioneffect",
-      "sortid": 91,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "registry_name": "divine_reposite_potion",
@@ -1683,7 +1684,7 @@
     {
       "name": "DivineRepositeProcedure",
       "type": "procedure",
-      "sortid": 93,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "registry_name": "divine_reposite_procedure",
@@ -1703,7 +1704,7 @@
     {
       "name": "RepeatedGodSlashesProcedure",
       "type": "procedure",
-      "sortid": 94,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeated_god_slashes_procedure",
@@ -1739,7 +1740,7 @@
     {
       "name": "BlockSwords",
       "type": "tag",
-      "sortid": 168,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "registry_name": "block_swords",
@@ -1753,7 +1754,7 @@
     {
       "name": "VeilMainBlock",
       "type": "block",
-      "sortid": 95,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "veil_main_block",
@@ -1770,7 +1771,7 @@
     {
       "name": "MoveUltimateCooldown",
       "type": "potioneffect",
-      "sortid": 104,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_ultimate_cooldown",
@@ -1784,7 +1785,7 @@
     {
       "name": "Move5Cooldown",
       "type": "potioneffect",
-      "sortid": 102,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_5_cooldown",
@@ -1798,7 +1799,7 @@
     {
       "name": "MoveSpecialCooldown",
       "type": "potioneffect",
-      "sortid": 103,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_special_cooldown",
@@ -1812,7 +1813,7 @@
     {
       "name": "ChargeCEEffect",
       "type": "potioneffect",
-      "sortid": 112,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "registry_name": "charge_ce_effect",
@@ -1826,7 +1827,7 @@
     {
       "name": "ChargeCursedEnergyOnKeyPressed",
       "type": "procedure",
-      "sortid": 115,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "registry_name": "charge_cursed_energy_on_key_pressed",
@@ -1846,7 +1847,7 @@
     {
       "name": "Move4Cooldown",
       "type": "potioneffect",
-      "sortid": 101,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_4_cooldown",
@@ -1860,7 +1861,7 @@
     {
       "name": "ChargeCursedEnergyOnKeyReleased",
       "type": "procedure",
-      "sortid": 116,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "registry_name": "charge_cursed_energy_on_key_released",
@@ -1880,7 +1881,7 @@
     {
       "name": "Move3Cooldown",
       "type": "potioneffect",
-      "sortid": 100,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_3_cooldown",
@@ -1894,7 +1895,7 @@
     {
       "name": "Move1Cooldown",
       "type": "potioneffect",
-      "sortid": 98,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_1_cooldown",
@@ -1908,7 +1909,7 @@
     {
       "name": "VeilPlace",
       "type": "procedure",
-      "sortid": 97,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "registry_name": "veil_place",
@@ -1944,7 +1945,7 @@
     {
       "name": "Move2Cooldown",
       "type": "potioneffect",
-      "sortid": 99,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_2_cooldown",
@@ -1958,7 +1959,7 @@
     {
       "name": "ChargingActiveTick",
       "type": "procedure",
-      "sortid": 113,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "registry_name": "charging_active_tick",
@@ -1994,7 +1995,7 @@
     {
       "name": "VeilCheck",
       "type": "procedure",
-      "sortid": 96,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "registry_name": "veil_check",
@@ -2034,7 +2035,7 @@
     {
       "name": "ChargeCursedEnergy",
       "type": "keybind",
-      "sortid": 114,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "registry_name": "charge_cursed_energy",
@@ -2048,7 +2049,7 @@
     {
       "name": "UnlimitedVoid",
       "type": "block",
-      "sortid": 96,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unlimited_void",
@@ -2065,7 +2066,7 @@
     {
       "name": "InfiniteVoidd",
       "type": "livingentity",
-      "sortid": 99,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinite_voidd",
@@ -2080,7 +2081,7 @@
     {
       "name": "TojiFushiguro",
       "type": "livingentity",
-      "sortid": 95,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toji_fushiguro",
@@ -2097,7 +2098,7 @@
     {
       "name": "InfiniteVoiddOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 97,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinite_voidd_on_entity_tick_update",
@@ -2133,7 +2134,7 @@
     {
       "name": "UnlimitedVoidReplacement",
       "type": "structure",
-      "sortid": 102,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unlimited_void_replacement",
@@ -2148,7 +2149,7 @@
     {
       "name": "InfiniteVoiddOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 98,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinite_voidd_on_initial_entity_spawn",
@@ -2184,7 +2185,7 @@
     {
       "name": "RemoveTag",
       "type": "procedure",
-      "sortid": 104,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "registry_name": "remove_tag",
@@ -2204,7 +2205,7 @@
     {
       "name": "UnlimitedVoidStructure",
       "type": "structure",
-      "sortid": 103,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unlimited_void_structure",
@@ -2219,7 +2220,7 @@
     {
       "name": "UnlimitedVoidProcedure",
       "type": "procedure",
-      "sortid": 101,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unlimited_void_procedure",
@@ -2255,7 +2256,7 @@
     {
       "name": "InumakiChatOverwrite",
       "type": "procedure",
-      "sortid": 121,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inumaki_chat_overwrite",
@@ -2279,7 +2280,7 @@
     {
       "name": "CkOverwriteInumakiChat",
       "type": "gamerule",
-      "sortid": 122,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ck_overwrite_inumaki_chat",
@@ -2292,7 +2293,7 @@
     {
       "name": "CombatTest",
       "type": "command",
-      "sortid": 125,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
       "registry_name": "combat_test",
@@ -2306,7 +2307,7 @@
     {
       "name": "CombatTestProcedure",
       "type": "procedure",
-      "sortid": 126,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
       "registry_name": "combat_test_procedure",
@@ -2326,7 +2327,7 @@
     {
       "name": "InvertedSpearofHeavenRemoveInfinity",
       "type": "procedure",
-      "sortid": 127,
+      "sortid": 155,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inverted_spearof_heaven_remove_infinity",
@@ -2346,7 +2347,7 @@
     {
       "name": "ReversalRedFunction",
       "type": "function",
-      "sortid": 121,
+      "sortid": 156,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_function",
@@ -2360,7 +2361,7 @@
     {
       "name": "Blindfold",
       "type": "armor",
-      "sortid": 128,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blindfold",
@@ -2375,7 +2376,7 @@
     {
       "name": "Stopped",
       "type": "potioneffect",
-      "sortid": 140,
+      "sortid": 157,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stopped",
@@ -2389,7 +2390,7 @@
     {
       "name": "Stop",
       "type": "rangeditem",
-      "sortid": 147,
+      "sortid": 158,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stop",
@@ -2405,7 +2406,7 @@
     {
       "name": "CrushingEffectExpires",
       "type": "procedure",
-      "sortid": 138,
+      "sortid": 159,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crushing_effect_expires",
@@ -2437,7 +2438,7 @@
     {
       "name": "Crushing",
       "type": "potioneffect",
-      "sortid": 139,
+      "sortid": 160,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crushing",
@@ -2451,7 +2452,7 @@
     {
       "name": "GetCrushedProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 144,
+      "sortid": 161,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_crushed_projectile_hits_living_entity",
@@ -2487,7 +2488,7 @@
     {
       "name": "IrritatedThroat",
       "type": "potioneffect",
-      "sortid": 160,
+      "sortid": 162,
       "compiles": true,
       "locked_code": false,
       "registry_name": "irritated_throat",
@@ -2501,7 +2502,7 @@
     {
       "name": "CoughSyrupRightclicked",
       "type": "procedure",
-      "sortid": 161,
+      "sortid": 163,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cough_syrup_rightclicked",
@@ -2537,7 +2538,7 @@
     {
       "name": "IrritatedThroatOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 159,
+      "sortid": 164,
       "compiles": true,
       "locked_code": false,
       "registry_name": "irritated_throat_on_effect_active_tick",
@@ -2557,7 +2558,7 @@
     {
       "name": "StopProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 146,
+      "sortid": 165,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stop_projectile_hits_living_entity",
@@ -2593,7 +2594,7 @@
     {
       "name": "CoughSyrup",
       "type": "item",
-      "sortid": 157,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cough_syrup",
@@ -2608,7 +2609,7 @@
     {
       "name": "Twist",
       "type": "rangeditem",
-      "sortid": 135,
+      "sortid": 166,
       "compiles": true,
       "locked_code": false,
       "registry_name": "twist",
@@ -2624,7 +2625,7 @@
     {
       "name": "SleepProcedure",
       "type": "procedure",
-      "sortid": 155,
+      "sortid": 167,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sleep_procedure",
@@ -2648,7 +2649,7 @@
     {
       "name": "Rest",
       "type": "particle",
-      "sortid": 141,
+      "sortid": 168,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rest",
@@ -2663,7 +2664,7 @@
     {
       "name": "GetCrushed",
       "type": "rangeditem",
-      "sortid": 145,
+      "sortid": 169,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_crushed",
@@ -2679,7 +2680,7 @@
     {
       "name": "CrushedProcedure",
       "type": "procedure",
-      "sortid": 153,
+      "sortid": 170,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crushed_procedure",
@@ -2703,7 +2704,7 @@
     {
       "name": "Twisting",
       "type": "potioneffect",
-      "sortid": 133,
+      "sortid": 171,
       "compiles": true,
       "locked_code": false,
       "registry_name": "twisting",
@@ -2717,7 +2718,7 @@
     {
       "name": "BlastAwayProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 151,
+      "sortid": 172,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blast_away_projectile_hits_living_entity",
@@ -2757,7 +2758,7 @@
     {
       "name": "TwistProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 134,
+      "sortid": 173,
       "compiles": true,
       "locked_code": false,
       "registry_name": "twist_projectile_hits_living_entity",
@@ -2793,7 +2794,7 @@
     {
       "name": "ExplodeProcedure",
       "type": "procedure",
-      "sortid": 131,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
       "registry_name": "explode_procedure",
@@ -2817,7 +2818,7 @@
     {
       "name": "CrushingOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 175,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crushing_on_effect_active_tick",
@@ -2853,7 +2854,7 @@
     {
       "name": "TwistingOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 132,
+      "sortid": 176,
       "compiles": true,
       "locked_code": false,
       "registry_name": "twisting_on_effect_active_tick",
@@ -2889,7 +2890,7 @@
     {
       "name": "Jjkitems",
       "type": "tab",
-      "sortid": 158,
+      "sortid": 177,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jjkitems",
@@ -2901,7 +2902,7 @@
     {
       "name": "Explode",
       "type": "rangeditem",
-      "sortid": 130,
+      "sortid": 178,
       "compiles": true,
       "locked_code": false,
       "registry_name": "explode",
@@ -2917,7 +2918,7 @@
     {
       "name": "BlastAwayProcedure",
       "type": "procedure",
-      "sortid": 156,
+      "sortid": 179,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blast_away_procedure",
@@ -2941,7 +2942,7 @@
     {
       "name": "Sleep",
       "type": "rangeditem",
-      "sortid": 150,
+      "sortid": 180,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sleep",
@@ -2957,7 +2958,7 @@
     {
       "name": "Sleeping",
       "type": "potioneffect",
-      "sortid": 143,
+      "sortid": 181,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sleeping",
@@ -2971,7 +2972,7 @@
     {
       "name": "TwistProcedure",
       "type": "procedure",
-      "sortid": 136,
+      "sortid": 182,
       "compiles": true,
       "locked_code": false,
       "registry_name": "twist_procedure",
@@ -2995,7 +2996,7 @@
     {
       "name": "SleepProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 149,
+      "sortid": 183,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sleep_projectile_hits_living_entity",
@@ -3031,7 +3032,7 @@
     {
       "name": "BlastAway",
       "type": "rangeditem",
-      "sortid": 152,
+      "sortid": 184,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blast_away",
@@ -3047,7 +3048,7 @@
     {
       "name": "SleepingOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 142,
+      "sortid": 185,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sleeping_on_effect_active_tick",
@@ -3083,7 +3084,7 @@
     {
       "name": "StoppedOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 148,
+      "sortid": 186,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stopped_on_effect_active_tick",
@@ -3103,7 +3104,7 @@
     {
       "name": "StopProcedure",
       "type": "procedure",
-      "sortid": 154,
+      "sortid": 187,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stop_procedure",
@@ -3127,7 +3128,7 @@
     {
       "name": "ExplodeProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 129,
+      "sortid": 188,
       "compiles": true,
       "locked_code": false,
       "registry_name": "explode_projectile_hits_living_entity",
@@ -3163,7 +3164,7 @@
     {
       "name": "BindingVowGUI",
       "type": "gui",
-      "sortid": 129,
+      "sortid": 189,
       "compiles": true,
       "locked_code": false,
       "registry_name": "binding_vow_gui",
@@ -3179,7 +3180,7 @@
     {
       "name": "CloseCurrentGUI",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 190,
       "compiles": true,
       "locked_code": false,
       "registry_name": "close_current_gui",
@@ -3199,7 +3200,7 @@
     {
       "name": "VowMainProcedure",
       "type": "procedure",
-      "sortid": 133,
+      "sortid": 191,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vow_main_procedure",
@@ -3235,7 +3236,7 @@
     {
       "name": "FoodsTag",
       "type": "tag",
-      "sortid": 167,
+      "sortid": 192,
       "compiles": true,
       "locked_code": false,
       "registry_name": "foods_tag",
@@ -3249,7 +3250,7 @@
     {
       "name": "BadFoodsTag",
       "type": "tag",
-      "sortid": 169,
+      "sortid": 193,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bad_foods_tag",
@@ -3263,7 +3264,7 @@
     {
       "name": "CheckEmotionalState",
       "type": "procedure",
-      "sortid": 170,
+      "sortid": 194,
       "compiles": true,
       "locked_code": false,
       "registry_name": "check_emotional_state",
@@ -3278,7 +3279,7 @@
     {
       "name": "ToughBodyProcedure",
       "type": "procedure",
-      "sortid": 174,
+      "sortid": 195,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tough_body_procedure",
@@ -3314,7 +3315,7 @@
     {
       "name": "RapidClapProcedure",
       "type": "procedure",
-      "sortid": 165,
+      "sortid": 196,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rapid_clap_procedure",
@@ -3350,7 +3351,7 @@
     {
       "name": "PowerfulHookProcedure",
       "type": "procedure",
-      "sortid": 169,
+      "sortid": 197,
       "compiles": true,
       "locked_code": false,
       "registry_name": "powerful_hook_procedure",
@@ -3386,7 +3387,7 @@
     {
       "name": "SatoruGojoOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 178,
+      "sortid": 198,
       "compiles": true,
       "locked_code": false,
       "registry_name": "satoru_gojo_on_initial_entity_spawn",
@@ -3406,7 +3407,7 @@
     {
       "name": "ClapProcedure",
       "type": "procedure",
-      "sortid": 164,
+      "sortid": 199,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clap_procedure",
@@ -3442,7 +3443,7 @@
     {
       "name": "ClapRushProcedure",
       "type": "procedure",
-      "sortid": 168,
+      "sortid": 200,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clap_rush_procedure",
@@ -3462,7 +3463,7 @@
     {
       "name": "ClapProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 162,
+      "sortid": 201,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clap_projectile_hits_living_entity",
@@ -3486,7 +3487,7 @@
     {
       "name": "SatoruGojo",
       "type": "livingentity",
-      "sortid": 179,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "satoru_gojo",
@@ -3503,7 +3504,7 @@
     {
       "name": "ToughBody",
       "type": "potioneffect",
-      "sortid": 171,
+      "sortid": 202,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tough_body",
@@ -3517,7 +3518,7 @@
     {
       "name": "ClapManipulationProcedure",
       "type": "procedure",
-      "sortid": 170,
+      "sortid": 203,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clap_manipulation_procedure",
@@ -3553,7 +3554,7 @@
     {
       "name": "ToughBodyOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 173,
+      "sortid": 204,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tough_body_on_effect_active_tick",
@@ -3573,7 +3574,7 @@
     {
       "name": "ClapRush",
       "type": "potioneffect",
-      "sortid": 167,
+      "sortid": 205,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clap_rush",
@@ -3587,7 +3588,7 @@
     {
       "name": "Clap",
       "type": "rangeditem",
-      "sortid": 163,
+      "sortid": 206,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clap",
@@ -3603,7 +3604,7 @@
     {
       "name": "EntityHit",
       "type": "procedure",
-      "sortid": 172,
+      "sortid": 207,
       "compiles": true,
       "locked_code": false,
       "registry_name": "entity_hit",
@@ -3643,7 +3644,7 @@
     {
       "name": "ClapRushOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 166,
+      "sortid": 208,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clap_rush_on_effect_active_tick",
@@ -3679,7 +3680,7 @@
     {
       "name": "SatoruGojoOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 177,
+      "sortid": 209,
       "compiles": true,
       "locked_code": false,
       "registry_name": "satoru_gojo_on_entity_tick_update",
@@ -3703,7 +3704,7 @@
     {
       "name": "CursedFinger",
       "type": "item",
-      "sortid": 181,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_finger",
@@ -3718,7 +3719,7 @@
     {
       "name": "TesRightclicked",
       "type": "procedure",
-      "sortid": 184,
+      "sortid": 210,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tes_rightclicked",
@@ -3742,7 +3743,7 @@
     {
       "name": "SetupAnimations",
       "type": "procedure",
-      "sortid": 183,
+      "sortid": 211,
       "compiles": true,
       "locked_code": false,
       "registry_name": "setup_animations",
@@ -3757,7 +3758,7 @@
     {
       "name": "QuestBoard",
       "type": "block",
-      "sortid": 183,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "quest_board",
@@ -3774,7 +3775,7 @@
     {
       "name": "ReversalRedFinalEffectStartedapplied",
       "type": "procedure",
-      "sortid": 199,
+      "sortid": 212,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_final_effect_startedapplied",
@@ -3810,7 +3811,7 @@
     {
       "name": "Sixeyespotion",
       "type": "potioneffect",
-      "sortid": 185,
+      "sortid": 213,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sixeyespotion",
@@ -3824,7 +3825,7 @@
     {
       "name": "Kick",
       "type": "function",
-      "sortid": 194,
+      "sortid": 214,
       "compiles": true,
       "locked_code": false,
       "registry_name": "kick",
@@ -3838,7 +3839,7 @@
     {
       "name": "DivergentFist",
       "type": "potioneffect",
-      "sortid": 197,
+      "sortid": 215,
       "compiles": true,
       "locked_code": false,
       "registry_name": "divergent_fist",
@@ -3852,7 +3853,7 @@
     {
       "name": "FlipKickProcedure",
       "type": "procedure",
-      "sortid": 190,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flip_kick_procedure",
@@ -3888,7 +3889,7 @@
     {
       "name": "SixEyesTick",
       "type": "procedure",
-      "sortid": 186,
+      "sortid": 217,
       "compiles": true,
       "locked_code": false,
       "registry_name": "six_eyes_tick",
@@ -3912,7 +3913,7 @@
     {
       "name": "CombatSpeedProcedure",
       "type": "procedure",
-      "sortid": 189,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
       "registry_name": "combat_speed_procedure",
@@ -3948,7 +3949,7 @@
     {
       "name": "DivergentFistOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 196,
+      "sortid": 219,
       "compiles": true,
       "locked_code": false,
       "registry_name": "divergent_fist_on_effect_active_tick",
@@ -3984,7 +3985,7 @@
     {
       "name": "CursedComboProcedure",
       "type": "procedure",
-      "sortid": 193,
+      "sortid": 220,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_combo_procedure",
@@ -4020,7 +4021,7 @@
     {
       "name": "DivergentFistProcedure",
       "type": "procedure",
-      "sortid": 198,
+      "sortid": 221,
       "compiles": true,
       "locked_code": false,
       "registry_name": "divergent_fist_procedure",
@@ -4040,7 +4041,7 @@
     {
       "name": "CursedEnergyBurstProcedure",
       "type": "procedure",
-      "sortid": 192,
+      "sortid": 222,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_energy_burst_procedure",
@@ -4076,7 +4077,7 @@
     {
       "name": "FingerBearer",
       "type": "livingentity",
-      "sortid": 188,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "finger_bearer",
@@ -4093,7 +4094,7 @@
     {
       "name": "CurseKickProcedure",
       "type": "procedure",
-      "sortid": 195,
+      "sortid": 223,
       "compiles": true,
       "locked_code": false,
       "registry_name": "curse_kick_procedure",
@@ -4129,7 +4130,7 @@
     {
       "name": "TojiArmor",
       "type": "armor",
-      "sortid": 189,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toji_armor",
@@ -4145,7 +4146,7 @@
     {
       "name": "ExpDisplay",
       "type": "procedure",
-      "sortid": 192,
+      "sortid": 224,
       "compiles": true,
       "locked_code": false,
       "registry_name": "exp_display",
@@ -4166,7 +4167,7 @@
     {
       "name": "TechniqueDisplay",
       "type": "procedure",
-      "sortid": 193,
+      "sortid": 225,
       "compiles": true,
       "locked_code": false,
       "registry_name": "technique_display",
@@ -4187,7 +4188,7 @@
     {
       "name": "DisplayPlayer",
       "type": "procedure",
-      "sortid": 190,
+      "sortid": 226,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_player",
@@ -4208,7 +4209,7 @@
     {
       "name": "LevelDisplay",
       "type": "procedure",
-      "sortid": 191,
+      "sortid": 227,
       "compiles": true,
       "locked_code": false,
       "registry_name": "level_display",
@@ -4229,7 +4230,7 @@
     {
       "name": "GetoArmor",
       "type": "armor",
-      "sortid": 185,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "geto_armor",
@@ -4246,7 +4247,7 @@
     {
       "name": "BandageBlindfold",
       "type": "armor",
-      "sortid": 188,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bandage_blindfold",
@@ -4261,7 +4262,7 @@
     {
       "name": "UpdateExp",
       "type": "procedure",
-      "sortid": 195,
+      "sortid": 228,
       "compiles": true,
       "locked_code": false,
       "registry_name": "update_exp",
@@ -4281,7 +4282,7 @@
     {
       "name": "LapseBlueParticle",
       "type": "particle",
-      "sortid": 200,
+      "sortid": 229,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lapse_blue_particle",
@@ -4296,7 +4297,7 @@
     {
       "name": "MahoragaWheel",
       "type": "armor",
-      "sortid": 213,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahoraga_wheel",
@@ -4311,7 +4312,7 @@
     {
       "name": "AddTechniqueDetails",
       "type": "procedure",
-      "sortid": 217,
+      "sortid": 230,
       "compiles": true,
       "locked_code": false,
       "registry_name": "add_technique_details",
@@ -4331,7 +4332,7 @@
     {
       "name": "CheckDeaths",
       "type": "procedure",
-      "sortid": 219,
+      "sortid": 231,
       "compiles": true,
       "locked_code": false,
       "registry_name": "check_deaths",
@@ -4351,7 +4352,7 @@
     {
       "name": "FlyHead",
       "type": "livingentity",
-      "sortid": 15,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fly_head",
@@ -4367,7 +4368,7 @@
     {
       "name": "CheckReverseCursedTechnique",
       "type": "procedure",
-      "sortid": 220,
+      "sortid": 232,
       "compiles": true,
       "locked_code": false,
       "registry_name": "check_reverse_cursed_technique",
@@ -4407,7 +4408,7 @@
     {
       "name": "MainPartyProcedure",
       "type": "procedure",
-      "sortid": 212,
+      "sortid": 233,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_party_procedure",
@@ -4435,7 +4436,7 @@
     {
       "name": "MalevolentShrine",
       "type": "livingentity",
-      "sortid": 200,
+      "sortid": 234,
       "compiles": true,
       "locked_code": false,
       "registry_name": "malevolent_shrine",
@@ -4451,7 +4452,7 @@
     {
       "name": "PartyCommand",
       "type": "command",
-      "sortid": 211,
+      "sortid": 235,
       "compiles": true,
       "locked_code": false,
       "registry_name": "party_command",
@@ -4465,7 +4466,7 @@
     {
       "name": "StopPartyAttacks",
       "type": "procedure",
-      "sortid": 214,
+      "sortid": 236,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stop_party_attacks",
@@ -4489,7 +4490,7 @@
     {
       "name": "ShowCursedEnergy",
       "type": "procedure",
-      "sortid": 215,
+      "sortid": 237,
       "compiles": true,
       "locked_code": false,
       "registry_name": "show_cursed_energy",
@@ -4510,7 +4511,7 @@
     {
       "name": "Sunglasses",
       "type": "armor",
-      "sortid": 218,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sunglasses",
@@ -4525,7 +4526,7 @@
     {
       "name": "BlackElectricity",
       "type": "particle",
-      "sortid": 223,
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_electricity",
@@ -4540,7 +4541,7 @@
     {
       "name": "RedElectricity",
       "type": "particle",
-      "sortid": 224,
+      "sortid": 239,
       "compiles": true,
       "locked_code": false,
       "registry_name": "red_electricity",
@@ -4555,7 +4556,7 @@
     {
       "name": "BlackFlash",
       "type": "procedure",
-      "sortid": 225,
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
       "registry_name": "black_flash",
@@ -4591,7 +4592,7 @@
     {
       "name": "RCTHealing",
       "type": "potioneffect",
-      "sortid": 221,
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rct_healing",
@@ -4605,7 +4606,7 @@
     {
       "name": "SetRCTLevelCommand",
       "type": "command",
-      "sortid": 230,
+      "sortid": 242,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_rct_level_command",
@@ -4619,7 +4620,7 @@
     {
       "name": "DisplaySelectedTechnique",
       "type": "procedure",
-      "sortid": 224,
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_selected_technique",
@@ -4640,7 +4641,7 @@
     {
       "name": "SukunaFightingArmor",
       "type": "armor",
-      "sortid": 221,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sukuna_fighting_armor",
@@ -4655,7 +4656,7 @@
     {
       "name": "Jogo",
       "type": "livingentity",
-      "sortid": 237,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jogo",
@@ -4672,7 +4673,7 @@
     {
       "name": "RCTCooldown",
       "type": "potioneffect",
-      "sortid": 229,
+      "sortid": 244,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rct_cooldown",
@@ -4686,7 +4687,7 @@
     {
       "name": "DisplayMoveCost",
       "type": "procedure",
-      "sortid": 232,
+      "sortid": 245,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_move_cost",
@@ -4707,7 +4708,7 @@
     {
       "name": "SetRCTLevel",
       "type": "procedure",
-      "sortid": 231,
+      "sortid": 246,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_rct_level",
@@ -4727,7 +4728,7 @@
     {
       "name": "DisasterFlameProcedure",
       "type": "procedure",
-      "sortid": 242,
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_procedure",
@@ -4751,7 +4752,7 @@
     {
       "name": "MaximumMeteor",
       "type": "livingentity",
-      "sortid": 250,
+      "sortid": 248,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maximum_meteor",
@@ -4766,7 +4767,7 @@
     {
       "name": "DisasterFlamesProcedure2",
       "type": "procedure",
-      "sortid": 243,
+      "sortid": 249,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flames_procedure_2",
@@ -4802,7 +4803,7 @@
     {
       "name": "Disasterflame2",
       "type": "procedure",
-      "sortid": 244,
+      "sortid": 250,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disasterflame_2",
@@ -4838,7 +4839,7 @@
     {
       "name": "DisasterFlame6",
       "type": "procedure",
-      "sortid": 248,
+      "sortid": 251,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_6",
@@ -4874,7 +4875,7 @@
     {
       "name": "MaximumMeteorOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 249,
+      "sortid": 252,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maximum_meteor_on_entity_tick_update",
@@ -4910,7 +4911,7 @@
     {
       "name": "DisasterFlame3",
       "type": "procedure",
-      "sortid": 245,
+      "sortid": 253,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_3",
@@ -4946,7 +4947,7 @@
     {
       "name": "DisasterFlame4",
       "type": "procedure",
-      "sortid": 246,
+      "sortid": 254,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_4",
@@ -4982,7 +4983,7 @@
     {
       "name": "DisasterFlame5",
       "type": "procedure",
-      "sortid": 247,
+      "sortid": 255,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_5",
@@ -5018,7 +5019,7 @@
     {
       "name": "DisasterFlameWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 239,
+      "sortid": 256,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_while_projectile_flying_tick",
@@ -5058,7 +5059,7 @@
     {
       "name": "MaxMeteorProcedure",
       "type": "procedure",
-      "sortid": 251,
+      "sortid": 257,
       "compiles": true,
       "locked_code": false,
       "registry_name": "max_meteor_procedure",
@@ -5094,7 +5095,7 @@
     {
       "name": "DisasterFlameProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 240,
+      "sortid": 258,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_projectile_hits_block",
@@ -5126,7 +5127,7 @@
     {
       "name": "DisasterFlame",
       "type": "rangeditem",
-      "sortid": 241,
+      "sortid": 259,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame",
@@ -5142,7 +5143,7 @@
     {
       "name": "VesselCooldown",
       "type": "potioneffect",
-      "sortid": 243,
+      "sortid": 260,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vessel_cooldown",
@@ -5156,7 +5157,7 @@
     {
       "name": "Test",
       "type": "procedure",
-      "sortid": 240,
+      "sortid": 261,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test",
@@ -5180,7 +5181,7 @@
     {
       "name": "VesselCommand",
       "type": "command",
-      "sortid": 237,
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vessel_command",
@@ -5194,7 +5195,7 @@
     {
       "name": "CkCustomVessel",
       "type": "gamerule",
-      "sortid": 238,
+      "sortid": 263,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ck_custom_vessel",
@@ -5207,7 +5208,7 @@
     {
       "name": "SPDisplay",
       "type": "procedure",
-      "sortid": 268,
+      "sortid": 264,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sp_display",
@@ -5228,7 +5229,7 @@
     {
       "name": "VesselPotionEffectOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 245,
+      "sortid": 265,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vessel_potion_effect_on_effect_active_tick",
@@ -5260,7 +5261,7 @@
     {
       "name": "DisplayDefenseCost",
       "type": "procedure",
-      "sortid": 271,
+      "sortid": 266,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_defense_cost",
@@ -5281,7 +5282,7 @@
     {
       "name": "ReinTestcommand",
       "type": "command",
-      "sortid": 239,
+      "sortid": 267,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rein_testcommand",
@@ -5295,7 +5296,7 @@
     {
       "name": "EmberInsectOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 295,
+      "sortid": 268,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_insect_on_entity_tick_update",
@@ -5331,7 +5332,7 @@
     {
       "name": "EmberInsectOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 296,
+      "sortid": 269,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_insect_on_initial_entity_spawn",
@@ -5355,7 +5356,7 @@
     {
       "name": "EmberInsect",
       "type": "livingentity",
-      "sortid": 297,
+      "sortid": 270,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_insect",
@@ -5370,7 +5371,7 @@
     {
       "name": "EmberControlOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 298,
+      "sortid": 271,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_control_on_effect_active_tick",
@@ -5406,7 +5407,7 @@
     {
       "name": "EmberControl",
       "type": "potioneffect",
-      "sortid": 299,
+      "sortid": 272,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_control",
@@ -5420,7 +5421,7 @@
     {
       "name": "EmberInsectsProcedure",
       "type": "procedure",
-      "sortid": 300,
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_insects_procedure",
@@ -5456,7 +5457,7 @@
     {
       "name": "DismantleProcedure",
       "type": "procedure",
-      "sortid": 308,
+      "sortid": 274,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dismantle_procedure",
@@ -5480,7 +5481,7 @@
     {
       "name": "GrabAndTossProcedure",
       "type": "procedure",
-      "sortid": 311,
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grab_and_toss_procedure",
@@ -5516,7 +5517,7 @@
     {
       "name": "JogoOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 305,
+      "sortid": 276,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jogo_on_initial_entity_spawn",
@@ -5536,7 +5537,7 @@
     {
       "name": "FireArrowOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 312,
+      "sortid": 277,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_on_entity_tick_update",
@@ -5568,7 +5569,7 @@
     {
       "name": "MalevolentShrineOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 321,
+      "sortid": 278,
       "compiles": true,
       "locked_code": false,
       "registry_name": "malevolent_shrine_on_initial_entity_spawn",
@@ -5604,7 +5605,7 @@
     {
       "name": "FireArrow",
       "type": "livingentity",
-      "sortid": 313,
+      "sortid": 279,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow",
@@ -5619,7 +5620,7 @@
     {
       "name": "EmberFloor",
       "type": "potioneffect",
-      "sortid": 302,
+      "sortid": 280,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_floor",
@@ -5633,7 +5634,7 @@
     {
       "name": "BurningFloorProcedure",
       "type": "procedure",
-      "sortid": 303,
+      "sortid": 281,
       "compiles": true,
       "locked_code": false,
       "registry_name": "burning_floor_procedure",
@@ -5653,7 +5654,7 @@
     {
       "name": "ShrineProcedure",
       "type": "procedure",
-      "sortid": 320,
+      "sortid": 282,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shrine_procedure",
@@ -5673,7 +5674,7 @@
     {
       "name": "FireArrowProjectile",
       "type": "rangeditem",
-      "sortid": 317,
+      "sortid": 283,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_projectile",
@@ -5689,7 +5690,7 @@
     {
       "name": "CleaveProcedure",
       "type": "procedure",
-      "sortid": 309,
+      "sortid": 284,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cleave_procedure",
@@ -5725,7 +5726,7 @@
     {
       "name": "FireArrowProcedure",
       "type": "procedure",
-      "sortid": 318,
+      "sortid": 285,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_procedure",
@@ -5761,7 +5762,7 @@
     {
       "name": "Shrine",
       "type": "potioneffect",
-      "sortid": 319,
+      "sortid": 286,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shrine",
@@ -5775,7 +5776,7 @@
     {
       "name": "JogoOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 306,
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jogo_on_entity_tick_update",
@@ -5811,7 +5812,7 @@
     {
       "name": "FireArrowProjectileProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 315,
+      "sortid": 288,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_projectile_projectile_hits_block",
@@ -5843,7 +5844,7 @@
     {
       "name": "EmberFloorOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 301,
+      "sortid": 289,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_floor_on_effect_active_tick",
@@ -5879,7 +5880,7 @@
     {
       "name": "MultiSliceProcedure",
       "type": "procedure",
-      "sortid": 310,
+      "sortid": 290,
       "compiles": true,
       "locked_code": false,
       "registry_name": "multi_slice_procedure",
@@ -5915,7 +5916,7 @@
     {
       "name": "CombustProcedure",
       "type": "procedure",
-      "sortid": 304,
+      "sortid": 291,
       "compiles": true,
       "locked_code": false,
       "registry_name": "combust_procedure",
@@ -5951,7 +5952,7 @@
     {
       "name": "FireArrowProjectileProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 316,
+      "sortid": 292,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_projectile_projectile_hits_living_entity",
@@ -5971,7 +5972,7 @@
     {
       "name": "EmberInsectEntityDies",
       "type": "procedure",
-      "sortid": 307,
+      "sortid": 293,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ember_insect_entity_dies",
@@ -6007,7 +6008,7 @@
     {
       "name": "FireArrowProjectileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 314,
+      "sortid": 294,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_projectile_while_projectile_flying_tick",
@@ -6047,7 +6048,7 @@
     {
       "name": "Cursedspiritrugbyfield",
       "type": "livingentity",
-      "sortid": 239,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursedspiritrugbyfield",
@@ -6064,7 +6065,7 @@
     {
       "name": "MalevolentShrineOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 322,
+      "sortid": 295,
       "compiles": true,
       "locked_code": false,
       "registry_name": "malevolent_shrine_on_entity_tick_update",
@@ -6100,7 +6101,7 @@
     {
       "name": "Cursedenergymax",
       "type": "procedure",
-      "sortid": 324,
+      "sortid": 296,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursedenergymax",
@@ -6124,7 +6125,7 @@
     {
       "name": "MaxCursedEnergy",
       "type": "command",
-      "sortid": 325,
+      "sortid": 297,
       "compiles": true,
       "locked_code": false,
       "registry_name": "max_cursed_energy",
@@ -6138,7 +6139,7 @@
     {
       "name": "Test2Rightclicked",
       "type": "procedure",
-      "sortid": 326,
+      "sortid": 298,
       "compiles": true,
       "locked_code": false,
       "registry_name": "test_2_rightclicked",
@@ -6158,7 +6159,7 @@
     {
       "name": "FlowerfieldsWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 340,
+      "sortid": 299,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flowerfields_while_projectile_flying_tick",
@@ -6198,7 +6199,7 @@
     {
       "name": "BudTick",
       "type": "procedure",
-      "sortid": 338,
+      "sortid": 300,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bud_tick",
@@ -6222,7 +6223,7 @@
     {
       "name": "Flowerfieldprocedure",
       "type": "procedure",
-      "sortid": 343,
+      "sortid": 301,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flowerfieldprocedure",
@@ -6242,7 +6243,7 @@
     {
       "name": "CursedBudProcedure",
       "type": "procedure",
-      "sortid": 339,
+      "sortid": 302,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_bud_procedure",
@@ -6262,7 +6263,7 @@
     {
       "name": "WoodenBallProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 331,
+      "sortid": 303,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wooden_ball_projectile_hits_living_entity",
@@ -6294,7 +6295,7 @@
     {
       "name": "RootsProcedure",
       "type": "procedure",
-      "sortid": 329,
+      "sortid": 304,
       "compiles": true,
       "locked_code": false,
       "registry_name": "roots_procedure",
@@ -6314,7 +6315,7 @@
     {
       "name": "CursedBud",
       "type": "rangeditem",
-      "sortid": 337,
+      "sortid": 305,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_bud",
@@ -6330,7 +6331,7 @@
     {
       "name": "Flowerfields",
       "type": "rangeditem",
-      "sortid": 342,
+      "sortid": 306,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flowerfields",
@@ -6346,7 +6347,7 @@
     {
       "name": "WoodenBall",
       "type": "rangeditem",
-      "sortid": 333,
+      "sortid": 307,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wooden_ball",
@@ -6362,7 +6363,7 @@
     {
       "name": "WoodenBallWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 330,
+      "sortid": 308,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wooden_ball_while_projectile_flying_tick",
@@ -6394,7 +6395,7 @@
     {
       "name": "RootsPotion",
       "type": "potioneffect",
-      "sortid": 328,
+      "sortid": 309,
       "compiles": true,
       "locked_code": false,
       "registry_name": "roots_potion",
@@ -6408,7 +6409,7 @@
     {
       "name": "WoodenBallProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 332,
+      "sortid": 310,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wooden_ball_projectile_hits_block",
@@ -6440,7 +6441,7 @@
     {
       "name": "CursedBudProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 335,
+      "sortid": 311,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_bud_projectile_hits_living_entity",
@@ -6464,7 +6465,7 @@
     {
       "name": "FlowerfieldsProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 341,
+      "sortid": 312,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flowerfields_projectile_hits_living_entity",
@@ -6500,7 +6501,7 @@
     {
       "name": "CursedBudWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 336,
+      "sortid": 313,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_bud_while_projectile_flying_tick",
@@ -6532,7 +6533,7 @@
     {
       "name": "RootsPotionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 327,
+      "sortid": 314,
       "compiles": true,
       "locked_code": false,
       "registry_name": "roots_potion_on_effect_active_tick",
@@ -6556,7 +6557,7 @@
     {
       "name": "WoodenBallProcedure",
       "type": "procedure",
-      "sortid": 334,
+      "sortid": 315,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wooden_ball_procedure",
@@ -6576,7 +6577,7 @@
     {
       "name": "DisplayCursedEnergyVCheck",
       "type": "procedure",
-      "sortid": 347,
+      "sortid": 316,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_cursed_energy_v_check",
@@ -6597,7 +6598,7 @@
     {
       "name": "DisplayAgilityIVCheck",
       "type": "procedure",
-      "sortid": 341,
+      "sortid": 317,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_agility_iv_check",
@@ -6618,7 +6619,7 @@
     {
       "name": "DisplayPowerIICheck",
       "type": "procedure",
-      "sortid": 334,
+      "sortid": 318,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_power_ii_check",
@@ -6639,7 +6640,7 @@
     {
       "name": "DisplayPowerICheck",
       "type": "procedure",
-      "sortid": 333,
+      "sortid": 319,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_power_i_check",
@@ -6660,7 +6661,7 @@
     {
       "name": "ClickedMainDefense",
       "type": "procedure",
-      "sortid": 349,
+      "sortid": 320,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clicked_main_defense",
@@ -6680,7 +6681,7 @@
     {
       "name": "DisplayDefenseIVCheck",
       "type": "procedure",
-      "sortid": 331,
+      "sortid": 321,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_defense_iv_check",
@@ -6701,7 +6702,7 @@
     {
       "name": "SkillTreeMainGUI",
       "type": "gui",
-      "sortid": 327,
+      "sortid": 322,
       "compiles": true,
       "locked_code": false,
       "registry_name": "skill_tree_main_gui",
@@ -6717,7 +6718,7 @@
     {
       "name": "DisplayDefenseIICheck",
       "type": "procedure",
-      "sortid": 329,
+      "sortid": 323,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_defense_ii_check",
@@ -6738,7 +6739,7 @@
     {
       "name": "DisplayAgilityIIICheck",
       "type": "procedure",
-      "sortid": 340,
+      "sortid": 324,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_agility_iii_check",
@@ -6759,7 +6760,7 @@
     {
       "name": "DisplayCursedEnergyIICheck",
       "type": "procedure",
-      "sortid": 344,
+      "sortid": 325,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_cursed_energy_ii_check",
@@ -6780,7 +6781,7 @@
     {
       "name": "DisplayCursedEnergyIVCheck",
       "type": "procedure",
-      "sortid": 346,
+      "sortid": 326,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_cursed_energy_iv_check",
@@ -6801,7 +6802,7 @@
     {
       "name": "DisplayAgilityVCheck",
       "type": "procedure",
-      "sortid": 342,
+      "sortid": 327,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_agility_v_check",
@@ -6822,7 +6823,7 @@
     {
       "name": "DisplayCursedEnergyICheck",
       "type": "procedure",
-      "sortid": 343,
+      "sortid": 328,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_cursed_energy_i_check",
@@ -6843,7 +6844,7 @@
     {
       "name": "DisplayDefenseIIICheck",
       "type": "procedure",
-      "sortid": 330,
+      "sortid": 329,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_defense_iii_check",
@@ -6864,7 +6865,7 @@
     {
       "name": "DisplayAgilityICheck",
       "type": "procedure",
-      "sortid": 338,
+      "sortid": 330,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_agility_i_check",
@@ -6885,7 +6886,7 @@
     {
       "name": "DisplayPowerIIICheck",
       "type": "procedure",
-      "sortid": 335,
+      "sortid": 331,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_power_iii_check",
@@ -6906,7 +6907,7 @@
     {
       "name": "DisplayPowerIVCheck",
       "type": "procedure",
-      "sortid": 336,
+      "sortid": 332,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_power_iv_check",
@@ -6927,7 +6928,7 @@
     {
       "name": "DisplayPowerVCheck",
       "type": "procedure",
-      "sortid": 337,
+      "sortid": 333,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_power_v_check",
@@ -6948,7 +6949,7 @@
     {
       "name": "DisplayAgilityIICheck",
       "type": "procedure",
-      "sortid": 339,
+      "sortid": 334,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_agility_ii_check",
@@ -6969,7 +6970,7 @@
     {
       "name": "DisplayDefenseVCheck",
       "type": "procedure",
-      "sortid": 332,
+      "sortid": 335,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_defense_v_check",
@@ -6990,7 +6991,7 @@
     {
       "name": "ClickedMainCursedEnergy",
       "type": "procedure",
-      "sortid": 352,
+      "sortid": 336,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clicked_main_cursed_energy",
@@ -7010,7 +7011,7 @@
     {
       "name": "DisplayDefenseICheck",
       "type": "procedure",
-      "sortid": 328,
+      "sortid": 337,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_defense_i_check",
@@ -7031,7 +7032,7 @@
     {
       "name": "DisplayCursedEnergyIIICheck",
       "type": "procedure",
-      "sortid": 345,
+      "sortid": 338,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_cursed_energy_iii_check",
@@ -7052,7 +7053,7 @@
     {
       "name": "ClickedMainPower",
       "type": "procedure",
-      "sortid": 350,
+      "sortid": 339,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clicked_main_power",
@@ -7072,7 +7073,7 @@
     {
       "name": "ClickedMainAgility",
       "type": "procedure",
-      "sortid": 351,
+      "sortid": 340,
       "compiles": true,
       "locked_code": false,
       "registry_name": "clicked_main_agility",
@@ -7092,7 +7093,7 @@
     {
       "name": "OpenSkillTreeGUI",
       "type": "procedure",
-      "sortid": 348,
+      "sortid": 341,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_skill_tree_gui",
@@ -7128,7 +7129,7 @@
     {
       "name": "JoinsWorld",
       "type": "procedure",
-      "sortid": 353,
+      "sortid": 342,
       "compiles": true,
       "locked_code": false,
       "registry_name": "joins_world",
@@ -7164,7 +7165,7 @@
     {
       "name": "Slam",
       "type": "procedure",
-      "sortid": 354,
+      "sortid": 343,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slam",
@@ -7200,7 +7201,7 @@
     {
       "name": "HollowPurpleEntityOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 356,
+      "sortid": 344,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hollow_purple_entity_on_entity_tick_update",
@@ -7215,7 +7216,7 @@
     {
       "name": "LeapingProcedure",
       "type": "procedure",
-      "sortid": 353,
+      "sortid": 345,
       "compiles": true,
       "locked_code": false,
       "registry_name": "leaping_procedure",
@@ -7251,7 +7252,7 @@
     {
       "name": "DisableFallDamage",
       "type": "procedure",
-      "sortid": 354,
+      "sortid": 346,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disable_fall_damage",
@@ -7271,7 +7272,7 @@
     {
       "name": "InventoryCurseGUI",
       "type": "gui",
-      "sortid": 358,
+      "sortid": 347,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inventory_curse_gui",
@@ -7286,7 +7287,7 @@
     {
       "name": "OpenInventoryCurse",
       "type": "procedure",
-      "sortid": 359,
+      "sortid": 348,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_inventory_curse",
@@ -7322,7 +7323,7 @@
     {
       "name": "OpenInventoryCurseBind",
       "type": "keybind",
-      "sortid": 360,
+      "sortid": 349,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_inventory_curse_bind",
@@ -7336,7 +7337,7 @@
     {
       "name": "GiveInventoryCurse",
       "type": "command",
-      "sortid": 362,
+      "sortid": 350,
       "compiles": true,
       "locked_code": false,
       "registry_name": "give_inventory_curse",
@@ -7350,7 +7351,7 @@
     {
       "name": "InventoryCurse",
       "type": "livingentity",
-      "sortid": 366,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inventory_curse",
@@ -7367,7 +7368,7 @@
     {
       "name": "InventoryCurseGUIThisGUIIsClosed",
       "type": "procedure",
-      "sortid": 364,
+      "sortid": 351,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inventory_curse_gui_this_gui_is_closed",
@@ -7387,7 +7388,7 @@
     {
       "name": "InventoryCurseRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 365,
+      "sortid": 352,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inventory_curse_right_clicked_on_entity",
@@ -7411,7 +7412,7 @@
     {
       "name": "ReversalRedParticle",
       "type": "particle",
-      "sortid": 367,
+      "sortid": 353,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_particle",
@@ -7426,7 +7427,7 @@
     {
       "name": "InventoryCurseGUIThisGUIIsOpened",
       "type": "procedure",
-      "sortid": 363,
+      "sortid": 354,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inventory_curse_gui_this_gui_is_opened",
@@ -7450,7 +7451,7 @@
     {
       "name": "Inventorycursegive",
       "type": "procedure",
-      "sortid": 361,
+      "sortid": 355,
       "compiles": true,
       "locked_code": false,
       "registry_name": "inventorycursegive",
@@ -7470,7 +7471,7 @@
     {
       "name": "Cursedspiritroppongi",
       "type": "livingentity",
-      "sortid": 361,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursedspiritroppongi",
@@ -7487,7 +7488,7 @@
     {
       "name": "GojoUniform",
       "type": "armor",
-      "sortid": 362,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gojo_uniform",
@@ -7503,7 +7504,7 @@
     {
       "name": "CoffinIronMountainProcedure",
       "type": "procedure",
-      "sortid": 371,
+      "sortid": 356,
       "compiles": true,
       "locked_code": false,
       "registry_name": "coffin_iron_mountain_procedure",
@@ -7523,7 +7524,7 @@
     {
       "name": "DomainExpansion",
       "type": "potioneffect",
-      "sortid": 368,
+      "sortid": 357,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_expansion",
@@ -7537,7 +7538,7 @@
     {
       "name": "DomainExpansionEffectStartedapplied",
       "type": "procedure",
-      "sortid": 369,
+      "sortid": 358,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_expansion_effect_startedapplied",
@@ -7573,7 +7574,7 @@
     {
       "name": "DomainExpansionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 370,
+      "sortid": 359,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_expansion_on_effect_active_tick",
@@ -7609,7 +7610,7 @@
     {
       "name": "SetFaction",
       "type": "procedure",
-      "sortid": 378,
+      "sortid": 360,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_faction",
@@ -7633,7 +7634,7 @@
     {
       "name": "BurntOutTick",
       "type": "procedure",
-      "sortid": 374,
+      "sortid": 361,
       "compiles": true,
       "locked_code": false,
       "registry_name": "burnt_out_tick",
@@ -7653,7 +7654,7 @@
     {
       "name": "BurntOutApplied",
       "type": "procedure",
-      "sortid": 373,
+      "sortid": 362,
       "compiles": true,
       "locked_code": false,
       "registry_name": "burnt_out_applied",
@@ -7673,7 +7674,7 @@
     {
       "name": "SetFactionCommand",
       "type": "command",
-      "sortid": 377,
+      "sortid": 363,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_faction_command",
@@ -7687,7 +7688,7 @@
     {
       "name": "BurntOutEffect",
       "type": "potioneffect",
-      "sortid": 372,
+      "sortid": 364,
       "compiles": true,
       "locked_code": false,
       "registry_name": "burnt_out_effect",
@@ -7701,7 +7702,7 @@
     {
       "name": "BurntOutExpire",
       "type": "procedure",
-      "sortid": 375,
+      "sortid": 365,
       "compiles": true,
       "locked_code": false,
       "registry_name": "burnt_out_expire",
@@ -7721,7 +7722,7 @@
     {
       "name": "CheckIfAwakening",
       "type": "procedure",
-      "sortid": 376,
+      "sortid": 366,
       "compiles": true,
       "locked_code": false,
       "registry_name": "check_if_awakening",
@@ -7757,7 +7758,7 @@
     {
       "name": "SatoruGojoRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 376,
+      "sortid": 367,
       "compiles": true,
       "locked_code": false,
       "registry_name": "satoru_gojo_right_clicked_on_entity",
@@ -7781,7 +7782,7 @@
     {
       "name": "MentorChat",
       "type": "procedure",
-      "sortid": 377,
+      "sortid": 368,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mentor_chat",
@@ -7821,7 +7822,7 @@
     {
       "name": "MagmaRockOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 375,
+      "sortid": 369,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magma_rock_on_entity_tick_update",
@@ -7857,7 +7858,7 @@
     {
       "name": "SimpleDomainTick",
       "type": "procedure",
-      "sortid": 372,
+      "sortid": 370,
       "compiles": true,
       "locked_code": false,
       "registry_name": "simple_domain_tick",
@@ -7893,7 +7894,7 @@
     {
       "name": "Cursedspiritgrasshopper",
       "type": "livingentity",
-      "sortid": 368,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursedspiritgrasshopper",
@@ -7910,7 +7911,7 @@
     {
       "name": "MagmaRockOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 373,
+      "sortid": 371,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magma_rock_on_initial_entity_spawn",
@@ -7934,7 +7935,7 @@
     {
       "name": "MagmaRock",
       "type": "livingentity",
-      "sortid": 374,
+      "sortid": 372,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magma_rock",
@@ -7949,7 +7950,7 @@
     {
       "name": "GradeValue",
       "type": "procedure",
-      "sortid": 381,
+      "sortid": 373,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grade_value",
@@ -7970,7 +7971,7 @@
     {
       "name": "JujutsuSorcerer",
       "type": "achievement",
-      "sortid": 390,
+      "sortid": 374,
       "compiles": true,
       "locked_code": false,
       "registry_name": "jujutsu_sorcerer",
@@ -7984,7 +7985,7 @@
     {
       "name": "CursedSpirit",
       "type": "potioneffect",
-      "sortid": 383,
+      "sortid": 375,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_spirit",
@@ -7998,7 +7999,7 @@
     {
       "name": "JobValue",
       "type": "procedure",
-      "sortid": 380,
+      "sortid": 376,
       "compiles": true,
       "locked_code": false,
       "registry_name": "job_value",
@@ -8019,7 +8020,7 @@
     {
       "name": "FameValue",
       "type": "procedure",
-      "sortid": 382,
+      "sortid": 377,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fame_value",
@@ -8040,7 +8041,7 @@
     {
       "name": "CursedSpiritSet",
       "type": "procedure",
-      "sortid": 384,
+      "sortid": 378,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_spirit_set",
@@ -8060,7 +8061,7 @@
     {
       "name": "KillCursedSpirit",
       "type": "procedure",
-      "sortid": 385,
+      "sortid": 379,
       "compiles": true,
       "locked_code": false,
       "registry_name": "kill_cursed_spirit",
@@ -8084,7 +8085,7 @@
     {
       "name": "Hiar",
       "type": "armor",
-      "sortid": 372,
+      "sortid": 380,
       "compiles": true,
       "locked_code": false,
       "registry_name": "hiar",
@@ -8099,7 +8100,7 @@
     {
       "name": "MegumiFushiguro",
       "type": "livingentity",
-      "sortid": 373,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "megumi_fushiguro",
@@ -8116,7 +8117,7 @@
     {
       "name": "MissionValue",
       "type": "procedure",
-      "sortid": 386,
+      "sortid": 381,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mission_value",
@@ -8137,7 +8138,7 @@
     {
       "name": "MissionOverlay",
       "type": "overlay",
-      "sortid": 387,
+      "sortid": 382,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mission_overlay",
@@ -8151,7 +8152,7 @@
     {
       "name": "Grade3",
       "type": "achievement",
-      "sortid": 389,
+      "sortid": 383,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grade_3",
@@ -8165,7 +8166,7 @@
     {
       "name": "KillCursedSpiritQuest",
       "type": "procedure",
-      "sortid": 391,
+      "sortid": 384,
       "compiles": true,
       "locked_code": false,
       "registry_name": "kill_cursed_spirit_quest",
@@ -8189,7 +8190,7 @@
     {
       "name": "InfinityAffectedEntities",
       "type": "tag",
-      "sortid": 392,
+      "sortid": 385,
       "compiles": true,
       "locked_code": false,
       "registry_name": "infinity_affected_entities",
@@ -8203,7 +8204,7 @@
     {
       "name": "UnknownManEntityDies",
       "type": "procedure",
-      "sortid": 393,
+      "sortid": 386,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unknown_man_entity_dies",
@@ -8235,7 +8236,7 @@
     {
       "name": "Katana",
       "type": "tool",
-      "sortid": 394,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "katana",
@@ -8250,7 +8251,7 @@
     {
       "name": "Slicefirst",
       "type": "function",
-      "sortid": 395,
+      "sortid": 387,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slicefirst",
@@ -8264,7 +8265,7 @@
     {
       "name": "Slicesecond",
       "type": "function",
-      "sortid": 396,
+      "sortid": 388,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slicesecond",
@@ -8278,7 +8279,7 @@
     {
       "name": "Slicethird",
       "type": "function",
-      "sortid": 397,
+      "sortid": 389,
       "compiles": true,
       "locked_code": false,
       "registry_name": "slicethird",
@@ -8292,7 +8293,7 @@
     {
       "name": "KatanaEntitySwingsItem",
       "type": "procedure",
-      "sortid": 398,
+      "sortid": 390,
       "compiles": true,
       "locked_code": false,
       "registry_name": "katana_entity_swings_item",
@@ -8324,7 +8325,7 @@
     {
       "name": "UnknownMan",
       "type": "livingentity",
-      "sortid": 399,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unknown_man",
@@ -8341,7 +8342,7 @@
     {
       "name": "SemiGrade2",
       "type": "achievement",
-      "sortid": 400,
+      "sortid": 391,
       "compiles": true,
       "locked_code": false,
       "registry_name": "semi_grade_2",
@@ -8355,7 +8356,7 @@
     {
       "name": "ItadoriEntityDies",
       "type": "procedure",
-      "sortid": 406,
+      "sortid": 392,
       "compiles": true,
       "locked_code": false,
       "registry_name": "itadori_entity_dies",
@@ -8387,7 +8388,7 @@
     {
       "name": "SukunaOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 405,
+      "sortid": 393,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sukuna_on_initial_entity_spawn",
@@ -8407,7 +8408,7 @@
     {
       "name": "ItadoriOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 401,
+      "sortid": 394,
       "compiles": true,
       "locked_code": false,
       "registry_name": "itadori_on_initial_entity_spawn",
@@ -8427,7 +8428,7 @@
     {
       "name": "Itadori",
       "type": "livingentity",
-      "sortid": 402,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "itadori",
@@ -8444,7 +8445,7 @@
     {
       "name": "SukunaOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 403,
+      "sortid": 395,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sukuna_on_entity_tick_update",
@@ -8480,7 +8481,7 @@
     {
       "name": "Knockback",
       "type": "procedure",
-      "sortid": 409,
+      "sortid": 396,
       "compiles": true,
       "locked_code": false,
       "registry_name": "knockback",
@@ -8520,7 +8521,7 @@
     {
       "name": "FlyHeadOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 408,
+      "sortid": 397,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fly_head_on_entity_tick_update",
@@ -8556,7 +8557,7 @@
     {
       "name": "TojiFushiguroOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 407,
+      "sortid": 398,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toji_fushiguro_on_entity_tick_update",
@@ -8592,7 +8593,7 @@
     {
       "name": "Sukuna",
       "type": "livingentity",
-      "sortid": 404,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sukuna",
@@ -8609,7 +8610,7 @@
     {
       "name": "MagmaRockProjectileProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 410,
+      "sortid": 399,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magma_rock_projectile_projectile_hits_block",
@@ -8645,7 +8646,7 @@
     {
       "name": "MagmaRockProjectile",
       "type": "rangeditem",
-      "sortid": 411,
+      "sortid": 400,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magma_rock_projectile",
@@ -8662,7 +8663,7 @@
     {
       "name": "SkyOfFlamesOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 412,
+      "sortid": 401,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sky_of_flames_on_effect_active_tick",
@@ -8677,7 +8678,7 @@
     {
       "name": "SkyOfFlamesEffectStartedapplied",
       "type": "procedure",
-      "sortid": 413,
+      "sortid": 402,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sky_of_flames_effect_startedapplied",
@@ -8713,7 +8714,7 @@
     {
       "name": "FlameSpark",
       "type": "particle",
-      "sortid": 414,
+      "sortid": 403,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flame_spark",
@@ -8728,7 +8729,7 @@
     {
       "name": "SkyOfFlames",
       "type": "potioneffect",
-      "sortid": 415,
+      "sortid": 404,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sky_of_flames",
@@ -8742,7 +8743,7 @@
     {
       "name": "SkyOfFlamesEffectExpires",
       "type": "procedure",
-      "sortid": 416,
+      "sortid": 405,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sky_of_flames_effect_expires",
@@ -8766,7 +8767,7 @@
     {
       "name": "SkyOfFlamesProcedure",
       "type": "procedure",
-      "sortid": 417,
+      "sortid": 406,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sky_of_flames_procedure",
@@ -8802,7 +8803,7 @@
     {
       "name": "Blood",
       "type": "particle",
-      "sortid": 418,
+      "sortid": 407,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blood",
@@ -8817,7 +8818,7 @@
     {
       "name": "ItadoriOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 419,
+      "sortid": 408,
       "compiles": true,
       "locked_code": false,
       "registry_name": "itadori_on_entity_tick_update",
@@ -8837,7 +8838,7 @@
     {
       "name": "DisasterFlameProjectileHitsLivingEntity",
       "type": "procedure",
-      "sortid": 420,
+      "sortid": 409,
       "compiles": true,
       "locked_code": false,
       "registry_name": "disaster_flame_projectile_hits_living_entity",
@@ -8869,7 +8870,7 @@
     {
       "name": "BigFistOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 423,
+      "sortid": 410,
       "compiles": true,
       "locked_code": false,
       "registry_name": "big_fist_on_entity_tick_update",
@@ -8905,7 +8906,7 @@
     {
       "name": "IdleTransfigurationOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 429,
+      "sortid": 411,
       "compiles": true,
       "locked_code": false,
       "registry_name": "idle_transfiguration_on_effect_active_tick",
@@ -8929,7 +8930,7 @@
     {
       "name": "BigFistOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 421,
+      "sortid": 412,
       "compiles": true,
       "locked_code": false,
       "registry_name": "big_fist_on_initial_entity_spawn",
@@ -8953,7 +8954,7 @@
     {
       "name": "BigFistTick",
       "type": "procedure",
-      "sortid": 425,
+      "sortid": 413,
       "compiles": true,
       "locked_code": false,
       "registry_name": "big_fist_tick",
@@ -8989,7 +8990,7 @@
     {
       "name": "RepeatedSlicing",
       "type": "potioneffect",
-      "sortid": 432,
+      "sortid": 414,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeated_slicing",
@@ -9003,7 +9004,7 @@
     {
       "name": "BigFist",
       "type": "livingentity",
-      "sortid": 422,
+      "sortid": 415,
       "compiles": true,
       "locked_code": false,
       "registry_name": "big_fist",
@@ -9018,7 +9019,7 @@
     {
       "name": "TechniqueTick",
       "type": "procedure",
-      "sortid": 428,
+      "sortid": 416,
       "compiles": true,
       "locked_code": false,
       "registry_name": "technique_tick",
@@ -9054,7 +9055,7 @@
     {
       "name": "IdleTransfiguration",
       "type": "potioneffect",
-      "sortid": 430,
+      "sortid": 417,
       "compiles": true,
       "locked_code": false,
       "registry_name": "idle_transfiguration",
@@ -9068,7 +9069,7 @@
     {
       "name": "RepeatingSlicesProcedure",
       "type": "procedure",
-      "sortid": 433,
+      "sortid": 418,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeating_slices_procedure",
@@ -9088,7 +9089,7 @@
     {
       "name": "BigFistProcedure",
       "type": "procedure",
-      "sortid": 424,
+      "sortid": 419,
       "compiles": true,
       "locked_code": false,
       "registry_name": "big_fist_procedure",
@@ -9124,7 +9125,7 @@
     {
       "name": "RepeatedSlicingOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 431,
+      "sortid": 420,
       "compiles": true,
       "locked_code": false,
       "registry_name": "repeated_slicing_on_effect_active_tick",
@@ -9160,7 +9161,7 @@
     {
       "name": "Eso",
       "type": "livingentity",
-      "sortid": 422,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "eso",
@@ -9193,7 +9194,7 @@
     {
       "name": "EsoOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 434,
+      "sortid": 422,
       "compiles": true,
       "locked_code": false,
       "registry_name": "eso_on_initial_entity_spawn",
@@ -9213,7 +9214,7 @@
     {
       "name": "SpikeFistProcedure",
       "type": "procedure",
-      "sortid": 435,
+      "sortid": 423,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spike_fist_procedure",
@@ -9249,7 +9250,7 @@
     {
       "name": "FireArrowOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 437,
+      "sortid": 424,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_on_initial_entity_spawn",
@@ -9273,7 +9274,7 @@
     {
       "name": "SatoruGojoEntityIsHurt",
       "type": "procedure",
-      "sortid": 438,
+      "sortid": 425,
       "compiles": true,
       "locked_code": false,
       "registry_name": "satoru_gojo_entity_is_hurt",
@@ -9293,7 +9294,7 @@
     {
       "name": "DIsplayV",
       "type": "procedure",
-      "sortid": 447,
+      "sortid": 426,
       "compiles": true,
       "locked_code": false,
       "registry_name": "d_isplay_v",
@@ -9314,7 +9315,7 @@
     {
       "name": "TalismanGUI",
       "type": "gui",
-      "sortid": 457,
+      "sortid": 427,
       "compiles": true,
       "locked_code": false,
       "registry_name": "talisman_gui",
@@ -9330,7 +9331,7 @@
     {
       "name": "ApplySecondaryTreeBuff",
       "type": "procedure",
-      "sortid": 440,
+      "sortid": 428,
       "compiles": true,
       "locked_code": false,
       "registry_name": "apply_secondary_tree_buff",
@@ -9350,7 +9351,7 @@
     {
       "name": "PlusPressed",
       "type": "procedure",
-      "sortid": 451,
+      "sortid": 429,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plus_pressed",
@@ -9370,7 +9371,7 @@
     {
       "name": "SealPressed",
       "type": "procedure",
-      "sortid": 458,
+      "sortid": 430,
       "compiles": true,
       "locked_code": false,
       "registry_name": "seal_pressed",
@@ -9390,7 +9391,7 @@
     {
       "name": "SetSPCommand",
       "type": "command",
-      "sortid": 441,
+      "sortid": 431,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_sp_command",
@@ -9404,7 +9405,7 @@
     {
       "name": "DIsplayError",
       "type": "procedure",
-      "sortid": 446,
+      "sortid": 432,
       "compiles": true,
       "locked_code": false,
       "registry_name": "d_isplay_error",
@@ -9425,7 +9426,7 @@
     {
       "name": "CreatePressed",
       "type": "procedure",
-      "sortid": 449,
+      "sortid": 433,
       "compiles": true,
       "locked_code": false,
       "registry_name": "create_pressed",
@@ -9449,7 +9450,7 @@
     {
       "name": "PressedMinus",
       "type": "procedure",
-      "sortid": 452,
+      "sortid": 434,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pressed_minus",
@@ -9469,7 +9470,7 @@
     {
       "name": "DisplayAmount",
       "type": "procedure",
-      "sortid": 448,
+      "sortid": 435,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_amount",
@@ -9490,7 +9491,7 @@
     {
       "name": "ApplySkillTreeBuff",
       "type": "procedure",
-      "sortid": 439,
+      "sortid": 436,
       "compiles": true,
       "locked_code": false,
       "registry_name": "apply_skill_tree_buff",
@@ -9510,7 +9511,7 @@
     {
       "name": "TalismanEffect",
       "type": "procedure",
-      "sortid": 455,
+      "sortid": 437,
       "compiles": true,
       "locked_code": false,
       "registry_name": "talisman_effect",
@@ -9546,7 +9547,7 @@
     {
       "name": "OpenTalismanGUI",
       "type": "procedure",
-      "sortid": 456,
+      "sortid": 438,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_talisman_gui",
@@ -9582,7 +9583,7 @@
     {
       "name": "Talisman",
       "type": "item",
-      "sortid": 453,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "talisman",
@@ -9597,7 +9598,7 @@
     {
       "name": "CursedToolTable",
       "type": "block",
-      "sortid": 443,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_tool_table",
@@ -9614,7 +9615,7 @@
     {
       "name": "SwordCreator",
       "type": "gui",
-      "sortid": 444,
+      "sortid": 439,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sword_creator",
@@ -9630,7 +9631,7 @@
     {
       "name": "OpenSwordCreatorGUI",
       "type": "procedure",
-      "sortid": 450,
+      "sortid": 440,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_sword_creator_gui",
@@ -9666,7 +9667,7 @@
     {
       "name": "DisplayGlow",
       "type": "procedure",
-      "sortid": 454,
+      "sortid": 441,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_glow",
@@ -9707,7 +9708,7 @@
     {
       "name": "DisplayCost",
       "type": "procedure",
-      "sortid": 445,
+      "sortid": 443,
       "compiles": true,
       "locked_code": false,
       "registry_name": "display_cost",
@@ -9728,7 +9729,7 @@
     {
       "name": "Mahito",
       "type": "livingentity",
-      "sortid": 439,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahito",
@@ -9745,7 +9746,7 @@
     {
       "name": "MahitoSpikeOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 440,
+      "sortid": 444,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahito_spike_on_initial_entity_spawn",
@@ -9769,7 +9770,7 @@
     {
       "name": "MahitoSpike",
       "type": "livingentity",
-      "sortid": 441,
+      "sortid": 445,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahito_spike",
@@ -9784,7 +9785,7 @@
     {
       "name": "MahitoSpikeOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 442,
+      "sortid": 446,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahito_spike_on_entity_tick_update",
@@ -9804,7 +9805,7 @@
     {
       "name": "MissionDamage",
       "type": "procedure",
-      "sortid": 443,
+      "sortid": 447,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mission_damage",
@@ -9824,7 +9825,7 @@
     {
       "name": "Grade2",
       "type": "achievement",
-      "sortid": 444,
+      "sortid": 448,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grade_2",
@@ -9838,7 +9839,7 @@
     {
       "name": "MahitoOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 459,
+      "sortid": 449,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahito_on_entity_tick_update",
@@ -9874,7 +9875,7 @@
     {
       "name": "MahitoOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 460,
+      "sortid": 450,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahito_on_initial_entity_spawn",
@@ -9894,7 +9895,7 @@
     {
       "name": "CustomCTGUI",
       "type": "gui",
-      "sortid": 461,
+      "sortid": 451,
       "compiles": true,
       "locked_code": false,
       "registry_name": "custom_ctgui",
@@ -9910,7 +9911,7 @@
     {
       "name": "BasesGUI",
       "type": "gui",
-      "sortid": 462,
+      "sortid": 452,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bases_gui",
@@ -9926,7 +9927,7 @@
     {
       "name": "OpenCTGUIIfClosed",
       "type": "procedure",
-      "sortid": 463,
+      "sortid": 453,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_ctgui_if_closed",
@@ -9962,7 +9963,7 @@
     {
       "name": "DesignGUI",
       "type": "gui",
-      "sortid": 466,
+      "sortid": 454,
       "compiles": true,
       "locked_code": false,
       "registry_name": "design_gui",
@@ -9978,7 +9979,7 @@
     {
       "name": "SemiGrade1",
       "type": "achievement",
-      "sortid": 476,
+      "sortid": 455,
       "compiles": true,
       "locked_code": false,
       "registry_name": "semi_grade_1",
@@ -9992,7 +9993,7 @@
     {
       "name": "Cursedspiritmouth",
       "type": "livingentity",
-      "sortid": 480,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursedspiritmouth",
@@ -10009,7 +10010,7 @@
     {
       "name": "FingerBearerKill",
       "type": "procedure",
-      "sortid": 479,
+      "sortid": 456,
       "compiles": true,
       "locked_code": false,
       "registry_name": "finger_bearer_kill",
@@ -10033,7 +10034,7 @@
     {
       "name": "SpecialGrade",
       "type": "achievement",
-      "sortid": 478,
+      "sortid": 457,
       "compiles": true,
       "locked_code": false,
       "registry_name": "special_grade",
@@ -10047,7 +10048,7 @@
     {
       "name": "Grade1",
       "type": "achievement",
-      "sortid": 477,
+      "sortid": 458,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grade_1",
@@ -10061,7 +10062,7 @@
     {
       "name": "DesignConfirm",
       "type": "procedure",
-      "sortid": 485,
+      "sortid": 459,
       "compiles": true,
       "locked_code": false,
       "registry_name": "design_confirm",
@@ -10101,7 +10102,7 @@
     {
       "name": "FinishPressed",
       "type": "procedure",
-      "sortid": 483,
+      "sortid": 460,
       "compiles": true,
       "locked_code": false,
       "registry_name": "finish_pressed",
@@ -10141,7 +10142,7 @@
     {
       "name": "RevealingOnesHandEffectStarted",
       "type": "procedure",
-      "sortid": 492,
+      "sortid": 461,
       "compiles": true,
       "locked_code": false,
       "registry_name": "revealing_ones_hand_effect_started",
@@ -10161,7 +10162,7 @@
     {
       "name": "ErrorDisplay",
       "type": "procedure",
-      "sortid": 486,
+      "sortid": 462,
       "compiles": true,
       "locked_code": false,
       "registry_name": "error_display",
@@ -10182,7 +10183,7 @@
     {
       "name": "RevealingOnesHandEffectExpires",
       "type": "procedure",
-      "sortid": 493,
+      "sortid": 463,
       "compiles": true,
       "locked_code": false,
       "registry_name": "revealing_ones_hand_effect_expires",
@@ -10202,7 +10203,7 @@
     {
       "name": "BasesConfirm",
       "type": "procedure",
-      "sortid": 484,
+      "sortid": 464,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bases_confirm",
@@ -10242,7 +10243,7 @@
     {
       "name": "TechniqueCreatorGUI",
       "type": "gui",
-      "sortid": 487,
+      "sortid": 465,
       "compiles": true,
       "locked_code": false,
       "registry_name": "technique_creator_gui",
@@ -10258,7 +10259,7 @@
     {
       "name": "RevealTimer",
       "type": "procedure",
-      "sortid": 488,
+      "sortid": 466,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reveal_timer",
@@ -10294,7 +10295,7 @@
     {
       "name": "RevealBuff",
       "type": "procedure",
-      "sortid": 489,
+      "sortid": 467,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reveal_buff",
@@ -10334,7 +10335,7 @@
     {
       "name": "OpenBasesGUI",
       "type": "procedure",
-      "sortid": 481,
+      "sortid": 468,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_bases_gui",
@@ -10374,7 +10375,7 @@
     {
       "name": "RevealingOnesHand",
       "type": "potioneffect",
-      "sortid": 491,
+      "sortid": 469,
       "compiles": true,
       "locked_code": false,
       "registry_name": "revealing_ones_hand",
@@ -10388,7 +10389,7 @@
     {
       "name": "OpenDesignGUI",
       "type": "procedure",
-      "sortid": 482,
+      "sortid": 470,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_design_gui",
@@ -10428,7 +10429,7 @@
     {
       "name": "YenSet",
       "type": "procedure",
-      "sortid": 480,
+      "sortid": 471,
       "compiles": true,
       "locked_code": false,
       "registry_name": "yen_set",
@@ -10448,7 +10449,7 @@
     {
       "name": "TojiTextValue",
       "type": "procedure",
-      "sortid": 484,
+      "sortid": 472,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toji_text_value",
@@ -10469,7 +10470,7 @@
     {
       "name": "PurchaseToji",
       "type": "procedure",
-      "sortid": 482,
+      "sortid": 473,
       "compiles": true,
       "locked_code": false,
       "registry_name": "purchase_toji",
@@ -10509,7 +10510,7 @@
     {
       "name": "TojiFushiguroRightClickedOnEntity",
       "type": "procedure",
-      "sortid": 487,
+      "sortid": 474,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toji_fushiguro_right_clicked_on_entity",
@@ -10545,7 +10546,7 @@
     {
       "name": "RestrictionSet",
       "type": "procedure",
-      "sortid": 495,
+      "sortid": 475,
       "compiles": true,
       "locked_code": false,
       "registry_name": "restriction_set",
@@ -10569,7 +10570,7 @@
     {
       "name": "MechamaruArmor",
       "type": "armor",
-      "sortid": 500,
+      "sortid": 476,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mechamaru_armor",
@@ -10586,7 +10587,7 @@
     {
       "name": "TojiPurchaseValue",
       "type": "procedure",
-      "sortid": 483,
+      "sortid": 477,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toji_purchase_value",
@@ -10607,7 +10608,7 @@
     {
       "name": "TojiContractGui",
       "type": "gui",
-      "sortid": 486,
+      "sortid": 478,
       "compiles": true,
       "locked_code": false,
       "registry_name": "toji_contract_gui",
@@ -10623,7 +10624,7 @@
     {
       "name": "GiveRestriction",
       "type": "command",
-      "sortid": 494,
+      "sortid": 479,
       "compiles": true,
       "locked_code": false,
       "registry_name": "give_restriction",
@@ -10637,7 +10638,7 @@
     {
       "name": "SetYenCommand",
       "type": "command",
-      "sortid": 481,
+      "sortid": 480,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_yen_command",
@@ -10651,7 +10652,7 @@
     {
       "name": "UltimateMechamaruOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 488,
+      "sortid": 481,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ultimate_mechamaru_on_initial_entity_spawn",
@@ -10671,7 +10672,7 @@
     {
       "name": "RestrictionPro",
       "type": "procedure",
-      "sortid": 493,
+      "sortid": 482,
       "compiles": true,
       "locked_code": false,
       "registry_name": "restriction_pro",
@@ -10691,7 +10692,7 @@
     {
       "name": "MechArmorTick",
       "type": "procedure",
-      "sortid": 501,
+      "sortid": 483,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mech_armor_tick",
@@ -10711,7 +10712,7 @@
     {
       "name": "UltimateMechamaru",
       "type": "livingentity",
-      "sortid": 489,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ultimate_mechamaru",
@@ -10727,7 +10728,7 @@
     {
       "name": "SetRestrictionType",
       "type": "command",
-      "sortid": 496,
+      "sortid": 484,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_restriction_type",
@@ -10781,7 +10782,7 @@
     {
       "name": "FragileTick",
       "type": "procedure",
-      "sortid": 499,
+      "sortid": 486,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fragile_tick",
@@ -10805,7 +10806,7 @@
     {
       "name": "EmptyMechamaru",
       "type": "livingentity",
-      "sortid": 491,
+      "sortid": 487,
       "compiles": true,
       "locked_code": false,
       "registry_name": "empty_mechamaru",
@@ -10820,7 +10821,7 @@
     {
       "name": "LeaveMechOnKeyPressed",
       "type": "procedure",
-      "sortid": 497,
+      "sortid": 488,
       "compiles": true,
       "locked_code": false,
       "registry_name": "leave_mech_on_key_pressed",
@@ -10856,7 +10857,7 @@
     {
       "name": "WrappedUp",
       "type": "livingentity",
-      "sortid": 492,
+      "sortid": 489,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wrapped_up",
@@ -10911,7 +10912,7 @@
     {
       "name": "PhysicallyGiftedCooldown",
       "type": "potioneffect",
-      "sortid": 512,
+      "sortid": 491,
       "compiles": true,
       "locked_code": false,
       "registry_name": "physically_gifted_cooldown",
@@ -10925,7 +10926,7 @@
     {
       "name": "PhysicallyGiftedTick",
       "type": "procedure",
-      "sortid": 514,
+      "sortid": 492,
       "compiles": true,
       "locked_code": false,
       "registry_name": "physically_gifted_tick",
@@ -10945,7 +10946,7 @@
     {
       "name": "ShowQuestOverlay",
       "type": "procedure",
-      "sortid": 511,
+      "sortid": 493,
       "compiles": true,
       "locked_code": false,
       "registry_name": "show_quest_overlay",
@@ -10966,7 +10967,7 @@
     {
       "name": "SetGrade",
       "type": "command",
-      "sortid": 517,
+      "sortid": 494,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_grade",
@@ -10980,7 +10981,7 @@
     {
       "name": "VillageCurseSpawn",
       "type": "procedure",
-      "sortid": 522,
+      "sortid": 495,
       "compiles": true,
       "locked_code": false,
       "registry_name": "village_curse_spawn",
@@ -11000,7 +11001,7 @@
     {
       "name": "FameSet",
       "type": "procedure",
-      "sortid": 518,
+      "sortid": 496,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fame_set",
@@ -11020,7 +11021,7 @@
     {
       "name": "SetFame",
       "type": "command",
-      "sortid": 519,
+      "sortid": 497,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_fame",
@@ -11034,7 +11035,7 @@
     {
       "name": "PhysicallyGiftedAttack",
       "type": "procedure",
-      "sortid": 513,
+      "sortid": 498,
       "compiles": true,
       "locked_code": false,
       "registry_name": "physically_gifted_attack",
@@ -11074,7 +11075,7 @@
     {
       "name": "VillagerCurseTick",
       "type": "procedure",
-      "sortid": 515,
+      "sortid": 499,
       "compiles": true,
       "locked_code": false,
       "registry_name": "villager_curse_tick",
@@ -11110,7 +11111,7 @@
     {
       "name": "Whitelist",
       "type": "procedure",
-      "sortid": 520,
+      "sortid": 500,
       "compiles": true,
       "locked_code": false,
       "registry_name": "whitelist",
@@ -11146,7 +11147,7 @@
     {
       "name": "VillageCurseHurt",
       "type": "procedure",
-      "sortid": 521,
+      "sortid": 501,
       "compiles": true,
       "locked_code": false,
       "registry_name": "village_curse_hurt",
@@ -11166,7 +11167,7 @@
     {
       "name": "GradeSet",
       "type": "procedure",
-      "sortid": 516,
+      "sortid": 502,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grade_set",
@@ -11190,7 +11191,7 @@
     {
       "name": "PrisonRealm",
       "type": "block",
-      "sortid": 504,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm",
@@ -11223,7 +11224,7 @@
     {
       "name": "TeachniqueCreatePressed",
       "type": "procedure",
-      "sortid": 502,
+      "sortid": 504,
       "compiles": true,
       "locked_code": false,
       "registry_name": "teachnique_create_pressed",
@@ -11262,7 +11263,7 @@
     {
       "name": "SwitchTechniquePressed",
       "type": "procedure",
-      "sortid": 523,
+      "sortid": 506,
       "compiles": true,
       "locked_code": false,
       "registry_name": "switch_technique_pressed",
@@ -11282,7 +11283,7 @@
     {
       "name": "BaggedHeadCurseUserOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 525,
+      "sortid": 507,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bagged_head_curse_user_on_initial_entity_spawn",
@@ -11302,7 +11303,7 @@
     {
       "name": "BaggedHeadCurseUserOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 528,
+      "sortid": 508,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bagged_head_curse_user_on_entity_tick_update",
@@ -11338,7 +11339,7 @@
     {
       "name": "BaggedHeadCurseUserCloneOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 529,
+      "sortid": 509,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bagged_head_curse_user_clone_on_entity_tick_update",
@@ -11374,7 +11375,7 @@
     {
       "name": "StarPlasmaVessel",
       "type": "procedure",
-      "sortid": 530,
+      "sortid": 510,
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_plasma_vessel",
@@ -11410,7 +11411,7 @@
     {
       "name": "BaggedHeadCurseUserClone",
       "type": "livingentity",
-      "sortid": 526,
+      "sortid": 511,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bagged_head_curse_user_clone",
@@ -11425,7 +11426,7 @@
     {
       "name": "LeaveEnterMech",
       "type": "keybind",
-      "sortid": 523,
+      "sortid": 512,
       "compiles": true,
       "locked_code": false,
       "registry_name": "leave_enter_mech",
@@ -11439,7 +11440,7 @@
     {
       "name": "BaggedHeadCurseUser",
       "type": "livingentity",
-      "sortid": 527,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bagged_head_curse_user",
@@ -11456,7 +11457,7 @@
     {
       "name": "SpecialGradeCurseDeath",
       "type": "procedure",
-      "sortid": 532,
+      "sortid": 513,
       "compiles": true,
       "locked_code": false,
       "registry_name": "special_grade_curse_death",
@@ -11480,7 +11481,7 @@
     {
       "name": "RikoAmanai",
       "type": "livingentity",
-      "sortid": 524,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "riko_amanai",
@@ -11496,7 +11497,7 @@
     {
       "name": "RikoAmanaiDeath",
       "type": "procedure",
-      "sortid": 531,
+      "sortid": 514,
       "compiles": true,
       "locked_code": false,
       "registry_name": "riko_amanai_death",
@@ -11532,7 +11533,7 @@
     {
       "name": "UseTechniquePressed",
       "type": "procedure",
-      "sortid": 533,
+      "sortid": 515,
       "compiles": true,
       "locked_code": false,
       "registry_name": "use_technique_pressed",
@@ -11568,7 +11569,7 @@
     {
       "name": "ReverseCursedTechniqueBind",
       "type": "keybind",
-      "sortid": 539,
+      "sortid": 516,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reverse_cursed_technique_bind",
@@ -11582,7 +11583,7 @@
     {
       "name": "PrisonRealmCommands",
       "type": "procedure",
-      "sortid": 535,
+      "sortid": 517,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm_commands",
@@ -11622,7 +11623,7 @@
     {
       "name": "PrisonRealmTimer",
       "type": "procedure",
-      "sortid": 537,
+      "sortid": 518,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm_timer",
@@ -11642,7 +11643,7 @@
     {
       "name": "PrisonRealmGUI",
       "type": "gui",
-      "sortid": 542,
+      "sortid": 519,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm_gui",
@@ -11658,7 +11659,7 @@
     {
       "name": "AddTagOwner",
       "type": "procedure",
-      "sortid": 538,
+      "sortid": 520,
       "compiles": true,
       "locked_code": false,
       "registry_name": "add_tag_owner",
@@ -11678,7 +11679,7 @@
     {
       "name": "PrisonRealmMob",
       "type": "livingentity",
-      "sortid": 536,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm_mob",
@@ -11693,7 +11694,7 @@
     {
       "name": "RCTPressed",
       "type": "procedure",
-      "sortid": 540,
+      "sortid": 521,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rct_pressed",
@@ -11713,7 +11714,7 @@
     {
       "name": "ReversalRedEntity",
       "type": "livingentity",
-      "sortid": 535,
+      "sortid": 522,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_entity",
@@ -11728,7 +11729,7 @@
     {
       "name": "ReversalRedEntityOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 534,
+      "sortid": 523,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_entity_on_initial_entity_spawn",
@@ -11752,7 +11753,7 @@
     {
       "name": "BoltProjectile",
       "type": "rangeditem",
-      "sortid": 537,
+      "sortid": 524,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bolt_projectile",
@@ -11768,7 +11769,7 @@
     {
       "name": "BoltProjectileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 536,
+      "sortid": 525,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bolt_projectile_while_projectile_flying_tick",
@@ -11808,7 +11809,7 @@
     {
       "name": "DomainCreatorGUI",
       "type": "gui",
-      "sortid": 544,
+      "sortid": 526,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_creator_gui",
@@ -11824,7 +11825,7 @@
     {
       "name": "DomainBlockOne",
       "type": "block",
-      "sortid": 546,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_block_one",
@@ -11841,7 +11842,7 @@
     {
       "name": "Placedwadw",
       "type": "procedure",
-      "sortid": 549,
+      "sortid": 527,
       "compiles": true,
       "locked_code": false,
       "registry_name": "placedwadw",
@@ -11877,7 +11878,7 @@
     {
       "name": "DomainCreatePressed",
       "type": "procedure",
-      "sortid": 545,
+      "sortid": 528,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_create_pressed",
@@ -11901,7 +11902,7 @@
     {
       "name": "DomainBlockTwo",
       "type": "block",
-      "sortid": 547,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_block_two",
@@ -11918,7 +11919,7 @@
     {
       "name": "BoltAttack",
       "type": "procedure",
-      "sortid": 543,
+      "sortid": 529,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bolt_attack",
@@ -11938,7 +11939,7 @@
     {
       "name": "DomainTriggered",
       "type": "procedure",
-      "sortid": 548,
+      "sortid": 530,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_triggered",
@@ -11953,7 +11954,7 @@
     {
       "name": "PunchBarragePotionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 538,
+      "sortid": 531,
       "compiles": true,
       "locked_code": false,
       "registry_name": "punch_barrage_potion_on_effect_active_tick",
@@ -11977,7 +11978,7 @@
     {
       "name": "PunchBarragePotion",
       "type": "potioneffect",
-      "sortid": 539,
+      "sortid": 532,
       "compiles": true,
       "locked_code": false,
       "registry_name": "punch_barrage_potion",
@@ -11991,7 +11992,7 @@
     {
       "name": "AddXYZCoords",
       "type": "procedure",
-      "sortid": 552,
+      "sortid": 533,
       "compiles": true,
       "locked_code": false,
       "registry_name": "add_xyz_coords",
@@ -12023,7 +12024,7 @@
     {
       "name": "RCTExpCheck",
       "type": "procedure",
-      "sortid": 554,
+      "sortid": 534,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rct_exp_check",
@@ -12059,7 +12060,7 @@
     {
       "name": "RCTHealingEffectExpires",
       "type": "procedure",
-      "sortid": 555,
+      "sortid": 535,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rct_healing_effect_expires",
@@ -12079,7 +12080,7 @@
     {
       "name": "OpenPRGUI",
       "type": "procedure",
-      "sortid": 551,
+      "sortid": 536,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_prgui",
@@ -12115,7 +12116,7 @@
     {
       "name": "VowHarmCheck",
       "type": "procedure",
-      "sortid": 559,
+      "sortid": 537,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vow_harm_check",
@@ -12155,7 +12156,7 @@
     {
       "name": "BindingVowSubmit",
       "type": "procedure",
-      "sortid": 556,
+      "sortid": 538,
       "compiles": true,
       "locked_code": false,
       "registry_name": "binding_vow_submit",
@@ -12183,7 +12184,7 @@
     {
       "name": "PrisonRealmFinish",
       "type": "procedure",
-      "sortid": 550,
+      "sortid": 539,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm_finish",
@@ -12211,7 +12212,7 @@
     {
       "name": "RCTHealingOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 553,
+      "sortid": 540,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rct_healing_on_effect_active_tick",
@@ -12235,7 +12236,7 @@
     {
       "name": "CheckVowChat",
       "type": "procedure",
-      "sortid": 558,
+      "sortid": 541,
       "compiles": true,
       "locked_code": false,
       "registry_name": "check_vow_chat",
@@ -12263,7 +12264,7 @@
     {
       "name": "VowCommand",
       "type": "command",
-      "sortid": 557,
+      "sortid": 542,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vow_command",
@@ -12277,7 +12278,7 @@
     {
       "name": "AbilityChangerRightclicked",
       "type": "procedure",
-      "sortid": 551,
+      "sortid": 543,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ability_changer_rightclicked",
@@ -12313,7 +12314,7 @@
     {
       "name": "Flowers",
       "type": "tag",
-      "sortid": 550,
+      "sortid": 544,
       "compiles": true,
       "locked_code": false,
       "registry_name": "flowers",
@@ -12327,7 +12328,7 @@
     {
       "name": "AbilityChanger",
       "type": "item",
-      "sortid": 552,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ability_changer",
@@ -12342,13 +12343,14 @@
     {
       "name": "DomainClashGUI",
       "type": "gui",
-      "sortid": 560,
+      "sortid": 545,
       "compiles": true,
       "locked_code": false,
       "registry_name": "domain_clash_gui",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/craftkaisen/client/gui/DomainClashGUIScreen.java",
+          "src/main/java/net/mcreator/craftkaisen/network/DomainClashGUIButtonMessage.java",
           "src/main/java/net/mcreator/craftkaisen/world/inventory/DomainClashGUIMenu.java"
         ]
       },
@@ -12357,7 +12359,7 @@
     {
       "name": "Move4Effects",
       "type": "procedure",
-      "sortid": 563,
+      "sortid": 546,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_4_effects",
@@ -12397,7 +12399,7 @@
     {
       "name": "Move5Effects",
       "type": "procedure",
-      "sortid": 564,
+      "sortid": 547,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_5_effects",
@@ -12437,7 +12439,7 @@
     {
       "name": "Move6Effects",
       "type": "procedure",
-      "sortid": 565,
+      "sortid": 548,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_6_effects",
@@ -12477,7 +12479,7 @@
     {
       "name": "TouchHandler",
       "type": "procedure",
-      "sortid": 567,
+      "sortid": 549,
       "compiles": true,
       "locked_code": false,
       "registry_name": "touch_handler",
@@ -12497,7 +12499,7 @@
     {
       "name": "ExplosionEffect",
       "type": "potioneffect",
-      "sortid": 571,
+      "sortid": 550,
       "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_effect",
@@ -12511,7 +12513,7 @@
     {
       "name": "Move1Effects",
       "type": "procedure",
-      "sortid": 560,
+      "sortid": 551,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_1_effects",
@@ -12551,7 +12553,7 @@
     {
       "name": "CheckMoveHit",
       "type": "procedure",
-      "sortid": 569,
+      "sortid": 552,
       "compiles": true,
       "locked_code": false,
       "registry_name": "check_move_hit",
@@ -12579,7 +12581,7 @@
     {
       "name": "ExplosionAttack",
       "type": "procedure",
-      "sortid": 570,
+      "sortid": 553,
       "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_attack",
@@ -12599,7 +12601,7 @@
     {
       "name": "Move2Effects",
       "type": "procedure",
-      "sortid": 561,
+      "sortid": 554,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_2_effects",
@@ -12639,7 +12641,7 @@
     {
       "name": "Move3Effects",
       "type": "procedure",
-      "sortid": 562,
+      "sortid": 555,
       "compiles": true,
       "locked_code": false,
       "registry_name": "move_3_effects",
@@ -12679,7 +12681,7 @@
     {
       "name": "SelfVowGUI",
       "type": "gui",
-      "sortid": 566,
+      "sortid": 556,
       "compiles": true,
       "locked_code": false,
       "registry_name": "self_vow_gui",
@@ -12694,7 +12696,7 @@
     {
       "name": "AddTouchAura",
       "type": "procedure",
-      "sortid": 568,
+      "sortid": 557,
       "compiles": true,
       "locked_code": false,
       "registry_name": "add_touch_aura",
@@ -12730,7 +12732,7 @@
     {
       "name": "ExplosionEffectEffectStartedApplied",
       "type": "procedure",
-      "sortid": 572,
+      "sortid": 558,
       "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_effect_effect_started_applied",
@@ -12766,7 +12768,7 @@
     {
       "name": "SetLimitless",
       "type": "procedure",
-      "sortid": 577,
+      "sortid": 559,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_limitless",
@@ -12786,7 +12788,7 @@
     {
       "name": "EntityMovementHandler",
       "type": "procedure",
-      "sortid": 574,
+      "sortid": 560,
       "compiles": true,
       "locked_code": false,
       "registry_name": "entity_movement_handler",
@@ -12806,7 +12808,7 @@
     {
       "name": "WoodBindsArmor",
       "type": "armor",
-      "sortid": 573,
+      "sortid": 561,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wood_binds_armor",
@@ -12821,7 +12823,7 @@
     {
       "name": "SetTransfiguration",
       "type": "procedure",
-      "sortid": 581,
+      "sortid": 562,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_transfiguration",
@@ -12841,7 +12843,7 @@
     {
       "name": "SetPlants",
       "type": "procedure",
-      "sortid": 582,
+      "sortid": 563,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_plants",
@@ -12861,7 +12863,7 @@
     {
       "name": "PlayerMovementHandler",
       "type": "procedure",
-      "sortid": 575,
+      "sortid": 564,
       "compiles": true,
       "locked_code": false,
       "registry_name": "player_movement_handler",
@@ -12881,7 +12883,7 @@
     {
       "name": "SetClap",
       "type": "procedure",
-      "sortid": 583,
+      "sortid": 565,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_clap",
@@ -12901,7 +12903,7 @@
     {
       "name": "SetCursedSpeech",
       "type": "procedure",
-      "sortid": 578,
+      "sortid": 566,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_cursed_speech",
@@ -12921,7 +12923,7 @@
     {
       "name": "CkAllowCustomTechniques",
       "type": "gamerule",
-      "sortid": 576,
+      "sortid": 567,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ck_allow_custom_techniques",
@@ -12934,7 +12936,7 @@
     {
       "name": "SetFlames",
       "type": "procedure",
-      "sortid": 579,
+      "sortid": 568,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_flames",
@@ -12954,7 +12956,7 @@
     {
       "name": "SetSukuna",
       "type": "procedure",
-      "sortid": 580,
+      "sortid": 569,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_sukuna",
@@ -12974,7 +12976,7 @@
     {
       "name": "RootProjectileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 574,
+      "sortid": 570,
       "compiles": true,
       "locked_code": false,
       "registry_name": "root_projectile_while_projectile_flying_tick",
@@ -13014,7 +13016,7 @@
     {
       "name": "Corrupted",
       "type": "tag",
-      "sortid": 573,
+      "sortid": 571,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted",
@@ -13028,7 +13030,7 @@
     {
       "name": "RootProjectile",
       "type": "rangeditem",
-      "sortid": 575,
+      "sortid": 572,
       "compiles": true,
       "locked_code": false,
       "registry_name": "root_projectile",
@@ -13044,7 +13046,7 @@
     {
       "name": "CorruptedPotionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 576,
+      "sortid": 573,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_potion_on_effect_active_tick",
@@ -13080,7 +13082,7 @@
     {
       "name": "CorruptedPotion",
       "type": "potioneffect",
-      "sortid": 577,
+      "sortid": 574,
       "compiles": true,
       "locked_code": false,
       "registry_name": "corrupted_potion",
@@ -13094,7 +13096,7 @@
     {
       "name": "PonyTail",
       "type": "armor",
-      "sortid": 578,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pony_tail",
@@ -13109,7 +13111,7 @@
     {
       "name": "MakiZenin",
       "type": "livingentity",
-      "sortid": 579,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "maki_zenin",
@@ -13126,7 +13128,7 @@
     {
       "name": "Naginata",
       "type": "tool",
-      "sortid": 580,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "naginata",
@@ -13141,7 +13143,7 @@
     {
       "name": "ReversalRedProjectile",
       "type": "rangeditem",
-      "sortid": 585,
+      "sortid": 575,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_projectile",
@@ -13157,7 +13159,7 @@
     {
       "name": "ReversalRedProjectileWhileProjectileFlyingTick",
       "type": "procedure",
-      "sortid": 584,
+      "sortid": 576,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_projectile_while_projectile_flying_tick",
@@ -13197,7 +13199,7 @@
     {
       "name": "SetCursedTechnique",
       "type": "procedure",
-      "sortid": 585,
+      "sortid": 577,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_cursed_technique",
@@ -13221,7 +13223,7 @@
     {
       "name": "SetCursedTechniqueCommand",
       "type": "command",
-      "sortid": 586,
+      "sortid": 578,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_cursed_technique_command",
@@ -13235,7 +13237,7 @@
     {
       "name": "ReversalRedEntityOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 587,
+      "sortid": 579,
       "compiles": true,
       "locked_code": false,
       "registry_name": "reversal_red_entity_on_entity_tick_update",
@@ -13267,6 +13269,7 @@
     {
       "name": "PrisonRealmDimension",
       "type": "dimension",
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm_dimension",
@@ -13282,7 +13285,7 @@
     {
       "name": "CheckForPR",
       "type": "procedure",
-      "sortid": 588,
+      "sortid": 580,
       "compiles": true,
       "locked_code": false,
       "registry_name": "check_for_pr",
@@ -13318,6 +13321,7 @@
     {
       "name": "PrisonRealmBiome",
       "type": "biome",
+      "sortid": 581,
       "compiles": true,
       "locked_code": false,
       "registry_name": "prison_realm_biome",
@@ -13334,7 +13338,7 @@
     {
       "name": "Sorcerers",
       "type": "tag",
-      "sortid": 611,
+      "sortid": 582,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorcerers",
@@ -13348,7 +13352,7 @@
     {
       "name": "WeaponUser",
       "type": "tag",
-      "sortid": 618,
+      "sortid": 583,
       "compiles": true,
       "locked_code": false,
       "registry_name": "weapon_user",
@@ -13362,7 +13366,7 @@
     {
       "name": "CursedManipulationOrb",
       "type": "procedure",
-      "sortid": 603,
+      "sortid": 584,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_manipulation_orb",
@@ -13386,7 +13390,7 @@
     {
       "name": "Sorcerer",
       "type": "potioneffect",
-      "sortid": 608,
+      "sortid": 585,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorcerer",
@@ -13400,7 +13404,7 @@
     {
       "name": "GlobalExp",
       "type": "procedure",
-      "sortid": 610,
+      "sortid": 586,
       "compiles": true,
       "locked_code": false,
       "registry_name": "global_exp",
@@ -13436,7 +13440,7 @@
     {
       "name": "NanamiKento",
       "type": "livingentity",
-      "sortid": 607,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nanami_kento",
@@ -13453,7 +13457,7 @@
     {
       "name": "YutaOkkotsu",
       "type": "livingentity",
-      "sortid": 591,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "yuta_okkotsu",
@@ -13470,7 +13474,7 @@
     {
       "name": "AoiTodo",
       "type": "livingentity",
-      "sortid": 613,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "aoi_todo",
@@ -13487,7 +13491,7 @@
     {
       "name": "Target",
       "type": "procedure",
-      "sortid": 609,
+      "sortid": 587,
       "compiles": true,
       "locked_code": false,
       "registry_name": "target",
@@ -13523,7 +13527,7 @@
     {
       "name": "Kenjaku",
       "type": "livingentity",
-      "sortid": 600,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "kenjaku",
@@ -13540,7 +13544,7 @@
     {
       "name": "SetExp",
       "type": "command",
-      "sortid": 589,
+      "sortid": 588,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_exp",
@@ -13554,7 +13558,7 @@
     {
       "name": "WhiteScreen",
       "type": "overlay",
-      "sortid": 615,
+      "sortid": 589,
       "compiles": true,
       "locked_code": false,
       "registry_name": "white_screen",
@@ -13568,7 +13572,7 @@
     {
       "name": "CursedSpiritOrb",
       "type": "item",
-      "sortid": 602,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_spirit_orb",
@@ -13583,7 +13587,7 @@
     {
       "name": "BluntPowerful",
       "type": "tag",
-      "sortid": 616,
+      "sortid": 590,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blunt_powerful",
@@ -13597,7 +13601,7 @@
     {
       "name": "EnergyBeamOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 595,
+      "sortid": 591,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_beam_on_initial_entity_spawn",
@@ -13633,7 +13637,7 @@
     {
       "name": "CursedSpiritZomba",
       "type": "livingentity",
-      "sortid": 598,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_spirit_zomba",
@@ -13650,7 +13654,7 @@
     {
       "name": "CursedSpiritZombaOnInitialEntitySpawn",
       "type": "procedure",
-      "sortid": 594,
+      "sortid": 592,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_spirit_zomba_on_initial_entity_spawn",
@@ -13670,7 +13674,7 @@
     {
       "name": "YutaKatana",
       "type": "tool",
-      "sortid": 592,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "yuta_katana",
@@ -13685,7 +13689,7 @@
     {
       "name": "TargetCursedSpirit",
       "type": "procedure",
-      "sortid": 606,
+      "sortid": 593,
       "compiles": true,
       "locked_code": false,
       "registry_name": "target_cursed_spirit",
@@ -13706,7 +13710,7 @@
     {
       "name": "EntityAttacks",
       "type": "procedure",
-      "sortid": 617,
+      "sortid": 594,
       "compiles": true,
       "locked_code": false,
       "registry_name": "entity_attacks",
@@ -13734,7 +13738,7 @@
     {
       "name": "NanamiKnife",
       "type": "tool",
-      "sortid": 619,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "nanami_knife",
@@ -13749,7 +13753,7 @@
     {
       "name": "ExpSetting",
       "type": "procedure",
-      "sortid": 588,
+      "sortid": 595,
       "compiles": true,
       "locked_code": false,
       "registry_name": "exp_setting",
@@ -13788,7 +13792,7 @@
     {
       "name": "MahitoEntityDies",
       "type": "procedure",
-      "sortid": 590,
+      "sortid": 597,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mahito_entity_dies",
@@ -13808,7 +13812,7 @@
     {
       "name": "SuguruGeto",
       "type": "livingentity",
-      "sortid": 593,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "suguru_geto",
@@ -13825,7 +13829,7 @@
     {
       "name": "CombatMessages",
       "type": "procedure",
-      "sortid": 601,
+      "sortid": 598,
       "compiles": true,
       "locked_code": false,
       "registry_name": "combat_messages",
@@ -13861,7 +13865,7 @@
     {
       "name": "SetManipulation",
       "type": "procedure",
-      "sortid": 604,
+      "sortid": 599,
       "compiles": true,
       "locked_code": false,
       "registry_name": "set_manipulation",
@@ -13881,7 +13885,7 @@
     {
       "name": "WhiteScreenDisplayOverlayIngame",
       "type": "procedure",
-      "sortid": 614,
+      "sortid": 600,
       "compiles": true,
       "locked_code": false,
       "registry_name": "white_screen_display_overlay_ingame",
@@ -13902,7 +13906,7 @@
     {
       "name": "CursedSpiritKiss",
       "type": "livingentity",
-      "sortid": 599,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_spirit_kiss",
@@ -13919,7 +13923,7 @@
     {
       "name": "CursedSpiritZombaOnEntityTickUpdate",
       "type": "procedure",
-      "sortid": 597,
+      "sortid": 601,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cursed_spirit_zomba_on_entity_tick_update",
@@ -13943,7 +13947,7 @@
     {
       "name": "SorcererSet",
       "type": "procedure",
-      "sortid": 612,
+      "sortid": 602,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sorcerer_set",
@@ -13959,6 +13963,131 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "DisplayButton1",
+      "type": "procedure",
+      "sortid": 603,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_button_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayButton1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayButton2",
+      "type": "procedure",
+      "sortid": 604,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_button_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayButton2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayButton3",
+      "type": "procedure",
+      "sortid": 605,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_button_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayButton3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayButton4",
+      "type": "procedure",
+      "sortid": 606,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_button_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayButton4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "DisplayButton5",
+      "type": "procedure",
+      "sortid": 607,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "display_button_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/DisplayButton5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Values"
+    },
+    {
+      "name": "PressedDomainClash",
+      "type": "procedure",
+      "sortid": 608,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pressed_domain_clash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/craftkaisen/procedures/PressedDomainClashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -14801,63 +14930,63 @@
       "advancements.semi_grade_1.descr": "Become a Semi Grade 1 Sorcerer",
       "gui.craftkaisen.self_vow_gui.button_vow": "Vow",
       "effect.craftkaisen.move_1_cooldown": "Move One Cooldown",
-      "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "effect.craftkaisen.sixeyespotion": "Six Eyes",
+      "item.craftkaisen.malevolent_shrine_spawn_egg": "Malevolent Shrine Spawn Egg",
       "entity.craftkaisen.hollow_purple_entity": "Hollow Purple Entity",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_main_power_bran": "Click to upgrade main power branch!",
       "effect.craftkaisen.domain_expansion": "Domain Expansion",
       "gui.craftkaisen.inventory_curse_gui.label_inventory_curse1": "Inventory Curse",
       "item.craftkaisen.riko_amanai_spawn_egg": "Riko Amanai Spawn Egg",
       "entity.craftkaisen.eso": "Eso",
-      "effect.craftkaisen.physically_gifted_cooldown": "Cooldown",
       "entity.craftkaisen.satoru_gojo": "Satoru Gojo",
+      "effect.craftkaisen.physically_gifted_cooldown": "Cooldown",
       "gui.craftkaisen.technique_creator_gui.AreaBox": "Area",
-      "gui.craftkaisen.domain_creator_gui.button_create": "Create",
-      "entity.craftkaisen.inventory_curse": "Inventory Curse",
-      "item.craftkaisen.playful_cloud": "Playful Cloud",
       "gui.craftkaisen.main_hud.label_special": "Special",
+      "item.craftkaisen.playful_cloud": "Playful Cloud",
+      "entity.craftkaisen.inventory_curse": "Inventory Curse",
+      "gui.craftkaisen.domain_creator_gui.button_create": "Create",
       "item.craftkaisen.stop": "Stop",
       "subtitles.bones": "",
       "item.craftkaisen.cursedspiritroppongi_spawn_egg": "Cursed Spirit: Roppongi Spawn Egg",
       "gui.craftkaisen.bases_gui.button_confirm": "Confirm",
       "entity.craftkaisen.energy_beam": "Energy Beam",
       "gui.craftkaisen.custom_ctgui.CTName": "Curse Technique Name..",
-      "item.craftkaisen.ultimate_mechamaru_spawn_egg": "Ultimate Mechamaru Spawn Egg",
       "subtitles.blood": "",
+      "item.craftkaisen.ultimate_mechamaru_spawn_egg": "Ultimate Mechamaru Spawn Egg",
       "advancements.special_grade.title": "Special Grade",
       "item.craftkaisen.inventory_curse_spawn_egg": "Inventory Curse Spawn Egg",
       "item.craftkaisen.eso_armor_chestplate": "Eso Chestplate",
       "gui.craftkaisen.domain_clash_gui.button_empty": "+",
-      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
-      "gui.craftkaisen.main_menu.label_technique": "Technique:",
       "effect.craftkaisen.sorcerer": "Sorcerer",
+      "gui.craftkaisen.main_menu.label_technique": "Technique:",
+      "effect.craftkaisen.rct_cooldown": "RCT Cooldown",
       "entity.craftkaisen.unknown_man": "Unknown Man",
       "effect.craftkaisen.crushing": "Crushing",
       "effect.craftkaisen.reversal_red": "Hollowpurp",
       "effect.craftkaisen.irritated_throat": "IrritatedThroat",
       "gui.craftkaisen.main_hud.label_x2": "X",
       "entity.craftkaisen.lapse_blue": "Lapse Blue",
-      "gui.craftkaisen.main_hud.label_x1": "X",
       "item.craftkaisen.yuta_katana": "Yuta Katana",
+      "gui.craftkaisen.main_hud.label_x1": "X",
       "entity.craftkaisen.kenjaku": "Kenjaku",
       "effect.craftkaisen.rct_healing": "Reverse Cursed Healing",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_ce_iii_increases_cursed_energy": "CE III - Increases cursed energy cap.§9 2 SP \u0026 GRADE 4",
-      "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "gui.craftkaisen.sword_creator.label_3_cost": "+3 Cost",
+      "item.craftkaisen.gojo_uniform_leggings": "Gojo Uniform Leggings",
       "item.craftkaisen.toji_armor_chestplate": "Toji Shirt",
       "effect.craftkaisen.flash_step_cooldown": "Flash Step Cooldown",
       "item.craftkaisen.itadori_spawn_egg": "Itadori Spawn Egg",
-      "gui.craftkaisen.technique_creator_gui.button_technique_specific_settings": "Technique Settings",
       "key.craftkaisen.switch_technique": "Switch Ability",
+      "gui.craftkaisen.technique_creator_gui.button_technique_specific_settings": "Technique Settings",
       "entity.craftkaisen.fly_head": "Fly Head",
-      "block.craftkaisen.domain_block_one": "Veil Main Block",
       "gui.craftkaisen.skill_tree_menu.button_skill_tree1": "Quests",
+      "block.craftkaisen.domain_block_one": "Veil Main Block",
       "subtitles.domainexpansion": "",
       "entity.craftkaisen.maki_zenin": "Maki Zenin",
       "item.craftkaisen.jogo_spawn_egg": "Jogo Spawn Egg",
       "item.craftkaisen.mechamaru_armor_helmet": "Mechamaru",
-      "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "item.craftkaisen.katana": "Katana",
+      "gamerule.ckOverwriteInumakiChat": "Overwrite Voice Technique Chat",
       "entity.craftkaisen.fire_arrow": "Fire Arrow",
       "gui.craftkaisen.main_menu.label_empty": "SP:",
       "gamerule.ckAllowCustomTechniques.description": "Allows custom curse techniques (also disables premade techniques).",
@@ -14892,8 +15021,8 @@
       "item.craftkaisen.sunglasses_helmet": "Sunglasses",
       "gui.craftkaisen.self_vow_gui.HeartsForCE": "Trade Hearts For Higher Cap",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc3": "Click to upgrade secondary branch!",
-      "advancements.semi_grade_2.title": "Semi Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc2": "Click to upgrade secondary branch!",
+      "advancements.semi_grade_2.title": "Semi Grade 2",
       "gui.craftkaisen.skill_tree_main_gui.tooltip_click_to_upgrade_secondary_branc1": "Click to upgrade secondary branch!",
       "item.craftkaisen.explode": "Explode",
       "effect.craftkaisen.clap_rush": "Clap Rush",
@@ -14904,16 +15033,16 @@
       "gui.craftkaisen.bases_gui.label_errmsg": "ErrMsg",
       "item.craftkaisen.eso_spawn_egg": "Eso Spawn Egg",
       "entity.craftkaisen.yuta_okkotsu": "Yuta Okkotsu",
-      "item.craftkaisen.hiar_helmet": "Hiar Helmet",
-      "gui.craftkaisen.bases_gui.button_spatial": "Spatial",
       "gui.craftkaisen.bases_gui.button_speech": "Speech",
+      "gui.craftkaisen.bases_gui.button_spatial": "Spatial",
+      "item.craftkaisen.hiar_helmet": "Hiar Helmet",
       "gui.craftkaisen.bases_gui.button_flame": "Flame",
       "subtitles.clap": "",
       "entity.craftkaisen.itadori": "Itadori",
       "item.craftkaisen.aoi_todo_spawn_egg": "Aoi Todo Spawn Egg",
       "entity.craftkaisen.megumi_fushiguro": "Megumi Fushiguro",
-      "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "entity.craftkaisen.wrapped_up": "Wrapped Up",
+      "item.craftkaisen.finger_bearer_spawn_egg": "Finger Bearer Spawn Egg",
       "gui.craftkaisen.binding_vow_gui.label_empty": "--------------------------------",
       "item.craftkaisen.bolt_projectile": "Bolt Projectile",
       "entity.craftkaisen.sukuna": "Sukuna",
@@ -14926,8 +15055,8 @@
       "gui.craftkaisen.sword_creator.label_iron_ingots": "Iron Ingots",
       "gui.craftkaisen.technique_creator_gui.tooltip_imbues_your_current_ct_in_the_at": "Imbues your current CT in the attacks type.",
       "effect.craftkaisen.explosion_effect": "Explosion",
-      "item.craftkaisen.blindfold_helmet": "Blindfold",
       "gui.craftkaisen.bases_gui.button_transfigure": "Transfigure",
+      "item.craftkaisen.blindfold_helmet": "Blindfold",
       "item.craftkaisen.satoru_gojo_spawn_egg": "Satoru Gojo Spawn Egg",
       "subtitles.rct.heartbeat": "RCT Awakening",
       "item.craftkaisen.geto_armor_chestplate": "Geto Robes",

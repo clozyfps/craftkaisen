@@ -36,13 +36,13 @@ public class CraftkaisenModScreens {
 			MenuScreens.register(CraftkaisenModMenus.BINDING_VOW_GUI.get(), BindingVowGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.SKILL_TREE_MAIN_GUI.get(), SkillTreeMainGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.INVENTORY_CURSE_GUI.get(), InventoryCurseGUIScreen::new);
-			MenuScreens.register(CraftkaisenModMenus.SWORD_CREATOR.get(), SwordCreatorScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.TALISMAN_GUI.get(), TalismanGUIScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.SWORD_CREATOR.get(), SwordCreatorScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.CUSTOM_CTGUI.get(), CustomCTGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.BASES_GUI.get(), BasesGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.DESIGN_GUI.get(), DesignGUIScreen::new);
-			MenuScreens.register(CraftkaisenModMenus.TOJI_CONTRACT_GUI.get(), TojiContractGuiScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.TECHNIQUE_CREATOR_GUI.get(), TechniqueCreatorGUIScreen::new);
+			MenuScreens.register(CraftkaisenModMenus.TOJI_CONTRACT_GUI.get(), TojiContractGuiScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.PRISON_REALM_GUI.get(), PrisonRealmGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.DOMAIN_CREATOR_GUI.get(), DomainCreatorGUIScreen::new);
 			MenuScreens.register(CraftkaisenModMenus.DOMAIN_CLASH_GUI.get(), DomainClashGUIScreen::new);

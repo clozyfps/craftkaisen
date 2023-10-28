@@ -23,8 +23,8 @@ import net.mcreator.craftkaisen.client.particle.BlackElectricityParticle;
 public class CraftkaisenModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
-		event.register(CraftkaisenModParticleTypes.EVADE.get(), EvadeParticle::provider);
 		event.register(CraftkaisenModParticleTypes.IMPACT.get(), ImpactParticle::provider);
+		event.register(CraftkaisenModParticleTypes.EVADE.get(), EvadeParticle::provider);
 		event.register(CraftkaisenModParticleTypes.REST.get(), RestParticle::provider);
 		event.register(CraftkaisenModParticleTypes.LAPSE_BLUE_PARTICLE.get(), LapseBlueParticleParticle::provider);
 		event.register(CraftkaisenModParticleTypes.BLACK_ELECTRICITY.get(), BlackElectricityParticle::provider);

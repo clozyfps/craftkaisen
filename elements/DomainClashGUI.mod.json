@@ -11,44 +11,92 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "button",
+        "type": "image",
         "data": {
-          "name": "button_empty",
-          "text": "+",
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 109
+          "image": "gui.png",
+          "use1Xscale": false,
+          "x": 124,
+          "y": 30
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_domain_clash",
-          "text": {
-            "fixedValue": "Domain Clash!"
+          "name": "imagebutton_press",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "PressedDomainClash"
           },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
+          "displayCondition": {
+            "name": "DisplayButton1"
           },
-          "x": 179,
-          "y": 59
+          "x": 145,
+          "y": 70
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_click",
-          "text": {
-            "fixedValue": "Click!!"
+          "name": "imagebutton_press1",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "PressedDomainClash"
           },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
+          "displayCondition": {
+            "name": "DisplayButton2"
           },
-          "x": 194,
-          "y": 73
+          "x": 237,
+          "y": 83
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_press2",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "PressedDomainClash"
+          },
+          "displayCondition": {
+            "name": "DisplayButton3"
+          },
+          "x": 148,
+          "y": 154
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_press3",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "PressedDomainClash"
+          },
+          "displayCondition": {
+            "name": "DisplayButton4"
+          },
+          "x": 236,
+          "y": 167
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_press4",
+          "image": "press.png",
+          "hoveredImage": "press2.png",
+          "onClick": {
+            "name": "PressedDomainClash"
+          },
+          "displayCondition": {
+            "name": "DisplayButton5"
+          },
+          "x": 182,
+          "y": 115
         }
       }
     ],
