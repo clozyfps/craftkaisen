@@ -22,20 +22,22 @@ public class SkyOfFlamesMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		SkyOfFlamesEffectStartedappliedProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ(), entity);
-	}
-
-	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		SkyOfFlamesOnEffectActiveTickProcedure.execute(
+		SkyOfFlamesEffectStartedappliedProcedure.execute(
 
 		);
 	}
 
 	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		SkyOfFlamesOnEffectActiveTickProcedure.execute(entity.level, entity.getX(), entity.getY(), entity.getZ());
+	}
+
+	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		SkyOfFlamesEffectExpiresProcedure.execute(entity.level, entity);
+		SkyOfFlamesEffectExpiresProcedure.execute(
+
+		);
 	}
 
 	@Override

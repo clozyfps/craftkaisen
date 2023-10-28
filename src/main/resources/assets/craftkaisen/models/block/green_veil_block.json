@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "craftkaisen:blocks/veilnewblock",
+    "up": "craftkaisen:blocks/veilnewblock",
+    "north": "craftkaisen:blocks/veilnewblock",
+    "east": "craftkaisen:blocks/veilnewblock",
+    "south": "craftkaisen:blocks/veilnewblock",
+    "west": "craftkaisen:blocks/veilnewblock",
+    "particle": "craftkaisen:blocks/veilnewblock"
+  },
+  "render_type": "translucent"
+}

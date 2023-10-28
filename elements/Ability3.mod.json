@@ -1,0 +1,15 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Ability 3",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "Ab3keypressed"
+    },
+    "onKeyReleased": {
+      "name": "Release"
+    }
+  }
+}

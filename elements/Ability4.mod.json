@@ -1,0 +1,15 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Ability 4",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "Ab4keypressed"
+    },
+    "onKeyReleased": {
+      "name": "Release"
+    }
+  }
+}

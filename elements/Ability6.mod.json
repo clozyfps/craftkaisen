@@ -1,0 +1,15 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "N",
+    "keyBindingName": "Ability 6",
+    "keyBindingCategoryKey": "jjk",
+    "onKeyPressed": {
+      "name": "Ab6pressed"
+    },
+    "onKeyReleased": {
+      "name": "Release"
+    }
+  }
+}

@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "craftkaisen:blocks/veil",
-    "up": "craftkaisen:blocks/veil",
-    "north": "craftkaisen:blocks/veil",
-    "east": "craftkaisen:blocks/veil",
-    "south": "craftkaisen:blocks/veil",
-    "west": "craftkaisen:blocks/veil",
-    "particle": "craftkaisen:blocks/veil"
+    "down": "craftkaisen:blocks/veilblock",
+    "up": "craftkaisen:blocks/veilblock",
+    "north": "craftkaisen:blocks/veilblock",
+    "east": "craftkaisen:blocks/veilblock",
+    "south": "craftkaisen:blocks/veilblock",
+    "west": "craftkaisen:blocks/veilblock",
+    "particle": "craftkaisen:blocks/veilblock"
   },
   "render_type": "solid"
 }

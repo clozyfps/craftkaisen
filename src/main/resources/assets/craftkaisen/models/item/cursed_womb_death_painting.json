@@ -1,0 +1,9 @@
+{
+  "parent": "craftkaisen:custom/cursedwomb",
+  "textures": {
+    "0": "craftkaisen:blocks/glastexture",
+    "1": "craftkaisen:blocks/blackpixels",
+    "2": "craftkaisen:blocks/fleshtexture",
+    "particle": "craftkaisen:items/air102_layer_2"
+  }
+}

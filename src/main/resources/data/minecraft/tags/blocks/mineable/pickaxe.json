@@ -1,7 +1,8 @@
 {
   "replace": false,
   "values": [
+    "craftkaisen:unlimited_void",
     "craftkaisen:prison_realm",
-    "craftkaisen:unlimited_void"
+    "craftkaisen:green_veil_block"
   ]
 }

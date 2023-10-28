@@ -37,14 +37,14 @@ public class SetLimitlessProcedure {
 			});
 		}
 		{
-			String _setval = "Grab And Toss";
+			String _setval = "Teleport";
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move3Name = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			String _setval = "Infinity Combo";
+			String _setval = "Flight";
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move4Name = _setval;
 				capability.syncPlayerVariables(entity);
@@ -72,49 +72,49 @@ public class SetLimitlessProcedure {
 			});
 		}
 		{
-			double _setval = 150;
+			double _setval = 5;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move1Cost = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			double _setval = 300;
+			double _setval = 10;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move2Cost = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			double _setval = 50;
+			double _setval = 15;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move3Cost = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			double _setval = 75;
+			double _setval = 10;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move4Cost = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			double _setval = 800;
+			double _setval = 25;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move5Cost = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			double _setval = 0;
+			double _setval = 30;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move6Cost = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
 		{
-			double _setval = 1250;
+			double _setval = 50;
 			entity.getCapability(CraftkaisenModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.Move7Cost = _setval;
 				capability.syncPlayerVariables(entity);

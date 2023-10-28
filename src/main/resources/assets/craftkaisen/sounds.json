@@ -63,5 +63,32 @@
         "stream": false
       }
     ]
+  },
+  "sweep": {
+    "subtitle": "subtitles.sweep",
+    "sounds": [
+      {
+        "name": "craftkaisen:sword_sweep",
+        "stream": false
+      }
+    ]
+  },
+  "slice": {
+    "subtitle": "subtitles.slice",
+    "sounds": [
+      {
+        "name": "craftkaisen:mixkit-dagger-woosh-1487",
+        "stream": false
+      }
+    ]
+  },
+  "splatter": {
+    "subtitle": "subtitles.splatter",
+    "sounds": [
+      {
+        "name": "craftkaisen:bloody",
+        "stream": false
+      }
+    ]
   }
 }
